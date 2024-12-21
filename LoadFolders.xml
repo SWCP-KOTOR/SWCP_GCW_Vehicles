@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<loadFolders>
+    <v1.5>
+        <li>/</li>
+        <li>1.5</li>
+        <!--li IfModNotActive="MajesticMadman.StarWarsShipsSRTS">Defs/Core</li-->
+		
+		<li IfModActive="sindre0830.rimnauts2">1.5/AdditionalMods/RimNauts2</li>
+		<li IfModActive="kentington.saveourship2">1.5/AdditionalMods/SoS2</li>
+    </v1.5>
+</loadFolders>

@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <ThingDef ParentName="guy762_clothingbase">
+		<defName>guy762_ImpUniform_bigbelt</defName>
+		<label>uniform, guard's</label>
+		<description>These are simple garments that protect little more than the modesty of the wearer.</description>
+		<graphicData>
+		  <texPath>Apparel/Officer/bigbelt/Apparel</texPath>
+		  <graphicClass>Graphic_Single</graphicClass>
+		  <shaderType>CutoutComplex</shaderType>
+		</graphicData>
+		<statBases>
+			<Mass>3</Mass>
+			<MarketValue>100</MarketValue>
+			<MaxHitPoints>100</MaxHitPoints>
+			<ArmorRating_Sharp>0.01</ArmorRating_Sharp>
+			<ArmorRating_Blunt>0.01</ArmorRating_Blunt>
+			<ArmorRating_Heat>0.01</ArmorRating_Heat>
+			<Insulation_Cold>10</Insulation_Cold>
+			<Insulation_Heat>5</Insulation_Heat>
+			<EquipDelay>3</EquipDelay>
+			
+			<WorkToMake>4000</WorkToMake>
+		</statBases>
+		<equippedStatOffsets>
+		  <VEF_MassCarryCapacity>5</VEF_MassCarryCapacity>
+		</equippedStatOffsets>
+		
+		<recipeMaker>
+			<researchPrerequisite>guy762_ResearchKotOR_sith</researchPrerequisite>
+			<skillRequirements>
+				<Crafting>6</Crafting>
+			</skillRequirements>
+		</recipeMaker>
+		<costList>
+		  <Synthread>75</Synthread>
+		</costList>
+		
+		<apparel>
+		  <tags Inherit="False">
+			<li>SE_apparel_ensign</li>
+		  </tags>
+		  <wornGraphicPath>Apparel/Officer/bigbelt/Apparel</wornGraphicPath>
+		  <useWornGraphicMask>true</useWornGraphicMask>
+		  <defaultOutfitTags Inherit="False">
+			<li>Worker</li>
+		  </defaultOutfitTags>
+		</apparel>
+		<tradeTags>
+			<li>guy762TT_SEArmor</li>
+		</tradeTags>
+		<colorGenerator Class="ColorGenerator_Options" Inherit="False">
+			<options>
+				<li>
+					<weight>15</weight>
+					<only>(125,125,110)</only> <!-- imperial olive -->
+				</li>
+				<!-- <li> -->
+					<!-- <weight>1</weight> -->
+					<!-- <only>(70,135,190)</only>new republic blue -->
+				<!-- </li> -->
+			</options>
+		</colorGenerator>
+	  </ThingDef>
+	  
+	  
+	  
+	  <ThingDef ParentName="guy762_clothingbase">
+		<defName>guy762_ImpUniform_topbrass</defName>
+		<label>uniform, grand moff's</label>
+		<description>These are simple garments that protect little more than the modesty of the wearer.</description>
+		<graphicData>
+		  <texPath>Apparel/Officer/grandmoff/Apparel</texPath>
+		  <graphicClass>Graphic_Single</graphicClass>
+		  <shaderType>CutoutComplex</shaderType>
+		</graphicData>
+		<statBases>
+			<Mass>3</Mass>
+			<MarketValue>10000</MarketValue>
+			<MaxHitPoints>200</MaxHitPoints> <!-- +100 -->
+			<ArmorRating_Sharp>0.01</ArmorRating_Sharp>
+			<ArmorRating_Blunt>0.01</ArmorRating_Blunt>
+			<ArmorRating_Heat>0.01</ArmorRating_Heat>
+			<Insulation_Cold>10</Insulation_Cold>
+			<Insulation_Heat>5</Insulation_Heat>
+			<EquipDelay>3</EquipDelay>
+			
+			<WorkToMake>4000</WorkToMake>
+		</statBases>
+		<equippedStatOffsets>
+		  <SocialImpact>1</SocialImpact>
+		</equippedStatOffsets>
+		
+		<recipeMaker>
+			<researchPrerequisite>guy762_ResearchKotOR_sith</researchPrerequisite>
+			<skillRequirements>
+				<Crafting>6</Crafting>
+			</skillRequirements>
+		</recipeMaker>
+		<costList>
+		  <Synthread>75</Synthread>
+		</costList>
+		
+		<apparel>
+		  <tags Inherit="False">
+			<li>RemnantEmpire_warlord</li>
+		  </tags>
+		  <wornGraphicPath>Apparel/Officer/grandmoff/Apparel</wornGraphicPath>
+		  <useWornGraphicMask>true</useWornGraphicMask>
+		  <defaultOutfitTags Inherit="False">
+			<li>Worker</li>
+		  </defaultOutfitTags>
+		</apparel>
+		
+		<randomStyleChance>0.5</randomStyleChance>
+		<randomStyle>
+		  <li>
+			<styleDef>guy762_RankStyle_grandadmiral</styleDef>
+		  </li>
+		  <li>
+			<styleDef>guy762_RankStyle_director</styleDef>
+		  </li>
+		  <li>
+			<styleDef>guy762_RankStyle_zsinj</styleDef>
+		  </li>
+		</randomStyle>
+		
+		<tradeTags>
+			<li>guy762TT_SEArmor</li>
+		</tradeTags>
+		<colorGenerator Class="ColorGenerator_Options" Inherit="False">
+			<options>
+				<li>
+					<weight>15</weight>
+					<only>(125,125,110)</only> <!-- imperial olive -->
+				</li>
+			</options> <!-- 195,55,45 isard's red -->
+		</colorGenerator>
+	  </ThingDef>
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  <!--StyleCategoryDef>
+		<defName>guy762_RankStyleCategory_grandadmiral</defName>
+		<label>grand admiral</label>
+		<iconPath>UI/StyleCategories/Hindu</iconPath>
+		<soundOngoingRitual>RitualSustainer_Hindu</soundOngoingRitual>
+		<ritualVisualEffectDef>Hindu</ritualVisualEffectDef>
+		<thingDefStyles>
+		  <li>
+			<thingDef>guy762_ImpUniform_topbrass</thingDef>
+			<styleDef>guy762_RankStyle_grandadmiral</styleDef>
+		  </li>
+		</thingDefStyles>
+	  </StyleCategoryDef-->
+	  
+	  <ThingStyleDef>
+		<defName>guy762_RankStyle_grandadmiral</defName>
+		<overrideLabel>uniform, grand admiral's</overrideLabel>
+		<wornGraphicPath>Apparel/Officer/grandadmiral/Apparel</wornGraphicPath>
+		<graphicData>
+		  <texPath>Apparel/Officer/grandadmiral/Apparel</texPath>
+		  <graphicClass>Graphic_Single</graphicClass>
+		  <shaderType>CutoutComplex</shaderType>
+		</graphicData>
+	  </ThingStyleDef>
+	  
+	  <ThingStyleDef>
+		<defName>guy762_RankStyle_director</defName>
+		<overrideLabel>uniform, director's</overrideLabel>
+		<wornGraphicPath>Apparel/Officer/director/Apparel</wornGraphicPath>
+		<graphicData>
+		  <texPath>Apparel/Officer/director/Apparel</texPath>
+		  <graphicClass>Graphic_Single</graphicClass>
+		  <shaderType>CutoutComplex</shaderType>
+		</graphicData>
+	  </ThingStyleDef>
+	  
+	  <ThingStyleDef>
+		<defName>guy762_RankStyle_zsinj</defName>
+		<overrideLabel>uniform, Zsinj's</overrideLabel>
+		<wornGraphicPath>Apparel/Officer/zsinj/Apparel</wornGraphicPath>
+		<graphicData>
+		  <texPath>Apparel/Officer/zsinj/Apparel</texPath>
+		  <graphicClass>Graphic_Single</graphicClass>
+		  <shaderType>CutoutComplex</shaderType>
+		</graphicData>
+	  </ThingStyleDef>
+	  
+	  
+
+</Defs>

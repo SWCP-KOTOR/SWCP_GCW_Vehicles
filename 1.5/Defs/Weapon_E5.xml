@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	
+	<ThingDef ParentName="KotORRangedModdable_TwoHand">
+		<defName>guy762_E5rifle</defName>
+		<label>E-5 blaster rifle</label>
+		<description>.</description>
+		<techLevel>Spacer</techLevel>
+		<thingClass>ThingWithComps</thingClass>
+		<graphicData>
+			<texPath>Weapons_JDS/E-5_Blaster_Rifle</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>1.1</drawSize>
+		</graphicData>
+		<soundInteract>kotorsound_select_slug</soundInteract>
+		<statBases>
+			<MarketValue>600</MarketValue>
+			<Mass>2.5</Mass>
+			<AccuracyTouch>0.60</AccuracyTouch>
+			<AccuracyShort>0.50</AccuracyShort>
+			<AccuracyMedium>0.30</AccuracyMedium>
+			<AccuracyLong>0.20</AccuracyLong>
+			<RangedWeapon_Cooldown>0.5</RangedWeapon_Cooldown>
+			<RangedWeapon_DamageMultiplier>0.8</RangedWeapon_DamageMultiplier>
+		</statBases>
+		
+		<weaponTags>
+			<li>SWRanged_E5rifle</li>
+		</weaponTags>
+		<tradeTags Inherit="False">
+			<li>guy762TT_KotORRanged</li>
+		</tradeTags>
+		<verbs>
+			<li>
+				<verbClass>Verb_Shoot</verbClass>
+				<hasStandardCommand>true</hasStandardCommand>
+				<defaultProjectile>KotORBlasterBolt_default</defaultProjectile>
+				<warmupTime>0.5</warmupTime>
+				<range>28</range>
+				<ticksBetweenBurstShots>10</ticksBetweenBurstShots>
+				<burstShotCount>1</burstShotCount>
+				<soundCast>kotorsound_E5blaster</soundCast>
+				<soundCastTail>GunTail_Medium</soundCastTail>
+				<muzzleFlashScale>9</muzzleFlashScale>
+			</li>
+		</verbs>
+		<tools>
+			<li>
+				<label>stock</label>
+				<capacities>
+					<li>Blunt</li>
+				</capacities>
+				<power>9</power>
+				<cooldownTime>2</cooldownTime>
+			</li>
+			<li>
+				<label>barrel</label>
+				<capacities>
+					<li>Blunt</li>
+					<li>Poke</li>
+				</capacities>
+				<power>9</power>
+				<cooldownTime>2</cooldownTime>
+			</li>
+		</tools>
+		<!--comps>
+			<li Class="ModularWeapons.CompProperties_ModularParts">
+				<compClass>ModularWeapons.CompModularParts</compClass>
+				<bundlePackageId>guy762.KotORWeaponsArmor</bundlePackageId>
+				<partKinds>
+					<li>guy762_slot_trigger_lgtrep</li>
+				</partKinds>
+			</li>
+		</comps-->
+	</ThingDef>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<ThingDef ParentName="KotORRangedModdable_TwoHand">
+		<defName>guy762_E5Crifle</defName>
+		<label>E-5C heavy blaster rifle</label>
+		<description>.</description>
+		<techLevel>Spacer</techLevel>
+		<thingClass>ThingWithComps</thingClass>
+		<graphicData>
+			<texPath>Weapons_JDS/E-5C_Blaster_Rifle</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>1.2</drawSize>
+		</graphicData>
+		<soundInteract>kotorsound_select_carbine</soundInteract>
+		<statBases>
+			<MarketValue>1600</MarketValue>
+			<Mass>4.5</Mass>
+			<AccuracyTouch>0.60</AccuracyTouch>
+			<AccuracyShort>0.50</AccuracyShort>
+			<AccuracyMedium>0.40</AccuracyMedium>
+			<AccuracyLong>0.30</AccuracyLong>
+			<RangedWeapon_Cooldown>1</RangedWeapon_Cooldown>
+			<RangedWeapon_DamageMultiplier>0.8</RangedWeapon_DamageMultiplier>
+		</statBases>
+		
+		<weaponTags>
+			<li>SWRanged_E5Crifle</li>
+		</weaponTags>
+		<tradeTags Inherit="False">
+			<li>guy762TT_KotORRanged</li>
+		</tradeTags>
+		<verbs>
+			<li>
+				<verbClass>Verb_Shoot</verbClass>
+				<hasStandardCommand>true</hasStandardCommand>
+				<defaultProjectile>KotORBlasterBolt_default</defaultProjectile>
+				<warmupTime>0.5</warmupTime>
+				<range>28</range>
+				<ticksBetweenBurstShots>10</ticksBetweenBurstShots>
+				<burstShotCount>3</burstShotCount>
+				<soundCast>kotorsound_E5alt</soundCast>
+				<soundCastTail>GunTail_Medium</soundCastTail>
+				<muzzleFlashScale>9</muzzleFlashScale>
+			</li>
+			<li>
+				<label>power blast</label>
+				<!-- <description>Fire a single overcharged bolt.</description> -->
+				<!-- <iconPath>UI/Power_Blast</iconPath> -->
+				<commandIcon>UI/Power_Blast</commandIcon>
+				<verbClass>Verb_Shoot</verbClass>
+				<hasStandardCommand>true</hasStandardCommand>
+				<defaultProjectile>KotORBlasterBolt_heavy</defaultProjectile>
+				<warmupTime>4.5</warmupTime>
+				<defaultCooldownTime>3</defaultCooldownTime>
+				<range>25</range>
+				<ticksBetweenBurstShots>18</ticksBetweenBurstShots>
+				<burstShotCount>1</burstShotCount>
+				<!--soundAiming>kotorsound_powercharge</soundAiming-->
+				<soundCast>kotorsound_heavy2</soundCast>
+				<soundCastTail>GunTail_Medium</soundCastTail>
+				<muzzleFlashScale>9</muzzleFlashScale>
+				<ai_IsWeapon>true</ai_IsWeapon>
+			</li>
+		</verbs>
+		<tools>
+			<li>
+				<label>stock</label>
+				<capacities>
+					<li>Blunt</li>
+				</capacities>
+				<power>9</power>
+				<cooldownTime>2</cooldownTime>
+			</li>
+			<li>
+				<label>barrel</label>
+				<capacities>
+					<li>Blunt</li>
+					<li>Poke</li>
+				</capacities>
+				<power>9</power>
+				<cooldownTime>2</cooldownTime>
+			</li>
+		</tools>
+		<!--comps>
+			<li Class="ModularWeapons.CompProperties_ModularParts">
+				<compClass>ModularWeapons.CompModularParts</compClass>
+				<bundlePackageId>guy762.KotORWeaponsArmor</bundlePackageId>
+				<partKinds>
+					<li>guy762_slot_trigger_lgtrep</li>
+				</partKinds>
+			</li>
+		</comps-->
+	</ThingDef>
+	
+	
+</Defs>

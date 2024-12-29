@@ -121,9 +121,9 @@
 		</specificApparelRequirements>
 
 		<biocodeWeaponChance>0.75</biocodeWeaponChance>
-		<weaponMoney>3200</weaponMoney>
+		<weaponMoney>1600~4800</weaponMoney>
 		<weaponTags>
-			<li>SWRanged_TL50conc</li>
+			<li>SWRanged_DH17rifle_bayonet</li>
 		</weaponTags>
 
 		<techHediffsChance>1</techHediffsChance>
@@ -278,8 +278,8 @@
 	
 	
 	
-	<PawnKindDef Name="SWWarlords_alderaanguard" ParentName="KotORRepub_Base">
-		<defName>SWWarlords_alderaanguard</defName>
+	<PawnKindDef Name="SWNewRepub_alderaanguard" ParentName="KotORRepub_Base">
+		<defName>SWNewRepub_alderaanguard</defName>
 		<label>fleet trooper</label>
 		<combatPower>40</combatPower>
 		<minGenerationAge>20</minGenerationAge>
@@ -312,10 +312,74 @@
 		</specificApparelRequirements>
 		
 		<biocodeWeaponChance>0</biocodeWeaponChance>
-		<weaponMoney>500~600</weaponMoney>
+		<weaponMoney>500~1100</weaponMoney>
 		<weaponTags>
 		  <li>SWRanged_DH17pistol</li>
 		  <li>SWRanged_E11carbine</li>
+		  <li>SWRanged_DH17rifle</li>
+		</weaponTags>
+		
+		<skills>
+			<li>
+				<skill>Shooting</skill>
+				<range>4~8</range>
+			</li>
+			<li>
+				<skill>Melee</skill>
+				<range>4~8</range>
+			</li>
+			<li>
+				<skill>Intellectual</skill>
+				<range>4~8</range>
+			</li>
+		</skills>
+		
+		<inventoryOptions>
+			<skipChance>0.25</skipChance>
+			<subOptionsChooseOne>
+				<li>
+					<thingDef>guy762_medpac</thingDef>
+					<countRange>1~3</countRange>
+				</li>
+			</subOptionsChooseOne>
+		</inventoryOptions>
+		
+		<initialWillRange>0.5~2</initialWillRange>
+		<initialResistanceRange>5~10</initialResistanceRange>
+	  </PawnKindDef>
+	  
+	  
+	  
+	  
+	  <PawnKindDef Name="SWNewRepub_fleettrooper" ParentName="KotORRepub_Base">
+		<defName>SWNewRepub_fleettrooper</defName>
+		<label>fleet trooper</label>
+		<combatPower>40</combatPower>
+		<minGenerationAge>20</minGenerationAge>
+		<maxGenerationAge>35</maxGenerationAge>
+		<itemQuality>Normal</itemQuality>
+		
+		<apparelMoney>1500~5500</apparelMoney>
+		<apparelAllowHeadgearChance>1</apparelAllowHeadgearChance>
+		<apparelTags>
+		  <li>KotOREquipment_basic</li>
+		</apparelTags>
+		<apparelRequired>
+			<li>guy762_RebelHelmet</li>
+			<li>guy762_ImpUniform_bigbelt</li>
+		</apparelRequired>
+		
+		<specificApparelRequirements>
+			<li>
+				<apparelLayer>OnSkin</apparelLayer>
+				<color>(70,135,190)</color>
+			</li>
+		</specificApparelRequirements>
+		
+		<biocodeWeaponChance>0</biocodeWeaponChance>
+		<weaponMoney>500~600</weaponMoney>
+		<weaponTags>
+		  <li>SWRanged_DH17pistol</li>
 		</weaponTags>
 		
 		<skills>

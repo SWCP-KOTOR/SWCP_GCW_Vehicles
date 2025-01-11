@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	
+	
+	<ThingDef ParentName="KotORRangedModdable_TwoHand">
+		<defName>guy762_EE3carbine</defName>
+		<label>EE-3 blaster carbine</label>
+		<description>.</description>
+		<techLevel>Spacer</techLevel>
+		<thingClass>ThingWithComps</thingClass>
+		<graphicData>
+			<texPath>Weapons_JDS/EE-3_Carbine_Rifle</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<!-- <drawSize>1.1</drawSize> -->
+		</graphicData>
+		<soundInteract>kotorsound_select_SotE</soundInteract>
+		<statBases>
+			<MarketValue>1500</MarketValue>
+			<Mass>4.5</Mass>
+			<AccuracyTouch>0.70</AccuracyTouch>
+			<AccuracyShort>0.80</AccuracyShort>
+			<AccuracyMedium>0.70</AccuracyMedium>
+			<AccuracyLong>0.60</AccuracyLong>
+			<RangedWeapon_Cooldown>2</RangedWeapon_Cooldown>
+			<RangedWeapon_DamageMultiplier>1.2</RangedWeapon_DamageMultiplier>
+		</statBases>
+		
+		<weaponTags>
+			<li>SWRanged_EE3carbine</li>
+		</weaponTags>
+		<tradeTags Inherit="False">
+			<li>guy762TT_KotORRanged</li>
+		</tradeTags>
+		<verbs>
+			<li>
+				<verbClass>Verb_Shoot</verbClass>
+				<hasStandardCommand>true</hasStandardCommand>
+				<defaultProjectile>KotORBlasterBolt_default</defaultProjectile>
+				<warmupTime>0.75</warmupTime>
+				<range>25</range>
+				<ticksBetweenBurstShots>10</ticksBetweenBurstShots>
+				<burstShotCount>2</burstShotCount>
+				<soundCast>kotorsound_EE3carbine</soundCast>
+				<soundCastTail>GunTail_Medium</soundCastTail>
+				<muzzleFlashScale>9</muzzleFlashScale>
+			</li>
+			<li>
+				<label>adv. sniper shot</label>
+				<!-- <description>Fire a single bolt with increased range and armor penetration.</description> -->
+				<!-- <iconPath>UI/Improved_Sniper_Shot</iconPath> -->
+				<commandIcon>UI/Improved_Sniper_Shot</commandIcon>
+				<verbClass>Verb_Shoot</verbClass>
+				<hasStandardCommand>true</hasStandardCommand>
+				<defaultProjectile>KotORBlasterBolt_sniper</defaultProjectile>
+				<warmupTime>3.5</warmupTime>
+				<!-- <range>42</range> -->
+				<range>36</range>
+				<accuracyMedium>1.00</accuracyMedium>
+				<accuracyLong>0.95</accuracyLong>
+				<ticksBetweenBurstShots>20</ticksBetweenBurstShots>
+				<burstShotCount>1</burstShotCount>
+				<soundCast>kotorsound_EE3carbine_alt</soundCast>
+				<soundCastTail>GunTail_Medium</soundCastTail>
+				<muzzleFlashScale>9</muzzleFlashScale>
+				<ai_IsWeapon>true</ai_IsWeapon>
+				<bodypartTagTarget>ConsciousnessSource</bodypartTagTarget>
+			</li>
+		</verbs>
+		<tools>
+			<li>
+				<label>stock</label>
+				<capacities>
+					<li>Blunt</li>
+				</capacities>
+				<power>9</power>
+				<cooldownTime>2</cooldownTime>
+			</li>
+			<li>
+				<label>barrel</label>
+				<capacities>
+					<li>Blunt</li>
+					<li>Poke</li>
+				</capacities>
+				<power>9</power>
+				<cooldownTime>2</cooldownTime>
+			</li>
+		</tools>
+		<!--comps>
+			<li Class="ModularWeapons.CompProperties_ModularParts">
+				<compClass>ModularWeapons.CompModularParts</compClass>
+				<bundlePackageId>guy762.KotORWeaponsArmor</bundlePackageId>
+				<partKinds>
+					<li>guy762_slot_trigger_lgtrep</li>
+				</partKinds>
+			</li>
+		</comps-->
+	</ThingDef>
+	
+	
+</Defs>

@@ -82,6 +82,387 @@
 	</PawnKindDef>
 	
 	
+	
+	<PawnKindDef Name="SWWarlords_stormiehvy" ParentName="KotORSith_TrooperBase">
+		<defName>SWWarlords_stormiehvy</defName>
+		<label>Stormtrooper specialist</label>
+		<combatPower>125</combatPower>
+		<minGenerationAge>18</minGenerationAge>
+		<maxGenerationAge>40</maxGenerationAge>
+		<itemQuality>Normal</itemQuality>
+		
+		<xenotypeSet Inherit="False">
+		  <xenotypeChances>
+			<Baseliner MayRequire="Ludeon.RimWorld.Biotech">999</Baseliner>
+		  </xenotypeChances>
+		</xenotypeSet>
+		<useFactionXenotypes>false</useFactionXenotypes>
+
+		<apparelMoney>1500~5500</apparelMoney>
+		<apparelAllowHeadgearChance>1</apparelAllowHeadgearChance>
+		<apparelTags>
+			<li>RemnantEmpire_stormiearmor</li>
+			<li>KotOREquipment_basic</li>
+		</apparelTags>
+		<apparelRequired>
+			<li>guy762_StormieHelmet</li>
+			<li>guy762_Accessory_stormiepauldron</li>
+			<li>guy762_Accessory_suspendersA</li>
+			<li>guy762_StormieArmor</li>
+			<li>guy762_Bodysuit</li>
+		</apparelRequired>
+		<specificApparelRequirements>
+			<li>
+				<bodyPartGroup>Neck</bodyPartGroup>
+				<apparelLayer>Shell</apparelLayer>
+				<color>(40,40,40)</color>
+			</li>
+			<li>
+				<bodyPartGroup>Torso</bodyPartGroup>
+				<apparelLayer>Shell</apparelLayer>
+				<color>(90,90,90)</color>
+			</li>
+			<li>
+				<apparelLayer>OnSkin</apparelLayer>
+				<color>(90,90,90)</color>
+			</li>
+		</specificApparelRequirements>
+
+		<biocodeWeaponChance>0</biocodeWeaponChance>
+		<weaponMoney>1800</weaponMoney>
+		<weaponTags>
+			<li>SWRanged_TL50blaster</li>
+		</weaponTags>
+
+		<techHediffsChance>1</techHediffsChance>
+		<techHediffsMoney>
+			<min>1200</min>
+			<max>2400</max>
+		</techHediffsMoney>
+
+		<skills>
+			<li>
+				<skill>Shooting</skill>
+				<range>6~13</range>
+			</li>
+			<li>
+				<skill>Melee</skill>
+				<range>4~7</range>
+			</li>
+		</skills>
+		<inventoryOptions>
+			<skipChance>0.25</skipChance>
+			<subOptionsChooseOne>
+				<li>
+					<thingDef>guy762_stim_battle</thingDef>
+					<countRange>0~1</countRange>
+				</li>
+			</subOptionsChooseOne>
+		</inventoryOptions>
+
+		<disallowedTraits>
+			<li>Brawler</li>
+		</disallowedTraits>
+		<initialWillRange>0.5~2</initialWillRange>
+		<initialResistanceRange>5~10</initialResistanceRange>
+	</PawnKindDef>
+	
+	
+	
+	
+	<PawnKindDef Name="SWWarlords_stormieofficer" ParentName="KotORSith_TrooperBase">
+		<defName>SWWarlords_stormieofficer</defName>
+		<label>Stormtrooper field officer</label>
+		<combatPower>125</combatPower>
+		<minGenerationAge>23</minGenerationAge>
+		<maxGenerationAge>40</maxGenerationAge>
+		<itemQuality>Good</itemQuality>
+		
+		<maxPerGroup>2</maxPerGroup>
+		
+		<xenotypeSet Inherit="False">
+		  <xenotypeChances>
+			<Baseliner MayRequire="Ludeon.RimWorld.Biotech">999</Baseliner>
+		  </xenotypeChances>
+		</xenotypeSet>
+		<useFactionXenotypes>false</useFactionXenotypes>
+
+		<apparelMoney>1500~5500</apparelMoney>
+		<apparelAllowHeadgearChance>1</apparelAllowHeadgearChance>
+		<apparelTags>
+			<li>RemnantEmpire_stormiearmor</li>
+			<li>KotOREquipment_adv</li>
+		</apparelTags>
+		<apparelRequired>
+			<li>guy762_StormieHelmet</li>
+			<li>guy762_Accessory_stormiepauldron</li>
+			<li>guy762_StormieArmor</li>
+			<li>guy762_Bodysuit</li>
+		</apparelRequired>
+		<specificApparelRequirements>
+			<li>
+				<apparelLayer>OnSkin</apparelLayer>
+				<color>(90,90,90)</color>
+			</li>
+		</specificApparelRequirements>
+
+		<biocodeWeaponChance>0.75</biocodeWeaponChance>
+		<weaponMoney>3200</weaponMoney>
+		<weaponTags>
+			<li>SWRanged_TL50conc</li>
+		</weaponTags>
+
+		<techHediffsChance>2</techHediffsChance>
+		<techHediffsMoney>
+			<min>1200</min>
+			<max>2400</max>
+		</techHediffsMoney>
+
+		<skills>
+			<li>
+				<skill>Shooting</skill>
+				<range>6~13</range>
+			</li>
+			<li>
+				<skill>Melee</skill>
+				<range>4~7</range>
+			</li>
+			<li>
+				<skill>Social</skill>
+				<range>8~10</range>
+			</li>
+			<li>
+				<skill>Intellectual</skill>
+				<range>6~8</range>
+			</li>
+		</skills>
+		<inventoryOptions>
+			<skipChance>0</skipChance>
+			<subOptionsChooseOne>
+				<li>
+					<thingDef>guy762_medpac_adv</thingDef>
+					<countRange>1~3</countRange>
+				</li>
+			</subOptionsChooseOne>
+		</inventoryOptions>
+
+		<disallowedTraits>
+			<li>Brawler</li>
+		</disallowedTraits>
+		<initialWillRange>0.5~2</initialWillRange>
+		<initialResistanceRange>5~10</initialResistanceRange>
+		
+		<abilities>
+			<li>MarksmanCommand</li>
+		</abilities>
+	</PawnKindDef>
+	
+	
+	
+	
+	
+	
+	<PawnKindDef Name="SWWarlords_thrawnstormie" ParentName="KotORSith_TrooperBase">
+		<defName>SWWarlords_thrawnstormie</defName>
+		<label>7th Fleet Stormtrooper</label>
+		<combatPower>125</combatPower>
+		<minGenerationAge>18</minGenerationAge>
+		<maxGenerationAge>40</maxGenerationAge>
+		<itemQuality>Normal</itemQuality>
+		
+		<xenotypeSet Inherit="False">
+		  <xenotypeChances>
+			<Baseliner MayRequire="Ludeon.RimWorld.Biotech">999</Baseliner>
+		  </xenotypeChances>
+		</xenotypeSet>
+		<useFactionXenotypes>false</useFactionXenotypes>
+
+		<apparelMoney>1500~5500</apparelMoney>
+		<apparelAllowHeadgearChance>1</apparelAllowHeadgearChance>
+		<apparelTags>
+			<li>RemnantEmpire_stormiearmor</li>
+			<li>KotOREquipment_adv</li>
+		</apparelTags>
+		<apparelRequired>
+			<li>guy762_StormieHelmet</li>
+			<li>guy762_Accessory_stormie7thpauldron</li>
+			<li>guy762_Accessory_suspendersA</li>
+			<li>guy762_StormieArmor</li>
+			<li>guy762_Bodysuit</li>
+		</apparelRequired>
+		<specificApparelRequirements>
+			<li>
+				<bodyPartGroup>Neck</bodyPartGroup>
+				<apparelLayer>Shell</apparelLayer>
+				<color>(40,40,40)</color>
+			</li>
+			<li>
+				<bodyPartGroup>Torso</bodyPartGroup>
+				<apparelLayer>Shell</apparelLayer>
+				<color>(90,90,90)</color>
+			</li>
+			<li>
+				<apparelLayer>OnSkin</apparelLayer>
+				<color>(90,90,90)</color>
+			</li>
+		</specificApparelRequirements>
+
+		<biocodeWeaponChance>0.95</biocodeWeaponChance>
+		<weaponMoney>500~2200</weaponMoney>
+		<weaponTags>
+			<li>SWRanged_E11carbine</li>
+			<li>SWRanged_TL50blaster</li>
+		</weaponTags>
+
+		<techHediffsChance>2</techHediffsChance>
+		<techHediffsMoney>
+			<min>2400</min>
+			<max>4800</max>
+		</techHediffsMoney>
+
+		<skills>
+			<li>
+				<skill>Shooting</skill>
+				<range>10~14</range>
+			</li>
+			<li>
+				<skill>Melee</skill>
+				<range>6~10</range>
+			</li>
+		</skills>
+		<inventoryOptions>
+			<skipChance>0</skipChance>
+			<subOptionsChooseOne>
+				<li>
+					<thingDef>guy762_medpac_adv</thingDef>
+					<countRange>1~3</countRange>
+				</li>
+				<li>
+					<thingDef>guy762_stim_battle</thingDef>
+					<countRange>0~1</countRange>
+				</li>
+			</subOptionsChooseOne>
+		</inventoryOptions>
+
+		<disallowedTraits>
+			<li>Brawler</li>
+		</disallowedTraits>
+		<initialWillRange>0.5~2</initialWillRange>
+		<initialResistanceRange>5~10</initialResistanceRange>
+	</PawnKindDef>
+	
+	
+	
+	
+	
+	
+	<PawnKindDef Name="SWWarlords_lumiyastormie" ParentName="KotORSith_TrooperBase">
+		<defName>SWWarlords_lumiyastormie</defName>
+		<label>Royal Guard Stormtrooper</label>
+		<combatPower>125</combatPower>
+		<minGenerationAge>18</minGenerationAge>
+		<maxGenerationAge>40</maxGenerationAge>
+		<itemQuality>Normal</itemQuality>
+		
+		<xenotypeSet Inherit="False">
+		  <xenotypeChances>
+			<Baseliner MayRequire="Ludeon.RimWorld.Biotech">999</Baseliner>
+		  </xenotypeChances>
+		</xenotypeSet>
+		<useFactionXenotypes>false</useFactionXenotypes>
+
+		<apparelMoney>1500~5500</apparelMoney>
+		<apparelAllowHeadgearChance>1</apparelAllowHeadgearChance>
+		<apparelTags>
+			<li>RemnantEmpire_stormiearmor</li>
+			<li>KotOREquipment_adv</li>
+		</apparelTags>
+		<apparelRequired>
+			<li>guy762_StormieHelmet</li>
+			<li>guy762_Accessory_stormiepauldron</li>
+			<li>guy762_Accessory_suspendersA</li>
+			<li>guy762_StormieArmor</li>
+			<li>guy762_Bodysuit</li>
+		</apparelRequired>
+		<specificApparelRequirements>
+			<li>
+				<bodyPartGroup>Neck</bodyPartGroup>
+				<apparelLayer>Shell</apparelLayer>
+				<color>(40,40,40)</color>
+			</li>
+			<li>
+				<bodyPartGroup>Torso</bodyPartGroup>
+				<apparelLayer>Shell</apparelLayer>
+				<color>(90,90,90)</color>
+			</li>
+			<li>
+				<apparelLayer>Overhead</apparelLayer>
+				<color>(200,45,65)</color>
+			</li>
+			<li>
+				<apparelLayer>Middle</apparelLayer>
+				<color>(200,45,65)</color>
+			</li>
+			<li>
+				<apparelLayer>OnSkin</apparelLayer>
+				<color>(90,90,90)</color>
+			</li>
+		</specificApparelRequirements>
+
+		<biocodeWeaponChance>0.95</biocodeWeaponChance>
+		<weaponMoney>500~2200</weaponMoney>
+		<weaponTags>
+			<li>SWRanged_E11carbine</li>
+			<li>SWRanged_TL50blaster</li>
+		</weaponTags>
+
+		<techHediffsChance>2</techHediffsChance>
+		<techHediffsMoney>
+			<min>2400</min>
+			<max>4800</max>
+		</techHediffsMoney>
+
+		<skills>
+			<li>
+				<skill>Shooting</skill>
+				<range>10~14</range>
+			</li>
+			<li>
+				<skill>Melee</skill>
+				<range>6~10</range>
+			</li>
+		</skills>
+		<inventoryOptions>
+			<skipChance>0</skipChance>
+			<subOptionsChooseOne>
+				<li>
+					<thingDef>guy762_medpac_adv</thingDef>
+					<countRange>1~3</countRange>
+				</li>
+				<li>
+					<thingDef>guy762_stim_battle</thingDef>
+					<countRange>0~1</countRange>
+				</li>
+			</subOptionsChooseOne>
+		</inventoryOptions>
+
+		<disallowedTraits>
+			<li>Brawler</li>
+		</disallowedTraits>
+		<initialWillRange>0.5~2</initialWillRange>
+		<initialResistanceRange>5~10</initialResistanceRange>
+	</PawnKindDef>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 	<PawnKindDef Name="SWWarlords_zsinjraptor" ParentName="KotORSith_TrooperBase">
 		<defName>SWWarlords_zsinjraptor</defName>
 		<label>Raptor trooper</label>
@@ -377,7 +758,7 @@
 		</specificApparelRequirements>
 		
 		<biocodeWeaponChance>0</biocodeWeaponChance>
-		<weaponMoney>500~600</weaponMoney>
+		<weaponMoney>550~600</weaponMoney>
 		<weaponTags>
 		  <li>SWRanged_DH17pistol</li>
 		</weaponTags>

@@ -4,7 +4,7 @@
 	
 	<ThingDef ParentName="KotORRangedModdable_TwoHand">
 		<defName>guy762_E5rifle</defName>
-		<label>E-5 blaster rifle</label>
+		<label>E-5 blaster carbine</label>
 		<description>.</description>
 		<techLevel>Spacer</techLevel>
 		<thingClass>ThingWithComps</thingClass>
@@ -37,7 +37,7 @@
 				<hasStandardCommand>true</hasStandardCommand>
 				<defaultProjectile>KotORBlasterBolt_default</defaultProjectile>
 				<warmupTime>0.5</warmupTime>
-				<range>28</range>
+				<range>25</range>
 				<ticksBetweenBurstShots>10</ticksBetweenBurstShots>
 				<burstShotCount>1</burstShotCount>
 				<soundCast>kotorsound_E5blaster</soundCast>

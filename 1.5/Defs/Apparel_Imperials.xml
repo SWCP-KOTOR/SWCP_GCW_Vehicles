@@ -199,6 +199,161 @@
 	
 	
 	
+	
+	
+	
+	<ThingDef ParentName="guy762_CraftableUtilityBeltBase">
+		<defName>guy762_Accessory_stormiepauldron</defName>
+		<label>trooper pauldron</label>
+		<description>A durable armorweave pauldron for denoting rank among various trooper corps within the Empire.</description>
+		<graphicData>
+		  <texPath>Apparel/pauldron/Apparel</texPath>
+		  <graphicClass>Graphic_Single</graphicClass>
+		  <shaderType>CutoutComplex</shaderType>
+		</graphicData>
+		<statBases>
+			<Mass>0.5</Mass>
+			<MarketValue>100</MarketValue>
+			<MaxHitPoints>250</MaxHitPoints>
+			<ArmorRating_Sharp>0.01</ArmorRating_Sharp>
+			<ArmorRating_Blunt>0.01</ArmorRating_Blunt>
+			<ArmorRating_Heat>0.01</ArmorRating_Heat>
+			<EquipDelay>3</EquipDelay>
+			
+			<WorkToMake>5500</WorkToMake>
+		</statBases>
+		<equippedStatOffsets>
+		  <SocialImpact>0.1</SocialImpact>
+		</equippedStatOffsets>
+		<apparel>
+			<countsAsClothingForNudity>false</countsAsClothingForNudity>
+			<layers Inherit="False">
+				<li>Shell</li>
+			</layers>
+			<bodyPartGroups Inherit="False">
+				<li>Neck</li>
+			</bodyPartGroups>
+			<tags Inherit="False">
+				<li>RemnantEmpire_stormieofficer</li>
+			</tags>
+			<wornGraphicPath>Apparel/pauldron/Apparel</wornGraphicPath>
+			<useWornGraphicMask>true</useWornGraphicMask>
+			<drawData>
+			  <dataNorth>
+				<layer>65</layer>
+			  </dataNorth>
+			</drawData>
+		</apparel>
+		<tradeTags>
+			<li>guy762TT_KotOREquipment_apparel</li>
+		</tradeTags>
+		<costList>
+			<KOTOR_FabricArmorweave>30</KOTOR_FabricArmorweave>
+		</costList>
+		<recipeMaker>
+			<skillRequirements>
+				<Crafting>4</Crafting>
+			</skillRequirements>
+			<recipeUsers Inherit="False">
+				<li>HandTailoringBench</li>
+				<li>ElectricTailoringBench</li>
+				<li>guy762_KotORWorkbench</li>
+			</recipeUsers>
+		</recipeMaker>
+		<colorGenerator Class="ColorGenerator_Options" Inherit="False">
+			<options>
+				<li>
+					<weight>10</weight>
+					<only>(190,105,0)</only>         <!-- pumpkin orange (officer) -->
+				</li>
+				<li>
+					<weight>5</weight>
+					<only>(250,250,250)</only>         <!-- white (sergeant) -->
+				</li>
+			</options>
+		</colorGenerator>
+	  </ThingDef>
+	  
+	  
+	  
+	  
+	  
+	  <ThingDef ParentName="guy762_UtilityItemBase">
+		<defName>guy762_Accessory_stormie7thpauldron</defName>
+		<label>7th Fleet pauldron</label>
+		<description>A durable armorweave pauldron for denoting rank among various trooper corps within the Empire. This pauldron is emblazoned with the logo of Grand Admiral Thrawn's dreaded 7th Fleet.</description>
+		<graphicData>
+		  <texPath>Apparel/pauldron/7thFleet/Apparel</texPath>
+		  <graphicClass>Graphic_Single</graphicClass>
+		  <shaderType>CutoutComplex</shaderType>
+		</graphicData>
+		<statBases>
+			<Mass>0.5</Mass>
+			<MarketValue>500</MarketValue>
+			<MaxHitPoints>250</MaxHitPoints>
+			<ArmorRating_Sharp>0.01</ArmorRating_Sharp>
+			<ArmorRating_Blunt>0.01</ArmorRating_Blunt>
+			<ArmorRating_Heat>0.01</ArmorRating_Heat>
+			<EquipDelay>3</EquipDelay>
+			
+			<!-- <WorkToMake>5500</WorkToMake> -->
+		</statBases>
+		<equippedStatOffsets>
+		  <SocialImpact>0.3</SocialImpact>
+		</equippedStatOffsets>
+		<apparel>
+			<countsAsClothingForNudity>false</countsAsClothingForNudity>
+			<layers Inherit="False">
+				<li>Shell</li>
+			</layers>
+			<bodyPartGroups Inherit="False">
+				<li>Neck</li>
+			</bodyPartGroups>
+			<tags Inherit="False">
+				<li>ThrawnEmpire_stormieofficer</li>
+			</tags>
+			<wornGraphicPath>Apparel/pauldron/7thFleet/Apparel</wornGraphicPath>
+			<useWornGraphicMask>true</useWornGraphicMask>
+			<drawData>
+			  <dataNorth>
+				<layer>65</layer>
+			  </dataNorth>
+			</drawData>
+		</apparel>
+		<tradeTags>
+			<li>guy762TT_KotOREquipment_apparel</li>
+		</tradeTags>
+		<!-- <costList> -->
+			<!-- <KOTOR_FabricArmorweave>30</KOTOR_FabricArmorweave> -->
+		<!-- </costList> -->
+		<!-- <recipeMaker> -->
+			<!-- <skillRequirements> -->
+				<!-- <Crafting>4</Crafting> -->
+			<!-- </skillRequirements> -->
+			<!-- <recipeUsers Inherit="False"> -->
+				<!-- <li>HandTailoringBench</li> -->
+				<!-- <li>ElectricTailoringBench</li> -->
+				<!-- <li>guy762_KotORWorkbench</li> -->
+			<!-- </recipeUsers> -->
+		<!-- </recipeMaker> -->
+		<colorGenerator Class="ColorGenerator_Options" Inherit="False">
+			<options>
+				<li>
+					<weight>10</weight>
+					<only>(190,105,0)</only>         <!-- pumpkin orange (officer) -->
+				</li>
+				<li>
+					<weight>5</weight>
+					<only>(250,250,250)</only>         <!-- white (sergeant) -->
+				</li>
+			</options>
+		</colorGenerator>
+	  </ThingDef>
+	
+	
+	
+	
+	
   
   
   
@@ -227,7 +382,7 @@
 			<MeleeDodgeChance>-0.1</MeleeDodgeChance>
 			<IncomingDamageFactor>-0.1</IncomingDamageFactor>
 		</equippedStatOffsets>
-		<apparel Inherit="False">
+		<apparel>
 			<tags>
 				<li>ZsinjEmpire_raptorarmor</li>
 			</tags>
@@ -457,22 +612,70 @@
 	</ThingDef>
 	
 	
-	
-	
-	
-	
-	
-	
-	
-	
-	
 	<ThingDef ParentName="KotORArmorModdable_hard">
-		<defName>guy762_RebelHelmet</defName>
-		<label>combat helmet</label>
+		<defName>guy762_TIEpilotArmor</defName>
+		<label>TIE pilot flight vest</label>
+		<description>This combat-ready flight vest provides additional protection against vacuum for limited periods. Its many models appeal to a wide range of users, from military pilots and mercenaries to fringe explorers and space pirates. Built-in grav thrusters also assist with movement in open space.</description>
+		<graphicData>
+		  <texPath>Apparel/TIEPilot/Apparel</texPath>
+		  <graphicClass>Graphic_Single</graphicClass>
+		  <shaderType>CutoutComplex</shaderType>
+		</graphicData>
+		<statBases>
+			<Mass>3</Mass>
+			<MarketValue>500</MarketValue>
+			<MaxHitPoints>225</MaxHitPoints>
+			<ArmorRating_Sharp>0.25</ArmorRating_Sharp>
+			<ArmorRating_Blunt>0.1</ArmorRating_Blunt>
+			<ArmorRating_Heat>0.35</ArmorRating_Heat>
+			<Insulation_Cold>20</Insulation_Cold>
+			<EquipDelay>15</EquipDelay>
+		</statBases>
+		<equippedStatOffsets>
+			<MoveSpeed>-0.1</MoveSpeed>
+			<MeleeDodgeChance>-0.1</MeleeDodgeChance>
+			<IncomingDamageFactor>-0.05</IncomingDamageFactor>
+			<VacuumSpeedMultiplier MayRequire="kentington.saveourship2">2</VacuumSpeedMultiplier>
+			<DecompressionResistance MayRequire="kentington.saveourship2">0.125</DecompressionResistance>
+		</equippedStatOffsets>
+		<apparel>
+		  <tags Inherit="False">
+			<li>RemnantEmpire_TIEpilot</li>
+		  </tags>
+		  <wornGraphicPath>Apparel/TIEPilot/Apparel</wornGraphicPath>
+		  <useWornGraphicMask>true</useWornGraphicMask>
+		  <defaultOutfitTags Inherit="False">
+			<li>Worker</li>
+		  </defaultOutfitTags>
+		  <layers Inherit="False">
+			<li>Middle</li>
+		  </layers>
+		  <bodyPartGroups Inherit="False">
+			<li>Torso</li>
+		  </bodyPartGroups>
+		</apparel>
+		<tradeTags>
+			<li>guy762TT_KotORArmor</li>
+			<li>guy762TT_KotORArmor_space</li>
+			<li>guy762TT_KotORArmor_powered</li>
+		</tradeTags>
+		<colorGenerator Class="ColorGenerator_Options" Inherit="False">
+			<options>
+				<li>
+					<weight>15</weight>
+					<only>(40,40,40)</only>
+				</li>
+			</options>
+		</colorGenerator>
+	  </ThingDef>
+	  
+	  <ThingDef ParentName="KotORArmorModdable_hard">
+		<defName>guy762_TIEpilotHelmet</defName>
+		<label>TIE pilot Helmet</label>
 		<techLevel>Spacer</techLevel>
 		<description>.</description>
 		<graphicData>
-			<texPath>Apparel/Rebel/helmet</texPath>
+			<texPath>Apparel/TIEPilot/helmet</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
 			<shaderType>CutoutComplex</shaderType>
 		</graphicData>
@@ -480,95 +683,73 @@
 		  <li>ArmorHeadgear</li>
 		</thingCategories>
 		<statBases>
-			<Mass>2.5</Mass>
-			<MarketValue>100</MarketValue>
+			<Mass>4</Mass>
+			<MarketValue>300</MarketValue>
 			<MaxHitPoints>115</MaxHitPoints>
       		<ArmorRating_Sharp>0.35</ArmorRating_Sharp>
 			<ArmorRating_Blunt>0.2</ArmorRating_Blunt>
-			<ArmorRating_Heat>0.45</ArmorRating_Heat>
-			<EquipDelay>4</EquipDelay>
+			<ArmorRating_Heat>0.65</ArmorRating_Heat>
+			<EquipDelay>2</EquipDelay>
 		</statBases>
+		<equippedStatOffsets>
+			<ToxicEnvironmentResistance>1</ToxicEnvironmentResistance>
+			<HypoxiaResistance MayRequire="kentington.saveourship2">1</HypoxiaResistance>
+			<DecompressionResistance MayRequire="kentington.saveourship2">0.25</DecompressionResistance>
+		</equippedStatOffsets>
 		
 		<apparel Inherit="False">
 			<tags>
-				<li>NewRepublic_alderaanguard</li>
+				<li>RemnantEmpire_TIEpilot</li>
 			</tags>
-			<wornGraphicPath>Apparel/Rebel/helmet</wornGraphicPath>
+			<wornGraphicPath>Apparel/TIEPilot/helmet</wornGraphicPath>
 			<useWornGraphicMask>true</useWornGraphicMask>
 			<layers>
 				<li>Overhead</li>
+				<li>EyeCover</li>
 			</layers>
 			<bodyPartGroups>
-				<li>UpperHead</li>
+				<li>FullHead</li>
 			</bodyPartGroups>
-			<useDeflectMetalEffect>true</useDeflectMetalEffect>
+			<useDeflectMetalEffect>false</useDeflectMetalEffect>
 		</apparel>
 		<tradeTags>
-			<li>guy762TT_ORArmor</li>
+			<li>guy762TT_WarlordArmor</li>
 		</tradeTags>
 		<colorGenerator Class="ColorGenerator_Options" Inherit="False">
 			<options>
 				<li>
-					<weight>10</weight>
-					<only>(250,250,250)</only>  <!-- white -->
+					<weight>15</weight>
+					<only>(40,40,40)</only>
 				</li>
 			</options>
 		</colorGenerator>
 	</ThingDef>
 	
-	<ThingDef ParentName="guy762_clothingbase">
-		<defName>guy762_Clothing_rebel</defName>
-		<label>clothing, plain</label>
-		<description>These are simple garments that protect little more than the modesty of the wearer.</description>
-		<graphicData>
-		  <texPath>Apparel/Undersuits/rebel/Apparel</texPath>
-		  <graphicClass>Graphic_Single</graphicClass>
-		  <shaderType>CutoutComplex</shaderType>
-		  <colorTwo>(175,175,175)</colorTwo>
-		</graphicData>
-		<statBases>
-			<Mass>3</Mass>
-			<MarketValue>10</MarketValue>
-			<MaxHitPoints>100</MaxHitPoints>
-			<ArmorRating_Sharp>0.01</ArmorRating_Sharp>
-			<ArmorRating_Blunt>0.01</ArmorRating_Blunt>
-			<ArmorRating_Heat>0.01</ArmorRating_Heat>
-			<Insulation_Cold>5</Insulation_Cold>
-			<Insulation_Heat>10</Insulation_Heat>
-			<EquipDelay>3</EquipDelay>
-			
-			<WorkToMake>1000</WorkToMake>
-		</statBases>
-		
-		<costList>
-		  <Cloth>75</Cloth>
-		</costList>
-		
-		<apparel>
-		  <tags Inherit="False">
-			<li>NewRepublic_alderaanguard</li>
-		  </tags>
-		  <wornGraphicPath>Apparel/Undersuits/rebel/Apparel</wornGraphicPath>
-		  <useWornGraphicMask>true</useWornGraphicMask>
-		  <defaultOutfitTags Inherit="False">
-			<li>Worker</li>
-		  </defaultOutfitTags>
-		</apparel>
-		<tradeTags>
-			<li>guy762TT_KotORClothes</li>
-		</tradeTags>
-		<colorGenerator Class="ColorGenerator_Options" Inherit="False">
-			<options>
-				<li>
-					<weight>50</weight>
-					<only>(145,195,230)</only> <!-- blue -->
-				</li>
-				<li>
-					<weight>1</weight>
-					<only>(140,50,35)</only> <!-- rebel friend red -->
-				</li>
-			</options>
-		</colorGenerator>
-	  </ThingDef>
-
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 </Defs>

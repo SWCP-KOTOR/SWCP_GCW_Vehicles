@@ -43,8 +43,8 @@
               </ThingTargets>
           </li>
 		  <li>
-              <MainHand>(-0.125, 0.100, -0.130)</MainHand>
-              <SecHand>(0.175, -0.100, -0.065)</SecHand>
+              <MainHand>(-0.025, 0.100, -0.130)</MainHand>
+              <SecHand>(0.275, -0.100, -0.065)</SecHand>
               <ThingTargets>
                  <li>guy762_E5rifle</li> <!-- E-5 blaster rifle -->
               </ThingTargets>
@@ -68,6 +68,27 @@
               <SecHand>(0.065, -0.100, 0.00)</SecHand>
               <ThingTargets>
                  <li>guy762_DH17rifle_bayonet</li> <!-- DH-17 blaster rifle (bayonet) -->
+              </ThingTargets>
+          </li>
+		  <li>
+			  <MainHand>(-0.055, 0.100, -0.100)</MainHand>
+              <SecHand>(0.250, -0.100, -0.050)</SecHand>
+              <ThingTargets>
+                 <li>guy762_EE3carbine</li> <!-- EE-3 blaster carbine -->
+              </ThingTargets>
+          </li>
+		  <li>
+              <MainHand>(-0.125, 0.100, -0.115)</MainHand>
+              <ThingTargets>
+                 <li>guy762_Bryar</li> <!-- K-16 Bryar blaster (modified) -->
+              </ThingTargets>
+          </li>
+		  
+		  
+		  <li>
+              <MainHand>(-0.025, 0.100, -0.050)</MainHand>
+              <ThingTargets>
+                 <li>guy762_lightwhip_lumiya</li> <!-- modified lightwhip -->
               </ThingTargets>
           </li>
       </WeaponCompLoader>

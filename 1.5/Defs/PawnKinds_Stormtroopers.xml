@@ -655,6 +655,243 @@
 	
 	
 	
+	<PawnKindDef Name="SWWarlords_ImpTIEpilot" ParentName="KotORSith_TrooperBase">
+		<defName>SWWarlords_ImpTIEpilot</defName>
+		<label>TIE pilot</label>
+		<combatPower>65</combatPower>
+		<minGenerationAge>16</minGenerationAge>
+		<maxGenerationAge>50</maxGenerationAge>
+		<itemQuality>Normal</itemQuality>
+		
+		<xenotypeSet Inherit="False">
+		  <xenotypeChances>
+			<Baseliner MayRequire="Ludeon.RimWorld.Biotech">999</Baseliner>
+		  </xenotypeChances>
+		</xenotypeSet>
+		<useFactionXenotypes>false</useFactionXenotypes>
+
+		<apparelMoney>1500~5500</apparelMoney>
+		<apparelAllowHeadgearChance>1</apparelAllowHeadgearChance>
+		<apparelTags>
+			<li>KotOREquipment_basic</li>
+		</apparelTags>
+		<apparelRequired>
+			<li>guy762_TIEpilotHelmet</li>
+			<li>guy762_TIEpilotArmor</li>
+			<li>guy762_Bodysuit_TIEpilot</li>
+		</apparelRequired>
+
+		<biocodeWeaponChance>0</biocodeWeaponChance>
+		<weaponMoney>500</weaponMoney>
+		<weaponTags>
+			<li>SWRanged_E11carbine</li>
+		</weaponTags>
+
+		<techHediffsChance>1</techHediffsChance>
+		<techHediffsMoney>
+			<min>1200</min>
+			<max>2400</max>
+		</techHediffsMoney>
+
+		<skills>
+			<li>
+				<skill>Shooting</skill>
+				<range>4~8</range>
+			</li>
+			<li>
+				<skill>Melee</skill>
+				<range>4~6</range>
+			</li>
+			<li>
+				<skill>Intellectual</skill>
+				<range>8~12</range>
+			</li>
+		</skills>
+		<inventoryOptions>
+			<skipChance>0.25</skipChance>
+			<subOptionsChooseOne>
+				<li>
+					<thingDef>guy762_medpac</thingDef>
+					<countRange>1~3</countRange>
+				</li>
+			</subOptionsChooseOne>
+		</inventoryOptions>
+
+		<disallowedTraits>
+			<li>Brawler</li>
+		</disallowedTraits>
+		<initialWillRange>0.5~2</initialWillRange>
+		<initialResistanceRange>5~10</initialResistanceRange>
+	</PawnKindDef>
+	
+	
+	
+	
+	<PawnKindDef Name="SWWarlords_PATIEpilot" ParentName="KotORSith_TrooperBase">
+		<defName>SWWarlords_PATIEpilot</defName>
+		<label>TIE pilot</label>
+		<combatPower>65</combatPower>
+		<minGenerationAge>18</minGenerationAge>
+		<maxGenerationAge>40</maxGenerationAge>
+		<itemQuality>Good</itemQuality>
+		
+		<xenotypeSet Inherit="False">
+		  <xenotypeChances>
+			<Baseliner MayRequire="Ludeon.RimWorld.Biotech">999</Baseliner>
+		  </xenotypeChances>
+		</xenotypeSet>
+		<useFactionXenotypes>false</useFactionXenotypes>
+
+		<apparelMoney>1500~5500</apparelMoney>
+		<apparelAllowHeadgearChance>1</apparelAllowHeadgearChance>
+		<apparelTags>
+			<li>KotOREquipment_basic</li>
+		</apparelTags>
+		<apparelRequired>
+			<li>guy762_TIEpilotHelmet_PA</li>
+			<li>guy762_TIEpilotArmor</li>
+			<li>guy762_Bodysuit_TIEpilot</li>
+		</apparelRequired>
+		<specificApparelRequirements>
+			<li>
+				<apparelLayer>OnSkin</apparelLayer>
+				<color>(90,90,90)</color>
+			</li>
+		</specificApparelRequirements>
+
+		<biocodeWeaponChance>0</biocodeWeaponChance>
+		<weaponMoney>500</weaponMoney>
+		<weaponTags>
+			<li>SWRanged_E11carbine</li>
+		</weaponTags>
+
+		<techHediffsChance>1</techHediffsChance>
+		<techHediffsMoney>
+			<min>1200</min>
+			<max>2400</max>
+		</techHediffsMoney>
+
+		<skills>
+			<li>
+				<skill>Shooting</skill>
+				<range>4~8</range>
+			</li>
+			<li>
+				<skill>Melee</skill>
+				<range>4~6</range>
+			</li>
+			<li>
+				<skill>Intellectual</skill>
+				<range>10~12</range>
+			</li>
+		</skills>
+		<inventoryOptions>
+			<skipChance>0.25</skipChance>
+			<subOptionsChooseOne>
+				<li>
+					<thingDef>guy762_medpac</thingDef>
+					<countRange>1~3</countRange>
+				</li>
+			</subOptionsChooseOne>
+		</inventoryOptions>
+
+		<disallowedTraits>
+			<li>Brawler</li>
+		</disallowedTraits>
+		<initialWillRange>0.5~2</initialWillRange>
+		<initialResistanceRange>5~10</initialResistanceRange>
+	</PawnKindDef>
+	
+	
+	
+	
+	
+	
+	<PawnKindDef Name="SWWarlords_ImpTIEace" ParentName="KotORSith_TrooperBase">
+		<defName>SWWarlords_ImpTIEace</defName>
+		<label>TIE pilot ace</label>
+		<combatPower>65</combatPower>
+		<minGenerationAge>16</minGenerationAge>
+		<maxGenerationAge>50</maxGenerationAge>
+		<itemQuality>Excellent</itemQuality>
+		
+		<xenotypeSet Inherit="False">
+		  <xenotypeChances>
+			<Baseliner MayRequire="Ludeon.RimWorld.Biotech">999</Baseliner>
+		  </xenotypeChances>
+		</xenotypeSet>
+		<useFactionXenotypes>false</useFactionXenotypes>
+
+		<apparelMoney>4500~8500</apparelMoney>
+		<apparelAllowHeadgearChance>1</apparelAllowHeadgearChance>
+		<apparelTags>
+			<li>KotOREquipment_adv</li>
+		</apparelTags>
+		<apparelRequired>
+			<li>guy762_TIEpilotAceHelmet</li>
+			<li>guy762_TIEpilotArmor</li>
+			<li>guy762_Bodysuit_TIEace</li>
+		</apparelRequired>
+
+		<biocodeWeaponChance>0</biocodeWeaponChance>
+		<weaponMoney>1500</weaponMoney>
+		<weaponTags>
+			<li>SWRanged_EE3carbine</li>
+		</weaponTags>
+
+		<techHediffsChance>4</techHediffsChance>
+		<techHediffsMoney>
+			<min>4800</min>
+			<max>8600</max>
+		</techHediffsMoney>
+
+		<skills>
+			<li>
+				<skill>Shooting</skill>
+				<range>4~8</range>
+			</li>
+			<li>
+				<skill>Melee</skill>
+				<range>4~6</range>
+			</li>
+			<li>
+				<skill>Intellectual</skill>
+				<range>14~16</range>
+			</li>
+		</skills>
+		<inventoryOptions>
+			<skipChance>0.25</skipChance>
+			<subOptionsChooseOne>
+				<li>
+					<thingDef>guy762_medpac_life</thingDef>
+					<countRange>1~3</countRange>
+				</li>
+			</subOptionsChooseOne>
+		</inventoryOptions>
+
+		<disallowedTraits>
+			<li>Brawler</li>
+		</disallowedTraits>
+		<initialWillRange>0.5~2</initialWillRange>
+		<initialResistanceRange>5~10</initialResistanceRange>
+	</PawnKindDef>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 	
 	
 	

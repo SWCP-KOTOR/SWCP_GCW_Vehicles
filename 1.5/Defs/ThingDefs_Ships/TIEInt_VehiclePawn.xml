@@ -8,6 +8,12 @@
 		<path>Starfighters/TIEInterceptor/TIEInt_pattern_north</path>
 	</Vehicles.PatternDef>
 	
+	<Vehicles.SkinDef>
+		<defName>guy762_SWVehicleSkin_TIEInt181st</defName>
+		<label>TIE Interceptor (181st)</label>
+		<path>Starfighters/TIEInterceptor/TIEInt_181st_north</path>
+	</Vehicles.SkinDef>
+	
 	
 	<Vehicles.VehicleDef ParentName="MM-VF-Vehicle_Pawn">
 		<defName>guy762_SWVehicle_TIEInterceptor</defName>

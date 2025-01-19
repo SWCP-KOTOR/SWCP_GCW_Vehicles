@@ -1,6 +1,81 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
 
+  <ThingDef ParentName="KotORArmorModdable_hard">
+		<defName>guy762_ArmyTrooperHelmet</defName>
+		<label>army trooper helmet</label>
+		<techLevel>Spacer</techLevel>
+		<description>.</description>
+		<graphicData>
+			<texPath>Apparel/ImperialArmyTrooper/helmet</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<shaderType>CutoutComplex</shaderType>
+		</graphicData>
+		<thingCategories>
+		  <li>ArmorHeadgear</li>
+		</thingCategories>
+		<statBases>
+			<Mass>3.5</Mass>
+			<MarketValue>200</MarketValue>
+			<MaxHitPoints>115</MaxHitPoints>
+      		<ArmorRating_Sharp>0.55</ArmorRating_Sharp>
+			<ArmorRating_Blunt>0.4</ArmorRating_Blunt>
+			<ArmorRating_Heat>0.65</ArmorRating_Heat>
+			<EquipDelay>4</EquipDelay>
+		</statBases>
+		
+		<randomStyleChance>0.5</randomStyleChance>
+		<randomStyle>
+		  <li>
+			<styleDef>guy762_ArmyTrooperHelmetStyle_visordown</styleDef>
+		  </li>
+		</randomStyle>
+		<comps>
+			<li Class="CompProperties_Styleable"></li>
+		</comps>
+		
+		<apparel Inherit="False">
+			<tags>
+				<li>RemnantEmpire_armytrooper</li>
+			</tags>
+			<wornGraphicPath>Apparel/ImperialArmyTrooper/helmet</wornGraphicPath>
+			<useWornGraphicMask>true</useWornGraphicMask>
+			<layers>
+				<li>Overhead</li>
+			</layers>
+			<bodyPartGroups>
+				<li>UpperHead</li>
+			</bodyPartGroups>
+			<useDeflectMetalEffect>true</useDeflectMetalEffect>
+		</apparel>
+		<tradeTags>
+			<li>guy762TT_ORArmor</li>
+		</tradeTags>
+		<colorGenerator Class="ColorGenerator_Options" Inherit="False">
+			<options>
+				<li>
+					<weight>10</weight>
+					<only>(110,120,115)</only>  <!-- army slate green -->
+				</li>
+			</options>
+		</colorGenerator>
+	</ThingDef>
+	
+	<ThingStyleDef>
+		<defName>guy762_ArmyTrooperHelmetStyle_visordown</defName>
+		<overrideLabel>army trooper helmet</overrideLabel>
+		<wornGraphicPath>Apparel/ImperialArmyTrooper/helmet_visordown/helmet</wornGraphicPath>
+		<graphicData>
+		  <texPath>Apparel/ImperialArmyTrooper/helmet_visordown/helmet</texPath>
+		  <graphicClass>Graphic_Single</graphicClass>
+		  <shaderType>CutoutComplex</shaderType>
+		</graphicData>
+	  </ThingStyleDef>
+  
+  
+  
+  
+  
   <ThingDef ParentName="BaseGrenadeProjectile">
 		<defName>guy762_ThrownGrenade_stormtrooper</defName>
 		<label>concussion grenade</label>
@@ -809,13 +884,6 @@
 	
 	
 	
-	
-	
-	
-	
-	
-	
-	
 	<ThingDef ParentName="KotORArmorModdable_hard">
 		<defName>guy762_TIEpilotAceHelmet</defName>
 		<label>TIE pilot Helmet (ace)</label>
@@ -897,6 +965,13 @@
 		  <colorTwo>(220,190,0)</colorTwo> <!-- mid yellow -->
 		</graphicData>
 	  </ThingStyleDef>
+	
+	
+	
+	
+	
+	
+	
 	
 	
 	

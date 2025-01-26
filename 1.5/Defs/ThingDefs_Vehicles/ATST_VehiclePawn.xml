@@ -4,22 +4,22 @@
 
 	
 	<Vehicles.VehicleDef ParentName="VehiclePawn_Mechanical">
-		<defName>guy762_SWVehicle_TIECrawler</defName>
-		<label>TIE/ct Crawler</label>
+		<defName>guy762_SWVehicle_ATST</defName>
+		<label>AT-ST Scout Walker</label>
 		<description>. \n\n&lt;color=#bb8f04&gt;Crew:&lt;/color&gt; Driver x1</description>
 		
 		<graphicData>
-			<texPath>LandVehicles/TIECrawler/TIECrawler</texPath>
+			<texPath>LandVehicles/ATST/ATST</texPath>
 			<graphicClass>Vehicles.Graphic_Vehicle</graphicClass>
 			<shaderType>CutoutComplexPattern</shaderType>
 			<drawSize>(7,7)</drawSize>
-			<color>(140,140,160)</color>
+			<color>(185,185,185)</color> <!-- lighter grey -->
 		</graphicData>
 		
 		<fillPercent>1</fillPercent>
 		
 		<nameable>false</nameable>
-		<buildDef>guy762_SWVehicleBP_TIECrawler</buildDef>
+		<buildDef>guy762_SWVehicleBP_ATST</buildDef>
 		
 		<size>(6,6)</size>
 		<uiIconScale>1</uiIconScale>
@@ -33,20 +33,20 @@
 			<!--ArmorRating_Sharp>+0.05</ArmorRating_Sharp>
 			<ArmorRating_Blunt>-0.1</ArmorRating_Blunt>        BASE CURVE FOR HARD ARMOR
 			<ArmorRating_Heat>+0.15</ArmorRating_Heat-->
-			<ArmorRating_Sharp>0.45</ArmorRating_Sharp>
-			<ArmorRating_Blunt>0.3</ArmorRating_Blunt> <!-- # of estimated XWMG hull points * 0.1, apply to hard armor curve -->
-			<ArmorRating_Heat>0.55</ArmorRating_Heat>
-			<MaxHitPoints>4000</MaxHitPoints> <!-- # of estimated XWMG hull points * 1000 -->
+			<ArmorRating_Sharp>0.35</ArmorRating_Sharp>
+			<ArmorRating_Blunt>0.2</ArmorRating_Blunt> <!-- # of estimated XWMG hull points * 0.1, apply to hard armor curve -->
+			<ArmorRating_Heat>0.45</ArmorRating_Heat>
+			<MaxHitPoints>3000</MaxHitPoints> <!-- # of estimated XWMG hull points * 1000 -->
 			
 			<Flammability>0.5</Flammability>
 			<MarketValue>5800</MarketValue>
 		</statBases>
 		
 		<vehicleStats>
-			<Mass>750</Mass>
-			<MoveSpeed>20</MoveSpeed>
-			<CargoCapacity>50</CargoCapacity>
-			<RepairRate>2</RepairRate>
+			<Mass>500</Mass>
+			<MoveSpeed>10</MoveSpeed>
+			<CargoCapacity>100</CargoCapacity>
+			<RepairRate>1</RepairRate>
 			<!--AccelerationRate>0.08</AccelerationRate-->
 		</vehicleStats>
 		
@@ -54,22 +54,22 @@
 			<li>
 				<start>IgnitionOn</start>
 				<stop>MoveStart</stop>
-				<value>kotorsound_trackedvehicle_idle</value>
+				<value>kotorsound_speederbike_idle</value>
 			</li>
 			<li>
 				<start>MoveStart</start>
 				<stop>MoveStop</stop>
-				<value>kotorsound_trackedvehicle_moving</value>
+				<value>kotorsound_ATSTsteppy</value>
 			</li>
 			<li>
 				<start>MoveStop</start>
 				<stop>MoveStart</stop>
-				<value>kotorsound_trackedvehicle_idle</value>
+				<value>kotorsound_speederbike_idle</value>
 			</li>
 			<li>
 				<start>MoveStop</start>
 				<stop>IgnitionOff</stop>
-				<value>kotorsound_trackedvehicle_idle</value>
+				<value>kotorsound_speederbike_idle</value>
 			</li>
 		</soundSustainersOnEvent>
 		
@@ -122,7 +122,7 @@
 			
 			<customRoadCosts AssignDefaults = "0.4" />
 			<vehicleJobLimitations>
-				<li>(RepairVehicle, 2)</li> <!-- how many pawns can repair this vehicle at a time -->
+				<li>(RepairVehicle, 4)</li> <!-- how many pawns can repair this vehicle at a time -->
 			</vehicleJobLimitations> <!-- guy762 RULES: repair job count should be twice the amount of pawns to fully operate the vehicle -->
 			
 			<customHillinessCosts>
@@ -151,7 +151,22 @@
 					<comfort>-0.25</comfort>
 					
 					<turretIds>
-						<li>TIECrawlerKey_gun_1</li>
+						<li>ATSTKey_gun_1</li>
+					</turretIds>
+				</li>
+				<li>
+					<key>gunner</key>
+					<label>Gunner</label>
+					<slots>1</slots>
+					<slotsToOperate>1</slotsToOperate>
+					<handlingTypes>
+						<li>Turret</li>
+					</handlingTypes>
+					<comfort>-0.25</comfort>
+					
+					<turretIds>
+						<li>ATSTKey_gun_2</li>
+						<li>ATSTKey_gun_3</li>
 					</turretIds>
 				</li>
 			</roles>
@@ -159,16 +174,16 @@
 		
 		<components>
 			<li>
-				<key>TIECrawlerKey_hull</key>
+				<key>ATSTKey_hull</key>
 				<label>Hull</label>
 				<depth>External</depth>
 				
 				<armor>
-					<ArmorRating_Sharp>0.45</ArmorRating_Sharp>
-					<ArmorRating_Blunt>0.3</ArmorRating_Blunt> <!-- # of estimated XWMG hull points * 0.1, apply to hard armor curve -->
-					<ArmorRating_Heat>0.55</ArmorRating_Heat>
+					<ArmorRating_Sharp>0.35</ArmorRating_Sharp>
+					<ArmorRating_Blunt>0.2</ArmorRating_Blunt> <!-- # of estimated XWMG hull points * 0.1, apply to hard armor curve -->
+					<ArmorRating_Heat>0.45</ArmorRating_Heat>
 				</armor>
-				<health>400</health> <!-- # of estimated XWMG hull points * 100 -->
+				<health>300</health> <!-- # of estimated XWMG hull points * 100 -->
 				
 				<hitbox>
 					<side>Body</side>
@@ -177,13 +192,13 @@
 			
 			
 			<!-- <li> -->
-				<!-- <key>TIECrawlerKey_cockpit</key> -->
+				<!-- <key>ATSTKey_cockpit</key> -->
 				<!-- <label>Cockpit</label> -->
 				<!-- <health>100</health> -->
 				<!-- <depth>Internal</depth> -->
 			<!-- </li> -->
 			<li>
-				<key>TIECrawlerKey_engine</key>
+				<key>ATSTKey_engine</key>
 				<label>Engine</label>
 				<health>25</health>
 				<priorityStatEfficiency>true</priorityStatEfficiency>
@@ -204,8 +219,8 @@
 				</categories>
 			</li>
 			<li>
-				<key>TIECrawlerKey_leftaxle</key>
-				<label>Left Axle</label>
+				<key>ATSTKey_leftleg</key>
+				<label>Left Leg</label>
 				<health>25</health>
 				<depth>Internal</depth>
 				
@@ -214,8 +229,8 @@
 				</categories>
 			</li>
 			<li>
-				<key>TIECrawlerKey_rightaxle</key>
-				<label>Right Axle</label>
+				<key>ATSTKey_rightleg</key>
+				<label>Right Leg</label>
 				<health>25</health>
 				<depth>Internal</depth>
 				
@@ -224,8 +239,8 @@
 				</categories>
 			</li>
 			<li>
-				<key>TIECrawlerKey_tread_left</key>
-				<label>Left Treads</label>
+				<key>ATSTKey_leftfoot</key>
+				<label>Left Foot</label>
 				<health>50</health>
 				<depth>Internal</depth>
 				
@@ -238,8 +253,8 @@
 				</categories>
 			</li>
 			<li>
-				<key>TIECrawlerKey_tread_right</key>
-				<label>Right Treads</label>
+				<key>ATSTKey_rightfoot</key>
+				<label>Right Foot</label>
 				<health>50</health>
 				<depth>Internal</depth>
 				
@@ -277,13 +292,13 @@
 			<li Class="Vehicles.CompProperties_VehicleTurrets">
 				<turrets>
 					<li>
-						<turretDef>guy762_VehicleTurret_TIECrawler_main</turretDef>
+						<turretDef>guy762_VehicleTurret_ATST_main</turretDef>
 						
 						<renderProperties>
-							<north>(0, 1.4)</north>
-							<south>(0, -1.8)</south>
-							<east>(1.8, 0)</east>
-							<west>(-1.8, 0)</west>
+							<north>(0, 2.5)</north>
+							<south>(0, -1.5)</south>
+							<east>(1.8, 0.825)</east>
+							<west>(-1.8, 0.825)</west>
 						</renderProperties>
 						<defaultAngleRotated>0</defaultAngleRotated>
 						<angleRestricted>(315,45)</angleRestricted>
@@ -291,7 +306,7 @@
 						
 						<aimPieOffset>(0, 2.55)</aimPieOffset>
 						
-						<key>TIECrawlerKey_gun_1</key>
+						<key>ATSTKey_gun_1</key>
 					</li>
 				</turrets>
 			</li>
@@ -301,12 +316,12 @@
 	
 	
 	<Vehicles.VehicleTurretDef ParentName="VehicleTurretBase">
-		<defName>guy762_VehicleTurret_TIECrawler_main</defName>
-		<label>TIE/ct main gun</label>
+		<defName>guy762_VehicleTurret_ATST_main</defName>
+		<label>AT-ST main gun</label>
 		<description>The main gun of a TIE Crawler.</description>
 		
 		<turretType>Rotatable</turretType>
-		<shotSound>kotorsound_TIECrawlerGun</shotSound>
+		<shotSound>kotorsound_speedergun</shotSound>
 		
 		<projectile>SWVehicleBullet_TIEdoublegreen</projectile>
 		<reloadTimer>3.5</reloadTimer>
@@ -326,9 +341,9 @@
 
 		<fireModes>
 			<li>
-				<shotsPerBurst>1</shotsPerBurst>
-				<ticksBetweenShots>10</ticksBetweenShots>
-				<ticksBetweenBursts>60</ticksBetweenBursts>
+				<shotsPerBurst>2</shotsPerBurst>
+				<ticksBetweenShots>8</ticksBetweenShots>
+				<ticksBetweenBursts>100</ticksBetweenBursts>
 				<label>Single</label>
 				<texPath>UI/Sniper_Shot</texPath>
 			</li>

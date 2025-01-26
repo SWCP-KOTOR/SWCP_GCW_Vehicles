@@ -2,13 +2,13 @@
 
 <Defs>
 	<Vehicles.VehicleBuildDef ParentName="VehicleBaseBuildable">
-		<defName>guy762_SWVehicleBP_ImpTroopTransport</defName>
-		<label>K79-S80 troop transport</label>
+		<defName>guy762_SWVehicleBP_ATST</defName>
+		<label>AT-ST Scout Walker</label>
 		<description>.</description>
 		<designationCategory>MM_StarWarsShipBuildTab</designationCategory>
 		
 		<graphicData>
-			<texPath>LandVehicles/ImpTroopTransport/ImpTroopTransport_L1</texPath>
+			<texPath>LandVehicles/ATST/ATST</texPath>
 			<graphicClass>Graphic_Multi</graphicClass>
 			<drawSize>(7,7)</drawSize>
 			<!-- <drawOffset>(0, 0, 1)</drawOffset> -->
@@ -36,7 +36,7 @@
 		</costList>
 		
 		<soundImpactDefault>BulletImpact_Metal</soundImpactDefault>
-		<thingToSpawn>guy762_SWVehicle_ImpTroopTransport</thingToSpawn>
+		<thingToSpawn>guy762_SWVehicle_ATST</thingToSpawn>
 		
 		<constructionSkillPrerequisite>6</constructionSkillPrerequisite>
 	</Vehicles.VehicleBuildDef>

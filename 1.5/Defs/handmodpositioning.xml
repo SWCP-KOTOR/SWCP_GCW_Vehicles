@@ -83,6 +83,13 @@
                  <li>guy762_Bryar</li> <!-- K-16 Bryar blaster (modified) -->
               </ThingTargets>
           </li>
+		  <li>
+			  <MainHand>(-0.150, 0.100, -0.200)</MainHand>
+              <SecHand>(0.150, -0.100, -0.125)</SecHand>
+              <ThingTargets>
+                 <li>guy762_FC1Flechette</li> <!-- FC-1 flechette launcher -->
+              </ThingTargets>
+          </li>
 		  
 		  
 		  <li>

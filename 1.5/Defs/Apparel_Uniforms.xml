@@ -340,7 +340,7 @@
 		
 		<apparel>
 		  <tags Inherit="False">
-			<li>SE_apparel_ensign</li>
+			<li>RemnantEmpire_armytrooper</li>
 		  </tags>
 		  <wornGraphicPath>Apparel/Officer/default/Apparel</wornGraphicPath>
 		  <useWornGraphicMask>true</useWornGraphicMask>

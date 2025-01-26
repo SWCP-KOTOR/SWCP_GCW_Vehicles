@@ -46,23 +46,33 @@
 		</statBases>
 		
 		<vehicleStats>
-			<Mass>100</Mass>
+			<Mass>650</Mass>
 			<MoveSpeed>20</MoveSpeed>
-			<CargoCapacity>10</CargoCapacity>
+			<CargoCapacity>300</CargoCapacity>
 			<RepairRate>1</RepairRate>
 			<!--AccelerationRate>0.08</AccelerationRate-->
 		</vehicleStats>
 		
 		<soundSustainersOnEvent>
-			<!--li>
-				<start>MoveStop</start>
+			<li>
+				<start>IgnitionOn</start>
 				<stop>MoveStart</stop>
 				<value>kotorsound_speederbike_idle</value>
-			</li-->
+			</li>
 			<li>
 				<start>MoveStart</start>
 				<stop>MoveStop</stop>
-				<value>kotorsound_speederbike_moving</value>
+				<value>kotorsound_hovercar_moving</value>
+			</li>
+			<li>
+				<start>MoveStop</start>
+				<stop>MoveStart</stop>
+				<value>kotorsound_speederbike_idle</value>
+			</li>
+			<li>
+				<start>MoveStop</start>
+				<stop>IgnitionOff</stop>
+				<value>kotorsound_speederbike_idle</value>
 			</li>
 		</soundSustainersOnEvent>
 		
@@ -93,11 +103,11 @@
 			</li>
 			<li>
 				<key>CargoAdded</key>
-				<value>kotorsound_bag_open</value>
+				<value>kotorsound_footlocker_open</value>
 			</li>
 			<li>
 				<key>CargoRemoved</key>
-				<value>kotorsound_bag_close</value>
+				<value>kotorsound_footlocker_close</value>
 			</li>
 		</soundOneShotsOnEvent>
 		
@@ -137,9 +147,16 @@
 					</handlingTypes>
 				</li>
 				<li>
-					<key>navigator</key>
-					<label>Navigator</label>
+					<key>gunner</key>
+					<label>Gunner</label>
 					<slots>1</slots>
+					<slotsToOperate>1</slotsToOperate>
+					
+					<handlingTypes>Turret</handlingTypes>
+					
+					<turretIds>
+						<li>AA5TruckKey_gun_1</li>
+					</turretIds>
 				</li>
 				<li>
 					<key>passenger</key>
@@ -152,49 +169,35 @@
 		
 		<components>
 			<li>
-				<key>FrontWheel</key>
-				<label>Front Wheel</label>
-				<health>20</health>
+				<key>AA5TruckKey_hull</key>
+				<label>Hull</label>
 				<depth>External</depth>
 				
 				<armor>
-					<ArmorRating_Blunt>0</ArmorRating_Blunt>
-					<ArmorRating_Sharp>0</ArmorRating_Sharp>
+					<ArmorRating_Sharp>0.45</ArmorRating_Sharp>
+					<ArmorRating_Blunt>0.3</ArmorRating_Blunt> <!-- # of estimated XWMG hull points * 0.1, apply to hard armor curve -->
+					<ArmorRating_Heat>0.55</ArmorRating_Heat>
 				</armor>
+				<health>400</health> <!-- # of estimated XWMG hull points * 100 -->
 				
-				<tags>
-					<li>Wheel</li>
-				</tags>
-				
-				<categories>
-					<li>MoveSpeed</li>
-				</categories>
+				<hitbox>
+					<side>Body</side>
+				</hitbox>
 			</li>
+			
+			
+			<!-- <li> -->
+				<!-- <key>AA5TruckKey_cabin</key> -->
+				<!-- <label>Cabin</label> -->
+				<!-- <health>100</health> -->
+				<!-- <depth>Internal</depth> -->
+			<!-- </li> -->
 			<li>
-				<key>BackWheel</key>
-				<label>Back Wheel</label>
-				<health>20</health>
-				<depth>External</depth>
-				
-				<armor>
-					<ArmorRating_Blunt>0</ArmorRating_Blunt>
-					<ArmorRating_Sharp>0</ArmorRating_Sharp>
-				</armor>
-				
-				<tags>
-					<li>Wheel</li>
-				</tags>
-				
-				<categories>
-					<li>MoveSpeed</li>
-				</categories>
-			</li>
-			<li>
-				<key>Engine</key>
+				<key>AA5TruckKey_engine</key>
 				<label>Engine</label>
 				<health>25</health>
 				<priorityStatEfficiency>true</priorityStatEfficiency>
-				<depth>External</depth>
+				<depth>Internal</depth>
 				
 				<reactors>
 					<li Class = "Vehicles.Reactor_Explosive">
@@ -211,20 +214,24 @@
 				</categories>
 			</li>
 			<li>
-				<key>FrontSuspension</key>
-				<label>Front Suspension</label>
-				<health>10</health>
-				<depth>External</depth>
+				<key>AA5TruckKey_repulsor</key>
+				<label>Repulsorlift Generator</label>
+				<health>75</health>
+				<depth>Internal</depth>
 				
 				<categories>
 					<li>MoveSpeed</li>
 				</categories>
 			</li>
 			<li>
-				<key>BackSuspension</key>
-				<label>Back Suspension</label>
-				<health>10</health>
-				<depth>External</depth>
+				<key>AA5TruckKey_thrust</key>
+				<label>Thrust Repulsor</label>
+				<health>50</health>
+				<depth>Internal</depth>
+				
+				<tags>
+					<li>Wheel</li>
+				</tags>
 				
 				<categories>
 					<li>MoveSpeed</li>
@@ -253,6 +260,76 @@
 				<fuelConsumptionRate>12.5</fuelConsumptionRate>
 				<fuelCapacity>30</fuelCapacity>
 			</li>
+			<li Class="Vehicles.CompProperties_VehicleTurrets">
+				<turrets>
+					<li>
+						<turretDef>guy762_VehicleTurret_AA5Truck_dorsal</turretDef>
+						
+						<renderProperties>
+							<north>(-0.44, 1.2)</north>
+							<south>(-0.45, -0.35)</south>
+							<east>(0.75, 1)</east>
+							<west>(-0.75, 1)</west>
+						</renderProperties>
+						<defaultAngleRotated>0</defaultAngleRotated>
+						<!-- <angleRestricted>(315,45)</angleRestricted> -->
+						<gizmoLabel>dorsal turret</gizmoLabel>
+						
+						<drawLayer>15</drawLayer>
+						<aimPieOffset>(0, 2.55)</aimPieOffset>
+						
+						<key>AA5TruckKey_gun_1</key>
+					</li>
+				</turrets>
+			</li>
 		</comps>
 	</Vehicles.VehicleDef>
+	
+	
+	
+	<Vehicles.VehicleTurretDef ParentName="VehicleTurretBase">
+		<defName>guy762_VehicleTurret_AA5Truck_dorsal</defName>
+		<label>A-A5 Speeder Truck dorsal turret</label>
+		<description>The rotating dorsal turret of an A-A5 Speeder Truck.</description>
+		
+		<turretType>Rotatable</turretType>
+		<shotSound>kotorsound_speedergun</shotSound>
+		
+		<projectile>SWVehicleBullet_tankdoublered</projectile>
+		<reloadTimer>3.5</reloadTimer>
+		<warmUpTimer>1</warmUpTimer>
+		
+		<magazineCapacity>999</magazineCapacity>
+		
+		<hitFlags>IntendedTarget</hitFlags>
+		
+		<autoSnapTargeting>true</autoSnapTargeting>
+		<rotationSpeed>5</rotationSpeed>
+		
+		<projectileOffset>2.1</projectileOffset>
+		
+		<minRange>5</minRange>
+		<maxRange>60</maxRange> <!-- ~30 for infantry, 60 for ground vehicles, 90 for starfighters -->
+
+		<fireModes>
+			<li>
+				<shotsPerBurst>1</shotsPerBurst>
+				<ticksBetweenShots>10</ticksBetweenShots>
+				<ticksBetweenBursts>80</ticksBetweenBursts>
+				<label>Single</label>
+				<texPath>UI/Sniper_Shot</texPath>
+			</li>
+		</fireModes>
+
+		<graphicData>
+			<texPath>Starfighters/YT2400/YT2400_gun</texPath>
+			<graphicClass>Vehicles.Graphic_Turret</graphicClass>
+			<drawSize>(4,4)</drawSize>
+		</graphicData>
+		
+		<gizmoIconTexPath>Starfighters/YT2400/YT2400_gun</gizmoIconTexPath>
+		
+	</Vehicles.VehicleTurretDef>
+	
+	
 </Defs>

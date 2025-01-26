@@ -13,7 +13,7 @@
 			<texPath>LandVehicles/ImpTroopTransport/ImpTroopTransport_L1</texPath>
 			<graphicClass>Vehicles.Graphic_Vehicle</graphicClass>
 			<drawSize>(7,7)</drawSize>
-			<layer>1</layer>
+			<layer>5</layer>
 			<shaderType>CutoutComplexPattern</shaderType>
 			<color>(185,185,185)</color> <!-- lighter grey -->
 		</graphicData>
@@ -23,7 +23,7 @@
 		<nameable>false</nameable>
 		<buildDef>guy762_SWVehicleBP_ImpTroopTransport</buildDef>
 		
-		<size>(5,5)</size>
+		<size>(6,6)</size>
 		<uiIconScale>1</uiIconScale>
 		
 		<vehicleMovementPermissions>DriverNeeded</vehicleMovementPermissions>
@@ -32,31 +32,46 @@
 		<vehicleType>Land</vehicleType>
 				
 		<statBases>
-			<ArmorRating_Sharp>0.3</ArmorRating_Sharp>
-			<ArmorRating_Blunt>0.2</ArmorRating_Blunt>
-            <ArmorRating_Heat>0.4</ArmorRating_Heat>
+			<!--ArmorRating_Sharp>+0.05</ArmorRating_Sharp>
+			<ArmorRating_Blunt>-0.1</ArmorRating_Blunt>        BASE CURVE FOR HARD ARMOR
+			<ArmorRating_Heat>+0.15</ArmorRating_Heat-->
+			<ArmorRating_Sharp>0.55</ArmorRating_Sharp>
+			<ArmorRating_Blunt>0.4</ArmorRating_Blunt> <!-- # of estimated XWMG hull points * 0.1, apply to hard armor curve -->
+			<ArmorRating_Heat>0.65</ArmorRating_Heat>
+			<MaxHitPoints>5000</MaxHitPoints> <!-- # of estimated XWMG hull points * 1000 -->
+			
 			<Flammability>0.5</Flammability>
 			<MarketValue>5800</MarketValue>
 		</statBases>
 		
 		<vehicleStats>
-			<Mass>100</Mass>
-			<MoveSpeed>20</MoveSpeed>
-			<CargoCapacity>10</CargoCapacity>
-			<RepairRate>1</RepairRate>
+			<Mass>1000</Mass>
+			<MoveSpeed>15</MoveSpeed>
+			<CargoCapacity>400</CargoCapacity>
+			<RepairRate>0.75</RepairRate>
 			<!--AccelerationRate>0.08</AccelerationRate-->
 		</vehicleStats>
 		
 		<soundSustainersOnEvent>
-			<!--li>
-				<start>MoveStop</start>
+			<li>
+				<start>IgnitionOn</start>
 				<stop>MoveStart</stop>
 				<value>kotorsound_speederbike_idle</value>
-			</li-->
+			</li>
 			<li>
 				<start>MoveStart</start>
 				<stop>MoveStop</stop>
-				<value>kotorsound_speederbike_moving</value>
+				<value>kotorsound_hovertankheavy_moving</value>
+			</li>
+			<li>
+				<start>MoveStop</start>
+				<stop>MoveStart</stop>
+				<value>kotorsound_speederbike_idle</value>
+			</li>
+			<li>
+				<start>MoveStop</start>
+				<stop>IgnitionOff</stop>
+				<value>kotorsound_speederbike_idle</value>
 			</li>
 		</soundSustainersOnEvent>
 		
@@ -87,11 +102,11 @@
 			</li>
 			<li>
 				<key>CargoAdded</key>
-				<value>kotorsound_bag_open</value>
+				<value>kotorsound_footlocker_open</value>
 			</li>
 			<li>
 				<key>CargoRemoved</key>
-				<value>kotorsound_bag_close</value>
+				<value>kotorsound_footlocker_close</value>
 			</li>
 		</soundOneShotsOnEvent>
 		
@@ -106,7 +121,7 @@
 						<texPath>LandVehicles/ImpTroopTransport/ImpTroopTransport_L2</texPath>
 						<graphicClass>Vehicles.Graphic_Vehicle</graphicClass>
 						<drawSize>(7,7)</drawSize>
-						<layer>3</layer>
+						<layer>7</layer>
 						<shaderType>CutoutComplexPattern</shaderType>
 						<color>(185,185,185)</color> <!-- lighter grey -->
 					</graphicData>
@@ -120,6 +135,10 @@
 			<winterSpeedMultiplier>3.25</winterSpeedMultiplier>
 			<manhunterTargetsVehicle>true</manhunterTargetsVehicle>
 			<!--offRoadMultiplier>0.8</offRoadMultiplier-->
+			
+			<vehicleJobLimitations>
+				<li>(RepairVehicle, 4)</li> <!-- how many pawns can repair this vehicle at a time -->
+			</vehicleJobLimitations> <!-- guy762 RULES: repair job count should be twice the amount of pawns to fully operate the vehicle -->
 			
 			<customHillinessCosts>
 				<SmallHills>0.25</SmallHills>
@@ -142,7 +161,13 @@
 					<slotsToOperate>1</slotsToOperate>
 					<handlingTypes>
 						<li>Movement</li>
+						<li>Turret</li>
 					</handlingTypes>
+					
+					<turretIds>
+						<li>ImpTroopTransportKey_gun_2</li>
+						<li>ImpTroopTransportKey_gun_3</li>
+					</turretIds>
 				</li>
 				<li>
 					<key>gunner</key>
@@ -157,18 +182,26 @@
 					</turretIds>
 				</li>
 				<li>
+					<key>navigator</key>
+					<label>Navigator</label>
+					<slots>1</slots>
+				</li>
+				<li>
 					<key>passenger1</key>
 					<label>Passenger (front-left)</label>
 					<slots>1</slots>
-					<comfort>-0.25</comfort>
+					<comfort>-0.75</comfort>
 					
 					<exposed>true</exposed>
+					<hitbox>
+						<side>Body</side>
+					</hitbox>
 					
 					<pawnRenderer>
-						<layerEast>2</layerEast>
+						<layerEast>10</layerEast>
 						<layerWest>0</layerWest>
 						
-						<layer>2</layer>
+						<layer>15</layer>
 						<angleNorth>0</angleNorth>
 						<angleEast>0</angleEast>
 						<angleNorthEast>0</angleNorthEast>
@@ -187,15 +220,18 @@
 					<key>passenger2</key>
 					<label>Passenger (middle-left)</label>
 					<slots>1</slots>
-					<comfort>-0.25</comfort>
+					<comfort>-0.75</comfort>
 					
 					<exposed>true</exposed>
+					<hitbox>
+						<side>Body</side>
+					</hitbox>
 					
 					<pawnRenderer>
-						<layerEast>2</layerEast>
+						<layerEast>10</layerEast>
 						<layerWest>0</layerWest>
 						
-						<layer>2</layer>
+						<layer>15</layer>
 						<angleNorth>0</angleNorth>
 						<angleEast>0</angleEast>
 						<angleNorthEast>0</angleNorthEast>
@@ -214,15 +250,18 @@
 					<key>passenger3</key>
 					<label>Passenger (rear-left)</label>
 					<slots>1</slots>
-					<comfort>-0.25</comfort>
+					<comfort>-0.75</comfort>
 					
 					<exposed>true</exposed>
+					<hitbox>
+						<side>Body</side>
+					</hitbox>
 					
 					<pawnRenderer>
-						<layerEast>2</layerEast>
+						<layerEast>10</layerEast>
 						<layerWest>0</layerWest>
 						
-						<layer>2</layer>
+						<layer>15</layer>
 						<angleNorth>0</angleNorth>
 						<angleEast>0</angleEast>
 						<angleNorthEast>0</angleNorthEast>
@@ -244,15 +283,18 @@
 					<key>passenger4</key>
 					<label>Passenger (front-right)</label>
 					<slots>1</slots>
-					<comfort>-0.25</comfort>
+					<comfort>-0.75</comfort>
 					
 					<exposed>true</exposed>
+					<hitbox>
+						<side>Body</side>
+					</hitbox>
 					
 					<pawnRenderer>
 						<layerEast>0</layerEast>
-						<layerWest>2</layerWest>
+						<layerWest>10</layerWest>
 						
-						<layer>2</layer>
+						<layer>15</layer>
 						<angleNorth>0</angleNorth>
 						<angleEast>0</angleEast>
 						<angleNorthEast>0</angleNorthEast>
@@ -271,15 +313,18 @@
 					<key>passenger5</key>
 					<label>Passenger (middle-right)</label>
 					<slots>1</slots>
-					<comfort>-0.25</comfort>
+					<comfort>-0.75</comfort>
 					
 					<exposed>true</exposed>
+					<hitbox>
+						<side>Body</side>
+					</hitbox>
 					
 					<pawnRenderer>
 						<layerEast>0</layerEast>
-						<layerWest>2</layerWest>
+						<layerWest>10</layerWest>
 						
-						<layer>2</layer>
+						<layer>15</layer>
 						<angleNorth>0</angleNorth>
 						<angleEast>0</angleEast>
 						<angleNorthEast>0</angleNorthEast>
@@ -298,15 +343,18 @@
 					<key>passenger6</key>
 					<label>Passenger (rear-right)</label>
 					<slots>1</slots>
-					<comfort>-0.25</comfort>
+					<comfort>-0.75</comfort>
 					
 					<exposed>true</exposed>
+					<hitbox>
+						<side>Body</side>
+					</hitbox>
 					
 					<pawnRenderer>
 						<layerEast>0</layerEast>
-						<layerWest>2</layerWest>
+						<layerWest>10</layerWest>
 						
-						<layer>2</layer>
+						<layer>15</layer>
 						<angleNorth>0</angleNorth>
 						<angleEast>0</angleEast>
 						<angleNorthEast>0</angleNorthEast>
@@ -326,49 +374,35 @@
 		
 		<components>
 			<li>
-				<key>FrontWheel</key>
-				<label>Front Wheel</label>
-				<health>20</health>
+				<key>ImpTroopTransportKey_hull</key>
+				<label>Hull</label>
 				<depth>External</depth>
 				
 				<armor>
-					<ArmorRating_Blunt>0</ArmorRating_Blunt>
-					<ArmorRating_Sharp>0</ArmorRating_Sharp>
+					<ArmorRating_Sharp>0.55</ArmorRating_Sharp>
+					<ArmorRating_Blunt>0.4</ArmorRating_Blunt> <!-- # of estimated XWMG hull points * 0.1, apply to hard armor curve -->
+					<ArmorRating_Heat>0.65</ArmorRating_Heat>
 				</armor>
+				<health>500</health> <!-- # of estimated XWMG hull points * 100 -->
 				
-				<tags>
-					<li>Wheel</li>
-				</tags>
-				
-				<categories>
-					<li>MoveSpeed</li>
-				</categories>
+				<hitbox>
+					<side>Body</side>
+				</hitbox>
 			</li>
+			
+			
+			<!-- <li> -->
+				<!-- <key>ImpTroopTransportKey_cabin</key> -->
+				<!-- <label>Cabin</label> -->
+				<!-- <health>100</health> -->
+				<!-- <depth>Internal</depth> -->
+			<!-- </li> -->
 			<li>
-				<key>BackWheel</key>
-				<label>Back Wheel</label>
-				<health>20</health>
-				<depth>External</depth>
-				
-				<armor>
-					<ArmorRating_Blunt>0</ArmorRating_Blunt>
-					<ArmorRating_Sharp>0</ArmorRating_Sharp>
-				</armor>
-				
-				<tags>
-					<li>Wheel</li>
-				</tags>
-				
-				<categories>
-					<li>MoveSpeed</li>
-				</categories>
-			</li>
-			<li>
-				<key>Engine</key>
+				<key>ImpTroopTransportKey_engine</key>
 				<label>Engine</label>
 				<health>25</health>
 				<priorityStatEfficiency>true</priorityStatEfficiency>
-				<depth>External</depth>
+				<depth>Internal</depth>
 				
 				<reactors>
 					<li Class = "Vehicles.Reactor_Explosive">
@@ -385,20 +419,24 @@
 				</categories>
 			</li>
 			<li>
-				<key>FrontSuspension</key>
-				<label>Front Suspension</label>
-				<health>10</health>
-				<depth>External</depth>
+				<key>ImpTroopTransportKey_repulsor</key>
+				<label>Repulsorlift Generator</label>
+				<health>75</health>
+				<depth>Internal</depth>
 				
 				<categories>
 					<li>MoveSpeed</li>
 				</categories>
 			</li>
 			<li>
-				<key>BackSuspension</key>
-				<label>Back Suspension</label>
-				<health>10</health>
-				<depth>External</depth>
+				<key>ImpTroopTransportKey_thrust</key>
+				<label>Thrust Repulsor</label>
+				<health>50</health>
+				<depth>Internal</depth>
+				
+				<tags>
+					<li>Wheel</li>
+				</tags>
 				
 				<categories>
 					<li>MoveSpeed</li>
@@ -430,7 +468,7 @@
 			<li Class="Vehicles.CompProperties_VehicleTurrets">
 				<turrets>
 					<li>
-						<turretDef>guy762_VehicleTurret_ImpTroopTransport</turretDef>
+						<turretDef>guy762_VehicleTurret_ImpTroopTransport_dorsal</turretDef>
 						
 						<renderProperties>
 							<north>(0, -0.1)</north>
@@ -440,12 +478,46 @@
 						</renderProperties>
 						<defaultAngleRotated>0</defaultAngleRotated>
 						<!-- <angleRestricted>(315,45)</angleRestricted> -->
-						<gizmoLabel>blaster</gizmoLabel>
+						<gizmoLabel>dorsal turret</gizmoLabel>
 						
-						<drawLayer>3</drawLayer>
+						<drawLayer>15</drawLayer>
 						<aimPieOffset>(0, 2.55)</aimPieOffset>
 						
 						<key>ImpTroopTransportKey_gun_1</key>
+					</li>
+					<li>
+						<turretDef>guy762_VehicleTurret_ImpTroopTransport_main</turretDef>
+						
+						<renderProperties>
+							<north>(-1.1, 3.1)</north>
+							<south>(1.1, -2.9)</south>
+							<east>(3, 0.9)</east>
+							<west>(-3, -0.9)</west>
+						</renderProperties>
+						<defaultAngleRotated>0</defaultAngleRotated>
+						<angleRestricted>(315,45)</angleRestricted>
+						<gizmoLabel>front turret</gizmoLabel>
+						
+						<aimPieOffset>(0, 2.55)</aimPieOffset>
+						
+						<key>ImpTroopTransportKey_gun_2</key>
+					</li>
+					<li>
+						<turretDef>guy762_VehicleTurret_ImpTroopTransport_main</turretDef>
+						
+						<renderProperties>
+							<north>(1.1, 3.1)</north>
+							<south>(-1.1, -2.9)</south>
+							<east>(3, -0.9)</east>
+							<west>(-3, 0.9)</west>
+						</renderProperties>
+						<defaultAngleRotated>0</defaultAngleRotated>
+						<angleRestricted>(315,45)</angleRestricted>
+						<gizmoLabel>front turret</gizmoLabel>
+						
+						<aimPieOffset>(0, 2.55)</aimPieOffset>
+						
+						<key>ImpTroopTransportKey_gun_3</key>
 					</li>
 				</turrets>
 			</li>
@@ -455,16 +527,16 @@
 	
 	
 	<Vehicles.VehicleTurretDef ParentName="VehicleTurretBase">
-		<defName>guy762_VehicleTurret_ImpTroopTransport</defName>
+		<defName>guy762_VehicleTurret_ImpTroopTransport_dorsal</defName>
 		<label>K79-S80 dorsal turret</label>
 		<description>The rotating dorsal turret of a K79-S80 troop transport.</description>
 		
 		<turretType>Rotatable</turretType>
-		<shotSound>kotorsound_xwinggun</shotSound>
+		<shotSound>kotorsound_TIECrawlerGun</shotSound>
 		
-		<projectile>KotORSFBullet_aurek</projectile>
+		<projectile>SWVehicleBullet_tankdoublered</projectile>
 		<reloadTimer>3.5</reloadTimer>
-		<warmUpTimer>0.2</warmUpTimer>
+		<warmUpTimer>1</warmUpTimer>
 		
 		<magazineCapacity>999</magazineCapacity>
 		
@@ -476,13 +548,13 @@
 		<projectileOffset>2.1</projectileOffset>
 		
 		<minRange>5</minRange>
-		<maxRange>90</maxRange>
+		<maxRange>60</maxRange> <!-- ~30 for infantry, 60 for ground vehicles, 90 for starfighters -->
 
 		<fireModes>
 			<li>
 				<shotsPerBurst>1</shotsPerBurst>
 				<ticksBetweenShots>10</ticksBetweenShots>
-				<ticksBetweenBursts>20</ticksBetweenBursts>
+				<ticksBetweenBursts>40</ticksBetweenBursts>
 				<label>Single</label>
 				<texPath>UI/Sniper_Shot</texPath>
 			</li>
@@ -497,4 +569,50 @@
 		<gizmoIconTexPath>LandVehicles/ImpTroopTransport/ImpTroopTransport_gun</gizmoIconTexPath>
 		
 	</Vehicles.VehicleTurretDef>
+	
+	
+	<Vehicles.VehicleTurretDef ParentName="VehicleTurretBase">
+		<defName>guy762_VehicleTurret_ImpTroopTransport_main</defName>
+		<label>K79-S80 main gun</label>
+		<description>The main gun of a K79-S80 troop transport.</description>
+		
+		<turretType>Rotatable</turretType>
+		<shotSound>kotorsound_TankAntiInfantryGun</shotSound>
+		
+		<projectile>KotORSFBullet_aurek</projectile>
+		<reloadTimer>3.5</reloadTimer>
+		<warmUpTimer>0.2</warmUpTimer>
+		
+		<magazineCapacity>999</magazineCapacity>
+		
+		<hitFlags>IntendedTarget</hitFlags>
+		
+		<autoSnapTargeting>true</autoSnapTargeting>
+		<rotationSpeed>5</rotationSpeed>
+		
+		<projectileOffset>2.1</projectileOffset>
+		
+		<!-- <minRange>5</minRange> no min for close range guns -->
+		<maxRange>30</maxRange> <!-- ~30 for infantry, 60 for ground vehicles, 90 for starfighters -->
+
+		<fireModes>
+			<li>
+				<shotsPerBurst>1</shotsPerBurst>
+				<ticksBetweenShots>10</ticksBetweenShots>
+				<ticksBetweenBursts>40</ticksBetweenBursts>
+				<label>Single</label>
+				<texPath>UI/Sniper_Shot</texPath>
+			</li>
+		</fireModes>
+
+		<graphicData>
+			<texPath>NullTex</texPath>
+			<graphicClass>Vehicles.Graphic_Turret</graphicClass>
+		</graphicData>
+		
+		<gizmoIconTexPath>Items/cannon_blank</gizmoIconTexPath>
+		
+	</Vehicles.VehicleTurretDef>
+	
+	
 </Defs>

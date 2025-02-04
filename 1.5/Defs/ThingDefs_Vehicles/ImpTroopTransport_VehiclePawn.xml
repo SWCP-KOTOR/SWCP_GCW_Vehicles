@@ -4,7 +4,7 @@
 
 	
 	
-	<Vehicles.VehicleDef ParentName="VehiclePawn_Mechanical">
+	<Vehicles.VehicleDef ParentName="guy762_GroundVehiclePawn_base">
 		<defName>guy762_SWVehicle_ImpTroopTransport</defName>
 		<label>K79-S80 reconnaissance troop transport</label>
 		<description>. \n\n&lt;color=#bb8f04&gt;Crew:&lt;/color&gt; Driver x1</description>
@@ -23,7 +23,7 @@
 		<nameable>false</nameable>
 		<buildDef>guy762_SWVehicleBP_ImpTroopTransport</buildDef>
 		
-		<size>(6,6)</size>
+		<size>(4,6)</size>
 		<uiIconScale>1</uiIconScale>
 		
 		<vehicleMovementPermissions>DriverNeeded</vehicleMovementPermissions>
@@ -95,10 +95,6 @@
 			<li>
 				<key>IgnitionOff</key>
 				<value>kotorsound_speederbike_deactivate</value>
-			</li>
-			<li>
-				<key>DamageTaken</key>
-				<value>kotorsound_speederbike_damaged</value>
 			</li>
 			<li>
 				<key>CargoAdded</key>
@@ -382,6 +378,7 @@
 					<ArmorRating_Sharp>0.55</ArmorRating_Sharp>
 					<ArmorRating_Blunt>0.4</ArmorRating_Blunt> <!-- # of estimated XWMG hull points * 0.1, apply to hard armor curve -->
 					<ArmorRating_Heat>0.65</ArmorRating_Heat>
+					<IncomingDamageFactor>-0.25</IncomingDamageFactor> <!-- # of estimated XWMG hull points * -0.05 -->
 				</armor>
 				<health>500</health> <!-- # of estimated XWMG hull points * 100 -->
 				

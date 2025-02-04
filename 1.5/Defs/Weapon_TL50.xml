@@ -49,7 +49,7 @@
 				<label>concussion launcher</label>
 				<!--description>Fire a single charged bolt.</description>
 				<iconPath>UI/Bowcaster_Power_Blast</iconPath-->
-				<commandIcon>UI/Bowcaster_Power_Blast</commandIcon>
+				<commandIcon>Weapons/Projectiles/energybomb_purple</commandIcon>
 				<verbClass>Verb_Shoot</verbClass>
 				<hasStandardCommand>true</hasStandardCommand>
 				<defaultProjectile>SWProj_TL50conc</defaultProjectile>

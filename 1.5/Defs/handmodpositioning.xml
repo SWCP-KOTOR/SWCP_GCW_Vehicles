@@ -90,6 +90,13 @@
                  <li>guy762_FC1Flechette</li> <!-- FC-1 flechette launcher -->
               </ThingTargets>
           </li>
+		  <li>
+			  <MainHand>(-0.150, 0.100, -0.100)</MainHand>
+              <SecHand>(0.100, -0.100, -0.075)</SecHand>
+              <ThingTargets>
+                 <li>guy762_E22rifle</li> <!-- E-22 double blaster rifle -->
+              </ThingTargets>
+          </li>
 		  
 		  
 		  <li>

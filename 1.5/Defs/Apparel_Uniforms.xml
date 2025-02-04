@@ -16,11 +16,11 @@
 			<Mass>4.5</Mass>
 			<MarketValue>500</MarketValue>
 			<MaxHitPoints>150</MaxHitPoints>
-			<ArmorRating_Sharp>0.01</ArmorRating_Sharp>
-			<ArmorRating_Blunt>0.01</ArmorRating_Blunt>
-			<ArmorRating_Heat>0.01</ArmorRating_Heat>
-			<Insulation_Cold>50</Insulation_Cold>
-			<Insulation_Heat>50</Insulation_Heat>
+			<ArmorRating_Sharp>0.05</ArmorRating_Sharp>
+			<ArmorRating_Blunt>0.05</ArmorRating_Blunt>
+			<ArmorRating_Heat>0.05</ArmorRating_Heat>
+			<Insulation_Cold>25</Insulation_Cold>
+			<Insulation_Heat>25</Insulation_Heat>
 			<EquipDelay>3</EquipDelay>
 			
 			<WorkToMake>4000</WorkToMake>
@@ -67,7 +67,7 @@
 	  
 	  <ThingDef ParentName="guy762_clothingbase">
 		<defName>guy762_Bodysuit_TIEpilot</defName>
-		<label>bodysuit, insulated</label>
+		<label>bodysuit, pilot's</label>
 		<description>These are simple garments that protect little more than the modesty of the wearer.</description>
 		<graphicData>
 		  <texPath>Apparel/ImperialCrew/Apparel</texPath>
@@ -78,11 +78,11 @@
 			<Mass>4.5</Mass>
 			<MarketValue>1000</MarketValue>
 			<MaxHitPoints>150</MaxHitPoints>
-			<ArmorRating_Sharp>0.01</ArmorRating_Sharp>
-			<ArmorRating_Blunt>0.01</ArmorRating_Blunt>
-			<ArmorRating_Heat>0.01</ArmorRating_Heat>
-			<Insulation_Cold>100</Insulation_Cold>
-			<Insulation_Heat>100</Insulation_Heat>
+			<ArmorRating_Sharp>0.05</ArmorRating_Sharp>
+			<ArmorRating_Blunt>0.05</ArmorRating_Blunt>
+			<ArmorRating_Heat>0.05</ArmorRating_Heat>
+			<Insulation_Cold>25</Insulation_Cold>
+			<Insulation_Heat>10</Insulation_Heat>
 			<EquipDelay>3</EquipDelay>
 			
 			<WorkToMake>4000</WorkToMake>
@@ -138,11 +138,11 @@
 			<Mass>4.5</Mass>
 			<MarketValue>7500</MarketValue>
 			<MaxHitPoints>150</MaxHitPoints>
-			<ArmorRating_Sharp>0.01</ArmorRating_Sharp>
-			<ArmorRating_Blunt>0.01</ArmorRating_Blunt>
-			<ArmorRating_Heat>0.01</ArmorRating_Heat>
-			<Insulation_Cold>100</Insulation_Cold>
-			<Insulation_Heat>100</Insulation_Heat>
+			<ArmorRating_Sharp>0.05</ArmorRating_Sharp>
+			<ArmorRating_Blunt>0.05</ArmorRating_Blunt>
+			<ArmorRating_Heat>0.05</ArmorRating_Heat>
+			<Insulation_Cold>25</Insulation_Cold>
+			<Insulation_Heat>10</Insulation_Heat>
 			<EquipDelay>3</EquipDelay>
 			
 			<WorkToMake>4000</WorkToMake>
@@ -232,17 +232,18 @@
 			<Mass>4.5</Mass>
 			<MarketValue>1000</MarketValue>
 			<MaxHitPoints>150</MaxHitPoints>
-			<ArmorRating_Sharp>0.01</ArmorRating_Sharp>
-			<ArmorRating_Blunt>0.01</ArmorRating_Blunt>
-			<ArmorRating_Heat>0.01</ArmorRating_Heat>
-			<Insulation_Cold>100</Insulation_Cold>
-			<Insulation_Heat>100</Insulation_Heat>
+			<ArmorRating_Sharp>0.05</ArmorRating_Sharp>
+			<ArmorRating_Blunt>0.05</ArmorRating_Blunt>
+			<ArmorRating_Heat>0.05</ArmorRating_Heat>
+			<Insulation_Cold>25</Insulation_Cold>
+			<Insulation_Heat>10</Insulation_Heat>
 			<EquipDelay>3</EquipDelay>
 			
 			<WorkToMake>4000</WorkToMake>
 		</statBases>
 		<equippedStatOffsets>
 		  <DecompressionResistance MayRequire="kentington.saveourship2">0.75</DecompressionResistance>
+		  <VEF_MassCarryCapacity>5</VEF_MassCarryCapacity>
 		</equippedStatOffsets>
 		
 		<costList>

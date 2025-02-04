@@ -28,7 +28,7 @@
 		<rotatable>True</rotatable>
 		
 		<fillPercent>1</fillPercent>
-		<nameable>false</nameable>
+		<nameable>true</nameable>
 		<buildDef>guy762_SWVehicleBP_R41SC</buildDef>
 		<size>(8,8)</size>
 		<vehicleMovementPermissions>DriverNeeded</vehicleMovementPermissions>
@@ -47,15 +47,15 @@
 			<ArmorRating_Heat>0.45</ArmorRating_Heat>
 			<MaxHitPoints>3000</MaxHitPoints> <!-- # of estimated XWMG hull points * 1000 -->
 			
-			<MarketValue>36000</MarketValue>
+			<MarketValue>55000</MarketValue>
 			<Flammability>0</Flammability>
 		</statBases>
 		<vehicleStats>
 			<Mass>350</Mass>
 			<MoveSpeed>8.6</MoveSpeed>
 			<FlightSpeed>12</FlightSpeed> <!-- this is for world map flight, NOT in-tile flight-->
-			<CargoCapacity>20</CargoCapacity>
-			<SoS2CombatDodgeChance>41.25</SoS2CombatDodgeChance> <!-- 3/8 chance to dodge on XWMG green dice = 0.375 | 0.375*10 + 10 = 13.75 | 13.75 * X = SoS2DC | X = estimated # of XWMG green dice -->
+			<CargoCapacity>110</CargoCapacity>
+			<SoS2CombatDodgeChance>27.5</SoS2CombatDodgeChance> <!-- 3/8 chance to dodge on XWMG green dice = 0.375 | 0.375*10 + 10 = 13.75 | 13.75 * X = SoS2DC | X = estimated # of XWMG green dice -->
 		</vehicleStats>
 		
 		<race>
@@ -73,7 +73,7 @@
 			
 			<vehicleJobLimitations>
 				<li>(RepairVehicle, 2)</li> <!-- how many pawns can repair this vehicle at a time -->
-			</vehicleJobLimitations>
+			</vehicleJobLimitations> <!-- guy762 RULES: repair job count should be twice the amount of pawns to fully operate the vehicle -->
 			
 			<roles>
 				<li>
@@ -214,146 +214,235 @@
 						<turretDef>guy762_VehicleTurret_AurekMain</turretDef>
 						
 						<renderProperties>
-							<north>(1.9, 1)</north>
+							<north>(3.55, 1)</north>
 							<south>(-1, -3.5)</south>
 							<east>(3.5, -1.2)</east>
 						</renderProperties>
 						<defaultAngleRotated>0</defaultAngleRotated>
 						<angleRestricted>(315,45)</angleRestricted>
-						<gizmoLabel>blaster</gizmoLabel>
+						<gizmoLabel>main gun</gizmoLabel>
 						
 						<aimPieOffset>(0, 2.55)</aimPieOffset>
 						
-						<key>AurekKey_gun_1</key>
+						<key>R41Key_gun_1</key>
 					</li>
 					<li>
 						<turretDef>guy762_VehicleTurret_AurekMain</turretDef>
 						
 						<renderProperties>
-							<north>(-1.9, 1)</north>
+							<north>(-3.55, 1)</north>
 							<south>(-1, -3.5)</south>
 							<east>(3.5, -1.2)</east>
 						</renderProperties>
 						<defaultAngleRotated>0</defaultAngleRotated>
 						<angleRestricted>(315,45)</angleRestricted>
-						<gizmoLabel>blaster</gizmoLabel>
+						<gizmoLabel>main gun</gizmoLabel>
 						
 						<aimPieOffset>(0, 2.55)</aimPieOffset>
 						
-						<key>AurekKey_gun_2</key>
+						<key>R41Key_gun_2</key>
+					</li>
+					
+					<!--/////////////////////////-->
+					
+					<li>
+						<turretDef>guy762_VehicleTurret_IonTag</turretDef>
+						
+						<renderProperties>
+							<north>(1.285, 3.25)</north>
+							<south>(-1, -3.5)</south>
+							<east>(3.5, -1.2)</east>
+						</renderProperties>
+						<defaultAngleRotated>0</defaultAngleRotated>
+						<angleRestricted>(355,5)</angleRestricted>
+						<gizmoLabel>light ion gun</gizmoLabel>
+						
+						<aimPieOffset>(0, 2.55)</aimPieOffset>
+						
+						<key>R41Key_gun_3</key>
+					</li>
+					<li>
+						<turretDef>guy762_VehicleTurret_IonTag</turretDef>
+						
+						<renderProperties>
+							<north>(-1.285, 3.25)</north>
+							<south>(-1, -3.5)</south>
+							<east>(3.5, -1.2)</east>
+						</renderProperties>
+						<defaultAngleRotated>0</defaultAngleRotated>
+						<angleRestricted>(355,5)</angleRestricted>
+						<gizmoLabel>light ion gun</gizmoLabel>
+						
+						<aimPieOffset>(0, 2.55)</aimPieOffset>
+						
+						<key>R41Key_gun_4</key>
 					</li>
 				</turrets>
 			</li>
 		</comps>
 		<components>
 			<li>
-				<key>LeftHorizontalStabilizer</key>
-				<label>Left Horizontal Stabilizer</label>
-				<health>100</health>
+				<key>Hull</key>
+				<label>Hull</label>
 				<depth>External</depth>
+				
+				<armor>
+					<ArmorRating_Sharp>0.35</ArmorRating_Sharp>
+					<ArmorRating_Blunt>0.2</ArmorRating_Blunt> <!-- # of estimated XWMG hull points * 0.1, apply to hard armor curve -->
+					<ArmorRating_Heat>0.45</ArmorRating_Heat>
+				</armor>
+				<health>300</health> <!-- # of estimated XWMG hull points * 100 -->
+				
 				<hitbox>
-					<cells>
-						<li>(-1, 1)</li>
-						<li>(-1, -3)</li>
-					</cells>
+					<side>Body</side>
 				</hitbox>
-				<categories>
-					<li>FlightSpeed</li>
-				</categories>
 			</li>
+			
 			<li>
-				<key>RightHorizontalStabilizer</key>
-				<label>Right Horizontal Stabilizer</label>
-				<health>100</health>
-				<depth>External</depth>
-				<hitbox>
-					<cells>
-						<li>(1, 1)</li>
-						<li>(1, -3)</li>
-					</cells>
-				</hitbox>
-				<categories>
-					<li>FlightSpeed</li>
-				</categories>
-			</li>
-			<li>
-				<key>MainEngine</key>
-				<label>Main Engine</label>
-				<health>200</health>
-				<priorityStatEfficiency>true</priorityStatEfficiency>
-				<depth>Internal</depth>
-				<reactors>
-					<li Class="Vehicles.Reactor_Explosive">
-						<indicator>VF_Explosive</indicator>
-						<chance>0.25</chance>
-						<maxHealth>0.2</maxHealth>
-						<radius>3</radius>
-						<damageDef>Flame</damageDef>
-					</li>
-				</reactors>
-				<hitbox>
-					<cells>
-						<li>(-1, 0)</li>
-						<li>(0, 0)</li>
-						<li>(1, 0)</li>
-					</cells>
-				</hitbox>
-				<categories>
-					<li>FlightSpeed</li>
-				</categories>
-			</li>
-			<li>
-				<key>FuelIntake</key>
-				<label>Fuel Intake</label>
-				<health>80</health>
-				<depth>External</depth>
-				<hitbox>
-					<cells>
-						<li>(-1, 0)</li>
-						<li>(0, 0)</li>
-						<li>(1, 0)</li>
-					</cells>
-				</hitbox>
-				<categories>
-					<li>FlightSpeed</li>
-				</categories>
-			</li>
-			<li>
-				<key>Chemtank</key>
-				<label>Chemtank</label>
+				<key>FirstThruster</key>
+				<label>Port Secondary Thruster</label>
 				<health>120</health>
 				<depth>Internal</depth>
+				
 				<reactors>
-					<li Class="Vehicles.Reactor_FuelLeak"/>
-					<li Class="Vehicles.Reactor_Explosive">
+					<li Class = "Vehicles.Reactor_Explosive">
 						<indicator>VF_Explosive</indicator>
 						<chance>0.25</chance>
 						<maxHealth>0.2</maxHealth>
-						<radius>3</radius>
+						<radius>5</radius>
 						<damageDef>Flame</damageDef>
 					</li>
 				</reactors>
+				
 				<hitbox>
-					<cells>
-						<li>(-1, 1)</li>
-						<li>(0, 1)</li>
-						<li>(1, 1)</li>
-					</cells>
+					<!--cells>
+						<li>(-3, 0)</li>
+						<li>(-3, -1)</li>
+					</cells-->
+					<side>Body</side>
 				</hitbox>
+				
+				<categories>
+					<li>FlightSpeed</li>
+				</categories>
 			</li>
 			<li>
-				<key>CargoStorage</key>
-				<label>Cargo Storage</label>
-				<health>80</health>
+				<key>SecondThruster</key>
+				<label>Port Main Thruster</label>
+				<health>120</health>
 				<depth>Internal</depth>
+				
+				<reactors>
+					<li Class = "Vehicles.Reactor_Explosive">
+						<indicator>VF_Explosive</indicator>
+						<chance>0.25</chance>
+						<maxHealth>0.2</maxHealth>
+						<radius>5</radius>
+						<damageDef>Flame</damageDef>
+					</li>
+				</reactors>
+				
 				<hitbox>
-					<cells>
+					<!--cells>
 						<li>(0, -1)</li>
-						<li>(1, -1)</li>
 						<li>(0, -2)</li>
-						<li>(1, -2)</li>
-					</cells>
+					</cells-->
+					<side>Body</side>
 				</hitbox>
+				
+				<categories>
+					<li>FlightSpeed</li>
+					<li>FlightControl</li>
+				</categories>
+			</li>
+			<li>
+				<key>ThirdThruster</key>
+				<label>Starboard Main Thruster</label>
+				<health>120</health>
+				<depth>Internal</depth>
+				
+				<reactors>
+					<li Class = "Vehicles.Reactor_Explosive">
+						<indicator>VF_Explosive</indicator>
+						<chance>0.25</chance>
+						<maxHealth>0.2</maxHealth>
+						<radius>5</radius>
+						<damageDef>Flame</damageDef>
+					</li>
+				</reactors>
+				
+				<hitbox>
+					<!--cells>
+						<li>(1, -1)</li>
+						<li>(1, -2)</li>
+					</cells-->
+					<side>Body</side>
+				</hitbox>
+				
+				<categories>
+					<li>FlightSpeed</li>
+					<li>FlightControl</li>
+				</categories>
+			</li>
+			<li>
+				<key>FourthThruster</key>
+				<label>Starboard Secondary Thruster</label>
+				<health>120</health>
+				<depth>Internal</depth>
+				
+				<reactors>
+					<li Class = "Vehicles.Reactor_Explosive">
+						<indicator>VF_Explosive</indicator>
+						<chance>0.25</chance>
+						<maxHealth>0.2</maxHealth>
+						<radius>5</radius>
+						<damageDef>Flame</damageDef>
+					</li>
+				</reactors>
+				
+				<hitbox>
+					<!--cells>
+						<li>(4, 0)</li>
+						<li>(4, -1)</li>
+					</cells-->
+					<side>Body</side>
+				</hitbox>
+				
+				<categories>
+					<li>FlightSpeed</li>
+				</categories>
+			</li>
+			<li>
+				<key>Reactor</key>
+				<label>Reactor</label>
+				<health>200</health>
+				<depth>Internal</depth>
+				
+				<reactors>
+					<li Class = "Vehicles.Reactor_Explosive">
+						<indicator>VF_Explosive</indicator>
+						<chance>0.25</chance>
+						<maxHealth>0.2</maxHealth>
+						<radius>18</radius>
+						<damageDef>Bomb</damageDef>
+					</li>
+				</reactors>
+			</li>
+			<li>
+				<key>Cockpit</key>
+				<label>Cockpit</label>
+				<health>160</health>
+				<depth>Internal</depth>
+				
+				<categories>
+					<li>FlightControl</li>
+				</categories>
+			</li>
+			<li>
+				<key>shieldGenerator</key>
+				<label>Heatsink Compartment</label>
+				<health>1</health>
+				<depth>Internal</depth>
 			</li>
 		</components>
 		
@@ -361,7 +450,7 @@
 			<li>
 				<start>IgnitionOn</start>
 				<stop>IgnitionOff</stop>
-				<value>kotorsound_enginehum_n1naboo</value>
+				<value>kotorsound_enginehum_XWing</value>
 			</li>
 		</soundSustainersOnEvent>
 		
@@ -381,15 +470,15 @@
 	
 	
 	
-	<!--Vehicles.VehicleTurretDef ParentName="VehicleTurretBase">
-		<defName>guy762_VehicleTurret_AurekMain</defName>
-		<label>Aurek main gun</label>
-		<description>The main gun of an Aurek-class Starfighter.</description>
+	<Vehicles.VehicleTurretDef ParentName="VehicleTurretBase">
+		<defName>guy762_VehicleTurret_IonTag</defName>
+		<label>light ion gun</label>
+		<description>.</description>
 		
 		<turretType>Rotatable</turretType>
-		<shotSound>kotorsound_xwinggun</shotSound>
+		<shotSound>kotorsound_mantisiongun</shotSound>
 		
-		<projectile>KotORSFBullet_aurek</projectile>
+		<projectile>SWVehicleBullet_IonTag</projectile>
 		<reloadTimer>3.5</reloadTimer>
 		<warmUpTimer>0.2</warmUpTimer>
 		
@@ -409,7 +498,7 @@
 			<li>
 				<shotsPerBurst>1</shotsPerBurst>
 				<ticksBetweenShots>10</ticksBetweenShots>
-				<ticksBetweenBursts>20</ticksBetweenBursts>
+				<ticksBetweenBursts>100</ticksBetweenBursts>
 				<label>Single</label>
 				<texPath>UI/Sniper_Shot</texPath>
 			</li>
@@ -422,7 +511,7 @@
 		
 		<gizmoIconTexPath>Items/cannon_blank</gizmoIconTexPath>
 		
-	</Vehicles.VehicleTurretDef-->
+	</Vehicles.VehicleTurretDef>
 	
 	
 	

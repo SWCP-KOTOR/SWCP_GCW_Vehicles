@@ -42,6 +42,7 @@
 			<useWornGraphicMask>true</useWornGraphicMask>
 			<layers>
 				<li>Overhead</li>
+				<li>EyeCover</li>
 			</layers>
 			<bodyPartGroups>
 				<li>UpperHead</li>
@@ -787,7 +788,7 @@
 	
 	<ThingDef ParentName="KotORArmorModdable_hard">
 		<defName>guy762_TIEpilotArmor</defName>
-		<label>TIE pilot flight vest</label>
+		<label>TIE pilot flight armor</label>
 		<description>This combat-ready flight vest provides additional protection against vacuum for limited periods. Its many models appeal to a wide range of users, from military pilots and mercenaries to fringe explorers and space pirates. Built-in grav thrusters also assist with movement in open space.</description>
 		<graphicData>
 		  <texPath>Apparel/TIEPilot/Apparel</texPath>
@@ -801,12 +802,11 @@
 			<ArmorRating_Sharp>0.25</ArmorRating_Sharp>
 			<ArmorRating_Blunt>0.1</ArmorRating_Blunt>
 			<ArmorRating_Heat>0.35</ArmorRating_Heat>
-			<Insulation_Cold>20</Insulation_Cold>
+			<Insulation_Cold>100</Insulation_Cold>
+			<Insulation_Heat>100</Insulation_Heat>
 			<EquipDelay>15</EquipDelay>
 		</statBases>
 		<equippedStatOffsets>
-			<MoveSpeed>-0.1</MoveSpeed>
-			<MeleeDodgeChance>-0.1</MeleeDodgeChance>
 			<IncomingDamageFactor>-0.05</IncomingDamageFactor>
 			<VacuumSpeedMultiplier MayRequire="kentington.saveourship2">2</VacuumSpeedMultiplier>
 			<DecompressionResistance MayRequire="kentington.saveourship2">0.125</DecompressionResistance>

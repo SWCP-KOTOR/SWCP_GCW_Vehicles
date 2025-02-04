@@ -10,7 +10,7 @@
 		<graphicData>
 			<texPath>LandVehicles/ATST/ATST</texPath>
 			<graphicClass>Graphic_Multi</graphicClass>
-			<drawSize>(7,7)</drawSize>
+			<drawSize>(10,10)</drawSize>
 			<!-- <drawOffset>(0, 0, 1)</drawOffset> -->
 		</graphicData>
 		
@@ -20,7 +20,7 @@
 			<Flammability>0.05</Flammability>
 		</statBases>
 		
-		<size>(6,6)</size>
+		<size>(5,5)</size>
 		
 		<!--researchPrerequisites>
 			<li>VVE_BasicVehicles</li>

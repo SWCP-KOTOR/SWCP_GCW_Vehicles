@@ -8,7 +8,7 @@
 		<path>LandVehicles/FlareS/FlareS_pattern</path>
 	</Vehicles.PatternDef>
 	
-	<Vehicles.VehicleDef ParentName="VehiclePawn_Mechanical">
+	<Vehicles.VehicleDef ParentName="guy762_GroundVehiclePawn_base">
 		<defName>guy762_SWVehicle_FlareS</defName>
 		<label>Mobquet Flare-S Swoop Bike</label>
 		<description>. \n\n&lt;color=#bb8f04&gt;Crew:&lt;/color&gt; Driver x1</description>

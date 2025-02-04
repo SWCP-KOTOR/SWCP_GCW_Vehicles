@@ -35,7 +35,7 @@
 		<rotatable>True</rotatable>
 		
 		<fillPercent>1</fillPercent>
-		<nameable>false</nameable>
+		<nameable>true</nameable>
 		<buildDef>guy762_SWVehicleBP_Scyk</buildDef>
 		<size>(4,6)</size>
 		<vehicleMovementPermissions>DriverNeeded</vehicleMovementPermissions>

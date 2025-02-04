@@ -9,7 +9,7 @@
 	</Vehicles.PatternDef>
 	
 	
-	<Vehicles.VehicleDef ParentName="VehiclePawn_Mechanical">
+	<Vehicles.VehicleDef ParentName="guy762_GroundVehiclePawn_base">
 		<defName>guy762_SWVehicle_AA5Truck</defName>
 		<label>A-A5 Speeder Truck</label>
 		<description>. \n\n&lt;color=#bb8f04&gt;Crew:&lt;/color&gt; Driver x1</description>
@@ -29,7 +29,7 @@
 		<nameable>false</nameable>
 		<buildDef>guy762_SWVehicleBP_AA5Truck</buildDef>
 		
-		<size>(5,5)</size>
+		<size>(4,6)</size>
 		<uiIconScale>1</uiIconScale>
 		
 		<vehicleMovementPermissions>DriverNeeded</vehicleMovementPermissions>
@@ -96,10 +96,6 @@
 			<li>
 				<key>IgnitionOff</key>
 				<value>kotorsound_speederbike_deactivate</value>
-			</li>
-			<li>
-				<key>DamageTaken</key>
-				<value>kotorsound_speederbike_damaged</value>
 			</li>
 			<li>
 				<key>CargoAdded</key>
@@ -177,6 +173,7 @@
 					<ArmorRating_Sharp>0.45</ArmorRating_Sharp>
 					<ArmorRating_Blunt>0.3</ArmorRating_Blunt> <!-- # of estimated XWMG hull points * 0.1, apply to hard armor curve -->
 					<ArmorRating_Heat>0.55</ArmorRating_Heat>
+					<IncomingDamageFactor>-0.20</IncomingDamageFactor> <!-- # of estimated XWMG hull points * -0.05 -->
 				</armor>
 				<health>400</health> <!-- # of estimated XWMG hull points * 100 -->
 				

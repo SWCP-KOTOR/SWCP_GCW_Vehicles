@@ -3,7 +3,7 @@
 <Defs>	
 
 	
-	<Vehicles.VehicleDef ParentName="VehiclePawn_Mechanical">
+	<Vehicles.VehicleDef ParentName="guy762_GroundVehiclePawn_base">
 		<defName>guy762_SWVehicle_ATST</defName>
 		<label>AT-ST Scout Walker</label>
 		<description>. \n\n&lt;color=#bb8f04&gt;Crew:&lt;/color&gt; Driver x1</description>
@@ -12,16 +12,26 @@
 			<texPath>LandVehicles/ATST/ATST</texPath>
 			<graphicClass>Vehicles.Graphic_Vehicle</graphicClass>
 			<shaderType>CutoutComplexPattern</shaderType>
-			<drawSize>(7,7)</drawSize>
+			<drawSize>(10,10)</drawSize>
+			<!-- <drawOffsetEast>(0,2,0)</drawOffsetEast> -->
+			<!-- <drawOffsetNorth>(0,2,0)</drawOffsetNorth> -->
+			<!-- <drawOffsetSouth>(0,2,0)</drawOffsetSouth> -->
+			<!-- <drawOffsetWest>(0,2,0)</drawOffsetWest> -->
 			<color>(185,185,185)</color> <!-- lighter grey -->
 		</graphicData>
+		<!-- <drawProperties> -->
+			<!-- <displayOffsetEast>(0,5)</displayOffsetEast> -->
+			<!-- <displayOffsetNorth>(0,5)</displayOffsetNorth> -->
+			<!-- <displayOffsetSouth>(0,5)</displayOffsetSouth> -->
+			<!-- <displayOffsetWest>(0,5)</displayOffsetWest> -->
+		<!-- </drawProperties> -->
 		
 		<fillPercent>1</fillPercent>
 		
 		<nameable>false</nameable>
 		<buildDef>guy762_SWVehicleBP_ATST</buildDef>
 		
-		<size>(6,6)</size>
+		<size>(5,5)</size>
 		<uiIconScale>1</uiIconScale>
 		
 		<vehicleMovementPermissions>DriverNeeded</vehicleMovementPermissions>
@@ -95,10 +105,6 @@
 				<value>kotorsound_speederbike_deactivate</value>
 			</li>
 			<li>
-				<key>DamageTaken</key>
-				<value>kotorsound_speederbike_damaged</value>
-			</li>
-			<li>
 				<key>CargoAdded</key>
 				<value>kotorsound_footlocker_open</value>
 			</li>
@@ -169,6 +175,12 @@
 						<li>ATSTKey_gun_3</li>
 					</turretIds>
 				</li>
+				<li>
+					<key>passenger</key>
+					<label>Spotter</label>
+					<slots>1</slots>
+					<comfort>-0.5</comfort>
+				</li>
 			</roles>
 		</properties>
 		
@@ -182,6 +194,7 @@
 					<ArmorRating_Sharp>0.35</ArmorRating_Sharp>
 					<ArmorRating_Blunt>0.2</ArmorRating_Blunt> <!-- # of estimated XWMG hull points * 0.1, apply to hard armor curve -->
 					<ArmorRating_Heat>0.45</ArmorRating_Heat>
+					<IncomingDamageFactor>-0.15</IncomingDamageFactor> <!-- # of estimated XWMG hull points * -0.05 -->
 				</armor>
 				<health>300</health> <!-- # of estimated XWMG hull points * 100 -->
 				
@@ -295,10 +308,10 @@
 						<turretDef>guy762_VehicleTurret_ATST_main</turretDef>
 						
 						<renderProperties>
-							<north>(0, 2.5)</north>
-							<south>(0, -1.5)</south>
-							<east>(1.8, 0.825)</east>
-							<west>(-1.8, 0.825)</west>
+							<north>(0, 3.5)</north>
+							<south>(0, -1.25)</south>
+							<east>(2, 1.3)</east>
+							<west>(-2, 1.3)</west>
 						</renderProperties>
 						<defaultAngleRotated>0</defaultAngleRotated>
 						<angleRestricted>(315,45)</angleRestricted>
@@ -307,6 +320,40 @@
 						<aimPieOffset>(0, 2.55)</aimPieOffset>
 						
 						<key>ATSTKey_gun_1</key>
+					</li>
+					<li>
+						<turretDef>guy762_VehicleTurret_ATST_repeater</turretDef>
+						
+						<renderProperties>
+							<north>(-1.625, 2.675)</north>
+							<south>(1.625, 0)</south>
+							<east>(1.05, 2.75)</east>
+							<west>(-1.05, 1)</west>
+						</renderProperties>
+						<defaultAngleRotated>0</defaultAngleRotated>
+						<angleRestricted>(315,45)</angleRestricted>
+						<gizmoLabel>antipersonnel repeater</gizmoLabel>
+						
+						<aimPieOffset>(0, 2.55)</aimPieOffset>
+						
+						<key>ATSTKey_gun_2</key>
+					</li>
+					<li>
+						<turretDef>guy762_VehicleTurret_ATST_conc</turretDef>
+						
+						<renderProperties>
+							<north>(1.625, 2.675)</north>
+							<south>(-1.625, 0)</south>
+							<east>(1.05, 1)</east>
+							<west>(-1.05, 2.75)</west>
+						</renderProperties>
+						<defaultAngleRotated>0</defaultAngleRotated>
+						<angleRestricted>(315,45)</angleRestricted>
+						<gizmoLabel>concussion launcher</gizmoLabel>
+						
+						<aimPieOffset>(0, 2.55)</aimPieOffset>
+						
+						<key>ATSTKey_gun_3</key>
 					</li>
 				</turrets>
 			</li>
@@ -318,7 +365,7 @@
 	<Vehicles.VehicleTurretDef ParentName="VehicleTurretBase">
 		<defName>guy762_VehicleTurret_ATST_main</defName>
 		<label>AT-ST main gun</label>
-		<description>The main gun of a TIE Crawler.</description>
+		<description>The main gun of an AT-ST walker.</description>
 		
 		<turretType>Rotatable</turretType>
 		<shotSound>kotorsound_speedergun</shotSound>
@@ -342,10 +389,10 @@
 		<fireModes>
 			<li>
 				<shotsPerBurst>2</shotsPerBurst>
-				<ticksBetweenShots>8</ticksBetweenShots>
-				<ticksBetweenBursts>100</ticksBetweenBursts>
-				<label>Single</label>
-				<texPath>UI/Sniper_Shot</texPath>
+				<ticksBetweenShots>9</ticksBetweenShots>
+				<ticksBetweenBursts>150</ticksBetweenBursts>
+				<label>Burst</label>
+				<texPath>UI/Rapid_Shot</texPath>
 			</li>
 		</fireModes>
 
@@ -356,6 +403,101 @@
 		
 		<gizmoIconTexPath>Items/cannon_blank</gizmoIconTexPath>
 		
+	</Vehicles.VehicleTurretDef>
+	
+	<Vehicles.VehicleTurretDef ParentName="VehicleTurretBase">
+		<defName>guy762_VehicleTurret_ATST_repeater</defName>
+		<label>AT-ST antipersonnel repeater</label>
+		<description>The antipersonnel repeater of an AT-ST walker.</description>
+		
+		<turretType>Rotatable</turretType>
+		<shotSound>kotorsound_SWGLrepeater</shotSound>
+		
+		<projectile>KotORBlasterBolt_default</projectile>
+		<reloadTimer>3.5</reloadTimer>
+		<warmUpTimer>2.5</warmUpTimer>
+		
+		<magazineCapacity>999</magazineCapacity>
+		
+		<hitFlags>IntendedTarget</hitFlags>
+		
+		<autoSnapTargeting>true</autoSnapTargeting>
+		<rotationSpeed>5</rotationSpeed>
+		
+		<projectileOffset>2.1</projectileOffset>
+		
+		<minRange>2</minRange>
+		<maxRange>30</maxRange>
+
+		<fireModes>
+			<li>
+				<shotsPerBurst>12</shotsPerBurst>
+				<ticksBetweenShots>6</ticksBetweenShots>
+				<ticksBetweenBursts>200</ticksBetweenBursts>
+				<label>Single</label>
+				<texPath>UI/Improved_Rapid_Shot</texPath>
+			</li>
+		</fireModes>
+
+		<graphicData>
+			<texPath>NullTex</texPath>
+			<graphicClass>Vehicles.Graphic_Turret</graphicClass>
+		</graphicData>
+		
+		<gizmoIconTexPath>Items/cannon_blank</gizmoIconTexPath>
+		<modExtensions>
+			<li MayRequire="SmashPhil.VehicleFramework" Class = "Vehicles.VehicleDamageMultiplierDefModExtension">
+			  <multiplier>0.01</multiplier>
+			</li>
+		</modExtensions>
+	</Vehicles.VehicleTurretDef>
+	
+	
+	<Vehicles.VehicleTurretDef ParentName="VehicleTurretBase">
+		<defName>guy762_VehicleTurret_ATST_conc</defName>
+		<label>AT-ST concussion launcher</label>
+		<description>The concussion launcher of an AT-ST walker.</description>
+		
+		<turretType>Rotatable</turretType>
+		<shotSound>kotorsound_JKrepeater_AltFire</shotSound>
+		
+		<projectile>SWProj_TL50conc</projectile>
+		<reloadTimer>3.5</reloadTimer>
+		<warmUpTimer>2.5</warmUpTimer>
+		
+		<magazineCapacity>999</magazineCapacity>
+		
+		<hitFlags>IntendedTarget</hitFlags>
+		
+		<autoSnapTargeting>true</autoSnapTargeting>
+		<rotationSpeed>5</rotationSpeed>
+		
+		<projectileOffset>2.1</projectileOffset>
+		
+		<minRange>2</minRange>
+		<maxRange>30</maxRange>
+
+		<fireModes>
+			<li>
+				<shotsPerBurst>1</shotsPerBurst>
+				<ticksBetweenShots>10</ticksBetweenShots>
+				<ticksBetweenBursts>200</ticksBetweenBursts>
+				<label>Single</label>
+				<texPath>Weapons/Projectiles/energybomb_purple</texPath>
+			</li>
+		</fireModes>
+
+		<graphicData>
+			<texPath>NullTex</texPath>
+			<graphicClass>Vehicles.Graphic_Turret</graphicClass>
+		</graphicData>
+		
+		<gizmoIconTexPath>Items/bigcannon_blank</gizmoIconTexPath>
+		<modExtensions>
+			<li MayRequire="SmashPhil.VehicleFramework" Class = "Vehicles.VehicleDamageMultiplierDefModExtension">
+			  <multiplier>0</multiplier>
+			</li>
+		</modExtensions>
 	</Vehicles.VehicleTurretDef>
 	
 	

@@ -29,7 +29,7 @@
 		<rotatable>True</rotatable>
 		
 		<fillPercent>1</fillPercent>
-		<nameable>false</nameable>
+		<nameable>true</nameable>
 		<buildDef>guy762_SWVehicleBP_YT2400_</buildDef>
 		<size>(26,18)</size>
 		<vehicleMovementPermissions>DriverNeeded</vehicleMovementPermissions>
@@ -237,7 +237,7 @@
 						<turretDef>guy762_VehicleTurret_YT2400Dorsal</turretDef>
 						
 						<renderProperties>
-							<north>(-3.05, 0.75)</north>
+							<north>(-3.05, -0.75)</north>
 							<south>(-1, -3.5)</south>
 							<east>(3.5, -1.2)</east>
 						</renderProperties>
@@ -425,7 +425,7 @@
 		<graphicData>
 			<texPath>Starfighters/YT2400/YT2400_gun</texPath>
 			<graphicClass>Vehicles.Graphic_Turret</graphicClass>
-			<drawSize>(7,7)</drawSize>
+			<drawSize>(14,14)</drawSize>
 		</graphicData>
 		
 		<gizmoIconTexPath>Starfighters/YT2400/YT2400_gun</gizmoIconTexPath>

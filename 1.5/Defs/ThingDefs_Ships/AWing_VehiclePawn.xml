@@ -28,7 +28,7 @@
 		<rotatable>True</rotatable>
 		
 		<fillPercent>1</fillPercent>
-		<nameable>false</nameable>
+		<nameable>true</nameable>
 		<buildDef>guy762_SWVehicleBP_AWing</buildDef>
 		<size>(4,6)</size>
 		<vehicleMovementPermissions>DriverNeeded</vehicleMovementPermissions>
@@ -220,7 +220,7 @@
 						</renderProperties>
 						<defaultAngleRotated>0</defaultAngleRotated>
 						<angleRestricted>(315,45)</angleRestricted>
-						<gizmoLabel>blaster</gizmoLabel>
+						<gizmoLabel>main gun</gizmoLabel>
 						
 						<aimPieOffset>(0, 2.55)</aimPieOffset>
 						
@@ -236,7 +236,7 @@
 						</renderProperties>
 						<defaultAngleRotated>0</defaultAngleRotated>
 						<angleRestricted>(315,45)</angleRestricted>
-						<gizmoLabel>blaster</gizmoLabel>
+						<gizmoLabel>main gun</gizmoLabel>
 						
 						<aimPieOffset>(0, 2.55)</aimPieOffset>
 						

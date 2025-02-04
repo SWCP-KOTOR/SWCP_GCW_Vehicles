@@ -16,7 +16,7 @@
 		<graphicData>
 			<texPath>Starfighters/TIEDefender/TIEDef</texPath>
 			<graphicClass>Vehicles.Graphic_Vehicle</graphicClass>
-			<drawSize>(7,7)</drawSize>
+			<drawSize>(9,9)</drawSize>
 			<shaderType>CutoutComplexPattern</shaderType>
 			<pattern>guy762_SWVehiclePattern_TIEDefA</pattern>
 			<color>(180,180,215)</color>
@@ -28,9 +28,9 @@
 		<rotatable>True</rotatable>
 		
 		<fillPercent>1</fillPercent>
-		<nameable>false</nameable>
+		<nameable>true</nameable>
 		<buildDef>guy762_SWVehicleBP_TIEDef</buildDef>
-		<size>(7,6)</size>
+		<size>(8,7)</size>
 		<vehicleMovementPermissions>DriverNeeded</vehicleMovementPermissions>
 		
 		<canCaravan>false</canCaravan>
@@ -361,7 +361,7 @@
 			<li>
 				<start>IgnitionOn</start>
 				<stop>IgnitionOff</stop>
-				<value>kotorsound_enginehum_n1naboo</value>
+				<value>kotorsound_enginehum_TIEBomber</value>
 			</li>
 		</soundSustainersOnEvent>
 		

@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <MVCF.ModDef>
+	<defName>guy762_SWWarlordsWeapons</defName>
+	<label>Star Wars GCW Weapons</label>
+	<description>Adds alternate attack verbs for most ranged weapons, inspired by Jedi Outcast and Jedi Academy.</description>
+	<ActivateFeatures>
+		<li>ApparelVerbs</li>
+		<li>ExtraEquipmentVerbs</li>
+		<li>IntegratedToggle</li>
+	</ActivateFeatures>
+  </MVCF.ModDef>
+  
+</Defs>

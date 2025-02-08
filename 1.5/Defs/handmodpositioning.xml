@@ -97,6 +97,12 @@
                  <li>guy762_E22rifle</li> <!-- E-22 double blaster rifle -->
               </ThingTargets>
           </li>
+		  <li>
+              <MainHand>(-0.015, 0.100, -0.150)</MainHand>
+              <ThingTargets>
+                 <li>guy762_RK3pistol</li> <!-- RK-3 blaster pistol -->
+              </ThingTargets>
+          </li>
 		  
 		  
 		  <li>

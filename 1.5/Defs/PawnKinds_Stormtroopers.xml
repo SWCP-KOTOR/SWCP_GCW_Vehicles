@@ -684,8 +684,9 @@
 		</apparelRequired>
 
 		<biocodeWeaponChance>0</biocodeWeaponChance>
-		<weaponMoney>500</weaponMoney>
+		<weaponMoney>350~500</weaponMoney>
 		<weaponTags>
+			<li>SWRanged_RK3pistol</li>
 			<li>SWRanged_E11carbine</li>
 		</weaponTags>
 

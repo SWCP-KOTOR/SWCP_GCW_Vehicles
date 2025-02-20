@@ -7,7 +7,7 @@
 	
 	<ThingDef ParentName="KotORArmorModdable_hard">
 		<defName>guy762_RebelHelmet</defName>
-		<label>combat helmet</label>
+		<label>militia combat helmet</label>
 		<techLevel>Spacer</techLevel>
 		<description>.</description>
 		<graphicData>
@@ -55,6 +55,62 @@
 			</options>
 		</colorGenerator>
 	</ThingDef>
+	
+	<ThingDef ParentName="KotORArmorModdable_hard">
+		<defName>guy762_RebelHelmet_light</defName>
+		<label>light combat helmet</label>
+		<techLevel>Spacer</techLevel>
+		<description>.</description>
+		<graphicData>
+			<texPath>Apparel/RebelPilot/helmetAWing_trooper/helmet</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<shaderType>CutoutComplex</shaderType>
+			<colorTwo>(190,155,120)</colorTwo> <!-- beige -->
+		</graphicData>
+		<thingCategories>
+		  <li>ArmorHeadgear</li>
+		</thingCategories>
+		<statBases>
+			<Mass>2</Mass>
+			<MarketValue>200</MarketValue>
+			<MaxHitPoints>115</MaxHitPoints>
+      		<ArmorRating_Sharp>0.25</ArmorRating_Sharp>
+			<ArmorRating_Blunt>0.1</ArmorRating_Blunt>
+			<ArmorRating_Heat>0.35</ArmorRating_Heat>
+			<EquipDelay>2</EquipDelay>
+		</statBases>
+		
+		<apparel Inherit="False">
+			<tags>
+				<li>NewRepublic_trooper</li>
+				<li>ScumAndVillainy_pilot</li>
+			</tags>
+			<wornGraphicPath>Apparel/RebelPilot/helmetAWing_trooper/helmet</wornGraphicPath>
+			<useWornGraphicMask>true</useWornGraphicMask>
+			<layers>
+				<li>Overhead</li>
+			</layers>
+			<bodyPartGroups>
+				<li>UpperHead</li>
+			</bodyPartGroups>
+			<useDeflectMetalEffect>true</useDeflectMetalEffect>
+		</apparel>
+		<tradeTags>
+			<li>guy762TT_ORArmor</li>
+		</tradeTags>
+		<colorGenerator Class="ColorGenerator_Options" Inherit="False">
+			<options>
+				<li>
+					<weight>10</weight>
+					<only>(50,50,50)</only>  <!-- black -->
+				</li>
+			</options>
+		</colorGenerator>
+	</ThingDef>
+	
+	
+	
+	
 	
 	<ThingDef ParentName="guy762_clothingbase">
 		<defName>guy762_Clothing_rebel</defName>
@@ -124,7 +180,7 @@
 	  
 	  <ThingDef ParentName="KotORArmorModdable_hard">
 		<defName>guy762_NewRepublicHelmet</defName>
-		<label>New Republic combat helmet</label>
+		<label>New Republic battle helmet</label>
 		<techLevel>Spacer</techLevel>
 		<description>.</description>
 		<graphicData>
@@ -181,7 +237,7 @@
 	
 	<ThingDef ParentName="KotORArmorModdable_hard">
 		<defName>guy762_NewRepublicHelmet_resistance</defName>
-		<label>New Republic combat helmet</label>
+		<label>New Republic battle helmet</label>
 		<techLevel>Spacer</techLevel>
 		<description>.</description>
 		<graphicData>
@@ -454,6 +510,64 @@
 	  
 	  
 	  
+	  <ThingDef ParentName="KotORArmorModdable_hard">
+		<defName>guy762_RebPilotHelmet_generic</defName>
+		<label>K-22995 flight helmet</label>
+		<techLevel>Spacer</techLevel>
+		<description>.</description>
+		<graphicData>
+			<texPath>Apparel/RebelPilot/helmet_blank/helmet</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<shaderType>CutoutComplex</shaderType>
+			<colorTwo>(100,100,100)</colorTwo> <!-- dark grey -->
+		</graphicData>
+		<thingCategories>
+		  <li>ArmorHeadgear</li>
+		</thingCategories>
+		<statBases>
+			<Mass>3</Mass>
+			<MarketValue>250</MarketValue>
+			<MaxHitPoints>115</MaxHitPoints>
+      		<ArmorRating_Sharp>0.45</ArmorRating_Sharp>
+			<ArmorRating_Blunt>0.3</ArmorRating_Blunt>
+			<ArmorRating_Heat>0.55</ArmorRating_Heat>
+			<EquipDelay>2</EquipDelay>
+		</statBases>
+		
+		<apparel Inherit="False">
+			<tags>
+				<li>ScumAndVillainy_pilot</li>
+			</tags>
+			<wornGraphicPath>Apparel/RebelPilot/helmet_blank/helmet</wornGraphicPath>
+			<useWornGraphicMask>true</useWornGraphicMask>
+			<layers>
+				<li>Overhead</li>
+				<li>EyeCover</li>
+			</layers>
+			<bodyPartGroups>
+				<li>UpperHead</li>
+			</bodyPartGroups>
+			<useDeflectMetalEffect>true</useDeflectMetalEffect>
+		</apparel>
+		<tradeTags>
+			<li>guy762TT_ORArmor</li>
+		</tradeTags>
+		<colorGenerator Class="ColorGenerator_Options" Inherit="False">
+			<options>
+				<li>
+					<weight>10</weight>
+					<only>(160,100,60)</only> <!-- rust -->
+				</li>
+			</options>
+		</colorGenerator>
+	</ThingDef>
+	  
+	  
+	  
+	  
+	  
+	  
+	  
 	  
 	  
 	  
@@ -665,6 +779,190 @@
 		  <shaderType>CutoutComplex</shaderType>
 		</graphicData>
 	</ThingStyleDef>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<ThingDef ParentName="KotORArmorModdable_hard">
+		<defName>guy762_AWingPilotHelmet</defName>
+		<label>A-Wing flight helmet</label>
+		<techLevel>Spacer</techLevel>
+		<description>.</description>
+		<graphicData>
+			<texPath>Apparel/RebelPilot/helmetAWing_default/helmet</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<shaderType>CutoutComplex</shaderType>
+		</graphicData>
+		<thingCategories>
+		  <li>ArmorHeadgear</li>
+		</thingCategories>
+		<statBases>
+			<Mass>2</Mass>
+			<MarketValue>200</MarketValue>
+			<MaxHitPoints>115</MaxHitPoints>
+      		<ArmorRating_Sharp>0.25</ArmorRating_Sharp>
+			<ArmorRating_Blunt>0.1</ArmorRating_Blunt>
+			<ArmorRating_Heat>0.35</ArmorRating_Heat>
+			<EquipDelay>2</EquipDelay>
+		</statBases>
+		<!-- <equippedStatOffsets> -->
+			<!-- <SocialImpact>0.5</SocialImpact> -->
+		<!-- </equippedStatOffsets> -->
+		
+		<!-- <randomStyleChance>0.5</randomStyleChance> -->
+		<!-- <randomStyle> -->
+			  <!-- <li> -->
+				<!-- <styleDef>guy762_RebelPilotHelmetStyle_rookiestripe</styleDef> -->
+			  <!-- </li> -->
+			  <!-- <li> -->
+				<!-- <styleDef>guy762_RebelPilotHelmetStyle_novice</styleDef> -->
+			  <!-- </li> -->
+			  <!-- <li> -->
+				<!-- <styleDef>guy762_RebelPilotHelmetStyle_novicestripe</styleDef> -->
+			  <!-- </li> -->
+		<!-- </randomStyle> -->
+		<!-- <comps> -->
+			<!-- <li Class="CompProperties_Styleable"></li> -->
+		<!-- </comps> -->
+		
+		<apparel Inherit="False">
+			<tags>
+				<li>NewRepublic_rookiepilot</li>
+				<li>NewRepublic_AWingpilot</li>
+			</tags>
+			<wornGraphicPath>Apparel/RebelPilot/helmetAWing_default/helmet</wornGraphicPath>
+			<useWornGraphicMask>true</useWornGraphicMask>
+			<layers>
+				<li>Overhead</li>
+			</layers>
+			<bodyPartGroups>
+				<li>UpperHead</li>
+			</bodyPartGroups>
+			<useDeflectMetalEffect>true</useDeflectMetalEffect>
+		</apparel>
+		<tradeTags>
+			<li>guy762TT_ORArmor</li>
+		</tradeTags>
+		<colorGenerator Class="ColorGenerator_Options" Inherit="False">
+			<options>
+				<li>
+					<weight>10</weight>
+					<only>(45,100,185)</only>       <!-- blue squadron -->
+				</li>
+				<li>
+					<weight>10</weight>
+					<only>(190,45,45)</only>         <!-- red squadron -->
+				</li>
+				<li>
+					<weight>10</weight>
+					<only>(190,145,5)</only> <!-- gold squadron -->
+				</li>
+			</options>
+		</colorGenerator>
+	</ThingDef>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<ThingDef ParentName="KotORArmorModdable_hard">
+		<defName>guy762_AWingPilotHelmet_keo</defName>
+		<label>A-Wing flight helmet (Keo's)</label>
+		<techLevel>Spacer</techLevel>
+		<description>.</description>
+		<graphicData>
+			<texPath>Apparel/RebelPilot/helmetAWing_keo/helmet</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<shaderType>CutoutComplex</shaderType>
+			<colorTwo>(230,185,45)</colorTwo> <!-- republic yellow -->
+		</graphicData>
+		<thingCategories>
+		  <li>ArmorHeadgear</li>
+		</thingCategories>
+		<statBases>
+			<Mass>2</Mass>
+			<MarketValue>7620</MarketValue>
+			<MaxHitPoints>115</MaxHitPoints>
+      		<ArmorRating_Sharp>0.25</ArmorRating_Sharp>
+			<ArmorRating_Blunt>0.1</ArmorRating_Blunt>
+			<ArmorRating_Heat>0.35</ArmorRating_Heat>
+			<EquipDelay>2</EquipDelay>
+		</statBases>
+		<equippedStatOffsets>
+			<SocialImpact>0.5</SocialImpact>
+			<PsychicSensitivity>0.1</PsychicSensitivity>
+		</equippedStatOffsets>
+		
+		<!-- <randomStyleChance>0.5</randomStyleChance> -->
+		<!-- <randomStyle> -->
+			  <!-- <li> -->
+				<!-- <styleDef>guy762_RebelPilotHelmetStyle_rookiestripe</styleDef> -->
+			  <!-- </li> -->
+			  <!-- <li> -->
+				<!-- <styleDef>guy762_RebelPilotHelmetStyle_novice</styleDef> -->
+			  <!-- </li> -->
+			  <!-- <li> -->
+				<!-- <styleDef>guy762_RebelPilotHelmetStyle_novicestripe</styleDef> -->
+			  <!-- </li> -->
+		<!-- </randomStyle> -->
+		<!-- <comps> -->
+			<!-- <li Class="CompProperties_Styleable"></li> -->
+		<!-- </comps> -->
+		
+		<apparel Inherit="False">
+			<tags>
+				<li>NewRepublic_keo</li>
+			</tags>
+			<wornGraphicPath>Apparel/RebelPilot/helmetAWing_keo/helmet</wornGraphicPath>
+			<useWornGraphicMask>true</useWornGraphicMask>
+			<layers>
+				<li>Overhead</li>
+			</layers>
+			<bodyPartGroups>
+				<li>UpperHead</li>
+			</bodyPartGroups>
+			<useDeflectMetalEffect>true</useDeflectMetalEffect>
+		</apparel>
+		<tradeTags>
+			<li>guy762TT_ORArmor</li>
+		</tradeTags>
+		<colorGenerator Class="ColorGenerator_Options" Inherit="False">
+			<options>
+				<li>
+					<weight>10</weight>
+					<only>(110,80,110)</only> <!-- flat purple -->
+				</li>
+			</options>
+		</colorGenerator>
+	</ThingDef>
 
 
 

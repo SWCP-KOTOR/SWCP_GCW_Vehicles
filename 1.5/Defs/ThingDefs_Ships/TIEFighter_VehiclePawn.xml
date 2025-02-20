@@ -23,7 +23,7 @@
 		<nameable>true</nameable>
 		<buildDef>guy762_SWVehicleBP_TIEFighter</buildDef>
 		<size>(5,5)</size>
-		<vehicleMovementPermissions>DriverNeeded</vehicleMovementPermissions>
+		<vehicleMovementPermissions>NoDriverNeeded</vehicleMovementPermissions>
 		
 		<canCaravan>false</canCaravan>
 		<vehicleCategory>Combat</vehicleCategory>
@@ -73,20 +73,24 @@
 					<label>Pilot</label>
 					<slots>1</slots>
 					<slotsToOperate>1</slotsToOperate>
-					<handlingTypes>
-						<li>Movement</li>
-					</handlingTypes>
+					<!-- <handlingTypes> -->
+						<!-- <li>Movement</li> -->
+						<!-- <li>Turret</li> -->
+					<!-- </handlingTypes> -->
 					<comfort>-0.5</comfort>
+					
+					<turretIds>
+						<li>TIEFighterKey_gun_1</li>
+					</turretIds>
 				</li>
 			</roles>
 		</properties>
 		
 		<comps>
 			<li Class="Vehicles.CompProperties_FueledTravel">
-				<fuelType>KOTOR_Rhydonium</fuelType>				<!-- Must Include -->
-				<leakDef>Filth_Fuel</leakDef>
+				<electricPowered>true</electricPowered>
 				<fuelConsumptionRate>2</fuelConsumptionRate>
-				<fuelCapacity>15</fuelCapacity>
+				<fuelCapacity>100</fuelCapacity>
 				<fuelConsumptionWorldMultiplier>0.5</fuelConsumptionWorldMultiplier>
 			</li>
 			
@@ -120,12 +124,12 @@
 					</chaseTarget>
 				</flightCommands>
 				
-				<fuelConsumptionPerTick>0.00001</fuelConsumptionPerTick>
+				<fuelConsumptionPerTick>0.0001</fuelConsumptionPerTick>
 				
-				<flightSpeedPerTick>0.8</flightSpeedPerTick>
-				<flightSpeedTurningPerTick>0.6</flightSpeedTurningPerTick>
-				<turnAnglePerTick>2</turnAnglePerTick>
-				<turnAngleCirclingPerTick>1</turnAngleCirclingPerTick>
+				<flightSpeedPerTick>1</flightSpeedPerTick> <!-- MAXIMUM XWMG speed: speed5 = 1, speed1 = 0.2 | + 0.1 for blue 5, -0.1 for red highest -->
+				<flightSpeedTurningPerTick>0.6</flightSpeedTurningPerTick> <!-- highest speed in which all 5 standard maneuvers are available | +0.1 for a full row of blues, -0.1 for more than two reds -->
+				<turnAnglePerTick>4</turnAnglePerTick> <!-- USE SLOWEST POSSIBLE TURN: speed1 turn = 4, speed2 turn = 2, speed3 turn = 1 | banks = 0.75, 0.5, 0.25 | -1 for red slowest -->
+				<turnAngleCirclingPerTick>1</turnAngleCirclingPerTick> <!-- use fastest possible turn -->
 				
 				<distanceFromTargetToStartTurningChaseMode>20</distanceFromTargetToStartTurningChaseMode>
 				<distanceFromTargetToStartTurningCircleMode>10</distanceFromTargetToStartTurningCircleMode>
@@ -147,6 +151,19 @@
 					<shaderType>CutoutComplexPattern</shaderType>
 					<color>(165,165,190)</color>
 				</flightGraphicData>
+				
+				<AISettings>
+					<gunshipSettings>
+						<npcStock>
+							<!-- <CVNAmmoBluestandard>300</CVNAmmoBluestandard> -->
+							<!-- <CVNAmmoRedstandard>300</CVNAmmoRedstandard> -->
+						</npcStock>
+						<gunshipMode>Chasing</gunshipMode>
+						<!-- <gunshipMode>Circling</gunshipMode>    they just seem to fly off the map with this -->
+						<distanceFromTarget>30</distanceFromTarget>
+					</gunshipSettings>
+				</AISettings>
+				
 				<flightFlecks>
 					<li>
 						<fleck>CVN_RocketExhaust</fleck>
@@ -186,15 +203,6 @@
 					</li>
 				</landingFlecks>
 				<waypointFleck>guy762_SWStarfighter_waypoint</waypointFleck>
-				<AISettings>
-					<gunshipSettings>
-						<npcStock>
-							<CVNAmmoMissile>60~120</CVNAmmoMissile>
-						</npcStock>
-						<gunshipMode>Chasing</gunshipMode>
-						<distanceFromTarget>30</distanceFromTarget>
-					</gunshipSettings>
-				</AISettings>
 			</li>
 			
 			
@@ -210,7 +218,7 @@
 						</renderProperties>
 						<defaultAngleRotated>0</defaultAngleRotated>
 						<angleRestricted>(315,45)</angleRestricted>
-						<gizmoLabel>main gun</gizmoLabel>
+						<gizmoLabel>dual gun</gizmoLabel>
 						
 						<aimPieOffset>(0, 2.55)</aimPieOffset>
 						
@@ -226,9 +234,10 @@
 				<depth>External</depth>
 				
 				<armor>
-					<ArmorRating_Sharp>0.35</ArmorRating_Sharp>
-					<ArmorRating_Blunt>0.2</ArmorRating_Blunt> <!-- # of estimated XWMG hull points * 0.1, apply to hard armor curve -->
-					<ArmorRating_Heat>0.45</ArmorRating_Heat>
+					<ArmorRating_Sharp>1.35</ArmorRating_Sharp>
+					<ArmorRating_Blunt>1.2</ArmorRating_Blunt> <!-- # of estimated XWMG hull points * 0.1, apply to hard armor curve -->
+					<ArmorRating_Heat>1.45</ArmorRating_Heat>
+					<IncomingDamageFactor>-0.15</IncomingDamageFactor> <!-- # of estimated XWMG hull points * -0.05 -->
 				</armor>
 				<health>300</health> <!-- # of estimated XWMG hull points * 100 -->
 				
@@ -348,7 +357,7 @@
 		
 		<projectile>SWVehicleBullet_TIEdoublegreen</projectile>
 		<reloadTimer>3.5</reloadTimer>
-		<warmUpTimer>0.2</warmUpTimer>
+		<warmUpTimer>0</warmUpTimer>
 		
 		<magazineCapacity>999</magazineCapacity>
 		
@@ -357,19 +366,26 @@
 		<autoSnapTargeting>true</autoSnapTargeting>
 		<rotationSpeed>5</rotationSpeed>
 		
-		<projectileOffset>2.1</projectileOffset>
+		<projectileOffset>2.1</projectileOffset> <!-- keep this on starfighters-->
 		
 		<minRange>5</minRange>
-		<maxRange>60</maxRange>
+		<maxRange>90</maxRange>
 
 		<fireModes>
 			<li>
-				<shotsPerBurst>3</shotsPerBurst>
+				<shotsPerBurst>1</shotsPerBurst>
 				<ticksBetweenShots>12</ticksBetweenShots>
-				<ticksBetweenBursts>150</ticksBetweenBursts>
-				<label>Burst</label>
-				<texPath>UI/Rapid_Shot</texPath>
+				<ticksBetweenBursts>20</ticksBetweenBursts>
+				<label>Single</label>
+				<texPath>UI/Sniper_Shot</texPath>
 			</li>
+			<!-- <li> -->
+				<!-- <shotsPerBurst>3</shotsPerBurst> -->
+				<!-- <ticksBetweenShots>12</ticksBetweenShots> -->
+				<!-- <ticksBetweenBursts>150</ticksBetweenBursts> -->
+				<!-- <label>Burst</label> -->
+				<!-- <texPath>UI/Rapid_Shot</texPath> -->
+			<!-- </li> -->
 		</fireModes>
 
 		<graphicData>

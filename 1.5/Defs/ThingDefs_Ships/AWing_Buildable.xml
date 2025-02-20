@@ -10,7 +10,7 @@
 		<graphicData>
 			<texPath>Starfighters/A-Wing/AWing</texPath>
 			<graphicClass>Graphic_Multi</graphicClass>
-			<drawSize>(7,7)</drawSize>
+			<drawSize>(8,8)</drawSize>
 			<!-- <drawOffset>(0, 0, 1)</drawOffset> -->
 		</graphicData>
 		
@@ -20,7 +20,7 @@
 			<Flammability>0.05</Flammability>
 		</statBases>
 		
-		<size>(4,6)</size>
+		<size>(4,7)</size>
 		
 		<!--researchPrerequisites>
 			<li>VVE_BasicVehicles</li>

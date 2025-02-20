@@ -1,0 +1,688 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<Defs>	
+
+	<Vehicles.PatternDef>
+		<defName>guy762_SWVehiclePattern_KimogilaA</defName>
+		<label>Kimogila (stock)</label>
+		<path>Starfighters/Kimogila/Kimogila_pattern</path>
+	</Vehicles.PatternDef>
+	
+	
+	<Vehicles.VehicleDef ParentName="MM-VF-Vehicle_Pawn">
+		<defName>guy762_SWVehicle_Kimogila</defName>
+		<label>M12-L Kimogila heavy starfighter</label>
+		<description>. \n\n&lt;color=#bb8f04&gt;Crew:&lt;/color&gt; Pilot x1</description>
+		<graphicData>
+			<texPath>Starfighters/Kimogila/Kimogila</texPath>
+			<graphicClass>Vehicles.Graphic_Vehicle</graphicClass>
+			<drawSize>(14,14)</drawSize>
+			<shaderType>CutoutComplexPattern</shaderType>
+			<pattern>guy762_SWVehiclePattern_KimogilaA</pattern>
+			<color>(135,95,90)</color> <!-- lighter sand red -->
+			<colorTwo>(115,120,95)</colorTwo> <!-- hutt green -->
+			<colorThree>(170,160,135)</colorThree> <!-- stanky beige -->
+		</graphicData>
+		<uiIconScale>1</uiIconScale>
+		<seeThroughFog>true</seeThroughFog>
+		<drawOffscreen>true</drawOffscreen>
+		<rotatable>True</rotatable>
+		
+		<fillPercent>1</fillPercent>
+		<nameable>true</nameable>
+		<buildDef>guy762_SWVehicleBP_Kimogila</buildDef>
+		<size>(10,10)</size>
+		<vehicleMovementPermissions>DriverNeeded</vehicleMovementPermissions>
+		
+		<canCaravan>false</canCaravan>
+		<vehicleCategory>Combat</vehicleCategory>
+		<techLevel>Spacer</techLevel>
+		<vehicleType>Air</vehicleType>
+		
+		<statBases>
+			<!--ArmorRating_Sharp>+0.05</ArmorRating_Sharp>
+			<ArmorRating_Blunt>-0.1</ArmorRating_Blunt>        BASE CURVE FOR HARD ARMOR
+			<ArmorRating_Heat>+0.15</ArmorRating_Heat-->
+			<ArmorRating_Sharp>0.75</ArmorRating_Sharp>
+			<ArmorRating_Blunt>0.6</ArmorRating_Blunt> <!-- # of estimated XWMG hull points * 0.1, apply to hard armor curve -->
+			<ArmorRating_Heat>0.85</ArmorRating_Heat>
+			<MaxHitPoints>7000</MaxHitPoints> <!-- # of estimated XWMG hull points * 1000 -->
+			
+			<MarketValue>55000</MarketValue>
+			<Flammability>0</Flammability>
+			
+			<EnergyShieldRechargeRate>0.5</EnergyShieldRechargeRate>
+			<EnergyShieldEnergyMax>3</EnergyShieldEnergyMax>
+		</statBases>
+		<vehicleStats>
+			<Mass>750</Mass>
+			<MoveSpeed>8.6</MoveSpeed>
+			<FlightSpeed>12</FlightSpeed> <!-- this is for world map flight, NOT in-tile flight-->
+			<CargoCapacity>110</CargoCapacity>
+			<SoS2CombatDodgeChance>13.75</SoS2CombatDodgeChance> <!-- 3/8 chance to dodge on XWMG green dice = 0.375 | 0.375*10 + 10 = 13.75 | 13.75 * X = SoS2DC | X = estimated # of XWMG green dice -->
+		</vehicleStats>
+		
+		<race>
+			<baseBodySize>1.5</baseBodySize>
+		</race>
+		
+		<drawProperties>
+			<displayRotation>North</displayRotation>
+		</drawProperties>
+		
+		<properties>
+			<diagonalRotation>false</diagonalRotation>
+			<worldSpeedMultiplier>0.01</worldSpeedMultiplier>
+			<manhunterTargetsVehicle>false</manhunterTargetsVehicle>
+			
+			<vehicleJobLimitations>
+				<li>(RepairVehicle, 2)</li> <!-- how many pawns can repair this vehicle at a time -->
+			</vehicleJobLimitations> <!-- guy762 RULES: repair job count should be twice the amount of pawns to fully operate the vehicle -->
+			
+			<roles>
+				<li>
+					<key>pilot</key>
+					<label>Pilot</label>
+					<slots>1</slots>
+					<slotsToOperate>1</slotsToOperate>
+					<handlingTypes>
+						<li>Movement</li>
+						<li>Turret</li>
+					</handlingTypes>
+					<comfort>1.25</comfort>
+					
+					<turretIds>
+						<li>KimogilaKey_gun_1</li>
+						<li>KimogilaKey_gun_2</li>
+						<li>KimogilaKey_gun_3</li>
+						<li>KimogilaKey_gun_4</li>
+						<li>KimogilaKey_gun_5</li>
+						<li>KimogilaKey_gun_6</li>
+						<li>KimogilaKey_gun_7</li>
+					</turretIds>
+				</li>
+			</roles>
+		</properties>
+		
+		<comps>
+			<li Class="Vehicles.CompProperties_FueledTravel">
+				<fuelType>KOTOR_Rhydonium</fuelType>				<!-- Must Include -->
+				<leakDef>Filth_Fuel</leakDef>
+				<fuelConsumptionRate>2</fuelConsumptionRate>
+				<fuelCapacity>75</fuelCapacity>
+				<fuelConsumptionWorldMultiplier>0.5</fuelConsumptionWorldMultiplier>
+			</li>
+			
+			<li Class="CompProperties_ProjectileInterceptor">
+				<radius>7</radius>
+				<color>(0.4, 0.4, 0.4)</color>
+				
+				<interceptGroundProjectiles>true</interceptGroundProjectiles>
+				<interceptAirProjectiles>true</interceptAirProjectiles>
+				<interceptNonHostileProjectiles>true</interceptNonHostileProjectiles>
+				
+				<reactivateEffect>BulletShieldGenerator_Reactivate</reactivateEffect>
+				<activeSound>BulletShield_Ambience</activeSound>
+				<hitPointsRestoreInstantlyAfterCharge>true</hitPointsRestoreInstantlyAfterCharge>
+				
+				<hitPoints>200</hitPoints> <!-- XWMG shield value * 100 -->
+				
+				<chargeDurationTicks>1800</chargeDurationTicks><!-- 30s -->
+				<rechargeHitPointsIntervalTicks>120</rechargeHitPointsIntervalTicks>
+				<minIdleAlpha>0.2</minIdleAlpha>
+				<drawWithNoSelection>True</drawWithNoSelection>
+				<disarmedByEmpForTicks>1500</disarmedByEmpForTicks>
+				
+				<gizmoTipKey>ProjectileInterceptorTip</gizmoTipKey>
+			</li>
+			
+			<li Class="taranchuk_flightcombat.CompProperties_FlightMode">
+				<flightCommands>
+					<flightMode>
+						<label>Flight mode</label>
+						<description>Toggle flight mode.</description>
+						<texPath>UI/Abilities/Waterskip</texPath>
+					</flightMode>
+					<hoverMode>
+						<label>Hover mode</label>
+						<description>Toggle hover mode.</description>
+						<texPath>UI/Abilities/Waterskip</texPath>
+					</hoverMode>
+					<faceTarget>
+						<label>Face target (hover)</label>
+						<description>Face target while hovering.</description>
+						<texPath>UI/Abilities/Waterskip</texPath>
+					</faceTarget>
+					<cancelFaceTarget>
+						<label>Cancel face target</label>
+						<description>Cancel face target.</description>
+						<texPath>UI/Abilities/Waterskip</texPath>
+					</cancelFaceTarget>
+					<chaseTarget>
+						<label>Chase target (flight)</label>
+						<description>Chase target while flying.</description>
+						<texPath>UI/Abilities/Waterskip</texPath>
+					</chaseTarget>
+				</flightCommands>
+				
+				<fuelConsumptionPerTick>0.001</fuelConsumptionPerTick>
+				
+				<flightSpeedPerTick>0.6</flightSpeedPerTick> <!-- MAXIMUM XWMG speed: speed5 = 1, speed1 = 0.2 | + 0.1 for blue 5, -0.1 for red highest -->
+				<flightSpeedTurningPerTick>0.6</flightSpeedTurningPerTick> <!-- highest speed in which all 5 standard maneuvers are available | +0.1 for a full row of blues, -0.1 for more than two reds -->
+				<turnAnglePerTick>3</turnAnglePerTick> <!-- USE SLOWEST POSSIBLE TURN: speed1 turn = 4, speed2 turn = 2, speed3 turn = 1 | banks = 0.75, 0.5, 0.25 | -1 for red slowest -->
+				<turnAngleCirclingPerTick>1</turnAngleCirclingPerTick> <!-- use fastest possible turn -->
+				
+				<distanceFromTargetToStartTurningChaseMode>20</distanceFromTargetToStartTurningChaseMode>
+				<distanceFromTargetToStartTurningCircleMode>10</distanceFromTargetToStartTurningCircleMode>
+				
+				<takeoffTicks>120</takeoffTicks>
+				<landingTicks>120</landingTicks>
+				<moveWhileTakingOff>true</moveWhileTakingOff>
+				
+				
+				
+				<runwayTerrainRequirements>
+					<li>Medium</li>
+					<li>Heavy</li>
+				</runwayTerrainRequirements>
+				<flightGraphicData>
+					<texPath>Starfighters/Kimogila/Kimogila</texPath>
+					<graphicClass>Vehicles.Graphic_Vehicle</graphicClass>
+					<drawSize>(14,14)</drawSize>
+					<shaderType>CutoutComplexPattern</shaderType>
+					<pattern>guy762_SWVehiclePattern_KimogilaA</pattern>
+					<color>(135,95,90)</color> <!-- lighter sand red -->
+					<colorTwo>(115,120,95)</colorTwo> <!-- hutt green -->
+					<colorThree>(170,160,135)</colorThree> <!-- stanky beige -->
+				</flightGraphicData>
+				<flightFlecks>
+					<li>
+						<fleck>CVN_RocketExhaust</fleck>
+						<solidTime>0.20</solidTime>
+						<velocitySpeed>0</velocitySpeed>
+						<position>(-3, 0, 0)</position>
+						<angleOffset>0</angleOffset>
+						<spawnTickRate>1</spawnTickRate>
+						<scale>2</scale>
+					</li>
+				</flightFlecks>
+				<hoverFlecks>
+					<!-- can be filled with the same data as the flight flecks if necessary -->
+				</hoverFlecks>
+				<takeoffFlecks>
+					<li>
+						<fleck>CVN_RocketExhaust</fleck>
+						<solidTime>0.20</solidTime>
+						<solidTimeScaleByTakeoffInverse>true</solidTimeScaleByTakeoffInverse>
+						<velocitySpeed>0</velocitySpeed>
+						<position>(-3, 0, 0)</position>
+						<angleOffset>0</angleOffset>
+						<spawnTickRate>1</spawnTickRate>
+						<scale>2</scale>
+					</li>
+				</takeoffFlecks>
+				<landingFlecks>
+					<li>
+						<fleck>CVN_RocketExhaust</fleck>
+						<solidTime>0.20</solidTime>
+						<solidTimeScaleByTakeoff>true</solidTimeScaleByTakeoff>
+						<velocitySpeed>0</velocitySpeed>
+						<position>(-3, 0, 0)</position>
+						<angleOffset>0</angleOffset>
+						<spawnTickRate>1</spawnTickRate>
+						<scale>2</scale>
+					</li>
+				</landingFlecks>
+				<waypointFleck>guy762_SWStarfighter_waypoint</waypointFleck>
+				<AISettings>
+					<gunshipSettings>
+						<npcStock>
+							<CVNAmmoMissile>60~120</CVNAmmoMissile>
+						</npcStock>
+						<gunshipMode>Chasing</gunshipMode>
+						<distanceFromTarget>30</distanceFromTarget>
+					</gunshipSettings>
+				</AISettings>
+			</li>
+			
+			
+			<li Class="Vehicles.CompProperties_VehicleTurrets">
+				<turrets>
+					<li>
+						<turretDef>guy762_VehicleTurret_Kimogila_chin</turretDef>
+						
+						<renderProperties>
+							<north>(0, 4.5)</north>
+							<south>(-1, -3.5)</south>
+							<east>(3.5, -1.2)</east>
+						</renderProperties>
+						<defaultAngleRotated>0</defaultAngleRotated>
+						<angleRestricted>(355,5)</angleRestricted>
+						<gizmoLabel>chin gun</gizmoLabel>
+						
+						<aimPieOffset>(0, 2.55)</aimPieOffset>
+						
+						<key>KimogilaKey_gun_1</key>
+					</li>
+					
+					<!--/////////////////////////-->
+					
+					<li>
+						<turretDef>guy762_VehicleTurret_Kimogila_main</turretDef>
+						
+						<renderProperties>
+							<north>(-5.225, 0.35)</north>
+							<south>(-1, -3.5)</south>
+							<east>(3.5, -1.2)</east>
+						</renderProperties>
+						<defaultAngleRotated>0</defaultAngleRotated>
+						<angleRestricted>(315,45)</angleRestricted>
+						<gizmoLabel>main gun</gizmoLabel>
+						
+						<aimPieOffset>(0, 2.55)</aimPieOffset>
+						
+						<key>KimogilaKey_gun_2</key>
+					</li>
+					<li>
+						<turretDef>guy762_VehicleTurret_Kimogila_main</turretDef>
+						
+						<renderProperties>
+							<north>(5.225, 0.35)</north>
+							<south>(-1, -3.5)</south>
+							<east>(3.5, -1.2)</east>
+						</renderProperties>
+						<defaultAngleRotated>0</defaultAngleRotated>
+						<angleRestricted>(315,45)</angleRestricted>
+						<gizmoLabel>main gun</gizmoLabel>
+						
+						<aimPieOffset>(0, 2.55)</aimPieOffset>
+						
+						<key>KimogilaKey_gun_3</key>
+					</li>
+					
+					<!--/////////////////////////-->
+					
+					<li>
+						<turretDef>guy762_VehicleTurret_ProTorp</turretDef>
+						
+						<renderProperties>
+							<north>(-2.5, 0)</north>
+							<south>(-1, -3.5)</south>
+							<east>(3.5, -1.2)</east>
+						</renderProperties>
+						<defaultAngleRotated>0</defaultAngleRotated>
+						<angleRestricted>(315,45)</angleRestricted>
+						<gizmoLabel>proton torpedo launcher</gizmoLabel>
+						
+						<aimPieOffset>(0, 2.55)</aimPieOffset>
+						
+						<key>KimogilaKey_gun_4</key>
+					</li>
+					<li>
+						<turretDef>guy762_VehicleTurret_ProTorp</turretDef>
+						
+						<renderProperties>
+							<north>(2.5, 0)</north>
+							<south>(-1, -3.5)</south>
+							<east>(3.5, -1.2)</east>
+						</renderProperties>
+						<defaultAngleRotated>0</defaultAngleRotated>
+						<angleRestricted>(315,45)</angleRestricted>
+						<gizmoLabel>proton torpedo launcher</gizmoLabel>
+						
+						<aimPieOffset>(0, 2.55)</aimPieOffset>
+						
+						<key>KimogilaKey_gun_5</key>
+					</li>
+					
+					<!--/////////////////////////-->
+					
+					<li>
+						<turretDef>guy762_VehicleTurret_IonMissile</turretDef>
+						
+						<renderProperties>
+							<north>(-4, -0.5)</north>
+							<south>(-1, -3.5)</south>
+							<east>(3.5, -1.2)</east>
+						</renderProperties>
+						<defaultAngleRotated>0</defaultAngleRotated>
+						<angleRestricted>(315,45)</angleRestricted>
+						<gizmoLabel>ion missile launcher</gizmoLabel>
+						
+						<aimPieOffset>(0, 2.55)</aimPieOffset>
+						
+						<key>KimogilaKey_gun_6</key>
+					</li>
+					<li>
+						<turretDef>guy762_VehicleTurret_IonMissile</turretDef>
+						
+						<renderProperties>
+							<north>(4, -0.5)</north>
+							<south>(-1, -3.5)</south>
+							<east>(3.5, -1.2)</east>
+						</renderProperties>
+						<defaultAngleRotated>0</defaultAngleRotated>
+						<angleRestricted>(315,45)</angleRestricted>
+						<gizmoLabel>ion missile launcher</gizmoLabel>
+						
+						<aimPieOffset>(0, 2.55)</aimPieOffset>
+						
+						<key>KimogilaKey_gun_7</key>
+					</li>
+				</turrets>
+			</li>
+		</comps>
+		<components>
+			<li>
+				<key>Hull</key>
+				<label>Hull</label>
+				<depth>External</depth>
+				
+				<armor>
+					<ArmorRating_Sharp>1.75</ArmorRating_Sharp>
+					<ArmorRating_Blunt>1.6</ArmorRating_Blunt> <!-- # of estimated XWMG hull points * 0.1, apply to hard armor curve -->
+					<ArmorRating_Heat>1.85</ArmorRating_Heat>
+					<IncomingDamageFactor>-0.35</IncomingDamageFactor> <!-- # of estimated XWMG hull points * -0.05 -->
+				</armor>
+				<health>700</health> <!-- # of estimated XWMG hull points * 100 -->
+				
+				<hitbox>
+					<side>Body</side>
+				</hitbox>
+			</li>
+			
+			<li>
+				<key>FirstThruster</key>
+				<label>Main Thruster</label>
+				<health>240</health>
+				<depth>Internal</depth>
+				
+				<reactors>
+					<li Class = "Vehicles.Reactor_Explosive">
+						<indicator>VF_Explosive</indicator>
+						<chance>0.25</chance>
+						<maxHealth>0.2</maxHealth>
+						<radius>10</radius>
+						<damageDef>Flame</damageDef>
+					</li>
+				</reactors>
+				
+				<hitbox>
+					<!--cells>
+						<li>(-3, 0)</li>
+						<li>(-3, -1)</li>
+					</cells-->
+					<side>Body</side>
+				</hitbox>
+				
+				<categories>
+					<li>FlightSpeed</li>
+				</categories>
+			</li>
+			<li>
+				<key>SecondThruster</key>
+				<label>Port Auxilary Thruster</label>
+				<health>120</health>
+				<depth>Internal</depth>
+				
+				<reactors>
+					<li Class = "Vehicles.Reactor_Explosive">
+						<indicator>VF_Explosive</indicator>
+						<chance>0.125</chance>
+						<maxHealth>0.2</maxHealth>
+						<radius>5</radius>
+						<damageDef>Flame</damageDef>
+					</li>
+				</reactors>
+				
+				<hitbox>
+					<!--cells>
+						<li>(1, -1)</li>
+						<li>(1, -2)</li>
+					</cells-->
+					<side>Body</side>
+				</hitbox>
+				
+				<categories>
+					<li>FlightControl</li>   
+				</categories>
+			</li>
+			<li>
+				<key>ThirdThruster</key>
+				<label>Starboard Auxilary Thruster</label>
+				<health>120</health>
+				<depth>Internal</depth>
+				
+				<reactors>
+					<li Class = "Vehicles.Reactor_Explosive">
+						<indicator>VF_Explosive</indicator>
+						<chance>0.125</chance>
+						<maxHealth>0.2</maxHealth>
+						<radius>5</radius>
+						<damageDef>Flame</damageDef>
+					</li>
+				</reactors>
+				
+				<hitbox>
+					<!--cells>
+						<li>(1, -1)</li>
+						<li>(1, -2)</li>
+					</cells-->
+					<side>Body</side>
+				</hitbox>
+				
+				<categories>
+					<li>FlightControl</li>
+				</categories>
+			</li>
+			<li>
+				<key>Reactor</key>
+				<label>Reactor</label>
+				<health>200</health>
+				<depth>Internal</depth>
+				
+				<reactors>
+					<li Class = "Vehicles.Reactor_Explosive">
+						<indicator>VF_Explosive</indicator>
+						<chance>0.25</chance>
+						<maxHealth>0.2</maxHealth>
+						<radius>18</radius>
+						<damageDef>Bomb</damageDef>
+					</li>
+				</reactors>
+			</li>
+			<li>
+				<key>Cockpit</key>
+				<label>Cockpit</label>
+				<health>160</health>
+				<depth>Internal</depth>
+				
+				<categories>
+					<li>FlightControl</li>
+				</categories>
+			</li>
+			<li>
+				<key>shieldGenerator</key>
+				<label>Heatsink Compartment</label>
+				<health>1</health>
+				<depth>Internal</depth>
+			</li>
+		</components>
+		
+		<soundSustainersOnEvent>
+			<li>
+				<start>IgnitionOn</start>
+				<stop>IgnitionOff</stop>
+				<value>kotorsound_enginehum_freefall</value>
+			</li>
+		</soundSustainersOnEvent>
+		
+		<soundOneShotsOnEvent>
+		</soundOneShotsOnEvent>
+		
+	</Vehicles.VehicleDef>
+	
+	
+	
+	
+	
+	
+	
+	<Vehicles.VehicleTurretDef ParentName="VehicleTurretBase">
+		<defName>guy762_VehicleTurret_Kimogila_chin</defName>
+		<label>Kimogila chin gun</label>
+		<description>The chin gun of an M12-L Kimogila heavy starfighter.</description>
+		
+		<turretType>Rotatable</turretType>
+		<shotSound>kotorsound_ebonhawk</shotSound>
+		
+		<projectile>SWVehicleBullet_doublered</projectile>
+		<reloadTimer>3.5</reloadTimer>
+		<warmUpTimer>0.2</warmUpTimer>
+		
+		<magazineCapacity>999</magazineCapacity>
+		
+		<hitFlags>IntendedTarget</hitFlags>
+		
+		<autoSnapTargeting>true</autoSnapTargeting>
+		<rotationSpeed>5</rotationSpeed>
+		
+		<projectileOffset>2.1</projectileOffset> <!-- keep this on starfighters-->
+		
+		<minRange>5</minRange>
+		<maxRange>90</maxRange>
+
+		<fireModes>
+			<li>
+				<shotsPerBurst>1</shotsPerBurst>
+				<ticksBetweenShots>12</ticksBetweenShots>
+				<ticksBetweenBursts>40</ticksBetweenBursts>
+				<label>Single</label>
+				<texPath>UI/Sniper_Shot</texPath>
+			</li>
+			<!-- <li> -->
+				<!-- <shotsPerBurst>3</shotsPerBurst> -->
+				<!-- <ticksBetweenShots>12</ticksBetweenShots> -->
+				<!-- <ticksBetweenBursts>150</ticksBetweenBursts> -->
+				<!-- <label>Burst</label> -->
+				<!-- <texPath>UI/Rapid_Shot</texPath> -->
+			<!-- </li> -->
+		</fireModes>
+
+		<graphicData>
+			<texPath>NullTex</texPath>
+			<graphicClass>Vehicles.Graphic_Turret</graphicClass>
+		</graphicData>
+		
+		<gizmoIconTexPath>Items/cannon_blank</gizmoIconTexPath>
+		
+	</Vehicles.VehicleTurretDef>
+	
+	
+	
+	
+	
+	<Vehicles.VehicleTurretDef ParentName="VehicleTurretBase">
+		<defName>guy762_VehicleTurret_Kimogila_main</defName>
+		<label>Kimogila main gun</label>
+		<description>The main gun of an M12-L Kimogila heavy starfighter.</description>
+		
+		<turretType>Rotatable</turretType>
+		<shotSound>kotorsound_zoomergun</shotSound>
+		
+		<projectile>SWVehicleBullet_heavyred</projectile>
+		<reloadTimer>3.5</reloadTimer>
+		<warmUpTimer>0.2</warmUpTimer>
+		
+		<magazineCapacity>999</magazineCapacity>
+		
+		<hitFlags>IntendedTarget</hitFlags>
+		
+		<autoSnapTargeting>true</autoSnapTargeting>
+		<rotationSpeed>5</rotationSpeed>
+		
+		<projectileOffset>2.1</projectileOffset> <!-- keep this on starfighters-->
+		
+		<minRange>5</minRange>
+		<maxRange>90</maxRange>
+
+		<fireModes>
+			<li>
+				<shotsPerBurst>1</shotsPerBurst>
+				<ticksBetweenShots>10</ticksBetweenShots>
+				<ticksBetweenBursts>40</ticksBetweenBursts>
+				<label>Single</label>
+				<texPath>UI/Sniper_Shot</texPath>
+			</li>
+		</fireModes>
+
+		<graphicData>
+			<texPath>NullTex</texPath>
+			<graphicClass>Vehicles.Graphic_Turret</graphicClass>
+		</graphicData>
+		
+		<gizmoIconTexPath>Items/cannon_blank</gizmoIconTexPath>
+		
+	</Vehicles.VehicleTurretDef>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<Vehicles.VehicleTurretDef ParentName="VehicleTurretBase">
+		<defName>guy762_VehicleTurret_IonMissile</defName>
+		<label>ion missile launcher</label>
+		<description>An ion missile launcher.</description>
+		
+		<turretType>Rotatable</turretType>
+		<shotSound>kotorsound_SFmissile</shotSound>
+		<reloadSound>kotorsound_reloadlauncher</reloadSound>
+		
+		<projectile>KotORSFBullet_missileion</projectile>
+		<reloadTimer>3.5</reloadTimer>
+		<warmUpTimer>0.5</warmUpTimer>
+		
+		<magazineCapacity>3</magazineCapacity>
+		<genericAmmo>true</genericAmmo>
+		
+		<hitFlags>IntendedTarget</hitFlags>
+		
+		<autoSnapTargeting>false</autoSnapTargeting>
+		<rotationSpeed>5</rotationSpeed>
+		
+		<projectileOffset>2.1</projectileOffset>
+		
+		<minRange>30</minRange>
+		<maxRange>90</maxRange>
+
+		<fireModes>
+			<li>
+				<shotsPerBurst>3</shotsPerBurst>
+				<ticksBetweenShots>20</ticksBetweenShots>
+				<ticksBetweenBursts>100</ticksBetweenBursts>
+				<label>Single</label>
+				<texPath>Items/Rockets/rocket_ion/rocket_ion_a</texPath>
+			</li>
+		</fireModes>
+
+		<graphicData>
+			<texPath>NullTex</texPath>
+			<graphicClass>Vehicles.Graphic_Turret</graphicClass>
+		</graphicData>
+		
+		<gizmoIconTexPath>Items/bigcannon_blank</gizmoIconTexPath>
+		
+		<ammunition>
+			<thingDefs>
+				<li>guy762_RocketItem_ion</li>
+			</thingDefs>
+		</ammunition>
+	</Vehicles.VehicleTurretDef>
+	
+	
+	
+</Defs>

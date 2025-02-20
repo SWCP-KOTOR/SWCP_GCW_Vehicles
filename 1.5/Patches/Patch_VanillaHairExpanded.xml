@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+
+	<Operation Class="PatchOperationFindMod" IfModActive="VanillaExpanded.VHE">
+	<mods>
+		<li>Vanilla Hair Expanded</li>
+	</mods>
+	
+	<match Class="PatchOperationSequence">
+	  <operations>
+		<li Class="PatchOperationReplace">
+		  <xpath>Defs/PawnKindDef[@Name="KotORHeroBase_Bastila"]/forcedHair</xpath>
+			<value>
+			  <forcedHair>VHE_Raider</forcedHair>
+			</value>
+		</li>
+		<li Class="PatchOperationReplace">
+		  <xpath>Defs/PawnKindDef[@Name="KotORHeroBase_Handmaiden"]/forcedHair</xpath>
+			<value>
+			  <forcedHair>VHE_Blinder</forcedHair>
+			</value>
+		</li>
+	  </operations>
+	</match>
+  
+  </Operation>
+	
+	
+</Patch>

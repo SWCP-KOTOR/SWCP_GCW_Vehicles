@@ -17,7 +17,7 @@
 		<graphicData>
 			<texPath>LandVehicles/AA5/AA5</texPath>
 			<graphicClass>Vehicles.Graphic_Vehicle</graphicClass>
-			<drawSize>(7,7)</drawSize>
+			<drawSize>(9,9)</drawSize>
 			<shaderType>CutoutComplexPattern</shaderType>
 			<pattern>guy762_SWVehiclePattern_AA5Truck</pattern>
 			<color>(170,160,135)</color> <!-- stanky beige -->
@@ -29,29 +29,22 @@
 		<nameable>false</nameable>
 		<buildDef>guy762_SWVehicleBP_AA5Truck</buildDef>
 		
-		<size>(4,6)</size>
+		<size>(5,8)</size>
 		<uiIconScale>1</uiIconScale>
 		
 		<vehicleMovementPermissions>DriverNeeded</vehicleMovementPermissions>
 		<vehicleCategory>Transport</vehicleCategory>
 		<techLevel>Spacer</techLevel>
 		<vehicleType>Land</vehicleType>
+		<navigationCategory>Automatic</navigationCategory>
 				
 		<statBases>
-			<ArmorRating_Sharp>0.3</ArmorRating_Sharp>
-			<ArmorRating_Blunt>0.2</ArmorRating_Blunt>
-            <ArmorRating_Heat>0.4</ArmorRating_Heat>
+			<ArmorRating_Sharp>0.65</ArmorRating_Sharp>
+			<ArmorRating_Blunt>0.5</ArmorRating_Blunt> <!-- # of estimated XWMG hull points * 0.1, apply to hard armor curve -->
+			<ArmorRating_Heat>0.75</ArmorRating_Heat>
 			<Flammability>0.5</Flammability>
 			<MarketValue>5800</MarketValue>
 		</statBases>
-		
-		<vehicleStats>
-			<Mass>650</Mass>
-			<MoveSpeed>20</MoveSpeed>
-			<CargoCapacity>300</CargoCapacity>
-			<RepairRate>1</RepairRate>
-			<!--AccelerationRate>0.08</AccelerationRate-->
-		</vehicleStats>
 		
 		<soundSustainersOnEvent>
 			<li>
@@ -78,18 +71,6 @@
 		
 		<soundOneShotsOnEvent>
 			<li>
-				<key>PawnEntered</key>
-				<value>kotorsound_select_shipgun</value>
-			</li>
-			<li>
-				<key>PawnExited</key>
-				<value>kotorsound_select_shipgun</value>
-			</li>
-			<li>
-				<key>PawnChangedSeats</key>
-				<value>kotorsound_select_shipgun</value>
-			</li>
-			<li>
 				<key>IgnitionOn</key>
 				<value>kotorsound_speederbike_activate</value>
 			</li>
@@ -97,33 +78,36 @@
 				<key>IgnitionOff</key>
 				<value>kotorsound_speederbike_deactivate</value>
 			</li>
-			<li>
-				<key>CargoAdded</key>
-				<value>kotorsound_footlocker_open</value>
-			</li>
-			<li>
-				<key>CargoRemoved</key>
-				<value>kotorsound_footlocker_close</value>
-			</li>
 		</soundOneShotsOnEvent>
 		
 		<race>
 			<baseBodySize>1</baseBodySize>
 		</race>
 		
+		<vehicleStats>
+			<Mass>1200</Mass>
+			<MoveSpeed>20</MoveSpeed>
+			<CargoCapacity>300</CargoCapacity>
+			<RepairRate>1</RepairRate>
+			<!--AccelerationRate>0.08</AccelerationRate-->
+		</vehicleStats>
 		
 		<properties>
 			<diagonalRotation>false</diagonalRotation>
-			<worldSpeedMultiplier>1.2</worldSpeedMultiplier>
-			<winterSpeedMultiplier>3.25</winterSpeedMultiplier>
-			<manhunterTargetsVehicle>true</manhunterTargetsVehicle>
-			<!--offRoadMultiplier>0.8</offRoadMultiplier-->
 			
-			<customHillinessCosts>
-				<SmallHills>0.25</SmallHills>
-				<LargeHills>0.75</LargeHills>
-				<Mountainous>1.5</Mountainous>
-			</customHillinessCosts>
+			<worldSpeedMultiplier>0.7</worldSpeedMultiplier>
+			<!-- <winterSpeedMultiplier>1</winterSpeedMultiplier> -->
+			<offRoadMultiplier>2</offRoadMultiplier>
+			
+			<vehicleJobLimitations>
+				<li>(RepairVehicle, 4)</li> <!-- how many pawns can repair this vehicle at a time -->
+			</vehicleJobLimitations> <!-- guy762 RULES: repair job count should be twice the amount of pawns to fully operate the vehicle -->
+			
+			<!-- <customHillinessCosts> -->
+				<!-- <SmallHills>0.25</SmallHills> -->
+				<!-- <LargeHills>0.75</LargeHills> -->
+				<!-- <Mountainous>1.5</Mountainous> -->
+			<!-- </customHillinessCosts> -->
 			
 			<!--customSnowCategoryTicks>
 				<Dusting>4</Dusting>
@@ -155,9 +139,14 @@
 					</turretIds>
 				</li>
 				<li>
+					<key>navigator</key>
+					<label>Navigator</label>
+					<slots>1</slots>
+				</li>
+				<li>
 					<key>passenger</key>
 					<label>Passenger</label>
-					<slots>6</slots>
+					<slots>12</slots>
 					<comfort>-0.25</comfort>
 				</li>
 			</roles>
@@ -169,13 +158,13 @@
 				<label>Hull</label>
 				<depth>External</depth>
 				
-				<armor>
-					<ArmorRating_Sharp>0.45</ArmorRating_Sharp>
-					<ArmorRating_Blunt>0.3</ArmorRating_Blunt> <!-- # of estimated XWMG hull points * 0.1, apply to hard armor curve -->
-					<ArmorRating_Heat>0.55</ArmorRating_Heat>
-					<IncomingDamageFactor>-0.20</IncomingDamageFactor> <!-- # of estimated XWMG hull points * -0.05 -->
+				<armor> <!-- EaWX health/50 = hull points, round up -->
+					<ArmorRating_Sharp>1.85</ArmorRating_Sharp>
+					<ArmorRating_Blunt>1.7</ArmorRating_Blunt> <!-- # of estimated XWMG hull points * 0.1, apply to hard armor curve -->
+					<ArmorRating_Heat>1.95</ArmorRating_Heat>
+					<IncomingDamageFactor>-0.40</IncomingDamageFactor> <!-- # of estimated XWMG hull points * -0.05 -->
 				</armor>
-				<health>400</health> <!-- # of estimated XWMG hull points * 100 -->
+				<health>800</health> <!-- # of estimated XWMG hull points * 100 -->
 				
 				<hitbox>
 					<side>Body</side>
@@ -252,10 +241,10 @@
 		
 		<comps>
 			<li Class="Vehicles.CompProperties_FueledTravel">
-				<fuelType>KOTOR_Rhydonium</fuelType>
-				<leakDef>Filth_Fuel</leakDef>
+				<electricPowered>true</electricPowered>
 				<fuelConsumptionRate>12.5</fuelConsumptionRate>
-				<fuelCapacity>30</fuelCapacity>
+				<fuelCapacity>300</fuelCapacity>
+				<fuelConsumptionWorldMultiplier>10</fuelConsumptionWorldMultiplier>
 			</li>
 			<li Class="Vehicles.CompProperties_VehicleTurrets">
 				<turrets>
@@ -263,10 +252,10 @@
 						<turretDef>guy762_VehicleTurret_AA5Truck_dorsal</turretDef>
 						
 						<renderProperties>
-							<north>(-0.44, 1.2)</north>
-							<south>(-0.45, -0.35)</south>
-							<east>(0.75, 1)</east>
-							<west>(-0.75, 1)</west>
+							<north>(-0.575, 1.6)</north>
+							<south>(-0.575, -0.35)</south>
+							<east>(0.975, 1.375)</east>
+							<west>(-0.975, 1.375)</west>
 						</renderProperties>
 						<defaultAngleRotated>0</defaultAngleRotated>
 						<!-- <angleRestricted>(315,45)</angleRestricted> -->
@@ -303,7 +292,7 @@
 		<autoSnapTargeting>true</autoSnapTargeting>
 		<rotationSpeed>5</rotationSpeed>
 		
-		<projectileOffset>2.1</projectileOffset>
+		<!-- <projectileOffset>2.1</projectileOffset> -->
 		
 		<minRange>5</minRange>
 		<maxRange>60</maxRange> <!-- ~30 for infantry, 60 for ground vehicles, 90 for starfighters -->

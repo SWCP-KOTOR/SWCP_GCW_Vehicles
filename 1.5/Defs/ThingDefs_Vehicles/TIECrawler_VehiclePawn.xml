@@ -25,7 +25,7 @@
 		<uiIconScale>1</uiIconScale>
 		
 		<vehicleMovementPermissions>DriverNeeded</vehicleMovementPermissions>
-		<vehicleCategory>Transport</vehicleCategory>
+		<vehicleCategory>Combat</vehicleCategory>
 		<techLevel>Spacer</techLevel>
 		<vehicleType>Land</vehicleType>
 				
@@ -41,14 +41,6 @@
 			<Flammability>0.5</Flammability>
 			<MarketValue>5800</MarketValue>
 		</statBases>
-		
-		<vehicleStats>
-			<Mass>750</Mass>
-			<MoveSpeed>20</MoveSpeed>
-			<CargoCapacity>50</CargoCapacity>
-			<RepairRate>2</RepairRate>
-			<!--AccelerationRate>0.08</AccelerationRate-->
-		</vehicleStats>
 		
 		<soundSustainersOnEvent>
 			<li>
@@ -75,18 +67,6 @@
 		
 		<soundOneShotsOnEvent>
 			<li>
-				<key>PawnEntered</key>
-				<value>kotorsound_select_shipgun</value>
-			</li>
-			<li>
-				<key>PawnExited</key>
-				<value>kotorsound_select_shipgun</value>
-			</li>
-			<li>
-				<key>PawnChangedSeats</key>
-				<value>kotorsound_select_shipgun</value>
-			</li>
-			<li>
 				<key>IgnitionOn</key>
 				<value>kotorsound_speederbike_activate</value>
 			</li>
@@ -94,27 +74,26 @@
 				<key>IgnitionOff</key>
 				<value>kotorsound_speederbike_deactivate</value>
 			</li>
-			<li>
-				<key>CargoAdded</key>
-				<value>kotorsound_footlocker_open</value>
-			</li>
-			<li>
-				<key>CargoRemoved</key>
-				<value>kotorsound_footlocker_close</value>
-			</li>
 		</soundOneShotsOnEvent>
 		
 		<race>
 			<baseBodySize>1</baseBodySize>
 		</race>
 		
+		<vehicleStats>
+			<Mass>750</Mass>
+			<MoveSpeed>20</MoveSpeed>
+			<CargoCapacity>50</CargoCapacity>
+			<RepairRate>2</RepairRate>
+			<!--AccelerationRate>0.08</AccelerationRate-->
+		</vehicleStats>
 		
 		<properties>
 			<diagonalRotation>false</diagonalRotation>
-			<worldSpeedMultiplier>1.2</worldSpeedMultiplier>
+			
+			<worldSpeedMultiplier>0.3</worldSpeedMultiplier>
 			<winterSpeedMultiplier>3.25</winterSpeedMultiplier>
-			<manhunterTargetsVehicle>true</manhunterTargetsVehicle>
-			<!--offRoadMultiplier>0.8</offRoadMultiplier-->
+			<offRoadMultiplier>2</offRoadMultiplier>
 			
 			<customRoadCosts AssignDefaults = "0.4" />
 			<vehicleJobLimitations>
@@ -127,12 +106,12 @@
 				<Mountainous>1.5</Mountainous>
 			</customHillinessCosts>
 			
-			<!--customSnowCategoryTicks>
+			<customSnowCategoryTicks>
 				<Dusting>4</Dusting>
 				<Thin>8</Thin>
 				<Medium>16</Medium>
 				<Thick>24</Thick>
-			</customSnowCategoryTicks-->
+			</customSnowCategoryTicks>
 			
 			<roles>
 				<li>
@@ -159,10 +138,10 @@
 				<label>Hull</label>
 				<depth>External</depth>
 				
-				<armor>
-					<ArmorRating_Sharp>0.45</ArmorRating_Sharp>
-					<ArmorRating_Blunt>0.3</ArmorRating_Blunt> <!-- # of estimated XWMG hull points * 0.1, apply to hard armor curve -->
-					<ArmorRating_Heat>0.55</ArmorRating_Heat>
+				<armor> <!-- EaWX health/50 = hull points, round up -->
+					<ArmorRating_Sharp>1.45</ArmorRating_Sharp>
+					<ArmorRating_Blunt>1.3</ArmorRating_Blunt> <!-- # of estimated XWMG hull points * 0.1, apply to hard armor curve -->
+					<ArmorRating_Heat>1.55</ArmorRating_Heat>
 					<IncomingDamageFactor>-0.20</IncomingDamageFactor> <!-- # of estimated XWMG hull points * -0.05 -->
 				</armor>
 				<health>400</health> <!-- # of estimated XWMG hull points * 100 -->
@@ -269,7 +248,8 @@
 				<fuelType>KOTOR_Rhydonium</fuelType>
 				<leakDef>Filth_Fuel</leakDef>
 				<fuelConsumptionRate>12.5</fuelConsumptionRate>
-				<fuelCapacity>30</fuelCapacity>
+				<fuelCapacity>75</fuelCapacity>
+				<fuelConsumptionWorldMultiplier>10</fuelConsumptionWorldMultiplier>
 			</li>
 			<li Class="Vehicles.CompProperties_VehicleTurrets">
 				<turrets>
@@ -305,7 +285,7 @@
 		<turretType>Rotatable</turretType>
 		<shotSound>kotorsound_TIECrawlerGun</shotSound>
 		
-		<projectile>SWVehicleBullet_TIEdoublegreen</projectile>
+		<projectile>SWVehicleBullet_slowdoublegreen</projectile>
 		<reloadTimer>3.5</reloadTimer>
 		<warmUpTimer>0.2</warmUpTimer>
 		
@@ -316,7 +296,7 @@
 		<autoSnapTargeting>true</autoSnapTargeting>
 		<rotationSpeed>5</rotationSpeed>
 		
-		<projectileOffset>2.1</projectileOffset>
+		<!-- <projectileOffset>2.1</projectileOffset> -->
 		
 		<minRange>5</minRange>
 		<maxRange>60</maxRange>

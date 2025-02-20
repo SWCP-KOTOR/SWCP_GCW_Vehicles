@@ -959,7 +959,7 @@
 			<options>
 				<li>
 					<weight>15</weight>
-					<only>(40,40,40)</only> <!-- darker black -->
+					<only>(40,40,45)</only> <!-- blue-tint black -->
 				</li>
 			</options>
 		</colorGenerator>
@@ -1082,7 +1082,136 @@
 	
 	
 	
-	
+	<ThingDef ParentName="KotORArmorModdable_soft">
+		<defName>guy762_InquisitorTunic_default</defName>
+		<label>Inquisitor tunic</label>
+		<description>Designed for those who relish personal combat, and know that power comes to those who take it, these robes offer good protection with no hindrance to movement.</description>
+		<graphicData>
+		  <texPath>Apparel/Inquisitor/Apparel</texPath>
+		  <graphicClass>Graphic_Single</graphicClass>
+		  <shaderType>CutoutComplex</shaderType>
+		  <colorTwo>(160,35,50)</colorTwo> <!-- inquisitor red -->
+		</graphicData>
+		<statBases>
+			<Mass>3</Mass>
+			<MarketValue>2200</MarketValue>
+			<MaxHitPoints>150</MaxHitPoints>
+			<ArmorRating_Sharp>0.1</ArmorRating_Sharp>
+			<ArmorRating_Blunt>0.1</ArmorRating_Blunt>
+			<ArmorRating_Heat>0.1</ArmorRating_Heat>
+			<Insulation_Cold>15</Insulation_Cold>
+			<Insulation_Heat>15</Insulation_Heat>
+			<EquipDelay>6</EquipDelay>
+			
+			<WorkToMake>10000</WorkToMake>
+		</statBases>
+		<equippedStatOffsets>
+		  <PsychicSensitivity>0.1</PsychicSensitivity>
+		</equippedStatOffsets>
+		
+		<costList Inherit="False">
+			<Synthread>80</Synthread>
+			<!--VPE_Eltex>3</VPE_Eltex> added by patch -->
+		  </costList>
+		  <recipeMaker>
+			<researchPrerequisite>guy762_ResearchKotOR_sith</researchPrerequisite>
+			<skillRequirements>
+			  <Crafting>12</Crafting>
+			</skillRequirements>
+		  </recipeMaker>
+		
+		<apparel>
+			<layers>
+				<li>OnSkin</li>
+			</layers>
+			<bodyPartGroups>
+				<li>Torso</li>
+				<li>Neck</li>
+				<li>Shoulders</li>
+				<li>Arms</li>
+				<li>Hands</li>
+				<li>Legs</li>
+				<li>Feet</li>
+			</bodyPartGroups>
+			<tags Inherit="False">
+				<li>PentastarAlignment_InQuestor</li>
+			</tags>
+			<wornGraphicPath>Apparel/Inquisitor/Apparel</wornGraphicPath>
+			<useWornGraphicMask>true</useWornGraphicMask>
+		</apparel>
+		<!-- <tradeTags> -->
+			<!-- <li>guy762TT_SEArmor</li> -->
+		<!-- </tradeTags> -->
+		<colorGenerator Class="ColorGenerator_Options" Inherit="False">
+			<options>
+				<li>
+					<weight>10</weight>
+					<only>(90,90,95)</only> <!-- blued grey -->
+				</li>
+			</options>
+		</colorGenerator>
+		<!-- <comps> -->
+		  <!-- <li Class="ModularWeapons.CompProperties_ModularParts"> -->
+			<!-- <compClass>ModularWeapons.CompModularParts</compClass> -->
+			<!-- <partKinds> -->
+			  <!-- <li>guy762_slot_underlay_robe</li> -->
+			<!-- </partKinds> -->
+			<!-- <randomizeParts>true</randomizeParts> -->
+		  <!-- </li> -->
+		<!-- </comps> -->
+	  </ThingDef>
+
+	  
+	  
+	  <ThingDef ParentName="KotORArmorModdable_hard">
+		<defName>guy762_InquisitorArmor</defName>
+		<label>Inquisitor armor</label>
+		<description>Designed for those who relish personal combat, and know that power comes to those who take it, this armor offers good protection with no hindrance to movement.</description>
+		<graphicData>
+		  <texPath>Apparel/Inquisitor/Armor/Apparel</texPath>
+		  <graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<statBases>
+			<Mass>3</Mass>
+			<MarketValue>500</MarketValue>
+			<MaxHitPoints>225</MaxHitPoints>
+			<ArmorRating_Sharp>0.45</ArmorRating_Sharp>
+			<ArmorRating_Blunt>0.3</ArmorRating_Blunt>
+			<ArmorRating_Heat>0.55</ArmorRating_Heat>
+			<EquipDelay>5</EquipDelay>
+		</statBases>
+		<equippedStatOffsets>
+			<IncomingDamageFactor>-0.05</IncomingDamageFactor>
+		</equippedStatOffsets>
+		<apparel>
+		  <tags Inherit="False">
+			<li>PentastarAlignment_InQuestor</li>
+		  </tags>
+		  <wornGraphicPath>Apparel/Inquisitor/Armor/Apparel</wornGraphicPath>
+		  <defaultOutfitTags Inherit="False">
+			<li>Worker</li>
+		  </defaultOutfitTags>
+		  <layers Inherit="False">
+			<li>Middle</li>
+		  </layers>
+		  <bodyPartGroups Inherit="False">
+			<li>Torso</li>
+			<li>Neck</li>
+			<li>Shoulders</li>
+		  </bodyPartGroups>
+		</apparel>
+		<!-- <tradeTags> -->
+			<!-- <li>guy762TT_KotORArmor</li> -->
+		<!-- </tradeTags> -->
+		<colorGenerator Class="ColorGenerator_Options" Inherit="False">
+			<options>
+				<li>
+					<weight>15</weight>
+					<only>(45,45,50)</only>
+				</li>
+			</options>
+		</colorGenerator>
+	  </ThingDef>
 	
 	
 	

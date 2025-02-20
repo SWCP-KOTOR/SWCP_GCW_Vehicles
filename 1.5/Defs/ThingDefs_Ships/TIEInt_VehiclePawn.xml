@@ -37,7 +37,7 @@
 		<nameable>true</nameable>
 		<buildDef>guy762_SWVehicleBP_TIEInt</buildDef>
 		<size>(4,6)</size>
-		<vehicleMovementPermissions>DriverNeeded</vehicleMovementPermissions>
+		<vehicleMovementPermissions>NoDriverNeeded</vehicleMovementPermissions>
 		
 		<canCaravan>false</canCaravan>
 		<vehicleCategory>Combat</vehicleCategory>
@@ -79,7 +79,7 @@
 			
 			<vehicleJobLimitations>
 				<li>(RepairVehicle, 2)</li> <!-- how many pawns can repair this vehicle at a time -->
-			</vehicleJobLimitations>
+			</vehicleJobLimitations> <!-- guy762 RULES: repair job count should be twice the amount of pawns to fully operate the vehicle -->
 			
 			<roles>
 				<li>
@@ -87,20 +87,27 @@
 					<label>Pilot</label>
 					<slots>1</slots>
 					<slotsToOperate>1</slotsToOperate>
-					<handlingTypes>
-						<li>Movement</li>
-					</handlingTypes>
+					<!-- <handlingTypes> -->
+						<!-- <li>Movement</li> -->
+						<!-- <li>Turret</li> -->
+					<!-- </handlingTypes> -->
 					<comfort>-0.5</comfort>
+					
+					<turretIds>
+						<li>TIEIntKey_gun_1</li>
+						<li>TIEIntKey_gun_2</li>
+						<li>TIEIntKey_gun_3</li>
+						<li>TIEIntKey_gun_4</li>
+					</turretIds>
 				</li>
 			</roles>
 		</properties>
 		
 		<comps>
 			<li Class="Vehicles.CompProperties_FueledTravel">
-				<fuelType>KOTOR_Rhydonium</fuelType>				<!-- Must Include -->
-				<leakDef>Filth_Fuel</leakDef>
+				<electricPowered>true</electricPowered>
 				<fuelConsumptionRate>2</fuelConsumptionRate>
-				<fuelCapacity>15</fuelCapacity>
+				<fuelCapacity>100</fuelCapacity>
 				<fuelConsumptionWorldMultiplier>0.5</fuelConsumptionWorldMultiplier>
 			</li>
 			
@@ -134,12 +141,12 @@
 					</chaseTarget>
 				</flightCommands>
 				
-				<fuelConsumptionPerTick>0.00001</fuelConsumptionPerTick>
+				<fuelConsumptionPerTick>0.0001</fuelConsumptionPerTick>
 				
-				<flightSpeedPerTick>0.8</flightSpeedPerTick>
-				<flightSpeedTurningPerTick>0.6</flightSpeedTurningPerTick>
-				<turnAnglePerTick>2</turnAnglePerTick>
-				<turnAngleCirclingPerTick>1</turnAngleCirclingPerTick>
+				<flightSpeedPerTick>1</flightSpeedPerTick> <!-- MAXIMUM XWMG speed: speed5 = 1, speed1 = 0.2 | + 0.1 for blue 5, -0.1 for red highest -->
+				<flightSpeedTurningPerTick>0.7</flightSpeedTurningPerTick> <!-- highest speed in which all 5 standard maneuvers are available | +0.1 for a full row of blues, -0.1 for more than two reds -->
+				<turnAnglePerTick>4</turnAnglePerTick> <!-- USE SLOWEST POSSIBLE TURN: speed1 turn = 4, speed2 turn = 2, speed3 turn = 1 | banks = 0.75, 0.5, 0.25 | -1 for red slowest -->
+				<turnAngleCirclingPerTick>1</turnAngleCirclingPerTick> <!-- use fastest possible turn -->
 				
 				<distanceFromTargetToStartTurningChaseMode>20</distanceFromTargetToStartTurningChaseMode>
 				<distanceFromTargetToStartTurningCircleMode>10</distanceFromTargetToStartTurningCircleMode>
@@ -163,6 +170,18 @@
 					<color>(180,180,215)</color>
 					<colorTwo>(180,180,215)</colorTwo>
 				</flightGraphicData>
+				
+				<AISettings>
+					<gunshipSettings>
+						<npcStock>
+							<!-- <CVNAmmoBluestandard>300</CVNAmmoBluestandard> -->
+							<!-- <CVNAmmoRedstandard>300</CVNAmmoRedstandard> -->
+						</npcStock>
+						<gunshipMode>Chasing</gunshipMode>
+						<distanceFromTarget>30</distanceFromTarget>
+					</gunshipSettings>
+				</AISettings>
+				
 				<flightFlecks>
 					<li>
 						<fleck>CVN_RocketExhaust</fleck>
@@ -202,54 +221,13 @@
 					</li>
 				</landingFlecks>
 				<waypointFleck>guy762_SWStarfighter_waypoint</waypointFleck>
-				<AISettings>
-					<gunshipSettings>
-						<npcStock>
-							<CVNAmmoMissile>60~120</CVNAmmoMissile>
-						</npcStock>
-						<gunshipMode>Chasing</gunshipMode>
-						<distanceFromTarget>30</distanceFromTarget>
-					</gunshipSettings>
-				</AISettings>
 			</li>
 			
 			
 			<li Class="Vehicles.CompProperties_VehicleTurrets">
 				<turrets>
 					<li>
-						<turretDef>guy762_VehicleTurret_TIEFighter_main</turretDef>
-						
-						<renderProperties>
-							<north>(0, 2.8)</north>
-							<south>(-1, -3.5)</south>
-							<east>(3.5, -1.2)</east>
-						</renderProperties>
-						<defaultAngleRotated>0</defaultAngleRotated>
-						<angleRestricted>(315,45)</angleRestricted>
-						<gizmoLabel>blaster</gizmoLabel>
-						
-						<aimPieOffset>(0, 2.55)</aimPieOffset>
-						
-						<key>TIEFighterKey_gun_1</key>
-					</li>
-					<li>
-						<turretDef>guy762_VehicleTurret_AurekMain</turretDef>
-						
-						<renderProperties>
-							<north>(1.95, 2.8)</north>
-							<south>(-1, -3.5)</south>
-							<east>(3.5, -1.2)</east>
-						</renderProperties>
-						<defaultAngleRotated>0</defaultAngleRotated>
-						<angleRestricted>(315,45)</angleRestricted>
-						<gizmoLabel>blaster</gizmoLabel>
-						
-						<aimPieOffset>(0, 2.55)</aimPieOffset>
-						
-						<key>AurekKey_gun_1</key>
-					</li>
-					<li>
-						<turretDef>guy762_VehicleTurret_AurekMain</turretDef>
+						<turretDef>guy762_VehicleTurret_TIEInterceptor_main</turretDef>
 						
 						<renderProperties>
 							<north>(-1.95, 2.8)</north>
@@ -258,124 +236,156 @@
 						</renderProperties>
 						<defaultAngleRotated>0</defaultAngleRotated>
 						<angleRestricted>(315,45)</angleRestricted>
-						<gizmoLabel>blaster</gizmoLabel>
+						<gizmoLabel>main gun</gizmoLabel>
 						
 						<aimPieOffset>(0, 2.55)</aimPieOffset>
 						
-						<key>AurekKey_gun_2</key>
+						<key>TIEIntKey_gun_1</key>
+					</li>
+					<li>
+						<turretDef>guy762_VehicleTurret_TIEInterceptor_two</turretDef>
+						
+						<renderProperties>
+							<north>(1.95, 2.8)</north>
+							<south>(-1, -3.5)</south>
+							<east>(3.5, -1.2)</east>
+						</renderProperties>
+						<defaultAngleRotated>0</defaultAngleRotated>
+						<angleRestricted>(315,45)</angleRestricted>
+						<gizmoLabel>main gun</gizmoLabel>
+						
+						<aimPieOffset>(0, 2.55)</aimPieOffset>
+						
+						<key>TIEIntKey_gun_2</key>
+					</li>
+					<li>
+						<turretDef>guy762_VehicleTurret_TIEInterceptor_three</turretDef>
+						
+						<renderProperties>
+							<north>(-1.95, 2.8)</north>
+							<south>(-1, -3.5)</south>
+							<east>(3.5, -1.2)</east>
+						</renderProperties>
+						<defaultAngleRotated>0</defaultAngleRotated>
+						<angleRestricted>(315,45)</angleRestricted>
+						<gizmoLabel>main gun</gizmoLabel>
+						
+						<aimPieOffset>(0, 2.55)</aimPieOffset>
+						
+						<key>TIEIntKey_gun_3</key>
+					</li>
+					<li>
+						<turretDef>guy762_VehicleTurret_TIEInterceptor_four</turretDef>
+						
+						<renderProperties>
+							<north>(1.95, 2.8)</north>
+							<south>(-1, -3.5)</south>
+							<east>(3.5, -1.2)</east>
+						</renderProperties>
+						<defaultAngleRotated>0</defaultAngleRotated>
+						<angleRestricted>(315,45)</angleRestricted>
+						<gizmoLabel>main gun</gizmoLabel>
+						
+						<aimPieOffset>(0, 2.55)</aimPieOffset>
+						
+						<key>TIEIntKey_gun_4</key>
 					</li>
 				</turrets>
 			</li>
 		</comps>
 		<components>
 			<li>
-				<key>LeftHorizontalStabilizer</key>
-				<label>Left Horizontal Stabilizer</label>
-				<health>100</health>
+				<key>Hull</key>
+				<label>Hull</label>
 				<depth>External</depth>
+				
+				<armor>
+					<ArmorRating_Sharp>1.35</ArmorRating_Sharp>
+					<ArmorRating_Blunt>1.2</ArmorRating_Blunt> <!-- # of estimated XWMG hull points * 0.1, apply to hard armor curve -->
+					<ArmorRating_Heat>1.45</ArmorRating_Heat>
+					<IncomingDamageFactor>-0.15</IncomingDamageFactor> <!-- # of estimated XWMG hull points * -0.05 -->
+				</armor>
+				<health>300</health> <!-- # of estimated XWMG hull points * 100 -->
+				
 				<hitbox>
-					<cells>
-						<li>(-1, 1)</li>
-						<li>(-1, -3)</li>
-					</cells>
+					<side>Body</side>
 				</hitbox>
-				<categories>
-					<li>FlightSpeed</li>
-				</categories>
 			</li>
+			
 			<li>
-				<key>RightHorizontalStabilizer</key>
-				<label>Right Horizontal Stabilizer</label>
-				<health>100</health>
-				<depth>External</depth>
-				<hitbox>
-					<cells>
-						<li>(1, 1)</li>
-						<li>(1, -3)</li>
-					</cells>
-				</hitbox>
-				<categories>
-					<li>FlightSpeed</li>
-				</categories>
-			</li>
-			<li>
-				<key>MainEngine</key>
-				<label>Main Engine</label>
-				<health>200</health>
-				<priorityStatEfficiency>true</priorityStatEfficiency>
-				<depth>Internal</depth>
-				<reactors>
-					<li Class="Vehicles.Reactor_Explosive">
-						<indicator>VF_Explosive</indicator>
-						<chance>0.25</chance>
-						<maxHealth>0.2</maxHealth>
-						<radius>3</radius>
-						<damageDef>Flame</damageDef>
-					</li>
-				</reactors>
-				<hitbox>
-					<cells>
-						<li>(-1, 0)</li>
-						<li>(0, 0)</li>
-						<li>(1, 0)</li>
-					</cells>
-				</hitbox>
-				<categories>
-					<li>FlightSpeed</li>
-				</categories>
-			</li>
-			<li>
-				<key>FuelIntake</key>
-				<label>Fuel Intake</label>
-				<health>80</health>
-				<depth>External</depth>
-				<hitbox>
-					<cells>
-						<li>(-1, 0)</li>
-						<li>(0, 0)</li>
-						<li>(1, 0)</li>
-					</cells>
-				</hitbox>
-				<categories>
-					<li>FlightSpeed</li>
-				</categories>
-			</li>
-			<li>
-				<key>Chemtank</key>
-				<label>Chemtank</label>
+				<key>FirstThruster</key>
+				<label>Port Thruster</label>
 				<health>120</health>
 				<depth>Internal</depth>
+				
 				<reactors>
-					<li Class="Vehicles.Reactor_FuelLeak"/>
-					<li Class="Vehicles.Reactor_Explosive">
+					<li Class = "Vehicles.Reactor_Explosive">
 						<indicator>VF_Explosive</indicator>
 						<chance>0.25</chance>
 						<maxHealth>0.2</maxHealth>
-						<radius>3</radius>
+						<radius>5</radius>
 						<damageDef>Flame</damageDef>
 					</li>
 				</reactors>
+				
 				<hitbox>
-					<cells>
-						<li>(-1, 1)</li>
-						<li>(0, 1)</li>
-						<li>(1, 1)</li>
-					</cells>
+					<side>Body</side>
 				</hitbox>
+				
+				<categories>
+					<li>FlightSpeed</li>
+				</categories>
 			</li>
 			<li>
-				<key>CargoStorage</key>
-				<label>Cargo Storage</label>
-				<health>80</health>
+				<key>SecondThruster</key>
+				<label>Starboard Thruster</label>
+				<health>120</health>
 				<depth>Internal</depth>
+				
+				<reactors>
+					<li Class = "Vehicles.Reactor_Explosive">
+						<indicator>VF_Explosive</indicator>
+						<chance>0.25</chance>
+						<maxHealth>0.2</maxHealth>
+						<radius>5</radius>
+						<damageDef>Flame</damageDef>
+					</li>
+				</reactors>
+				
 				<hitbox>
-					<cells>
-						<li>(0, -1)</li>
-						<li>(1, -1)</li>
-						<li>(0, -2)</li>
-						<li>(1, -2)</li>
-					</cells>
+					<side>Body</side>
 				</hitbox>
+				
+				<categories>
+					<li>FlightSpeed</li>
+					<li>FlightControl</li>
+				</categories>
+			</li>
+			<li>
+				<key>Reactor</key>
+				<label>Reactor</label>
+				<health>200</health>
+				<depth>Internal</depth>
+				
+				<reactors>
+					<li Class = "Vehicles.Reactor_Explosive">
+						<indicator>VF_Explosive</indicator>
+						<chance>0.25</chance>
+						<maxHealth>0.2</maxHealth>
+						<radius>18</radius>
+						<damageDef>Bomb</damageDef>
+					</li>
+				</reactors>
+			</li>
+			<li>
+				<key>Cockpit</key>
+				<label>Cockpit</label>
+				<health>160</health>
+				<depth>Internal</depth>
+				
+				<categories>
+					<li>FlightControl</li>
+				</categories>
 			</li>
 		</components>
 		
@@ -403,17 +413,17 @@
 	
 	
 	
-	<!--Vehicles.VehicleTurretDef ParentName="VehicleTurretBase">
-		<defName>guy762_VehicleTurret_AurekMain</defName>
-		<label>Aurek main gun</label>
-		<description>The main gun of an Aurek-class Starfighter.</description>
+	<Vehicles.VehicleTurretDef Name="guy762_VehicleTurret_TIEInterceptor_main" ParentName="VehicleTurretBase">
+		<defName>guy762_VehicleTurret_TIEInterceptor_main</defName>
+		<label>TIE/in main gun</label>
+		<description>The main gun of a TIE Interceptor.</description>
 		
 		<turretType>Rotatable</turretType>
-		<shotSound>kotorsound_xwinggun</shotSound>
+		<shotSound>kotorsound_TIEgun_short</shotSound>
 		
-		<projectile>KotORSFBullet_aurek</projectile>
+		<projectile>KotORSFBullet_TIE</projectile>
 		<reloadTimer>3.5</reloadTimer>
-		<warmUpTimer>0.2</warmUpTimer>
+		<warmUpTimer>0</warmUpTimer>
 		
 		<magazineCapacity>999</magazineCapacity>
 		
@@ -422,7 +432,7 @@
 		<autoSnapTargeting>true</autoSnapTargeting>
 		<rotationSpeed>5</rotationSpeed>
 		
-		<projectileOffset>2.1</projectileOffset>
+		<projectileOffset>2.1</projectileOffset> <!-- keep this on starfighters-->
 		
 		<minRange>5</minRange>
 		<maxRange>90</maxRange>
@@ -431,7 +441,7 @@
 			<li>
 				<shotsPerBurst>1</shotsPerBurst>
 				<ticksBetweenShots>10</ticksBetweenShots>
-				<ticksBetweenBursts>20</ticksBetweenBursts>
+				<ticksBetweenBursts>60</ticksBetweenBursts>
 				<label>Single</label>
 				<texPath>UI/Sniper_Shot</texPath>
 			</li>
@@ -444,7 +454,29 @@
 		
 		<gizmoIconTexPath>Items/cannon_blank</gizmoIconTexPath>
 		
-	</Vehicles.VehicleTurretDef-->
+	</Vehicles.VehicleTurretDef>
+	
+	
+	<Vehicles.VehicleTurretDef ParentName="guy762_VehicleTurret_TIEInterceptor_main">
+		<defName>guy762_VehicleTurret_TIEInterceptor_two</defName>
+
+		<warmUpTimer>0.1</warmUpTimer>
+
+	</Vehicles.VehicleTurretDef>
+	
+	<Vehicles.VehicleTurretDef ParentName="guy762_VehicleTurret_TIEInterceptor_main">
+		<defName>guy762_VehicleTurret_TIEInterceptor_three</defName>
+
+		<warmUpTimer>0.2</warmUpTimer>
+
+	</Vehicles.VehicleTurretDef>
+	
+	<Vehicles.VehicleTurretDef ParentName="guy762_VehicleTurret_TIEInterceptor_main">
+		<defName>guy762_VehicleTurret_TIEInterceptor_four</defName>
+
+		<warmUpTimer>0.3</warmUpTimer>
+
+	</Vehicles.VehicleTurretDef>
 	
 	
 	

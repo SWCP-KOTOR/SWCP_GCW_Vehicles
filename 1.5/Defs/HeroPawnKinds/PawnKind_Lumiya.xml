@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	
+	<PawnKindDef Name="SWWarlordsHeroBase_Lumiya"  ParentName="guy762_HeroPawnKindBase" Abstract="True">
+		<defName>SWWarlordsHeroBase_Lumiya</defName>
+		<nameMaker>guy762_HeroNamer_Lumiya</nameMaker>
+		<combatPower>500</combatPower>
+		<minGenerationAge>25</minGenerationAge>
+		<maxGenerationAge>26</maxGenerationAge>
+		<fixedGender>Female</fixedGender>
+		<forcedHair>Victoria</forcedHair>
+		<forcedHairColor>(144,90,51)</forcedHairColor>
+		<skinColorOverride>(255,239,189)</skinColorOverride>
+		<xenotypeSet>
+			<xenotypeChances>
+				<Baseliner>999</Baseliner>
+			</xenotypeChances>
+		</xenotypeSet>
+		<useFactionXenotypes>false</useFactionXenotypes>
+		<itemQuality>Legendary</itemQuality>
+		<apparelMoney>29999</apparelMoney>
+		<apparelTags>
+		  <li>KotORHeroAccessories_visas</li>
+		</apparelTags>
+		<apparelRequired>
+		   <li>guy762_LumiyaHeaddress</li>
+		   <li>guy762_LumiyaArmor</li>
+		</apparelRequired>
+		<weaponMoney>99999999</weaponMoney>
+		<weaponTags>
+		  <li>SWRanged_LumiyaLightwhip</li>
+		</weaponTags>
+		<techHediffsMoney>9999999</techHediffsMoney>
+		<techHediffsChance>100</techHediffsChance>
+		<techHediffsTags>
+			<li>Spacer</li>
+			<li>Advanced</li>
+			<li>AdvancedWeapon</li>
+		</techHediffsTags>
+		<techHediffsRequired>
+		  <li>guy762_ImplantDock_II</li>
+		  <li>BionicArm</li>
+		  <li>BionicLeg</li>
+		  <li>BionicLeg</li>
+		  <li>BionicSpine</li>
+		  <li>BionicHeart</li>
+		  <li>BionicStomach</li>
+		</techHediffsRequired>
+		<disallowedTraits><li>BodyPurist</li></disallowedTraits>
+		
+		<inventoryOptions>
+		  <skipChance>0</skipChance>
+		  <subOptionsChooseOne>
+			<li>
+			  <thingDef>guy762_ImplantItemImp_sith</thingDef>
+			  <countRange>1</countRange>
+			</li>
+			<li>
+			  <thingDef>guy762_ImplantItemImp_alacrity</thingDef>
+			  <countRange>1</countRange>
+			</li>
+			<li>
+			  <thingDef>guy762_ImplantItemImp_power</thingDef>
+			  <countRange>1</countRange>
+			</li>
+		  </subOptionsChooseOne>
+		</inventoryOptions>
+		
+		<skills>
+			<li>
+				<skill>Shooting</skill>
+				<range>10~14</range>
+			</li>
+			<li>
+				<skill>Melee</skill>
+				<range>10~14</range>
+			</li>
+			<li>
+				<skill>Crafting</skill>
+				<range>8~12</range>
+			</li>
+			<li>
+				<skill>Social</skill>
+				<range>8~12</range>
+			</li>
+			<li>
+				<skill>Intellectual</skill>
+				<range>16~18</range>
+			</li>
+		</skills>
+		<forcedTraits>
+			<PsychicSensitivity>1</PsychicSensitivity>
+			<Psychopath>0</Psychopath>
+			<Transhumanist>0</Transhumanist>
+			<Tough>0</Tough>
+		</forcedTraits>
+		<backstoryFiltersOverride>
+		  <li>
+			<categories>
+			  <li>guy762BSC_lumiya</li>
+			</categories>
+		  </li>
+		</backstoryFiltersOverride>
+		<modExtensions>
+		 <li Class="AddGeneForPK.PKAdditionalGenes"> <!-- NOTE: this mod extension cannot be split between two different PKDefs, all genes have to go in the same block!!! -->
+          <geneSets>
+			<li>
+              <isXenogene>true</isXenogene>
+              <chance>1</chance>
+              <geneDefs>
+                <li MayRequire="guy762.Lee.KotORPotF">SWPotF_Gene_DSCorruptionII</li>
+              </geneDefs>
+            </li>
+			<li>
+              <isXenogene>false</isXenogene>
+              <chance>1</chance>
+              <geneDefs>
+                <li>Skin_Melanin4</li>
+                <li>Hair_ReddishBrown</li>
+              </geneDefs>
+            </li>
+          </geneSets>
+		</li>
+		<li Class="BodyTypeForPawnKind.ModExtension_HeadTypesOfPawnKind">
+          <whitelist>
+            <li>Female_AveragePointy</li>
+          </whitelist>
+          <blacklist>
+            <!--leave blank to disable-->
+          </blacklist>
+          <priority>
+            <li>Female_AveragePointy</li>
+          </priority>
+          <checkGender>False</checkGender>
+        </li>
+      </modExtensions>
+	  </PawnKindDef>
+	  
+	  <RulePackDef>
+        <defName>guy762_HeroNamer_Lumiya</defName>
+        <rulePack>
+            <rulesStrings>
+                <li>r_name->[shira] '[lumiya]' [brie]</li>
+				<li>lumiya->Lumiya</li>
+				<li>shira->Shira</li>
+				<li>brie->Brie</li>
+            </rulesStrings>
+        </rulePack>
+    </RulePackDef>
+	
+	<!--[PAWN_nameDef] [PAWN_possessive] [PAWN_pronoun]-->
+	
+	
+	<BackstoryDef>
+		<defName>guy762_BackstoryC_Lumiya</defName>
+		<title>Academy Prodigy</title>
+		<titleShort>Prodigy</titleShort>
+		<description>An attendee of the Imperial Military Academy on Carida from an early age, [PAWN_nameDef] was recognized to have amazing potential not only as a pilot and an intelligence operative, but as a Force user as well. [PAWN_possessive] career was watched closely by Darth Vader, who fast-tracked [PAWN_possessive] to the rank of Major in Imperial Intelligence. For [PAWN_possessive] first assignmet, [PAWN_nameDef] was tasked with infiltrating the nascent Rebel Alliance as part of a complex scheme to discredit and ostracize the rebel hero Luke Skywalker. Unbeknownst to [PAWN_possessive], however, the culmination of this plot involved being accidentally shot down by Skywalker in a space battle, and when the fateful moment came it was executed to perfection. Much of [PAWN_nameDef]'s body was destroyed when Luke's laser bolts ripped through [PAWN_possessive] TIE Fighter, and when Lord Vader came to recover [PAWN_possessive] near-lifeless body, he knew [PAWN_possessive] training as a Sith was ready to begin.</description>
+		<slot>Childhood</slot>
+		<skillGains>
+			<Shooting>10</Shooting>
+			<Melee>10</Melee>
+			<Intellectual>10</Intellectual>
+		</skillGains>
+		<forcedTraits>
+		  <PsychicSensitivity>1</PsychicSensitivity>
+		  <Tough>0</Tough>
+		</forcedTraits>
+		<requiredWorkTags>
+		  <li>Violent</li>
+		</requiredWorkTags>
+		<bodyTypeMale>Thin</bodyTypeMale>
+		<bodyTypeFemale>Female</bodyTypeFemale>
+		<nameMaker>guy762_HeroNamer_Lumiya</nameMaker>
+		<spawnCategories>
+			<li>guy762BSC_lumiya</li>
+		</spawnCategories>
+		<!--shuffleable>False</shuffleable-->
+	</BackstoryDef>
+	
+	<BackstoryDef>
+		<defName>guy762_BackstoryA_Lumiya</defName>
+		<title>Dark Lady of the Sith</title>
+		<titleShort>Dark Lady</titleShort>
+		<description>After [PAWN_possessive] destroyed body was rebuilt with cybernetics, [PAWN_nameDef] began [PAWN_possessive] extensive Sith training under Darth Vader. Officially, [PAWN_nameDef] held the title of Emperor's Hand, and often found [PAWN_possessive]self competing against Mara Jade, Grand Admiral Declann, and other 'secret apprentices' for [PAWN_possessive] master's favor. [PAWN_pronoun] was primarily tasked with the recovery of Sith artifacts and exploration of the ancient Sith civilizations on Korriban, Thule, and Ziost, and thus learned much of the Sith and their history. When [PAWN_possessive] master Lord Vader and the Emperor were slain at the Battle of Endor, [PAWN_pronoun] suddenly found [PAWN_possessive]self the only remaining contender to the now vacant Sith throne (those delusional scholars Jerec and Kadann notwithstanding). [PAWN_nameDef] declared [PAWN_possessive]self the Dark Lady of the Sith, and embarked on a quest of revenge against Luke Skywalker for destroying [PAWN_possessive] master and half of [PAWN_possessive] own body, forming an alliance with the extra-galactic Nagai marauders and securing the loyalty of the leaderless Imperial Royal Guard along the way.</description>
+		<slot>Adulthood</slot>
+		<skillGains>
+			<Melee>5</Melee>
+			<Social>5</Social>
+		</skillGains>
+		<forcedTraits>
+		  <Psychopath>0</Psychopath>
+		  <Transhumanist>0</Transhumanist>
+		</forcedTraits>
+		<requiredWorkTags>
+		  <li>Violent</li>
+		</requiredWorkTags>
+		<workDisables>ManualDumb, Cooking, Mining, PlantWork</workDisables>
+		<bodyTypeMale>Thin</bodyTypeMale>
+		<bodyTypeFemale>Female</bodyTypeFemale>
+		<nameMaker>guy762_HeroNamer_Lumiya</nameMaker>
+		<spawnCategories>
+			<li>guy762BSC_lumiya</li>
+		</spawnCategories>
+		<!--shuffleable>False</shuffleable-->
+	</BackstoryDef>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<PawnKindDef MayRequire="lee.theforce.psycast" Name="SWWEPlayableVillain_Lumiya_VPE"  ParentName="SWWarlordsHeroBase_Lumiya">
+		<defName>SWWEPlayableVillain_Lumiya_VPE</defName>
+		<modExtensions>
+         <li Class="VanillaPsycastsExpanded.PawnKindAbilityExtension_Psycasts">
+            <implantDef>VPE_PsycastAbilityImplant</implantDef>
+            <initialLevel>5</initialLevel>
+            <statUpgradePoints>2~3</statUpgradePoints>
+            <unlockedPaths>
+				<Force_Neutral>1~3|4~6</Force_Neutral>
+				<Force_Telekinesis>1~3|3~4</Force_Telekinesis>
+				<Force_LightsaberCombat>1~3|3~4</Force_LightsaberCombat>
+				
+				<Force_Darkside>1~3|4~6</Force_Darkside>
+            </unlockedPaths>
+         </li>
+      </modExtensions>
+	</PawnKindDef>
+
+
+
+</Defs>

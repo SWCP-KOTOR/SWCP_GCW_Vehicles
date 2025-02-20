@@ -28,7 +28,7 @@
 		  <Mass>5</Mass>
 		  <DeteriorationRate>0.025</DeteriorationRate>
 		  
-		  <RangedWeapon_Cooldown>3</RangedWeapon_Cooldown>
+		  <RangedWeapon_Cooldown>2</RangedWeapon_Cooldown>
 		  <WorkToMake>6000</WorkToMake>
 		</statBases>
 		<equippedStatOffsets>
@@ -52,12 +52,12 @@
 		</costList>
 		
 		<weaponTags Inherit="False">
-			<li>KotORLightsaber</li>
+			<li>SWRanged_LumiyaLightwhip</li>
 		</weaponTags>
-		<tradeTags Inherit="False">
-			<li>guy762TT_KotORLegendary</li>
-			<li>guy762TT_KotORLightsaber</li>
-		</tradeTags>
+		<!-- <tradeTags Inherit="False"> -->
+			<!-- <li>guy762TT_KotORLegendary</li> -->
+			<!-- <li>guy762TT_KotORLightsaber</li> -->
+		<!-- </tradeTags> -->
 		<relicChance>3</relicChance>
 		<verbs>
 			<li>
@@ -68,7 +68,7 @@
 				<range>7</range>
 				<ticksBetweenBurstShots>12</ticksBetweenBurstShots>
 				<burstShotCount>1</burstShotCount>
-				<defaultCooldownTime>3</defaultCooldownTime>
+				<defaultCooldownTime>2</defaultCooldownTime>
 				<soundCast>kotorsound_lightwhip_swing</soundCast>
 				<soundCastTail>GunTail_Medium</soundCastTail>
 				<muzzleFlashScale>9</muzzleFlashScale>

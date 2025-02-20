@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+
+	
+	<!--troopers-->
+
+
+	  
+	  
+	  
+	  <PawnKindDef Name="SWScum_pilot" ParentName="KotORMercBase">
+		<defName>SWScum_pilot</defName>
+		<label>fringe pilot</label>
+		<combatPower>65</combatPower>
+		<minGenerationAge>16</minGenerationAge>
+		<maxGenerationAge>65</maxGenerationAge>
+		<itemQuality>Poor</itemQuality>
+
+		<apparelMoney>1500~5500</apparelMoney>
+		<apparelAllowHeadgearChance>1</apparelAllowHeadgearChance>
+		<apparelTags>
+			<li>ScumAndVillainy_pilot</li>
+		</apparelTags>
+		<apparelRequired>
+			<li>guy762_RebelPilot_suitbox</li>
+			<li>guy762_FlightVest</li>
+			<li>guy762_Bodysuit_Dyeable</li>
+		</apparelRequired>
+		<specificApparelRequirements>
+			<li>
+				<apparelLayer>Middle</apparelLayer>
+				<color>(250,250,250)</color>       <!-- white -->
+			</li>
+			<li>
+				<apparelLayer>OnSkin</apparelLayer>
+				<color>(150,140,95)</color>        <!-- khaki -->
+			</li>
+		</specificApparelRequirements>
+
+		<biocodeWeaponChance>0.5</biocodeWeaponChance>
+		<weaponMoney>550</weaponMoney>
+		<weaponTags>
+			<li>SWRanged_DH17pistol</li>
+		</weaponTags>
+
+		<skills>
+			<li>
+				<skill>Shooting</skill>
+				<range>4~6</range>
+			</li>
+			<li>
+				<skill>Construction</skill>
+				<range>4~8</range>
+			</li>
+			<li>
+				<skill>Intellectual</skill>
+				<range>6~10</range>
+			</li>
+		</skills>
+
+		<disallowedTraits>
+			<li>Brawler</li>
+		</disallowedTraits>
+		<initialWillRange>0.5~2</initialWillRange>
+		<initialResistanceRange>5~10</initialResistanceRange>
+	</PawnKindDef>
+	
+	
+
+</Defs>

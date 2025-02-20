@@ -431,7 +431,7 @@
 	  
 	  <ThingDef ParentName="guy762_clothingbase">
 		<defName>guy762_ImpUniform_topbrass</defName>
-		<label>uniform, grand moff's</label>
+		<label>uniform, top brass</label>
 		<description>These are simple garments that protect little more than the modesty of the wearer.</description>
 		<graphicData>
 		  <texPath>Apparel/Officer/grandmoff/Apparel</texPath>
@@ -478,6 +478,9 @@
 		
 		<randomStyleChance>0.5</randomStyleChance>
 		<randomStyle>
+		  <li>
+			<styleDef>guy762_RankStyle_grandmoff</styleDef>
+		  </li>
 		  <li>
 			<styleDef>guy762_RankStyle_grandadmiral</styleDef>
 		  </li>
@@ -538,6 +541,17 @@
 		  </li>
 		</thingDefStyles>
 	  </StyleCategoryDef-->
+	  
+	  <ThingStyleDef>
+		<defName>guy762_RankStyle_grandmoff</defName>
+		<overrideLabel>uniform, grand moff's</overrideLabel>
+		<wornGraphicPath>Apparel/Officer/grandmoff/Apparel</wornGraphicPath>
+		<graphicData>
+		  <texPath>Apparel/Officer/grandmoff/Apparel</texPath>
+		  <graphicClass>Graphic_Single</graphicClass>
+		  <shaderType>CutoutComplex</shaderType>
+		</graphicData>
+	  </ThingStyleDef>
 	  
 	  <ThingStyleDef>
 		<defName>guy762_RankStyle_grandadmiral</defName>

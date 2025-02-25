@@ -402,7 +402,7 @@
 		
 		<apparel>
 		  <tags Inherit="False">
-			<li>SE_apparel_ensign</li>
+			<li>RemnantEmpire_navytrooper</li>
 		  </tags>
 		  <wornGraphicPath>Apparel/Officer/bigbelt/Apparel</wornGraphicPath>
 		  <useWornGraphicMask>true</useWornGraphicMask>

@@ -27,7 +27,7 @@
 	</Vehicles.PatternDef>
 	
 	
-	<Vehicles.VehicleDef ParentName="MM-VF-Vehicle_Pawn">
+	<Vehicles.VehicleDef Name="guy762_SWVehicle_StarViper" ParentName="MM-VF-Vehicle_Pawn">
 		<defName>guy762_SWVehicle_StarViper</defName>
 		<label>StarViper-class attack platform</label>
 		<description>. \n\n&lt;color=#bb8f04&gt;Crew:&lt;/color&gt; Pilot x1</description>
@@ -211,6 +211,18 @@
 					<colorTwo>(50,50,50)</colorTwo>
 					<colorThree>(200,200,200)</colorThree>
 				</flightGraphicData>
+				
+				<AISettings>
+					<gunshipSettings>
+						<npcStock>
+							<!-- <CVNAmmoBluestandard>300</CVNAmmoBluestandard> -->
+							<!-- <CVNAmmoRedstandard>300</CVNAmmoRedstandard> -->
+						</npcStock>
+						<gunshipMode>Chasing</gunshipMode>
+						<distanceFromTarget>30</distanceFromTarget>
+					</gunshipSettings>
+				</AISettings>
+				
 				<flightFlecks>
 					<li>
 						<fleck>CVN_RocketExhaust</fleck>
@@ -250,15 +262,6 @@
 					</li>
 				</landingFlecks>
 				<waypointFleck>guy762_SWStarfighter_waypoint</waypointFleck>
-				<AISettings>
-					<gunshipSettings>
-						<npcStock>
-							<CVNAmmoMissile>60~120</CVNAmmoMissile>
-						</npcStock>
-						<gunshipMode>Chasing</gunshipMode>
-						<distanceFromTarget>30</distanceFromTarget>
-					</gunshipSettings>
-				</AISettings>
 			</li>
 			
 			
@@ -596,7 +599,7 @@
 		
 		<projectile>KotORSFBullet_protorp</projectile>
 		<reloadTimer>3.5</reloadTimer>
-		<warmUpTimer>1</warmUpTimer>
+		<warmUpTimer>0.4</warmUpTimer>
 		
 		<magazineCapacity>1</magazineCapacity>
 		<genericAmmo>true</genericAmmo>
@@ -634,6 +637,53 @@
 			</thingDefs>
 		</ammunition>
 	</Vehicles.VehicleTurretDef>
+	
+	
+	
+	
+	
+	
+	
+	
+	<Vehicles.VehicleDef Name="guy762_SWVehicle_StarViperBlackSun_bot" ParentName="guy762_SWVehicle_StarViper">
+		<defName>guy762_SWVehicle_StarViperBlackSun_bot</defName>
+		
+		<graphicData>
+			<texPath>Starfighters/StarViper/StarViper_Open</texPath>
+			<pattern>guy762_SWVehiclePattern_StarViperB_open</pattern>
+			<color>(50,50,50)</color>
+			<colorTwo>(225,225,225)</colorTwo>
+			<colorThree>(200,200,200)</colorThree>
+		</graphicData>
+		
+		<buildDef Inherit="False" />
+		
+		<vehicleMovementPermissions>NoDriverNeeded</vehicleMovementPermissions>
+		
+		<properties>
+			<roles Inherit="False">
+				<li>
+					<key>pilot</key>
+					<label>Pilot</label>
+					<slots>1</slots>
+					<slotsToOperate>1</slotsToOperate>
+					<!-- <handlingTypes> -->
+						<!-- <li>Movement</li> -->
+						<!-- <li>Turret</li> -->
+					<!-- </handlingTypes> -->
+					<comfort>1.25</comfort>
+					
+					<turretIds>
+						<li>StarViperKey_gun_1</li>
+						<li>StarViperKey_gun_2</li>
+						<li>StarViperKey_gun_3</li>
+						<li>StarViperKey_gun_4</li>
+					</turretIds>
+				</li>
+			</roles>
+		</properties>
+
+	</Vehicles.VehicleDef>
 	
 	
 	

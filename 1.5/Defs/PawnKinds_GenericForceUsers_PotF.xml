@@ -2,8 +2,8 @@
 <Defs>
 
 	
-	<PawnKindDef MayRequire="guy762.Lee.KotORPotF" Name="SWWarlords_PAInQuestor_PotF" ParentName="SWWarlords_BASEPAInQuestor">
-		  <defName>SWWarlords_PAInQuestor_PotF</defName>
+	<PawnKindDef MayRequire="guy762.Lee.KotORPotF" Name="SWPentastar_InQuestor_PotF" ParentName="SWPentastar_BASEInQuestor">
+		  <defName>SWPentastar_InQuestor_PotF</defName>
 		  <modExtensions>
 			  <li Class="AddGeneForPK.PKAdditionalGenes">
 				  <geneSets>

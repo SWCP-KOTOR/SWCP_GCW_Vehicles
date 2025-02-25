@@ -9,7 +9,7 @@
 	</Vehicles.PatternDef>
 	
 	
-	<Vehicles.VehicleDef ParentName="MM-VF-Vehicle_Pawn">
+	<Vehicles.VehicleDef Name="guy762_SWVehicle_TIEDefender" ParentName="MM-VF-Vehicle_Pawn">
 		<defName>guy762_SWVehicle_TIEDefender</defName>
 		<label>TIE/d Defender</label>
 		<description>. \n\n&lt;color=#bb8f04&gt;Crew:&lt;/color&gt; Pilot x1</description>
@@ -410,7 +410,36 @@
 	
 	
 	
-	
+	<Vehicles.VehicleDef Name="guy762_SWVehicle_TIEDefender_bot" ParentName="guy762_SWVehicle_TIEDefender">
+		<defName>guy762_SWVehicle_TIEDefender_bot</defName>
+		
+		<buildDef Inherit="False" />
+		
+		<vehicleMovementPermissions>NoDriverNeeded</vehicleMovementPermissions>
+		
+		<properties>
+			<roles Inherit="False">
+				<li>
+					<key>pilot</key>
+					<label>Pilot</label>
+					<slots>1</slots>
+					<slotsToOperate>1</slotsToOperate>
+					<!-- <handlingTypes> -->
+						<!-- <li>Movement</li> -->
+						<!-- <li>Turret</li> -->
+					<!-- </handlingTypes> -->
+					<comfort>-0.5</comfort>
+					
+					<turretIds>
+						<li>TIEDefKey_gun_1</li>
+						<li>TIEDefKey_gun_2</li>
+						<li>TIEDefKey_gun_3</li>
+					</turretIds>
+				</li>
+			</roles>
+		</properties>
+
+	</Vehicles.VehicleDef>
 	
 	
 	

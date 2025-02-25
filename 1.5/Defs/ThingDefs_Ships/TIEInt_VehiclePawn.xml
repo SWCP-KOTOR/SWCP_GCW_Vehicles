@@ -15,7 +15,7 @@
 	</Vehicles.SkinDef>
 	
 	
-	<Vehicles.VehicleDef ParentName="MM-VF-Vehicle_Pawn">
+	<Vehicles.VehicleDef Name="guy762_SWVehicle_TIEInterceptor" ParentName="MM-VF-Vehicle_Pawn">
 		<defName>guy762_SWVehicle_TIEInterceptor</defName>
 		<label>TIE/in Interceptor</label>
 		<description>. \n\n&lt;color=#bb8f04&gt;Crew:&lt;/color&gt; Pilot x1</description>
@@ -37,7 +37,7 @@
 		<nameable>true</nameable>
 		<buildDef>guy762_SWVehicleBP_TIEInt</buildDef>
 		<size>(4,6)</size>
-		<vehicleMovementPermissions>NoDriverNeeded</vehicleMovementPermissions>
+		<vehicleMovementPermissions>DriverNeeded</vehicleMovementPermissions>
 		
 		<canCaravan>false</canCaravan>
 		<vehicleCategory>Combat</vehicleCategory>
@@ -87,10 +87,10 @@
 					<label>Pilot</label>
 					<slots>1</slots>
 					<slotsToOperate>1</slotsToOperate>
-					<!-- <handlingTypes> -->
-						<!-- <li>Movement</li> -->
-						<!-- <li>Turret</li> -->
-					<!-- </handlingTypes> -->
+					<handlingTypes>
+						<li>Movement</li>
+						<li>Turret</li>
+					</handlingTypes>
 					<comfort>-0.5</comfort>
 					
 					<turretIds>
@@ -478,6 +478,58 @@
 
 	</Vehicles.VehicleTurretDef>
 	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<Vehicles.VehicleDef Name="guy762_SWVehicle_TIEInterceptor_bot" ParentName="guy762_SWVehicle_TIEInterceptor">
+		<defName>guy762_SWVehicle_TIEInterceptor_bot</defName>
+
+		<buildDef Inherit="False" />
+		
+		<vehicleMovementPermissions>NoDriverNeeded</vehicleMovementPermissions>
+		
+		<properties>
+			<roles Inherit="False">
+				<li>
+					<key>pilot</key>
+					<label>Pilot</label>
+					<slots>1</slots>
+					<slotsToOperate>1</slotsToOperate>
+					<!-- <handlingTypes> -->
+						<!-- <li>Movement</li> -->
+						<!-- <li>Turret</li> -->
+					<!-- </handlingTypes> -->
+					<comfort>-0.5</comfort>
+					
+					<turretIds>
+						<li>TIEIntKey_gun_1</li>
+						<li>TIEIntKey_gun_2</li>
+						<li>TIEIntKey_gun_3</li>
+						<li>TIEIntKey_gun_4</li>
+					</turretIds>
+				</li>
+			</roles>
+		</properties>
+
+	</Vehicles.VehicleDef>
 	
 	
 </Defs>

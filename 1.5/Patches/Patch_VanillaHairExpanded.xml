@@ -9,15 +9,51 @@
 	<match Class="PatchOperationSequence">
 	  <operations>
 		<li Class="PatchOperationReplace">
-		  <xpath>Defs/PawnKindDef[@Name="KotORHeroBase_Bastila"]/forcedHair</xpath>
+		  <xpath>Defs/PawnKindDef[@Name="SWWarlordsHeroBase_Lumiya"]/forcedHair</xpath>
 			<value>
-			  <forcedHair>VHE_Raider</forcedHair>
+			  <forcedHair>VHE_Beautiful</forcedHair>
 			</value>
 		</li>
 		<li Class="PatchOperationReplace">
-		  <xpath>Defs/PawnKindDef[@Name="KotORHeroBase_Handmaiden"]/forcedHair</xpath>
+		  <xpath>Defs/PawnKindDef[@Name="SWWarlordsHeroBase_KyleKatarn"]/forcedHair</xpath>
 			<value>
-			  <forcedHair>VHE_Blinder</forcedHair>
+			  <forcedHair>VHE_Dean</forcedHair>
+			</value>
+		</li>
+		<li Class="PatchOperationReplace">
+		  <xpath>Defs/PawnKindDef[@Name="SWWarlordsHeroBase_LanuPasiq"]/forcedHair</xpath>
+			<value>
+			  <forcedHair>VHE_Beth</forcedHair>
+			</value>
+		</li>
+		<!-- <li Class="PatchOperationReplace"> -->
+		  <!-- <xpath>Defs/PawnKindDef[@Name="SWWEPlayableVillain_Zsinj"]/forcedHair</xpath> -->
+			<!-- <value> -->
+			  <!-- <forcedHair>VHE_Smith</forcedHair> -->
+			<!-- </value> -->
+		<!-- </li> -->
+		<li Class="PatchOperationReplace">
+		  <xpath>Defs/PawnKindDef[@Name="SWWEPlayableVillain_Thrawn"]/forcedHair</xpath>
+			<value>
+			  <forcedHair>VHE_Dean</forcedHair>
+			</value>
+		</li>
+		<li Class="PatchOperationReplace">
+		  <xpath>Defs/PawnKindDef[@Name="SWWEPlayableVillain_ArdusKaine"]/forcedHair</xpath>
+			<value>
+			  <forcedHair>VHE_Maniac</forcedHair>
+			</value>
+		</li>
+		<li Class="PatchOperationReplace">
+		  <xpath>Defs/PawnKindDef[@Name="SWWEPlayableVillain_OctavianGrant"]/forcedHair</xpath>
+			<value>
+			  <forcedHair>VHE_Smith</forcedHair>
+			</value>
+		</li>
+		<li Class="PatchOperationReplace">
+		  <xpath>Defs/PawnKindDef[@Name="SWWEPlayableVillain_SoontirFel"]/forcedHair</xpath>
+			<value>
+			  <forcedHair>VHE_Gangster</forcedHair>
 			</value>
 		</li>
 	  </operations>

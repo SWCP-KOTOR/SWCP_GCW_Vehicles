@@ -13,6 +13,7 @@
 			<graphicClass>Vehicles.Graphic_Vehicle</graphicClass>
 			<shaderType>CutoutComplexPattern</shaderType>
 			<drawSize>(10,10)</drawSize>
+			<drawOffset>(0,0,2)</drawOffset>
 			<!-- <drawOffsetEast>(0,2,0)</drawOffsetEast> -->
 			<!-- <drawOffsetNorth>(0,2,0)</drawOffsetNorth> -->
 			<!-- <drawOffsetSouth>(0,2,0)</drawOffsetSouth> -->
@@ -287,10 +288,10 @@
 						<turretDef>guy762_VehicleTurret_ATST_main</turretDef>
 						
 						<renderProperties>
-							<north>(0, 3.5)</north>
-							<south>(0, -1.25)</south>
-							<east>(2, 1.3)</east>
-							<west>(-2, 1.3)</west>
+							<north>(0, 5.5)</north>
+							<south>(0, 0.25)</south>
+							<east>(2, 3.3)</east>
+							<west>(-2, 3.3)</west>
 						</renderProperties>
 						<defaultAngleRotated>0</defaultAngleRotated>
 						<angleRestricted>(315,45)</angleRestricted>
@@ -304,10 +305,10 @@
 						<turretDef>guy762_VehicleTurret_ATST_repeater</turretDef>
 						
 						<renderProperties>
-							<north>(-1.625, 2.675)</north>
-							<south>(1.625, 0)</south>
-							<east>(1.05, 2.75)</east>
-							<west>(-1.05, 1)</west>
+							<north>(-1.625, 4.675)</north>
+							<south>(1.625, 2)</south>
+							<east>(1.05, 4.75)</east>
+							<west>(-1.05, 3)</west>
 						</renderProperties>
 						<defaultAngleRotated>0</defaultAngleRotated>
 						<angleRestricted>(315,45)</angleRestricted>
@@ -321,10 +322,10 @@
 						<turretDef>guy762_VehicleTurret_ATST_conc</turretDef>
 						
 						<renderProperties>
-							<north>(1.625, 2.675)</north>
-							<south>(-1.625, 0)</south>
-							<east>(1.05, 1)</east>
-							<west>(-1.05, 2.75)</west>
+							<north>(1.625, 4.675)</north>
+							<south>(-1.625, 2)</south>
+							<east>(1.05, 3)</east>
+							<west>(-1.05, 4.75)</west>
 						</renderProperties>
 						<defaultAngleRotated>0</defaultAngleRotated>
 						<angleRestricted>(315,45)</angleRestricted>

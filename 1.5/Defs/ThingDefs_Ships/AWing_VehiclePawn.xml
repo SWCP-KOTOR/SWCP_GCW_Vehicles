@@ -15,7 +15,7 @@
 	</Vehicles.PatternDef>
 	
 	
-	<Vehicles.VehicleDef ParentName="MM-VF-Vehicle_Pawn">
+	<Vehicles.VehicleDef Name="guy762_SWVehicle_AWing" ParentName="MM-VF-Vehicle_Pawn">
 		<defName>guy762_SWVehicle_AWing</defName>
 		<label>RZ-1 A-Wing Interceptor</label>
 		<description>. \n\n&lt;color=#bb8f04&gt;Crew:&lt;/color&gt; Pilot x1</description>
@@ -100,6 +100,8 @@
 					<turretIds>
 						<li>AWingKey_gun_1</li>
 						<li>AWingKey_gun_2</li>
+						<li>AWingKey_gun_3</li>
+						<li>AWingKey_gun_4</li>
 					</turretIds>
 				</li>
 			</roles>
@@ -195,6 +197,18 @@
 					<color>(140,60,60)</color>
 					<colorTwo>(177,177,177)</colorTwo> <!-- alliance grey -->
 				</flightGraphicData>
+				
+				<AISettings>
+					<gunshipSettings>
+						<npcStock>
+							<!-- <CVNAmmoBluestandard>300</CVNAmmoBluestandard> -->
+							<!-- <CVNAmmoRedstandard>300</CVNAmmoRedstandard> -->
+						</npcStock>
+						<gunshipMode>Chasing</gunshipMode>
+						<distanceFromTarget>30</distanceFromTarget>
+					</gunshipSettings>
+				</AISettings>
+				
 				<flightFlecks>
 					<li>
 						<fleck>CVN_RocketExhaust</fleck>
@@ -234,15 +248,6 @@
 					</li>
 				</landingFlecks>
 				<waypointFleck>guy762_SWStarfighter_waypoint</waypointFleck>
-				<AISettings>
-					<gunshipSettings>
-						<npcStock>
-							<CVNAmmoMissile>60~120</CVNAmmoMissile>
-						</npcStock>
-						<gunshipMode>Chasing</gunshipMode>
-						<distanceFromTarget>30</distanceFromTarget>
-					</gunshipSettings>
-				</AISettings>
 			</li>
 			
 			
@@ -279,6 +284,41 @@
 						<aimPieOffset>(0, 2.55)</aimPieOffset>
 						
 						<key>AWingKey_gun_2</key>
+					</li>
+					
+					<!--/////////////////////////-->
+					
+					<li>
+						<turretDef>guy762_VehicleTurret_IonMissile</turretDef>
+						
+						<renderProperties>
+							<north>(-1.5, 1)</north>
+							<south>(-1, -3.5)</south>
+							<east>(3.5, -1.2)</east>
+						</renderProperties>
+						<defaultAngleRotated>0</defaultAngleRotated>
+						<angleRestricted>(315,45)</angleRestricted>
+						<gizmoLabel>ion missile launcher</gizmoLabel>
+						
+						<aimPieOffset>(0, 2.55)</aimPieOffset>
+						
+						<key>AWingKey_gun_3</key>
+					</li>
+					<li>
+						<turretDef>guy762_VehicleTurret_IonMissile</turretDef>
+						
+						<renderProperties>
+							<north>(1.5, 1)</north>
+							<south>(-1, -3.5)</south>
+							<east>(3.5, -1.2)</east>
+						</renderProperties>
+						<defaultAngleRotated>0</defaultAngleRotated>
+						<angleRestricted>(315,45)</angleRestricted>
+						<gizmoLabel>ion missile launcher</gizmoLabel>
+						
+						<aimPieOffset>(0, 2.55)</aimPieOffset>
+						
+						<key>AWingKey_gun_4</key>
 					</li>
 				</turrets>
 			</li>
@@ -452,6 +492,82 @@
 			</thingDefs>
 		</ammunition-->
 	</Vehicles.VehicleTurretDef>
+	
+	
+	
+	
+	
+	<Vehicles.VehicleDef Name="guy762_SWVehicle_AWingRebel_bot" ParentName="guy762_SWVehicle_AWing">
+		<defName>guy762_SWVehicle_AWingRebel_bot</defName>
+		
+		<buildDef Inherit="False" />
+		
+		<vehicleMovementPermissions>NoDriverNeeded</vehicleMovementPermissions>
+		
+		<properties>
+			<roles Inherit="False">
+				<li>
+					<key>pilot</key>
+					<label>Pilot</label>
+					<slots>1</slots>
+					<slotsToOperate>1</slotsToOperate>
+					<!-- <handlingTypes> -->
+						<!-- <li>Movement</li> -->
+						<!-- <li>Turret</li> -->
+					<!-- </handlingTypes> -->
+					<comfort>-0.5</comfort>
+					
+					<turretIds>
+						<li>AWingKey_gun_1</li>
+						<li>AWingKey_gun_2</li>
+						<li>AWingKey_gun_3</li>
+						<li>AWingKey_gun_4</li>
+					</turretIds>
+				</li>
+			</roles>
+		</properties>
+
+	</Vehicles.VehicleDef>
+	
+	
+	<Vehicles.VehicleDef Name="guy762_SWVehicle_AWingNR_bot" ParentName="guy762_SWVehicle_AWing">
+		<defName>guy762_SWVehicle_AWingNR_bot</defName>
+		
+		<graphicData>
+			<pattern>guy762_SWVehiclePattern_AWingB</pattern>
+			<color>(100,120,140)</color> <!-- new republic blue -->
+			<colorTwo>(225,225,225)</colorTwo> <!-- less white -->
+			<colorThree>(225,225,225)</colorThree> <!-- less white -->
+		</graphicData>
+		
+		<buildDef Inherit="False" />
+		
+		<vehicleMovementPermissions>NoDriverNeeded</vehicleMovementPermissions>
+		
+		<properties>
+			<roles Inherit="False">
+				<li>
+					<key>pilot</key>
+					<label>Pilot</label>
+					<slots>1</slots>
+					<slotsToOperate>1</slotsToOperate>
+					<!-- <handlingTypes> -->
+						<!-- <li>Movement</li> -->
+						<!-- <li>Turret</li> -->
+					<!-- </handlingTypes> -->
+					<comfort>-0.5</comfort>
+					
+					<turretIds>
+						<li>AWingKey_gun_1</li>
+						<li>AWingKey_gun_2</li>
+						<li>AWingKey_gun_3</li>
+						<li>AWingKey_gun_4</li>
+					</turretIds>
+				</li>
+			</roles>
+		</properties>
+
+	</Vehicles.VehicleDef>
 	
 	
 	

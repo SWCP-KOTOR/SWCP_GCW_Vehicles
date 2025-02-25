@@ -58,7 +58,7 @@
 	
 	<ThingDef ParentName="KotORArmorModdable_hard">
 		<defName>guy762_RebelHelmet_light</defName>
-		<label>light combat helmet</label>
+		<label>light flight helmet</label>
 		<techLevel>Spacer</techLevel>
 		<description>.</description>
 		<graphicData>
@@ -734,6 +734,9 @@
 		<randomStyleChance>0.5</randomStyleChance>
 		<randomStyle>
 			  <li>
+				<styleDef>guy762_RebelPilotHelmetStyle_wedge</styleDef>
+			  </li>
+			  <li>
 				<styleDef>guy762_RebelPilotHelmetStyle_luke</styleDef>
 			  </li>
 		</randomStyle>
@@ -768,6 +771,17 @@
 			</options>
 		</colorGenerator>
 	</ThingDef>
+	
+	<ThingStyleDef>
+		<defName>guy762_RebelPilotHelmetStyle_wedge</defName>
+		<overrideLabel>K-22995 flight helmet (Wedge's)</overrideLabel>
+		<wornGraphicPath>Apparel/RebelPilot/helmet_wedge/helmet</wornGraphicPath>
+		<graphicData>
+		  <texPath>Apparel/RebelPilot/helmet_wedge/helmet</texPath>
+		  <graphicClass>Graphic_Single</graphicClass>
+		  <shaderType>CutoutComplex</shaderType>
+		</graphicData>
+	</ThingStyleDef>
 	
 	<ThingStyleDef>
 		<defName>guy762_RebelPilotHelmetStyle_luke</defName>

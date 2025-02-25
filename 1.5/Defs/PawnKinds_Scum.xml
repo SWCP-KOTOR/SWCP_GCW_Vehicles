@@ -33,7 +33,19 @@
 			</li>
 			<li>
 				<apparelLayer>OnSkin</apparelLayer>
-				<color>(150,140,95)</color>        <!-- khaki -->
+				<colorGenerator Class="ColorGenerator_Options">
+				  <options>
+					<li>
+					  <only>(255,250,245)</only> <!--white flight suit-->
+					</li>
+					<li>
+						<only>(240,210,70)</only> <!-- yellow flight suit -->
+					</li>
+					<li>
+						<only>(150,140,95)</only>        <!-- khaki -->
+					</li>
+				  </options>
+				</colorGenerator>
 			</li>
 		</specificApparelRequirements>
 

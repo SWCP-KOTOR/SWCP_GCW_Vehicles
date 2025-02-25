@@ -89,7 +89,7 @@
 	  
 	<ThingDef ParentName="KotORArmorModdable_hard">
 		<defName>guy762_ArmyTrooperArmor</defName>
-		<label>army trooper armor</label>
+		<label>battle armor</label>
 		<techLevel>Spacer</techLevel>
 		<description>.</description>
 		<graphicData>
@@ -177,7 +177,7 @@
   
   <ThingDef ParentName="BaseGrenadeProjectile">
 		<defName>guy762_ThrownGrenade_stormtrooper</defName>
-		<label>concussion grenade</label>
+		<label>stun grenade</label>
 		<thingClass>Projectile_Explosive</thingClass>
 		<graphicData>
 		  <texPath>Weapons/Projectiles/Grenades/grenade_stormtrooper</texPath>
@@ -211,7 +211,7 @@
 			<MaxHitPoints>225</MaxHitPoints>
 			<ArmorRating_Sharp>0.35</ArmorRating_Sharp>
 			<ArmorRating_Blunt>0.2</ArmorRating_Blunt>
-			<ArmorRating_Heat>0.65</ArmorRating_Heat>
+			<ArmorRating_Heat>0.85</ArmorRating_Heat>
 			<EquipDelay>10</EquipDelay>
 		</statBases>
 		<equippedStatOffsets>
@@ -253,7 +253,7 @@
 		
 		<verbs>
             <li>
-                <label>throw concussion grenade</label>
+                <label>throw stun grenade</label>
                 <verbClass>Verb_LaunchProjectileStatic</verbClass>
                 <hasStandardCommand>true</hasStandardCommand>
                 <range>15</range>
@@ -319,7 +319,7 @@
 			<MaxHitPoints>115</MaxHitPoints>
       		<ArmorRating_Sharp>0.35</ArmorRating_Sharp>
 			<ArmorRating_Blunt>0.2</ArmorRating_Blunt>
-			<ArmorRating_Heat>0.65</ArmorRating_Heat>
+			<ArmorRating_Heat>0.85</ArmorRating_Heat>
 			<EquipDelay>2</EquipDelay>
 		</statBases>
 		<equippedStatOffsets>
@@ -532,7 +532,7 @@
   
   
   <ThingDef ParentName="KotORArmorModdable_hard">
-		<defName>guy762_StormieArmor_raptor</defName>
+		<defName>guy762_RaptorArmor</defName>
 		<label>Raptor Armor</label>
 		<techLevel>Spacer</techLevel>
 		<description>.</description>
@@ -548,7 +548,7 @@
 			<MaxHitPoints>350</MaxHitPoints>
 			<ArmorRating_Sharp>0.35</ArmorRating_Sharp>
 			<ArmorRating_Blunt>0.2</ArmorRating_Blunt>
-			<ArmorRating_Heat>0.65</ArmorRating_Heat>
+			<ArmorRating_Heat>0.85</ArmorRating_Heat>
 			<EquipDelay>10</EquipDelay>
 		</statBases>
 		<equippedStatOffsets>
@@ -591,7 +591,7 @@
 		
 		<verbs>
             <li>
-                <label>throw concussion grenade</label>
+                <label>throw stun grenade</label>
                 <verbClass>Verb_LaunchProjectileStatic</verbClass>
                 <hasStandardCommand>true</hasStandardCommand>
                 <range>15</range>
@@ -636,7 +636,7 @@
 	</ThingDef>	
 	
 	<ThingDef ParentName="KotORArmorModdable_hard">
-		<defName>guy762_StormieHelmet_raptor</defName>
+		<defName>guy762_RaptorHelmet</defName>
 		<label>Raptor Helmet</label>
 		<techLevel>Spacer</techLevel>
 		<description>.</description>
@@ -655,7 +655,7 @@
 			<MaxHitPoints>175</MaxHitPoints>
       		<ArmorRating_Sharp>0.35</ArmorRating_Sharp>
 			<ArmorRating_Blunt>0.2</ArmorRating_Blunt>
-			<ArmorRating_Heat>0.65</ArmorRating_Heat>
+			<ArmorRating_Heat>0.85</ArmorRating_Heat>
 			<EquipDelay>2</EquipDelay>
 		</statBases>
 		<equippedStatOffsets>
@@ -689,7 +689,82 @@
 			<options>
 				<li>
 					<weight>10</weight>
-					<only>(215,50,90)</only> <!-- raptor's red -->
+					<only>(200,50,70)</only> <!-- raptor's red -->
+				</li>
+			</options>
+		</colorGenerator>
+		<!--comps>
+		  <li Class="ModularWeapons.CompProperties_ModularParts">
+			<compClass>ModularWeapons.CompModularParts</compClass>
+			<partKinds>
+			  <li>guy762_slot_overlay</li>
+			  <li>guy762_slot_underlay_hat</li>
+			</partKinds>
+			<randomizeParts>true</randomizeParts>
+		  </li>
+		</comps-->
+	</ThingDef>
+	
+	
+	
+	
+	
+	
+	<ThingDef ParentName="KotORArmorModdable_hard">
+		<defName>guy762_RaptorHelmet_pilot</defName>
+		<label>Raptor Pilot Helmet</label>
+		<techLevel>Spacer</techLevel>
+		<description>.</description>
+		<graphicData>
+			<texPath>Apparel/TIEPilot/raptorpilot</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<shaderType>CutoutComplex</shaderType>
+			<colorTwo>(225,220,75)</colorTwo> <!-- banana yellow -->
+		</graphicData>
+		<thingCategories>
+		  <li>ArmorHeadgear</li>
+		</thingCategories>
+		<statBases>
+			<Mass>4</Mass>
+			<MarketValue>500</MarketValue>
+			<MaxHitPoints>175</MaxHitPoints>
+      		<ArmorRating_Sharp>0.35</ArmorRating_Sharp>
+			<ArmorRating_Blunt>0.2</ArmorRating_Blunt>
+			<ArmorRating_Heat>0.45</ArmorRating_Heat>
+			<EquipDelay>2</EquipDelay>
+		</statBases>
+		<equippedStatOffsets>
+			<ToxicEnvironmentResistance>1</ToxicEnvironmentResistance>
+			<HypoxiaResistance MayRequire="kentington.saveourship2">1</HypoxiaResistance>
+			<DecompressionResistance MayRequire="kentington.saveourship2">0.25</DecompressionResistance>
+			
+			<PainShockThreshold>0.1</PainShockThreshold>
+			<SuppressionPower MayRequire="Ludeon.RimWorld.Ideology">0.1</SuppressionPower>
+		</equippedStatOffsets>
+		
+		<apparel Inherit="False">
+			<tags>
+				<li>ZsinjEmpire_raptorpilot</li>
+			</tags>
+			<wornGraphicPath>Apparel/TIEPilot/raptorpilot</wornGraphicPath>
+			<useWornGraphicMask>true</useWornGraphicMask>
+			<layers>
+				<li>Overhead</li>
+				<li>EyeCover</li>
+			</layers>
+			<bodyPartGroups>
+				<li>FullHead</li>
+			</bodyPartGroups>
+			<useDeflectMetalEffect>false</useDeflectMetalEffect>
+		</apparel>
+		<tradeTags>
+			<li>guy762TT_WarlordArmor</li>
+		</tradeTags>
+		<colorGenerator Class="ColorGenerator_Options" Inherit="False">
+			<options>
+				<li>
+					<weight>10</weight>
+					<only>(200,50,70)</only> <!-- raptor's red -->
 				</li>
 			</options>
 		</colorGenerator>
@@ -736,7 +811,7 @@
 			<MaxHitPoints>115</MaxHitPoints>
       		<ArmorRating_Sharp>0.35</ArmorRating_Sharp>
 			<ArmorRating_Blunt>0.2</ArmorRating_Blunt>
-			<ArmorRating_Heat>0.65</ArmorRating_Heat>
+			<ArmorRating_Heat>0.85</ArmorRating_Heat>
 			<EquipDelay>2</EquipDelay>
 		</statBases>
 		<equippedStatOffsets>
@@ -784,6 +859,233 @@
 		  </li>
 		</comps-->
 	</ThingDef>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<ThingDef ParentName="KotORArmorModdable_hard">
+		<defName>guy762_NavyTrooperHelmet</defName>
+		<label>navy combat helmet</label>
+		<techLevel>Spacer</techLevel>
+		<description>.</description>
+		<graphicData>
+			<texPath>Apparel/ImperialNavyTrooper/helmet</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<shaderType>CutoutComplex</shaderType>
+		</graphicData>
+		<thingCategories>
+		  <li>ArmorHeadgear</li>
+		</thingCategories>
+		<statBases>
+			<Mass>2.5</Mass>
+			<MarketValue>100</MarketValue>
+			<MaxHitPoints>115</MaxHitPoints>
+      		<ArmorRating_Sharp>0.35</ArmorRating_Sharp>
+			<ArmorRating_Blunt>0.2</ArmorRating_Blunt>
+			<ArmorRating_Heat>0.45</ArmorRating_Heat>
+			<EquipDelay>4</EquipDelay>
+		</statBases>
+		
+		<apparel Inherit="False">
+			<tags>
+				<li>RemnantEmpire_navytrooper</li>
+			</tags>
+			<wornGraphicPath>Apparel/ImperialNavyTrooper/helmet</wornGraphicPath>
+			<useWornGraphicMask>true</useWornGraphicMask>
+			<layers>
+				<li>Overhead</li>
+			</layers>
+			<bodyPartGroups>
+				<li>UpperHead</li>
+			</bodyPartGroups>
+			<useDeflectMetalEffect>true</useDeflectMetalEffect>
+		</apparel>
+		<tradeTags>
+			<li>guy762TT_ORArmor</li>
+		</tradeTags>
+		<colorGenerator Class="ColorGenerator_Options" Inherit="False">
+			<options>
+				<li>
+					<weight>10</weight>
+					<only>(40,40,40)</only>  <!-- deeper black -->
+				</li>
+			</options>
+		</colorGenerator>
+	</ThingDef>
+	
+	<ThingDef ParentName="KotORArmorModdable_hard">
+		<defName>guy762_ImpLightCombatArmor</defName>
+		<label>light combat armor</label>
+		<description>.</description>
+		<graphicData>
+		  <texPath>Apparel/ImperialNavyTrooper/Apparel</texPath>
+		  <graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<statBases>
+			<Mass>3</Mass>
+			<MarketValue>250</MarketValue>
+			<MaxHitPoints>225</MaxHitPoints>
+			<ArmorRating_Sharp>0.35</ArmorRating_Sharp>
+			<ArmorRating_Blunt>0.2</ArmorRating_Blunt>
+			<ArmorRating_Heat>0.45</ArmorRating_Heat>
+			<EquipDelay>15</EquipDelay>
+		</statBases>
+		<equippedStatOffsets>
+			<IncomingDamageFactor>-0.05</IncomingDamageFactor>
+		</equippedStatOffsets>
+		<apparel>
+		  <tags Inherit="False">
+			<li>RemnantEmpire_navytrooper</li>
+		  </tags>
+		  <wornGraphicPath>Apparel/ImperialNavyTrooper/Apparel</wornGraphicPath>
+		  <layers Inherit="False">
+			<li>Middle</li>
+		  </layers>
+		  <bodyPartGroups Inherit="False">
+			<li>Torso</li>
+		  </bodyPartGroups>
+		</apparel>
+		<tradeTags>
+			<li>guy762TT_KotORArmor</li>
+		</tradeTags>
+		<colorGenerator Class="ColorGenerator_Options" Inherit="False">
+			<options>
+				<li>
+					<weight>15</weight>
+					<only>(250,250,250)</only>
+				</li>
+			</options>
+		</colorGenerator>
+	  </ThingDef>
+	  
+	  
+	  
+	  
+	  
+	  
+	  <ThingDef ParentName="KotORArmorModdable_hard">
+		<defName>guy762_ImpMidCombatArmor</defName>
+		<label>combat armor</label>
+		<description>.</description>
+		<graphicData>
+		  <texPath>Apparel/ImperialTankTrooper/Apparel</texPath>
+		  <graphicClass>Graphic_Single</graphicClass>
+		  <!-- <shaderType>CutoutComplex</shaderType> -->
+		  <!-- <colorTwo>(75,75,75)</colorTwo> dark grey  -->
+		</graphicData>
+		<statBases>
+			<Mass>6</Mass>
+			<MarketValue>600</MarketValue>
+			<MaxHitPoints>225</MaxHitPoints>
+			<ArmorRating_Sharp>0.55</ArmorRating_Sharp>
+			<ArmorRating_Blunt>0.4</ArmorRating_Blunt>
+			<ArmorRating_Heat>0.65</ArmorRating_Heat>
+			<EquipDelay>15</EquipDelay>
+		</statBases>
+		<equippedStatOffsets>
+			<MoveSpeed>-0.1</MoveSpeed>
+			<MeleeDodgeChance>-0.1</MeleeDodgeChance>
+			<IncomingDamageFactor>-0.05</IncomingDamageFactor>
+		</equippedStatOffsets>
+		<apparel>
+		  <tags Inherit="False">
+			<li>RemnantEmpire_armycommando</li>
+		  </tags>
+		  <wornGraphicPath>Apparel/ImperialTankTrooper/Apparel</wornGraphicPath>
+		  <!-- <useWornGraphicMask>true</useWornGraphicMask> -->
+		  <layers Inherit="False">
+			<li>Middle</li>
+		  </layers>
+		  <bodyPartGroups Inherit="False">
+			<li>Shoulders</li>
+			<li>Neck</li>
+			<li>Arms</li>
+			<li>Hands</li>
+			<li>Legs</li>
+			<li>Feet</li>
+		  </bodyPartGroups>
+		</apparel>
+		<tradeTags>
+			<li>guy762TT_KotORArmor</li>
+		</tradeTags>
+		<colorGenerator Class="ColorGenerator_Options" Inherit="False">
+			<options>
+				<li>
+					<weight>15</weight>
+					<only>(250,250,250)</only>
+				</li>
+			</options>
+		</colorGenerator>
+		
+		<verbs>
+            <li>
+                <label>throw stun grenade</label>
+                <verbClass>Verb_LaunchProjectileStatic</verbClass>
+                <hasStandardCommand>true</hasStandardCommand>
+                <range>15</range>
+                <forcedMissRadius>1.9</forcedMissRadius>
+                <warmupTime>1.75</warmupTime>
+                <noiseRadius>4</noiseRadius>
+                <burstShotCount>1</burstShotCount>
+                <soundCast>kotorsound_grenadethrow</soundCast>
+                <onlyManualCast>true</onlyManualCast>
+                <rangedFireRulepack>Combat_RangedFire_Thrown</rangedFireRulepack>
+                <defaultProjectile>guy762_ThrownGrenade_stormtrooper</defaultProjectile>
+                <ai_AvoidFriendlyFireRadius>6.9</ai_AvoidFriendlyFireRadius>
+				<ai_IsBuildingDestroyer>false</ai_IsBuildingDestroyer>
+				<ai_IsWeapon>true</ai_IsWeapon>
+                <targetParams>
+                    <canTargetLocations>true</canTargetLocations>
+                </targetParams>
+            </li>
+        </verbs>
+        <comps>
+            <li Class="CompProperties_ApparelReloadable">
+                <maxCharges>1</maxCharges>
+                <destroyOnEmpty>false</destroyOnEmpty>
+                <hotKey>Misc4</hotKey>
+                <chargeNoun>grenades</chargeNoun>
+                <displayGizmoWhileUndrafted>false</displayGizmoWhileUndrafted>
+				<ammoDef>ComponentIndustrial</ammoDef>
+				<ammoCountToRefill>2</ammoCountToRefill>
+				<baseReloadTicks>60</baseReloadTicks>
+            </li>
+        </comps>
+	  </ThingDef>
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 	
 	
 	<ThingDef ParentName="KotORArmorModdable_hard">

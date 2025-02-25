@@ -15,7 +15,7 @@
 	</Vehicles.PatternDef>
 	
 	
-	<Vehicles.VehicleDef ParentName="MM-VF-Vehicle_Pawn">
+	<Vehicles.VehicleDef Name="guy762_SWVehicle_Scyk" ParentName="MM-VF-Vehicle_Pawn">
 		<defName>guy762_SWVehicle_Scyk</defName>
 		<label>M3-A Scyk Interceptor</label>
 		<description>. \n\n&lt;color=#bb8f04&gt;Crew:&lt;/color&gt; Pilot x1</description>
@@ -196,6 +196,18 @@
 					<colorTwo>(115,120,95)</colorTwo> <!-- hutt green -->
 					<colorThree>(115,120,95)</colorThree> <!-- hutt green -->
 				</flightGraphicData>
+				
+				<AISettings>
+					<gunshipSettings>
+						<npcStock>
+							<!-- <CVNAmmoBluestandard>300</CVNAmmoBluestandard> -->
+							<!-- <CVNAmmoRedstandard>300</CVNAmmoRedstandard> -->
+						</npcStock>
+						<gunshipMode>Chasing</gunshipMode>
+						<distanceFromTarget>30</distanceFromTarget>
+					</gunshipSettings>
+				</AISettings>
+				
 				<flightFlecks>
 					<li>
 						<fleck>CVN_RocketExhaust</fleck>
@@ -235,15 +247,6 @@
 					</li>
 				</landingFlecks>
 				<waypointFleck>guy762_SWStarfighter_waypoint</waypointFleck>
-				<AISettings>
-					<gunshipSettings>
-						<npcStock>
-							<CVNAmmoMissile>60~120</CVNAmmoMissile>
-						</npcStock>
-						<gunshipMode>Chasing</gunshipMode>
-						<distanceFromTarget>30</distanceFromTarget>
-					</gunshipSettings>
-				</AISettings>
 			</li>
 			
 			
@@ -446,6 +449,85 @@
 		<gizmoIconTexPath>Items/cannon_blank</gizmoIconTexPath>
 		
 	</Vehicles.VehicleTurretDef>
+	
+	
+	
+	
+	
+	
+	
+	
+	<Vehicles.VehicleDef Name="guy762_SWVehicle_Scyk_bot" ParentName="guy762_SWVehicle_Scyk">
+		<defName>guy762_SWVehicle_Scyk_bot</defName>
+		
+		<buildDef Inherit="False" />
+		
+		<vehicleMovementPermissions>NoDriverNeeded</vehicleMovementPermissions>
+		
+		<properties>
+			<roles Inherit="False">
+				<li>
+					<key>pilot</key>
+					<label>Pilot</label>
+					<slots>1</slots>
+					<slotsToOperate>1</slotsToOperate>
+					<!-- <handlingTypes> -->
+						<!-- <li>Movement</li> -->
+						<!-- <li>Turret</li> -->
+					<!-- </handlingTypes> -->
+					<comfort>-0.25</comfort>
+					
+					<turretIds>
+						<li>M3AScykKey_gun_1</li>
+						<li>M3AScykKey_gun_2</li>
+					</turretIds>
+				</li>
+			</roles>
+		</properties>
+
+	</Vehicles.VehicleDef>
+	
+	
+	
+	
+	
+	
+	<Vehicles.VehicleDef Name="guy762_SWVehicle_ScykBlackSun_bot" ParentName="guy762_SWVehicle_Scyk">
+		<defName>guy762_SWVehicle_ScykBlackSun_bot</defName>
+		
+		<graphicData>
+			<pattern>guy762_SWVehiclePattern_ScykB</pattern>
+			<color>(230,185,45)</color> <!-- republic yellow -->
+			<colorTwo>(230,185,45)</colorTwo> <!-- republic yellow -->
+			<colorThree>(75,75,75)</colorThree> <!-- soft black -->
+		</graphicData>
+		
+		<buildDef Inherit="False" />
+		
+		<vehicleMovementPermissions>NoDriverNeeded</vehicleMovementPermissions>
+		
+		<properties>
+			<roles Inherit="False">
+				<li>
+					<key>pilot</key>
+					<label>Pilot</label>
+					<slots>1</slots>
+					<slotsToOperate>1</slotsToOperate>
+					<!-- <handlingTypes> -->
+						<!-- <li>Movement</li> -->
+						<!-- <li>Turret</li> -->
+					<!-- </handlingTypes> -->
+					<comfort>-0.25</comfort>
+					
+					<turretIds>
+						<li>M3AScykKey_gun_1</li>
+						<li>M3AScykKey_gun_2</li>
+					</turretIds>
+				</li>
+			</roles>
+		</properties>
+
+	</Vehicles.VehicleDef>
 	
 	
 	

@@ -1,11 +1,84 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Defs>
 
+	<PawnKindDef Name="SWImpRemnant_Base" Abstract="True">
+		<defaultFactionType>guy762_SWWarlordsFaction_ImpRemnant</defaultFactionType>
+		<race>Human</race>
+
+		<backstoryCryptosleepCommonality>0.08</backstoryCryptosleepCommonality>
+		<!-- <backstoryFiltersOverride> -->
+			<!-- <li> -->
+				<!-- <categories> -->
+					<!-- <li>Pirate</li> -->
+					<!-- <li>Offworld</li> -->
+					<!-- <li>Outlander</li> -->
+					<!-- <li>ImperialFighter</li> -->
+					<!-- <li>Madman</li> -->
+				<!-- </categories> -->
+			<!-- </li> -->
+		<!-- </backstoryFiltersOverride> -->
+
+		<chemicalAddictionChance>0.1</chemicalAddictionChance>
+		<!--combatEnhancingDrugsChance>0.15</combatEnhancingDrugsChance>
+		<combatEnhancingDrugsCount>0~2</combatEnhancingDrugsCount-->
+		<invNutrition>1</invNutrition>
+		<invFoodDef>MealNutrientPaste</invFoodDef>
+
+		<apparelAllowHeadgearChance>0.5</apparelAllowHeadgearChance>
+		<apparelMoney>4000~5000</apparelMoney>
+
+		<techHediffsTags>
+			<li>Spacer</li>
+			<li>Advanced</li>
+			<li>AdvancedWeapon</li>
+		</techHediffsTags>
+		
+		<apparelIgnoreSeasons>true</apparelIgnoreSeasons>
+
+
+		<disallowedTraits>
+			<li>BodyPurist</li>
+		</disallowedTraits>
+
+		<isFighter>true</isFighter>
+		<requiredWorkTags>
+			<li>Violent</li>
+			<li>Hauling</li>
+		</requiredWorkTags>
+	</PawnKindDef>
+
+	<PawnKindDef Name="SWImpRemnant_TrooperBase" ParentName="SWImpRemnant_Base" Abstract="True">
+		<modExtensions>
+			<li Class="BodyTypeForPawnKind.ModExtension_BodyTypesOfPawnKind">
+				<whitelist>
+				</whitelist>
+				<blacklist>
+					<li>Fat</li>
+					<li>Baby</li>
+					<li>Child</li>
+				</blacklist>
+				<priority>
+					<!--When violates the black/whitelist, selected from these-->
+				</priority>
+				<!--Align body gender to pawn's gender (default: True)-->
+				<checkGender>True</checkGender>
+			</li>
+		</modExtensions>
+
+		<disallowedTraits>
+			<li>Wimp</li>
+		</disallowedTraits>
+	</PawnKindDef>
+	
+	
+	
+	
+	
 	
 	<!--troopers-->
 
 
-	<PawnKindDef Name="SWImpRemnant_NavyGuard" ParentName="KotORSith_TrooperBase">
+	<PawnKindDef Name="SWImpRemnant_NavyGuard" ParentName="SWImpRemnant_Base">
 		<defName>SWImpRemnant_NavyGuard</defName>
 		<label>navy guard</label>
 		<combatPower>40</combatPower>
@@ -60,7 +133,7 @@
 	</PawnKindDef>
 	
 	
-	<PawnKindDef Name="SWImpRemnant_NavyTrooper" ParentName="KotORSith_TrooperBase">
+	<PawnKindDef Name="SWImpRemnant_NavyTrooper" ParentName="SWImpRemnant_TrooperBase">
 		<defName>SWImpRemnant_NavyTrooper</defName>
 		<label>navy trooper</label>
 		<combatPower>50</combatPower>
@@ -130,7 +203,7 @@
 	
 	
 	
-	<PawnKindDef Name="SWImpRemnant_TIEpilot" ParentName="KotORSith_TrooperBase">
+	<PawnKindDef Name="SWImpRemnant_TIEpilot" ParentName="SWImpRemnant_TrooperBase">
 		<defName>SWImpRemnant_TIEpilot</defName>
 		<label>TIE pilot</label>
 		<combatPower>65</combatPower>
@@ -208,13 +281,15 @@
 	
 	
 	
-	<PawnKindDef Name="SWImpRemnant_TIEace" ParentName="KotORSith_TrooperBase">
+	<PawnKindDef Name="SWImpRemnant_TIEace" ParentName="SWImpRemnant_TrooperBase">
 		<defName>SWImpRemnant_TIEace</defName>
 		<label>TIE pilot ace</label>
 		<combatPower>65</combatPower>
 		<minGenerationAge>16</minGenerationAge>
 		<maxGenerationAge>50</maxGenerationAge>
 		<itemQuality>Excellent</itemQuality>
+		
+		<maxPerGroup>1</maxPerGroup>
 		
 		<xenotypeSet Inherit="False">
 		  <xenotypeChances>
@@ -294,7 +369,7 @@
 	
 	
 	
-	<PawnKindDef Name="SWImpRemnant_ArmyConscript" ParentName="KotORSith_TrooperBase">
+	<PawnKindDef Name="SWImpRemnant_ArmyConscript" ParentName="SWImpRemnant_Base">
 		<defName>SWImpRemnant_ArmyConscript</defName>
 		<label>imperial army conscript</label>
 		<combatPower>40</combatPower>
@@ -332,7 +407,7 @@
 	
 	
 	
-	<PawnKindDef Name="SWImpRemnant_ArmyTrooper" ParentName="KotORSith_TrooperBase">
+	<PawnKindDef Name="SWImpRemnant_ArmyTrooper" ParentName="SWImpRemnant_TrooperBase">
 		<defName>SWImpRemnant_ArmyTrooper</defName>
 		<label>imperial army trooper</label>
 		<combatPower>65</combatPower>
@@ -402,7 +477,7 @@
 	
 	
 	
-	<PawnKindDef Name="SWImpRemnant_TankDriver" ParentName="KotORSith_TrooperBase">
+	<PawnKindDef Name="SWImpRemnant_TankDriver" ParentName="SWImpRemnant_Base">
 		<defName>SWImpRemnant_TankDriver</defName>
 		<label>light armor pilot</label>
 		<combatPower>40</combatPower>
@@ -463,6 +538,80 @@
 	
 	
 	
+	
+	
+	
+	
+	
+	
+	
+	
+	<PawnKindDef Name="SWImpRemnant_NavyOfficer" ParentName="SWImpRemnant_Base">
+		<defName>SWImpRemnant_NavyOfficer</defName>
+		<label>navy lieutenant</label>
+		<combatPower>40</combatPower>
+		<minGenerationAge>23</minGenerationAge>
+		<maxGenerationAge>70</maxGenerationAge>
+		<itemQuality>Normal</itemQuality>
+		
+		<xenotypeSet Inherit="False">
+		  <xenotypeChances>
+			<Baseliner MayRequire="Ludeon.RimWorld.Biotech">999</Baseliner>
+		  </xenotypeChances>
+		</xenotypeSet>
+		<useFactionXenotypes>false</useFactionXenotypes>
+
+		<apparelMoney>1500~5500</apparelMoney>
+		<apparelAllowHeadgearChance>1</apparelAllowHeadgearChance>
+		<apparelTags>
+			<li>KotOREquipment_basic</li>
+		</apparelTags>
+		<apparelRequired>
+			<li>guy762_UniformCap_imperial</li>
+			<li>guy762_ImpUniform_lowrank</li>
+		</apparelRequired>
+		<specificApparelRequirements>
+			<li>
+				<apparelLayer>OnSkin</apparelLayer>
+				<apparelDef>guy762_ImpUniform_lowrank</apparelDef>
+				<styleDef>guy762_RankStyle_navylt</styleDef>
+				<color>(125,125,110)</color> <!-- imperial olive -->
+				<quality>Normal</quality>
+			</li>
+		</specificApparelRequirements>
+
+		<biocodeWeaponChance>0.9</biocodeWeaponChance>
+		<weaponMoney>350~500</weaponMoney>
+		<weaponTags>
+			<li>SWRanged_RK3pistol</li>
+		</weaponTags>
+
+		<skills>
+			<li>
+				<skill>Social</skill>
+				<range>8~10</range>
+			</li>
+			<li>
+				<skill>Intellectual</skill>
+				<range>6~8</range>
+			</li>
+		</skills>
+		<inventoryOptions>
+			<skipChance>0.25</skipChance>
+			<subOptionsChooseOne>
+				<li>
+					<thingDef>guy762_medpac</thingDef>
+					<countRange>1~3</countRange>
+				</li>
+			</subOptionsChooseOne>
+		</inventoryOptions>
+
+		<!-- <disallowedTraits> -->
+			<!-- <li>Brawler</li> -->
+		<!-- </disallowedTraits> -->
+		<initialWillRange>0.5~2</initialWillRange>
+		<initialResistanceRange>5~10</initialResistanceRange>
+	</PawnKindDef>
 	
 	
 	

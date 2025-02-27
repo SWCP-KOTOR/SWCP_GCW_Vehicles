@@ -5,7 +5,7 @@
 	<!--troopers-->
 
 
-	<PawnKindDef Name="SWImpRemnant_stormtrooper" ParentName="KotORSith_TrooperBase">
+	<PawnKindDef Name="SWImpRemnant_stormtrooper" ParentName="SWImpRemnant_TrooperBase">
 		<defName>SWImpRemnant_stormtrooper</defName>
 		<label>Stormtrooper</label>
 		<combatPower>85</combatPower>
@@ -83,13 +83,15 @@
 	
 	
 	
-	<PawnKindDef Name="SWImpRemnant_stormiehvy" ParentName="KotORSith_TrooperBase">
+	<PawnKindDef Name="SWImpRemnant_stormiehvy" ParentName="SWImpRemnant_TrooperBase">
 		<defName>SWImpRemnant_stormiehvy</defName>
 		<label>Stormtrooper specialist</label>
 		<combatPower>125</combatPower>
 		<minGenerationAge>18</minGenerationAge>
 		<maxGenerationAge>40</maxGenerationAge>
 		<itemQuality>Normal</itemQuality>
+		
+		<maxPerGroup>4</maxPerGroup>
 		
 		<xenotypeSet Inherit="False">
 		  <xenotypeChances>
@@ -171,7 +173,7 @@
 	
 	
 	
-	<PawnKindDef Name="SWImpRemnant_stormieofficer" ParentName="KotORSith_TrooperBase">
+	<PawnKindDef Name="SWImpRemnant_stormieofficer" ParentName="SWImpRemnant_TrooperBase">
 		<defName>SWImpRemnant_stormieofficer</defName>
 		<label>Stormtrooper field officer</label>
 		<combatPower>125</combatPower>
@@ -260,7 +262,7 @@
 
 
 
-	<PawnKindDef Name="SWImpRemnant_shadowstormie" ParentName="KotORSith_TrooperBase">
+	<PawnKindDef Name="SWImpRemnant_shadowstormie" ParentName="SWImpRemnant_TrooperBase">
 		<defName>SWImpRemnant_shadowstormie</defName>
 		<label>shadow stormtrooper</label>
 		<combatPower>125</combatPower>
@@ -364,7 +366,7 @@
 	
 	
 	
-	<PawnKindDef Name="SWWarlords_thrawnstormie" ParentName="KotORSith_TrooperBase">
+	<PawnKindDef Name="SWWarlords_thrawnstormie" ParentName="SWImpRemnant_TrooperBase">
 		<defName>SWWarlords_thrawnstormie</defName>
 		<label>7th Fleet Stormtrooper</label>
 		<combatPower>125</combatPower>
@@ -458,7 +460,7 @@
 	
 	
 	
-	<PawnKindDef Name="SWWarlords_lumiyastormie" ParentName="KotORSith_TrooperBase">
+	<PawnKindDef Name="SWWarlords_lumiyastormie" ParentName="SWImpRemnant_TrooperBase">
 		<defName>SWWarlords_lumiyastormie</defName>
 		<label>Royal Guard Stormtrooper</label>
 		<combatPower>125</combatPower>

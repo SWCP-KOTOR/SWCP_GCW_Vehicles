@@ -60,31 +60,31 @@
 		<neverConnectToRoads>false</neverConnectToRoads>
 		<minDistanceToOtherSettlements>40</minDistanceToOtherSettlements>
       </li>
-	  <!-- <li MayRequire="Rick.FCP.Core.Tools.Beta" Class="FCP.Core.ModExtension_FixedIdeo"> -->
-		<!-- <ideoIconDef>guy762_IdeoIcon_sithC</ideoIconDef> -->
-		<!-- <ideoColorDef>DarkGrey</ideoColorDef> -->
-		<!-- <memberName>Sith</memberName> -->
-		<!-- <adjective>Sith</adjective> -->
-		<!-- <roleOverrides> -->
-			<!-- <li> -->
-				<!-- <preceptDef>IdeoRole_Leader</preceptDef> -->
-				<!-- <newName>Dark Lord</newName> -->
-				<!-- <disableApparelRequirements>true</disableApparelRequirements> -->
-			<!-- </li> -->
-			<!-- <li MayRequire="VanillaExpanded.VMemesE"> -->
-				<!-- <preceptDef>guy762_KotORIdeoRole_Inquisitor</preceptDef> -->
-				<!-- <newName>Inquisitor</newName> -->
-				<!-- <disableApparelRequirements>true</disableApparelRequirements> -->
+	  <li MayRequire="Rick.FCP.Core.Tools.Beta" Class="FCP.Core.ModExtension_FixedIdeo">
+		<ideoIconDef>guy762_IdeoIcon_empire</ideoIconDef>
+		<ideoColorDef>DarkGrey</ideoColorDef>
+		<memberName>Imperial</memberName>
+		<adjective>Imperial</adjective>
+		<roleOverrides>
+			<li>
+				<preceptDef>IdeoRole_Leader</preceptDef>
+				<newName>Moff</newName>
+				<disableApparelRequirements>true</disableApparelRequirements>
+			</li>
+			<li MayRequire="VanillaExpanded.VMemesE">
+				<preceptDef>guy762_KotORIdeoRole_Inquisitor</preceptDef>
+				<newName>COMPNOR Loyalty Officer</newName>
+				<disableApparelRequirements>true</disableApparelRequirements>
 				<!-- <apparelRequirementsOverride></apparelRequirementsOverride> -->
-			<!-- </li> -->
+			</li>
 			<!-- <li> -->
 				<!-- <preceptDef>IdeoRole_MeleeSpecialist</preceptDef> -->
 				<!-- <newName>Marauder</newName> -->
 				<!-- <disableApparelRequirements>true</disableApparelRequirements> -->
 				<!-- <apparelRequirementsOverride></apparelRequirementsOverride> -->
 			<!-- </li> -->
-		<!-- </roleOverrides> -->
-	  <!-- </li> -->
+		</roleOverrides>
+	  </li>
     </modExtensions>
 	<!--permanentEnemyToEveryoneExcept>
       <li>OutlanderCivil</li>

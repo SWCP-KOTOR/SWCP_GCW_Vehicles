@@ -589,11 +589,11 @@
 		<skills>
 			<li>
 				<skill>Social</skill>
-				<range>8~10</range>
+				<range>6~8</range>
 			</li>
 			<li>
 				<skill>Intellectual</skill>
-				<range>6~8</range>
+				<range>4~6</range>
 			</li>
 		</skills>
 		<inventoryOptions>

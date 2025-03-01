@@ -53,11 +53,11 @@
 		<skills>
 			<li>
 				<skill>Shooting</skill>
-				<range>6~13</range>
+				<range>8~13</range>
 			</li>
 			<li>
 				<skill>Melee</skill>
-				<range>4~7</range>
+				<range>5~7</range>
 			</li>
 		</skills>
 		<inventoryOptions>

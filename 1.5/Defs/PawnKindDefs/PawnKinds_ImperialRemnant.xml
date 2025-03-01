@@ -471,6 +471,77 @@
 	
 	
 	
+	<PawnKindDef Name="SWImpRemnant_ArmyCommando" ParentName="SWImpRemnant_TrooperBase">
+		<defName>SWImpRemnant_ArmyCommando</defName>
+		<label>imperial army commando</label>
+		<combatPower>75</combatPower>
+		<minGenerationAge>19</minGenerationAge>
+		<maxGenerationAge>40</maxGenerationAge>
+		<itemQuality>Normal</itemQuality>
+		
+		<xenotypeSet Inherit="False">
+		  <xenotypeChances>
+			<Baseliner MayRequire="Ludeon.RimWorld.Biotech">999</Baseliner>
+		  </xenotypeChances>
+		</xenotypeSet>
+		<useFactionXenotypes>false</useFactionXenotypes>
+
+		<apparelMoney>1500~5500</apparelMoney>
+		<apparelAllowHeadgearChance>1</apparelAllowHeadgearChance>
+		<apparelTags>
+			<li>KotOREquipment_basic</li>
+		</apparelTags>
+		<apparelRequired>
+			<li>guy762_ImpTankTrooperHelmet</li>
+			<li>guy762_ImpMidCombatArmor</li>
+			<li>guy762_Bodysuit_Dyeable</li>
+		</apparelRequired>
+		<specificApparelRequirements>
+			<li>
+				<apparelLayer>Middle</apparelLayer>
+				<apparelDef>guy762_ImpMidCombatArmor</apparelDef>
+				<styleDef>guy762_ImpCombatArmorStyle_commando</styleDef>
+			</li>
+			<li>
+				<apparelLayer>OnSkin</apparelLayer>
+				<color>(50,50,50)</color>
+			</li>
+		</specificApparelRequirements>
+
+		<biocodeWeaponChance>0</biocodeWeaponChance>
+		<weaponMoney>500~1600</weaponMoney>
+		<weaponTags>
+			<li>SWRanged_E11carbine</li>
+			<li>SWRanged_E22rifle</li>
+		</weaponTags>
+		
+		<skills>
+			<li>
+				<skill>Shooting</skill>
+				<range>8~12</range>
+			</li>
+			<li>
+				<skill>Melee</skill>
+				<range>4~6</range>
+			</li>
+		</skills>
+		<inventoryOptions>
+			<skipChance>0.25</skipChance>
+			<subOptionsChooseOne>
+				<li>
+					<thingDef>guy762_medpac_adv</thingDef>
+					<countRange>1~3</countRange>
+				</li>
+			</subOptionsChooseOne>
+		</inventoryOptions>
+
+		<initialWillRange>0.5~2</initialWillRange>
+		<initialResistanceRange>5~10</initialResistanceRange>
+	</PawnKindDef>
+	
+	
+	
+	
 	
 	
 	
@@ -516,6 +587,73 @@
 			<li>
 				<skill>Construction</skill>
 				<range>4~8</range>
+			</li>
+		</skills>
+		<inventoryOptions>
+			<skipChance>0.25</skipChance>
+			<subOptionsChooseOne>
+				<li>
+					<thingDef>guy762_medpac</thingDef>
+					<countRange>1~3</countRange>
+				</li>
+			</subOptionsChooseOne>
+		</inventoryOptions>
+
+		<!-- <disallowedTraits> -->
+			<!-- <li>Brawler</li> -->
+		<!-- </disallowedTraits> -->
+		<initialWillRange>0.5~2</initialWillRange>
+		<initialResistanceRange>5~10</initialResistanceRange>
+	</PawnKindDef>
+	
+	
+	<PawnKindDef Name="SWImpRemnant_TankHvyDriver" ParentName="SWImpRemnant_Base">
+		<defName>SWImpRemnant_TankHvyDriver</defName>
+		<label>heavy armor pilot</label>
+		<combatPower>60</combatPower>
+		<minGenerationAge>18</minGenerationAge>
+		<maxGenerationAge>50</maxGenerationAge>
+		<itemQuality>Normal</itemQuality>
+		
+		<xenotypeSet Inherit="False">
+		  <xenotypeChances>
+			<Baseliner MayRequire="Ludeon.RimWorld.Biotech">999</Baseliner>
+		  </xenotypeChances>
+		</xenotypeSet>
+		<useFactionXenotypes>false</useFactionXenotypes>
+
+		<apparelMoney>1500~5500</apparelMoney>
+		<apparelAllowHeadgearChance>1</apparelAllowHeadgearChance>
+		<apparelTags>
+			<li>KotOREquipment_basic</li>
+		</apparelTags>
+		<apparelRequired>
+			<li>guy762_ImpTankTrooperHelmet</li>
+			<li>guy762_ArmyTrooperArmor</li>
+			<li>guy762_ImpUniform_default</li>
+		</apparelRequired>
+		<specificApparelRequirements>
+			<li>
+				<apparelLayer>Overhead</apparelLayer>
+				<color>(110,120,115)</color>  <!-- army slate green -->
+			</li>
+		</specificApparelRequirements>
+
+		<biocodeWeaponChance>0</biocodeWeaponChance>
+		<weaponMoney>500~1600</weaponMoney>
+		<weaponTags>
+			<li>SWRanged_E11carbine</li>
+			<li>SWRanged_E22rifle</li>
+		</weaponTags>
+
+		<skills>
+			<li>
+				<skill>Shooting</skill>
+				<range>6~10</range>
+			</li>
+			<li>
+				<skill>Construction</skill>
+				<range>6~10</range>
 			</li>
 		</skills>
 		<inventoryOptions>

@@ -124,9 +124,9 @@
 				<li>Torso</li>
 				<li>Shoulders</li>
 				<li>Neck</li>
-				<li>Arms</li>
+				<!-- <li>Arms</li> -->
 				<li>Hands</li>
-				<li>Legs</li>
+				<!-- <li>Legs</li> -->
 				<li>Feet</li>
 			</bodyPartGroups>
 			<useDeflectMetalEffect>false</useDeflectMetalEffect>
@@ -971,6 +971,88 @@
 	  
 	  
 	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  <ThingDef ParentName="KotORArmorModdable_hard">
+		<defName>guy762_ImpTankTrooperHelmet</defName>
+		<label>army commando helmet</label>
+		<techLevel>Spacer</techLevel>
+		<description>.</description>
+		<graphicData>
+			<texPath>Apparel/ImperialTankTrooper/helmet</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<shaderType>CutoutComplex</shaderType>
+		</graphicData>
+		<thingCategories>
+		  <li>ArmorHeadgear</li>
+		</thingCategories>
+		<statBases>
+			<Mass>4</Mass>
+			<MarketValue>300</MarketValue>
+			<MaxHitPoints>115</MaxHitPoints>
+      		<ArmorRating_Sharp>0.55</ArmorRating_Sharp>
+			<ArmorRating_Blunt>0.4</ArmorRating_Blunt>
+			<ArmorRating_Heat>0.65</ArmorRating_Heat>
+			<EquipDelay>2</EquipDelay>
+		</statBases>
+		<equippedStatOffsets>
+			<ShootingAccuracyPawn>-0.2</ShootingAccuracyPawn>
+			<AimingDelayFactor>-0.2</AimingDelayFactor>
+			
+			<ToxicEnvironmentResistance>1</ToxicEnvironmentResistance>
+			<HypoxiaResistance MayRequire="kentington.saveourship2">1</HypoxiaResistance>
+			<DecompressionResistance MayRequire="kentington.saveourship2">0.25</DecompressionResistance>
+		</equippedStatOffsets>
+		
+		<apparel Inherit="False">
+			<tags>
+				<li>RemnantEmpire_armycommando</li>
+			</tags>
+			<wornGraphicPath>Apparel/ImperialTankTrooper/helmet</wornGraphicPath>
+			<useWornGraphicMask>true</useWornGraphicMask>
+			<layers>
+				<li>Overhead</li>
+				<li>EyeCover</li>
+			</layers>
+			<bodyPartGroups>
+				<li>FullHead</li>
+			</bodyPartGroups>
+			<useDeflectMetalEffect>false</useDeflectMetalEffect>
+		</apparel>
+		<tradeTags>
+			<li>guy762TT_WarlordArmor</li>
+		</tradeTags>
+		<colorGenerator Class="ColorGenerator_Options" Inherit="False">
+			<options>
+				<li>
+					<weight>10</weight>
+					<only>(250,250,250)</only>  <!-- white -->
+				</li>
+			</options>
+		</colorGenerator>
+		<!--comps>
+		  <li Class="ModularWeapons.CompProperties_ModularParts">
+			<compClass>ModularWeapons.CompModularParts</compClass>
+			<partKinds>
+			  <li>guy762_slot_overlay</li>
+			  <li>guy762_slot_underlay_hat</li>
+			</partKinds>
+			<randomizeParts>true</randomizeParts>
+		  </li>
+		</comps-->
+	</ThingDef>
+	
+	
+	  
+	  
+	  
 	  <ThingDef ParentName="KotORArmorModdable_hard">
 		<defName>guy762_ImpMidCombatArmor</defName>
 		<label>combat armor</label>
@@ -979,7 +1061,7 @@
 		  <texPath>Apparel/ImperialTankTrooper/Apparel</texPath>
 		  <graphicClass>Graphic_Single</graphicClass>
 		  <!-- <shaderType>CutoutComplex</shaderType> -->
-		  <!-- <colorTwo>(75,75,75)</colorTwo> dark grey  -->
+		  <colorTwo>(75,75,75)</colorTwo> <!-- dark grey  -->
 		</graphicData>
 		<statBases>
 			<Mass>6</Mass>
@@ -1009,7 +1091,7 @@
 			<li>Neck</li>
 			<li>Arms</li>
 			<li>Hands</li>
-			<li>Legs</li>
+			<!-- <li>Legs</li> -->
 			<li>Feet</li>
 		  </bodyPartGroups>
 		</apparel>
@@ -1025,6 +1107,15 @@
 			</options>
 		</colorGenerator>
 		
+		<randomStyleChance>0.5</randomStyleChance>
+		<randomStyle>
+		  <li>
+			<styleDef>guy762_ImpCombatArmorStyle_blank</styleDef>
+		  </li>
+		  <li>
+			<styleDef>guy762_ImpCombatArmorStyle_commando</styleDef>
+		  </li>
+		</randomStyle>
 		<verbs>
             <li>
                 <label>throw stun grenade</label>
@@ -1058,8 +1149,38 @@
 				<ammoCountToRefill>2</ammoCountToRefill>
 				<baseReloadTicks>60</baseReloadTicks>
             </li>
+			<li Class="CompProperties_Styleable"></li>
         </comps>
 	  </ThingDef>
+	  
+	  <ThingStyleDef>
+		<defName>guy762_ImpCombatArmorStyle_blank</defName>
+		<overrideLabel>combat armor</overrideLabel>
+		<wornGraphicPath>Apparel/ImperialTankTrooper/Apparel</wornGraphicPath>
+		<graphicData>
+		  <texPath>Apparel/ImperialTankTrooper/Apparel</texPath>
+		  <graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+	  </ThingStyleDef>
+	  
+	  <ThingStyleDef>
+		<defName>guy762_ImpCombatArmorStyle_commando</defName>
+		<overrideLabel>army commando armor</overrideLabel>
+		<wornGraphicPath>Apparel/ImperialTankTrooper/Apparel</wornGraphicPath>
+		<graphicData>
+		  <texPath>Apparel/ImperialTankTrooper/Apparel</texPath>
+		  <graphicClass>Graphic_Single</graphicClass>
+		  <shaderType>CutoutComplex</shaderType>
+		</graphicData>
+		<useWornGraphicMask>true</useWornGraphicMask>
+	  </ThingStyleDef>
+	  
+	  
+	  
+	  
+	  
+	  
+	  
 	  
 	  
 	  

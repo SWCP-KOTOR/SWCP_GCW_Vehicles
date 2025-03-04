@@ -15,7 +15,7 @@
 		</graphicData>
 		<soundInteract>kotorsound_select_slug</soundInteract>
 		<statBases>
-			<MarketValue>600</MarketValue>
+			<MarketValue>250</MarketValue>
 			<Mass>2.5</Mass>
 			<AccuracyTouch>0.60</AccuracyTouch>
 			<AccuracyShort>0.50</AccuracyShort>

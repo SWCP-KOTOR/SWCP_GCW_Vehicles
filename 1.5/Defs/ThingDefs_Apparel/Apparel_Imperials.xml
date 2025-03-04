@@ -129,7 +129,7 @@
 				<!-- <li>Legs</li> -->
 				<li>Feet</li>
 			</bodyPartGroups>
-			<useDeflectMetalEffect>false</useDeflectMetalEffect>
+			<useDeflectMetalEffect>true</useDeflectMetalEffect>
 		</apparel>
 		<tradeTags>
 			<li>guy762TT_WarlordArmor</li>
@@ -209,8 +209,8 @@
 			<Mass>6</Mass>
 			<MarketValue>500</MarketValue>
 			<MaxHitPoints>225</MaxHitPoints>
-			<ArmorRating_Sharp>0.35</ArmorRating_Sharp>
-			<ArmorRating_Blunt>0.2</ArmorRating_Blunt>
+			<ArmorRating_Sharp>0.45</ArmorRating_Sharp>
+			<ArmorRating_Blunt>0.3</ArmorRating_Blunt>
 			<ArmorRating_Heat>0.85</ArmorRating_Heat>
 			<EquipDelay>10</EquipDelay>
 		</statBases>
@@ -317,8 +317,8 @@
 			<Mass>4</Mass>
 			<MarketValue>300</MarketValue>
 			<MaxHitPoints>115</MaxHitPoints>
-      		<ArmorRating_Sharp>0.35</ArmorRating_Sharp>
-			<ArmorRating_Blunt>0.2</ArmorRating_Blunt>
+      		<ArmorRating_Sharp>0.45</ArmorRating_Sharp>
+			<ArmorRating_Blunt>0.3</ArmorRating_Blunt>
 			<ArmorRating_Heat>0.85</ArmorRating_Heat>
 			<EquipDelay>2</EquipDelay>
 		</statBases>
@@ -546,8 +546,8 @@
 			<Mass>6</Mass>
 			<MarketValue>750</MarketValue>
 			<MaxHitPoints>350</MaxHitPoints>
-			<ArmorRating_Sharp>0.35</ArmorRating_Sharp>
-			<ArmorRating_Blunt>0.2</ArmorRating_Blunt>
+			<ArmorRating_Sharp>0.45</ArmorRating_Sharp>
+			<ArmorRating_Blunt>0.3</ArmorRating_Blunt>
 			<ArmorRating_Heat>0.85</ArmorRating_Heat>
 			<EquipDelay>10</EquipDelay>
 		</statBases>
@@ -653,8 +653,8 @@
 			<Mass>4</Mass>
 			<MarketValue>500</MarketValue>
 			<MaxHitPoints>175</MaxHitPoints>
-      		<ArmorRating_Sharp>0.35</ArmorRating_Sharp>
-			<ArmorRating_Blunt>0.2</ArmorRating_Blunt>
+      		<ArmorRating_Sharp>0.45</ArmorRating_Sharp>
+			<ArmorRating_Blunt>0.3</ArmorRating_Blunt>
 			<ArmorRating_Heat>0.85</ArmorRating_Heat>
 			<EquipDelay>2</EquipDelay>
 		</statBases>
@@ -728,9 +728,9 @@
 			<Mass>4</Mass>
 			<MarketValue>500</MarketValue>
 			<MaxHitPoints>175</MaxHitPoints>
-      		<ArmorRating_Sharp>0.35</ArmorRating_Sharp>
-			<ArmorRating_Blunt>0.2</ArmorRating_Blunt>
-			<ArmorRating_Heat>0.45</ArmorRating_Heat>
+      		<ArmorRating_Sharp>0.45</ArmorRating_Sharp>
+			<ArmorRating_Blunt>0.3</ArmorRating_Blunt>
+			<ArmorRating_Heat>0.85</ArmorRating_Heat>
 			<EquipDelay>2</EquipDelay>
 		</statBases>
 		<equippedStatOffsets>
@@ -809,8 +809,8 @@
 			<Mass>4</Mass>
 			<MarketValue>400</MarketValue>
 			<MaxHitPoints>115</MaxHitPoints>
-      		<ArmorRating_Sharp>0.35</ArmorRating_Sharp>
-			<ArmorRating_Blunt>0.2</ArmorRating_Blunt>
+      		<ArmorRating_Sharp>0.45</ArmorRating_Sharp>
+			<ArmorRating_Blunt>0.3</ArmorRating_Blunt>
 			<ArmorRating_Heat>0.85</ArmorRating_Heat>
 			<EquipDelay>2</EquipDelay>
 		</statBases>
@@ -885,12 +885,12 @@
 		  <li>ArmorHeadgear</li>
 		</thingCategories>
 		<statBases>
-			<Mass>2.5</Mass>
+			<Mass>3.5</Mass>
 			<MarketValue>100</MarketValue>
 			<MaxHitPoints>115</MaxHitPoints>
-      		<ArmorRating_Sharp>0.35</ArmorRating_Sharp>
-			<ArmorRating_Blunt>0.2</ArmorRating_Blunt>
-			<ArmorRating_Heat>0.45</ArmorRating_Heat>
+      		<ArmorRating_Sharp>0.45</ArmorRating_Sharp>
+			<ArmorRating_Blunt>0.3</ArmorRating_Blunt>
+			<ArmorRating_Heat>0.55</ArmorRating_Heat>
 			<EquipDelay>4</EquipDelay>
 		</statBases>
 		
@@ -1024,7 +1024,7 @@
 			<bodyPartGroups>
 				<li>FullHead</li>
 			</bodyPartGroups>
-			<useDeflectMetalEffect>false</useDeflectMetalEffect>
+			<useDeflectMetalEffect>true</useDeflectMetalEffect>
 		</apparel>
 		<tradeTags>
 			<li>guy762TT_WarlordArmor</li>
@@ -1094,6 +1094,7 @@
 			<!-- <li>Legs</li> -->
 			<li>Feet</li>
 		  </bodyPartGroups>
+		  <useDeflectMetalEffect>true</useDeflectMetalEffect>
 		</apparel>
 		<tradeTags>
 			<li>guy762TT_KotORArmor</li>
@@ -1285,7 +1286,7 @@
 			<MaxHitPoints>115</MaxHitPoints>
       		<ArmorRating_Sharp>0.35</ArmorRating_Sharp>
 			<ArmorRating_Blunt>0.2</ArmorRating_Blunt>
-			<ArmorRating_Heat>0.65</ArmorRating_Heat>
+			<ArmorRating_Heat>0.45</ArmorRating_Heat>
 			<EquipDelay>2</EquipDelay>
 		</statBases>
 		<equippedStatOffsets>
@@ -1351,7 +1352,7 @@
 			<MaxHitPoints>115</MaxHitPoints>
       		<ArmorRating_Sharp>0.35</ArmorRating_Sharp>
 			<ArmorRating_Blunt>0.2</ArmorRating_Blunt>
-			<ArmorRating_Heat>0.65</ArmorRating_Heat>
+			<ArmorRating_Heat>0.45</ArmorRating_Heat>
 			<EquipDelay>2</EquipDelay>
 		</statBases>
 		<equippedStatOffsets>
@@ -1425,7 +1426,7 @@
 			<MaxHitPoints>115</MaxHitPoints>
       		<ArmorRating_Sharp>0.35</ArmorRating_Sharp>
 			<ArmorRating_Blunt>0.2</ArmorRating_Blunt>
-			<ArmorRating_Heat>0.65</ArmorRating_Heat>
+			<ArmorRating_Heat>0.45</ArmorRating_Heat>
 			<EquipDelay>2</EquipDelay>
 		</statBases>
 		<equippedStatOffsets>
@@ -1489,6 +1490,87 @@
 	
 	
 	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<ThingDef ParentName="KotORArmorModdable_hard">
+		<defName>guy762_ImpWorkerHelmet</defName>
+		<label>worker helmet</label>
+		<techLevel>Spacer</techLevel>
+		<description>.</description>
+		<graphicData>
+			<texPath>Apparel/ImperialWorker/helmet</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<shaderType>CutoutComplex</shaderType>
+		</graphicData>
+		<thingCategories>
+		  <li>ArmorHeadgear</li>
+		</thingCategories>
+		<statBases>
+			<Mass>6</Mass>
+			<MarketValue>300</MarketValue>
+			<MaxHitPoints>235</MaxHitPoints>
+      		<ArmorRating_Sharp>0.35</ArmorRating_Sharp>
+			<ArmorRating_Blunt>0.5</ArmorRating_Blunt> <!-- +0.2 -->
+			<ArmorRating_Heat>0.45</ArmorRating_Heat>
+			<EquipDelay>4</EquipDelay>
+		</statBases>
+		<equippedStatOffsets>
+			<GeneralLaborSpeed>0.1</GeneralLaborSpeed>
+			<MiningSpeed>0.2</MiningSpeed>
+		    <SmoothingSpeed>0.2</SmoothingSpeed>
+			
+			<ToxicEnvironmentResistance>1</ToxicEnvironmentResistance>
+		</equippedStatOffsets>
+		
+		<apparel Inherit="False">
+			<tags>
+				<li>RemnantEmpire_impworker</li>
+			</tags>
+			<wornGraphicPath>Apparel/ImperialWorker/helmet</wornGraphicPath>
+			<useWornGraphicMask>true</useWornGraphicMask>
+			<layers>
+				<li>Overhead</li>
+				<li>EyeCover</li>
+			</layers>
+			<bodyPartGroups>
+				<li>FullHead</li>
+			</bodyPartGroups>
+			<useDeflectMetalEffect>true</useDeflectMetalEffect>
+		</apparel>
+		<tradeTags>
+			<li>guy762TT_WarlordArmor</li>
+		</tradeTags>
+		<colorGenerator Class="ColorGenerator_Options" Inherit="False">
+			<options>
+				<li>
+					<weight>15</weight>
+					<only>(90,90,75)</only> <!-- stone green -->
+				</li>
+			</options>
+		</colorGenerator>
+		<!--comps>
+		  <li Class="ModularWeapons.CompProperties_ModularParts">
+			<compClass>ModularWeapons.CompModularParts</compClass>
+			<partKinds>
+			  <li>guy762_slot_overlay</li>
+			  <li>guy762_slot_underlay_hat</li>
+			</partKinds>
+			<randomizeParts>true</randomizeParts>
+		  </li>
+		</comps-->
+	</ThingDef>
 	
 	
 	
@@ -1628,6 +1710,7 @@
 			<li>Neck</li>
 			<li>Shoulders</li>
 		  </bodyPartGroups>
+		  <useDeflectMetalEffect>true</useDeflectMetalEffect>
 		</apparel>
 		<!-- <tradeTags> -->
 			<!-- <li>guy762TT_KotORArmor</li> -->

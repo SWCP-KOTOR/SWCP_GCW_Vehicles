@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  
+  <ThingDef ParentName="guy762_HelmetModdable_soft">
+		<defName>guy762_ScumMercHelmet</defName>
+		<label>merc helmet</label>
+		<techLevel>Spacer</techLevel>
+		<description>Providing solid protection for a minimal cost, this armor is excellent for entrenched troops or guards. A force on the move, however, may find it somewhat constricting.</description>
+		<graphicData>
+			<texPath>Apparel/JAMerc/helmet</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<shaderType>CutoutComplex</shaderType>
+			<colorTwo>(160,80,80)</colorTwo> <!-- dark red -->
+		</graphicData>
+		<statBases>
+			<Mass>4</Mass>
+			<MarketValue>375</MarketValue>
+			<MaxHitPoints>175</MaxHitPoints>
+			<ArmorRating_Sharp>0.3</ArmorRating_Sharp>
+			<ArmorRating_Blunt>0.35</ArmorRating_Blunt>
+			<ArmorRating_Heat>0.4</ArmorRating_Heat>
+			<Insulation_Cold>15</Insulation_Cold>
+			<!-- <StuffEffectMultiplierArmor>0.6</StuffEffectMultiplierArmor> -->
+			<!-- <StuffEffectMultiplierInsulation_Cold>0.10</StuffEffectMultiplierInsulation_Cold> -->
+			<!-- <StuffEffectMultiplierInsulation_Heat>0.05</StuffEffectMultiplierInsulation_Heat> -->
+			<EquipDelay>10</EquipDelay>
+			
+			<!-- <WorkToMake>15000</WorkToMake> -->
+		</statBases>
+		<equippedStatOffsets>
+			<ShootingAccuracyPawn>-0.2</ShootingAccuracyPawn>
+			<AimingDelayFactor>-0.2</AimingDelayFactor>
+		</equippedStatOffsets>
+		
+		<!-- <recipeMaker> -->
+			<!-- <researchPrerequisite>guy762_ResearchKotOR_midarmor</researchPrerequisite> -->
+			<!-- <skillRequirements> -->
+				<!-- <Crafting>6</Crafting> -->
+			<!-- </skillRequirements> -->
+		<!-- </recipeMaker> -->
+		<!-- <costStuffCount>30</costStuffCount> -->
+		<!-- <stuffCategories> -->
+		  <!-- <li>Leathery</li> -->
+		  <!-- <li>Fabric</li> -->
+		<!-- </stuffCategories> -->
+		<!-- <costList> -->
+			<!-- <Plasteel>8</Plasteel> -->
+		<!-- </costList> -->
+		
+		<apparel Inherit="False">
+			<tags>
+				<li>SaV_outfit_merc</li>
+			</tags>
+			<wornGraphicPath>Apparel/JAMerc/helmet</wornGraphicPath>
+			<useWornGraphicMask>true</useWornGraphicMask>
+			<layers>
+				<li>EyeCover</li>
+				<li>Overhead</li>
+			</layers>
+			<bodyPartGroups>
+				<li>Eyes</li>
+				<li>UpperHead</li>
+			</bodyPartGroups>
+			<useDeflectMetalEffect>false</useDeflectMetalEffect>
+		</apparel>
+		
+		<tradeTags>
+			<li>guy762TT_KotORArmor</li>
+		</tradeTags>
+		
+		<colorGenerator Class="ColorGenerator_Options" Inherit="False">
+			<options>
+				<li>
+					<weight>15</weight>
+					<only>(160,130,115)</only>
+				</li>
+			</options>
+		</colorGenerator>
+	</ThingDef>
+	
+	
+	
+	
+	
+	
+	<ThingDef ParentName="KotORArmorModdable_soft">
+		<defName>guy762_ScumMercArmor</defName>
+		<label>mesh combat suit</label>
+		<techLevel>Spacer</techLevel>
+		<description>.</description>
+		<graphicData>
+			<texPath>Apparel/JAMerc/Apparel</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<shaderType>CutoutComplex</shaderType>
+			<!-- <colorTwo>(255,210,0)</colorTwo> -->
+		</graphicData>
+		<statBases>
+			<Mass>6</Mass>
+			<MarketValue>500</MarketValue>
+			<MaxHitPoints>225</MaxHitPoints>
+      		<ArmorRating_Sharp>0.3</ArmorRating_Sharp>
+			<ArmorRating_Blunt>0.35</ArmorRating_Blunt>
+			<ArmorRating_Heat>0.4</ArmorRating_Heat>
+			<Insulation_Cold>35</Insulation_Cold>
+			<EquipDelay>10</EquipDelay>
+		</statBases>
+		<equippedStatOffsets>
+			<MoveSpeed>-0.1</MoveSpeed>
+			<MeleeDodgeChance>-0.1</MeleeDodgeChance>
+			<IncomingDamageFactor>-0.05</IncomingDamageFactor>
+		</equippedStatOffsets>
+		
+		<thingSetMakerTags>
+		  <li>RewardStandardMidFreq</li>
+		</thingSetMakerTags>
+		<apparel Inherit="False">
+			<tags>
+				<li>SaV_outfit_merc</li>
+			</tags>
+			<wornGraphicPath>Apparel/JAMerc/Apparel</wornGraphicPath>
+			<useWornGraphicMask>true</useWornGraphicMask>
+			<layers>
+				<li>Middle</li>
+				<li>OnSkin</li>
+			</layers>
+			<bodyPartGroups>
+				<li>Torso</li>
+				<li>Shoulders</li>
+				<li>Neck</li>
+				<li>Arms</li>
+				<li>Hands</li>
+				<li>Legs</li>
+				<li>Feet</li>
+			</bodyPartGroups>
+			<useDeflectMetalEffect>false</useDeflectMetalEffect>
+		</apparel>
+		<tradeTags>
+			<li>guy762TT_KotORArmor</li>
+		</tradeTags>
+		<colorGenerator Class="ColorGenerator_Options" Inherit="False">
+			<options>
+				<li>
+					<weight>15</weight>
+					<only>(130,100,85)</only>
+				</li>
+			</options>
+		</colorGenerator>
+		
+		<!-- <comps> -->
+		  <!-- <li Class="ModularWeapons.CompProperties_ModularParts"> -->
+			<!-- <compClass>ModularWeapons.CompModularParts</compClass> -->
+			<!-- <partKinds> -->
+			  <!-- <li>guy762_slot_underlay</li> -->
+			  <!-- <li>guy762_slot_overlay</li> -->
+			<!-- </partKinds> -->
+			<!-- <randomizeParts>true</randomizeParts> -->
+		  <!-- </li> -->
+		<!-- </comps> -->
+	</ThingDef>
+	  
+	  
+
+</Defs>

@@ -71,6 +71,27 @@
 	</PawnKindDef>
 	
 	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 	<PawnKindDef Name="SWImpRemnant_Worker" ParentName="SWImpRemnant_Base">
 		<defName>SWImpRemnant_Worker</defName>
 		<label>worker</label>
@@ -142,7 +163,7 @@
 		<apparelMoney>1500~5500</apparelMoney>
 		<apparelAllowHeadgearChance>1</apparelAllowHeadgearChance>
 		<apparelTags>
-			<li>KotOREquipment_basic</li>
+			<li>KotORUtility_engi_novisor</li>
 		</apparelTags>
 		<apparelRequired>
 			<li>guy762_UniformCap_imperial</li>
@@ -156,9 +177,10 @@
 		</specificApparelRequirements>
 
 		<biocodeWeaponChance>0</biocodeWeaponChance>
-		<weaponMoney>350~500</weaponMoney>
+		<weaponMoney>350~650</weaponMoney>
 		<weaponTags>
 			<li>SWRanged_RK3pistol</li>
+			<li>SWRanged_DH17pistol</li>
 		</weaponTags>
 
 		<skills>
@@ -166,12 +188,20 @@
 				<skill>Construction</skill>
 				<range>8~10</range>
 			</li>
+			<li>
+				<skill>Crafting</skill>
+				<range>6~8</range>
+			</li>
 		</skills>
 		<inventoryOptions>
-			<skipChance>0.25</skipChance>
+			<skipChance>0</skipChance>
 			<subOptionsChooseOne>
 				<li>
-					<thingDef>guy762_medpac</thingDef>
+					<thingDef>guy762_repairkit</thingDef>
+					<countRange>1~3</countRange>
+				</li>
+				<li>
+					<thingDef>ComponentIndustrial</thingDef>
 					<countRange>1~3</countRange>
 				</li>
 			</subOptionsChooseOne>
@@ -180,6 +210,95 @@
 		<initialWillRange>0.5~2</initialWillRange>
 		<initialResistanceRange>5~10</initialResistanceRange>
 	</PawnKindDef>
+	
+	
+	<PawnKindDef Name="SWImpRemnant_EngiCombat" ParentName="SWImpRemnant_Base">
+		<defName>SWImpRemnant_EngiCombat</defName>
+		<label>combat engineer</label>
+		<combatPower>50</combatPower>
+		<minGenerationAge>18</minGenerationAge>
+		<maxGenerationAge>40</maxGenerationAge>
+		<itemQuality>Good</itemQuality>
+		
+		<xenotypeSet Inherit="False">
+		  <xenotypeChances>
+			<Baseliner MayRequire="Ludeon.RimWorld.Biotech">999</Baseliner>
+		  </xenotypeChances>
+		</xenotypeSet>
+		<useFactionXenotypes>false</useFactionXenotypes>
+
+		<apparelMoney>1500~5500</apparelMoney>
+		<apparelAllowHeadgearChance>1</apparelAllowHeadgearChance>
+		<apparelTags>
+			<li>KotORUtility_engi_novisor</li>
+			<li>KotORAccessory_engi</li>
+			<li>RemnantEmpire_lgtcombatarmor</li>
+		</apparelTags>
+		<apparelRequired>
+			<li>guy762_ImpEngiHelmet</li>
+			<li>guy762_Bodysuit_utility</li>
+		</apparelRequired>
+		<specificApparelRequirements>
+			<li>
+				<apparelLayer>Shell</apparelLayer>
+				<color>(90,90,90)</color>
+			</li>
+			<li>
+				<apparelLayer>Middle</apparelLayer>
+				<color>(40,40,40)</color>
+			</li>
+		</specificApparelRequirements>
+
+		<biocodeWeaponChance>0.5</biocodeWeaponChance>
+		<weaponMoney>500</weaponMoney>
+		<weaponTags>
+			<li>SWRanged_E11carbine</li>
+		</weaponTags>
+
+		<skills>
+			<li>
+				<skill>Shooting</skill>
+				<range>4~8</range>
+			</li>
+			<li>
+				<skill>Construction</skill>
+				<range>8~10</range>
+			</li>
+			<li>
+				<skill>Crafting</skill>
+				<range>6~8</range>
+			</li>
+		</skills>
+		<inventoryOptions>
+			<skipChance>0</skipChance>
+			<subOptionsChooseOne>
+				<li>
+					<thingDef>guy762_repairkit</thingDef>
+					<countRange>1~3</countRange>
+				</li>
+				<li>
+					<thingDef>ComponentIndustrial</thingDef>
+					<countRange>1~3</countRange>
+				</li>
+			</subOptionsChooseOne>
+		</inventoryOptions>
+
+		<initialWillRange>0.5~2</initialWillRange>
+		<initialResistanceRange>5~10</initialResistanceRange>
+	</PawnKindDef>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 	
 	
 	
@@ -581,6 +700,171 @@
 	
 	
 	
+	<PawnKindDef Name="SWImpRemnant_ArmyLieutenant" ParentName="SWImpRemnant_TrooperBase">
+		<defName>SWImpRemnant_ArmyLieutenant</defName>
+		<label>imperial army lieutenant</label>
+		<combatPower>50</combatPower>
+		<minGenerationAge>22</minGenerationAge>
+		<maxGenerationAge>75</maxGenerationAge>
+		<itemQuality>Normal</itemQuality>
+		
+		<maxPerGroup>4</maxPerGroup>
+		
+		<xenotypeSet Inherit="False">
+		  <xenotypeChances>
+			<Baseliner MayRequire="Ludeon.RimWorld.Biotech">999</Baseliner>
+		  </xenotypeChances>
+		</xenotypeSet>
+		<useFactionXenotypes>false</useFactionXenotypes>
+
+		<apparelMoney>1500~5500</apparelMoney>
+		<apparelAllowHeadgearChance>0.75</apparelAllowHeadgearChance>
+		<apparelTags>
+			<li>KotOREquipment_basic</li>
+		</apparelTags>
+		<apparelRequired>
+			<li>guy762_ArmyTrooperHelmet</li>
+			<li>guy762_ArmyOfficerArmor</li>
+			<li>guy762_ImpUniform_default</li>
+		</apparelRequired>
+		<specificApparelRequirements>
+			<li>
+				<apparelLayer>Middle</apparelLayer>
+				<apparelDef>guy762_ArmyOfficerArmor</apparelDef>
+				<styleDef>guy762_RankStyle_armylt</styleDef>
+				<color>(110,120,115)</color>  <!-- army slate green -->
+				<quality>Normal</quality>
+			</li>
+			<li>
+				<apparelLayer>OnSkin</apparelLayer>
+				<color>(125,125,110)</color>       <!-- imperial olive -->
+			</li>
+		</specificApparelRequirements>
+
+		<biocodeWeaponChance>0.5</biocodeWeaponChance>
+		<weaponMoney>350~500</weaponMoney>
+		<weaponTags>
+			<li>SWRanged_RK3pistol</li>
+			<li>SWRanged_E11carbine</li>
+		</weaponTags>
+		
+		<skills>
+			<li>
+				<skill>Shooting</skill>
+				<range>6~8</range>
+			</li>
+			<li>
+				<skill>Social</skill>
+				<range>6~8</range>
+			</li>
+		</skills>
+		<inventoryOptions>
+			<skipChance>0.25</skipChance>
+			<subOptionsChooseOne>
+				<li>
+					<thingDef>guy762_medpac_adv</thingDef>
+					<countRange>1~3</countRange>
+				</li>
+			</subOptionsChooseOne>
+		</inventoryOptions>
+
+		<initialWillRange>0.5~2</initialWillRange>
+		<initialResistanceRange>5~10</initialResistanceRange>
+		
+		<abilities>
+			<!-- <li>WorkDrive</li> -->
+			<!-- <li>ProductionCommand</li> -->
+			<li>MarksmanCommand</li>
+		</abilities>
+	</PawnKindDef>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<PawnKindDef Name="SWImpRemnant_ArmyGeneral_field" ParentName="SWImpRemnant_TrooperBase">
+		<defName>SWImpRemnant_ArmyGeneral_field</defName>
+		<label>imperial army general</label>
+		<combatPower>50</combatPower>
+		<minGenerationAge>35</minGenerationAge>
+		<maxGenerationAge>75</maxGenerationAge>
+		<itemQuality>Excellent</itemQuality>
+		
+		<maxPerGroup>1</maxPerGroup>
+		
+		<xenotypeSet Inherit="False">
+		  <xenotypeChances>
+			<Baseliner MayRequire="Ludeon.RimWorld.Biotech">999</Baseliner>
+		  </xenotypeChances>
+		</xenotypeSet>
+		<useFactionXenotypes>false</useFactionXenotypes>
+
+		<apparelMoney>1500~5500</apparelMoney>
+		<apparelAllowHeadgearChance>0.75</apparelAllowHeadgearChance>
+		<apparelTags>
+			<li>KotOREquipment_officer</li>
+		</apparelTags>
+		<apparelRequired>
+			<li>guy762_UniformCap_imperial</li>
+			<li>guy762_ArmyOfficerArmor_highbrass</li>
+			<li>guy762_ImpUniform_default</li>
+		</apparelRequired>
+		<specificApparelRequirements>
+			<li>
+				<apparelLayer>Middle</apparelLayer>
+				<apparelDef>guy762_ArmyOfficerArmor_highbrass</apparelDef>
+				<styleDef>guy762_RankStyle_taskforceCO</styleDef>
+				<color>(110,120,115)</color>  <!-- army slate green -->
+				<quality>Excellent</quality>
+			</li>
+			<li>
+				<apparelLayer>OnSkin</apparelLayer>
+				<color>(125,125,110)</color>       <!-- imperial olive -->
+			</li>
+		</specificApparelRequirements>
+
+		<biocodeWeaponChance>1</biocodeWeaponChance>
+		<weaponMoney>350</weaponMoney>
+		<weaponTags>
+			<li>SWRanged_RK3pistol</li>
+		</weaponTags>
+		
+		<skills>
+			<li>
+				<skill>Shooting</skill>
+				<range>6~8</range>
+			</li>
+			<li>
+				<skill>Social</skill>
+				<range>14~16</range>
+			</li>
+		</skills>
+		<inventoryOptions>
+			<skipChance>0</skipChance>
+			<subOptionsChooseOne>
+				<li>
+					<thingDef>guy762_medpac_life</thingDef>
+					<countRange>1~3</countRange>
+				</li>
+			</subOptionsChooseOne>
+		</inventoryOptions>
+
+		<initialWillRange>0.5~2</initialWillRange>
+		<initialResistanceRange>5~10</initialResistanceRange>
+		
+		<abilities>
+			<li>guy762_Ability_CommandTierV</li>
+		</abilities>
+	</PawnKindDef>
+	
+	
+	
 	
 	
 	<PawnKindDef Name="SWImpRemnant_ArmyCommando" ParentName="SWImpRemnant_TrooperBase">
@@ -804,6 +1088,8 @@
 		<maxGenerationAge>70</maxGenerationAge>
 		<itemQuality>Normal</itemQuality>
 		
+		<maxPerGroup>4</maxPerGroup>
+		
 		<xenotypeSet Inherit="False">
 		  <xenotypeChances>
 			<Baseliner MayRequire="Ludeon.RimWorld.Biotech">999</Baseliner>
@@ -861,6 +1147,12 @@
 		<!-- </disallowedTraits> -->
 		<initialWillRange>0.5~2</initialWillRange>
 		<initialResistanceRange>5~10</initialResistanceRange>
+		
+		<abilities>
+			<li>WorkDrive</li>
+			<!-- <li>ProductionCommand</li> -->
+			<!-- <li>MarksmanCommand</li> -->
+		</abilities>
 	</PawnKindDef>
 	
 	

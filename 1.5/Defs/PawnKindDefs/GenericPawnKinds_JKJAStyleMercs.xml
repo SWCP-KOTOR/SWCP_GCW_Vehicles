@@ -152,9 +152,9 @@
 	</specificApparelRequirements>
 	
     <biocodeWeaponChance>0.75</biocodeWeaponChance>
-	<weaponMoney>1800~2200</weaponMoney>
+	<weaponMoney>2000~3200</weaponMoney>
 	<weaponTags>
-		<li>SWRanged_TL50blaster</li>
+		<li>SWRanged_TL50conc</li>
 		<li>SWRanged_FC1flechette</li>
 	</weaponTags>
 	
@@ -301,9 +301,8 @@
 	</apparelRequired>
 	<apparelAllowHeadgearChance>1</apparelAllowHeadgearChance>
 	
-    <weaponMoney>300~500</weaponMoney>
+    <weaponMoney>500</weaponMoney>
     <weaponTags>
-	  <li>SWRanged_E10rifle</li>
 	  <li>SWRanged_E11carbine</li>
     </weaponTags>
 	

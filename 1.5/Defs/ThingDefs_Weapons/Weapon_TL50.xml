@@ -5,7 +5,8 @@
 	<ThingDef ParentName="KotORRangedModdable_TwoHand">
 		<defName>guy762_TL50repeater_hvy</defName>
 		<label>TL-50C heavy repeater</label>
-		<description>Designed as a successor to the venerable DC-17M platform, the TL-50C repeater offers suitable suppressive fire capabilities while backing it up with an integrated concussion launcher, unusual for a weapon of its class. While the repeater itself is somewhat lackluster (aside from the impressive fire rate), the concussion launcher is devastating to buildings and excels at dispersing clusters of targets.</description>
+		<description>.</description>
+		<!-- <description>Designed as a successor to the venerable DC-17M platform, the TL-50C repeater offers suitable suppressive fire capabilities while backing it up with an integrated concussion launcher, unusual for a weapon of its class. While the repeater itself is somewhat lackluster (aside from the impressive fire rate), the concussion launcher is devastating to buildings and excels at dispersing clusters of targets.</description> -->
 		<techLevel>Spacer</techLevel>
 		<thingClass>ThingWithComps</thingClass>
 		<graphicData>
@@ -35,7 +36,7 @@
 			<li>
 				<verbClass>Verb_Shoot</verbClass>
 				<hasStandardCommand>true</hasStandardCommand>
-				<defaultProjectile>SWProj_TL50bolt</defaultProjectile>
+				<defaultProjectile>SWProj_TL50slugbolt</defaultProjectile>
 				<warmupTime>2.5</warmupTime>
 				<range>28</range>
 				<defaultCooldownTime>4</defaultCooldownTime>

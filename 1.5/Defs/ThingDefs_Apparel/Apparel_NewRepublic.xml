@@ -21,11 +21,12 @@
 		<statBases>
 			<Mass>2.5</Mass>
 			<MarketValue>100</MarketValue>
-			<MaxHitPoints>115</MaxHitPoints>
-      		<ArmorRating_Sharp>0.35</ArmorRating_Sharp>
-			<ArmorRating_Blunt>0.2</ArmorRating_Blunt>
-			<ArmorRating_Heat>0.45</ArmorRating_Heat>
-			<EquipDelay>4</EquipDelay>
+			
+			<MaxHitPoints>175</MaxHitPoints>
+      		<ArmorRating_Sharp>0.45</ArmorRating_Sharp>
+			<ArmorRating_Blunt>0.3</ArmorRating_Blunt>
+			<ArmorRating_Heat>0.55</ArmorRating_Heat>
+			<EquipDelay>2</EquipDelay>
 		</statBases>
 		
 		<apparel Inherit="False">
@@ -73,10 +74,11 @@
 		<statBases>
 			<Mass>2</Mass>
 			<MarketValue>200</MarketValue>
+			
 			<MaxHitPoints>115</MaxHitPoints>
-      		<ArmorRating_Sharp>0.25</ArmorRating_Sharp>
-			<ArmorRating_Blunt>0.1</ArmorRating_Blunt>
-			<ArmorRating_Heat>0.35</ArmorRating_Heat>
+      		<ArmorRating_Sharp>0.35</ArmorRating_Sharp>
+			<ArmorRating_Blunt>0.2</ArmorRating_Blunt>
+			<ArmorRating_Heat>0.45</ArmorRating_Heat>
 			<EquipDelay>2</EquipDelay>
 		</statBases>
 		
@@ -196,9 +198,9 @@
 			<Mass>3.5</Mass>
 			<MarketValue>300</MarketValue>
 			<MaxHitPoints>115</MaxHitPoints>
-      		<ArmorRating_Sharp>0.45</ArmorRating_Sharp>
-			<ArmorRating_Blunt>0.3</ArmorRating_Blunt>
-			<ArmorRating_Heat>0.55</ArmorRating_Heat>
+      		<ArmorRating_Sharp>0.65</ArmorRating_Sharp>
+			<ArmorRating_Blunt>0.5</ArmorRating_Blunt>
+			<ArmorRating_Heat>0.75</ArmorRating_Heat>
 			<EquipDelay>2</EquipDelay>
 		</statBases>
 		<equippedStatOffsets>
@@ -319,14 +321,16 @@
 		<statBases>
 			<Mass>4.5</Mass>
 			<MarketValue>300</MarketValue>
-			<MaxHitPoints>225</MaxHitPoints>
-			<ArmorRating_Sharp>0.35</ArmorRating_Sharp>
-			<ArmorRating_Blunt>0.2</ArmorRating_Blunt>
-			<ArmorRating_Heat>0.45</ArmorRating_Heat>
+			
+			<MaxHitPoints>350</MaxHitPoints> <!-- mil suit stats -->
+			<ArmorRating_Sharp>0.65</ArmorRating_Sharp>
+			<ArmorRating_Blunt>0.5</ArmorRating_Blunt>
+			<ArmorRating_Heat>0.75</ArmorRating_Heat>
 			<EquipDelay>8</EquipDelay>
 		</statBases>
 		<equippedStatOffsets>
-			<IncomingDamageFactor>-0.05</IncomingDamageFactor>
+			<!-- +2 agility - no debuff -->
+			<IncomingDamageFactor>-0.1</IncomingDamageFactor>
 		</equippedStatOffsets>
 		<apparel>
 		  <tags Inherit="False">
@@ -381,14 +385,16 @@
 		<statBases>
 			<Mass>4.5</Mass>
 			<MarketValue>300</MarketValue>
-			<MaxHitPoints>225</MaxHitPoints>
-			<ArmorRating_Sharp>0.35</ArmorRating_Sharp>
-			<ArmorRating_Blunt>0.2</ArmorRating_Blunt>
-			<ArmorRating_Heat>0.45</ArmorRating_Heat>
+			
+			<MaxHitPoints>350</MaxHitPoints> <!-- mil suit stats -->
+			<ArmorRating_Sharp>0.65</ArmorRating_Sharp>
+			<ArmorRating_Blunt>0.5</ArmorRating_Blunt>
+			<ArmorRating_Heat>0.75</ArmorRating_Heat>
 			<EquipDelay>8</EquipDelay>
 		</statBases>
 		<equippedStatOffsets>
-			<IncomingDamageFactor>-0.05</IncomingDamageFactor>
+			<!-- +2 agility - no debuff -->
+			<IncomingDamageFactor>-0.1</IncomingDamageFactor>
 		</equippedStatOffsets>
 		<apparel>
 		  <tags Inherit="False">
@@ -527,10 +533,11 @@
 		<statBases>
 			<Mass>3</Mass>
 			<MarketValue>250</MarketValue>
-			<MaxHitPoints>115</MaxHitPoints>
-      		<ArmorRating_Sharp>0.45</ArmorRating_Sharp>
-			<ArmorRating_Blunt>0.3</ArmorRating_Blunt>
-			<ArmorRating_Heat>0.55</ArmorRating_Heat>
+			
+			<MaxHitPoints>175</MaxHitPoints>
+      		<ArmorRating_Sharp>0.55</ArmorRating_Sharp>
+			<ArmorRating_Blunt>0.4</ArmorRating_Blunt>
+			<ArmorRating_Heat>0.65</ArmorRating_Heat>
 			<EquipDelay>2</EquipDelay>
 		</statBases>
 		
@@ -588,10 +595,11 @@
 		<statBases>
 			<Mass>3</Mass>
 			<MarketValue>300</MarketValue>
-			<MaxHitPoints>115</MaxHitPoints>
-      		<ArmorRating_Sharp>0.45</ArmorRating_Sharp>
-			<ArmorRating_Blunt>0.3</ArmorRating_Blunt>
-			<ArmorRating_Heat>0.55</ArmorRating_Heat>
+			
+			<MaxHitPoints>175</MaxHitPoints>
+      		<ArmorRating_Sharp>0.55</ArmorRating_Sharp>
+			<ArmorRating_Blunt>0.4</ArmorRating_Blunt>
+			<ArmorRating_Heat>0.65</ArmorRating_Heat>
 			<EquipDelay>2</EquipDelay>
 		</statBases>
 		<!-- <equippedStatOffsets> -->
@@ -721,10 +729,11 @@
 		<statBases>
 			<Mass>3</Mass>
 			<MarketValue>9000</MarketValue>
-			<MaxHitPoints>115</MaxHitPoints>
-      		<ArmorRating_Sharp>0.45</ArmorRating_Sharp>
-			<ArmorRating_Blunt>0.3</ArmorRating_Blunt>
-			<ArmorRating_Heat>0.55</ArmorRating_Heat>
+			
+			<MaxHitPoints>175</MaxHitPoints>
+      		<ArmorRating_Sharp>0.55</ArmorRating_Sharp>
+			<ArmorRating_Blunt>0.4</ArmorRating_Blunt>
+			<ArmorRating_Heat>0.65</ArmorRating_Heat>
 			<EquipDelay>2</EquipDelay>
 		</statBases>
 		<equippedStatOffsets>
@@ -834,10 +843,11 @@
 		<statBases>
 			<Mass>2</Mass>
 			<MarketValue>200</MarketValue>
+			
 			<MaxHitPoints>115</MaxHitPoints>
-      		<ArmorRating_Sharp>0.25</ArmorRating_Sharp>
-			<ArmorRating_Blunt>0.1</ArmorRating_Blunt>
-			<ArmorRating_Heat>0.35</ArmorRating_Heat>
+      		<ArmorRating_Sharp>0.35</ArmorRating_Sharp>
+			<ArmorRating_Blunt>0.2</ArmorRating_Blunt>
+			<ArmorRating_Heat>0.45</ArmorRating_Heat>
 			<EquipDelay>2</EquipDelay>
 		</statBases>
 		<!-- <equippedStatOffsets> -->
@@ -924,10 +934,11 @@
 		<statBases>
 			<Mass>2</Mass>
 			<MarketValue>7620</MarketValue>
+			
 			<MaxHitPoints>115</MaxHitPoints>
-      		<ArmorRating_Sharp>0.25</ArmorRating_Sharp>
-			<ArmorRating_Blunt>0.1</ArmorRating_Blunt>
-			<ArmorRating_Heat>0.35</ArmorRating_Heat>
+      		<ArmorRating_Sharp>0.35</ArmorRating_Sharp>
+			<ArmorRating_Blunt>0.2</ArmorRating_Blunt>
+			<ArmorRating_Heat>0.45</ArmorRating_Heat>
 			<EquipDelay>2</EquipDelay>
 		</statBases>
 		<equippedStatOffsets>

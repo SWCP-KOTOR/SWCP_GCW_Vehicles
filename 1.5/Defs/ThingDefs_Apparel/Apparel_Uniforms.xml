@@ -552,7 +552,7 @@
 		  </defaultOutfitTags>
 		</apparel>
 		
-		<randomStyleChance>0.5</randomStyleChance>
+		<randomStyleChance>1</randomStyleChance>
 		<randomStyle>
 		  <li>
 			<styleDef>guy762_RankStyle_navylt</styleDef>
@@ -568,7 +568,7 @@
 					<weight>15</weight>
 					<only>(125,125,110)</only> <!-- imperial olive -->
 				</li>
-			</options> <!-- 195,55,45 isard's red -->
+			</options>
 		</colorGenerator>
 	  </ThingDef>
 	  
@@ -588,6 +588,99 @@
 	  
 	  
 	  
+	  
+	  
+	  <ThingDef ParentName="guy762_clothingbase">
+		<defName>guy762_ImpUniform_midrank</defName>
+		<label>imperial uniform, ranking officer's</label>
+		<description>These are simple garments that protect little more than the modesty of the wearer.</description>
+		<graphicData>
+		  <texPath>Apparel/Officer/linecaptain/Apparel</texPath>
+		  <graphicClass>Graphic_Single</graphicClass>
+		  <shaderType>CutoutComplex</shaderType>
+		</graphicData>
+		<statBases>
+			<Mass>3</Mass>
+			<MarketValue>10000</MarketValue>
+			<MaxHitPoints>200</MaxHitPoints> <!-- +100 -->
+			<ArmorRating_Sharp>0.01</ArmorRating_Sharp>
+			<ArmorRating_Blunt>0.01</ArmorRating_Blunt>
+			<ArmorRating_Heat>0.01</ArmorRating_Heat>
+			<Insulation_Cold>10</Insulation_Cold>
+			<Insulation_Heat>5</Insulation_Heat>
+			<EquipDelay>3</EquipDelay>
+			
+			<WorkToMake>4000</WorkToMake>
+		</statBases>
+		<equippedStatOffsets>
+		  <SocialImpact>0.5</SocialImpact>
+		</equippedStatOffsets>
+		
+		<recipeMaker>
+			<researchPrerequisite>guy762_ResearchKotOR_sith</researchPrerequisite>
+			<skillRequirements>
+				<Crafting>6</Crafting>
+			</skillRequirements>
+		</recipeMaker>
+		<costList>
+		  <Synthread>75</Synthread>
+		</costList>
+		
+		<apparel>
+		  <tags Inherit="False">
+			<li>RemnantEmpire_imprankingofficer</li>
+		  </tags>
+		  <wornGraphicPath>Apparel/Officer/linecaptain/Apparel</wornGraphicPath>
+		  <useWornGraphicMask>true</useWornGraphicMask>
+		  <defaultOutfitTags Inherit="False">
+			<li>Worker</li>
+		  </defaultOutfitTags>
+		</apparel>
+		
+		<randomStyleChance>1</randomStyleChance>
+		<randomStyle>
+		  <li>
+			<styleDef>guy762_RankStyle_linecap</styleDef>
+		  </li>
+		  <li>
+			<styleDef>guy762_RankStyle_viceroy</styleDef>
+		  </li>
+		</randomStyle>
+		
+		<tradeTags>
+			<li>guy762TT_SEArmor</li>
+		</tradeTags>
+		<colorGenerator Class="ColorGenerator_Options" Inherit="False">
+			<options>
+				<li>
+					<weight>15</weight>
+					<only>(125,125,110)</only> <!-- imperial olive -->
+				</li>
+			</options>
+		</colorGenerator>
+	  </ThingDef>
+	  
+	  <ThingStyleDef>
+		<defName>guy762_RankStyle_linecap</defName>
+		<overrideLabel>imperial uniform, captain of the line's</overrideLabel>
+		<wornGraphicPath>Apparel/Officer/linecaptain/Apparel</wornGraphicPath>
+		<graphicData>
+		  <texPath>Apparel/Officer/linecaptain/Apparel</texPath>
+		  <graphicClass>Graphic_Single</graphicClass>
+		  <shaderType>CutoutComplex</shaderType>
+		</graphicData>
+	  </ThingStyleDef>
+	  
+	  <ThingStyleDef>
+		<defName>guy762_RankStyle_viceroy</defName>
+		<overrideLabel>imperial uniform, viceroy's</overrideLabel>
+		<wornGraphicPath>Apparel/Officer/viceroy/Apparel</wornGraphicPath>
+		<graphicData>
+		  <texPath>Apparel/Officer/viceroy/Apparel</texPath>
+		  <graphicClass>Graphic_Single</graphicClass>
+		  <shaderType>CutoutComplex</shaderType>
+		</graphicData>
+	  </ThingStyleDef>
 	  
 	  
 	  
@@ -644,8 +737,17 @@
 		  </defaultOutfitTags>
 		</apparel>
 		
-		<randomStyleChance>0.5</randomStyleChance>
+		<randomStyleChance>1</randomStyleChance>
 		<randomStyle>
+		  <li>
+			<styleDef>guy762_RankStyle_armygen</styleDef>
+		  </li>
+		  <li>
+			<styleDef>guy762_RankStyle_navyadmiral</styleDef>
+		  </li>
+		  <li>
+			<styleDef>guy762_RankStyle_moff</styleDef>
+		  </li>
 		  <li>
 			<styleDef>guy762_RankStyle_trigit</styleDef>
 		  </li>
@@ -660,9 +762,42 @@
 					<weight>15</weight>
 					<only>(125,125,110)</only> <!-- imperial olive -->
 				</li>
-			</options> <!-- 195,55,45 isard's red -->
+			</options>
 		</colorGenerator>
 	  </ThingDef>
+	  
+	  <ThingStyleDef>
+		<defName>guy762_RankStyle_armygen</defName>
+		<overrideLabel>imperial uniform, army general's</overrideLabel>
+		<wornGraphicPath>Apparel/Officer/armygeneral/Apparel</wornGraphicPath>
+		<graphicData>
+		  <texPath>Apparel/Officer/armygeneral/Apparel</texPath>
+		  <graphicClass>Graphic_Single</graphicClass>
+		  <shaderType>CutoutComplex</shaderType>
+		</graphicData>
+	  </ThingStyleDef>
+	  
+	  <ThingStyleDef>
+		<defName>guy762_RankStyle_navyadmiral</defName>
+		<overrideLabel>imperial uniform, navy admiral's</overrideLabel>
+		<wornGraphicPath>Apparel/Officer/navyadmiral/Apparel</wornGraphicPath>
+		<graphicData>
+		  <texPath>Apparel/Officer/navyadmiral/Apparel</texPath>
+		  <graphicClass>Graphic_Single</graphicClass>
+		  <shaderType>CutoutComplex</shaderType>
+		</graphicData>
+	  </ThingStyleDef>
+	  
+	  <ThingStyleDef>
+		<defName>guy762_RankStyle_moff</defName>
+		<overrideLabel>imperial uniform, moff's</overrideLabel>
+		<wornGraphicPath>Apparel/Officer/moff/Apparel</wornGraphicPath>
+		<graphicData>
+		  <texPath>Apparel/Officer/moff/Apparel</texPath>
+		  <graphicClass>Graphic_Single</graphicClass>
+		  <shaderType>CutoutComplex</shaderType>
+		</graphicData>
+	  </ThingStyleDef>
 	  
 	  <ThingStyleDef>
 		<defName>guy762_RankStyle_trigit</defName>
@@ -741,7 +876,7 @@
 		  </defaultOutfitTags>
 		</apparel>
 		
-		<randomStyleChance>0.5</randomStyleChance>
+		<randomStyleChance>1</randomStyleChance>
 		<randomStyle>
 		  <li>
 			<styleDef>guy762_RankStyle_grandmoff</styleDef>
@@ -770,28 +905,7 @@
 		</colorGenerator>
 	  </ThingDef>
 	  
-	  
-	  
-	  
-	  
-	  
-	  
-	  
-	  
-	  
-	  
-	  
-	  
-	  
-	  
-	  
-	  
-	  
-	  
-	  
-	  
-	  
-	  
+
 	  
 	  <!--StyleCategoryDef>
 		<defName>guy762_RankStyleCategory_grandadmiral</defName>

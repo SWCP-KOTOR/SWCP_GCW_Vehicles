@@ -27,13 +27,17 @@
     <!--permanentEnemy>true</permanentEnemy>
 	<permanentEnemyToEveryoneExceptPlayer>true</permanentEnemyToEveryoneExceptPlayer-->
 	
-    <factionNameMaker>guy762_NamerFaction_CorruptRepublic</factionNameMaker>
+    <factionNameMaker>guy762_NamerFaction_ImperialReseveFleet</factionNameMaker>
 	<settlementNameMaker>guy762_NamerSettlement_ORStarfleet</settlementNameMaker>
 	
-	<leaderTitle>admiral</leaderTitle>
+	<leaderTitle>governor</leaderTitle>
 	<leaderForceGenerateNewPawn>true</leaderForceGenerateNewPawn>
 	<fixedLeaderKinds>
-      <li>KotORSith_governor</li>
+      <!-- <li>SWImpRemnant_Viceroy</li> too low ranking -->
+      <li>SWImpRemnant_Moff</li>
+      <!-- <li>SWImpRemnant_GrandMoff</li> should be story quest-only -->
+      <!-- <li>SWImpRemnant_NavyAdmiral</li> -->
+      <!-- <li>SWImpRemnant_ArmyGeneral</li> political officers only, Zsinj/Maldrood/Eriadu could use military officers instead -->
     </fixedLeaderKinds>
 	
 	<permanentEnemyToEveryoneExceptPlayer>true</permanentEnemyToEveryoneExceptPlayer>
@@ -68,7 +72,7 @@
 		<roleOverrides>
 			<li>
 				<preceptDef>IdeoRole_Leader</preceptDef>
-				<newName>Moff</newName>
+				<newName>Governor</newName>
 				<disableApparelRequirements>true</disableApparelRequirements>
 			</li>
 			<li MayRequire="VanillaExpanded.VMemesE">
@@ -585,5 +589,21 @@
   </ThingSetMakerDef>
 
   
+  
+  
+  <RulePackDef>
+    <defName>guy762_NamerFaction_ImperialReseveFleet</defName>
+    <include>
+		<li>guy762_NamerFaction_OR_files</li>
+	</include>
+	<rulePack>
+	  <rulesStrings>
+		<li>r_name(p=6)->[SWORFN_SmallFleetNumber] [SWORFN_SmallPlanet] [reservefleet]</li>
+		<li>r_name(p=12)->[SWORFN_BigFleetNumber] [SWORFN_BigPlanet] [reservefleet]</li>
+		
+		<li>reservefleet->Reserve Fleet</li>
+      </rulesStrings>
+    </rulePack>
+  </RulePackDef>
   
 </Defs>

@@ -602,7 +602,7 @@
 	
 	<PawnKindDef Name="SWImpRemnant_ArmyConscript" ParentName="SWImpRemnant_Base">
 		<defName>SWImpRemnant_ArmyConscript</defName>
-		<label>imperial army conscript</label>
+		<label>Imperial army conscript</label>
 		<combatPower>40</combatPower>
 		<minGenerationAge>15</minGenerationAge>
 		<maxGenerationAge>65</maxGenerationAge>
@@ -640,7 +640,7 @@
 	
 	<PawnKindDef Name="SWImpRemnant_ArmyTrooper" ParentName="SWImpRemnant_TrooperBase">
 		<defName>SWImpRemnant_ArmyTrooper</defName>
-		<label>imperial army trooper</label>
+		<label>Imperial army trooper</label>
 		<combatPower>65</combatPower>
 		<minGenerationAge>19</minGenerationAge>
 		<maxGenerationAge>65</maxGenerationAge>
@@ -702,7 +702,7 @@
 	
 	<PawnKindDef Name="SWImpRemnant_ArmyLieutenant" ParentName="SWImpRemnant_TrooperBase">
 		<defName>SWImpRemnant_ArmyLieutenant</defName>
-		<label>imperial army lieutenant</label>
+		<label>Imperial army lieutenant</label>
 		<combatPower>50</combatPower>
 		<minGenerationAge>22</minGenerationAge>
 		<maxGenerationAge>75</maxGenerationAge>
@@ -788,12 +788,12 @@
 	
 	
 	
-	<PawnKindDef Name="SWImpRemnant_ArmyGeneral_field" ParentName="SWImpRemnant_TrooperBase">
+	<PawnKindDef Name="SWImpRemnant_ArmyGeneral_field" ParentName="SWImpRemnant_Base">
 		<defName>SWImpRemnant_ArmyGeneral_field</defName>
-		<label>imperial army general</label>
+		<label>Imperial army general</label>
 		<combatPower>50</combatPower>
 		<minGenerationAge>35</minGenerationAge>
-		<maxGenerationAge>75</maxGenerationAge>
+		<maxGenerationAge>55</maxGenerationAge>
 		<itemQuality>Excellent</itemQuality>
 		
 		<maxPerGroup>1</maxPerGroup>
@@ -844,6 +844,10 @@
 				<skill>Social</skill>
 				<range>14~16</range>
 			</li>
+			<li>
+				<skill>Intellectual</skill>
+				<range>14~16</range>
+			</li>
 		</skills>
 		<inventoryOptions>
 			<skipChance>0</skipChance>
@@ -859,6 +863,83 @@
 		<initialResistanceRange>5~10</initialResistanceRange>
 		
 		<abilities>
+			<li MayRequire="Ludeon.RimWorld.Ideology">WorkDrive</li>
+			<li>guy762_Ability_CommandTierV</li>
+		</abilities>
+	</PawnKindDef>
+	
+	
+	<PawnKindDef Name="SWImpRemnant_ArmyGeneral" ParentName="SWImpRemnant_Base">
+		<defName>SWImpRemnant_ArmyGeneral</defName>
+		<label>Imperial army general</label>
+		<combatPower>40</combatPower>
+		<minGenerationAge>35</minGenerationAge>
+		<maxGenerationAge>75</maxGenerationAge>
+		<itemQuality>Excellent</itemQuality>
+		
+		<maxPerGroup>1</maxPerGroup>
+		
+		<xenotypeSet Inherit="False">
+		  <xenotypeChances>
+			<Baseliner MayRequire="Ludeon.RimWorld.Biotech">999</Baseliner>
+		  </xenotypeChances>
+		</xenotypeSet>
+		<useFactionXenotypes>false</useFactionXenotypes>
+
+		<apparelMoney>1500~5500</apparelMoney>
+		<apparelAllowHeadgearChance>0.75</apparelAllowHeadgearChance>
+		<apparelTags>
+			<li>KotOREquipment_officer</li>
+		</apparelTags>
+		<apparelRequired>
+			<li>guy762_UniformCap_imperial</li>
+			<li>guy762_ImpUniform_highbrass</li>
+		</apparelRequired>
+		<specificApparelRequirements>
+			<li>
+				<apparelLayer>OnSkin</apparelLayer>
+				<apparelDef>guy762_ImpUniform_highbrass</apparelDef>
+				<styleDef>guy762_RankStyle_armygen</styleDef>
+				<color>(125,125,110)</color>       <!-- imperial olive -->
+				<quality>Excellent</quality>
+			</li>
+		</specificApparelRequirements>
+
+		<biocodeWeaponChance>1</biocodeWeaponChance>
+		<weaponMoney>350</weaponMoney>
+		<weaponTags>
+			<li>SWRanged_RK3pistol</li>
+		</weaponTags>
+		
+		<skills>
+			<li>
+				<skill>Shooting</skill>
+				<range>4~6</range>
+			</li>
+			<li>
+				<skill>Social</skill>
+				<range>14~16</range>
+			</li>
+			<li>
+				<skill>Intellectual</skill>
+				<range>14~16</range>
+			</li>
+		</skills>
+		<inventoryOptions>
+			<skipChance>0</skipChance>
+			<subOptionsChooseOne>
+				<li>
+					<thingDef>guy762_medpac_life</thingDef>
+					<countRange>1~3</countRange>
+				</li>
+			</subOptionsChooseOne>
+		</inventoryOptions>
+
+		<initialWillRange>0.5~2</initialWillRange>
+		<initialResistanceRange>5~10</initialResistanceRange>
+		
+		<abilities>
+			<li MayRequire="Ludeon.RimWorld.Ideology">WorkDrive</li>
 			<li>guy762_Ability_CommandTierV</li>
 		</abilities>
 	</PawnKindDef>
@@ -869,7 +950,7 @@
 	
 	<PawnKindDef Name="SWImpRemnant_ArmyCommando" ParentName="SWImpRemnant_TrooperBase">
 		<defName>SWImpRemnant_ArmyCommando</defName>
-		<label>imperial army commando</label>
+		<label>Imperial army commando</label>
 		<combatPower>75</combatPower>
 		<minGenerationAge>19</minGenerationAge>
 		<maxGenerationAge>40</maxGenerationAge>
@@ -1082,7 +1163,7 @@
 	
 	<PawnKindDef Name="SWImpRemnant_NavyOfficer" ParentName="SWImpRemnant_Base">
 		<defName>SWImpRemnant_NavyOfficer</defName>
-		<label>navy lieutenant</label>
+		<label>Imperial navy lieutenant</label>
 		<combatPower>40</combatPower>
 		<minGenerationAge>23</minGenerationAge>
 		<maxGenerationAge>70</maxGenerationAge>
@@ -1149,9 +1230,233 @@
 		<initialResistanceRange>5~10</initialResistanceRange>
 		
 		<abilities>
-			<li>WorkDrive</li>
+			<!-- <li>WorkDrive</li> -->
 			<!-- <li>ProductionCommand</li> -->
 			<!-- <li>MarksmanCommand</li> -->
+		</abilities>
+	</PawnKindDef>
+	
+	<PawnKindDef Name="SWImpRemnant_NavyAdmiral" ParentName="SWImpRemnant_Base">
+		<defName>SWImpRemnant_NavyAdmiral</defName>
+		<label>Imperial navy admiral</label>
+		<combatPower>40</combatPower>
+		<minGenerationAge>35</minGenerationAge>
+		<maxGenerationAge>75</maxGenerationAge>
+		<itemQuality>Excellent</itemQuality>
+		
+		<maxPerGroup>1</maxPerGroup>
+		
+		<xenotypeSet Inherit="False">
+		  <xenotypeChances>
+			<Baseliner MayRequire="Ludeon.RimWorld.Biotech">999</Baseliner>
+		  </xenotypeChances>
+		</xenotypeSet>
+		<useFactionXenotypes>false</useFactionXenotypes>
+
+		<apparelMoney>1500~5500</apparelMoney>
+		<apparelAllowHeadgearChance>0.75</apparelAllowHeadgearChance>
+		<apparelTags>
+			<li>KotOREquipment_officer</li>
+		</apparelTags>
+		<apparelRequired>
+			<li>guy762_UniformCap_imperial</li>
+			<li>guy762_ImpUniform_highbrass</li>
+		</apparelRequired>
+		<specificApparelRequirements>
+			<li>
+				<apparelLayer>OnSkin</apparelLayer>
+				<apparelDef>guy762_ImpUniform_highbrass</apparelDef>
+				<styleDef>guy762_RankStyle_navyadmiral</styleDef>
+				<color>(125,125,110)</color>       <!-- imperial olive -->
+				<quality>Excellent</quality>
+			</li>
+		</specificApparelRequirements>
+
+		<biocodeWeaponChance>1</biocodeWeaponChance>
+		<weaponMoney>350</weaponMoney>
+		<weaponTags>
+			<li>SWRanged_RK3pistol</li>
+		</weaponTags>
+		
+		<skills>
+			<li>
+				<skill>Shooting</skill>
+				<range>4~6</range>
+			</li>
+			<li>
+				<skill>Social</skill>
+				<range>14~16</range>
+			</li>
+			<li>
+				<skill>Intellectual</skill>
+				<range>14~16</range>
+			</li>
+		</skills>
+		<inventoryOptions>
+			<skipChance>0</skipChance>
+			<subOptionsChooseOne>
+				<li>
+					<thingDef>guy762_medpac_life</thingDef>
+					<countRange>1~3</countRange>
+				</li>
+			</subOptionsChooseOne>
+		</inventoryOptions>
+
+		<initialWillRange>0.5~2</initialWillRange>
+		<initialResistanceRange>5~10</initialResistanceRange>
+		
+		<abilities>
+			<li MayRequire="Ludeon.RimWorld.Ideology">WorkDrive</li>
+			<li>guy762_Ability_CommandTierV</li>
+		</abilities>
+	</PawnKindDef>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<PawnKindDef Name="SWImpRemnant_Viceroy" ParentName="SWImpRemnant_Base">
+		<defName>SWImpRemnant_Viceroy</defName>
+		<label>Imperial Viceroy</label>
+		<combatPower>40</combatPower>
+		<minGenerationAge>35</minGenerationAge>
+		<maxGenerationAge>85</maxGenerationAge>
+		<itemQuality>Excellent</itemQuality>
+		
+		<maxPerGroup>1</maxPerGroup>
+		
+		<xenotypeSet Inherit="False">
+		  <xenotypeChances>
+			<Baseliner MayRequire="Ludeon.RimWorld.Biotech">999</Baseliner>
+		  </xenotypeChances>
+		</xenotypeSet>
+		<useFactionXenotypes>false</useFactionXenotypes>
+
+		<apparelMoney>1500~5500</apparelMoney>
+		<apparelAllowHeadgearChance>0.75</apparelAllowHeadgearChance>
+		<apparelTags>
+			<li>KotOREquipment_officer</li>
+		</apparelTags>
+		<apparelRequired>
+			<li>guy762_UniformCap_imperial</li>
+			<li>guy762_ImpUniform_midrank</li>
+		</apparelRequired>
+		<specificApparelRequirements>
+			<li>
+				<apparelLayer>OnSkin</apparelLayer>
+				<apparelDef>guy762_ImpUniform_midrank</apparelDef>
+				<styleDef>guy762_RankStyle_viceroy</styleDef>
+				<color>(125,125,110)</color>       <!-- imperial olive -->
+				<quality>Excellent</quality>
+			</li>
+		</specificApparelRequirements>
+
+		<biocodeWeaponChance>1</biocodeWeaponChance>
+		<weaponMoney>350</weaponMoney>
+		<weaponTags>
+			<li>SWRanged_RK3pistol</li>
+		</weaponTags>
+		
+		<skills>
+			<li>
+				<skill>Social</skill>
+				<range>12~14</range>
+			</li>
+		</skills>
+		<inventoryOptions>
+			<skipChance>0</skipChance>
+			<subOptionsChooseOne>
+				<li>
+					<thingDef>guy762_medpac_adv</thingDef>
+					<countRange>1~3</countRange>
+				</li>
+			</subOptionsChooseOne>
+		</inventoryOptions>
+
+		<initialWillRange>0.5~2</initialWillRange>
+		<initialResistanceRange>5~10</initialResistanceRange>
+		
+		<abilities>
+			<li MayRequire="Ludeon.RimWorld.Ideology">WorkDrive</li>
+			<li MayRequire="Ludeon.RimWorld.Ideology">ProductionCommand</li>
+			<li MayRequire="Ludeon.RimWorld.Ideology">FarmingCommand</li>
+			<li MayRequire="Ludeon.RimWorld.Ideology">MiningCommand</li>
+		</abilities>
+	</PawnKindDef>
+	
+	
+	
+	<PawnKindDef Name="SWImpRemnant_Moff" ParentName="SWImpRemnant_Base">
+		<defName>SWImpRemnant_Moff</defName>
+		<label>Imperial Moff</label>
+		<combatPower>40</combatPower>
+		<minGenerationAge>35</minGenerationAge>
+		<maxGenerationAge>85</maxGenerationAge>
+		<itemQuality>Excellent</itemQuality>
+		
+		<maxPerGroup>1</maxPerGroup>
+		
+		<xenotypeSet Inherit="False">
+		  <xenotypeChances>
+			<Baseliner MayRequire="Ludeon.RimWorld.Biotech">999</Baseliner>
+		  </xenotypeChances>
+		</xenotypeSet>
+		<useFactionXenotypes>false</useFactionXenotypes>
+
+		<apparelMoney>1500~5500</apparelMoney>
+		<apparelAllowHeadgearChance>0.75</apparelAllowHeadgearChance>
+		<apparelTags>
+			<li>KotOREquipment_officer</li>
+		</apparelTags>
+		<apparelRequired>
+			<!-- <li>guy762_UniformCap_imperial</li> -->
+			<li>guy762_ImpUniform_highbrass</li>
+		</apparelRequired>
+		<specificApparelRequirements>
+			<li>
+				<apparelLayer>OnSkin</apparelLayer>
+				<apparelDef>guy762_ImpUniform_highbrass</apparelDef>
+				<styleDef>guy762_RankStyle_moff</styleDef>
+				<color>(125,125,110)</color>       <!-- imperial olive -->
+				<quality>Excellent</quality>
+			</li>
+		</specificApparelRequirements>
+
+		<biocodeWeaponChance>1</biocodeWeaponChance>
+		<weaponMoney>350</weaponMoney>
+		<weaponTags>
+			<li>SWRanged_RK3pistol</li>
+		</weaponTags>
+		
+		<skills>
+			<li>
+				<skill>Social</skill>
+				<range>14~16</range>
+			</li>
+		</skills>
+		<inventoryOptions>
+			<skipChance>0</skipChance>
+			<subOptionsChooseOne>
+				<li>
+					<thingDef>guy762_medpac_life</thingDef>
+					<countRange>1~3</countRange>
+				</li>
+			</subOptionsChooseOne>
+		</inventoryOptions>
+
+		<initialWillRange>0.5~2</initialWillRange>
+		<initialResistanceRange>5~10</initialResistanceRange>
+		
+		<abilities>
+			<li MayRequire="Ludeon.RimWorld.Ideology">WorkDrive</li>
+			<!-- <li MayRequire="Ludeon.RimWorld.Ideology">ProductionCommand</li> -->
+			<!-- <li MayRequire="Ludeon.RimWorld.Ideology">FarmingCommand</li> -->
+			<!-- <li MayRequire="Ludeon.RimWorld.Ideology">MiningCommand</li> -->
+			<li MayRequire="Ludeon.RimWorld.Ideology">LeaderSpeech</li>
 		</abilities>
 	</PawnKindDef>
 	

@@ -601,7 +601,7 @@
 		</graphicData>
 		<statBases>
 			<Mass>3</Mass>
-			<MarketValue>10000</MarketValue>
+			<MarketValue>2500</MarketValue>
 			<MaxHitPoints>200</MaxHitPoints> <!-- +100 -->
 			<ArmorRating_Sharp>0.01</ArmorRating_Sharp>
 			<ArmorRating_Blunt>0.01</ArmorRating_Blunt>
@@ -701,7 +701,7 @@
 		</graphicData>
 		<statBases>
 			<Mass>3</Mass>
-			<MarketValue>10000</MarketValue>
+			<MarketValue>5000</MarketValue>
 			<MaxHitPoints>200</MaxHitPoints> <!-- +100 -->
 			<ArmorRating_Sharp>0.01</ArmorRating_Sharp>
 			<ArmorRating_Blunt>0.01</ArmorRating_Blunt>
@@ -768,7 +768,7 @@
 	  
 	  <ThingStyleDef>
 		<defName>guy762_RankStyle_armygen</defName>
-		<overrideLabel>imperial uniform, army general's</overrideLabel>
+		<overrideLabel>imperial uniform, general's</overrideLabel>
 		<wornGraphicPath>Apparel/Officer/armygeneral/Apparel</wornGraphicPath>
 		<graphicData>
 		  <texPath>Apparel/Officer/armygeneral/Apparel</texPath>
@@ -779,7 +779,7 @@
 	  
 	  <ThingStyleDef>
 		<defName>guy762_RankStyle_navyadmiral</defName>
-		<overrideLabel>imperial uniform, navy admiral's</overrideLabel>
+		<overrideLabel>imperial uniform, admiral's</overrideLabel>
 		<wornGraphicPath>Apparel/Officer/navyadmiral/Apparel</wornGraphicPath>
 		<graphicData>
 		  <texPath>Apparel/Officer/navyadmiral/Apparel</texPath>

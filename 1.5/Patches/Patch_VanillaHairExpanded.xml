@@ -56,6 +56,12 @@
 			  <forcedHair>VHE_Gangster</forcedHair>
 			</value>
 		</li>
+		<li Class="PatchOperationReplace">
+		  <xpath>Defs/PawnKindDef[@Name="SWWEPlayableVillain_Pellaeon"]/forcedHair</xpath>
+			<value>
+			  <forcedHair>VHE_Midlife</forcedHair>
+			</value>
+		</li>
 	  </operations>
 	</match>
   

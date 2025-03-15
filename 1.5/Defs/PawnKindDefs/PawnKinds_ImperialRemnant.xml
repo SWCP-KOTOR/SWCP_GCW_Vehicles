@@ -1161,8 +1161,8 @@
 	
 	
 	
-	<PawnKindDef Name="SWImpRemnant_NavyOfficer" ParentName="SWImpRemnant_Base">
-		<defName>SWImpRemnant_NavyOfficer</defName>
+	<PawnKindDef Name="SWImpRemnant_NavyLt" ParentName="SWImpRemnant_Base">
+		<defName>SWImpRemnant_NavyLt</defName>
 		<label>Imperial navy lieutenant</label>
 		<combatPower>40</combatPower>
 		<minGenerationAge>23</minGenerationAge>

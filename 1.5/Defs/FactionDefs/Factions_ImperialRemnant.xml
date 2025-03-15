@@ -258,6 +258,8 @@
 			<li>ImmediateAttackBreachingSmart</li>
 		</disallowedStrategies>
         <options>
+          <SWImpRemnant_scouttrooper>50</SWImpRemnant_scouttrooper>
+		  
           <SWImpRemnant_stormtrooper>100</SWImpRemnant_stormtrooper>
 		  <SWImpRemnant_stormiehvy>50</SWImpRemnant_stormiehvy>
 		  <SWImpRemnant_stormieofficer>100</SWImpRemnant_stormieofficer>
@@ -384,7 +386,7 @@
 			<li>ImmediateAttackBreaching</li>
 		</disallowedStrategies>
         <options>
-		  <KotORSith_operative>50</KotORSith_operative>
+		  <SWImpRemnant_stormcommando>50</SWImpRemnant_stormcommando>
 		  
 		  <KotORSith_assassin_PotF MayRequire="guy762.Lee.KotORPotF">100</KotORSith_assassin_PotF>
 		  
@@ -401,31 +403,33 @@
 		<kindDef>Settlement</kindDef> <!-- base -->
 		<commonality>1</commonality>
 		<options>
-		  <KotORCzrka_slave>5</KotORCzrka_slave>
-		  
-		  <KotORSith_ensign>10</KotORSith_ensign>
-		  <KotORSith_engineer>5</KotORSith_engineer>
+		  <SWImpRemnant_Worker>10</SWImpRemnant_Worker>
+		  <SWImpRemnant_Engineer>10</SWImpRemnant_Engineer>
+		  <SWImpRemnant_EngiCombat>5</SWImpRemnant_EngiCombat>
 		  
 		  <KotORCzrka_droid_GE3PD MayRequire="guy762.KotORDroids">1</KotORCzrka_droid_GE3PD>
 		  <KotORDroidGood_R8009 MayRequire="guy762.KotORDroids">2.5</KotORDroidGood_R8009>
 		  <KotORDroidGood_3C MayRequire="guy762.KotORDroids">0.5</KotORDroidGood_3C>
 		  
-		  <SWImpRemnant_NavyGuard>25</SWImpRemnant_NavyGuard>
-		  <SWImpRemnant_NavyTrooper>10</SWImpRemnant_NavyTrooper>
+		  <SWImpRemnant_NavyGuard>10</SWImpRemnant_NavyGuard>
+		  <SWImpRemnant_NavyTrooper>5</SWImpRemnant_NavyTrooper>
+		  <SWImpRemnant_NavyLt>5</SWImpRemnant_NavyLt>
+		  <SWImpRemnant_TIEpilot>5</SWImpRemnant_TIEpilot>
+		  <SWImpRemnant_TIEace>5</SWImpRemnant_TIEace>
 		  
-		  <KotORSith_elite>5</KotORSith_elite>
-		  <KotORSith_elitemelee>5</KotORSith_elitemelee>
+		  <SWImpRemnant_stormtrooper>5</SWImpRemnant_stormtrooper>
+		  <SWImpRemnant_stormieofficer>5</SWImpRemnant_stormieofficer>
 		  
 		  <KotORCzrka_droid_SentWD MayRequire="guy762.KotORDroids">10</KotORCzrka_droid_SentWD>
 		  <KotORCzrka_droid_ADMkI MayRequire="guy762.KotORDroids">5</KotORCzrka_droid_ADMkI>
 		  <KotORCzrka_droid_ADMkIV MayRequire="guy762.KotORDroids">5</KotORCzrka_droid_ADMkIV> <!-- czerka droids are used for sith bases because they're set to spawn with better quality gear -->
 		  
-		  <SWImpRemnant_TIEpilot>5</SWImpRemnant_TIEpilot>
-		  <SWImpRemnant_TIEace>5</SWImpRemnant_TIEace>
+		  <SWImpRemnant_ArmyTrooper>10</SWImpRemnant_ArmyTrooper>
+		  <SWImpRemnant_ArmyLieutenant>10</SWImpRemnant_ArmyLieutenant>
+		  <SWImpRemnant_ArmyGeneral>5</SWImpRemnant_ArmyGeneral>
 		  
-		  <SWImpRemnant_NavyOfficer>5</SWImpRemnant_NavyOfficer>
-		  <KotORSith_tactician>100</KotORSith_tactician>
-		  <KotORSith_captain>100</KotORSith_captain>
+		  <SWImpRemnant_Viceroy>5</SWImpRemnant_Viceroy>
+		  <SWImpRemnant_Moff>5</SWImpRemnant_Moff>
 		  
 		  <KotORSith_darkjedi_PotF MayRequire="guy762.Lee.KotORPotF">5</KotORSith_darkjedi_PotF>
 		  

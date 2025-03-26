@@ -25,16 +25,16 @@
 		<apparelTags>
 			<li>KotOREquipment_basic</li>
 			<li>KotORUtility_weakgrenade</li>
-			<li>KotORAccessory_trooper_withponcho</li>
+			<li>SWWarlordsAccessory_scumtrooper</li>
 		</apparelTags>
 		<apparelRequired>
-			<li>guy762_ArmyTrooperHelmet</li>
 			<li>guy762_ArmyTrooperArmor</li>
 			<li>guy762_ImpUniform_default</li>
 		</apparelRequired>
 		<specificApparelRequirements>
 			<li>
 				<apparelLayer>Overhead</apparelLayer>
+				<requiredTag>ZsinjEmpire_armytrooper</requiredTag>
 				<color>(90,90,90)</color>       <!-- mid grey -->
 			</li>
 			<li>
@@ -43,16 +43,18 @@
 			</li>
 			<li>
 				<apparelLayer>OnSkin</apparelLayer>
-				<color>(125,125,110)</color>       <!-- imperial olive -->
+				<color>(175,155,115)</color>       <!-- outer rim garrison beige -->
 			</li>
 		</specificApparelRequirements>
 
 		<biocodeWeaponChance>0</biocodeWeaponChance>
-		<weaponMoney>300~1600</weaponMoney>
+		<weaponMoney>250~2000</weaponMoney>
 		<weaponTags>
+			<li>SWRanged_E5rifle</li>
 			<li>SWRanged_E10rifle</li>
 			<li>SWRanged_E11carbine</li>
-			<li>SWRanged_E22rifle</li>
+			<li>SWRanged_E5Crifle</li>
+			<li>SWRanged_DLT18rifle</li>
 		</weaponTags>
 		
 		<skills>

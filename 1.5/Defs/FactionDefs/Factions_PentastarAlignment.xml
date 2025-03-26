@@ -1,0 +1,557 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+<FactionDef ParentName="FactionBase">
+    <defName>guy762_SWWarlordsFaction_Pentastar</defName>
+    <label>Pentastar Alignment fleet</label>
+    <description>.</description>
+    <pawnSingular>imperial</pawnSingular>
+    <pawnsPlural>imperials</pawnsPlural>
+    <categoryTag>Empire</categoryTag>
+    <requiredCountAtGameStart>1</requiredCountAtGameStart>
+    <maxConfigurableAtWorldCreation>9999</maxConfigurableAtWorldCreation>
+	<listOrderPriority>1763</listOrderPriority>
+	<configurationListOrderPriority>1763</configurationListOrderPriority>
+    <maxCountAtGameStart>1</maxCountAtGameStart>
+	<techLevel>Spacer</techLevel>
+    <canMakeRandomly>true</canMakeRandomly>
+    <canSiege>true</canSiege>
+    <canStageAttacks>true</canStageAttacks>
+	<hostileToFactionlessHumanlikes>true</hostileToFactionlessHumanlikes>
+    <factionIconPath>World/PentastarAlignment</factionIconPath>
+	<settlementTexturePath>World/WorldObjects/DefaultSettlement</settlementTexturePath>
+	<allowedArrivalTemperatureRange>-40~65</allowedArrivalTemperatureRange>
+    <colorSpectrum>
+      <li>RGB(65,70,190)</li>
+    </colorSpectrum>
+    <!--permanentEnemy>true</permanentEnemy>
+	<permanentEnemyToEveryoneExceptPlayer>true</permanentEnemyToEveryoneExceptPlayer-->
+	
+    <factionNameMaker>guy762_NamerFaction_ImperialReseveFleet</factionNameMaker>
+	<settlementNameMaker>guy762_NamerSettlement_ORStarfleet</settlementNameMaker>
+	
+	<leaderTitle>governor</leaderTitle>
+	<leaderForceGenerateNewPawn>true</leaderForceGenerateNewPawn>
+	<fixedLeaderKinds>
+      <!-- <li>SWImpRemnant_Viceroy</li> too low ranking -->
+      <li>SWImpRemnant_Moff</li>
+      <!-- <li>SWImpRemnant_GrandMoff</li> should be story quest-only -->
+      <!-- <li>SWImpRemnant_NavyAdmiral</li> -->
+      <!-- <li>SWImpRemnant_ArmyGeneral</li> political officers only, Zsinj/Maldrood/Eriadu could use military officers instead -->
+    </fixedLeaderKinds>
+	
+	<permanentEnemyToEveryoneExceptPlayer>true</permanentEnemyToEveryoneExceptPlayer>
+	<naturalEnemy>true</naturalEnemy>
+	<settlementGenerationWeight>2</settlementGenerationWeight>
+	<modExtensions Inherit="False">
+      <li MayRequire="Rick.FCP.Core.Tools.Beta" Class="FCP.Currencies.CurrencyReplacement">
+		<currency>guy762_KotORcredits</currency>
+	  </li>
+	  <li Class="FCP.Core.ModExtension_FactionBannedArrivalModes">
+		<arrivalModes>
+			<li>CenterDrop</li>
+			<li>RandomDrop</li>
+		</arrivalModes>
+	  </li>
+	  <li Class="VFECore.FactionDefExtension">
+		<startingGoodwillByFactionDefs>
+			<guy762_SWWarlordsFaction_ImpRemnant>-50~0</guy762_SWWarlordsFaction_ImpRemnant>
+			
+			<guy762_KotORFaction_HuttCartel>0</guy762_KotORFaction_HuttCartel>
+			<guy762_KotORFaction_ViciousHutts>0</guy762_KotORFaction_ViciousHutts>
+			
+			<guy762_KotORFaction_MandoClan>-25</guy762_KotORFaction_MandoClan>
+			<guy762_KotORFaction_SavageMandos>0~50</guy762_KotORFaction_SavageMandos>
+
+			<guy762_KotORFaction_Civilians>-50</guy762_KotORFaction_Civilians>
+
+		</startingGoodwillByFactionDefs>
+		<excludeFromCommConsole>false</excludeFromCommConsole>
+		<hasCities>true</hasCities>
+		<neverConnectToRoads>false</neverConnectToRoads>
+		<minDistanceToOtherSettlements>40</minDistanceToOtherSettlements>
+      </li>
+	  <li MayRequire="Rick.FCP.Core.Tools.Beta" Class="FCP.Core.ModExtension_FixedIdeo">
+		<ideoIconDef>guy762_IdeoIcon_empire</ideoIconDef>
+		<ideoColorDef>DarkGrey</ideoColorDef>
+		<memberName>Imperial</memberName>
+		<adjective>Imperial</adjective>
+		<roleOverrides>
+			<li>
+				<preceptDef>IdeoRole_Leader</preceptDef>
+				<newName>Governor</newName>
+				<disableApparelRequirements>true</disableApparelRequirements>
+			</li>
+			<li MayRequire="VanillaExpanded.VMemesE">
+				<preceptDef>guy762_KotORIdeoRole_Inquisitor</preceptDef>
+				<newName>COMPNOR Loyalty Officer</newName>
+				<disableApparelRequirements>true</disableApparelRequirements>
+				<!-- <apparelRequirementsOverride></apparelRequirementsOverride> -->
+			</li>
+			<!-- <li> -->
+				<!-- <preceptDef>IdeoRole_MeleeSpecialist</preceptDef> -->
+				<!-- <newName>Marauder</newName> -->
+				<!-- <disableApparelRequirements>true</disableApparelRequirements> -->
+				<!-- <apparelRequirementsOverride></apparelRequirementsOverride> -->
+			<!-- </li> -->
+		</roleOverrides>
+	  </li>
+    </modExtensions>
+	<!--permanentEnemyToEveryoneExcept>
+      <li>OutlanderCivil</li>
+      <li>TribeCivil</li>
+      <li>PlayerTribe</li>
+      <li>PlayerColony</li>
+      <li>Ancients</li>
+      <li MayRequire="Ludeon.RimWorld.Ideology">Beggars</li>
+      <li MayRequire="Ludeon.RimWorld.Anomaly">ResearchExpedition</li>
+    </permanentEnemyToEveryoneExcept-->
+	
+	
+    <allowedCultures>
+		<li>guy762_culture_coreworlds</li>
+	</allowedCultures>
+	
+	<requiredMemes>
+		<li>guy762_MemeDef_corruptrepublic</li>
+		<li MayRequire="VanillaExpanded.VMemesE">VME_Nationalist</li>
+		<li MayRequire="Ludeon.RimWorld.Ideology">Individualist</li>
+	</requiredMemes>
+	<allowedMemes>
+		<li MayRequire="VanillaExpanded.VMemesE">VME_Republic</li>
+		<li MayRequire="VanillaExpanded.VMemesE">VME_CityBuilders</li>
+		<li MayRequire="VanillaExpanded.VMemesE">VME_Healthcare</li>
+		<li MayRequire="VanillaExpanded.VMemesE">VME_Progressive</li>
+		<li MayRequire="Ludeon.RimWorld.Ideology">HumanPrimacy</li>
+		
+		<li MayRequire="VanillaExpanded.VMemesE">VME_Structure_Authoritarianism</li>
+		<li MayRequire="Ludeon.RimWorld.Ideology">Structure_Ideological</li>
+	</allowedMemes>
+	<disallowedPrecepts>
+		<li MayRequire="Ludeon.RimWorld.Ideology">ApparelDesired_Strong_Subordinate</li>
+		<li MayRequire="Ludeon.RimWorld.Ideology">ApparelDesired_Soft_Subordinate</li>
+		<li MayRequire="Ludeon.RimWorld.Ideology">NobleDespisedWeapons</li>
+		
+		<li MayRequire="erdelf.HumanoidAlienRaces">HAR_AlienRaces_Abhorrent</li>
+		<li MayRequire="erdelf.HumanoidAlienRaces">HAR_AlienRaces_Horrible</li>
+		
+		<li MayRequire="erdelf.HumanoidAlienRaces">HAR_EatingAliens_Acceptable</li>
+		<li MayRequire="erdelf.HumanoidAlienRaces">HAR_EatingAliens_Preferred</li>
+		<li MayRequire="erdelf.HumanoidAlienRaces">HAR_EatingAliens_RequiredStrong</li>
+		
+		<li MayRequire="Ludeon.RimWorld.Ideology">Execution_Abhorrent</li>
+		<li MayRequire="Ludeon.RimWorld.Ideology">Execution_Horrible</li>
+		<li MayRequire="Ludeon.RimWorld.Ideology">Execution_HorribleIfInnocent</li>
+		
+		<li MayRequire="Ludeon.RimWorld.Ideology">Cannibalism_Preferred</li>
+		<li MayRequire="Ludeon.RimWorld.Ideology">Cannibalism_RequiredStrong</li>
+		<li MayRequire="Ludeon.RimWorld.Ideology">Cannibalism_RequiredRavenous</li>
+		
+		<!--<li MayRequire="Ludeon.RimWorld.Ideology">Raiding_Respected</li>
+		<li MayRequire="Ludeon.RimWorld.Ideology">Raiding_Required</li>-->
+	</disallowedPrecepts>
+	
+	<!--structureMemeWeights>
+	  <Structure_TheistEmbodied MayRequire="Ludeon.RimWorld.Ideology">0</Structure_TheistEmbodied>
+	  <Structure_TheistAbstract MayRequire="Ludeon.RimWorld.Ideology">0.75</Structure_TheistAbstract>
+	  <Structure_Ideological MayRequire="Ludeon.RimWorld.Ideology">0.5</Structure_Ideological>
+	  <Structure_Archist MayRequire="Ludeon.RimWorld.Ideology">0</Structure_Archist>
+	  <Structure_OriginChristian MayRequire="Ludeon.RimWorld.Ideology">0</Structure_OriginChristian>
+	  <Structure_OriginIslamic MayRequire="Ludeon.RimWorld.Ideology">0</Structure_OriginIslamic>
+	  <Structure_OriginHindu MayRequire="Ludeon.RimWorld.Ideology">0</Structure_OriginHindu>
+	  <Structure_OriginBuddhist MayRequire="Ludeon.RimWorld.Ideology">0</Structure_OriginBuddhist>
+	</structureMemeWeights-->
+	
+	<xenotypeSet>
+	  <xenotypeChances>
+		<Baseliner MayRequire="Ludeon.RimWorld.Biotech">0.90</Baseliner>
+		<guy762_xenotype_arkanian MayRequire="guy762.StarWarsXenotypes">0.01</guy762_xenotype_arkanian>
+		<guy762_xenotype_echani MayRequire="guy762.StarWarsXenotypes">0.01</guy762_xenotype_echani>
+		<guy762_xenotype_mirialan MayRequire="guy762.StarWarsXenotypes">0.01</guy762_xenotype_mirialan>
+		<guy762_xenotype_pantoran MayRequire="guy762.StarWarsXenotypes">0.01</guy762_xenotype_pantoran>
+		<guy762_xenotype_umbaran MayRequire="guy762.StarWarsXenotypes">0.01</guy762_xenotype_umbaran>
+		<guy762_xenotype_zabrak MayRequire="guy762.StarWarsXenotypes">0.01</guy762_xenotype_zabrak>
+		<guy762_xenotype_zeltron MayRequire="guy762.StarWarsXenotypes">0.01</guy762_xenotype_zeltron><!-- total 0.97 -->
+	  </xenotypeChances>
+	</xenotypeSet>
+		
+    <backstoryFilters>
+      <li>
+        <categories>
+          <li>ImperialCommon</li>
+        </categories>
+		<commonality>0.75</commonality>
+      </li>
+	  <li>
+        <categories>
+          <li>Offworld</li>
+        </categories>
+        <commonality>0.25</commonality>
+      </li>
+    </backstoryFilters>
+	
+	
+	<!--caravanTraderKinds>
+      <li>Caravan_Outlander_BulkGoods</li>
+      <li>Caravan_Outlander_CombatSupplier</li>
+      <li>Caravan_Outlander_Exotic</li>
+      <li>Caravan_Outlander_PirateMerchant</li>
+    </caravanTraderKinds>
+    <visitorTraderKinds>
+      <li>Visitor_Outlander_Standard</li>
+    </visitorTraderKinds>
+    <baseTraderKinds>
+      <li>Base_Outlander_Standard</li>
+    </baseTraderKinds-->
+	
+	
+    <maxPawnCostPerTotalPointsCurve>
+      <points>
+        <li>(0,50)</li> <!-- cost of patrol droids -->
+        <li>(200, 95)</li> <!-- includes troopers/lieutenants -->
+        <li>(750, 150)</li> <!-- includes heavies/elites/sentinels/operatives/acolytes -->
+        <li>(2500, 250)</li> <!-- includes shocktroops/assaultdroid mk1/assassins/warriors -->
+        <li>(1501, 10000)</li> <!-- includes marauders/redguards and unused commandos -->
+      </points>
+    </maxPawnCostPerTotalPointsCurve>
+	
+	<apparelStuffFilter>
+      <thingDefs>
+        <li>Synthread</li>
+        <li>KOTOR_FabricArmorweave</li>
+		<li>Plasteel</li>
+		<li>KOTOR_AlloyDurasteel</li>
+      </thingDefs>
+    </apparelStuffFilter>
+	
+	
+	
+    <pawnGroupMakers>
+	  <li Class="taranchuk_flightcombat.PawnGroupMaker_FlightRaid">
+			<kindDef>Combat</kindDef>
+			<commonality>10000</commonality>
+			<minPoints>2000</minPoints>
+			<minAircraftCount>4</minAircraftCount>
+			<maxAircraftCount>10</maxAircraftCount>
+			<options>
+				<guy762_SWVehicle_TIEFighter_bot_PawnKind>5</guy762_SWVehicle_TIEFighter_bot_PawnKind>
+				<guy762_SWVehicle_TIEInterceptor_bot_PawnKind>2</guy762_SWVehicle_TIEInterceptor_bot_PawnKind>
+				<guy762_SWVehicle_TIEBomber_bot_PawnKind>3</guy762_SWVehicle_TIEBomber_bot_PawnKind>
+				<guy762_SWVehicle_TIEDefender_bot_PawnKind>1</guy762_SWVehicle_TIEDefender_bot_PawnKind>
+			</options>
+	  </li>
+	  
+	  
+	  <li>
+		<kindDef>Peaceful</kindDef>
+		<options>
+		  <SWPentastar_EnforcerTrooper>100</SWPentastar_EnforcerTrooper>
+		  <SWPentastar_ArmyLieutenant>50</SWPentastar_ArmyLieutenant>
+		</options>
+	  </li>
+		  
+      <li>
+        <!-- enforcer raid -->
+        <kindDef>Combat</kindDef>
+        <commonality>100</commonality>
+		<disallowedStrategies>
+			<li>Siege</li>
+			<li>EmergeFromWater</li>
+			<li>StageThenAttack</li>
+			<li>ImmediateAttackSappers</li>
+			<li>ImmediateAttackBreaching</li>
+			<li>ImmediateAttackBreachingSmart</li>
+		</disallowedStrategies>
+        <options>
+          <SWPentastar_EnforcerTrooper>50</SWPentastar_EnforcerTrooper>
+		  <SWPentastar_ArmyLieutenant>25</SWPentastar_ArmyLieutenant>
+		  
+		  <KotORSith_droid_MPDMkI MayRequire="guy762.KotORDroids">75</KotORSith_droid_MPDMkI>
+		  <KotORSith_droid_SentWD MayRequire="guy762.KotORDroids">25</KotORSith_droid_SentWD>
+        </options>
+      </li>
+	  
+	  <li>
+        <!-- army skirmish -->
+        <kindDef>Combat</kindDef>
+        <commonality>75</commonality>
+		<disallowedStrategies>
+			<li>Siege</li>
+			<li>EmergeFromWater</li>
+			<li>ImmediateAttackSmart</li>
+			<li>ImmediateAttackSappers</li>
+			<li>ImmediateAttackBreaching</li>
+			<li>ImmediateAttackBreachingSmart</li>
+		</disallowedStrategies>
+        <options>
+          <SWPentastar_ArmyTrooper>100</SWPentastar_ArmyTrooper>
+          <!-- <SWPentastar_ArmyHeavy>50</SWPentastar_ArmyHeavy> -->
+          <!-- <SWPentastar_ArmySniper>25</SWPentastar_ArmySniper> -->
+		  <SWPentastar_ArmyLieutenant>50</SWPentastar_ArmyLieutenant>
+        </options>
+      </li>
+	  
+	  <li>
+        <!-- territory intrusion -->
+        <kindDef>Combat</kindDef>
+        <commonality>50</commonality>
+		<disallowedStrategies>
+			<li>EmergeFromWater</li>
+			<li>ImmediateAttack</li>
+			<li>ImmediateAttackSmart</li>
+			<li>ImmediateAttackSappers</li>
+			<li>ImmediateAttackBreaching</li>
+			<li>ImmediateAttackBreachingSmart</li>
+		</disallowedStrategies>
+        <options>
+          <SWPentastar_ArmyTrooper>100</SWPentastar_ArmyTrooper>
+          <!-- <SWPentastar_ArmyHeavy>50</SWPentastar_ArmyHeavy> -->
+          <!-- <SWPentastar_ArmySniper>25</SWPentastar_ArmySniper> -->
+		  
+          <SWPentastar_ArmyLieutenant>100</SWPentastar_ArmyLieutenant>
+        </options>
+      </li>
+	  
+	  <li>
+        <!-- assault -->
+        <kindDef>Combat</kindDef>
+        <commonality>25</commonality>
+		<disallowedStrategies>
+			<li>Siege</li>
+			<li>StageThenAttack</li>
+			<li>ImmediateAttack</li>
+		</disallowedStrategies>
+        <options>
+		  <SWPentastar_ArmyTrooper>100</SWPentastar_ArmyTrooper>
+          <!-- <SWPentastar_ArmyHeavy>50</SWPentastar_ArmyHeavy> -->
+          <!-- <SWPentastar_ArmySniper>25</SWPentastar_ArmySniper> -->
+          <SWPentastar_ArmyLieutenant>100</SWPentastar_ArmyLieutenant>
+		  
+          <SWImpRemnant_ArmyCommando>50</SWImpRemnant_ArmyCommando>
+		  
+		  <SWPentastar_InQuestor_PotF MayRequire="guy762.Lee.KotORPotF">10</SWPentastar_InQuestor_PotF>
+		  
+		  <SWPentastar_InQuestor_VPE MayRequire="lee.theforce.psycast">10</SWPentastar_InQuestor_VPE>
+        </options>
+      </li>
+	  
+	  
+	  <li>
+        <!-- mega assault -->
+        <kindDef>Combat</kindDef>
+        <commonality>25</commonality>
+		<disallowedStrategies>
+			<li>Siege</li>
+			<li>StageThenAttack</li>
+			<li>ImmediateAttack</li>
+		</disallowedStrategies>
+        <options>
+		  <SWPentastar_ArmyTrooper>100</SWPentastar_ArmyTrooper>
+          <!-- <SWPentastar_ArmyHeavy>50</SWPentastar_ArmyHeavy> -->
+          <!-- <SWPentastar_ArmySniper>25</SWPentastar_ArmySniper> -->
+          <SWPentastar_ArmyLieutenant>100</SWPentastar_ArmyLieutenant>
+		  
+          <SWPentastar_ArmyGeneral_field>100</SWPentastar_ArmyGeneral_field>
+		  
+          <SWImpRemnant_ArmyCommando>50</SWImpRemnant_ArmyCommando>
+		  
+		  <SWPentastar_InQuestor_PotF MayRequire="guy762.Lee.KotORPotF">10</SWPentastar_InQuestor_PotF>
+		  
+		  <SWPentastar_InQuestor_VPE MayRequire="lee.theforce.psycast">10</SWPentastar_InQuestor_VPE>
+        </options>
+      </li>
+
+	  
+	  
+	  <li>
+        <!-- assassination team -->
+        <kindDef>Combat</kindDef>
+        <commonality>10</commonality>
+		<disallowedStrategies>
+			<li>Siege</li>
+			<li>StageThenAttack</li>
+			<li>ImmediateAttack</li>
+			<li>ImmediateAttackBreaching</li>
+		</disallowedStrategies>
+        <options>
+		  <SWImpRemnant_ArmyCommando>50</SWImpRemnant_ArmyCommando>
+		  
+		  <SWPentastar_InQuestor_PotF MayRequire="guy762.Lee.KotORPotF">100</SWPentastar_InQuestor_PotF>
+		  
+		  <SWPentastar_InQuestor_VPE MayRequire="lee.theforce.psycast">100</SWPentastar_InQuestor_VPE>
+        </options>
+      </li>
+	  
+	  
+	  
+	  
+	  
+
+	  <li>
+		<kindDef>Settlement</kindDef> <!-- base -->
+		<commonality>1</commonality>
+		<options>
+		  <SWImpRemnant_Worker>10</SWImpRemnant_Worker>
+		  <SWImpRemnant_Engineer>10</SWImpRemnant_Engineer>
+		  <SWImpRemnant_EngiCombat>5</SWImpRemnant_EngiCombat>
+		  
+		  <SWPentastar_EnforcerTrooper>25</SWPentastar_EnforcerTrooper>
+
+		  <SWImpRemnant_NavyLt>5</SWImpRemnant_NavyLt>
+		  <SWPentastar_TIEpilot>5</SWPentastar_TIEpilot>
+		  <SWImpRemnant_TIEace>5</SWImpRemnant_TIEace>
+
+		  <SWPentastar_ArmyTrooper>10</SWPentastar_ArmyTrooper>
+          <!-- <SWPentastar_ArmyHeavy>5</SWPentastar_ArmyHeavy> -->
+          <!-- <SWPentastar_ArmySniper>5</SWPentastar_ArmySniper> -->
+          <SWPentastar_ArmyLieutenant>10</SWPentastar_ArmyLieutenant>
+		  <SWPentastar_ArmyGeneral>5</SWPentastar_ArmyGeneral>
+		  
+		  <SWImpRemnant_Viceroy>5</SWImpRemnant_Viceroy>
+		  <SWImpRemnant_Moff>5</SWImpRemnant_Moff>
+		  
+		  <SWPentastar_InQuestor_PotF MayRequire="guy762.Lee.KotORPotF">10</SWPentastar_InQuestor_PotF>
+		  
+		  <SWPentastar_InQuestor_VPE MayRequire="lee.theforce.psycast">10</SWPentastar_InQuestor_VPE>
+		</options>
+	  </li>
+
+	  
+	  
+    </pawnGroupMakers>
+	
+	<raidLootMaker>guy762_RaidLootMaker_Pentastar</raidLootMaker>
+  </FactionDef>
+  
+  
+  
+  
+  <ThingSetMakerDef>
+    <defName>guy762_RaidLootMaker_Pentastar</defName>
+	<root Class="ThingSetMaker_Sum">
+      <options>
+        <li>
+          <thingSetMaker Class="ThingSetMaker_MarketValue">
+            <fixedParams>
+				<filter>
+				  <thingDefs>
+					<li>guy762_KotORcredits</li>
+					
+					<li>MealSurvivalPack</li>
+					
+					<li>KOTOR_SpacerMedKit</li>
+					<li>KOTOR_PlasmaCartridge</li>
+					<li>KOTOR_FabricArmorweave</li>
+				  </thingDefs>
+				</filter>
+			</fixedParams>
+          </thingSetMaker>
+        </li>
+		<li>
+          <thingSetMaker  Class="ThingSetMaker_RandomOption">
+            <options>
+              <li>
+                <weight>5</weight>
+                <thingSetMaker Class="ThingSetMaker_MarketValue">
+                  <fixedParams>
+                    <filter>
+                      <tradeTagsToAllow>
+						<li>guy762TT_weaponmod_basic</li>
+						<li>guy762TT_armormod_basic</li>
+						<li>guy762TT_implants_basic</li>
+						<li>guy762TT_KotORStims</li>
+						<li>guy762TT_DroidWeapons_light</li>
+						<li>guy762TT_DroidShields</li>
+					  </tradeTagsToAllow>
+                    </filter>
+                  </fixedParams>
+                </thingSetMaker>
+              </li>
+              <li>
+                <weight>1</weight>
+                <thingSetMaker Class="ThingSetMaker_MarketValue">
+                  <fixedParams>
+                    <filter>
+                      <tradeTagsToAllow>
+						<li>guy762TT_weaponmod_adv</li>
+						<li>guy762TT_armormod_adv</li>
+						<li>guy762TT_sabermod_basic</li>
+						<li>guy762TT_implants_adv</li>
+						<li>guy762TT_KotORHyperStims</li>
+						<li>guy762TT_DroidUpgrades</li>
+						<li>guy762TT_DroidWeapons_heavy</li>
+					  </tradeTagsToAllow>
+                    </filter>
+                  </fixedParams>
+                </thingSetMaker>
+              </li>
+              <li>
+                <weight>0.5</weight>
+                <thingSetMaker Class="ThingSetMaker_MarketValue">
+                  <fixedParams>
+                    <filter>
+                      <tradeTagsToAllow>
+						<li>guy762TT_weaponmod_rare</li>
+						<li>guy762TT_sabermod_adv</li>
+						<li>guy762TT_implants_rare</li>
+						<li>guy762TT_DroidUpgrades_rare</li>
+						
+						<!-- THE TRADETAG PALETTE:
+						<li>guy762TT_weaponmod_basic</li>
+						<li>guy762TT_weaponmod_adv</li>
+						<li>guy762TT_weaponmod_rare</li>
+						
+						<li>guy762TT_sabermod_basic</li>
+						<li>guy762TT_sabermod_adv</li>
+						<li>guy762TT_sabermod_rare</li>
+						
+						<li>guy762TT_armormod_basic</li>
+						<li>guy762TT_armormod_adv</li>
+						
+						<li>guy762TT_DroidWeapons_light</li>
+						<li>guy762TT_DroidWeapons_heavy</li>
+						
+						<li>guy762TT_DroidShields</li>
+						
+						<li>guy762TT_DroidUpgrades</li>
+						<li>guy762TT_DroidUpgrades_rare</li>
+						
+						<li>guy762TT_implants_basic</li>
+						<li>guy762TT_implants_adv</li>
+						<li>guy762TT_implants_rare</li>
+						<li>guy762TT_implants_DPkg</li>
+						
+						<li>guy762TT_KotORStims</li>
+						<li>guy762TT_KotORHyperStims</li>
+						-->
+					  </tradeTagsToAllow>
+                    </filter>
+                  </fixedParams>
+                </thingSetMaker>
+              </li>
+            </options>
+          </thingSetMaker>
+        </li>
+      </options>
+    </root>
+  </ThingSetMakerDef>
+
+  
+  
+  
+  <!-- <RulePackDef> -->
+    <!-- <defName>guy762_NamerFaction_ImperialReseveFleet</defName> -->
+    <!-- <include> -->
+		<!-- <li>guy762_NamerFaction_OR_files</li> -->
+	<!-- </include> -->
+	<!-- <rulePack> -->
+	  <!-- <rulesStrings> -->
+		<!-- <li>r_name(p=6)->[SWORFN_SmallFleetNumber] [SWORFN_SmallPlanet] [reservefleet]</li> -->
+		<!-- <li>r_name(p=12)->[SWORFN_BigFleetNumber] [SWORFN_BigPlanet] [reservefleet]</li> -->
+		
+		<!-- <li>reservefleet->Reserve Fleet</li> -->
+      <!-- </rulesStrings> -->
+    <!-- </rulePack> -->
+  <!-- </RulePackDef> -->
+  
+</Defs>

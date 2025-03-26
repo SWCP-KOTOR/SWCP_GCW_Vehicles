@@ -16,7 +16,7 @@
 		<graphicData>
 			<texPath>Starfighters/R41Starchaser/R41</texPath>
 			<graphicClass>Vehicles.Graphic_Vehicle</graphicClass>
-			<drawSize>(9,9)</drawSize>
+			<drawSize>(12,12)</drawSize>
 			<shaderType>CutoutComplexPattern</shaderType>
 			<pattern>guy762_SWVehiclePattern_R41SCA</pattern>
 			<color>(140,60,60)</color> <!-- red -->
@@ -31,7 +31,7 @@
 		<fillPercent>1</fillPercent>
 		<nameable>true</nameable>
 		<buildDef>guy762_SWVehicleBP_R41SC</buildDef>
-		<size>(8,8)</size>
+		<size>(9,10)</size>
 		<vehicleMovementPermissions>DriverNeeded</vehicleMovementPermissions>
 		
 		<canCaravan>false</canCaravan>
@@ -56,10 +56,10 @@
 		</statBases>
 		<vehicleStats>
 			<Mass>350</Mass>
-			<MoveSpeed>8.6</MoveSpeed>
+			
 			<FlightSpeed>12</FlightSpeed> <!-- this is for world map flight, NOT in-tile flight-->
 			<CargoCapacity>110</CargoCapacity>
-			<SoS2CombatDodgeChance>27.5</SoS2CombatDodgeChance> <!-- 3/8 chance to dodge on XWMG green dice = 0.375 | 0.375*10 + 10 = 13.75 | 13.75 * X = SoS2DC | X = estimated # of XWMG green dice -->
+			<SoS2CombatDodgeChance MayRequire="kentington.saveourship2">27.5</SoS2CombatDodgeChance> <!-- 3/8 chance to dodge on XWMG green dice = 0.375 | 0.375*10 + 10 = 13.75 | 13.75 * X = SoS2DC | X = estimated # of XWMG green dice -->
 		</vehicleStats>
 		
 		<race>
@@ -111,7 +111,7 @@
 			</li>
 			
 			<li Class="CompProperties_ProjectileInterceptor">
-				<radius>5</radius>
+				<radius>6</radius>
 				<color>(0.4, 0.4, 0.4)</color>
 				
 				<interceptGroundProjectiles>true</interceptGroundProjectiles>
@@ -165,9 +165,9 @@
 				<fuelConsumptionPerTick>0.00001</fuelConsumptionPerTick>
 				
 				<flightSpeedPerTick>0.8</flightSpeedPerTick> <!-- MAXIMUM XWMG speed: speed5 = 1, speed1 = 0.2 | + 0.1 for blue 5, -0.1 for red highest -->
-				<flightSpeedTurningPerTick>0.6</flightSpeedTurningPerTick> <!-- highest speed in which all 5 standard maneuvers are available | +0.1 for a full row of blues, -0.1 for more than two reds -->
+				<flightSpeedTurningPerTick>0.6</flightSpeedTurningPerTick> <!-- highest speed in which all 5 standard maneuvers are available | +0.1 for a full row of blues, -0.1 for any red turns -->
 				<turnAnglePerTick>2</turnAnglePerTick> <!-- USE SLOWEST POSSIBLE TURN: speed1 turn = 4, speed2 turn = 2, speed3 turn = 1 | banks = 0.75, 0.5, 0.25 | -1 for red slowest -->
-				<turnAngleCirclingPerTick>1</turnAngleCirclingPerTick> <!-- use fastest possible turn -->
+				<turnAngleCirclingPerTick>1</turnAngleCirclingPerTick> <!-- use fastest possible turn | -0.5 for red fastest -->
 				
 				<distanceFromTargetToStartTurningChaseMode>20</distanceFromTargetToStartTurningChaseMode>
 				<distanceFromTargetToStartTurningCircleMode>10</distanceFromTargetToStartTurningCircleMode>
@@ -185,7 +185,7 @@
 				<flightGraphicData>
 					<texPath>Starfighters/R41Starchaser/R41</texPath>
 					<graphicClass>Vehicles.Graphic_Vehicle</graphicClass>
-					<drawSize>(9,9)</drawSize>
+					<drawSize>(12,12)</drawSize>
 					<shaderType>CutoutComplexPattern</shaderType>
 					<pattern>guy762_SWVehiclePattern_R41SCA</pattern>
 					<color>(140,60,60)</color> <!-- red -->
@@ -252,9 +252,7 @@
 						<turretDef>guy762_VehicleTurret_R41_Main</turretDef>
 						
 						<renderProperties>
-							<north>(-3.55, 1)</north>
-							<south>(-1, -3.5)</south>
-							<east>(3.5, -1.2)</east>
+							<north>(-4.7, 1.2)</north>
 						</renderProperties>
 						<defaultAngleRotated>0</defaultAngleRotated>
 						<angleRestricted>(315,45)</angleRestricted>
@@ -268,9 +266,7 @@
 						<turretDef>guy762_VehicleTurret_R41_Main</turretDef>
 						
 						<renderProperties>
-							<north>(3.55, 1)</north>
-							<south>(-1, -3.5)</south>
-							<east>(3.5, -1.2)</east>
+							<north>(4.7, 1.2)</north>
 						</renderProperties>
 						<defaultAngleRotated>0</defaultAngleRotated>
 						<angleRestricted>(315,45)</angleRestricted>
@@ -287,9 +283,7 @@
 						<turretDef>guy762_VehicleTurret_IonTag</turretDef>
 						
 						<renderProperties>
-							<north>(-1.285, 3.25)</north>
-							<south>(-1, -3.5)</south>
-							<east>(3.5, -1.2)</east>
+							<north>(-1.7, 4)</north>
 						</renderProperties>
 						<defaultAngleRotated>0</defaultAngleRotated>
 						<angleRestricted>(355,5)</angleRestricted>
@@ -303,9 +297,7 @@
 						<turretDef>guy762_VehicleTurret_IonTag</turretDef>
 						
 						<renderProperties>
-							<north>(1.285, 3.25)</north>
-							<south>(-1, -3.5)</south>
-							<east>(3.5, -1.2)</east>
+							<north>(1.7, 4)</north>
 						</renderProperties>
 						<defaultAngleRotated>0</defaultAngleRotated>
 						<angleRestricted>(355,5)</angleRestricted>

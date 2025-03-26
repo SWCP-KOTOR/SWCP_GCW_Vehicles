@@ -16,7 +16,7 @@
 		<graphicData>
 			<texPath>Starfighters/Kimogila/Kimogila</texPath>
 			<graphicClass>Vehicles.Graphic_Vehicle</graphicClass>
-			<drawSize>(14,14)</drawSize>
+			<drawSize>(20,20)</drawSize>
 			<shaderType>CutoutComplexPattern</shaderType>
 			<pattern>guy762_SWVehiclePattern_KimogilaA</pattern>
 			<color>(135,95,90)</color> <!-- lighter sand red -->
@@ -31,7 +31,7 @@
 		<fillPercent>1</fillPercent>
 		<nameable>true</nameable>
 		<buildDef>guy762_SWVehicleBP_Kimogila</buildDef>
-		<size>(10,10)</size>
+		<size>(14,14)</size>
 		<vehicleMovementPermissions>DriverNeeded</vehicleMovementPermissions>
 		
 		<canCaravan>false</canCaravan>
@@ -56,10 +56,10 @@
 		</statBases>
 		<vehicleStats>
 			<Mass>750</Mass>
-			<MoveSpeed>8.6</MoveSpeed>
+			
 			<FlightSpeed>12</FlightSpeed> <!-- this is for world map flight, NOT in-tile flight-->
 			<CargoCapacity>110</CargoCapacity>
-			<SoS2CombatDodgeChance>13.75</SoS2CombatDodgeChance> <!-- 3/8 chance to dodge on XWMG green dice = 0.375 | 0.375*10 + 10 = 13.75 | 13.75 * X = SoS2DC | X = estimated # of XWMG green dice -->
+			<SoS2CombatDodgeChance MayRequire="kentington.saveourship2">13.75</SoS2CombatDodgeChance> <!-- 3/8 chance to dodge on XWMG green dice = 0.375 | 0.375*10 + 10 = 13.75 | 13.75 * X = SoS2DC | X = estimated # of XWMG green dice -->
 		</vehicleStats>
 		
 		<race>
@@ -114,7 +114,7 @@
 			</li>
 			
 			<li Class="CompProperties_ProjectileInterceptor">
-				<radius>7</radius>
+				<radius>9</radius>
 				<color>(0.4, 0.4, 0.4)</color>
 				
 				<interceptGroundProjectiles>true</interceptGroundProjectiles>
@@ -168,9 +168,9 @@
 				<fuelConsumptionPerTick>0.001</fuelConsumptionPerTick>
 				
 				<flightSpeedPerTick>0.6</flightSpeedPerTick> <!-- MAXIMUM XWMG speed: speed5 = 1, speed1 = 0.2 | + 0.1 for blue 5, -0.1 for red highest -->
-				<flightSpeedTurningPerTick>0.6</flightSpeedTurningPerTick> <!-- highest speed in which all 5 standard maneuvers are available | +0.1 for a full row of blues, -0.1 for more than two reds -->
+				<flightSpeedTurningPerTick>0.6</flightSpeedTurningPerTick> <!-- highest speed in which all 5 standard maneuvers are available | +0.1 for a full row of blues, -0.1 for any red turns -->
 				<turnAnglePerTick>3</turnAnglePerTick> <!-- USE SLOWEST POSSIBLE TURN: speed1 turn = 4, speed2 turn = 2, speed3 turn = 1 | banks = 0.75, 0.5, 0.25 | -1 for red slowest -->
-				<turnAngleCirclingPerTick>1</turnAngleCirclingPerTick> <!-- use fastest possible turn -->
+				<turnAngleCirclingPerTick>1</turnAngleCirclingPerTick> <!-- use fastest possible turn | -0.5 for red fastest -->
 				
 				<distanceFromTargetToStartTurningChaseMode>20</distanceFromTargetToStartTurningChaseMode>
 				<distanceFromTargetToStartTurningCircleMode>10</distanceFromTargetToStartTurningCircleMode>
@@ -188,7 +188,7 @@
 				<flightGraphicData>
 					<texPath>Starfighters/Kimogila/Kimogila</texPath>
 					<graphicClass>Vehicles.Graphic_Vehicle</graphicClass>
-					<drawSize>(14,14)</drawSize>
+					<drawSize>(20,20)</drawSize>
 					<shaderType>CutoutComplexPattern</shaderType>
 					<pattern>guy762_SWVehiclePattern_KimogilaA</pattern>
 					<color>(135,95,90)</color> <!-- lighter sand red -->
@@ -255,9 +255,7 @@
 						<turretDef>guy762_VehicleTurret_Kimogila_chin</turretDef>
 						
 						<renderProperties>
-							<north>(0, 4.5)</north>
-							<south>(-1, -3.5)</south>
-							<east>(3.5, -1.2)</east>
+							<north>(0, 6.5)</north>
 						</renderProperties>
 						<defaultAngleRotated>0</defaultAngleRotated>
 						<angleRestricted>(355,5)</angleRestricted>
@@ -274,9 +272,7 @@
 						<turretDef>guy762_VehicleTurret_Kimogila_main</turretDef>
 						
 						<renderProperties>
-							<north>(-5.225, 0.35)</north>
-							<south>(-1, -3.5)</south>
-							<east>(3.5, -1.2)</east>
+							<north>(-7.5, 0.35)</north>
 						</renderProperties>
 						<defaultAngleRotated>0</defaultAngleRotated>
 						<angleRestricted>(315,45)</angleRestricted>
@@ -290,9 +286,7 @@
 						<turretDef>guy762_VehicleTurret_Kimogila_main</turretDef>
 						
 						<renderProperties>
-							<north>(5.225, 0.35)</north>
-							<south>(-1, -3.5)</south>
-							<east>(3.5, -1.2)</east>
+							<north>(7.5, 0.35)</north>
 						</renderProperties>
 						<defaultAngleRotated>0</defaultAngleRotated>
 						<angleRestricted>(315,45)</angleRestricted>
@@ -309,9 +303,7 @@
 						<turretDef>guy762_VehicleTurret_ProTorp</turretDef>
 						
 						<renderProperties>
-							<north>(-2.5, 0)</north>
-							<south>(-1, -3.5)</south>
-							<east>(3.5, -1.2)</east>
+							<north>(-3.5, 0)</north>
 						</renderProperties>
 						<defaultAngleRotated>0</defaultAngleRotated>
 						<angleRestricted>(315,45)</angleRestricted>
@@ -325,9 +317,7 @@
 						<turretDef>guy762_VehicleTurret_ProTorp</turretDef>
 						
 						<renderProperties>
-							<north>(2.5, 0)</north>
-							<south>(-1, -3.5)</south>
-							<east>(3.5, -1.2)</east>
+							<north>(3.5, 0)</north>
 						</renderProperties>
 						<defaultAngleRotated>0</defaultAngleRotated>
 						<angleRestricted>(315,45)</angleRestricted>
@@ -344,9 +334,7 @@
 						<turretDef>guy762_VehicleTurret_IonMissile</turretDef>
 						
 						<renderProperties>
-							<north>(-4, -0.5)</north>
-							<south>(-1, -3.5)</south>
-							<east>(3.5, -1.2)</east>
+							<north>(-5, -0.5)</north>
 						</renderProperties>
 						<defaultAngleRotated>0</defaultAngleRotated>
 						<angleRestricted>(315,45)</angleRestricted>
@@ -360,9 +348,7 @@
 						<turretDef>guy762_VehicleTurret_IonMissile</turretDef>
 						
 						<renderProperties>
-							<north>(4, -0.5)</north>
-							<south>(-1, -3.5)</south>
-							<east>(3.5, -1.2)</east>
+							<north>(5, -0.5)</north>
 						</renderProperties>
 						<defaultAngleRotated>0</defaultAngleRotated>
 						<angleRestricted>(315,45)</angleRestricted>

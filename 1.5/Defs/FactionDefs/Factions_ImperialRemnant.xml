@@ -47,9 +47,16 @@
       <li MayRequire="Rick.FCP.Core.Tools.Beta" Class="FCP.Currencies.CurrencyReplacement">
 		<currency>guy762_KotORcredits</currency>
 	  </li>
+	  <li Class="FCP.Core.ModExtension_FactionBannedArrivalModes">
+		<arrivalModes>
+			<li>CenterDrop</li>
+			<li>RandomDrop</li>
+		</arrivalModes>
+	  </li>
 	  <li Class="VFECore.FactionDefExtension">
 		<startingGoodwillByFactionDefs>
-
+			<guy762_SWWarlordsFaction_Pentastar>-50~0</guy762_SWWarlordsFaction_Pentastar>
+			
 			<guy762_KotORFaction_HuttCartel>0</guy762_KotORFaction_HuttCartel>
 			<guy762_KotORFaction_ViciousHutts>0</guy762_KotORFaction_ViciousHutts>
 			
@@ -246,7 +253,7 @@
 	  </li>
 		  
       <li>
-        <!-- stormtrooper only raid (NEEDS SCOUT TROOPERS)-->
+        <!-- stormtrooper only raid -->
         <kindDef>Combat</kindDef>
         <commonality>100</commonality>
 		<disallowedStrategies>
@@ -258,9 +265,10 @@
 			<li>ImmediateAttackBreachingSmart</li>
 		</disallowedStrategies>
         <options>
-          <SWImpRemnant_scouttrooper>50</SWImpRemnant_scouttrooper>
+          <!-- <SWImpRemnant_scouttrooper>50</SWImpRemnant_scouttrooper> -->
 		  
           <SWImpRemnant_stormtrooper>100</SWImpRemnant_stormtrooper>
+		  <SWImpRemnant_stormierifle>50</SWImpRemnant_stormierifle>
 		  <SWImpRemnant_stormiehvy>50</SWImpRemnant_stormiehvy>
 		  <SWImpRemnant_stormieofficer>100</SWImpRemnant_stormieofficer>
         </options>
@@ -281,9 +289,11 @@
         <options>
           <SWImpRemnant_ArmyConscript>100</SWImpRemnant_ArmyConscript>
           <SWImpRemnant_ArmyTrooper>50</SWImpRemnant_ArmyTrooper>
+          <SWImpRemnant_ArmySniper>15</SWImpRemnant_ArmySniper>
           <!-- <SWImpRemnant_ArmyHeavy>25</SWImpRemnant_ArmyHeavy> -->
 		  
 		  <SWImpRemnant_stormtrooper>25</SWImpRemnant_stormtrooper>
+		  <SWImpRemnant_stormierifle>10</SWImpRemnant_stormierifle>
 		  <SWImpRemnant_stormieofficer>10</SWImpRemnant_stormieofficer>
         </options>
       </li>
@@ -436,42 +446,7 @@
 		  <KotORSith_darkjedi_VPE MayRequire="lee.theforce.psycast">10</KotORSith_darkjedi_VPE>
 		</options>
 	  </li>
-	  <li>
-		<kindDef>Settlement</kindDef> <!-- sith temple -->
-		<commonality>0.01</commonality>
-		<options>
-		  <KotORCzrka_slave>10</KotORCzrka_slave>
-		  
-		  <KotORSith_ensign>5</KotORSith_ensign>
-		  <KotORSith_engineer>5</KotORSith_engineer>
-		  
-		  <KotORSith_elite>10</KotORSith_elite>
-		  <KotORSith_elitemelee>10</KotORSith_elitemelee>
-		  <KotORCzrka_droid_ADMkIV MayRequire="guy762.KotORDroids">5</KotORCzrka_droid_ADMkIV>
-		  
-		  <KotORSith_darkjedi_PotF MayRequire="guy762.Lee.KotORPotF">10</KotORSith_darkjedi_PotF>
-		  <KotORSith_acolyte_PotF MayRequire="guy762.Lee.KotORPotF">25</KotORSith_acolyte_PotF>
-		  <KotORSith_warrior_PotF MayRequire="guy762.Lee.KotORPotF">25</KotORSith_warrior_PotF>
-		  <KotORSith_assassin_PotF MayRequire="guy762.Lee.KotORPotF">10</KotORSith_assassin_PotF>
-          <KotORSith_marauder_PotF MayRequire="guy762.Lee.KotORPotF">10</KotORSith_marauder_PotF>
-		  
-		  <KotORSith_darkjedi_VPE MayRequire="lee.theforce.psycast">10</KotORSith_darkjedi_VPE>
-		  <KotORSith_acolyte_VPE MayRequire="lee.theforce.psycast">25</KotORSith_acolyte_VPE>
-		  <KotORSith_warrior_VPE MayRequire="lee.theforce.psycast">25</KotORSith_warrior_VPE>
-		  <KotORSith_assassin_VPE MayRequire="lee.theforce.psycast">10</KotORSith_assassin_VPE>
-          <KotORSith_marauder_VPE MayRequire="lee.theforce.psycast">10</KotORSith_marauder_VPE>
-		  
-		  <KotORSith_operative>10</KotORSith_operative>
-		  <KotORSith_lieutenant>100</KotORSith_lieutenant>
-		  <KotORSith_captain>100</KotORSith_captain>
-		  
-		  <KotORSith_redguardmelee_PotF MayRequire="guy762.Lee.KotORPotF">100</KotORSith_redguardmelee_PotF>
-		  <KotORSith_warlord_PotF MayRequire="guy762.Lee.KotORPotF">100</KotORSith_warlord_PotF>
-		  
-		  <KotORSith_redguardmelee_VPE MayRequire="lee.theforce.psycast">100</KotORSith_redguardmelee_VPE>
-		  <KotORSith_warlord_VPE MayRequire="lee.theforce.psycast">100</KotORSith_warlord_VPE>
-		</options>
-	  </li>
+
 	  
 	  
     </pawnGroupMakers>

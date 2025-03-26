@@ -1,11 +1,82 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Defs>
+	
+	
+	<PawnKindDef Name="SWPentastar_Base" Abstract="True">
+		<defaultFactionType>guy762_SWWarlordsFaction_Pentastar</defaultFactionType>
+		<race>Human</race>
 
+		<backstoryCryptosleepCommonality>0.08</backstoryCryptosleepCommonality>
+		<!-- <backstoryFiltersOverride> -->
+			<!-- <li> -->
+				<!-- <categories> -->
+					<!-- <li>Pirate</li> -->
+					<!-- <li>Offworld</li> -->
+					<!-- <li>Outlander</li> -->
+					<!-- <li>ImperialFighter</li> -->
+					<!-- <li>Madman</li> -->
+				<!-- </categories> -->
+			<!-- </li> -->
+		<!-- </backstoryFiltersOverride> -->
+
+		<chemicalAddictionChance>0.1</chemicalAddictionChance>
+		<!--combatEnhancingDrugsChance>0.15</combatEnhancingDrugsChance>
+		<combatEnhancingDrugsCount>0~2</combatEnhancingDrugsCount-->
+		<invNutrition>1</invNutrition>
+		<invFoodDef>MealNutrientPaste</invFoodDef>
+
+		<apparelAllowHeadgearChance>0.5</apparelAllowHeadgearChance>
+		<apparelMoney>4000~5000</apparelMoney>
+
+		<techHediffsTags>
+			<li>Spacer</li>
+			<li>Advanced</li>
+			<li>AdvancedWeapon</li>
+		</techHediffsTags>
+		
+		<apparelIgnoreSeasons>true</apparelIgnoreSeasons>
+
+
+		<disallowedTraits>
+			<li>BodyPurist</li>
+		</disallowedTraits>
+
+		<isFighter>true</isFighter>
+		<requiredWorkTags>
+			<li>Violent</li>
+			<li>Hauling</li>
+		</requiredWorkTags>
+	</PawnKindDef>
+
+	<PawnKindDef Name="SWPentastar_TrooperBase" ParentName="SWImpRemnant_Base" Abstract="True">
+		<modExtensions>
+			<li Class="BodyTypeForPawnKind.ModExtension_BodyTypesOfPawnKind">
+				<whitelist>
+				</whitelist>
+				<blacklist>
+					<li>Fat</li>
+					<li>Baby</li>
+					<li>Child</li>
+				</blacklist>
+				<priority>
+					<!--When violates the black/whitelist, selected from these-->
+				</priority>
+				<!--Align body gender to pawn's gender (default: True)-->
+				<checkGender>True</checkGender>
+			</li>
+		</modExtensions>
+
+		<disallowedTraits>
+			<li>Wimp</li>
+		</disallowedTraits>
+	</PawnKindDef>
+	
+	
 	
 	<!--troopers-->
 
 	
-	<PawnKindDef Name="SWPentastar_TIEpilot" ParentName="KotORSith_TrooperBase">
+	<PawnKindDef Name="SWPentastar_TIEpilot" ParentName="SWPentastar_TrooperBase">
 		<defName>SWPentastar_TIEpilot</defName>
 		<label>TIE pilot</label>
 		<combatPower>65</combatPower>
@@ -92,7 +163,7 @@
 	
 	
 	
-	<PawnKindDef Name="SWPentastar_EnforcerTrooper" ParentName="KotORSith_TrooperBase">
+	<PawnKindDef Name="SWPentastar_EnforcerTrooper" ParentName="SWPentastar_TrooperBase">
 		<defName>SWPentastar_EnforcerTrooper</defName>
 		<label>enforcer trooper</label>
 		<combatPower>40</combatPower>
@@ -165,7 +236,7 @@
 	
 	
 	
-	<PawnKindDef Name="SWPentastar_ArmyTrooper" ParentName="KotORSith_TrooperBase">
+	<PawnKindDef Name="SWPentastar_ArmyTrooper" ParentName="SWPentastar_TrooperBase">
 		<defName>SWPentastar_ArmyTrooper</defName>
 		<label>army trooper</label>
 		<combatPower>75</combatPower>
@@ -235,6 +306,91 @@
 
 		<initialWillRange>0.5~2</initialWillRange>
 		<initialResistanceRange>5~10</initialResistanceRange>
+	</PawnKindDef>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<PawnKindDef Name="SWPentastar_ArmyLieutenant" ParentName="SWImpRemnant_ArmyLieutenant">
+		<defName>SWPentastar_ArmyLieutenant</defName>
+		<label>Pentastar army lieutenant</label>
+		<specificApparelRequirements>
+			<li>
+				<apparelLayer>Overhead</apparelLayer>
+				<color>(50,50,55)</color>       <!-- blue-tint black -->
+			</li>
+			<li>
+				<apparelLayer>Middle</apparelLayer>
+				<apparelDef>guy762_ArmyOfficerArmor</apparelDef>
+				<styleDef>guy762_RankStyle_armylt</styleDef>
+				<color>(50,50,55)</color>       <!-- blue-tint black -->
+				<quality>Normal</quality>
+			</li>
+			<li>
+				<apparelLayer>OnSkin</apparelLayer>
+				<color>(90,90,95)</color>        <!-- blued grey -->
+			</li>
+		</specificApparelRequirements>
+	</PawnKindDef>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<PawnKindDef Name="SWPentastar_ArmyGeneral_field" ParentName="SWImpRemnant_ArmyGeneral_field">
+		<defName>SWPentastar_ArmyGeneral_field</defName>
+		<label>Pentastar army general</label>
+		<specificApparelRequirements Inherit="False">
+			<li>
+				<apparelLayer>Overhead</apparelLayer>
+				<color>(90,90,95)</color>        <!-- blued grey -->
+			</li>
+			<li>
+				<apparelLayer>Middle</apparelLayer>
+				<apparelDef>guy762_ArmyOfficerArmor_highbrass</apparelDef>
+				<styleDef>guy762_RankStyle_taskforceCO</styleDef>
+				<color>(50,50,55)</color>       <!-- blue-tint black -->
+				<quality>Excellent</quality>
+			</li>
+			<li>
+				<apparelLayer>OnSkin</apparelLayer>
+				<color>(90,90,95)</color>        <!-- blued grey -->
+			</li>
+		</specificApparelRequirements>
+	</PawnKindDef>
+	
+	
+	<PawnKindDef Name="SWPentastar_ArmyGeneral" ParentName="SWImpRemnant_ArmyGeneral">
+		<defName>SWPentastar_ArmyGeneral</defName>
+		<label>Pentastar army general</label>
+		<specificApparelRequirements Inherit="False">
+			<li>
+				<apparelLayer>Overhead</apparelLayer>
+				<color>(90,90,95)</color>        <!-- blued grey -->
+			</li>
+			<li>
+				<apparelLayer>OnSkin</apparelLayer>
+				<apparelDef>guy762_ImpUniform_highbrass</apparelDef>
+				<styleDef>guy762_RankStyle_armygen</styleDef>
+				<color>(90,90,95)</color>        <!-- blued grey -->
+				<quality>Excellent</quality>
+			</li>
+		</specificApparelRequirements>
 	</PawnKindDef>
 	
 	

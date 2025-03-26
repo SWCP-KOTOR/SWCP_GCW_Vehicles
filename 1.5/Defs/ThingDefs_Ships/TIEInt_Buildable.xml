@@ -10,7 +10,7 @@
 		<graphicData>
 			<texPath>Starfighters/TIEInterceptor/TIEInt</texPath>
 			<graphicClass>Graphic_Multi</graphicClass>
-			<drawSize>(7,7)</drawSize>
+			<drawSize>(9,9)</drawSize>
 			<!-- <drawOffset>(0, 0, 1)</drawOffset> -->
 		</graphicData>
 		
@@ -20,7 +20,7 @@
 			<Flammability>0.05</Flammability>
 		</statBases>
 		
-		<size>(4,6)</size>
+		<size>(6,8)</size>
 		
 		<!--researchPrerequisites>
 			<li>VVE_BasicVehicles</li>

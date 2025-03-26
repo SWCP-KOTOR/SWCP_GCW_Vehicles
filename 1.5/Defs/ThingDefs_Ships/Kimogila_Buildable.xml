@@ -10,7 +10,7 @@
 		<graphicData>
 			<texPath>Starfighters/Kimogila/Kimogila</texPath>
 			<graphicClass>Graphic_Multi</graphicClass>
-			<drawSize>(14,14)</drawSize>
+			<drawSize>(20,20)</drawSize>
 			<!-- <drawOffset>(0, 0, 1)</drawOffset> -->
 		</graphicData>
 		
@@ -20,7 +20,7 @@
 			<Flammability>0.05</Flammability>
 		</statBases>
 		
-		<size>(10,10)</size>
+		<size>(14,14)</size>
 		
 		<!--researchPrerequisites>
 			<li>VVE_BasicVehicles</li>

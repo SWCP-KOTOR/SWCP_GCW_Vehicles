@@ -30,8 +30,9 @@
 				<minAircraftCount>4</minAircraftCount>
 				<maxAircraftCount>10</maxAircraftCount>
 				<options>
+					<guy762_SWVehicle_Z95Hutts_bot_PawnKind>2</guy762_SWVehicle_Z95Hutts_bot_PawnKind>
 					<guy762_SWVehicle_Scyk_bot_PawnKind>5</guy762_SWVehicle_Scyk_bot_PawnKind>
-					<guy762_SWVehicle_R41Hutts_bot_PawnKind>3</guy762_SWVehicle_R41Hutts_bot_PawnKind>
+					<guy762_SWVehicle_R41Hutts_bot_PawnKind>1</guy762_SWVehicle_R41Hutts_bot_PawnKind>
 					<guy762_SWVehicle_Kimogila_bot_PawnKind>2</guy762_SWVehicle_Kimogila_bot_PawnKind>
 				</options>
 			</li>
@@ -50,8 +51,9 @@
 				<minAircraftCount>4</minAircraftCount>
 				<maxAircraftCount>10</maxAircraftCount>
 				<options>
-					<guy762_SWVehicle_ScykBlackSun_bot_PawnKind>5</guy762_SWVehicle_ScykBlackSun_bot_PawnKind>
-					<guy762_SWVehicle_R41BlackSun_bot_PawnKind>2</guy762_SWVehicle_R41BlackSun_bot_PawnKind>
+					<guy762_SWVehicle_Z95BlackSun_bot_PawnKind>5</guy762_SWVehicle_Z95BlackSun_bot_PawnKind>
+					<guy762_SWVehicle_Z95BlackSunAce_bot_PawnKind>1</guy762_SWVehicle_Z95BlackSunAce_bot_PawnKind>
+					<guy762_SWVehicle_ScykBlackSun_bot_PawnKind>1</guy762_SWVehicle_ScykBlackSun_bot_PawnKind>
 					<guy762_SWVehicle_StarViperBlackSun_bot_PawnKind>3</guy762_SWVehicle_StarViperBlackSun_bot_PawnKind>
 				</options>
 			</li>
@@ -72,7 +74,8 @@
 				<minAircraftCount>4</minAircraftCount>
 				<maxAircraftCount>10</maxAircraftCount>
 				<options>
-					<guy762_SWVehicle_AWingNR_bot_PawnKind>5</guy762_SWVehicle_AWingNR_bot_PawnKind>
+					<guy762_SWVehicle_AWingNR_bot_PawnKind>3</guy762_SWVehicle_AWingNR_bot_PawnKind>
+					<guy762_SWVehicle_XWingNR_bot_PawnKind>4</guy762_SWVehicle_XWingNR_bot_PawnKind>
 				</options>
 			</li>
 		</value>
@@ -82,15 +85,29 @@
 	<Operation Class="PatchOperationAdd">
 		<xpath>Defs/FactionDef[defName="guy762_KotORFaction_Militia"]/pawnGroupMakers</xpath>
 		<value>
-			<li Class="taranchuk_flightcombat.PawnGroupMaker_FlightRaid">
+			<li Class="taranchuk_flightcombat.PawnGroupMaker_FlightRaid"> <!-- cheap raid -->
 				<kindDef>Combat</kindDef>
 				<commonality>10000</commonality>
 				<minPoints>2000</minPoints>
 				<minAircraftCount>4</minAircraftCount>
 				<maxAircraftCount>10</maxAircraftCount>
 				<options>
-					<guy762_SWVehicle_AWingRebel_bot_PawnKind>5</guy762_SWVehicle_AWingRebel_bot_PawnKind>
+					<guy762_SWVehicle_Z95Rebel_bot_PawnKind>3</guy762_SWVehicle_Z95Rebel_bot_PawnKind>
+					<guy762_SWVehicle_AWingRebel_bot_PawnKind>2</guy762_SWVehicle_AWingRebel_bot_PawnKind>
 					<guy762_SWVehicle_R41Rebel_bot_PawnKind>3</guy762_SWVehicle_R41Rebel_bot_PawnKind>
+					<guy762_SWVehicle_YWingRebel_bot_PawnKind>2</guy762_SWVehicle_YWingRebel_bot_PawnKind>
+				</options>
+			</li>
+			<li Class="taranchuk_flightcombat.PawnGroupMaker_FlightRaid"> <!-- expensive raid -->
+				<kindDef>Combat</kindDef>
+				<commonality>10000</commonality>
+				<minPoints>2000</minPoints>
+				<minAircraftCount>4</minAircraftCount>
+				<maxAircraftCount>10</maxAircraftCount>
+				<options>
+					<guy762_SWVehicle_XWingRebel_bot_PawnKind>4</guy762_SWVehicle_XWingRebel_bot_PawnKind>
+					<guy762_SWVehicle_AWingRebel_bot_PawnKind>3</guy762_SWVehicle_AWingRebel_bot_PawnKind>
+					<guy762_SWVehicle_YWingRebel_bot_PawnKind>3</guy762_SWVehicle_YWingRebel_bot_PawnKind>
 				</options>
 			</li>
 		</value>

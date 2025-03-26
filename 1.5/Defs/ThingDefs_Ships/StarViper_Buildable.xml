@@ -10,7 +10,7 @@
 		<graphicData>
 			<texPath>Starfighters/StarViper/StarViper_Closed</texPath>
 			<graphicClass>Graphic_Multi</graphicClass>
-			<drawSize>(10,10)</drawSize>
+			<drawSize>(14,14)</drawSize>
 			<!-- <drawOffset>(0, 0, 1)</drawOffset> -->
 		</graphicData>
 		
@@ -20,7 +20,7 @@
 			<Flammability>0.05</Flammability>
 		</statBases>
 		
-		<size>(8,8)</size>
+		<size>(10,10)</size>
 		
 		<!--researchPrerequisites>
 			<li>VVE_BasicVehicles</li>

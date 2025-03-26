@@ -152,7 +152,7 @@
 	</specificApparelRequirements>
 	
     <biocodeWeaponChance>0.75</biocodeWeaponChance>
-	<weaponMoney>2000~3200</weaponMoney>
+	<weaponMoney>2000~3800</weaponMoney>
 	<weaponTags>
 		<li>SWRanged_TL50conc</li>
 		<li>SWRanged_FC1flechette</li>
@@ -293,7 +293,7 @@
     <apparelMoney>1000~1750</apparelMoney>
     <apparelTags>
 	  <li>KotOREquipment_basic</li>
-	  <li>KotORAccessory_trooper_strapsonly</li>
+	  <li>SWWarlordsAccessory_scumtrooper</li>
     </apparelTags>
 	<apparelRequired>
 	   <li>guy762_ScumMercHelmet</li>

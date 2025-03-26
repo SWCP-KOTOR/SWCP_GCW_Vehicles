@@ -104,6 +104,35 @@
               </ThingTargets>
           </li>
 		  
+		  <li>
+			  <MainHand>(-0.200, 0.100, -0.100)</MainHand>
+              <SecHand>(0.150, -0.100, -0.075)</SecHand>
+              <ThingTargets>
+                 <li>guy762_DC15xSniper</li> <!-- DC-15x Sniper Rifle -->
+              </ThingTargets>
+          </li>
+		  <li>
+			  <MainHand>(-0.275, 0.100, -0.100)</MainHand>
+              <SecHand>(0.050, -0.100, -0.050)</SecHand>
+              <ThingTargets>
+                 <li>guy762_DLT18BattleRifle</li> <!-- DLT-18 Battle Rifle -->
+              </ThingTargets>
+          </li>
+		  <li>
+			  <MainHand>(-0.275, 0.100, -0.125)</MainHand>
+              <SecHand>(0.050, -0.100, -0.100)</SecHand>
+              <ThingTargets>
+                 <li>guy762_DLT20ASniper</li> <!-- DLT-20A Sniper Rifle -->
+              </ThingTargets>
+          </li>
+		  <li>
+			  <MainHand>(-0.150, 0.100, -0.075)</MainHand>
+              <SecHand>(0.225, -0.100, -0.100)</SecHand>
+              <ThingTargets>
+                 <li>guy762_RelbyV10Launcher</li> <!-- Relby V-10 Mortar Gun -->
+              </ThingTargets>
+          </li>
+		  
 		  
 		  <li>
               <MainHand>(-0.025, 0.100, -0.050)</MainHand>

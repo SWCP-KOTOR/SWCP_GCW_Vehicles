@@ -78,5 +78,84 @@
 	</PawnKindDef>
 	
 	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<PawnKindDef Name="SWScum_RemnantTrooper" ParentName="SWImpRemnant_TrooperBase">
+		<defName>SWScum_RemnantTrooper</defName>
+		<label>remnant army trooper</label>
+		<combatPower>65</combatPower>
+		<minGenerationAge>19</minGenerationAge>
+		<maxGenerationAge>65</maxGenerationAge>
+		<itemQuality>Awful</itemQuality>
+		
+		<xenotypeSet Inherit="False">
+		  <xenotypeChances>
+			<Baseliner MayRequire="Ludeon.RimWorld.Biotech">999</Baseliner>
+		  </xenotypeChances>
+		</xenotypeSet>
+		<useFactionXenotypes>false</useFactionXenotypes>
+
+		<apparelMoney>1500~5500</apparelMoney>
+		<apparelAllowHeadgearChance>0.75</apparelAllowHeadgearChance>
+		<apparelTags>
+			<li>IndependentWarlord_armytrooper</li>
+			<li>KotORHeadband_bandana</li>
+			<li>KotORAccessory_trooper_strapsonly</li>
+		</apparelTags>
+		<apparelRequired>
+			<li>guy762_ImpUniform_default</li>
+		</apparelRequired>
+		<specificApparelRequirements>
+			<li>
+				<apparelLayer>Middle</apparelLayer>
+				<requiredTag>IndependentWarlord_armytrooper</requiredTag>
+			</li>
+		</specificApparelRequirements>
+
+		<biocodeWeaponChance>0</biocodeWeaponChance>
+		<weaponMoney>300~1600</weaponMoney>
+		<weaponTags>
+			<li>SWRanged_E10rifle</li>
+			<li>SWRanged_E11carbine</li>
+			<li>SWRanged_E22rifle</li>
+			<li>SWRanged_DLT18rifle</li>
+		</weaponTags>
+		
+		<skills>
+			<li>
+				<skill>Shooting</skill>
+				<range>6~12</range>
+			</li>
+			<li>
+				<skill>Melee</skill>
+				<range>4~6</range>
+			</li>
+		</skills>
+
+		<initialWillRange>0.5~2</initialWillRange>
+		<initialResistanceRange>5~10</initialResistanceRange>
+	</PawnKindDef>
+	
 
 </Defs>

@@ -10,7 +10,7 @@
 		<graphicData>
 			<texPath>Starfighters/R41Starchaser/R41</texPath>
 			<graphicClass>Graphic_Multi</graphicClass>
-			<drawSize>(9,9)</drawSize>
+			<drawSize>(12,12)</drawSize>
 			<!-- <drawOffset>(0, 0, 1)</drawOffset> -->
 		</graphicData>
 		
@@ -20,7 +20,7 @@
 			<Flammability>0.05</Flammability>
 		</statBases>
 		
-		<size>(8,8)</size>
+		<size>(9,10)</size>
 		
 		<!--researchPrerequisites>
 			<li>VVE_BasicVehicles</li>

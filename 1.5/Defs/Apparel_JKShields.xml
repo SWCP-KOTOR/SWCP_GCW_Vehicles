@@ -1,0 +1,194 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  
+  
+  <ThingDef ParentName="guy762_UtilityItemBase">
+    <defName>guy762_JKenergyshield_big</defName>
+    <label>heavy personal shield</label>
+    <description>This heavier personal shield is adapted from various models used on advanced combat droids. It is quite heavy and difficult to manufacture in bulk, and as such is only issued to the highest-qualified commando units.\n\nUnlike personal enegy shields from ancient times, these new Imperial models are capable of blocking a wide range of attacks and have much stronger shield cores that do not burn out after repeated use. Unfortunately, these shields are still incapable of stopping attacks from Disruptors and will still be disabled by fire from Ion weaponry.</description>
+    <descriptionHyperlinks>
+		<HediffDef>guy762_EShield</HediffDef>
+	</descriptionHyperlinks>
+	<graphicData>
+      <texPath>Items/JK_bigshield</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+	<soundInteract>kotorsound_select_JKshield</soundInteract>
+	<soundDrop>kotorsound_select_JKshield</soundDrop>
+    <statBases>
+      <Mass>4</Mass>
+      <EquipDelay>2</EquipDelay>
+      <!-- <MarketValue>140</MarketValue> -->
+	  <MarketValue>5080</MarketValue>
+      <MaxHitPoints>80</MaxHitPoints>
+    </statBases>
+	<!--stackLimit>10</stackLimit><drawGUIOverlay>true</drawGUIOverlay-->
+    <apparel>
+      <bodyPartGroups>
+        <li>Waist</li>
+      </bodyPartGroups>
+	  <tags>
+		<li>SWShield_heavy</li>
+		<li>SWShield_any</li>
+	  </tags>
+    </apparel>
+	<tradeTags>
+      <li>guy762TT_KotOREquipment_consumables</li>
+    </tradeTags>
+	<verbs>
+      <li Class="SelfHediffVerb.VerbProperties_SelfHediff">
+        <label>activate shield</label>
+        
+        <verbClass>SelfHediffVerb.Verb_SelfHediff</verbClass>
+        <hediffDef>guy762_EShield_JKheavy</hediffDef>
+        <inDanger>true</inDanger>
+        <hasStandardCommand>true</hasStandardCommand>
+        <targetable>false</targetable>
+        <nonInterruptingSelfCast>true</nonInterruptingSelfCast>
+        <onlyManualCast>True</onlyManualCast>
+        <soundCast>kotorsound_shieldpowerup</soundCast>
+		<violent>false</violent>
+      </li>
+    </verbs>
+	<comps>
+		<li Class="CompProperties_ApparelReloadable">
+			<maxCharges>5</maxCharges>
+			<destroyOnEmpty>false</destroyOnEmpty>
+			<hotKey>Misc4</hotKey>
+			<chargeNoun>usage</chargeNoun>
+			<displayGizmoWhileUndrafted>false</displayGizmoWhileUndrafted>
+		</li>
+    </comps>
+  </ThingDef>
+  
+  
+  <HediffDef>
+    <defName>guy762_EShield_JKheavy</defName>
+    <label>heavy personal shield</label>
+    <description>An energy shield that blocks all incoming energy, sonic, heat, and cold damage.</description>
+    <defaultLabelColor>(0, 1.0, 0)</defaultLabelColor>
+    <hediffClass>HediffWithComps</hediffClass>
+    <comps>
+      <li Class="EBSGFramework.HediffCompProperties_Shield">
+        <maxEnergy>2</maxEnergy>
+        <energyRechargeRate>0.0006</energyRechargeRate>
+		<energyPerDamageModifier>0.0035</energyPerDamageModifier>
+		<resetDelay>3200</resetDelay>
+		<energyOnReset>1</energyOnReset>
+		<removeOnBreak>true</removeOnBreak>
+
+		<blocksRangedDamage>true</blocksRangedDamage>
+		<blocksExplosions>true</blocksExplosions>
+		<blocksMeleeDamage>true</blocksMeleeDamage>
+		
+        <blockedDamageDefs>
+          <li>guy762_RangedDamage_energy</li>
+		  <li>guy762_BeamDamage_energy</li>
+		  <li>guy762_MeleeDamage_energy</li>
+		  <li>guy762_MeleeDamage_ecut</li>
+		  <li>guy762_MeleeDamage_estab</li>
+		  <li>guy762_ExplosiveDamage_energy</li>
+		  <li>guy762_GrenadeDamage_energy</li>
+		  <li>guy762_GrenadeDamage_thermaldet</li>
+		  <li MayRequire="Ludeon.RimWorld.Biotech">Beam</li>
+		  <li>guy762_RangedDamage_concussion</li>
+		  
+		  <li>guy762_RangedDamage_electrical</li>
+		  <li>guy762_MeleeDamage_electrical</li>
+		  <li>guy762_BeamDamage_electrical</li>
+		  
+		  <li>guy762_RangedDamage_sonic</li>
+		  <li>guy762_MeleeDamage_sonic</li>
+		  <li>guy762_GrenadeDamage_sonic</li>
+		  <li>Thump</li>
+		  
+		  <li>Flame</li>
+		  <li>Burn</li>
+		  <li>guy762_GrenadeDamage_plasma</li>
+		  <li>guy762_BeamDamage_radiation</li>
+		  
+		  <li>Frostbite</li>
+		  
+		  <li>Cut</li>
+		  <li>Crush</li>
+		  <li>Blunt</li>
+		  <li>Poke</li>
+		  <li>Stab</li>
+		  <li>Scratch</li>
+		  <li>ScratchToxic</li>
+		  <li>Bite</li>
+		  <li>ToxicBite</li>
+		  <li>RangedStab</li>
+		  <li>Bullet</li>
+		  <li>Arrow</li>
+		  <li>ArrowHighVelocity</li>
+		  <li>TornadoScratch</li>
+        </blockedDamageDefs>
+		<ignoredDamageDefs>
+          <li>guy762_RangedDamage_disruptor</li>
+		  <li>guy762_BeamDamage_disruptor</li>
+		  <li>guy762_MeleeDamage_unstoppable</li>
+        </ignoredDamageDefs>
+		
+		<shatterOn>
+		  <li>EMP</li>
+		  <li>guy762_RangedDamage_ion</li>
+		  <li>guy762_ExplosiveDamage_ion</li>
+		  <li>guy762_MeleeDamage_ion</li>
+		  <li>guy762_GrenadeDamage_ion</li>
+		</shatterOn>
+
+        <absorbFleck>ExplosionFlash</absorbFleck>
+        <breakFleck>ExplosionFlash</breakFleck>
+        <shieldBreakEffecter>Shield_Break</shieldBreakEffecter>
+        <absorbSound>kotorsound_shieldhit</absorbSound>
+        <resetSound>kotorsound_shieldpowerup</resetSound>
+
+        <displayGizmo>true</displayGizmo>
+        <gizmoTitle>heavy personal shield</gizmoTitle>
+        <gizmoTip>A shield hediff that blocks all energy, sonic, heat, and cold damage.</gizmoTip>
+
+        <minDrawSize>1.2</minDrawSize>
+        <maxDrawSize>1.55</maxDrawSize>
+        <scaleWithOwner>true</scaleWithOwner>
+        <graphicData>
+          <texPath>Other/ShieldBubble</texPath>
+          <graphicClass>Graphic_Single</graphicClass>
+          <shaderType>Transparent</shaderType>
+          <color>(0, 1.0, 0)</color>
+        </graphicData>
+      </li>
+	  <li Class="HediffCompProperties_Disappears">
+		<disappearsAfterTicks>12000</disappearsAfterTicks>
+		<showRemainingTime>true</showRemainingTime>
+	  </li>
+	  <li Class="HediffCompProperties_RemoveIfApparelDropped" />
+	  <li Class="HediffCompProperties_DisappearsOnDeath"/>
+    </comps>
+  </HediffDef>
+  
+  <RecipeDef ParentName="KotORRecipe_ShieldRecharge_base">
+		<defName>SWWERecipe_ShieldRecharge_JKeshield_big</defName>
+		<label>recharge heavy personal shield</label>
+		<description>Recharge a used heavy personal shield.\n\nNOTE: Do NOT set this to "do forever" as your pawns will be stuck in a loop of recharging the same shield forever!</description>
+		<jobString>recharging heavy personal shield.</jobString>
+		<ingredients>
+			<li>
+				<filter>
+				<thingDefs>
+					<li>guy762_JKenergyshield_big</li>
+				</thingDefs>
+				</filter>
+				<count>1</count>
+			</li>
+		</ingredients>
+		<products>
+			<guy762_JKenergyshield_big>1</guy762_JKenergyshield_big>
+		</products>
+	</RecipeDef>
+  
+  
+  
+  
+  
+</Defs>

@@ -516,8 +516,8 @@
 		</graphicData>
 		<statBases>
 			<Mass>3</Mass>
-			<MarketValue>10000</MarketValue>
-			<MaxHitPoints>200</MaxHitPoints> <!-- +100 -->
+			<MarketValue>1000</MarketValue>
+			<MaxHitPoints>100</MaxHitPoints>
 			<ArmorRating_Sharp>0.01</ArmorRating_Sharp>
 			<ArmorRating_Blunt>0.01</ArmorRating_Blunt>
 			<ArmorRating_Heat>0.01</ArmorRating_Heat>
@@ -602,7 +602,7 @@
 		<statBases>
 			<Mass>3</Mass>
 			<MarketValue>2500</MarketValue>
-			<MaxHitPoints>200</MaxHitPoints> <!-- +100 -->
+			<MaxHitPoints>100</MaxHitPoints>
 			<ArmorRating_Sharp>0.01</ArmorRating_Sharp>
 			<ArmorRating_Blunt>0.01</ArmorRating_Blunt>
 			<ArmorRating_Heat>0.01</ArmorRating_Heat>
@@ -702,7 +702,7 @@
 		<statBases>
 			<Mass>3</Mass>
 			<MarketValue>5000</MarketValue>
-			<MaxHitPoints>200</MaxHitPoints> <!-- +100 -->
+			<MaxHitPoints>150</MaxHitPoints> <!-- +50 -->
 			<ArmorRating_Sharp>0.01</ArmorRating_Sharp>
 			<ArmorRating_Blunt>0.01</ArmorRating_Blunt>
 			<ArmorRating_Heat>0.01</ArmorRating_Heat>
@@ -965,6 +965,124 @@
 		</graphicData>
 	  </ThingStyleDef>
 	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  <ThingDef ParentName="guy762_clothingbase">
+		<defName>guy762_NewRepUniform_lowrank</defName>
+		<label>New Republic uniform, officer's</label>
+		<description>These are simple garments that protect little more than the modesty of the wearer.</description>
+		<graphicData>
+		  <texPath>Apparel/RebelOfficer/navylieutenant/Apparel</texPath>
+		  <graphicClass>Graphic_Single</graphicClass>
+		  <shaderType>CutoutComplex</shaderType>
+		  <colorTwo>(145,175,195)</colorTwo> <!-- sand blue -->
+		</graphicData>
+		<statBases>
+			<Mass>3</Mass>
+			<MarketValue>1000</MarketValue>
+			<MaxHitPoints>100</MaxHitPoints>
+			<ArmorRating_Sharp>0.01</ArmorRating_Sharp>
+			<ArmorRating_Blunt>0.01</ArmorRating_Blunt>
+			<ArmorRating_Heat>0.01</ArmorRating_Heat>
+			<Insulation_Cold>10</Insulation_Cold>
+			<Insulation_Heat>5</Insulation_Heat>
+			<EquipDelay>3</EquipDelay>
+			
+			<WorkToMake>4000</WorkToMake>
+		</statBases>
+		<equippedStatOffsets>
+		  <SocialImpact>0.1</SocialImpact>
+		</equippedStatOffsets>
+		
+		<recipeMaker>
+			<researchPrerequisite>guy762_ResearchKotOR_sith</researchPrerequisite>
+			<skillRequirements>
+				<Crafting>6</Crafting>
+			</skillRequirements>
+		</recipeMaker>
+		<costList>
+		  <Cloth>75</Cloth>
+		</costList>
+		
+		<apparel>
+		  <tags Inherit="False">
+			<li>NewRepublic_lowrankofficer</li>
+		  </tags>
+		  <wornGraphicPath>Apparel/RebelOfficer/navylieutenant/Apparel</wornGraphicPath>
+		  <useWornGraphicMask>true</useWornGraphicMask>
+		  <defaultOutfitTags Inherit="False">
+			<li>Worker</li>
+		  </defaultOutfitTags>
+		</apparel>
+		
+		<randomStyleChance>1</randomStyleChance>
+		<randomStyle>
+		  <li>
+			<styleDef>guy762_RankStyleNR_navylt</styleDef>
+		  </li>
+		</randomStyle>
+		
+		<tradeTags>
+			<li>guy762TT_SEArmor</li>
+		</tradeTags>
+		<colorGenerator Class="ColorGenerator_Options" Inherit="False">
+			<options>
+				<li>
+					<weight>15</weight>
+					<only>(170,135,100)</only> <!-- darker beige -->
+				</li>
+			</options>
+		</colorGenerator>
+	  </ThingDef>
+	  
+	  <ThingStyleDef>
+		<defName>guy762_RankStyleNR_navylt</defName>
+		<overrideLabel>New Republic uniform, navy lieutenant's</overrideLabel>
+		<wornGraphicPath>Apparel/RebelOfficer/navylieutenant/Apparel</wornGraphicPath>
+		<graphicData>
+		  <texPath>Apparel/RebelOfficer/navylieutenant/Apparel</texPath>
+		  <graphicClass>Graphic_Single</graphicClass>
+		  <shaderType>CutoutComplex</shaderType>
+		</graphicData>
+	  </ThingStyleDef>
 	  
 
 </Defs>

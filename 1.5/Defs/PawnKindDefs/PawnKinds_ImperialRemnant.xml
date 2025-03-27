@@ -535,6 +535,7 @@
 			<li>KotOREquipment_adv</li>
 		</apparelTags>
 		<apparelRequired>
+			<li>guy762_JKenergyshield</li>
 			<li>guy762_TIEpilotAceHelmet</li>
 			<li>guy762_TIEpilotArmor</li>
 			<li>guy762_Bodysuit_TIEace</li>
@@ -866,6 +867,7 @@
 			<li>KotOREquipment_officer</li>
 		</apparelTags>
 		<apparelRequired>
+			<li>guy762_JKenergyshield</li>
 			<li>guy762_UniformCap_imperial</li>
 			<li>guy762_ArmyOfficerArmor_highbrass</li>
 			<li>guy762_ImpUniform_default</li>
@@ -1376,7 +1378,7 @@
 	
 	<PawnKindDef Name="SWImpRemnant_Viceroy" ParentName="SWImpRemnant_Base">
 		<defName>SWImpRemnant_Viceroy</defName>
-		<label>Imperial Viceroy</label>
+		<label>Imperial viceroy</label>
 		<combatPower>40</combatPower>
 		<minGenerationAge>35</minGenerationAge>
 		<maxGenerationAge>85</maxGenerationAge>

@@ -473,7 +473,8 @@
 			<li>KotOREquipment_adv</li>
 		</apparelTags>
 		<apparelRequired>
-			<li>guy762_stealthbelt_eriadu</li>
+			<li>guy762_JKenergyshield</li>
+			<!-- <li>guy762_stealthbelt_eriadu</li> -->
 			<li>guy762_StormCommandoHelmet</li>
 			<li>guy762_StormCommandoArmor</li>
 			<li>guy762_Bodysuit</li>
@@ -676,6 +677,7 @@
 			<li>KotOREquipment_adv</li>
 		</apparelTags>
 		<apparelRequired>
+			<li>guy762_JKenergyshield</li>
 			<li>guy762_StormieHelmet</li>
 			<li>guy762_Accessory_stormie7thpauldron</li>
 			<li>guy762_Accessory_suspendersA</li>
@@ -822,7 +824,7 @@
 			</li>
 			<li>
 				<skill>Melee</skill>
-				<range>6~10</range>
+				<range>14~18</range>
 			</li>
 		</skills>
 		<inventoryOptions>

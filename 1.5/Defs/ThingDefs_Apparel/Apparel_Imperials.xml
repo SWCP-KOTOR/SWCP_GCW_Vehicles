@@ -1815,6 +1815,18 @@
 	
 	
 	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 	<ThingDef ParentName="KotORArmorModdable_hard">
 		<defName>guy762_NavyTrooperHelmet</defName>
 		<label>navy combat helmet</label>
@@ -2758,7 +2770,145 @@
 	  </ThingDef>
 
 	  
-	  
+	  <ThingDef ParentName="KotORArmorModdable_hard">
+		<defName>guy762_ImpRoyalGuardHelmet</defName>
+		<label>Sovereign Protector helmet</label>
+		<techLevel>Spacer</techLevel>
+		<description>.</description>
+		<graphicData>
+			<texPath>Apparel/RoyalGuard/helmet</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<shaderType>CutoutComplex</shaderType>
+			<colorTwo>(200,45,65)</colorTwo> <!-- royal guard red -->
+		</graphicData>
+		<thingCategories>
+		  <li>ArmorHeadgear</li>
+		</thingCategories>
+		<statBases>
+			<Mass>4</Mass>
+			<MarketValue>5000</MarketValue>
+			<MaxHitPoints>235</MaxHitPoints>
+      		<ArmorRating_Sharp>0.55</ArmorRating_Sharp> <!--+0.2-->
+			<ArmorRating_Blunt>0.4</ArmorRating_Blunt> <!--+0.2-->
+			<ArmorRating_Heat>0.75</ArmorRating_Heat>
+			<EquipDelay>2</EquipDelay>
+		</statBases>
+		<equippedStatOffsets>
+			<PainShockThreshold>0.3</PainShockThreshold>
+			<SuppressionPower MayRequire="Ludeon.RimWorld.Ideology">0.3</SuppressionPower>
+		</equippedStatOffsets>
+		
+		<apparel Inherit="False">
+			<tags>
+				<li>RemnantEmpire_royalguard</li>
+			</tags>
+			<wornGraphicPath>Apparel/RoyalGuard/helmet</wornGraphicPath>
+			<useWornGraphicMask>true</useWornGraphicMask>
+			<layers>
+				<li>Overhead</li>
+				<li>EyeCover</li>
+			</layers>
+			<bodyPartGroups>
+				<li>FullHead</li>
+			</bodyPartGroups>
+			<useDeflectMetalEffect>true</useDeflectMetalEffect>
+		</apparel>
+		<tradeTags>
+			<li>guy762TT_WarlordArmor</li>
+		</tradeTags>
+		<colorGenerator Class="ColorGenerator_Options" Inherit="False">
+			<options>
+				<li>
+					<weight>10</weight>
+					<only>(200,45,65)</only> <!-- royal guard red -->
+				</li>
+			</options>
+		</colorGenerator> <!-- 200,45,65 royal guard red -->
+		<!--comps>
+		  <li Class="ModularWeapons.CompProperties_ModularParts">
+			<compClass>ModularWeapons.CompModularParts</compClass>
+			<partKinds>
+			  <li>guy762_slot_overlay</li>
+			  <li>guy762_slot_underlay_hat</li>
+			</partKinds>
+			<randomizeParts>true</randomizeParts>
+		  </li>
+		</comps-->
+	</ThingDef>
+	
+	
+	
+	<ThingDef ParentName="guy762_armorbase_soft">
+		<defName>guy762_ImpRoyalGuardCloak</defName>
+		<label>cloak, full</label>
+		<description>This cloak covers the wearer's entire body.</description>
+		<graphicData>
+		  <texPath>Apparel/RoyalGuard/cloak/Apparel</texPath>
+		  <graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<statBases>
+			<Mass>5</Mass>
+			<MarketValue>50</MarketValue>
+			<MaxHitPoints>100</MaxHitPoints>
+			<ArmorRating_Sharp>0.01</ArmorRating_Sharp>
+			<ArmorRating_Blunt>0.01</ArmorRating_Blunt>
+			<ArmorRating_Heat>0.01</ArmorRating_Heat>
+			<Insulation_Cold>25</Insulation_Cold>
+			<Insulation_Heat>25</Insulation_Heat>
+			<EquipDelay>3</EquipDelay>
+			
+			<WorkToMake>9500</WorkToMake>
+		</statBases>
+		<!--equippedStatOffsets>
+		  <PsychicSensitivity>0.1</PsychicSensitivity>
+		  <PsychicEntropyRecoveryRate>0.1</PsychicEntropyRecoveryRate>
+		</equippedStatOffsets-->
+		<apparel>
+			<drawData>
+			  <dataNorth>
+				<layer>65</layer>
+			  </dataNorth>
+			</drawData>
+			<layers>
+				<li>Shell</li>
+			</layers>
+			<bodyPartGroups>
+				<li>Torso</li>
+				<li>Neck</li>
+				<li>Shoulders</li>
+				<li>Arms</li>
+				<li>Legs</li>
+			</bodyPartGroups>
+			<tags Inherit="False">
+				<li>RemnantEmpire_royalguard</li>
+			</tags>
+			<wornGraphicPath>Apparel/RoyalGuard/cloak/Apparel</wornGraphicPath>
+		</apparel>
+		<tradeTags>
+			<li>guy762TT_WarlordArmor</li>
+		</tradeTags>
+		<costList>
+			<Synthread>80</Synthread>
+		</costList>
+		<recipeMaker>
+			<skillRequirements>
+				<Crafting>4</Crafting>
+			</skillRequirements>
+			<recipeUsers Inherit="False">
+				<li>HandTailoringBench</li>
+				<li>ElectricTailoringBench</li>
+				<li>guy762_KotORWorkbench</li>
+			</recipeUsers>
+		</recipeMaker>
+		<colorGenerator Class="ColorGenerator_Options" Inherit="False">
+			<options>
+				<li>
+					<weight>10</weight>
+					<only>(200,45,65)</only> <!-- royal guard red -->
+				</li>
+			</options>
+		</colorGenerator>
+	</ThingDef>
 	  
 	
 	

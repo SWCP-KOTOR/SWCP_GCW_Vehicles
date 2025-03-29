@@ -141,6 +141,77 @@
 	  
 	  
 	  
+	  <PawnKindDef Name="SWNewRepub_NavyLt" ParentName="KotORRepub_Base">
+		<defName>SWNewRepub_NavyLt</defName>
+		<label>navy lieutenant</label>
+		<combatPower>40</combatPower>
+		<minGenerationAge>22</minGenerationAge>
+		<maxGenerationAge>75</maxGenerationAge>
+		<itemQuality>Good</itemQuality>
+		
+		<maxPerGroup>4</maxPerGroup>
+		
+		<apparelMoney>1500~5500</apparelMoney>
+		<apparelAllowHeadgearChance>1</apparelAllowHeadgearChance>
+		<apparelTags>
+		  <li>KotOREquipment_basic</li>
+		</apparelTags>
+		<apparelRequired>
+			<li>guy762_NewRepUniform_lowrank</li>
+		</apparelRequired>
+		
+		<specificApparelRequirements>
+			<li>
+				<apparelLayer>OnSkin</apparelLayer>
+				<apparelDef>guy762_NewRepUniform_lowrank</apparelDef>
+				<styleDef>guy762_RankStyleNR_navylt</styleDef>
+				<color>(170,135,100)</color> <!-- darker beige -->
+				<quality>Good</quality>
+			</li>
+		</specificApparelRequirements>
+		
+		<biocodeWeaponChance>0</biocodeWeaponChance>
+		<weaponMoney>550~600</weaponMoney>
+		<weaponTags>
+		  <li>SWRanged_DH17pistol</li>
+		</weaponTags>
+		
+		<skills>
+			<li>
+				<skill>Shooting</skill>
+				<range>4~6</range>
+			</li>
+			<li>
+				<skill>Social</skill>
+				<range>6~8</range>
+			</li>
+			<li>
+				<skill>Intellectual</skill>
+				<range>6~8</range>
+			</li>
+		</skills>
+		
+		<inventoryOptions>
+			<skipChance>0.25</skipChance>
+			<subOptionsChooseOne>
+				<li>
+					<thingDef>guy762_medpac</thingDef>
+					<countRange>1~3</countRange>
+				</li>
+			</subOptionsChooseOne>
+		</inventoryOptions>
+		
+		<initialWillRange>0.5~2</initialWillRange>
+		<initialResistanceRange>5~10</initialResistanceRange>
+		
+		<abilities>
+			<!-- <li>WorkDrive</li> -->
+			<!-- <li>ProductionCommand</li> -->
+			<!-- <li>MarksmanCommand</li> -->
+		</abilities>
+	  </PawnKindDef>
+	  
+	  
 	  
 	  
 	  

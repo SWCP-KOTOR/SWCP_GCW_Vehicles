@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>	
+	
+	<PawnKindDef MayRequire="divineDerivative.NonBinaryGender" Name="SWWEPlayableHero_KeoVenzee"  ParentName="guy762_HeroPawnKindBase">
+		<defName>SWWEPlayableHero_KeoVenzee</defName>
+		<nameMaker>guy762_HeroNamer_KeoVenzee</nameMaker>
+		<combatPower>500</combatPower>
+		<minGenerationAge>24</minGenerationAge>
+		<maxGenerationAge>25</maxGenerationAge>
+		<fixedGender>3</fixedGender>
+		<forcedHair>Mop</forcedHair>
+		<forcedHairColor>(50,50,50)</forcedHairColor>
+		<skinColorOverride>(204, 199, 65)</skinColorOverride>
+		<xenotypeSet>
+			<xenotypeChances>
+				<guy762_xenotype_mirialan>999</guy762_xenotype_mirialan>
+			</xenotypeChances>
+		</xenotypeSet>
+		<useFactionXenotypes>false</useFactionXenotypes>
+		<itemQuality>Legendary</itemQuality>
+		<apparelMoney>49999</apparelMoney>
+		<apparelTags>
+		  <li>KotOREquipment_officer</li>
+		</apparelTags>
+		<apparelRequired>
+		   <li>guy762_AWingPilotHelmet_keo</li>
+		   <li>guy762_RebelPilot_suitbox</li>
+		   <li>guy762_FlightVest</li>
+		   <li>guy762_Bodysuit_Dyeable</li>
+		</apparelRequired>
+		<specificApparelRequirements>
+			<li>
+				<apparelLayer>Middle</apparelLayer>
+				<apparelDef>guy762_FlightVest</apparelDef>
+				<color>(250,250,250)</color> <!-- white -->
+				<quality>Legendary</quality>
+			</li>
+			<li>
+				<apparelLayer>OnSkin</apparelLayer>
+				<apparelDef>guy762_Bodysuit_Dyeable</apparelDef>
+				<color>(190,110,0)</color> <!-- rebel pilot orange -->
+				<quality>Legendary</quality>
+			</li>
+		</specificApparelRequirements>
+		<weaponMoney>99999999</weaponMoney>
+		<weaponTags>
+		  <li>SWRanged_E5rifle</li>
+		</weaponTags>
+		<skills>
+			<li>
+				<skill>Shooting</skill>
+				<range>8~12</range>
+			</li>
+			<li>
+				<skill>Construction</skill>
+				<range>12~14</range>
+			</li>
+			<li>
+				<skill>Crafting</skill>
+				<range>12~14</range>
+			</li>
+			<li>
+				<skill>Intellectual</skill>
+				<range>14~16</range>
+			</li>
+		</skills>
+		<forcedTraits>
+			<PsychicSensitivity>1</PsychicSensitivity>
+			<Bisexual>0</Bisexual>
+			<NaturalMood>1</NaturalMood>
+		</forcedTraits>
+		
+		<backstoryFiltersOverride>
+		  <li>
+			<categories>
+			  <li>guy762BSC_keovenzee</li>
+			</categories>
+		  </li>
+		</backstoryFiltersOverride>
+		<modExtensions>
+			<li Class="BodyTypeForPawnKind.ModExtension_HeadTypesOfPawnKind">
+			  <whitelist>
+				<li>Male_AveragePointy</li>
+				<li>Female_AveragePointy</li>
+			  </whitelist>
+			  <blacklist>
+				<!--leave blank to disable-->
+			  </blacklist>
+			  <priority>
+				<li>Male_AveragePointy</li>
+				<li>Female_AveragePointy</li>
+			  </priority>
+			  <checkGender>False</checkGender>
+			</li>
+			<li Class="BodyTypeForPawnKind.ModExtension_ForcedStyleItem">
+			  <forcedBeard>NoBeard</forcedBeard>
+			</li>
+			<li Class="AddGeneForPK.PKAdditionalGenes">
+			  <geneSets>
+				<li>
+				  <isXenogene>true</isXenogene>
+				  <chance>1</chance>
+				  <geneDefs>
+					<li>Hair_DarkBlack</li>
+					<li>Skin_DeepYellow</li>
+				  </geneDefs>
+				</li>
+			  </geneSets>
+			</li>
+			<li MayRequire="Ludeon.RimWorld.Ideology" Class="BodyTypeForPawnKind.ModExtension_ForcedStyleItem">
+			  <forcedFaceTattoo>guy762_FaceTattoo_keo</forcedFaceTattoo>
+			</li>
+		</modExtensions>
+	  </PawnKindDef>
+	  
+	  <RulePackDef>
+        <defName>guy762_HeroNamer_KeoVenzee</defName>
+        <rulePack>
+            <rulesStrings>
+                <li>r_name->[keo] '[keo]' [venzee]</li>
+				<li>keo->Keo</li>
+				<li>venzee->Venzee</li>
+            </rulesStrings>
+        </rulePack>
+    </RulePackDef>
+	
+		<!--[PAWN_nameDef] [PAWN_possessive] [PAWN_pronoun]-->
+	
+	
+	<BackstoryDef>
+		<defName>guy762_BackstoryC_KeoVenzee</defName>
+		<title>Starship Racer</title>
+		<titleShort>Racer</titleShort>
+		<description>.</description>
+		<slot>Childhood</slot>
+		<skillGains>
+			<Construction>5</Construction>
+			<Crafting>5</Crafting>
+			<Intellectual>5</Intellectual>
+		</skillGains>
+		<!-- <forcedTraits> -->
+		  <!-- <Industriousness>2</Industriousness> -->
+		<!-- </forcedTraits> -->
+		<requiredWorkTags>
+		  <li>Violent</li>
+		  <li>Intellectual</li>
+		</requiredWorkTags>
+		<bodyTypeMale>Thin</bodyTypeMale>
+		<bodyTypeFemale>Thin</bodyTypeFemale>
+		<nameMaker>guy762_HeroNamer_KeoVenzee</nameMaker>
+		<spawnCategories>
+			<li>guy762BSC_keovenzee</li>
+		</spawnCategories>
+		<!--shuffleable>False</shuffleable-->
+	</BackstoryDef>
+	
+	<BackstoryDef>
+		<defName>guy762_BackstoryA_KeoVenzee</defName>
+		<title>Vanguard Squadron Ace</title>
+		<titleShort>Ace Pilot</titleShort>
+		<description>.</description>
+		<slot>Adulthood</slot>
+		<skillGains>
+			<Shooting>5</Shooting>
+			<Intellectual>5</Intellectual>
+		</skillGains>
+		<!-- <forcedTraits> -->
+		  <!-- <Industriousness>1</Industriousness> -->
+		<!-- </forcedTraits> -->
+		<requiredWorkTags>
+		  <li>Violent</li>
+		  <li>Intellectual</li>
+		</requiredWorkTags>
+		<bodyTypeMale>Thin</bodyTypeMale>
+		<bodyTypeFemale>Thin</bodyTypeFemale>
+		<nameMaker>guy762_HeroNamer_KeoVenzee</nameMaker>
+		<spawnCategories>
+			<li>guy762BSC_keovenzee</li>
+		</spawnCategories>
+		<!--shuffleable>False</shuffleable-->
+	</BackstoryDef>
+	
+	
+
+</Defs>

@@ -35,6 +35,7 @@
 	
     <weaponMoney>250</weaponMoney>
     <weaponTags>
+	  <li>SWRanged_DL18pistol</li>
 	  <li>SWRanged_E5rifle</li>
     </weaponTags>
 	<biocodeWeaponChance>0.1</biocodeWeaponChance>

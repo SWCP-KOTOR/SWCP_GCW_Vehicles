@@ -40,7 +40,7 @@
 				<range>28</range>
 				<ticksBetweenBurstShots>20</ticksBetweenBurstShots>
 				<burstShotCount>3</burstShotCount>
-				<soundCast>kotorsound_AATgun_quiet</soundCast>
+				<soundCast>kotorsound_DLT18rifle</soundCast>
 				<soundCastTail>GunTail_Medium</soundCastTail>
 				<muzzleFlashScale>9</muzzleFlashScale>
 			</li>
@@ -60,7 +60,7 @@
 				<ticksBetweenBurstShots>20</ticksBetweenBurstShots>
 				<burstShotCount>1</burstShotCount>
 				<!-- <soundCast>kotorsound_rebelsniper</soundCast> -->
-				<soundCast>kotorsound_AATgun_quiet</soundCast>
+				<soundCast>kotorsound_DLT18rifle</soundCast>
 				<soundCastTail>GunTail_Medium</soundCastTail>
 				<muzzleFlashScale>9</muzzleFlashScale>
 				<ai_IsWeapon>true</ai_IsWeapon>

@@ -538,7 +538,7 @@
 		<autoSnapTargeting>true</autoSnapTargeting>
 		<rotationSpeed>5</rotationSpeed>
 		
-		<!-- <projectileOffset>2.1</projectileOffset> -->
+		<projectileOffset>2.1</projectileOffset> <!-- keep this on starfighters-->
 		
 		<minRange>5</minRange>
 		<maxRange>90</maxRange> <!-- ~30 for infantry, 60 for ground vehicles, 90 for starfighters -->

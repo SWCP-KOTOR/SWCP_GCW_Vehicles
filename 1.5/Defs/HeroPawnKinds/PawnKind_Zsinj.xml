@@ -114,7 +114,8 @@
         <defName>guy762_HeroNamer_Zsinj</defName>
         <rulePack>
             <rulesStrings> <!-- the namemaker will not function without a first and last name -->
-                <li>r_name->[zsinj] '[zsinj]' [zsinj]</li>
+                <li>r_name->[warlord] '[zsinj]' [zsinj]</li>
+				<li>warlord->Warlord</li>
 				<li>zsinj->Zsinj</li>
             </rulesStrings>
         </rulePack>

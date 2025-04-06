@@ -145,6 +145,19 @@
                  <li>guy762_DL21pistol</li> <!-- DL-21 blaster pistol -->
               </ThingTargets>
           </li>
+		  <li>
+              <MainHand>(0.075, 0.100, -0.150)</MainHand>
+              <ThingTargets>
+                 <li>guy762_SE14pistol</li> <!-- SE-14 blaster pistol -->
+              </ThingTargets>
+          </li>
+		  <li>
+			  <MainHand>(-0.150, 0.100, -0.125)</MainHand>
+              <SecHand>(0.250, -0.100, -0.075)</SecHand>
+              <ThingTargets>
+                 <li>guy762_CR1BlastCannon</li> <!-- CR-1 blast cannon -->
+              </ThingTargets>
+          </li>
 		  
 		  
 		  <li>

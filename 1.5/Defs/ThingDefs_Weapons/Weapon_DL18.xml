@@ -152,14 +152,14 @@
 				<commandIcon>UI/Spread_Shot</commandIcon>
 				<verbClass>Verb_Shoot</verbClass>
 				<hasStandardCommand>true</hasStandardCommand>
-				<defaultProjectile>KotORBlasterBolt_default</defaultProjectile>
-				<warmupTime>2.5</warmupTime>
+				<defaultProjectile>SWProj_ScatterBlasterBolt</defaultProjectile>
+				<warmupTime>2</warmupTime>
 				<defaultCooldownTime>3.5</defaultCooldownTime>
 				<range>23</range>
-				<accuracyTouch>0.35</accuracyTouch>
-				<accuracyShort>0.45</accuracyShort>
-				<accuracyMedium>0.45</accuracyMedium>
-				<accuracyLong>0.30</accuracyLong>
+				<accuracyTouch>0.45</accuracyTouch>
+				<accuracyShort>0.55</accuracyShort>
+				<accuracyMedium>0.55</accuracyMedium>
+				<accuracyLong>0.40</accuracyLong>
 				<ticksBetweenBurstShots>0</ticksBetweenBurstShots>
 				<burstShotCount>3</burstShotCount>
 				<!--soundAiming>kotorsound_bowcharge</soundAiming-->

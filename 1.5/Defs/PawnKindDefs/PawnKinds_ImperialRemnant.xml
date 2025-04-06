@@ -464,6 +464,7 @@
 		<weaponMoney>350~500</weaponMoney>
 		<weaponTags>
 			<li>SWRanged_RK3pistol</li>
+			<li>SWRanged_SE14pistol</li>
 		</weaponTags>
 
 		<techHediffsChance>1</techHediffsChance>
@@ -798,9 +799,9 @@
 		</specificApparelRequirements>
 
 		<biocodeWeaponChance>0.5</biocodeWeaponChance>
-		<weaponMoney>350~500</weaponMoney>
+		<weaponMoney>400~600</weaponMoney>
 		<weaponTags>
-			<li>SWRanged_RK3pistol</li>
+			<li>SWRanged_SE14pistol</li>
 			<li>SWRanged_E11carbine</li>
 		</weaponTags>
 		
@@ -887,8 +888,9 @@
 		</specificApparelRequirements>
 
 		<biocodeWeaponChance>1</biocodeWeaponChance>
-		<weaponMoney>350</weaponMoney>
+		<weaponMoney>350~500</weaponMoney>
 		<weaponTags>
+			<li>SWRanged_SE14pistol</li>
 			<li>SWRanged_RK3pistol</li>
 		</weaponTags>
 		

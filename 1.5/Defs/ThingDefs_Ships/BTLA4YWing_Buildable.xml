@@ -10,7 +10,7 @@
 		<graphicData>
 			<texPath>Starfighters/BTLA4YWing/YWing</texPath>
 			<graphicClass>Graphic_Multi</graphicClass>
-			<drawSize>(20,20)</drawSize>
+			<drawSize>(19,19)</drawSize>
 			<!-- <drawOffset>(0, 0, 1)</drawOffset> -->
 		</graphicData>
 		
@@ -20,7 +20,7 @@
 			<Flammability>0.05</Flammability>
 		</statBases>
 		
-		<size>(10,19)</size>
+		<size>(10,18)</size>
 		
 		<!--researchPrerequisites>
 			<li>VVE_BasicVehicles</li>

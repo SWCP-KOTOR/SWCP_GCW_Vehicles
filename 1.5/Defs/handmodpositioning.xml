@@ -21,7 +21,7 @@
               </ThingTargets>
           </li>
 		  <li>
-              <MainHand>(-0.050, 0.100, -0.130)</MainHand>
+              <MainHand>(-0.100, 0.100, -0.130)</MainHand>
               <SecHand>(0.220, -0.100, -0.080)</SecHand>
 			  <!-- <SecHand>(0.300, -0.100, -0.100)</SecHand> -->
               <ThingTargets>
@@ -152,10 +152,30 @@
               </ThingTargets>
           </li>
 		  <li>
+              <MainHand>(0.000, 0.100, -0.125)</MainHand>
+              <ThingTargets>
+                 <li>guy762_WESTAR35pistol</li> <!-- WESTAR-35 blaster pistol -->
+              </ThingTargets>
+          </li>
+		  <li>
 			  <MainHand>(-0.150, 0.100, -0.125)</MainHand>
               <SecHand>(0.250, -0.100, -0.075)</SecHand>
               <ThingTargets>
                  <li>guy762_CR1BlastCannon</li> <!-- CR-1 blast cannon -->
+              </ThingTargets>
+          </li>
+		  <li>
+			  <MainHand>(-0.250, 0.100, -0.150)</MainHand>
+              <SecHand>(0.200, -0.100, -0.050)</SecHand>
+              <ThingTargets>
+                 <li>guy762_A280_c</li> <!-- A280-C blaster rifle -->
+              </ThingTargets>
+          </li>
+		  <li>
+              <MainHand>(-0.175, 0.100, -0.150)</MainHand>
+              <SecHand>(0.200, -0.100, -0.125)</SecHand>
+              <ThingTargets>
+                 <li>guy762_GALAAR15carbine</li> <!-- GALAAR-15 blaster carbine -->
               </ThingTargets>
           </li>
 		  

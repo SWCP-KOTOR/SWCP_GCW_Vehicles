@@ -17,8 +17,8 @@
 		<statBases>
 			<MarketValue>250</MarketValue>
 			<Mass>2.5</Mass>
-			<AccuracyTouch>0.50</AccuracyTouch>
-			<AccuracyShort>0.40</AccuracyShort>
+			<AccuracyTouch>0.40</AccuracyTouch>
+			<AccuracyShort>0.50</AccuracyShort>
 			<AccuracyMedium>0.20</AccuracyMedium>
 			<AccuracyLong>0.10</AccuracyLong>
 			<RangedWeapon_Cooldown>0.75</RangedWeapon_Cooldown>
@@ -27,6 +27,7 @@
 		
 		<weaponTags>
 			<li>SWRanged_E5rifle</li>
+			<li>SWRanged_AnyCommonCarbine</li>
 		</weaponTags>
 		<tradeTags Inherit="False">
 			<li>guy762TT_KotORRanged</li>
@@ -98,16 +99,17 @@
 		<statBases>
 			<MarketValue>1600</MarketValue>
 			<Mass>4.5</Mass>
-			<AccuracyTouch>0.60</AccuracyTouch>
-			<AccuracyShort>0.50</AccuracyShort>
-			<AccuracyMedium>0.40</AccuracyMedium>
-			<AccuracyLong>0.30</AccuracyLong>
+			<AccuracyTouch>0.35</AccuracyTouch>
+			<AccuracyShort>0.45</AccuracyShort>
+			<AccuracyMedium>0.65</AccuracyMedium>
+			<AccuracyLong>0.55</AccuracyLong>
 			<RangedWeapon_Cooldown>1</RangedWeapon_Cooldown>
-			<RangedWeapon_DamageMultiplier>0.8</RangedWeapon_DamageMultiplier>
+			<RangedWeapon_DamageMultiplier>1.2</RangedWeapon_DamageMultiplier>
 		</statBases>
 		
 		<weaponTags>
 			<li>SWRanged_E5Crifle</li>
+			<li>SWRanged_AnyRareRifle</li>
 		</weaponTags>
 		<tradeTags Inherit="False">
 			<li>guy762TT_KotORRanged</li>

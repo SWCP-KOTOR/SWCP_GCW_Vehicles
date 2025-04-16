@@ -922,8 +922,7 @@
 		<initialResistanceRange>5~10</initialResistanceRange>
 		
 		<abilities>
-			<li MayRequire="Ludeon.RimWorld.Ideology">WorkDrive</li>
-			<li>guy762_Ability_CommandTierV</li>
+			<li>guy762_Ability_CommandTierIV</li>
 		</abilities>
 	</PawnKindDef>
 	

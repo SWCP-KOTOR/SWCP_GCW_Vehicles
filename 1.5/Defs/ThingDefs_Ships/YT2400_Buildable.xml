@@ -10,7 +10,7 @@
 		<graphicData>
 			<texPath>Starfighters/YT2400/YT2400</texPath>
 			<graphicClass>Graphic_Multi</graphicClass>
-			<drawSize>(28,28)</drawSize>
+			<drawSize>(30,30</drawSize>
 			<!-- <drawOffset>(0, 0, 1)</drawOffset> -->
 		</graphicData>
 		
@@ -20,7 +20,7 @@
 			<Flammability>0.05</Flammability>
 		</statBases>
 		
-		<size>(26,18)</size>
+		<size>(29,19)</size>
 		
 		<!--researchPrerequisites>
 			<li>VVE_BasicVehicles</li>

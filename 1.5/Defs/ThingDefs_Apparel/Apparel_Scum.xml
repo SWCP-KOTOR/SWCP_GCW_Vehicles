@@ -158,7 +158,560 @@
 		  <!-- </li> -->
 		<!-- </comps> -->
 	</ThingDef>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<ThingDef ParentName="guy762_HelmetModMakeableBase">
+		<defName>guy762_MandoGCWHelmet</defName>
+		<label>Mandalorian Helmet</label>
+		<techLevel>Spacer</techLevel>
+		<description>.</description>
+		<graphicData>
+			<texPath>Apparel/Mandalorian/helmet_norangefinder/helmet</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<!-- <shaderType>CutoutMultiMask</shaderType> -->
+			<shaderType>CutoutComplex</shaderType>
+			<!-- <colorTwo>(160,110,35)</colorTwo> supercommando auburn -->
+			<colorTwo>(230,185,45)</colorTwo> <!--republic yellow--> 
+		</graphicData>
+		<statBases>
+			<Mass>6</Mass>
+			<MarketValue>7250</MarketValue>
+			<MaxHitPoints>250</MaxHitPoints>
+      		<ArmorRating_Sharp>0.95</ArmorRating_Sharp>
+			<ArmorRating_Blunt>0.8</ArmorRating_Blunt>
+			<ArmorRating_Heat>1.05</ArmorRating_Heat>
+			<EquipDelay>8</EquipDelay>
+			
+			<WorkToMake>50000</WorkToMake>
+		</statBases>
+		<equippedStatOffsets>
+			<ToxicEnvironmentResistance>0.5</ToxicEnvironmentResistance>
+			<HypoxiaResistance MayRequire="kentington.saveourship2">1</HypoxiaResistance>
+			<DecompressionResistance MayRequire="kentington.saveourship2">0.25</DecompressionResistance>
+		</equippedStatOffsets>
+		
+		<recipeMaker>
+			<researchPrerequisite>guy762_ResearchKotOR_mando</researchPrerequisite>
+			<skillRequirements>
+				<Crafting>12</Crafting>
+			</skillRequirements>
+			<!--factionPrerequisiteTags>
+				<li>guy762_KotORFaction_Mando</li>
+			</factionPrerequisiteTags-->
+		</recipeMaker>
+		<costList>
+			<ComponentSpacer>3</ComponentSpacer>
+			<KOTOR_IngotBeskar>60</KOTOR_IngotBeskar>
+		</costList>
+		
+		<apparel>
+			<drawData>
+				<defaultData>
+					<layer>67</layer>
+				</defaultData>
+			</drawData>
+			<countsAsClothingForNudity>false</countsAsClothingForNudity>
+			<!--immuneToToxGasExposure>true</immuneToToxGasExposure-->
+			<tags>
+				<li>MNC_outfit_supercom</li>
+				<li>MNC_outfit_mandalore</li>
+				<li>MNC_helmet_hood</li>
+				<!--li>EVA</li-->
+			</tags>
+			<wornGraphicPath>Apparel/Mandalorian/helmet_norangefinder/helmet</wornGraphicPath>
+			<useWornGraphicMask>true</useWornGraphicMask>
+			<layers>
+				<li>Overhead</li>
+				<li>EyeCover</li>
+			</layers>
+			<bodyPartGroups>
+				<li>FullHead</li>
+			</bodyPartGroups>
+			<useDeflectMetalEffect>true</useDeflectMetalEffect>
+			<!--ideoDesireAllowedFactionCategoryTags>
+				<li>guy762_KotORFaction_Mando</li>
+			</ideoDesireAllowedFactionCategoryTags-->
+			<canBeDesiredForIdeo>true</canBeDesiredForIdeo>
+		</apparel>
+		<tradeTags>
+			<li>guy762TT_MNCArmor</li>
+		</tradeTags>
+		<colorGenerator Class="ColorGenerator_Options" Inherit="False">
+			<options>
+				<li>
+					<weight>10</weight>
+					<only>(180,185,185)</only> <!-- beskar -->
+				</li>
+				<li>
+					<weight>10</weight>
+					<only>(90,120,85)</only> <!-- protector green -->
+					<!-- <only>(90,105,75)</only> -->
+				</li>
+				<li>
+					<weight>10</weight>
+					<only>(125,155,195)</only> <!-- neo-crusader blue -->
+				</li>
+				<li>
+					<weight>10</weight>
+					<only>(180,85,85)</only> <!-- rally master red -->
+				</li>
+				<li>
+					<weight>10</weight>
+					<only>(210,160,15)</only> <!-- field marshal gold -->
+				</li>
+			</options>
+		</colorGenerator>
+		<!-- <comps> -->
+		  <!-- <li Class="ModularWeapons.CompProperties_ModularParts"> -->
+			<!-- <compClass>ModularWeapons.CompModularParts</compClass> -->
+			<!-- <partKinds> -->
+			  <!-- <li>guy762_slot_underlay_hat</li> -->
+			  <!-- <li>guy762_slot_overlay_hvy</li> -->
+			  <!-- <li>guy762_slot_helmettech</li> -->
+			<!-- </partKinds> -->
+			<!-- <randomizeParts>true</randomizeParts> -->
+		  <!-- </li> -->
+		<!-- </comps> -->
+		
+		<modExtensions>
+			<li MayRequire="telefonmast.itempainter" Class="RWPaintingTool.PaintableExtension">
+				<!-- <maskCount>1</maskCount> -->
+				<defaultPalette>
+					<colorOne>(230,185,45)</colorOne> <!-- republic yellow -->
+					<colorTwo>(160,110,35)</colorTwo> <!-- supercommando auburn -->
+					<colorThree>(90,120,85)</colorThree> <!-- protector green -->
+				</defaultPalette>
+			</li>
+		</modExtensions>
+	</ThingDef>
+	
+	
+	
+	<ThingDef ParentName="guy762_HelmetModMakeableBase">
+		<defName>guy762_MandoGCWHelmet_rangefinder</defName>
+		<label>Mandalorian Helmet, rangefinder</label>
+		<techLevel>Spacer</techLevel>
+		<description>.</description>
+		<graphicData>
+			<texPath>Apparel/Mandalorian/helmet</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<!-- <shaderType>CutoutMultiMask</shaderType> -->
+			<shaderType>CutoutComplex</shaderType>
+			<!-- <colorTwo>(160,110,35)</colorTwo> supercommando auburn -->
+			<colorTwo>(230,185,45)</colorTwo> <!--republic yellow--> 
+		</graphicData>
+		<statBases>
+			<Mass>6</Mass>
+			<MarketValue>7500</MarketValue>
+			<MaxHitPoints>250</MaxHitPoints>
+      		<ArmorRating_Sharp>0.95</ArmorRating_Sharp>
+			<ArmorRating_Blunt>0.8</ArmorRating_Blunt>
+			<ArmorRating_Heat>1.05</ArmorRating_Heat>
+			<EquipDelay>8</EquipDelay>
+			
+			<WorkToMake>50000</WorkToMake>
+		</statBases>
+		<equippedStatOffsets>
+			<AimingDelayFactor>-0.2</AimingDelayFactor>
+			
+			<ToxicEnvironmentResistance>0.5</ToxicEnvironmentResistance>
+			<HypoxiaResistance MayRequire="kentington.saveourship2">1</HypoxiaResistance>
+			<DecompressionResistance MayRequire="kentington.saveourship2">0.25</DecompressionResistance>
+		</equippedStatOffsets>
+		
+		<recipeMaker>
+			<researchPrerequisite>guy762_ResearchKotOR_mando</researchPrerequisite>
+			<skillRequirements>
+				<Crafting>12</Crafting>
+			</skillRequirements>
+			<!--factionPrerequisiteTags>
+				<li>guy762_KotORFaction_Mando</li>
+			</factionPrerequisiteTags-->
+		</recipeMaker>
+		<costList>
+			<ComponentSpacer>3</ComponentSpacer>
+			<KOTOR_IngotBeskar>60</KOTOR_IngotBeskar>
+		</costList>
+		
+		<apparel>
+			<drawData>
+				<defaultData>
+					<layer>67</layer>
+				</defaultData>
+			</drawData>
+			<countsAsClothingForNudity>false</countsAsClothingForNudity>
+			<!--immuneToToxGasExposure>true</immuneToToxGasExposure-->
+			<tags>
+				<li>MNC_outfit_supercom</li>
+				<li>MNC_outfit_mandalore</li>
+				<li>MNC_helmet_hood</li>
+				<!--li>EVA</li-->
+			</tags>
+			<wornGraphicPath>Apparel/Mandalorian/helmet</wornGraphicPath>
+			<useWornGraphicMask>true</useWornGraphicMask>
+			<layers>
+				<li>Overhead</li>
+				<li>EyeCover</li>
+			</layers>
+			<bodyPartGroups>
+				<li>FullHead</li>
+			</bodyPartGroups>
+			<useDeflectMetalEffect>true</useDeflectMetalEffect>
+			<!--ideoDesireAllowedFactionCategoryTags>
+				<li>guy762_KotORFaction_Mando</li>
+			</ideoDesireAllowedFactionCategoryTags-->
+			<canBeDesiredForIdeo>true</canBeDesiredForIdeo>
+		</apparel>
+		<tradeTags>
+			<li>guy762TT_MNCArmor</li>
+		</tradeTags>
+		<colorGenerator Class="ColorGenerator_Options" Inherit="False">
+			<options>
+				<li>
+					<weight>10</weight>
+					<only>(180,185,185)</only> <!-- beskar -->
+				</li>
+				<li>
+					<weight>10</weight>
+					<only>(90,120,85)</only> <!-- protector green -->
+					<!-- <only>(90,105,75)</only> -->
+				</li>
+				<li>
+					<weight>10</weight>
+					<only>(125,155,195)</only> <!-- neo-crusader blue -->
+				</li>
+				<li>
+					<weight>10</weight>
+					<only>(180,85,85)</only> <!-- rally master red -->
+				</li>
+				<li>
+					<weight>10</weight>
+					<only>(210,160,15)</only> <!-- field marshal gold -->
+				</li>
+			</options>
+		</colorGenerator>
+		<!-- <comps> -->
+		  <!-- <li Class="ModularWeapons.CompProperties_ModularParts"> -->
+			<!-- <compClass>ModularWeapons.CompModularParts</compClass> -->
+			<!-- <partKinds> -->
+			  <!-- <li>guy762_slot_underlay_hat</li> -->
+			  <!-- <li>guy762_slot_overlay_hvy</li> -->
+			  <!-- <li>guy762_slot_helmettech</li> -->
+			<!-- </partKinds> -->
+			<!-- <randomizeParts>true</randomizeParts> -->
+		  <!-- </li> -->
+		<!-- </comps> -->
+		
+		<modExtensions>
+			<li MayRequire="telefonmast.itempainter" Class="RWPaintingTool.PaintableExtension">
+				<!-- <maskCount>1</maskCount> -->
+				<defaultPalette>
+					<colorOne>(230,185,45)</colorOne> <!-- republic yellow -->
+					<colorTwo>(160,110,35)</colorTwo> <!-- supercommando auburn -->
+					<colorThree>(90,120,85)</colorThree> <!-- protector green -->
+				</defaultPalette>
+			</li>
+		</modExtensions>
+	</ThingDef>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<ThingDef ParentName="guy762_ModdableMakeableArmor_hard">
+		<defName>guy762_MandoGCWArmor_battle</defName>
+		<label>Mandalorian Battle Armor</label>
+		<techLevel>Spacer</techLevel>
+		<description>.</description>
+		<graphicData>
+			<texPath>Apparel/Mandalorian/Apparel</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<shaderType>CutoutComplex</shaderType>
+			<colorTwo>(160,110,35)</colorTwo> <!-- supercommando auburn -->
+		</graphicData>
+		<statBases>
+			<Mass>14</Mass>
+			<MarketValue>7000</MarketValue>
+			<MaxHitPoints>500</MaxHitPoints>
+      		<ArmorRating_Sharp>1.15</ArmorRating_Sharp>
+			<ArmorRating_Blunt>1</ArmorRating_Blunt>
+			<ArmorRating_Heat>1.25</ArmorRating_Heat>
+			<EquipDelay>10</EquipDelay>
+			
+			<WorkToMake>90000</WorkToMake>
+		</statBases>
+		<equippedStatOffsets>
+			<MoveSpeed>-0.5</MoveSpeed>
+			<MeleeDodgeChance>-0.5</MeleeDodgeChance>
+			<IncomingDamageFactor>-0.15</IncomingDamageFactor>
+		</equippedStatOffsets>
+		
+		<recipeMaker>
+			<researchPrerequisite>guy762_ResearchKotOR_mando</researchPrerequisite>
+			<skillRequirements>
+				<Crafting>11</Crafting>
+			</skillRequirements>
+			<!--factionPrerequisiteTags>
+				<li>guy762_KotORFaction_Mando</li>
+			</factionPrerequisiteTags-->
+		</recipeMaker>
+		<costList>
+			<KOTOR_AlloyDurasteel>100</KOTOR_AlloyDurasteel>
+			<KOTOR_FabricArmorweave>20</KOTOR_FabricArmorweave>
+			<ComponentSpacer>2</ComponentSpacer>
+		</costList>
+		
+		<thingSetMakerTags>
+		  <li>RewardStandardMidFreq</li>
+		  <li>RewardStandardQualitySuper</li>
+		</thingSetMakerTags>
+		<apparel Inherit="False">
+			<tags>
+				<li>SaV_outfit_elite</li>
+				<li>MNC_outfit_mid</li>
+				<li>MNCFactionArmor</li>
+				<li>KotORRoyaltyTag_AnyMandoArmor</li>
+			</tags>
+			<wornGraphicPath>Apparel/Mandalorian/Apparel</wornGraphicPath>
+			<useWornGraphicMask>true</useWornGraphicMask>
+			<layers>
+				<li>Middle</li>
+			</layers>
+			<bodyPartGroups>
+				<li>Torso</li>
+				<li>Shoulders</li>
+				<li>Neck</li>
+				<li>Arms</li>
+				<!-- <li>Hands</li> -->
+				<li>Legs</li>
+				<li>Feet</li>
+			</bodyPartGroups>
+			<useDeflectMetalEffect>true</useDeflectMetalEffect>
+		</apparel>
+		<tradeTags>
+			<li>guy762TT_MNCArmor</li>
+		</tradeTags>
+		<colorGenerator Class="ColorGenerator_Options" Inherit="False">
+			<options>
+				<li>
+					<weight>10</weight>
+					<only>(180,185,185)</only> <!-- beskar -->
+				</li>
+				<li>
+					<weight>10</weight>
+					<only>(90,120,85)</only> <!-- protector green -->
+					<!-- <only>(90,105,75)</only> -->
+				</li>
+				<li>
+					<weight>10</weight>
+					<only>(125,155,195)</only> <!-- neo-crusader blue -->
+				</li>
+				<li>
+					<weight>10</weight>
+					<only>(180,85,85)</only> <!-- rally master red -->
+				</li>
+				<li>
+					<weight>10</weight>
+					<only>(210,160,15)</only> <!-- field marshal gold -->
+				</li>
+			</options>
+		</colorGenerator>
+		
+		<!-- <comps> -->
+		  <!-- <li Class="ModularWeapons.CompProperties_ModularParts"> -->
+			<!-- <compClass>ModularWeapons.CompModularParts</compClass> -->
+			<!-- <partKinds> -->
+			  <!-- <li>guy762_slot_underlay_hvy</li> -->
+			  <!-- <li>guy762_slot_overlay_hvy</li> -->
+			<!-- </partKinds> -->
+			<!-- <randomizeParts>true</randomizeParts> -->
+		  <!-- </li> -->
+		<!-- </comps> -->
+		
+		<modExtensions>
+			<li MayRequire="telefonmast.itempainter" Class="RWPaintingTool.PaintableExtension">
+				<!-- <maskCount>1</maskCount> -->
+				<defaultPalette>
+					<colorOne>(90,120,85)</colorOne> <!-- protector green -->
+					<colorTwo>(160,110,35)</colorTwo> <!-- supercommando auburn -->
+					<colorThree>(200,200,200)</colorThree> <!-- light grey -->
+				</defaultPalette>
+			</li>
+		</modExtensions>
+	</ThingDef>
 	  
-	  
+	
+	
+	
+	
+	
+	<ThingDef ParentName="guy762_jetpackMakeable">
+		<defName>guy762_Jetpack_Z6launcher</defName>
+		<label>jetpack, Z-6</label>
+		<description>This jetpack comes equipped with a missile launcher that can be loaded with a variety of different missiles.</description>
+		<graphicData>
+		  <texPath>Apparel/Mandalorian/Z6jetpack</texPath>
+		  <graphicClass>Graphic_Single</graphicClass>
+		  <shaderType>CutoutComplex</shaderType>
+		  <colorTwo>(230,185,45)</colorTwo> <!--republic yellow--> 
+		</graphicData>
+		<soundInteract>kotorsound_select_other</soundInteract>
+		<statBases>
+		  <Mass>12</Mass>
+		  <MarketValue>7500</MarketValue>
+		  <ArmorRating_Sharp>0.2</ArmorRating_Sharp>
+		  <ArmorRating_Blunt>0.2</ArmorRating_Blunt>
+		  <ArmorRating_Heat>0.2</ArmorRating_Heat>
+		  <AccuracyTouch>0.50</AccuracyTouch>
+		  <AccuracyShort>0.40</AccuracyShort>
+		  <AccuracyMedium>0.20</AccuracyMedium>
+		  <AccuracyLong>0.10</AccuracyLong>
+		  <RangedWeapon_Cooldown>5</RangedWeapon_Cooldown>
+		  <JumpRange>30</JumpRange>
+		  
+		  <WorkToMake>40000</WorkToMake>
+		</statBases>
+		
+		<recipeMaker>
+		  <researchPrerequisites>
+			<li>KOTOR_Research_plasmaApplications</li>
+			<li>guy762_ResearchKotOR_mando</li>
+		  </researchPrerequisites>
+		  <skillRequirements>
+			<Crafting>16</Crafting>
+		  </skillRequirements>
+		</recipeMaker>
+		<costList>
+			<ComponentIndustrial>16</ComponentIndustrial>
+			<KOTOR_PlasmaCartridge>10</KOTOR_PlasmaCartridge>
+			<ComponentSpacer>4</ComponentSpacer>
+			<KOTOR_AlloyDurasteel>60</KOTOR_AlloyDurasteel>
+		</costList>
+		
+		<descriptionHyperlinks>
+			<ThingDef>guy762_KotORWorkbench</ThingDef>
+		</descriptionHyperlinks>
+		<apparel>
+		  <tags>
+			<li>MNC_jetpack_mid</li>
+		  </tags>
+		  <wornGraphicPath>Apparel/Mandalorian/Z6jetpack</wornGraphicPath>
+		  <useWornGraphicMask>true</useWornGraphicMask>
+		  
+		  <wornGraphicData Inherit="False">
+			<renderUtilityAsPack>true</renderUtilityAsPack>
+			<east>
+			  <offset>(-0.35,-0.05)</offset>
+			  <thin><offset>(0.05,0)</offset></thin>
+			  <hulk><offset>(-0.1,0)</offset></hulk>
+			  <fat><offset>(-0.15,0)</offset></fat>
+			</east>
+			<west>
+			  <offset>(0.35,-0.05)</offset>
+			  <thin><offset>(-0.05,0)</offset></thin>
+			  <hulk><offset>(0.1,0)</offset></hulk>
+			  <fat><offset>(0.15,0)</offset></fat>
+			</west>
+			<male>  <scale>(0.85,0.85)</scale></male>
+			<female><scale>(0.85,0.85)</scale></female>
+			<thin>  <scale>(0.8,0.8)</scale></thin>
+			<!-- <hulk>  <scale>(0.9,0.9)</scale></hulk> -->
+			<!-- <fat>   <scale>(0.9,0.9)</scale></fat> -->
+		  </wornGraphicData>
+		  
+		</apparel>
+		<colorGenerator Class="ColorGenerator_Options">
+		  <options>
+			<li>
+				<weight>100</weight>
+				<only>(70,90,125)</only>       <!--K1 blue-->
+			</li>
+		  </options>
+		</colorGenerator>
+		<tradeTags>
+		  <li>guy762TT_KotORElite</li>
+		  <li>guy762TT_MNCArmor</li>
+		</tradeTags>
+		<verbs>
+		  <li>
+			<verbClass>Verb_Jump</verbClass>
+			<label>jump</label>
+			<violent>false</violent>
+			<hasStandardCommand>true</hasStandardCommand>
+			<onlyManualCast>True</onlyManualCast>
+			<forceNormalTimeSpeed>false</forceNormalTimeSpeed>
+			<warmupTime>0.5</warmupTime>
+			<warmupEffecter>JumpWarmupEffect</warmupEffecter>
+			<requireLineOfSight>true</requireLineOfSight>
+			<flightEffecterDef>JumpFlightEffect</flightEffecterDef>
+			<soundLanding>JumpPackLand</soundLanding>
+			<targetParams>
+			  <canTargetLocations>true</canTargetLocations>
+			  <canTargetPawns>false</canTargetPawns>
+			  <canTargetBuildings>false</canTargetBuildings>
+			</targetParams>
+
+		  </li>
+		</verbs>
+		<comps>
+		  <li Class="ModularWeapons.CompProperties_ModularParts">
+			<compClass>ModularWeapons.CompModularParts</compClass>
+			<partKinds>
+			  <li>guy762_slot_missile</li>
+			</partKinds>
+			<randomizeParts>true</randomizeParts>
+		  </li>
+		  <li Class="CompProperties_ApparelReloadable">
+			<maxCharges>1</maxCharges>
+			<soundReload>Standard_Reload</soundReload>
+			<hotKey>Misc4</hotKey>
+			<chargeNoun>jump</chargeNoun>
+			<displayGizmoWhileUndrafted>true</displayGizmoWhileUndrafted>
+			<replenishAfterCooldown>true</replenishAfterCooldown>
+			<baseReloadTicks>1800</baseReloadTicks>
+		  </li>
+		  <li Class="CompProperties_Explosive">
+				<explosiveRadius>3</explosiveRadius>
+				<explosiveDamageType>guy762_GrenadeDamage_frag</explosiveDamageType>
+				<requiredDamageTypeToExplode>Flame</requiredDamageTypeToExplode>
+			</li>
+		</comps>
+		
+		<modExtensions>
+			<li MayRequire="telefonmast.itempainter" Class="RWPaintingTool.PaintableExtension">
+				<!-- <maskCount>1</maskCount> -->
+				<defaultPalette>
+					<colorOne>(70,90,125)</colorOne>       <!-- K1 blue -->
+					<colorTwo>(230,185,45)</colorTwo>      <!-- republic yellow --> 
+					<colorThree>(125,50,50)</colorThree>   <!-- rebel red -->
+				</defaultPalette>
+			</li>
+		</modExtensions>
+	  </ThingDef>
 
 </Defs>

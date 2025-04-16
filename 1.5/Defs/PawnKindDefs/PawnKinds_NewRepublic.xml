@@ -249,10 +249,11 @@
 		</specificApparelRequirements>
 		
 		<biocodeWeaponChance>0</biocodeWeaponChance>
-		<weaponMoney>500~2000</weaponMoney>
+		<weaponMoney>500~2500</weaponMoney>
 		<weaponTags>
 		  <li>SWRanged_E11carbine</li>
 		  <li>SWRanged_DH17rifle</li>
+		  <li>SWRanged_A280Crifle</li>
 		</weaponTags>
 		
 		<skills>

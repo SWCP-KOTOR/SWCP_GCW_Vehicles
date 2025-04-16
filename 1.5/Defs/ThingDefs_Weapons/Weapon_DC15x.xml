@@ -18,16 +18,17 @@
 		<statBases>
 			<MarketValue>3000</MarketValue>
 			<Mass>5.5</Mass>
-			<AccuracyTouch>0.55</AccuracyTouch>
-			<AccuracyShort>0.75</AccuracyShort>
-			<AccuracyMedium>0.90</AccuracyMedium>
-			<AccuracyLong>0.80</AccuracyLong>
+			<AccuracyTouch>0.50</AccuracyTouch>
+			<AccuracyShort>0.60</AccuracyShort>
+			<AccuracyMedium>0.80</AccuracyMedium>
+			<AccuracyLong>0.90</AccuracyLong>
 			<RangedWeapon_Cooldown>1.5</RangedWeapon_Cooldown>
-			<RangedWeapon_DamageMultiplier>1.5</RangedWeapon_DamageMultiplier>
+			<RangedWeapon_DamageMultiplier>1.7</RangedWeapon_DamageMultiplier>
 		</statBases>
 		
 		<weaponTags>
 			<li>SWRanged_DC15xsniper</li>
+			<li>SWRanged_AnySniperRifle</li>
 		</weaponTags>
 		<tradeTags Inherit="False">
 			<li>guy762TT_KotORRanged</li>
@@ -51,7 +52,7 @@
 				<commandIcon>UI/Master_Sniper_Shot</commandIcon>
 				<verbClass>Verb_Shoot</verbClass>
 				<hasStandardCommand>true</hasStandardCommand>
-				<defaultProjectile>KotORBlasterBolt_sniper</defaultProjectile>
+				<defaultProjectile>KotORIonBolt_sniper</defaultProjectile>
 				<warmupTime>3.35</warmupTime>
 				<defaultCooldownTime>4</defaultCooldownTime>
 				<range>48</range>
@@ -72,7 +73,7 @@
 				<capacities>
 					<li>Blunt</li>
 				</capacities>
-				<power>9</power>
+				<power>14</power>
 				<cooldownTime>2</cooldownTime>
 			</li>
 			<li>

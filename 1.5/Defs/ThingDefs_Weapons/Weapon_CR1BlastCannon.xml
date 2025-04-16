@@ -26,6 +26,7 @@
 		</statBases>
 		<weaponTags>
 			<li>SWRanged_CR1BlastCannon</li>
+			<li>SWRanged_AnyHeavyRifle</li>
 		</weaponTags>
 		<!--tradeTags Inherit="False">
 			<li>guy762TT_KotORRanged</li>

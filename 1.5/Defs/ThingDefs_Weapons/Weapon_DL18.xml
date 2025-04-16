@@ -21,11 +21,12 @@
 			<AccuracyMedium>0.45</AccuracyMedium>
 			<AccuracyLong>0.35</AccuracyLong>
 			<RangedWeapon_Cooldown>0.5</RangedWeapon_Cooldown>
-			<RangedWeapon_DamageMultiplier>0.6</RangedWeapon_DamageMultiplier>
+			<RangedWeapon_DamageMultiplier>0.7</RangedWeapon_DamageMultiplier>
 		</statBases>
 		
 		<weaponTags>
 			<li>SWRanged_DL18pistol</li>
+			<li>SWRanged_AnyCommonPistol</li>
 		</weaponTags>
 		<tradeTags Inherit="False">
 			<li>guy762TT_KotORRanged</li>
@@ -127,6 +128,7 @@
 		
 		<weaponTags>
 			<li>SWRanged_DL21pistol</li>
+			<li>SWRanged_AnyRarePistol</li>
 		</weaponTags>
 		<tradeTags Inherit="False">
 			<li>guy762TT_KotORRanged</li>

@@ -22,7 +22,7 @@
 		<graphicData>
 			<texPath>Starfighters/BTLA4YWing/YWing</texPath>
 			<graphicClass>Vehicles.Graphic_Vehicle</graphicClass>
-			<drawSize>(20,20)</drawSize>
+			<drawSize>(19,19)</drawSize>
 			<shaderType>CutoutComplexPattern</shaderType>
 			<pattern>guy762_SWVehiclePattern_YWingA</pattern>
 			<color>(230,185,45)</color> <!-- republic yellow -->
@@ -37,7 +37,7 @@
 		<fillPercent>1</fillPercent>
 		<nameable>true</nameable>
 		<buildDef>guy762_SWVehicleBP_BTLA4YWing</buildDef>
-		<size>(10,19)</size>
+		<size>(10,18)</size>
 		<vehicleMovementPermissions>DriverNeeded</vehicleMovementPermissions>
 		
 		<canCaravan>false</canCaravan>
@@ -118,7 +118,7 @@
 			</li>
 			
 			<li Class="CompProperties_ProjectileInterceptor">
-				<radius>11</radius>
+				<radius>10</radius>
 				<color>(0.4, 0.4, 0.4)</color>
 				
 				<interceptGroundProjectiles>true</interceptGroundProjectiles>
@@ -192,7 +192,7 @@
 				<flightGraphicData>
 					<texPath>Starfighters/BTLA4YWing/YWing</texPath>
 					<graphicClass>Vehicles.Graphic_Vehicle</graphicClass>
-					<drawSize>(20,20)</drawSize>
+					<drawSize>(19,19)</drawSize>
 					<shaderType>CutoutComplexPattern</shaderType>
 					<pattern>guy762_SWVehiclePattern_YWingA</pattern>
 					<color>(230,185,45)</color> <!-- republic yellow -->
@@ -279,7 +279,7 @@
 						<turretDef>guy762_VehicleTurret_YWing_Main</turretDef>
 						
 						<renderProperties>
-							<north>(0, 8.75)</north>
+							<north>(0, 8.5)</north>
 						</renderProperties>
 						<defaultAngleRotated>0</defaultAngleRotated>
 						<angleRestricted>(315,45)</angleRestricted>
@@ -293,7 +293,7 @@
 						<turretDef>guy762_VehicleTurret_YWing_Dorsal</turretDef>
 						
 						<renderProperties>
-							<north>(0, 4.5)</north>
+							<north>(0, 4.25)</north>
 						</renderProperties>
 						<defaultAngleRotated>0</defaultAngleRotated>
 						<!-- <angleRestricted>(315,45)</angleRestricted> -->
@@ -327,7 +327,7 @@
 						<turretDef>guy762_VehicleTurret_ProTorp</turretDef>
 						
 						<renderProperties>
-							<north>(-1.45, 6)</north>
+							<north>(-1.35, 5.75)</north>
 						</renderProperties>
 						<defaultAngleRotated>0</defaultAngleRotated>
 						<angleRestricted>(315,45)</angleRestricted>
@@ -341,7 +341,7 @@
 						<turretDef>guy762_VehicleTurret_ProTorp</turretDef>
 						
 						<renderProperties>
-							<north>(1.45, 6)</north>
+							<north>(1.35, 5.75)</north>
 						</renderProperties>
 						<defaultAngleRotated>0</defaultAngleRotated>
 						<angleRestricted>(315,45)</angleRestricted>

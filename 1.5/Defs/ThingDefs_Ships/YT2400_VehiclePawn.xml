@@ -16,7 +16,7 @@
 		<graphicData>
 			<texPath>Starfighters/YT2400/YT2400</texPath>
 			<graphicClass>Vehicles.Graphic_Vehicle</graphicClass>
-			<drawSize>(28,28)</drawSize>
+			<drawSize>(30,30)</drawSize>
 			<shaderType>CutoutComplexPattern</shaderType>
 			<pattern>guy762_SWVehiclePattern_YT2400A</pattern>
 			<color>(140,60,60)</color>
@@ -31,7 +31,7 @@
 		<fillPercent>1</fillPercent>
 		<nameable>true</nameable>
 		<buildDef>guy762_SWVehicleBP_YT2400_</buildDef>
-		<size>(26,18)</size>
+		<size>(29,19)</size>
 		<vehicleMovementPermissions>DriverNeeded</vehicleMovementPermissions>
 		
 		<canCaravan>false</canCaravan>
@@ -55,7 +55,7 @@
 			<EnergyShieldEnergyMax>3</EnergyShieldEnergyMax>
 		</statBases>
 		<vehicleStats>
-			<Mass>350</Mass>
+			<Mass>35000</Mass>
 			
 			<FlightSpeed>12</FlightSpeed> <!-- this is for world map flight, NOT in-tile flight-->
 			<CargoCapacity>2400</CargoCapacity>
@@ -87,7 +87,12 @@
 					<slotsToOperate>1</slotsToOperate>
 					<handlingTypes>
 						<li>Movement</li>
+						<li>Turret</li>
 					</handlingTypes>
+					<turretIds>
+						<li>YT2400Key_gun_3</li>
+						<li>YT2400Key_gun_4</li>
+					</turretIds>
 				</li>
 				<li>
 					<key>copilot</key>
@@ -141,7 +146,7 @@
 			</li>
 			
 			<li Class="CompProperties_ProjectileInterceptor">
-				<radius>14</radius>
+				<radius>15</radius>
 				<color>(0.4, 0.4, 0.4)</color>
 				
 				<interceptGroundProjectiles>true</interceptGroundProjectiles>
@@ -215,7 +220,7 @@
 				<flightGraphicData>
 					<texPath>Starfighters/YT2400/YT2400</texPath>
 					<graphicClass>Vehicles.Graphic_Vehicle</graphicClass>
-					<drawSize>(28,28)</drawSize>
+					<drawSize>(30,30)</drawSize>
 					<shaderType>CutoutComplexPattern</shaderType>
 					<pattern>guy762_SWVehiclePattern_YT2400A</pattern>
 					<color>(140,60,60)</color>
@@ -279,7 +284,7 @@
 						<turretDef>guy762_VehicleTurret_YT2400Dorsal</turretDef>
 						
 						<renderProperties>
-							<north>(-3.05, -0.065)</north>
+							<north>(-3.25, -0.065)</north>
 						</renderProperties>
 						<defaultAngleRotated>0</defaultAngleRotated>
 						<gizmoLabel>dorsal gun</gizmoLabel>
@@ -292,7 +297,7 @@
 						<turretDef>guy762_VehicleTurret_YT2400Ventral</turretDef>
 						
 						<renderProperties>
-							<north>(-3.05, -0.065)</north>
+							<north>(-3.25, -0.065)</north>
 						</renderProperties>
 						<defaultAngleRotated>0</defaultAngleRotated>
 						<gizmoLabel>ventral gun</gizmoLabel>
@@ -302,6 +307,37 @@
 						<drawLayer>-1</drawLayer>
 						
 						<key>YT2400Key_gun_2</key>
+					</li>
+					
+					<!--/////////////////////////-->
+					
+					<li>
+						<turretDef>guy762_VehicleTurret_ProTorp</turretDef>
+						
+						<renderProperties>
+							<north>(-5.5, 8.5)</north>
+						</renderProperties>
+						<defaultAngleRotated>0</defaultAngleRotated>
+						<angleRestricted>(315,45)</angleRestricted>
+						<gizmoLabel>proton torpedo launcher</gizmoLabel>
+						
+						<aimPieOffset>(0, 2.55)</aimPieOffset>
+						
+						<key>YT2400Key_gun_3</key>
+					</li>
+					<li>
+						<turretDef>guy762_VehicleTurret_ProTorp</turretDef>
+						
+						<renderProperties>
+							<north>(-1, 8.5)</north>
+						</renderProperties>
+						<defaultAngleRotated>0</defaultAngleRotated>
+						<angleRestricted>(315,45)</angleRestricted>
+						<gizmoLabel>proton torpedo launcher</gizmoLabel>
+						
+						<aimPieOffset>(0, 2.55)</aimPieOffset>
+						
+						<key>YT2400Key_gun_4</key>
 					</li>
 				</turrets>
 			</li>

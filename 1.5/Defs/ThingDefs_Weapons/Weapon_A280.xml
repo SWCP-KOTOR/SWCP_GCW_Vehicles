@@ -31,7 +31,7 @@
 			<li>SWRanged_A280Crifle</li>
 			<li>SWRanged_AnyCommonRifle</li>
 		</weaponTags>
-		<tradeTags Inherit="False">
+		<tradeTags>
 			<li>guy762TT_KotORRanged</li>
 		</tradeTags>
 		<verbs>

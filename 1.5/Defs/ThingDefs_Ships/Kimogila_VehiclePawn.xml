@@ -525,7 +525,7 @@
 		<turretType>Rotatable</turretType>
 		<shotSound>kotorsound_ebonhawk</shotSound>
 		
-		<projectile>SWVehicleBullet_doublered</projectile>
+		<projectile>SWVehicleBullet_SFdoublered</projectile>
 		<reloadTimer>3.5</reloadTimer>
 		<warmUpTimer>0</warmUpTimer>
 		
@@ -579,7 +579,7 @@
 		<turretType>Rotatable</turretType>
 		<shotSound>kotorsound_zoomergun</shotSound>
 		
-		<projectile>SWVehicleBullet_heavyred</projectile>
+		<projectile>SWVehicleBullet_SFheavyred</projectile>
 		<reloadTimer>3.5</reloadTimer>
 		<warmUpTimer>0</warmUpTimer>
 		

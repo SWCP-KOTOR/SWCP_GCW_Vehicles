@@ -439,7 +439,8 @@
 
 		<weaponMoney>99999</weaponMoney>
 		<weaponTags>
-			<li>SE_sithwarrior</li>
+			<!-- <li>SE_sithwarrior</li> -->
+			<li MayRequireAnyOf ="lee.theforce.lightsaber,lee.theforce.lightsaber_steam">Force_InquisitorLightsaber</li>
 		</weaponTags>
 		<biocodeWeaponChance>999</biocodeWeaponChance>
 		<techHediffsMoney>4000~6000</techHediffsMoney>
@@ -453,7 +454,32 @@
 
 		<initialWillRange>10~12</initialWillRange>
 		<initialResistanceRange>50~72</initialResistanceRange>
-
+		<modExtensions>
+			<li MayRequire="lee.theforce.lightsaber" Class="Lightsaber.ModExtension_LightsaberPresets">
+				<bladeColors>
+				   <!-- red -->
+				   <li>(255, 0, 0, 255)</li>
+				   <li>(255, 0, 0, 255)</li>
+				</bladeColors>
+				<coreColors>
+				   <!-- White Core -->
+				   <li>(1.0, 1.0, 1.0, 1.0)</li>
+				   <li>(1.0, 1.0, 1.0, 1.0)</li>
+				</coreColors>
+				<defaultBladeLength1>1.1</defaultBladeLength1>
+				<defaultBladeLength2>1.1</defaultBladeLength2>
+				<hiltColorOne>(255, 255, 255, 255)</hiltColorOne>
+				<hiltColorTwo>(255, 255, 255, 255)</hiltColorTwo>
+				<!-- <preferredHilts> -->
+				   <!-- <li>Force_LightsaberHilt_JediTempleGuard</li> -->
+				   <!-- <li>Force_LightsaberHilt_Jedi_Temple_Guard_Dual</li> -->
+				   <!-- <li>Force_LightsaberHilt_JTGuard</li> -->
+				<!-- </preferredHilts> -->
+				<!-- <preferredHiltParts> -->
+				   <!-- <li>Force_AdeganCrystalHiltPart</li> -->
+				<!-- </preferredHiltParts> -->
+			 </li>
+		</modExtensions>
 	</PawnKindDef>
 	
 	

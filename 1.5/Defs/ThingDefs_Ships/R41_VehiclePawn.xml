@@ -502,7 +502,7 @@
 		<turretType>Rotatable</turretType>
 		<shotSound>kotorsound_xwinggun</shotSound>
 		
-		<projectile>KotORSFBullet_aurek</projectile>
+		<projectile>SWVehicleBullet_SFred</projectile>
 		<reloadTimer>3.5</reloadTimer>
 		<warmUpTimer>0</warmUpTimer>
 		

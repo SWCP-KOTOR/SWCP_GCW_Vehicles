@@ -30,7 +30,7 @@
 			<li>SWRanged_EE3carbine</li>
 			<li>SWRanged_AnyRareCarbine</li>
 		</weaponTags>
-		<tradeTags Inherit="False">
+		<tradeTags>
 			<li>guy762TT_KotORRanged</li>
 		</tradeTags>
 		<verbs>

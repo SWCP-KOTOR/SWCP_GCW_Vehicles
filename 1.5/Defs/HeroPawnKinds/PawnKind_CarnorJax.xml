@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	
+	
+	<PawnKindDef MayRequire="guy762.StarWarsXenotypes" Name="SWWarlordsHeroBase_CarnorJax"  ParentName="guy762_HeroPawnKindBase" Abstract="True">
+		<defName>KotORHeroBase_CarnorJax</defName>
+		<nameMaker>guy762_HeroNamer_CarnorJax</nameMaker>
+		<combatPower>500</combatPower>
+		<label>Sovereign Protector</label>
+		<minGenerationAge>25</minGenerationAge>
+		<maxGenerationAge>26</maxGenerationAge>
+		<fixedGender>Male</fixedGender>
+		<forcedHair>Topdog</forcedHair>
+		<xenotypeSet>
+			<xenotypeChances>
+				<guy762_xenotype_echani>999</guy762_xenotype_echani>
+			</xenotypeChances>
+		</xenotypeSet>
+		<useFactionXenotypes>false</useFactionXenotypes>
+		
+		<!-- <titleRequired>KotORTitleORenlstd_viceadmiral</titleRequired> -->
+		
+		<itemQuality>Legendary</itemQuality>
+		<apparelMoney>29999</apparelMoney>
+		<apparelTags>
+		  <li>KotORHeroAccessories_sion</li>
+		</apparelTags>
+		<apparelRequired>
+		   <li>guy762_ImpRoyalGuardHelmet</li>
+		   <li>guy762_ImpRoyalGuardCloak</li>
+		   <li>guy762_JaxRoyalGuardArmor</li>
+		</apparelRequired>
+		<specificApparelRequirements>
+			<li>
+				<apparelLayer>Shell</apparelLayer>
+				<apparelDef>guy762_ImpRoyalGuardCloak</apparelDef>
+				<quality>Legendary</quality>
+				<color>(40,40,40)</color>
+			</li>
+			<li>
+				<apparelLayer>Overhead</apparelLayer>
+				<apparelDef>guy762_ImpRoyalGuardHelmet</apparelDef>
+				<quality>Legendary</quality>
+				<color>(40,40,40)</color>
+			</li>
+		</specificApparelRequirements>
+		<weaponMoney>99999999</weaponMoney>
+		<weaponTags>
+		  <li>KotORMelee_yusanisbrand</li>
+		</weaponTags>
+		
+		<skills>
+			<li>
+				<skill>Shooting</skill>
+				<range>6~8</range>
+			</li>
+			<li>
+				<skill>Melee</skill>
+				<range>18~20</range>
+			</li>
+			<li>
+				<skill>Social</skill>
+				<range>14~16</range>
+			</li>
+			<li>
+				<skill>Intellectual</skill>
+				<range>10~12</range>
+			</li>
+		</skills>
+		<forcedTraits>
+			<Neurotic>2</Neurotic>
+			<Industriousness>2</Industriousness>
+			<Brawler>0</Brawler>
+			<Tough>0</Tough>
+		</forcedTraits>
+		<backstoryFiltersOverride>
+		  <li>
+			<categories>
+			  <li>guy762BSC_carnorjax</li>
+			</categories>
+		  </li>
+		</backstoryFiltersOverride>
+		<modExtensions>
+			<li Class="AddGeneForPK.PKAdditionalGenes"> <!-- NOTE: this mod extension cannot be split between two different PKDefs, all genes have to go in the same block!!! -->
+			  <geneSets>
+				<li>
+				  <isXenogene>true</isXenogene>
+				  <chance>1</chance>
+				  <geneDefs>
+					<li MayRequire="guy762.Lee.KotORPotF">SWPotF_Gene_DSCorruptionII</li>
+					<li>Body_Standard</li>
+				  </geneDefs>
+				</li>
+			  </geneSets>
+			</li>
+			<li Class="BodyTypeForPawnKind.ModExtension_HeadTypesOfPawnKind">
+			  <whitelist>
+				<li>Male_AverageWide</li>
+			  </whitelist>
+			  <blacklist>
+				<!--leave blank to disable-->
+			  </blacklist>
+			  <priority>
+				<li>Male_AverageWide</li>
+			  </priority>
+			  <checkGender>False</checkGender>
+			</li>
+			<li Class="BodyTypeForPawnKind.ModExtension_BodyTypesOfPawnKind">
+			  <whitelist>
+				<li>Male</li>
+			  </whitelist>
+			  <blacklist>
+			  </blacklist>
+			  <priority>
+				<!--When violates the black/whitelist, selected from these-->
+				<li>Male</li>
+			  </priority>
+			  <!--Align body gender to pawn's gender (default: True)-->
+			  <checkGender>False</checkGender>
+			</li>
+      </modExtensions>
+	</PawnKindDef>
+	  
+	  <RulePackDef>
+        <defName>guy762_HeroNamer_CarnorJax</defName>
+        <rulePack>
+            <rulesStrings>
+                <li>r_name->[carnor] '[jax]' [jax]</li>
+				<li>carnor->Carnor</li>
+				<li>jax->Jax</li>
+            </rulesStrings>
+        </rulePack>
+    </RulePackDef>
+	
+	
+	<!--[PAWN_nameDef] [PAWN_possessive] [PAWN_pronoun]-->
+	
+	
+	<BackstoryDef>
+		<defName>guy762_BackstoryC_CarnorJax</defName>
+		<title>Sovereign Protector Trainee</title>
+		<titleShort>Sovereign Protector</titleShort>
+		<description>.</description>
+		<slot>Childhood</slot>
+		<skillGains>
+			<Melee>15</Melee>
+		</skillGains>
+		<forcedTraits>
+		  <Brawler>0</Brawler>
+		  <Tough>0</Tough>
+		</forcedTraits>
+		<requiredWorkTags>
+		  <li>Violent</li>
+		</requiredWorkTags>
+		<bodyTypeMale>Male</bodyTypeMale>
+		<bodyTypeFemale>Hulk</bodyTypeFemale>
+		<nameMaker>guy762_HeroNamer_CarnorJax</nameMaker>
+		<spawnCategories>
+			<li>guy762BSC_carnorjax</li>
+		</spawnCategories>
+		<!--shuffleable>False</shuffleable-->
+	</BackstoryDef>
+	
+	<BackstoryDef>
+		<defName>guy762_BackstoryA_CarnorJax</defName>
+		<title>Sith Acolyte</title>
+		<titleShort>Acolyte</titleShort>
+		<description>.</description>
+		<slot>Adulthood</slot>
+		<skillGains>
+			<Social>10</Social>
+			<Intellectual>10</Intellectual>
+		</skillGains>
+		<forcedTraits>
+		  <Neurotic>2</Neurotic>
+		  <Industriousness>2</Industriousness>
+		</forcedTraits>
+		<requiredWorkTags>
+		  <li>Violent</li>
+		</requiredWorkTags>
+		<bodyTypeMale>Male</bodyTypeMale>
+		<bodyTypeFemale>Hulk</bodyTypeFemale>
+		<nameMaker>guy762_HeroNamer_CarnorJax</nameMaker>
+		<spawnCategories>
+			<li>guy762BSC_carnorjax</li>
+		</spawnCategories>
+		<!--shuffleable>False</shuffleable-->
+	</BackstoryDef>
+	
+	
+	
+	
+	
+	
+	
+	
+	<PawnKindDef MayRequire="lee.theforce.psycast" Name="SWWEPlayableVillain_CarnorJax_VPE"  ParentName="SWWarlordsHeroBase_CarnorJax">
+		<defName>SWWEPlayableVillain_CarnorJax_VPE</defName>
+		<modExtensions>
+         <li Class="VanillaPsycastsExpanded.PawnKindAbilityExtension_Psycasts">
+            <implantDef>VPE_PsycastAbilityImplant</implantDef>
+            <initialLevel>5</initialLevel>
+            <statUpgradePoints>2~3</statUpgradePoints>
+            <unlockedPaths>
+				<Force_Neutral>1~3|4~6</Force_Neutral>
+				<Force_Telekinesis>1~3|3~4</Force_Telekinesis>
+				<Force_LightsaberCombat>1~3|3~4</Force_LightsaberCombat>
+				
+				<Force_Darkside>1~3|4~6</Force_Darkside>
+            </unlockedPaths>
+         </li>
+      </modExtensions>
+	</PawnKindDef>
+
+
+
+</Defs>

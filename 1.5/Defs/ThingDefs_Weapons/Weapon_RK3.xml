@@ -28,7 +28,7 @@
 			<li>SWRanged_RK3pistol</li>
 			<li>SWRanged_AnyRarePistol</li>
 		</weaponTags>
-		<tradeTags Inherit="False">
+		<tradeTags>
 			<li>guy762TT_KotORRanged</li>
 		</tradeTags>
 		<verbs>

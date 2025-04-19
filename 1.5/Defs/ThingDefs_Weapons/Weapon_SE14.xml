@@ -29,7 +29,7 @@
 			<li>SWRanged_AnyCommonPistol</li>
 			<li>SWRanged_AnyRepeaterPistol</li>
 		</weaponTags>
-		<tradeTags Inherit="False">
+		<tradeTags>
 			<li>guy762TT_KotORRanged</li>
 		</tradeTags>
 		<verbs>

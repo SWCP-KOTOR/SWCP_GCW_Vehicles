@@ -253,7 +253,7 @@
 						</renderProperties>
 						<defaultAngleRotated>0</defaultAngleRotated>
 						<!-- <angleRestricted>(315,45)</angleRestricted> -->
-						<gizmoLabel>dorsal turret</gizmoLabel>
+						<gizmoLabel>missile turret</gizmoLabel>
 						
 						<drawLayer>15</drawLayer>
 						<aimPieOffset>(0, 2.55)</aimPieOffset>
@@ -271,7 +271,7 @@
 						</renderProperties>
 						<defaultAngleRotated>0</defaultAngleRotated>
 						<angleRestricted>(315,45)</angleRestricted>
-						<gizmoLabel>front turret</gizmoLabel>
+						<gizmoLabel>front AV turret</gizmoLabel>
 						
 						<aimPieOffset>(0, 2.55)</aimPieOffset>
 						
@@ -288,7 +288,7 @@
 						</renderProperties>
 						<defaultAngleRotated>0</defaultAngleRotated>
 						<angleRestricted>(315,45)</angleRestricted>
-						<gizmoLabel>front turret</gizmoLabel>
+						<gizmoLabel>front AV turret</gizmoLabel>
 						
 						<aimPieOffset>(0, 2.55)</aimPieOffset>
 						
@@ -386,7 +386,7 @@
 		<turretType>Rotatable</turretType>
 		<shotSound>kotorsound_TankAntiVehicleGun</shotSound>
 		
-		<projectile>SWVehicleBullet_slowred</projectile>
+		<projectile>SWVehicleBullet_AVred</projectile>
 		<reloadTimer>3.5</reloadTimer>
 		<warmUpTimer>0.2</warmUpTimer>
 		

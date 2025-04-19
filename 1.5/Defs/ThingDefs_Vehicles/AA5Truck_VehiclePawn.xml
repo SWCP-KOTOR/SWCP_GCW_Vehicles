@@ -259,7 +259,7 @@
 						</renderProperties>
 						<defaultAngleRotated>0</defaultAngleRotated>
 						<!-- <angleRestricted>(315,45)</angleRestricted> -->
-						<gizmoLabel>dorsal turret</gizmoLabel>
+						<gizmoLabel>dorsal AI turret</gizmoLabel>
 						
 						<drawLayer>15</drawLayer>
 						<aimPieOffset>(0, 2.55)</aimPieOffset>
@@ -281,7 +281,7 @@
 		<turretType>Rotatable</turretType>
 		<shotSound>kotorsound_speedergun</shotSound>
 		
-		<projectile>SWVehicleBullet_tankdoublered</projectile>
+		<projectile>SWVehicleBullet_AIdoublered</projectile>
 		<reloadTimer>3.5</reloadTimer>
 		<warmUpTimer>1</warmUpTimer>
 		

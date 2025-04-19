@@ -29,7 +29,7 @@
 		<weaponTags>
 			<li>SWRanged_bryar</li>
 		</weaponTags>
-		<tradeTags Inherit="False">
+		<tradeTags>
 			<li>guy762TT_KotORRanged</li>
 		</tradeTags>
 		<verbs>

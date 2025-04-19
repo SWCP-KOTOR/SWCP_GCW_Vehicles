@@ -28,7 +28,7 @@
 			<li>SWRanged_E11carbine</li>
 			<li>SWRanged_AnyCommonCarbine</li>
 		</weaponTags>
-		<tradeTags Inherit="False">
+		<tradeTags>
 			<li>guy762TT_KotORRanged</li>
 		</tradeTags>
 		<verbs>
@@ -130,7 +130,7 @@
 			<li>SWRanged_E10rifle</li>
 			<li>SWRanged_AnyCommonRifle</li>
 		</weaponTags>
-		<tradeTags Inherit="False">
+		<tradeTags>
 			<li>guy762TT_KotORRanged</li>
 		</tradeTags>
 		<verbs>
@@ -212,7 +212,7 @@
 			<li>SWRanged_E22rifle</li>
 			<li>SWRanged_AnyRareRifle</li>
 		</weaponTags>
-		<tradeTags Inherit="False">
+		<tradeTags>
 			<li>guy762TT_KotORRanged</li>
 		</tradeTags>
 		<verbs>

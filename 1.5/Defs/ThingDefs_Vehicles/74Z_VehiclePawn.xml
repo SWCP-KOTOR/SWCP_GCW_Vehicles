@@ -258,7 +258,7 @@
 						</renderProperties>
 						<defaultAngleRotated>0</defaultAngleRotated>
 						<angleRestricted>(315,45)</angleRestricted>
-						<gizmoLabel>main gun</gizmoLabel>
+						<gizmoLabel>AI blaster</gizmoLabel>
 						
 						<aimPieOffset>(0, 2.55)</aimPieOffset>
 						
@@ -278,7 +278,7 @@
 		<turretType>Rotatable</turretType>
 		<shotSound>kotorsound_speedergun</shotSound>
 		
-		<projectile>SWVehicleBullet_slowred</projectile>
+		<projectile>SWVehicleBullet_AIred</projectile>
 		<reloadTimer>3.5</reloadTimer>
 		<warmUpTimer>0.2</warmUpTimer>
 		

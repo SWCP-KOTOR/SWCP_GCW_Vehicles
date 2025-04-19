@@ -30,7 +30,7 @@
 			<li>SWRanged_DC15xsniper</li>
 			<li>SWRanged_AnySniperRifle</li>
 		</weaponTags>
-		<tradeTags Inherit="False">
+		<tradeTags>
 			<li>guy762TT_KotORRanged</li>
 		</tradeTags>
 		<verbs>

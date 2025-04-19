@@ -363,7 +363,7 @@
 		<turretType>Rotatable</turretType>
 		<shotSound>kotorsound_TIEgun</shotSound>
 		
-		<projectile>SWVehicleBullet_TIEdoublegreen</projectile>
+		<projectile>SWVehicleBullet_SFdoublegreen</projectile>
 		<reloadTimer>3.5</reloadTimer>
 		<warmUpTimer>0</warmUpTimer>
 		

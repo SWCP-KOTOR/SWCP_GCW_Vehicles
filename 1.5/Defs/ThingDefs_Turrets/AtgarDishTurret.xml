@@ -95,6 +95,7 @@
 	<hasInteractionCell>True</hasInteractionCell>
 	<interactionCellOffset>(1,0,2)</interactionCellOffset>
 	
+	<soundInteract>kotorsound_select_shipgun</soundInteract>
     <comps>
       <li Class="CompProperties_Mannable">
         <manWorkType>Violent</manWorkType>
@@ -113,25 +114,25 @@
       </li>
       <li Class="CompProperties_Flickable"/>
       <li Class="CompProperties_Breakdownable"/>
-      <li Class="CompProperties_Refuelable">
-        <fuelLabel>Shots until rearm</fuelLabel>
-        <fuelGizmoLabel>Uranium slugs</fuelGizmoLabel>
-        <outOfFuelMessage>No slugs</outOfFuelMessage>
-        <fuelFilter><thingDefs><li>Uranium</li></thingDefs></fuelFilter>
-        <fuelCapacity>30</fuelCapacity>       <!-- 20 bursts -->
-        <fuelMultiplier>0.5</fuelMultiplier> <!-- 2 uranium per shot, 60 per full rearm -->
-        <initialFuelPercent>1</initialFuelPercent>
-        <autoRefuelPercent>0.5</autoRefuelPercent>
-        <showFuelGizmo>true</showFuelGizmo>
-        <minimumFueledThreshold>1</minimumFueledThreshold>
-        <factorByDifficulty>true</factorByDifficulty>
-        <consumeFuelOnlyWhenUsed>true</consumeFuelOnlyWhenUsed>
-        <fuelIconPath>UI/Overlays/Barrel</fuelIconPath>
-      </li>
+      <!-- <li Class="CompProperties_Refuelable"> -->
+        <!-- <fuelLabel>Shots until rearm</fuelLabel> -->
+        <!-- <fuelGizmoLabel>Uranium slugs</fuelGizmoLabel> -->
+        <!-- <outOfFuelMessage>No slugs</outOfFuelMessage> -->
+        <!-- <fuelFilter><thingDefs><li>Uranium</li></thingDefs></fuelFilter> -->
+        <!-- <fuelCapacity>30</fuelCapacity>       20 bursts -->
+        <!-- <fuelMultiplier>0.5</fuelMultiplier> 2 uranium per shot, 60 per full rearm -->
+        <!-- <initialFuelPercent>1</initialFuelPercent> -->
+        <!-- <autoRefuelPercent>0.5</autoRefuelPercent> -->
+        <!-- <showFuelGizmo>true</showFuelGizmo> -->
+        <!-- <minimumFueledThreshold>1</minimumFueledThreshold> -->
+        <!-- <factorByDifficulty>true</factorByDifficulty> -->
+        <!-- <consumeFuelOnlyWhenUsed>true</consumeFuelOnlyWhenUsed> -->
+        <!-- <fuelIconPath>UI/Overlays/Barrel</fuelIconPath> -->
+      <!-- </li> -->
     </comps>
     <building>
       <turretGunDef>guy762_SWTurretGun_AtgarDish</turretGunDef>
-      <turretBurstCooldownTime>3.2</turretBurstCooldownTime>
+      <turretBurstCooldownTime>2.5</turretBurstCooldownTime>
     </building>
     <researchPrerequisites>
       <li>SniperTurret</li>
@@ -155,29 +156,37 @@
 	  <drawSize>(2,2)</drawSize>
     </graphicData>
     <statBases>
-      <AccuracyTouch>0.22</AccuracyTouch>
-      <AccuracyShort>0.33</AccuracyShort>
-      <AccuracyMedium>0.44</AccuracyMedium>
-      <AccuracyLong>0.95</AccuracyLong>
-      <RangedWeapon_Cooldown>3.2</RangedWeapon_Cooldown>
+      <AccuracyTouch>0.30</AccuracyTouch>
+      <AccuracyShort>0.40</AccuracyShort>
+      <AccuracyMedium>0.80</AccuracyMedium>
+      <AccuracyLong>0.90</AccuracyLong>
+      <RangedWeapon_Cooldown>2.5</RangedWeapon_Cooldown>
       <DeteriorationRate>0</DeteriorationRate>
-      <Mass>60</Mass>
+      <Mass>200</Mass>
       <Flammability>0</Flammability>
     </statBases>
     <verbs>
       <li>
         <verbClass>Verb_Shoot</verbClass>
-        <defaultProjectile>Bullet_TurretSniper</defaultProjectile>
+        <defaultProjectile>SWFixedTurretBullet_AVred</defaultProjectile>
         <warmupTime>2.5</warmupTime>
         <minRange>5</minRange>
         <range>60</range>
         <burstShotCount>1</burstShotCount>
-        <soundCast>Shot_TurretSniper</soundCast>
+        <soundCast>kotorsound_RebelBlaster_heavy_louder</soundCast>
         <soundCastTail>GunTail_Heavy</soundCastTail>
         <muzzleFlashScale>18</muzzleFlashScale>
-        <consumeFuelPerShot>1</consumeFuelPerShot>
+        <!-- <consumeFuelPerShot>1</consumeFuelPerShot> -->
+		<forcedMissRadius>0</forcedMissRadius>
+		<ai_AvoidFriendlyFireRadius>3</ai_AvoidFriendlyFireRadius>
+		<targetParams>
+			<canTargetLocations>true</canTargetLocations>
+		</targetParams>
       </li>
     </verbs>
+	<modExtensions>
+	  <li Class="IgnoreConfigErrors.Ignore_ForcedMissRadius" />
+	</modExtensions>
   </ThingDef>
 
  

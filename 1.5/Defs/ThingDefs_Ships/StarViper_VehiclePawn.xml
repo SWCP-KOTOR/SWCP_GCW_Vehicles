@@ -537,7 +537,7 @@
 		<turretType>Rotatable</turretType>
 		<shotSound>kotorsound_starvipergun</shotSound>
 		
-		<projectile>SWVehicleBullet_starviper</projectile>
+		<projectile>SWVehicleBullet_SFheavydoublegreen</projectile>
 		<reloadTimer>3.5</reloadTimer>
 		<warmUpTimer>0</warmUpTimer>
 		

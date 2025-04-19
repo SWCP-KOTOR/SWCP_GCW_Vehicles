@@ -87,11 +87,17 @@
 		  <li>guy762_MeleeDamage_energy</li>
 		  <li>guy762_MeleeDamage_ecut</li>
 		  <li>guy762_MeleeDamage_estab</li>
+		  <li MayRequire="lee.theforce.lightsaber">Force_LightsaberCut</li>
+		  <li MayRequire="lee.theforce.lightsaber">Force_SaberSlash</li>
+		  <li MayRequire="lee.theforce.lightsaber">Force_SaberStab</li>
 		  <li>guy762_ExplosiveDamage_energy</li>
 		  <li>guy762_GrenadeDamage_energy</li>
 		  <li>guy762_GrenadeDamage_thermaldet</li>
 		  <li MayRequire="Ludeon.RimWorld.Biotech">Beam</li>
-		  <li>guy762_RangedDamage_concussion</li>
+		  <li>guy762_RangedDamage_KOstun</li>
+		  
+		  <li>guy762_RangedDamage_AntiVehicleEnergy</li>
+		  <li>guy762_ExplosiveDamage_AntiVehicleEnergy</li>
 		  
 		  <li>guy762_RangedDamage_electrical</li>
 		  <li>guy762_MeleeDamage_electrical</li>
@@ -112,6 +118,7 @@
 		  <li>Cut</li>
 		  <li>Crush</li>
 		  <li>Blunt</li>
+		  <li MayRequire="lee.theforce.lightsaber">Force_BluntLightsaber</li>
 		  <li>Poke</li>
 		  <li>Stab</li>
 		  <li>Scratch</li>
@@ -123,6 +130,10 @@
 		  <li>Arrow</li>
 		  <li>ArrowHighVelocity</li>
 		  <li>TornadoScratch</li>
+		  
+		  <li>Bomb</li>
+		  <li>guy762_GrenadeDamage_frag</li>
+		  <li MayRequire="guy762.NA.MM.SWVehicles">guy762_ExplosiveDamage_conc</li>
         </blockedDamageDefs>
 		<ignoredDamageDefs>
           <li>guy762_RangedDamage_disruptor</li>
@@ -289,11 +300,17 @@
 		  <li>guy762_MeleeDamage_energy</li>
 		  <li>guy762_MeleeDamage_ecut</li>
 		  <li>guy762_MeleeDamage_estab</li>
+		  <li MayRequire="lee.theforce.lightsaber">Force_LightsaberCut</li>
+		  <li MayRequire="lee.theforce.lightsaber">Force_SaberSlash</li>
+		  <li MayRequire="lee.theforce.lightsaber">Force_SaberStab</li>
 		  <li>guy762_ExplosiveDamage_energy</li>
 		  <li>guy762_GrenadeDamage_energy</li>
 		  <li>guy762_GrenadeDamage_thermaldet</li>
 		  <li MayRequire="Ludeon.RimWorld.Biotech">Beam</li>
-		  <li>guy762_RangedDamage_concussion</li>
+		  <li>guy762_RangedDamage_KOstun</li>
+		  
+		  <li>guy762_RangedDamage_AntiVehicleEnergy</li>
+		  <li>guy762_ExplosiveDamage_AntiVehicleEnergy</li>
 		  
 		  <li>guy762_RangedDamage_electrical</li>
 		  <li>guy762_MeleeDamage_electrical</li>
@@ -314,6 +331,7 @@
 		  <li>Cut</li>
 		  <li>Crush</li>
 		  <li>Blunt</li>
+		  <li MayRequire="lee.theforce.lightsaber">Force_BluntLightsaber</li>
 		  <li>Poke</li>
 		  <li>Stab</li>
 		  <li>Scratch</li>
@@ -325,6 +343,10 @@
 		  <li>Arrow</li>
 		  <li>ArrowHighVelocity</li>
 		  <li>TornadoScratch</li>
+		  
+		  <li>Bomb</li>
+		  <li>guy762_GrenadeDamage_frag</li>
+		  <li MayRequire="guy762.NA.MM.SWVehicles">guy762_ExplosiveDamage_conc</li>
         </blockedDamageDefs>
 		<ignoredDamageDefs>
           <li>guy762_RangedDamage_disruptor</li>

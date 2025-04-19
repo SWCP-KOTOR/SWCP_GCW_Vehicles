@@ -5,6 +5,7 @@
 	<PawnKindDef Name="SWWarlordsHeroBase_KyleKatarn"  ParentName="guy762_HeroPawnKindBase" Abstract="True">
 		<defName>SWWarlordsHeroBase_KyleKatarn</defName>
 		<nameMaker>guy762_HeroNamer_KyleKatarn</nameMaker>
+		<label>Rebel Agent</label>
 		<combatPower>500</combatPower>
 		<minGenerationAge>26</minGenerationAge>
 		<maxGenerationAge>27</maxGenerationAge>
@@ -29,7 +30,8 @@
 		</apparelRequired>
 		<weaponMoney>99999999</weaponMoney>
 		<weaponTags>
-		  <li>KotORLightsaber_bluesingle</li>
+		  <!-- <li>KotORLightsaber_bluesingle</li> -->
+		  <li MayRequireAnyOf ="lee.theforce.lightsaber,lee.theforce.lightsaber_steam">Force_Lightsaber</li>
 		</weaponTags>
 		<techHediffsRequired>
 		  <li>guy762_ImplantDock_I</li>
@@ -82,7 +84,7 @@
 			</li>
 		</skills>
 		<forcedTraits>
-			<PsychicSensitivity>1</PsychicSensitivity>
+			<PsychicSensitivity>2</PsychicSensitivity>
 			<Tough>0</Tough>
 			<ShootingAccuracy>-1</ShootingAccuracy>
 		</forcedTraits>
@@ -121,6 +123,26 @@
 		<li Class="BodyTypeForPawnKind.ModExtension_ForcedStyleItem">
 		  <forcedBeard>Circle</forcedBeard>
 		</li>
+		<li MayRequire="lee.theforce.lightsaber" Class="Lightsaber.ModExtension_LightsaberPresets">
+            <bladeColors>
+               <!-- classic blue -->
+               <li>(0, 64, 255, 255)</li>
+               <!-- <li>255, 0, 0, 255</li> -->
+            </bladeColors>
+            <coreColors>
+               <!-- White Core -->
+               <li>(1.0, 1.0, 1.0, 1.0)</li>
+            </coreColors>
+            <defaultBladeLength1>1.1</defaultBladeLength1>
+            <hiltColorOne>(255, 255, 255, 255)</hiltColorOne>
+            <hiltColorTwo>(255, 255, 255, 255)</hiltColorTwo>
+            <preferredHilts>
+               <li>Force_LightsaberHilt_Kyle_Katarn</li>
+            </preferredHilts>
+            <!-- <preferredHiltParts> -->
+               <!-- <li>Force_AdeganCrystalHiltPart</li> -->
+            <!-- </preferredHiltParts> -->
+         </li>
       </modExtensions>
 	  </PawnKindDef>
 	  
@@ -166,15 +188,15 @@
 	
 	<BackstoryDef>
 		<defName>guy762_BackstoryA_KyleKatarn</defName>
-		<title>Jedi Knight</title>
-		<titleShort>Jedi Knight</titleShort>
+		<title>Jedi Outcast</title>
+		<titleShort>Jedi Outcast</titleShort>
 		<description>.</description>
 		<slot>Adulthood</slot>
 		<skillGains>
 			<Melee>10</Melee>
 		</skillGains>
 		<forcedTraits>
-		  <PsychicSensitivity>1</PsychicSensitivity>
+		  <PsychicSensitivity>2</PsychicSensitivity>
 		</forcedTraits>
 		<bodyTypeMale>Male</bodyTypeMale>
 		<bodyTypeFemale>Female</bodyTypeFemale>

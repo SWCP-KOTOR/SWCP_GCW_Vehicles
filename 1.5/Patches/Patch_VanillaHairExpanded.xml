@@ -62,6 +62,24 @@
 			  <forcedHair>VHE_Midlife</forcedHair>
 			</value>
 		</li>
+		<li Class="PatchOperationReplace">
+		  <xpath>Defs/PawnKindDef[@Name="SWWarlordsHeroBase_MaraJade"]/forcedHair</xpath>
+			<value>
+			  <forcedHair>VHE_Beautiful</forcedHair>
+			</value>
+		</li>
+		<li Class="PatchOperationReplace">
+		  <xpath>Defs/PawnKindDef[@Name="SWWEPlayableVillain_JodoKast"]/forcedHair</xpath>
+			<value>
+			  <forcedHair>VHE_Smuggler</forcedHair>
+			</value>
+		</li>
+		<li Class="PatchOperationReplace">
+		  <xpath>Defs/PawnKindDef[@Name="SWWarlordsHeroBase_CarnorJax"]/forcedHair</xpath>
+			<value>
+			  <forcedHair>VHE_Dean</forcedHair>
+			</value>
+		</li>
 	  </operations>
 	</match>
   

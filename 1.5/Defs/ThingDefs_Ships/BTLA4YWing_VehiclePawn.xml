@@ -483,7 +483,7 @@
 		<turretType>Rotatable</turretType>
 		<shotSound>kotorsound_ywinggun</shotSound>
 		
-		<projectile>SWVehicleBullet_doublered</projectile>
+		<projectile>SWVehicleBullet_SFdoublered</projectile>
 		<reloadTimer>3.5</reloadTimer>
 		<warmUpTimer>0</warmUpTimer>
 		
@@ -525,9 +525,9 @@
 		<description>The rotating dorsal turret of a BTL-A4 Y-Wing Starfighter.</description>
 		
 		<turretType>Rotatable</turretType>
-		<shotSound>kotorsound_ioncannon_small</shotSound>
+		<shotSound>kotorsound_ioncannon_small_louder</shotSound>
 		
-		<projectile>SWVehicleBullet_doubleion</projectile>
+		<projectile>SWVehicleBullet_SFdoubleion</projectile>
 		<reloadTimer>3.5</reloadTimer>
 		<warmUpTimer>0.5</warmUpTimer>
 		

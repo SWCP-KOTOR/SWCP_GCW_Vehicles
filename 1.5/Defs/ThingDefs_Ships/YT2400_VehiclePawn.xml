@@ -470,9 +470,9 @@
 		<turretType>Rotatable</turretType>
 		<shotSound>kotorsound_milleniumfalcongun</shotSound>
 		
-		<projectile>SWVehicleBullet_bigdoublered</projectile>
+		<projectile>SWVehicleBullet_SFbigdoublered</projectile>
 		<reloadTimer>3.5</reloadTimer>
-		<warmUpTimer>0.2</warmUpTimer>
+		<warmUpTimer>0.1</warmUpTimer>
 		
 		<magazineCapacity>999</magazineCapacity>
 		
@@ -510,7 +510,7 @@
 		<defName>guy762_VehicleTurret_YT2400Ventral</defName>
 		<label>YT-2400 ventral turret</label>
 		<description>The rotating ventral turret of a YT-2400 freighter.</description>
-		<warmUpTimer>0.3</warmUpTimer>
+		<warmUpTimer>0.2</warmUpTimer>
 	</Vehicles.VehicleTurretDef>
 	
 	

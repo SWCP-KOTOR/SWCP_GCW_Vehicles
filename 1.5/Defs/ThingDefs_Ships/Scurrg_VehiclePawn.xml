@@ -590,7 +590,7 @@
 		<turretType>Rotatable</turretType>
 		<shotSound>kotorsound_havocturret</shotSound>
 		
-		<projectile>SWVehicleBullet_doublered</projectile>
+		<projectile>SWVehicleBullet_SFdoublered</projectile>
 		<reloadTimer>3.5</reloadTimer>
 		<warmUpTimer>0</warmUpTimer>
 		

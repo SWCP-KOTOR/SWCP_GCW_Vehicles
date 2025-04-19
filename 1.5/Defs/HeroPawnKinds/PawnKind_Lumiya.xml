@@ -5,6 +5,7 @@
 	<PawnKindDef Name="SWWarlordsHeroBase_Lumiya"  ParentName="guy762_HeroPawnKindBase" Abstract="True">
 		<defName>SWWarlordsHeroBase_Lumiya</defName>
 		<nameMaker>guy762_HeroNamer_Lumiya</nameMaker>
+		<label>Dark Lady</label>
 		<combatPower>500</combatPower>
 		<minGenerationAge>25</minGenerationAge>
 		<maxGenerationAge>26</maxGenerationAge>

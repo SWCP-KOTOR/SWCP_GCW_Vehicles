@@ -178,6 +178,13 @@
                  <li>guy762_GALAAR15carbine</li> <!-- GALAAR-15 blaster carbine -->
               </ThingTargets>
           </li>
+		  <li>
+              <MainHand>(-0.215, 0.100, -0.100)</MainHand>
+              <SecHand>(0.150, -0.100, -0.050)</SecHand>
+              <ThingTargets>
+                 <li>guy762_T21repeater</li> <!-- T-21 repeating blaster -->
+              </ThingTargets>
+          </li>
 		  
 		  
 		  <li>

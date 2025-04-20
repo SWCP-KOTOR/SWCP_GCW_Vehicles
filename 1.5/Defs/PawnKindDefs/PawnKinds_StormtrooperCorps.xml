@@ -216,9 +216,9 @@
 		</specificApparelRequirements>
 
 		<biocodeWeaponChance>0.75</biocodeWeaponChance>
-		<weaponMoney>1800~2200</weaponMoney>
+		<weaponMoney>2000~2200</weaponMoney>
 		<weaponTags>
-			<li>SWRanged_TL50blaster</li>
+			<li>SWRanged_T21repeater</li>
 			<li>SWRanged_FC1flechette</li>
 		</weaponTags>
 
@@ -587,6 +587,7 @@
 		<weaponMoney>1800~7000</weaponMoney>
 		<weaponTags>
 			<li>SWRanged_TL50blaster</li>
+			<li>SWRanged_T21repeater</li>
 		</weaponTags>
 
 		<techHediffsChance>5</techHediffsChance>

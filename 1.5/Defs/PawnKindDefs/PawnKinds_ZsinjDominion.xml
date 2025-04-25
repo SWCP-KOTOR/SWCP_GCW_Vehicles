@@ -29,7 +29,7 @@
 		</apparelTags>
 		<apparelRequired>
 			<li>guy762_ArmyTrooperArmor</li>
-			<li>guy762_ImpUniform_default</li>
+			<li>guy762_GenericUniform_fatigues</li>
 		</apparelRequired>
 		<specificApparelRequirements>
 			<li>
@@ -87,7 +87,7 @@
 		<combatPower>100</combatPower>
 		<minGenerationAge>18</minGenerationAge>
 		<maxGenerationAge>40</maxGenerationAge>
-		<itemQuality>Normal</itemQuality>
+		<itemQuality>Good</itemQuality>
 		
 		<xenotypeSet Inherit="False">
 		  <xenotypeChances>
@@ -99,7 +99,7 @@
 		<apparelMoney>1500~5500</apparelMoney>
 		<apparelAllowHeadgearChance>1</apparelAllowHeadgearChance>
 		<apparelTags>
-			<li>RemnantEmpire_stormiearmor</li>
+			<li>ZsinjEmpire_raptorarmor</li>
 			<li>KotOREquipment_basic</li>
 		</apparelTags>
 		<apparelRequired>
@@ -134,11 +134,11 @@
 		<skills>
 			<li>
 				<skill>Shooting</skill>
-				<range>6~13</range>
+				<range>8~14</range>
 			</li>
 			<li>
 				<skill>Melee</skill>
-				<range>4~7</range>
+				<range>6~8</range>
 			</li>
 		</skills>
 		<inventoryOptions>
@@ -160,6 +160,115 @@
 		</disallowedTraits>
 		<initialWillRange>0.5~2</initialWillRange>
 		<initialResistanceRange>5~10</initialResistanceRange>
+	</PawnKindDef>
+	
+	
+	
+	
+	<PawnKindDef Name="SWZsinj_RaptorHvy" ParentName="KotORSith_TrooperBase">
+		<defName>SWZsinj_RaptorHvy</defName>
+		<label>Raptor heavy trooper</label>
+		<combatPower>150</combatPower>
+		<minGenerationAge>18</minGenerationAge>
+		<maxGenerationAge>40</maxGenerationAge>
+		<itemQuality>Good</itemQuality>
+		
+		<maxPerGroup>4</maxPerGroup>
+		
+		<xenotypeSet Inherit="False">
+		  <xenotypeChances>
+			<Baseliner MayRequire="Ludeon.RimWorld.Biotech">999</Baseliner>
+		  </xenotypeChances>
+		</xenotypeSet>
+		<useFactionXenotypes>false</useFactionXenotypes>
+
+		<apparelMoney>1500~5500</apparelMoney>
+		<apparelAllowHeadgearChance>1</apparelAllowHeadgearChance>
+		<apparelTags>
+			<li>ZsinjEmpire_raptorarmor</li>
+			<li>KotOREquipment_basic</li>
+		</apparelTags>
+		<apparelRequired>
+			<li>guy762_Accessory_stormiepauldron</li>
+			<li>guy762_Accessory_suspendersA</li>
+			<li>guy762_RaptorHelmet</li>
+			<li>guy762_RaptorArmor</li>
+			<li>guy762_Bodysuit</li>
+		</apparelRequired>
+		<specificApparelRequirements>
+			<li>
+				<apparelLayer>OnSkin</apparelLayer>
+				<color>(90,90,90)</color>
+			</li>
+			<li>
+				<bodyPartGroup>Neck</bodyPartGroup>
+				<apparelLayer>Shell</apparelLayer>
+				<color>(40,40,40)</color>
+			</li>
+			<li>
+				<bodyPartGroup>Torso</bodyPartGroup>
+				<apparelLayer>Shell</apparelLayer>
+				<color>(90,90,90)</color>
+			</li>
+		</specificApparelRequirements>
+
+		<biocodeWeaponChance>0.75</biocodeWeaponChance>
+		<weaponMoney>2000~2200</weaponMoney>
+		<weaponTags>
+			<li>SWRanged_T21repeater</li>
+			<li>SWRanged_FC1flechette</li>
+		</weaponTags>
+
+		<techHediffsChance>1</techHediffsChance>
+		<techHediffsMoney>
+			<min>1200</min>
+			<max>2400</max>
+		</techHediffsMoney>
+
+		<skills>
+			<li>
+				<skill>Shooting</skill>
+				<range>8~14</range>
+			</li>
+			<li>
+				<skill>Melee</skill>
+				<range>6~8</range>
+			</li>
+		</skills>
+		<inventoryOptions>
+			<skipChance>0.25</skipChance>
+			<subOptionsChooseOne>
+				<li>
+					<thingDef>guy762_medpac</thingDef>
+					<countRange>1~3</countRange>
+				</li>
+				<li>
+					<thingDef>guy762_stim_battle</thingDef>
+					<countRange>0~1</countRange>
+				</li>
+			</subOptionsChooseOne>
+		</inventoryOptions>
+
+		<disallowedTraits>
+			<li>Brawler</li>
+		</disallowedTraits>
+		<initialWillRange>0.5~2</initialWillRange>
+		<initialResistanceRange>5~10</initialResistanceRange>
+		<modExtensions Inherit="False">
+			<li Class="BodyTypeForPawnKind.ModExtension_BodyTypesOfPawnKind">
+				<whitelist>
+					<li>Hulk</li>
+				</whitelist>
+				<blacklist>
+				</blacklist>
+				<priority>
+					<!--When violates the black/whitelist, selected from these-->
+					<li>Hulk</li>
+				</priority>
+				<!--Align body gender to pawn's gender (default: True)-->
+				<checkGender>False</checkGender>
+			</li>
+		</modExtensions>
 	</PawnKindDef>
 	
 	

@@ -3,7 +3,7 @@
 <Defs>	
 
 	
-	<Vehicles.VehicleDef ParentName="guy762_GroundVehiclePawn_base">
+	<Vehicles.VehicleDef ParentName="guy762_SpeederBikeOrUnarmoredVehicle_base">
 		<defName>guy762_SWVehicle_74ZSpeeder</defName>
 		<label>Aratech 74-Z Speeder Bike</label>
 		<description>. \n\n&lt;color=#bb8f04&gt;Crew:&lt;/color&gt; Driver x1</description>
@@ -258,7 +258,7 @@
 						</renderProperties>
 						<defaultAngleRotated>0</defaultAngleRotated>
 						<angleRestricted>(315,45)</angleRestricted>
-						<gizmoLabel>AI blaster</gizmoLabel>
+						<gizmoLabel>light AI blaster</gizmoLabel>
 						
 						<aimPieOffset>(0, 2.55)</aimPieOffset>
 						
@@ -272,13 +272,13 @@
 	
 	<Vehicles.VehicleTurretDef ParentName="VehicleTurretBase">
 		<defName>guy762_VehicleTurret_74ZSpeeder_main</defName>
-		<label>74-Z Speeder main gun</label>
+		<label>74-Z light anti-infantry gun</label>
 		<description>The main gun of a 74-Z speeder bike.</description>
 		
 		<turretType>Rotatable</turretType>
 		<shotSound>kotorsound_speedergun</shotSound>
 		
-		<projectile>SWVehicleBullet_AIred</projectile>
+		<projectile>SWVehicleBullet_AIred_light</projectile>
 		<reloadTimer>3.5</reloadTimer>
 		<warmUpTimer>0.2</warmUpTimer>
 		

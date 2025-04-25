@@ -157,27 +157,27 @@
 					<flightMode>
 						<label>Flight mode</label>
 						<description>Toggle flight mode.</description>
-						<texPath>UI/Abilities/Waterskip</texPath>
+						<texPath>Gizmo/TakeOff_Icon</texPath>
 					</flightMode>
 					<hoverMode>
 						<label>Hover mode</label>
 						<description>Toggle hover mode.</description>
-						<texPath>UI/Abilities/Waterskip</texPath>
+						<texPath>Gizmo/Liftoff_Icon</texPath>
 					</hoverMode>
 					<faceTarget>
 						<label>Face target (hover)</label>
 						<description>Face target while hovering.</description>
-						<texPath>UI/Abilities/Waterskip</texPath>
+						<texPath>Gizmo/FaceTarget_Icon</texPath>
 					</faceTarget>
 					<cancelFaceTarget>
 						<label>Cancel face target</label>
 						<description>Cancel face target.</description>
-						<texPath>UI/Abilities/Waterskip</texPath>
+						<texPath>Gizmo/FaceTargetStop_Icon</texPath>
 					</cancelFaceTarget>
 					<chaseTarget>
 						<label>Chase target (flight)</label>
 						<description>Chase target while flying.</description>
-						<texPath>UI/Abilities/Waterskip</texPath>
+						<texPath>Gizmo/ChaseTarger_Icon</texPath>
 					</chaseTarget>
 				</flightCommands>
 				
@@ -193,7 +193,7 @@
 				
 				<takeoffTicks>120</takeoffTicks>
 				<landingTicks>120</landingTicks>
-				<moveWhileTakingOff>true</moveWhileTakingOff>
+				<moveWhileTakingOff>false</moveWhileTakingOff>
 				
 				
 				
@@ -306,7 +306,7 @@
 						</renderProperties>
 						<defaultAngleRotated>0</defaultAngleRotated>
 						<angleRestricted>(315,45)</angleRestricted>
-						<gizmoLabel>proton torpedo launcher</gizmoLabel>
+						<gizmoLabel>torpedo launcher</gizmoLabel>
 						
 						<aimPieOffset>(0, 2.55)</aimPieOffset>
 						
@@ -320,7 +320,7 @@
 						</renderProperties>
 						<defaultAngleRotated>0</defaultAngleRotated>
 						<angleRestricted>(315,45)</angleRestricted>
-						<gizmoLabel>proton torpedo launcher</gizmoLabel>
+						<gizmoLabel>torpedo launcher</gizmoLabel>
 						
 						<aimPieOffset>(0, 2.55)</aimPieOffset>
 						
@@ -537,7 +537,7 @@
 		<turretType>Rotatable</turretType>
 		<shotSound>kotorsound_starvipergun</shotSound>
 		
-		<projectile>SWVehicleBullet_SFheavydoublegreen</projectile>
+		<projectile>SWVehicleBullet_SFdoublegreen</projectile>
 		<reloadTimer>3.5</reloadTimer>
 		<warmUpTimer>0</warmUpTimer>
 		
@@ -589,7 +589,7 @@
 		<shotSound>kotorsound_protorp</shotSound>
 		<reloadSound>kotorsound_reloadlauncher</reloadSound>
 		
-		<projectile>KotORSFBullet_protorp</projectile>
+		<projectile>SWVehicleBullet_SFprotorp</projectile>
 		<reloadTimer>3.5</reloadTimer>
 		<warmUpTimer>0.4</warmUpTimer>
 		

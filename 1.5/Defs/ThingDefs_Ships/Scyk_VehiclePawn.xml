@@ -142,27 +142,27 @@
 					<flightMode>
 						<label>Flight mode</label>
 						<description>Toggle flight mode.</description>
-						<texPath>UI/Abilities/Waterskip</texPath>
+						<texPath>Gizmo/TakeOff_Icon</texPath>
 					</flightMode>
 					<hoverMode>
 						<label>Hover mode</label>
 						<description>Toggle hover mode.</description>
-						<texPath>UI/Abilities/Waterskip</texPath>
+						<texPath>Gizmo/Liftoff_Icon</texPath>
 					</hoverMode>
 					<faceTarget>
 						<label>Face target (hover)</label>
 						<description>Face target while hovering.</description>
-						<texPath>UI/Abilities/Waterskip</texPath>
+						<texPath>Gizmo/FaceTarget_Icon</texPath>
 					</faceTarget>
 					<cancelFaceTarget>
 						<label>Cancel face target</label>
 						<description>Cancel face target.</description>
-						<texPath>UI/Abilities/Waterskip</texPath>
+						<texPath>Gizmo/FaceTargetStop_Icon</texPath>
 					</cancelFaceTarget>
 					<chaseTarget>
 						<label>Chase target (flight)</label>
 						<description>Chase target while flying.</description>
-						<texPath>UI/Abilities/Waterskip</texPath>
+						<texPath>Gizmo/ChaseTarger_Icon</texPath>
 					</chaseTarget>
 				</flightCommands>
 				
@@ -178,7 +178,7 @@
 				
 				<takeoffTicks>120</takeoffTicks>
 				<landingTicks>120</landingTicks>
-				<moveWhileTakingOff>true</moveWhileTakingOff>
+				<moveWhileTakingOff>false</moveWhileTakingOff>
 				
 				
 				
@@ -304,8 +304,8 @@
 			
 			<li>
 				<key>FirstThruster</key>
-				<label>Port Thruster</label>
-				<health>120</health>
+				<label>Main Thruster</label>
+				<health>240</health>
 				<depth>Internal</depth>
 				
 				<reactors>
@@ -313,12 +313,16 @@
 						<indicator>VF_Explosive</indicator>
 						<chance>0.25</chance>
 						<maxHealth>0.2</maxHealth>
-						<radius>5</radius>
+						<radius>10</radius>
 						<damageDef>Flame</damageDef>
 					</li>
 				</reactors>
 				
 				<hitbox>
+					<!--cells>
+						<li>(-3, 0)</li>
+						<li>(-3, -1)</li>
+					</cells-->
 					<side>Body</side>
 				</hitbox>
 				
@@ -328,14 +332,14 @@
 			</li>
 			<li>
 				<key>SecondThruster</key>
-				<label>Starboard Thruster</label>
+				<label>Port Auxilary Thruster</label>
 				<health>120</health>
 				<depth>Internal</depth>
 				
 				<reactors>
 					<li Class = "Vehicles.Reactor_Explosive">
 						<indicator>VF_Explosive</indicator>
-						<chance>0.25</chance>
+						<chance>0.125</chance>
 						<maxHealth>0.2</maxHealth>
 						<radius>5</radius>
 						<damageDef>Flame</damageDef>
@@ -343,11 +347,42 @@
 				</reactors>
 				
 				<hitbox>
+					<!--cells>
+						<li>(1, -1)</li>
+						<li>(1, -2)</li>
+					</cells-->
 					<side>Body</side>
 				</hitbox>
 				
 				<categories>
-					<li>FlightSpeed</li>
+					<li>FlightControl</li>   
+				</categories>
+			</li>
+			<li>
+				<key>ThirdThruster</key>
+				<label>Starboard Auxilary Thruster</label>
+				<health>120</health>
+				<depth>Internal</depth>
+				
+				<reactors>
+					<li Class = "Vehicles.Reactor_Explosive">
+						<indicator>VF_Explosive</indicator>
+						<chance>0.125</chance>
+						<maxHealth>0.2</maxHealth>
+						<radius>5</radius>
+						<damageDef>Flame</damageDef>
+					</li>
+				</reactors>
+				
+				<hitbox>
+					<!--cells>
+						<li>(1, -1)</li>
+						<li>(1, -2)</li>
+					</cells-->
+					<side>Body</side>
+				</hitbox>
+				
+				<categories>
 					<li>FlightControl</li>
 				</categories>
 			</li>

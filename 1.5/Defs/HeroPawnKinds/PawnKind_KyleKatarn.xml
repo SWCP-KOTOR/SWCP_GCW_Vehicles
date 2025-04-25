@@ -31,7 +31,7 @@
 		<weaponMoney>99999999</weaponMoney>
 		<weaponTags>
 		  <!-- <li>KotORLightsaber_bluesingle</li> -->
-		  <li MayRequireAnyOf ="lee.theforce.lightsaber,lee.theforce.lightsaber_steam">Force_Lightsaber</li>
+		  <li MayRequireAnyOf ="lee.theforce.lightsaber,lee.theforce.lightsaber_steam">Force_LightsaberSingle</li>
 		</weaponTags>
 		<techHediffsRequired>
 		  <li>guy762_ImplantDock_I</li>

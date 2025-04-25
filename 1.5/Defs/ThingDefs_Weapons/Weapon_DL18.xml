@@ -151,7 +151,7 @@
 				<label>spread shot</label>
 				<!--description>Fire a cluster of bolts.</description>
 				<iconPath>UI/Spread_Shot</iconPath-->
-				<commandIcon>UI/Spread_Shot</commandIcon>
+				<commandIcon>UI/Spread_Shot_red_small</commandIcon>
 				<verbClass>Verb_Shoot</verbClass>
 				<hasStandardCommand>true</hasStandardCommand>
 				<defaultProjectile>SWProj_ScatterBlasterBolt</defaultProjectile>

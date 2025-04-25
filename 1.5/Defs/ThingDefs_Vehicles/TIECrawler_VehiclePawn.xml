@@ -82,7 +82,7 @@
 		
 		<vehicleStats>
 			<Mass>750</Mass>
-			<MoveSpeed>20</MoveSpeed>
+			<MoveSpeed>16</MoveSpeed>
 			<CargoCapacity>50</CargoCapacity>
 			<RepairRate>2</RepairRate>
 			<!--AccelerationRate>0.08</AccelerationRate-->
@@ -127,6 +127,7 @@
 					
 					<turretIds>
 						<li>TIECrawlerKey_gun_1</li>
+						<li>TIECrawlerKey_gun_2</li>
 					</turretIds>
 				</li>
 			</roles>
@@ -142,7 +143,7 @@
 					<ArmorRating_Sharp>1.45</ArmorRating_Sharp>
 					<ArmorRating_Blunt>1.3</ArmorRating_Blunt> <!-- # of estimated XWMG hull points * 0.1, apply to hard armor curve -->
 					<ArmorRating_Heat>1.55</ArmorRating_Heat>
-					<IncomingDamageFactor>-0.20</IncomingDamageFactor> <!-- # of estimated XWMG hull points * -0.05 -->
+					<IncomingDamageFactor>-0.25</IncomingDamageFactor> <!-- unarmored: 0.05 | light vehicles: 0.15 | medium vehicles: 0.25 | heavy vehicles: 0.35 -->
 				</armor>
 				<health>400</health> <!-- # of estimated XWMG hull points * 100 -->
 				
@@ -264,11 +265,32 @@
 						</renderProperties>
 						<defaultAngleRotated>0</defaultAngleRotated>
 						<angleRestricted>(315,45)</angleRestricted>
-						<gizmoLabel>AI blaster</gizmoLabel>
+						<gizmoLabel>AI gun</gizmoLabel>
 						
 						<aimPieOffset>(0, 2.55)</aimPieOffset>
 						
 						<key>TIECrawlerKey_gun_1</key>
+					</li>
+				</turrets>
+			</li>
+			<li Class="Vehicles.CompProperties_VehicleTurrets">
+				<turrets>
+					<li>
+						<turretDef>guy762_VehicleTurret_TIECrawler_AV</turretDef>
+						
+						<renderProperties>
+							<north>(0, 1.4)</north>
+							<south>(0, -1.8)</south>
+							<east>(1.8, 0)</east>
+							<west>(-1.8, 0)</west>
+						</renderProperties>
+						<defaultAngleRotated>0</defaultAngleRotated>
+						<angleRestricted>(315,45)</angleRestricted>
+						<gizmoLabel>AV gun</gizmoLabel>
+						
+						<aimPieOffset>(0, 2.55)</aimPieOffset>
+						
+						<key>TIECrawlerKey_gun_2</key>
 					</li>
 				</turrets>
 			</li>
@@ -279,8 +301,8 @@
 	
 	<Vehicles.VehicleTurretDef ParentName="VehicleTurretBase">
 		<defName>guy762_VehicleTurret_TIECrawler_main</defName>
-		<label>TIE/ct main gun</label>
-		<description>The main gun of a TIE Crawler.</description>
+		<label>TIE/ct anti-infantry gun</label>
+		<description>The anti-infantry gun of a TIE Crawler.</description>
 		
 		<turretType>Rotatable</turretType>
 		<shotSound>kotorsound_TIECrawlerGun</shotSound>
@@ -299,7 +321,7 @@
 		<!-- <projectileOffset>2.1</projectileOffset> -->
 		
 		<minRange>5</minRange>
-		<maxRange>60</maxRange>
+		<maxRange>30</maxRange> <!-- ~30 for infantry, 60 for ground vehicles, 90 for starfighters -->
 
 		<fireModes>
 			<li>
@@ -317,6 +339,51 @@
 		</graphicData>
 		
 		<gizmoIconTexPath>Items/cannon_blank</gizmoIconTexPath>
+		
+	</Vehicles.VehicleTurretDef>
+	
+	
+	
+	<Vehicles.VehicleTurretDef ParentName="VehicleTurretBase">
+		<defName>guy762_VehicleTurret_TIECrawler_AV</defName>
+		<label>TIE/ct anti-vehicle gun</label>
+		<description>The anti-vehicle gun of a TIE Crawler.</description>
+		
+		<turretType>Rotatable</turretType>
+		<shotSound>kotorsound_EaWturbolaser</shotSound>
+		
+		<projectile>SWVehicleBullet_AVgreen</projectile>
+		<reloadTimer>3.5</reloadTimer>
+		<warmUpTimer>0.4</warmUpTimer>
+		
+		<magazineCapacity>999</magazineCapacity>
+		
+		<hitFlags>IntendedTarget</hitFlags>
+		
+		<autoSnapTargeting>true</autoSnapTargeting>
+		<rotationSpeed>5</rotationSpeed>
+		
+		<!-- <projectileOffset>2.1</projectileOffset> -->
+		
+		<minRange>5</minRange>
+		<maxRange>60</maxRange> <!-- ~30 for infantry, 60 for ground vehicles, 90 for starfighters -->
+
+		<fireModes>
+			<li>
+				<shotsPerBurst>1</shotsPerBurst>
+				<ticksBetweenShots>10</ticksBetweenShots>
+				<ticksBetweenBursts>100</ticksBetweenBursts>
+				<label>Single</label>
+				<texPath>UI/Sniper_Shot</texPath>
+			</li>
+		</fireModes>
+
+		<graphicData>
+			<texPath>NullTex</texPath>
+			<graphicClass>Vehicles.Graphic_Turret</graphicClass>
+		</graphicData>
+		
+		<gizmoIconTexPath>Items/bigcannon_blank</gizmoIconTexPath>
 		
 	</Vehicles.VehicleTurretDef>
 	

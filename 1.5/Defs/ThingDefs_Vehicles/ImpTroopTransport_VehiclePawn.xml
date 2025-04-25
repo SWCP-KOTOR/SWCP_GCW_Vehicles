@@ -360,7 +360,7 @@
 					<ArmorRating_Sharp>1.45</ArmorRating_Sharp>
 					<ArmorRating_Blunt>1.3</ArmorRating_Blunt> <!-- # of estimated XWMG hull points * 0.1, apply to hard armor curve -->
 					<ArmorRating_Heat>1.55</ArmorRating_Heat>
-					<IncomingDamageFactor>-0.25</IncomingDamageFactor> <!-- # of estimated XWMG hull points * -0.05 -->
+					<IncomingDamageFactor>-0.15</IncomingDamageFactor> <!-- unarmored: 0.05 | light vehicles: 0.15 | medium vehicles: 0.25 | heavy vehicles: 0.35 -->
 				</armor>
 				<health>400</health> <!-- # of estimated XWMG hull points * 100 -->
 				
@@ -457,7 +457,7 @@
 						</renderProperties>
 						<defaultAngleRotated>0</defaultAngleRotated>
 						<!-- <angleRestricted>(315,45)</angleRestricted> -->
-						<gizmoLabel>dorsal AV turret</gizmoLabel>
+						<gizmoLabel>dorsal AV/AA turret</gizmoLabel>
 						
 						<drawLayer>15</drawLayer>
 						<aimPieOffset>(0, 2.55)</aimPieOffset>
@@ -475,7 +475,7 @@
 						</renderProperties>
 						<defaultAngleRotated>0</defaultAngleRotated>
 						<angleRestricted>(315,45)</angleRestricted>
-						<gizmoLabel>front AI turret</gizmoLabel>
+						<gizmoLabel>light AI gun</gizmoLabel>
 						
 						<aimPieOffset>(0, 2.55)</aimPieOffset>
 						
@@ -492,7 +492,7 @@
 						</renderProperties>
 						<defaultAngleRotated>0</defaultAngleRotated>
 						<angleRestricted>(315,45)</angleRestricted>
-						<gizmoLabel>front AI turret</gizmoLabel>
+						<gizmoLabel>light AI gun</gizmoLabel>
 						
 						<aimPieOffset>(0, 2.55)</aimPieOffset>
 						
@@ -507,15 +507,15 @@
 	
 	<Vehicles.VehicleTurretDef ParentName="VehicleTurretBase">
 		<defName>guy762_VehicleTurret_ImpTroopTransport_dorsal</defName>
-		<label>K79-S80 dorsal turret</label>
+		<label>K79-S80 dorsal anti-vehicle/anti-air turret</label>
 		<description>The rotating dorsal turret of a K79-S80 troop transport.</description>
 		
 		<turretType>Rotatable</turretType>
 		<shotSound>kotorsound_TIECrawlerGun</shotSound>
 		
-		<projectile>SWVehicleBullet_AVdoublered</projectile>
+		<projectile>SWVehicleBullet_AVAAdoublered</projectile>
 		<reloadTimer>3.5</reloadTimer>
-		<warmUpTimer>1</warmUpTimer>
+		<warmUpTimer>1</warmUpTimer> <!-- all dorsal turrets = 1 minimum -->
 		
 		<magazineCapacity>999</magazineCapacity>
 		
@@ -533,7 +533,7 @@
 			<li>
 				<shotsPerBurst>1</shotsPerBurst>
 				<ticksBetweenShots>10</ticksBetweenShots>
-				<ticksBetweenBursts>40</ticksBetweenBursts>
+				<ticksBetweenBursts>100</ticksBetweenBursts>
 				<label>Single</label>
 				<texPath>UI/Sniper_Shot</texPath>
 			</li>
@@ -552,13 +552,13 @@
 	
 	<Vehicles.VehicleTurretDef ParentName="VehicleTurretBase">
 		<defName>guy762_VehicleTurret_ImpTroopTransport_main</defName>
-		<label>K79-S80 main gun</label>
+		<label>K79-S80 light anti-infantry gun</label>
 		<description>The main gun of a K79-S80 troop transport.</description>
 		
 		<turretType>Rotatable</turretType>
 		<shotSound>kotorsound_TankAntiInfantryGun</shotSound>
 		
-		<projectile>SWVehicleBullet_AIred</projectile>
+		<projectile>SWVehicleBullet_AIred_light</projectile>
 		<reloadTimer>3.5</reloadTimer>
 		<warmUpTimer>0.2</warmUpTimer>
 		

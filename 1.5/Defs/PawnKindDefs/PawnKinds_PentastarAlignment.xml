@@ -48,7 +48,7 @@
 		</requiredWorkTags>
 	</PawnKindDef>
 
-	<PawnKindDef Name="SWPentastar_TrooperBase" ParentName="SWImpRemnant_Base" Abstract="True">
+	<PawnKindDef Name="SWPentastar_TrooperBase" ParentName="SWPentastar_Base" Abstract="True">
 		<modExtensions>
 			<li Class="BodyTypeForPawnKind.ModExtension_BodyTypesOfPawnKind">
 				<whitelist>
@@ -186,7 +186,7 @@
 		<apparelRequired>
 			<li>guy762_NavyTrooperHelmet</li>
 			<li>guy762_ImpLightCombatArmor</li>
-			<li>guy762_ImpUniform_bigbelt</li>
+			<li>guy762_GenericUniform_fatigues</li>
 		</apparelRequired>
 		<specificApparelRequirements>
 			<li>
@@ -260,7 +260,7 @@
 		<apparelRequired>
 			<li>guy762_ArmyTrooperHelmet</li>
 			<li>guy762_ArmyTrooperArmor</li>
-			<li>guy762_ImpUniform_default</li>
+			<li>guy762_GenericUniform_fatigues</li>
 		</apparelRequired>
 		<specificApparelRequirements>
 			<li>

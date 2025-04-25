@@ -1,6 +1,145 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Defs>
 
+	<PawnKindDef Name="SWNewRepub_Engineer" ParentName="KotORRepub_Base">
+		<defName>SWNewRepub_Engineer</defName>
+		<label>engineer</label>
+		<combatPower>40</combatPower>
+		<minGenerationAge>16</minGenerationAge>
+		<maxGenerationAge>70</maxGenerationAge>
+		<itemQuality>Normal</itemQuality>
+
+		<apparelMoney>1500~5500</apparelMoney>
+		<apparelAllowHeadgearChance>1</apparelAllowHeadgearChance>
+		<apparelTags>
+			<li>KotORUtility_engi_novisor</li>
+		</apparelTags>
+		<apparelRequired>
+			<li>guy762_UniformCap_rebel</li>
+			<li>guy762_GenericUniform_fatigues</li>
+		</apparelRequired>
+		<specificApparelRequirements>
+			<li>
+				<apparelLayer>Overhead</apparelLayer>
+				<color>(175,150,120)</color>       <!-- bespin beige -->
+			</li>
+			<li>
+				<apparelLayer>OnSkin</apparelLayer>
+				<color>(175,150,120)</color>       <!-- bespin beige -->
+			</li>
+		</specificApparelRequirements>
+
+		<biocodeWeaponChance>0</biocodeWeaponChance>
+		<weaponMoney>475</weaponMoney>
+		<weaponTags>
+			<li>SWRanged_DL21pistol</li>
+		</weaponTags>
+
+		<skills>
+			<li>
+				<skill>Construction</skill>
+				<range>8~10</range>
+			</li>
+			<li>
+				<skill>Crafting</skill>
+				<range>6~8</range>
+			</li>
+		</skills>
+		<inventoryOptions>
+			<skipChance>0</skipChance>
+			<subOptionsChooseOne>
+				<!-- <li> -->
+					<!-- <thingDef>guy762_repairkit</thingDef> -->
+					<!-- <countRange>1~3</countRange> -->
+				<!-- </li> -->
+				<li>
+					<thingDef>ComponentIndustrial</thingDef>
+					<countRange>1~3</countRange>
+				</li>
+			</subOptionsChooseOne>
+		</inventoryOptions>
+
+		<initialWillRange>0.5~2</initialWillRange>
+		<initialResistanceRange>5~10</initialResistanceRange>
+	</PawnKindDef>
+	
+	
+	<PawnKindDef Name="SWNewRepub_EngiCombat" ParentName="KotORRepub_Base">
+		<defName>SWNewRepub_EngiCombat</defName>
+		<label>combat engineer</label>
+		<combatPower>100</combatPower>
+		<minGenerationAge>18</minGenerationAge>
+		<maxGenerationAge>40</maxGenerationAge>
+		<itemQuality>Good</itemQuality>
+		
+		<maxPerGroup>6</maxPerGroup>
+
+		<apparelMoney>1500~5500</apparelMoney>
+		<apparelAllowHeadgearChance>1</apparelAllowHeadgearChance>
+		<apparelTags>
+			<li>KotORUtility_engi_novisor</li>
+			<li>NewRepublic_combatengineer</li>
+		</apparelTags>
+		<apparelRequired>
+			<li>guy762_RebelEngiCap</li>
+			<li>guy762_Accessory_suspendersB</li>
+			<li>guy762_GenericUniform_fatigues</li>
+		</apparelRequired>
+		<specificApparelRequirements>
+			<li>
+				<apparelLayer>Shell</apparelLayer>
+				<color>(95,130,80)</color>       <!-- rebel engi green -->
+			</li>
+			<li>
+				<apparelLayer>Middle</apparelLayer>
+				<color>(90,90,90)</color>
+			</li>
+			<li>
+				<apparelLayer>OnSkin</apparelLayer>
+				<color>(175,150,120)</color>       <!-- bespin beige -->
+			</li>
+		</specificApparelRequirements>
+
+		<biocodeWeaponChance>0</biocodeWeaponChance>
+		<weaponMoney>500~1500</weaponMoney>
+		<weaponTags>
+			<li>SWRanged_E11carbine</li>
+			<li>SWRanged_CR1BlastCannon</li>
+		</weaponTags>
+
+		<skills>
+			<li>
+				<skill>Shooting</skill>
+				<range>4~8</range>
+			</li>
+			<li>
+				<skill>Construction</skill>
+				<range>8~10</range>
+			</li>
+			<li>
+				<skill>Crafting</skill>
+				<range>6~8</range>
+			</li>
+		</skills>
+		<inventoryOptions>
+			<skipChance>0</skipChance>
+			<subOptionsChooseOne>
+				<!-- <li> -->
+					<!-- <thingDef>guy762_repairkit_adv</thingDef> -->
+					<!-- <countRange>1~3</countRange> -->
+				<!-- </li> -->
+				<li>
+					<thingDef>ComponentIndustrial</thingDef>
+					<countRange>1~3</countRange>
+				</li>
+			</subOptionsChooseOne>
+		</inventoryOptions>
+
+		<initialWillRange>0.5~2</initialWillRange>
+		<initialResistanceRange>5~10</initialResistanceRange>
+	</PawnKindDef>
+	
+	
 	
 	<!--troopers-->
 
@@ -157,6 +296,7 @@
 		  <li>KotOREquipment_basic</li>
 		</apparelTags>
 		<apparelRequired>
+			<li>guy762_UniformCap_rebel</li>
 			<li>guy762_NewRepUniform_lowrank</li>
 		</apparelRequired>
 		
@@ -212,6 +352,77 @@
 	  </PawnKindDef>
 	  
 	  
+	  <PawnKindDef Name="SWNewRepub_NavyCaptain" ParentName="KotORRepub_Base">
+		<defName>SWNewRepub_NavyCaptain</defName>
+		<label>navy captain</label>
+		<combatPower>40</combatPower>
+		<minGenerationAge>24</minGenerationAge>
+		<maxGenerationAge>75</maxGenerationAge>
+		<itemQuality>Good</itemQuality>
+		
+		<maxPerGroup>1</maxPerGroup>
+		
+		<apparelMoney>1500~5500</apparelMoney>
+		<apparelAllowHeadgearChance>1</apparelAllowHeadgearChance>
+		<apparelTags>
+		  <li>KotOREquipment_basic</li>
+		</apparelTags>
+		<apparelRequired>
+			<li>guy762_NewRepUniform_lowrank</li>
+		</apparelRequired>
+		
+		<specificApparelRequirements>
+			<li>
+				<apparelLayer>OnSkin</apparelLayer>
+				<apparelDef>guy762_NewRepUniform_lowrank</apparelDef>
+				<styleDef>guy762_RankStyleNR_navycap</styleDef>
+				<color>(170,135,100)</color> <!-- darker beige -->
+				<quality>Good</quality>
+			</li>
+		</specificApparelRequirements>
+		
+		<biocodeWeaponChance>0</biocodeWeaponChance>
+		<weaponMoney>550~600</weaponMoney>
+		<weaponTags>
+		  <li>SWRanged_DH17pistol</li>
+		</weaponTags>
+		
+		<skills>
+			<li>
+				<skill>Shooting</skill>
+				<range>4~6</range>
+			</li>
+			<li>
+				<skill>Social</skill>
+				<range>8~10</range>
+			</li>
+			<li>
+				<skill>Intellectual</skill>
+				<range>8~10</range>
+			</li>
+		</skills>
+		
+		<inventoryOptions>
+			<skipChance>0.25</skipChance>
+			<subOptionsChooseOne>
+				<li>
+					<thingDef>guy762_medpac_adv</thingDef>
+					<countRange>1~3</countRange>
+				</li>
+			</subOptionsChooseOne>
+		</inventoryOptions>
+		
+		<initialWillRange>0.5~2</initialWillRange>
+		<initialResistanceRange>5~10</initialResistanceRange>
+		
+		<abilities>
+			<li>WorkDrive</li>
+			<!-- <li>ProductionCommand</li> -->
+			<!-- <li>MarksmanCommand</li> -->
+		</abilities>
+	  </PawnKindDef>
+	  
+	  
 	  
 	  
 	  
@@ -238,7 +449,7 @@
 		</apparelTags>
 		<apparelRequired>
 			<li>guy762_NewRepublicArmor_light</li>
-			<li>guy762_Bodysuit_utility</li>
+			<li>guy762_GenericUniform_fatigues</li>
 		</apparelRequired>
 		
 		<specificApparelRequirements>
@@ -315,7 +526,7 @@
 			</li>
 		</specificApparelRequirements>
 
-		<biocodeWeaponChance>0.5</biocodeWeaponChance>
+		<biocodeWeaponChance>0</biocodeWeaponChance>
 		<weaponMoney>550</weaponMoney>
 		<weaponTags>
 			<li>SWRanged_DH17pistol</li>
@@ -385,7 +596,7 @@
 			</li>
 		</specificApparelRequirements>
 
-		<biocodeWeaponChance>0.5</biocodeWeaponChance>
+		<biocodeWeaponChance>0</biocodeWeaponChance>
 		<weaponMoney>550</weaponMoney>
 		<weaponTags>
 			<li>SWRanged_DH17pistol</li>
@@ -459,7 +670,7 @@
 			</li>
 		</specificApparelRequirements>
 
-		<biocodeWeaponChance>0.5</biocodeWeaponChance>
+		<biocodeWeaponChance>0</biocodeWeaponChance>
 		<weaponMoney>550</weaponMoney>
 		<weaponTags>
 			<li>SWRanged_DH17pistol</li>

@@ -119,7 +119,7 @@
 		<specificApparelRequirements>
 			<li>
 				<apparelLayer>OnSkin</apparelLayer>
-				<color>(150,140,95)</color>       <!-- khaki -->
+				<color>(150,140,95)</color>       <!-- dijon -->
 			</li>
 		</specificApparelRequirements>
 
@@ -196,10 +196,10 @@
 		<inventoryOptions>
 			<skipChance>0</skipChance>
 			<subOptionsChooseOne>
-				<li>
-					<thingDef>guy762_repairkit</thingDef>
-					<countRange>1~3</countRange>
-				</li>
+				<!-- <li> -->
+					<!-- <thingDef>guy762_repairkit</thingDef> -->
+					<!-- <countRange>1~3</countRange> -->
+				<!-- </li> -->
 				<li>
 					<thingDef>ComponentIndustrial</thingDef>
 					<countRange>1~3</countRange>
@@ -272,10 +272,10 @@
 		<inventoryOptions>
 			<skipChance>0</skipChance>
 			<subOptionsChooseOne>
-				<li>
-					<thingDef>guy762_repairkit</thingDef>
-					<countRange>1~3</countRange>
-				</li>
+				<!-- <li> -->
+					<!-- <thingDef>guy762_repairkit_adv</thingDef> -->
+					<!-- <countRange>1~3</countRange> -->
+				<!-- </li> -->
 				<li>
 					<thingDef>ComponentIndustrial</thingDef>
 					<countRange>1~3</countRange>
@@ -625,8 +625,14 @@
 		<apparelRequired>
 			<li>guy762_ArmyTrooperHelmet</li>
 			<li>guy762_ArmyTrooperArmor</li>
-			<li>guy762_ImpUniform_default</li>
+			<li>guy762_GenericUniform_fatigues</li>
 		</apparelRequired>
+		<specificApparelRequirements>
+			<li>
+				<apparelLayer>OnSkin</apparelLayer>
+				<color>(65,65,60)</color>        <!-- imperial army grey -->
+			</li>
+		</specificApparelRequirements>
 
 		<biocodeWeaponChance>0</biocodeWeaponChance>
 		<weaponMoney>300</weaponMoney>
@@ -665,8 +671,14 @@
 		<apparelRequired>
 			<li>guy762_ArmyTrooperHelmet</li>
 			<li>guy762_ArmyTrooperArmor</li>
-			<li>guy762_ImpUniform_default</li>
+			<li>guy762_GenericUniform_fatigues</li>
 		</apparelRequired>
+		<specificApparelRequirements>
+			<li>
+				<apparelLayer>OnSkin</apparelLayer>
+				<color>(65,65,60)</color>        <!-- imperial army grey -->
+			</li>
+		</specificApparelRequirements>
 
 		<biocodeWeaponChance>0</biocodeWeaponChance>
 		<weaponMoney>300~1600</weaponMoney>
@@ -726,8 +738,14 @@
 			<li>guy762_Accessory_poncho</li>
 			<li>guy762_ArmyTrooperHelmet_mask</li>
 			<li>guy762_ArmyTrooperArmor</li>
-			<li>guy762_ImpUniform_default</li>
+			<li>guy762_GenericUniform_fatigues</li>
 		</apparelRequired>
+		<specificApparelRequirements>
+			<li>
+				<apparelLayer>OnSkin</apparelLayer>
+				<color>(65,65,60)</color>        <!-- imperial army grey -->
+			</li>
+		</specificApparelRequirements>
 
 		<biocodeWeaponChance>0</biocodeWeaponChance>
 		<weaponMoney>2500</weaponMoney>
@@ -782,7 +800,7 @@
 		<apparelRequired>
 			<li>guy762_ArmyTrooperHelmet</li>
 			<li>guy762_ArmyOfficerArmor</li>
-			<li>guy762_ImpUniform_default</li>
+			<li>guy762_GenericUniform_fatigues</li>
 		</apparelRequired>
 		<specificApparelRequirements>
 			<li>
@@ -1165,12 +1183,16 @@
 		<apparelRequired>
 			<li>guy762_ImpTankTrooperHelmet</li>
 			<li>guy762_ArmyTrooperArmor</li>
-			<li>guy762_ImpUniform_default</li>
+			<li>guy762_GenericUniform_fatigues</li>
 		</apparelRequired>
 		<specificApparelRequirements>
 			<li>
 				<apparelLayer>Overhead</apparelLayer>
 				<color>(110,120,115)</color>  <!-- army slate green -->
+			</li>
+			<li>
+				<apparelLayer>OnSkin</apparelLayer>
+				<color>(65,65,60)</color>        <!-- imperial army grey -->
 			</li>
 		</specificApparelRequirements>
 

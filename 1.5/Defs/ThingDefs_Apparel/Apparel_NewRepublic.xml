@@ -2,7 +2,70 @@
 <Defs>
 
 	
-	
+	<ThingDef ParentName="guy762_HatCraftableBase">
+		<defName>guy762_RebelEngiCap</defName>
+		<label>engineer's cap</label>
+		<description>A rugged cap with a scarf for engineering personnel.</description>
+		<graphicData>
+		  <texPath>Apparel/RebelEngineer/hat</texPath>
+		  <graphicClass>Graphic_Single</graphicClass>
+		  <shaderType>CutoutComplex</shaderType>
+		  <colorTwo>(170,170,190)</colorTwo> <!-- sith grey -->
+		</graphicData>
+		<statBases>
+		  <MarketValue>50</MarketValue>
+		  <MaxHitPoints>80</MaxHitPoints>
+		  <Mass>0.05</Mass>
+		  <ArmorRating_Sharp>0.01</ArmorRating_Sharp>
+		  <ArmorRating_Blunt>0.01</ArmorRating_Blunt>
+		  <ArmorRating_Heat>0.01</ArmorRating_Heat>
+		  <EquipDelay>0.1</EquipDelay>
+		  
+		  
+		  <WorkToMake>1000</WorkToMake>
+		</statBases>
+		<equippedStatOffsets>
+		  <WorkSpeedGlobal>0.2</WorkSpeedGlobal>
+		</equippedStatOffsets>
+		
+		<recipeMaker>
+			<skillRequirements>
+				<Crafting>6</Crafting>
+			</skillRequirements>
+		</recipeMaker>
+		<costList>
+			<Synthread>20</Synthread>
+		</costList>
+		
+		<apparel>
+		  <wornGraphicPath>Apparel/RebelEngineer/hat</wornGraphicPath>
+		  <useWornGraphicMask>true</useWornGraphicMask>
+		  <bodyPartGroups>
+			<li>UpperHead</li>
+			<li>Neck</li>
+		  </bodyPartGroups>
+		  <layers>
+			<li>Overhead</li>
+		  </layers>
+		  <tags>
+			<li>NewRepublic_engineer</li>
+		  </tags>
+		  <countsAsClothingForNudity>false</countsAsClothingForNudity>
+		  <canBeGeneratedToSatisfyWarmth>false</canBeGeneratedToSatisfyWarmth>
+		  <canBeGeneratedToSatisfyToxicEnvironmentResistance>false</canBeGeneratedToSatisfyToxicEnvironmentResistance>
+		</apparel>
+		<tradeTags>
+			<li>guy762TT_SEArmor</li>
+		</tradeTags>
+		<colorGenerator Class="ColorGenerator_Options" Inherit="False">
+			<options>
+				<li>
+					<weight>15</weight>
+					<only>(175,150,120)</only>       <!-- bespin beige -->
+				</li>
+			</options>
+		</colorGenerator>
+	</ThingDef>
 	
 	
 	<ThingDef ParentName="KotORArmorModdable_hard">
@@ -399,6 +462,7 @@
 		<apparel>
 		  <tags Inherit="False">
 			<li>NewRepublic_resistancetrooper</li>
+			<li>NewRepublic_combatengineer</li>
 		  </tags>
 		  <wornGraphicPath>Apparel/NewRepublic/Apparel</wornGraphicPath>
 		  <useWornGraphicMask>true</useWornGraphicMask>
@@ -481,7 +545,7 @@
 			<ArmorRating_Blunt>0.01</ArmorRating_Blunt>
 			<ArmorRating_Heat>0.01</ArmorRating_Heat>
 			<Insulation_Cold>100</Insulation_Cold>
-			<Insulation_Heat>100</Insulation_Heat>
+			<!-- <Insulation_Heat>100</Insulation_Heat> -->
 			<EquipDelay>5</EquipDelay>
 		</statBases>
 		<equippedStatOffsets>

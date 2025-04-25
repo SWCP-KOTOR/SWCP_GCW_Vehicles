@@ -158,13 +158,13 @@
 				<label>Hull</label>
 				<depth>External</depth>
 				
-				<armor> <!-- EaWX health/50 = hull points, round up -->
-					<ArmorRating_Sharp>1.85</ArmorRating_Sharp>
-					<ArmorRating_Blunt>1.7</ArmorRating_Blunt> <!-- # of estimated XWMG hull points * 0.1, apply to hard armor curve -->
-					<ArmorRating_Heat>1.95</ArmorRating_Heat>
-					<IncomingDamageFactor>-0.40</IncomingDamageFactor> <!-- # of estimated XWMG hull points * -0.05 -->
+				<armor> <!-- breaking usual rules to put these guys at 6 hull -->
+					<ArmorRating_Sharp>1.65</ArmorRating_Sharp>
+					<ArmorRating_Blunt>1.5</ArmorRating_Blunt> <!-- # of estimated XWMG hull points * 0.1, apply to hard armor curve -->
+					<ArmorRating_Heat>1.75</ArmorRating_Heat>
+					<IncomingDamageFactor>-0.15</IncomingDamageFactor> <!-- unarmored: 0.05 | light vehicles: 0.15 | medium vehicles: 0.25 | heavy vehicles: 0.35 -->
 				</armor>
-				<health>800</health> <!-- # of estimated XWMG hull points * 100 -->
+				<health>600</health> <!-- # of estimated XWMG hull points * 100 -->
 				
 				<hitbox>
 					<side>Body</side>
@@ -275,7 +275,7 @@
 	
 	<Vehicles.VehicleTurretDef ParentName="VehicleTurretBase">
 		<defName>guy762_VehicleTurret_AA5Truck_dorsal</defName>
-		<label>A-A5 Speeder Truck dorsal turret</label>
+		<label>A-A5 anti-infantry dorsal turret</label>
 		<description>The rotating dorsal turret of an A-A5 Speeder Truck.</description>
 		
 		<turretType>Rotatable</turretType>
@@ -283,7 +283,7 @@
 		
 		<projectile>SWVehicleBullet_AIdoublered</projectile>
 		<reloadTimer>3.5</reloadTimer>
-		<warmUpTimer>1</warmUpTimer>
+		<warmUpTimer>1</warmUpTimer> <!-- all dorsal turrets = 1 minimum -->
 		
 		<magazineCapacity>999</magazineCapacity>
 		
@@ -295,7 +295,7 @@
 		<!-- <projectileOffset>2.1</projectileOffset> -->
 		
 		<minRange>5</minRange>
-		<maxRange>60</maxRange> <!-- ~30 for infantry, 60 for ground vehicles, 90 for starfighters -->
+		<maxRange>30</maxRange> <!-- ~30 for infantry, 60 for ground vehicles, 90 for starfighters -->
 
 		<fireModes>
 			<li>

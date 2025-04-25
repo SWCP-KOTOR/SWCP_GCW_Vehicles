@@ -138,27 +138,27 @@
 					<flightMode>
 						<label>Flight mode</label>
 						<description>Toggle flight mode.</description>
-						<texPath>UI/Abilities/Waterskip</texPath>
+						<texPath>Gizmo/TakeOff_Icon</texPath>
 					</flightMode>
 					<hoverMode>
 						<label>Hover mode</label>
 						<description>Toggle hover mode.</description>
-						<texPath>UI/Abilities/Waterskip</texPath>
+						<texPath>Gizmo/Liftoff_Icon</texPath>
 					</hoverMode>
 					<faceTarget>
 						<label>Face target (hover)</label>
 						<description>Face target while hovering.</description>
-						<texPath>UI/Abilities/Waterskip</texPath>
+						<texPath>Gizmo/FaceTarget_Icon</texPath>
 					</faceTarget>
 					<cancelFaceTarget>
 						<label>Cancel face target</label>
 						<description>Cancel face target.</description>
-						<texPath>UI/Abilities/Waterskip</texPath>
+						<texPath>Gizmo/FaceTargetStop_Icon</texPath>
 					</cancelFaceTarget>
 					<chaseTarget>
 						<label>Chase target (flight)</label>
 						<description>Chase target while flying.</description>
-						<texPath>UI/Abilities/Waterskip</texPath>
+						<texPath>Gizmo/ChaseTarger_Icon</texPath>
 					</chaseTarget>
 				</flightCommands>
 				
@@ -174,7 +174,7 @@
 				
 				<takeoffTicks>120</takeoffTicks>
 				<landingTicks>120</landingTicks>
-				<moveWhileTakingOff>true</moveWhileTakingOff>
+				<moveWhileTakingOff>false</moveWhileTakingOff>
 				
 				
 				

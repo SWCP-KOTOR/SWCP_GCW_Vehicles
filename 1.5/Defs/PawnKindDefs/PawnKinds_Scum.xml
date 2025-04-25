@@ -42,7 +42,7 @@
 						<only>(240,210,70)</only> <!-- yellow flight suit -->
 					</li>
 					<li>
-						<only>(150,140,95)</only>        <!-- khaki -->
+						<only>(150,140,95)</only>        <!-- dijon -->
 					</li>
 				  </options>
 				</colorGenerator>
@@ -116,17 +116,17 @@
 		</apparelRequired>
 		<specificApparelRequirements>
 			<li>
-				<apparelLayer>OnSkin</apparelLayer>
-				<color>(200,200,200)</color>
+				<apparelLayer>OnSkin</apparelLayer> <!-- TCW death watch blue -->
+				<color>(70,100,165)</color>
 			</li>
-			<li>
-				<apparelLayer>Middle</apparelLayer>
-				<color>(90,120,85)</color>
-			</li>
-			<li>
-				<apparelLayer>Overhead</apparelLayer>
-				<color>(90,120,85)</color>
-			</li>
+			<!-- <li> -->
+				<!-- <apparelLayer>Middle</apparelLayer> -->
+				<!-- <color>(90,120,85)</color> -->
+			<!-- </li> -->
+			<!-- <li> -->
+				<!-- <apparelLayer>Overhead</apparelLayer> -->
+				<!-- <color>(90,120,85)</color> -->
+			<!-- </li> -->
 		</specificApparelRequirements>
 		
 		<weaponMoney>2100</weaponMoney>
@@ -219,17 +219,17 @@
 		</apparelRequired>
 		<specificApparelRequirements>
 			<li>
-				<apparelLayer>OnSkin</apparelLayer>
-				<color>(200,200,200)</color>
+				<apparelLayer>OnSkin</apparelLayer> <!-- TCW death watch blue -->
+				<color>(70,100,165)</color>
 			</li>
-			<li>
-				<apparelLayer>Middle</apparelLayer>
-				<color>(180,85,85)</color>
-			</li>
-			<li>
-				<apparelLayer>Overhead</apparelLayer>
-				<color>(180,85,85)</color>
-			</li>
+			<!-- <li> -->
+				<!-- <apparelLayer>Middle</apparelLayer> -->
+				<!-- <color>(180,85,85)</color> -->
+			<!-- </li> -->
+			<!-- <li> -->
+				<!-- <apparelLayer>Overhead</apparelLayer> -->
+				<!-- <color>(180,85,85)</color> -->
+			<!-- </li> -->
 		</specificApparelRequirements>
 		
 		<weaponMoney>1200~3000</weaponMoney>
@@ -331,7 +331,7 @@
 			<li>KotORAccessory_trooper_strapsonly</li>
 		</apparelTags>
 		<apparelRequired>
-			<li>guy762_ImpUniform_default</li>
+			<li>guy762_GenericUniform_fatigues</li>
 		</apparelRequired>
 		<specificApparelRequirements>
 			<li>

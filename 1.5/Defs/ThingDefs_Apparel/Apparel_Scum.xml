@@ -179,12 +179,11 @@
 		<techLevel>Spacer</techLevel>
 		<description>.</description>
 		<graphicData>
-			<texPath>Apparel/Mandalorian/helmet_norangefinder/helmet</texPath>
+			<texPath>Apparel/Mandalorian/helmet_norangefinder/helmet_south</texPath><drawSize>1.25</drawSize>
 			<graphicClass>Graphic_Single</graphicClass>
-			<!-- <shaderType>CutoutMultiMask</shaderType> -->
-			<shaderType>CutoutComplex</shaderType>
-			<!-- <colorTwo>(160,110,35)</colorTwo> supercommando auburn -->
-			<colorTwo>(230,185,45)</colorTwo> <!--republic yellow--> 
+			<shaderType>CutoutMultiMask</shaderType>
+			<!-- <shaderType>CutoutComplex</shaderType> -->
+			<!-- <colorTwo>(230,185,45)</colorTwo> republic yellow -->
 		</graphicData>
 		<statBases>
 			<Mass>6</Mass>
@@ -193,7 +192,7 @@
       		<ArmorRating_Sharp>0.95</ArmorRating_Sharp>
 			<ArmorRating_Blunt>0.8</ArmorRating_Blunt>
 			<ArmorRating_Heat>1.05</ArmorRating_Heat>
-			<EquipDelay>8</EquipDelay>
+			<EquipDelay>3</EquipDelay>
 			
 			<WorkToMake>50000</WorkToMake>
 		</statBases>
@@ -253,6 +252,10 @@
 			<options>
 				<li>
 					<weight>10</weight>
+					<only>(70,100,165)</only> <!-- TCW death watch blue -->
+				</li>
+				<li>
+					<weight>10</weight>
 					<only>(180,185,185)</only> <!-- beskar -->
 				</li>
 				<li>
@@ -289,10 +292,10 @@
 		<modExtensions>
 			<li MayRequire="telefonmast.itempainter" Class="RWPaintingTool.PaintableExtension">
 				<!-- <maskCount>1</maskCount> -->
-				<defaultPalette>
-					<colorOne>(230,185,45)</colorOne> <!-- republic yellow -->
-					<colorTwo>(160,110,35)</colorTwo> <!-- supercommando auburn -->
-					<colorThree>(90,120,85)</colorThree> <!-- protector green -->
+				<defaultPalette> <!-- TCW Death Watch -->
+					<colorOne>(70,100,165)</colorOne>
+					<colorTwo>(225,225,225)</colorTwo>
+					<colorThree>(100,100,100)</colorThree>
 				</defaultPalette>
 			</li>
 		</modExtensions>
@@ -306,12 +309,11 @@
 		<techLevel>Spacer</techLevel>
 		<description>.</description>
 		<graphicData>
-			<texPath>Apparel/Mandalorian/helmet</texPath>
+			<texPath>Apparel/Mandalorian/helmet/helmet_south</texPath><drawSize>1.25</drawSize>
 			<graphicClass>Graphic_Single</graphicClass>
-			<!-- <shaderType>CutoutMultiMask</shaderType> -->
-			<shaderType>CutoutComplex</shaderType>
-			<!-- <colorTwo>(160,110,35)</colorTwo> supercommando auburn -->
-			<colorTwo>(230,185,45)</colorTwo> <!--republic yellow--> 
+			<shaderType>CutoutMultiMask</shaderType>
+			<!-- <shaderType>CutoutComplex</shaderType> -->
+			<!-- <colorTwo>(230,185,45)</colorTwo> republic yellow  -->
 		</graphicData>
 		<statBases>
 			<Mass>6</Mass>
@@ -320,7 +322,7 @@
       		<ArmorRating_Sharp>0.95</ArmorRating_Sharp>
 			<ArmorRating_Blunt>0.8</ArmorRating_Blunt>
 			<ArmorRating_Heat>1.05</ArmorRating_Heat>
-			<EquipDelay>8</EquipDelay>
+			<EquipDelay>3</EquipDelay>
 			
 			<WorkToMake>50000</WorkToMake>
 		</statBases>
@@ -360,7 +362,7 @@
 				<li>MNC_helmet_hood</li>
 				<!--li>EVA</li-->
 			</tags>
-			<wornGraphicPath>Apparel/Mandalorian/helmet</wornGraphicPath>
+			<wornGraphicPath>Apparel/Mandalorian/helmet/helmet</wornGraphicPath>
 			<useWornGraphicMask>true</useWornGraphicMask>
 			<layers>
 				<li>Overhead</li>
@@ -380,6 +382,10 @@
 		</tradeTags>
 		<colorGenerator Class="ColorGenerator_Options" Inherit="False">
 			<options>
+				<li>
+					<weight>10</weight>
+					<only>(70,100,165)</only> <!-- TCW death watch blue -->
+				</li>
 				<li>
 					<weight>10</weight>
 					<only>(180,185,185)</only> <!-- beskar -->
@@ -418,10 +424,10 @@
 		<modExtensions>
 			<li MayRequire="telefonmast.itempainter" Class="RWPaintingTool.PaintableExtension">
 				<!-- <maskCount>1</maskCount> -->
-				<defaultPalette>
-					<colorOne>(230,185,45)</colorOne> <!-- republic yellow -->
-					<colorTwo>(160,110,35)</colorTwo> <!-- supercommando auburn -->
-					<colorThree>(90,120,85)</colorThree> <!-- protector green -->
+				<defaultPalette> <!-- TCW Death Watch -->
+					<colorOne>(70,100,165)</colorOne>
+					<colorTwo>(225,225,225)</colorTwo>
+					<colorThree>(100,100,100)</colorThree>
 				</defaultPalette>
 			</li>
 		</modExtensions>
@@ -449,10 +455,11 @@
 		<techLevel>Spacer</techLevel>
 		<description>.</description>
 		<graphicData>
-			<texPath>Apparel/Mandalorian/Apparel</texPath>
+			<texPath>Apparel/Mandalorian/Apparel_Male_south</texPath><drawSize>1.25</drawSize>
 			<graphicClass>Graphic_Single</graphicClass>
-			<shaderType>CutoutComplex</shaderType>
-			<colorTwo>(160,110,35)</colorTwo> <!-- supercommando auburn -->
+			<shaderType>CutoutMultiMask</shaderType>
+			<!-- <shaderType>CutoutComplex</shaderType> -->
+			<!-- <colorTwo>(160,110,35)</colorTwo> supercommando auburn -->
 		</graphicData>
 		<statBases>
 			<Mass>14</Mass>
@@ -520,6 +527,10 @@
 			<options>
 				<li>
 					<weight>10</weight>
+					<only>(70,100,165)</only> <!-- TCW death watch blue -->
+				</li>
+				<li>
+					<weight>10</weight>
 					<only>(180,185,185)</only> <!-- beskar -->
 				</li>
 				<li>
@@ -556,10 +567,10 @@
 		<modExtensions>
 			<li MayRequire="telefonmast.itempainter" Class="RWPaintingTool.PaintableExtension">
 				<!-- <maskCount>1</maskCount> -->
-				<defaultPalette>
-					<colorOne>(90,120,85)</colorOne> <!-- protector green -->
-					<colorTwo>(160,110,35)</colorTwo> <!-- supercommando auburn -->
-					<colorThree>(200,200,200)</colorThree> <!-- light grey -->
+				<defaultPalette> <!-- TCW Death Watch -->
+					<colorOne>(100,100,100)</colorOne>
+					<colorTwo>(70,100,165)</colorTwo>
+					<colorThree>(50,45,75)</colorThree>
 				</defaultPalette>
 			</li>
 		</modExtensions>
@@ -575,10 +586,11 @@
 		<label>jetpack, Z-6</label>
 		<description>This jetpack comes equipped with a missile launcher that can be loaded with a variety of different missiles.</description>
 		<graphicData>
-		  <texPath>Apparel/Mandalorian/Z6jetpack</texPath>
+		  <texPath>Apparel/Mandalorian/Z6jetpack/Z6jetpack_north</texPath><drawSize>1.25</drawSize>
 		  <graphicClass>Graphic_Single</graphicClass>
-		  <shaderType>CutoutComplex</shaderType>
-		  <colorTwo>(230,185,45)</colorTwo> <!--republic yellow--> 
+		  <shaderType>CutoutMultiMask</shaderType>
+		  <!-- <shaderType>CutoutComplex</shaderType> -->
+		  <!-- <colorTwo>(230,185,45)</colorTwo> republic yellow -->
 		</graphicData>
 		<soundInteract>kotorsound_select_other</soundInteract>
 		<statBases>
@@ -620,7 +632,7 @@
 		  <tags>
 			<li>MNC_jetpack_mid</li>
 		  </tags>
-		  <wornGraphicPath>Apparel/Mandalorian/Z6jetpack</wornGraphicPath>
+		  <wornGraphicPath>Apparel/Mandalorian/Z6jetpack/Z6jetpack</wornGraphicPath>
 		  <useWornGraphicMask>true</useWornGraphicMask>
 		  
 		  <wornGraphicData Inherit="False">

@@ -92,6 +92,8 @@
 		<maxGenerationAge>45</maxGenerationAge>
 		<itemQuality>Normal</itemQuality>
 		
+		<maxPerGroup>6</maxPerGroup>
+		
 		<xenotypeSet Inherit="False">
 		  <xenotypeChances>
 			<Baseliner MayRequire="Ludeon.RimWorld.Biotech">999</Baseliner>
@@ -231,7 +233,7 @@
 		<skills>
 			<li>
 				<skill>Shooting</skill>
-				<range>6~13</range>
+				<range>8~13</range>
 			</li>
 			<li>
 				<skill>Melee</skill>
@@ -253,6 +255,21 @@
 		</disallowedTraits>
 		<initialWillRange>0.5~2</initialWillRange>
 		<initialResistanceRange>5~10</initialResistanceRange>
+		<modExtensions Inherit="False">
+			<li Class="BodyTypeForPawnKind.ModExtension_BodyTypesOfPawnKind">
+				<whitelist>
+					<li>Hulk</li>
+				</whitelist>
+				<blacklist>
+				</blacklist>
+				<priority>
+					<!--When violates the black/whitelist, selected from these-->
+					<li>Hulk</li>
+				</priority>
+				<!--Align body gender to pawn's gender (default: True)-->
+				<checkGender>False</checkGender>
+			</li>
+		</modExtensions>
 	</PawnKindDef>
 	
 	
@@ -587,7 +604,7 @@
 		<weaponMoney>1800~7000</weaponMoney>
 		<weaponTags>
 			<li>SWRanged_TL50blaster</li>
-			<li>SWRanged_T21repeater</li>
+			<li>SWRanged_T21Bheavy</li>
 		</weaponTags>
 
 		<techHediffsChance>5</techHediffsChance>
@@ -697,10 +714,11 @@
 		</specificApparelRequirements>
 
 		<biocodeWeaponChance>0.95</biocodeWeaponChance>
-		<weaponMoney>500~2000</weaponMoney>
+		<weaponMoney>500~4200</weaponMoney>
 		<weaponTags>
 			<li>SWRanged_E11carbine</li>
 			<li>SWRanged_E22rifle</li>
+			<li>SWRanged_T21Bheavy</li>
 		</weaponTags>
 
 		<techHediffsChance>2</techHediffsChance>
@@ -803,6 +821,7 @@
 		<weaponTags>
 			<li>SWRanged_E11carbine</li>
 			<li>SWRanged_E22rifle</li>
+			<li>SWRanged_T21repeater</li>
 			<li>SWRanged_TL50blaster</li>
 		</weaponTags>
 

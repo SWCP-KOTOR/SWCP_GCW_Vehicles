@@ -37,7 +37,7 @@
 				<label>spread shot</label>
 				<!--description>Fire a cluster of bolts.</description>
 				<iconPath>UI/Spread_Shot</iconPath-->
-				<commandIcon>UI/Spread_Shot</commandIcon>
+				<commandIcon>UI/Spread_Shot_red</commandIcon>
 				<verbClass>Verb_Shoot</verbClass>
 				<hasStandardCommand>true</hasStandardCommand>
 				<defaultProjectile>SWProj_ScatterBlasterBolt</defaultProjectile>
@@ -57,15 +57,15 @@
 				<ai_IsWeapon>true</ai_IsWeapon>
 			</li>
 			<li>
-				<label>heavy spread shot</label>
+				<label>power spread shot</label>
 				<!--description>Fire a cluster of bolts.</description>
 				<iconPath>UI/Spread_Shot</iconPath-->
-				<commandIcon>UI/Spread_Shot</commandIcon>
+				<commandIcon>UI/Burst_Power_Blast</commandIcon>
 				<verbClass>Verb_Shoot</verbClass>
 				<hasStandardCommand>true</hasStandardCommand>
 				<defaultProjectile>KotORBlasterBolt_default</defaultProjectile>
 				<warmupTime>4</warmupTime>
-				<defaultCooldownTime>4.5</defaultCooldownTime>
+				<defaultCooldownTime>5</defaultCooldownTime>
 				<range>28</range>
 				<accuracyTouch>0.45</accuracyTouch>
 				<accuracyShort>0.55</accuracyShort>

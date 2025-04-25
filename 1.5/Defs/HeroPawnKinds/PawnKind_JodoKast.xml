@@ -32,7 +32,7 @@
 		<specificApparelRequirements>
 			<li>
 				<apparelLayer>OnSkin</apparelLayer>
-				<color>(200,200,200)</color>
+				<color>(95,110,120)</color> <!-- jodo kast jumpsuit -->
 			</li>
 			<li>
 				<bodyPartGroup>Torso</bodyPartGroup>

@@ -2,7 +2,7 @@
 <Defs>
 
   
-  <ThingDef ParentName="guy762_clothingbase">
+  <ThingDef ParentName="guy762_FullBodyClothingBase">
 		<defName>guy762_Bodysuit_utility</defName>
 		<label>bodysuit, engineer's</label>
 		<description>These are simple garments that protect little more than the modesty of the wearer.</description>
@@ -65,7 +65,7 @@
 	  
 	  
 	  
-	  <ThingDef ParentName="guy762_clothingbase">
+	  <ThingDef ParentName="guy762_FullBodyClothingBase">
 		<defName>guy762_Bodysuit_TIEpilot</defName>
 		<label>bodysuit, pilot's</label>
 		<description>These are simple garments that protect little more than the modesty of the wearer.</description>
@@ -124,7 +124,7 @@
 	  
 	  
 	  
-	  <ThingDef ParentName="guy762_clothingbase">
+	  <ThingDef ParentName="guy762_FullBodyClothingBase">
 		<defName>guy762_Bodysuit_TIEace</defName>
 		<label>bodysuit, ace pilot's</label>
 		<description>These are simple garments that protect little more than the modesty of the wearer.</description>
@@ -218,7 +218,7 @@
 	  
 	  
 	  
-	  <ThingDef ParentName="guy762_clothingbase">
+	  <ThingDef ParentName="guy762_FullBodyClothingBase">
 		<defName>guy762_Bodysuit_RaptorPilot</defName>
 		<label>bodysuit, Raptor pilot's</label>
 		<description>These are simple garments that protect little more than the modesty of the wearer.</description>
@@ -298,6 +298,129 @@
 	  
 	  
 	  
+	<ThingDef ParentName="guy762_HatCraftableBase">
+		<defName>guy762_UniformCap_rebel</defName>
+		<label>uniform cap</label>
+		<description>A formal cap for military personnel.</description>
+		<graphicData>
+		  <texPath>Apparel/GenericMilitaryFatigues/hat</texPath>
+		  <graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<statBases>
+		  <MarketValue>10</MarketValue>
+		  <MaxHitPoints>80</MaxHitPoints>
+		  <Mass>0.05</Mass>
+		  <ArmorRating_Sharp>0.01</ArmorRating_Sharp>
+		  <ArmorRating_Blunt>0.01</ArmorRating_Blunt>
+		  <ArmorRating_Heat>0.01</ArmorRating_Heat>
+		  <EquipDelay>0.1</EquipDelay>
+		  
+		  
+		  <WorkToMake>1000</WorkToMake>
+		</statBases>
+		<!-- <equippedStatOffsets> -->
+		  <!-- <SocialImpact>0.1</SocialImpact> -->
+		<!-- </equippedStatOffsets> -->
+		
+		<recipeMaker>
+			<skillRequirements>
+				<Crafting>4</Crafting>
+			</skillRequirements>
+		</recipeMaker>
+		<costList>
+			<Synthread>20</Synthread>
+		</costList>
+		
+		<apparel>
+		  <wornGraphicPath>Apparel/GenericMilitaryFatigues/hat</wornGraphicPath>
+		  <bodyPartGroups>
+			<li>UpperHead</li>
+		  </bodyPartGroups>
+		  <layers>
+			<li>Overhead</li>
+		  </layers>
+		  <tags>
+			<li>NewRepublic_engineer</li>
+		  </tags>
+		  <countsAsClothingForNudity>false</countsAsClothingForNudity>
+		  <canBeGeneratedToSatisfyWarmth>false</canBeGeneratedToSatisfyWarmth>
+		  <canBeGeneratedToSatisfyToxicEnvironmentResistance>false</canBeGeneratedToSatisfyToxicEnvironmentResistance>
+		</apparel>
+		<tradeTags>
+			<li>guy762TT_SEArmor</li>
+		</tradeTags>
+		<colorGenerator Class="ColorGenerator_Options" Inherit="False">
+			<options>
+				<li>
+					<weight>15</weight>
+					<only>(175,150,120)</only>       <!-- bespin beige -->
+				</li>
+			</options>
+		</colorGenerator>
+	</ThingDef> 
+	  
+	  
+	  
+	<ThingDef ParentName="guy762_clothingbase">
+		<defName>guy762_GenericUniform_fatigues</defName>
+		<label>uniform, fatigues</label>
+		<description>These are simple garments that protect little more than the modesty of the wearer.</description>
+		<graphicData>
+		  <texPath>Apparel/GenericMilitaryFatigues/Apparel</texPath>
+		  <graphicClass>Graphic_Single</graphicClass>
+		  <shaderType>CutoutComplex</shaderType>
+		</graphicData>
+		<statBases>
+			<Mass>3</Mass>
+			<MarketValue>100</MarketValue>
+			<MaxHitPoints>100</MaxHitPoints>
+			<ArmorRating_Sharp>0.01</ArmorRating_Sharp>
+			<ArmorRating_Blunt>0.01</ArmorRating_Blunt>
+			<ArmorRating_Heat>0.01</ArmorRating_Heat>
+			<Insulation_Cold>15</Insulation_Cold>
+			<Insulation_Heat>5</Insulation_Heat>
+			<EquipDelay>3</EquipDelay>
+			
+			<WorkToMake>4000</WorkToMake>
+		</statBases>
+		
+		<recipeMaker>
+			<researchPrerequisite>guy762_ResearchKotOR_sith</researchPrerequisite>
+			<skillRequirements>
+				<Crafting>6</Crafting>
+			</skillRequirements>
+		</recipeMaker>
+		<costList>
+		  <Synthread>75</Synthread>
+		</costList>
+		
+		<apparel>
+		  <tags Inherit="False">
+			<li>RemnantEmpire_armytrooper</li>
+		  </tags>
+		  <wornGraphicPath>Apparel/GenericMilitaryFatigues/Apparel</wornGraphicPath>
+		  <useWornGraphicMask>true</useWornGraphicMask>
+		  <defaultOutfitTags Inherit="False">
+			<li>Worker</li>
+		  </defaultOutfitTags>
+		</apparel>
+		<tradeTags>
+			<li>guy762TT_SEArmor</li>
+		</tradeTags>
+		<colorGenerator Class="ColorGenerator_Options" Inherit="False">
+			<options>
+				<li>
+					<weight>15</weight>
+					<only>(175,150,120)</only>       <!-- bespin beige -->
+				</li>
+				<li>
+					<weight>15</weight>
+					<only>(65,65,60)</only> <!-- imperial army grey -->
+				</li>
+			</options>
+		</colorGenerator>
+	  </ThingDef>
+	  
 	  
 	  
 	  
@@ -308,7 +431,7 @@
   
   <ThingDef ParentName="guy762_clothingbase">
 		<defName>guy762_ImpUniform_default</defName>
-		<label>uniform, trooper's</label>
+		<label>uniform, basic</label>
 		<description>These are simple garments that protect little more than the modesty of the wearer.</description>
 		<graphicData>
 		  <texPath>Apparel/Officer/default/Apparel</texPath>
@@ -341,7 +464,7 @@
 		
 		<apparel>
 		  <tags Inherit="False">
-			<li>RemnantEmpire_armytrooper</li>
+			<li>RemnantEmpire_blankuniform</li>
 		  </tags>
 		  <wornGraphicPath>Apparel/Officer/default/Apparel</wornGraphicPath>
 		  <useWornGraphicMask>true</useWornGraphicMask>
@@ -356,7 +479,7 @@
 			<options>
 				<li>
 					<weight>15</weight>
-					<only>(65,65,60)</only> <!-- imperial army grey -->
+					<only>(50,50,50)</only> <!-- black -->
 				</li>
 			</options>
 		</colorGenerator>
@@ -1058,6 +1181,9 @@
 		  <li>
 			<styleDef>guy762_RankStyleNR_navylt</styleDef>
 		  </li>
+		  <li>
+			<styleDef>guy762_RankStyleNR_navycap</styleDef>
+		  </li>
 		</randomStyle>
 		
 		<tradeTags>
@@ -1079,6 +1205,17 @@
 		<wornGraphicPath>Apparel/RebelOfficer/navylieutenant/Apparel</wornGraphicPath>
 		<graphicData>
 		  <texPath>Apparel/RebelOfficer/navylieutenant/Apparel</texPath>
+		  <graphicClass>Graphic_Single</graphicClass>
+		  <shaderType>CutoutComplex</shaderType>
+		</graphicData>
+	  </ThingStyleDef>
+	  
+	  <ThingStyleDef>
+		<defName>guy762_RankStyleNR_navycap</defName>
+		<overrideLabel>New Republic uniform, navy captain's</overrideLabel>
+		<wornGraphicPath>Apparel/RebelOfficer/navycaptain/Apparel</wornGraphicPath>
+		<graphicData>
+		  <texPath>Apparel/RebelOfficer/navycaptain/Apparel</texPath>
 		  <graphicClass>Graphic_Single</graphicClass>
 		  <shaderType>CutoutComplex</shaderType>
 		</graphicData>

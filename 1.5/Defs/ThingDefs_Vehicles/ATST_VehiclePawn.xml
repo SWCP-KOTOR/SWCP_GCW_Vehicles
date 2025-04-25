@@ -174,7 +174,7 @@
 					<ArmorRating_Sharp>1.35</ArmorRating_Sharp>
 					<ArmorRating_Blunt>1.2</ArmorRating_Blunt> <!-- # of estimated XWMG hull points * 0.1, apply to hard armor curve -->
 					<ArmorRating_Heat>1.45</ArmorRating_Heat>
-					<IncomingDamageFactor>-0.15</IncomingDamageFactor> <!-- # of estimated XWMG hull points * -0.05 -->
+					<IncomingDamageFactor>-0.15</IncomingDamageFactor> <!-- unarmored: 0.05 | light vehicles: 0.15 | medium vehicles: 0.25 | heavy vehicles: 0.35 -->
 				</armor>
 				<health>300</health> <!-- # of estimated XWMG hull points * 100 -->
 				
@@ -295,7 +295,7 @@
 						</renderProperties>
 						<defaultAngleRotated>0</defaultAngleRotated>
 						<angleRestricted>(315,45)</angleRestricted>
-						<gizmoLabel>AI turret</gizmoLabel>
+						<gizmoLabel>heavy AI gun</gizmoLabel>
 						
 						<aimPieOffset>(0, 2.55)</aimPieOffset>
 						
@@ -312,7 +312,7 @@
 						</renderProperties>
 						<defaultAngleRotated>0</defaultAngleRotated>
 						<angleRestricted>(315,45)</angleRestricted>
-						<gizmoLabel>AI repeater</gizmoLabel>
+						<gizmoLabel>light AI repeater</gizmoLabel>
 						
 						<aimPieOffset>(0, 2.55)</aimPieOffset>
 						
@@ -344,15 +344,15 @@
 	
 	<Vehicles.VehicleTurretDef ParentName="VehicleTurretBase">
 		<defName>guy762_VehicleTurret_ATST_main</defName>
-		<label>AT-ST main gun</label>
+		<label>AT-ST anti-infantry gun</label>
 		<description>The main gun of an AT-ST walker.</description>
 		
 		<turretType>Rotatable</turretType>
 		<shotSound>kotorsound_speedergun</shotSound>
 		
-		<projectile>SWVehicleBullet_AIdoublegreen</projectile>
+		<projectile>SWVehicleBullet_AIdoublegreen_heavy</projectile>
 		<reloadTimer>3.5</reloadTimer>
-		<warmUpTimer>0.2</warmUpTimer>
+		<warmUpTimer>0.4</warmUpTimer>
 		
 		<magazineCapacity>999</magazineCapacity>
 		
@@ -370,7 +370,7 @@
 			<li>
 				<shotsPerBurst>2</shotsPerBurst>
 				<ticksBetweenShots>9</ticksBetweenShots>
-				<ticksBetweenBursts>150</ticksBetweenBursts>
+				<ticksBetweenBursts>200</ticksBetweenBursts>
 				<label>Burst</label>
 				<texPath>UI/Rapid_Shot</texPath>
 			</li>

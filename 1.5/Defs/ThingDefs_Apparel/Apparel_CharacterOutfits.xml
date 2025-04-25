@@ -226,10 +226,11 @@
 		<techLevel>Spacer</techLevel>
 		<description>.</description>
 		<graphicData>
-			<texPath>Apparel/Mandalorian/jodokast/Apparel</texPath>
+			<texPath>Apparel/Mandalorian/jodokast/Apparel_Male_south</texPath><drawSize>1.25</drawSize>
 			<graphicClass>Graphic_Single</graphicClass>
-			<shaderType>CutoutComplex</shaderType>
-			<colorTwo>(230,185,45)</colorTwo> <!--republic yellow--> 
+			<!-- <shaderType>CutoutComplex</shaderType> -->
+			<shaderType>CutoutMultiMask</shaderType>
+			<!-- <colorTwo>(230,185,45)</colorTwo> republic yellow--> 
 		</graphicData>
 		<statBases>
 			<Mass>14</Mass>
@@ -301,20 +302,9 @@
 			</options>
 		</colorGenerator>
 		
-		<!-- <comps> -->
-		  <!-- <li Class="ModularWeapons.CompProperties_ModularParts"> -->
-			<!-- <compClass>ModularWeapons.CompModularParts</compClass> -->
-			<!-- <partKinds> -->
-			  <!-- <li>guy762_slot_underlay_hvy</li> -->
-			  <!-- <li>guy762_slot_overlay_hvy</li> -->
-			<!-- </partKinds> -->
-			<!-- <randomizeParts>true</randomizeParts> -->
-		  <!-- </li> -->
-		<!-- </comps> -->
-		
 		<modExtensions>
 			<li MayRequire="telefonmast.itempainter" Class="RWPaintingTool.PaintableExtension">
-				<!-- <maskCount>1</maskCount> -->
+				<maskCount>1</maskCount>
 				<defaultPalette>
 					<colorOne>(90,120,85)</colorOne> <!-- protector green -->
 					<colorTwo>(230,185,45)</colorTwo> <!--republic yellow--> 
@@ -331,12 +321,11 @@
 		<techLevel>Spacer</techLevel>
 		<description>.</description>
 		<graphicData>
-			<texPath>Apparel/Mandalorian/jodokast/helmet</texPath>
+			<texPath>Apparel/Mandalorian/jodokast/helmet/helmet_south</texPath><drawSize>1.25</drawSize>
 			<graphicClass>Graphic_Single</graphicClass>
-			<!-- <shaderType>CutoutMultiMask</shaderType> -->
-			<shaderType>CutoutComplex</shaderType>
-			<!-- <colorTwo>(160,110,35)</colorTwo> supercommando auburn -->
-			<colorTwo>(230,185,45)</colorTwo> <!--republic yellow--> 
+			<shaderType>CutoutMultiMask</shaderType>
+			<!-- <shaderType>CutoutComplex</shaderType> -->
+			<!-- <colorTwo>(230,185,45)</colorTwo> republic yellow--> 
 		</graphicData>
 		<statBases>
 			<Mass>6</Mass>
@@ -345,7 +334,7 @@
       		<ArmorRating_Sharp>0.95</ArmorRating_Sharp>
 			<ArmorRating_Blunt>0.8</ArmorRating_Blunt>
 			<ArmorRating_Heat>1.05</ArmorRating_Heat>
-			<EquipDelay>8</EquipDelay>
+			<EquipDelay>3</EquipDelay>
 			
 			<WorkToMake>50000</WorkToMake>
 		</statBases>
@@ -382,7 +371,7 @@
 			<tags>
 				<li>SaV_JodoKast</li>
 			</tags>
-			<wornGraphicPath>Apparel/Mandalorian/jodokast/helmet</wornGraphicPath>
+			<wornGraphicPath>Apparel/Mandalorian/jodokast/helmet/helmet</wornGraphicPath>
 			<useWornGraphicMask>true</useWornGraphicMask>
 			<layers>
 				<li>Overhead</li>
@@ -419,7 +408,7 @@
 		
 		<modExtensions>
 			<li MayRequire="telefonmast.itempainter" Class="RWPaintingTool.PaintableExtension">
-				<!-- <maskCount>1</maskCount> -->
+				<maskCount>1</maskCount>
 				<defaultPalette>
 					<colorOne>(90,120,85)</colorOne> <!-- protector green -->
 					<colorTwo>(230,185,45)</colorTwo> <!--republic yellow--> 

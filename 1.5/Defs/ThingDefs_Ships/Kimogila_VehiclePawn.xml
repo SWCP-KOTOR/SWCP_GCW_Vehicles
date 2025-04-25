@@ -141,27 +141,27 @@
 					<flightMode>
 						<label>Flight mode</label>
 						<description>Toggle flight mode.</description>
-						<texPath>UI/Abilities/Waterskip</texPath>
+						<texPath>Gizmo/TakeOff_Icon</texPath>
 					</flightMode>
 					<hoverMode>
 						<label>Hover mode</label>
 						<description>Toggle hover mode.</description>
-						<texPath>UI/Abilities/Waterskip</texPath>
+						<texPath>Gizmo/Liftoff_Icon</texPath>
 					</hoverMode>
 					<faceTarget>
 						<label>Face target (hover)</label>
 						<description>Face target while hovering.</description>
-						<texPath>UI/Abilities/Waterskip</texPath>
+						<texPath>Gizmo/FaceTarget_Icon</texPath>
 					</faceTarget>
 					<cancelFaceTarget>
 						<label>Cancel face target</label>
 						<description>Cancel face target.</description>
-						<texPath>UI/Abilities/Waterskip</texPath>
+						<texPath>Gizmo/FaceTargetStop_Icon</texPath>
 					</cancelFaceTarget>
 					<chaseTarget>
 						<label>Chase target (flight)</label>
 						<description>Chase target while flying.</description>
-						<texPath>UI/Abilities/Waterskip</texPath>
+						<texPath>Gizmo/ChaseTarger_Icon</texPath>
 					</chaseTarget>
 				</flightCommands>
 				
@@ -177,7 +177,7 @@
 				
 				<takeoffTicks>120</takeoffTicks>
 				<landingTicks>120</landingTicks>
-				<moveWhileTakingOff>true</moveWhileTakingOff>
+				<moveWhileTakingOff>false</moveWhileTakingOff>
 				
 				
 				
@@ -307,7 +307,7 @@
 						</renderProperties>
 						<defaultAngleRotated>0</defaultAngleRotated>
 						<angleRestricted>(315,45)</angleRestricted>
-						<gizmoLabel>proton torpedo launcher</gizmoLabel>
+						<gizmoLabel>torpedo launcher</gizmoLabel>
 						
 						<aimPieOffset>(0, 2.55)</aimPieOffset>
 						
@@ -321,7 +321,7 @@
 						</renderProperties>
 						<defaultAngleRotated>0</defaultAngleRotated>
 						<angleRestricted>(315,45)</angleRestricted>
-						<gizmoLabel>proton torpedo launcher</gizmoLabel>
+						<gizmoLabel>torpedo launcher</gizmoLabel>
 						
 						<aimPieOffset>(0, 2.55)</aimPieOffset>
 						
@@ -331,28 +331,28 @@
 					<!--/////////////////////////-->
 					
 					<li>
-						<turretDef>guy762_VehicleTurret_IonMissile</turretDef>
+						<turretDef>guy762_VehicleTurret_ConcMissile</turretDef>
 						
 						<renderProperties>
 							<north>(-5, -0.5)</north>
 						</renderProperties>
 						<defaultAngleRotated>0</defaultAngleRotated>
 						<angleRestricted>(315,45)</angleRestricted>
-						<gizmoLabel>ion missile launcher</gizmoLabel>
+						<gizmoLabel>missile launcher</gizmoLabel>
 						
 						<aimPieOffset>(0, 2.55)</aimPieOffset>
 						
 						<key>KimogilaKey_gun_6</key>
 					</li>
 					<li>
-						<turretDef>guy762_VehicleTurret_IonMissile</turretDef>
+						<turretDef>guy762_VehicleTurret_ConcMissile</turretDef>
 						
 						<renderProperties>
 							<north>(5, -0.5)</north>
 						</renderProperties>
 						<defaultAngleRotated>0</defaultAngleRotated>
 						<angleRestricted>(315,45)</angleRestricted>
-						<gizmoLabel>ion missile launcher</gizmoLabel>
+						<gizmoLabel>missile launcher</gizmoLabel>
 						
 						<aimPieOffset>(0, 2.55)</aimPieOffset>
 						
@@ -615,6 +615,62 @@
 	</Vehicles.VehicleTurretDef>
 	
 	
+	
+	
+	
+	
+	
+	
+	
+	<Vehicles.VehicleTurretDef ParentName="VehicleTurretBase">
+		<defName>guy762_VehicleTurret_ConcMissile</defName>
+		<label>concussion missile launcher</label>
+		<description>A concussion missile launcher.</description>
+		
+		<turretType>Rotatable</turretType>
+		<shotSound>kotorsound_SFmissile</shotSound>
+		<reloadSound>kotorsound_reloadlauncher</reloadSound>
+		
+		<projectile>SWVehicleBullet_SFconcMissile</projectile>
+		<reloadTimer>3.5</reloadTimer>
+		<warmUpTimer>0.2</warmUpTimer>
+		
+		<magazineCapacity>3</magazineCapacity>
+		<genericAmmo>true</genericAmmo>
+		
+		<hitFlags>IntendedTarget</hitFlags>
+		
+		<autoSnapTargeting>false</autoSnapTargeting>
+		<rotationSpeed>5</rotationSpeed>
+		
+		<projectileOffset>2.1</projectileOffset>
+		
+		<minRange>30</minRange>
+		<maxRange>90</maxRange>
+
+		<fireModes>
+			<li>
+				<shotsPerBurst>3</shotsPerBurst>
+				<ticksBetweenShots>20</ticksBetweenShots>
+				<ticksBetweenBursts>100</ticksBetweenBursts>
+				<label>Single</label>
+				<texPath>Items/Rockets/rocket_conc/rocket_conc_a</texPath>
+			</li>
+		</fireModes>
+
+		<graphicData>
+			<texPath>NullTex</texPath>
+			<graphicClass>Vehicles.Graphic_Turret</graphicClass>
+		</graphicData>
+		
+		<gizmoIconTexPath>Items/bigcannon_blank</gizmoIconTexPath>
+		
+		<ammunition>
+			<thingDefs>
+				<li>guy762_RocketItem_conc</li>
+			</thingDefs>
+		</ammunition>
+	</Vehicles.VehicleTurretDef>
 	
 	
 	

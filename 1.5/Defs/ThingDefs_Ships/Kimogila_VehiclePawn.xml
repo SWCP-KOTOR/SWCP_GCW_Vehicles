@@ -653,8 +653,8 @@
 				<shotsPerBurst>3</shotsPerBurst>
 				<ticksBetweenShots>20</ticksBetweenShots>
 				<ticksBetweenBursts>100</ticksBetweenBursts>
-				<label>Single</label>
-				<texPath>Items/Rockets/rocket_conc/rocket_conc_a</texPath>
+				<label>Burst</label>
+				<texPath>Items/Rockets/rocket_conc/rocket_conc_c</texPath>
 			</li>
 		</fireModes>
 

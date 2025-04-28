@@ -5,14 +5,20 @@
 	<Vehicles.PatternDef>
 		<defName>guy762_SWVehiclePattern_TIEIntA</defName>
 		<label>TIE Interceptor (stock)</label>
-		<path>Starfighters/TIEInterceptor/TIEInt_pattern_north</path>
+		<path>Starfighters/TIEInterceptor/TIEInt_pattern_stock</path>
 	</Vehicles.PatternDef>
 	
-	<Vehicles.SkinDef>
-		<defName>guy762_SWVehicleSkin_TIEInt181st</defName>
+	<Vehicles.PatternDef>
+		<defName>guy762_SWVehiclePattern_TIEIntB</defName>
 		<label>TIE Interceptor (181st)</label>
-		<path>Starfighters/TIEInterceptor/TIEInt_181st_north</path>
-	</Vehicles.SkinDef>
+		<path>Starfighters/TIEInterceptor/TIEInt_pattern_181st</path>
+	</Vehicles.PatternDef>
+	
+	<!-- <Vehicles.SkinDef> -->
+		<!-- <defName>guy762_SWVehicleSkin_TIEInt181st</defName> -->
+		<!-- <label>TIE Interceptor (181st)</label> -->
+		<!-- <path>Starfighters/TIEInterceptor/TIEInt_181st_north</path> -->
+	<!-- </Vehicles.SkinDef> -->
 	
 	
 	<Vehicles.VehicleDef Name="guy762_SWVehicle_TIEInterceptor" ParentName="MM-VF-Vehicle_Pawn">
@@ -25,8 +31,9 @@
 			<drawSize>(9,9)</drawSize>
 			<shaderType>CutoutComplexPattern</shaderType>
 			<pattern>guy762_SWVehiclePattern_TIEIntA</pattern>
-			<color>(180,180,215)</color>
-			<colorTwo>(180,180,215)</colorTwo>
+			<color>(165,165,190)</color>
+			<colorTwo>(0,0,0)</colorTwo>
+			<colorThree>(170,60,60)</colorThree>
 		</graphicData>
 		<uiIconScale>1</uiIconScale>
 		<seeThroughFog>true</seeThroughFog>
@@ -167,8 +174,9 @@
 					<drawSize>(9,9)</drawSize>
 					<shaderType>CutoutComplexPattern</shaderType>
 					<pattern>guy762_SWVehiclePattern_TIEIntA</pattern>
-					<color>(180,180,215)</color>
-					<colorTwo>(180,180,215)</colorTwo>
+					<color>(165,165,190)</color>
+					<colorTwo>(0,0,0)</colorTwo>
+					<colorThree>(170,60,60)</colorThree>
 				</flightGraphicData>
 				
 				<AISettings>

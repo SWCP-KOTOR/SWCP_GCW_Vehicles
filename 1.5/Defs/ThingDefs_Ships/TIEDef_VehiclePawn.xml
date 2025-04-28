@@ -103,7 +103,7 @@
 			<li Class="Vehicles.CompProperties_FueledTravel">
 				<electricPowered>true</electricPowered>
 				<fuelConsumptionRate>2</fuelConsumptionRate>
-				<fuelCapacity>100</fuelCapacity>
+				<fuelCapacity>250</fuelCapacity>
 				<fuelConsumptionWorldMultiplier>0.5</fuelConsumptionWorldMultiplier>
 			</li>
 			

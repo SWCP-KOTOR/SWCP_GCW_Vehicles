@@ -402,55 +402,7 @@
 	
 	
 	
-	<Vehicles.VehicleTurretDef ParentName="VehicleTurretBase">
-		<defName>guy762_VehicleTurret_ProtonBombs</defName>
-		<label>Proton Bomb Bay</label>
-		<description>Drops proton bombs.</description>
-		
-		<turretType>Rotatable</turretType>
-		<shotSound>kotorsound_bombdrop</shotSound>
-		
-		<projectile>SWVehicleBullet_protonbomb</projectile>
-		<reloadTimer>3.5</reloadTimer>
-		<warmUpTimer>0.2</warmUpTimer>
-		
-		<magazineCapacity>999</magazineCapacity>
-		
-		<hitFlags>IntendedTarget</hitFlags>
-		
-		<autoSnapTargeting>true</autoSnapTargeting>
-		<rotationSpeed>5</rotationSpeed>
-		
-		<projectileOffset>2.1</projectileOffset> <!-- keep this on starfighters-->
-		
-		<minRange>0</minRange>
-		<maxRange>60</maxRange>
-
-		<fireModes>
-			<li>
-				<shotsPerBurst>1</shotsPerBurst>
-				<ticksBetweenShots>30</ticksBetweenShots>
-				<ticksBetweenBursts>100</ticksBetweenBursts>
-				<label>Single</label>
-				<texPath>Items/Rockets/rocket_ex/rocket_ex_a</texPath>
-			</li>
-			<li>
-				<shotsPerBurst>3</shotsPerBurst>
-				<ticksBetweenShots>30</ticksBetweenShots>
-				<ticksBetweenBursts>300</ticksBetweenBursts>
-				<label>Burst</label>
-				<texPath>Items/Rockets/rocket_ex/rocket_ex_c</texPath>
-			</li>
-		</fireModes>
-
-		<graphicData>
-			<texPath>NullTex</texPath>
-			<graphicClass>Vehicles.Graphic_Turret</graphicClass>
-		</graphicData>
-		
-		<gizmoIconTexPath>Weapons/Projectiles/energybomb</gizmoIconTexPath>
-		
-	</Vehicles.VehicleTurretDef>
+	
 	
 	
 	

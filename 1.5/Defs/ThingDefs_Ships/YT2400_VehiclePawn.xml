@@ -34,6 +34,10 @@
 		<size>(29,19)</size>
 		<vehicleMovementPermissions>DriverNeeded</vehicleMovementPermissions>
 		
+		<killedLeavings>
+		  <guy762_ShipChunk_YT2400a>1</guy762_ShipChunk_YT2400a>
+		</killedLeavings>
+		
 		<canCaravan>false</canCaravan>
 		<vehicleCategory>Combat</vehicleCategory>
 		<techLevel>Spacer</techLevel>

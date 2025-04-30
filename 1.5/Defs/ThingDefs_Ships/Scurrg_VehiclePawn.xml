@@ -63,11 +63,11 @@
 			<MarketValue>150000</MarketValue>
 			<Flammability>0</Flammability>
 			
-			<EnergyShieldRechargeRate>0.5</EnergyShieldRechargeRate> <!-- SPECIAL NOTE: shield and hull values have been swapped for the BTL-B republic Y-wing since it really doesn't make sense that the up-armored model would have 1 less hull value than the model with 70% of the plating removed -->
+			<EnergyShieldRechargeRate>0.5</EnergyShieldRechargeRate>
 			<EnergyShieldEnergyMax>3</EnergyShieldEnergyMax>
 		</statBases>
 		<vehicleStats>
-			<Mass>1050</Mass>
+			<Mass>2500</Mass>
 			
 			<FlightSpeed>12</FlightSpeed> <!-- this is for world map flight, NOT in-tile flight-->
 			<CargoCapacity>110</CargoCapacity>

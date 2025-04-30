@@ -40,6 +40,10 @@
 		<size>(10,18)</size>
 		<vehicleMovementPermissions>DriverNeeded</vehicleMovementPermissions>
 		
+		<killedLeavings>
+		  <guy762_ShipChunk_YWing>1</guy762_ShipChunk_YWing>
+		</killedLeavings>
+		
 		<canCaravan>false</canCaravan>
 		<vehicleCategory>Combat</vehicleCategory>
 		<techLevel>Spacer</techLevel>

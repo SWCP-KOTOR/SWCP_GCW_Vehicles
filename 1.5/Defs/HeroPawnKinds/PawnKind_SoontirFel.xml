@@ -4,7 +4,7 @@
 	<PawnKindDef Name="SWWEPlayableVillain_SoontirFel"  ParentName="guy762_HeroPawnKindBase">
 		<defName>SWWEPlayableVillain_SoontirFel</defName>
 		<nameMaker>guy762_HeroNamer_SoontirFel</nameMaker>
-		<label>Baron</label>
+		<label>Baron of the Empire</label>
 		<combatPower>500</combatPower>
 		<minGenerationAge>32</minGenerationAge>
 		<maxGenerationAge>33</maxGenerationAge>
@@ -45,7 +45,7 @@
 		</specificApparelRequirements>
 		<weaponMoney>99999999</weaponMoney>
 		<weaponTags>
-		  <li>SWRanged_SE14pistol</li>
+		  <li>SWRanged_DL44pistol</li>
 		</weaponTags>
 		<skills>
 			<li>

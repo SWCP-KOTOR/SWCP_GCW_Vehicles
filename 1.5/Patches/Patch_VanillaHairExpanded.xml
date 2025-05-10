@@ -80,6 +80,24 @@
 			  <forcedHair>VHE_Dean</forcedHair>
 			</value>
 		</li>
+		<li Class="PatchOperationReplace">
+		  <xpath>Defs/PawnKindDef[@Name="SWWEPlayableVillain_MiltinTakel"]/forcedHair</xpath>
+			<value>
+			  <forcedHair>VHE_Bill</forcedHair>
+			</value>
+		</li>
+		<li Class="PatchOperationReplace">
+		  <xpath>Defs/PawnKindDef[@Name="SWWEPlayableVillain_JosefGrunger"]/forcedHair</xpath>
+			<value>
+			  <forcedHair>VHE_Slick</forcedHair>
+			</value>
+		</li>
+		<li Class="PatchOperationReplace">
+		  <xpath>Defs/PawnKindDef[@Name="SWWEPlayableVillain_RufaanTigellinus"]/forcedHair</xpath>
+			<value>
+			  <forcedHair>VHE_Celebrity</forcedHair>
+			</value>
+		</li>
 	  </operations>
 	</match>
   

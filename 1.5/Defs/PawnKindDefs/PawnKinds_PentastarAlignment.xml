@@ -113,9 +113,9 @@
 		</specificApparelRequirements>
 
 		<biocodeWeaponChance>0</biocodeWeaponChance>
-		<weaponMoney>500</weaponMoney>
+		<weaponMoney>825</weaponMoney>
 		<weaponTags>
-			<li>SWRanged_E11carbine</li>
+			<li>SWRanged_Power5pistol</li>
 		</weaponTags>
 
 		<techHediffsChance>1</techHediffsChance>
@@ -323,7 +323,7 @@
 	<PawnKindDef Name="SWPentastar_ArmyLieutenant" ParentName="SWImpRemnant_ArmyLieutenant">
 		<defName>SWPentastar_ArmyLieutenant</defName>
 		<label>Pentastar army lieutenant</label>
-		<specificApparelRequirements>
+		<specificApparelRequirements Inherit="False">
 			<li>
 				<apparelLayer>Overhead</apparelLayer>
 				<color>(50,50,55)</color>       <!-- blue-tint black -->
@@ -344,6 +344,29 @@
 	
 	
 	
+	
+	
+	<PawnKindDef Name="SWPentastar_ArmyMajor" ParentName="SWImpRemnant_ArmyMajor">
+		<defName>SWPentastar_ArmyMajor</defName>
+		<label>Pentastar army major</label>
+		<specificApparelRequirements Inherit="False">
+			<li>
+				<apparelLayer>Overhead</apparelLayer>
+				<color>(50,50,55)</color>       <!-- blue-tint black -->
+			</li>
+			<li>
+				<apparelLayer>Middle</apparelLayer>
+				<apparelDef>guy762_ArmyOfficerArmor_midrank</apparelDef>
+				<styleDef>guy762_RankStyle_armymajor</styleDef>
+				<color>(50,50,55)</color>       <!-- blue-tint black -->
+				<quality>Good</quality>
+			</li>
+			<li>
+				<apparelLayer>OnSkin</apparelLayer>
+				<color>(90,90,95)</color>        <!-- blued grey -->
+			</li>
+		</specificApparelRequirements>
+	</PawnKindDef>
 	
 	
 	

@@ -2,10 +2,90 @@
 <Defs>
 
 	
+	
+	<ThingDef ParentName="KotORRangedModdable_TwoHand">
+		<defName>guy762_E10rifle</defName>
+		<label>E-10 blaster rifle</label>
+		<description>A precursor to the popular E-11, the E-10 was designed as a cheap, expendable infantry rifle similar to the Separatists' E-5. The E-10 offers improved damage and range over the E-5, and though its performance may pale in comparison to nearly any other blaster rifle, this inadequacy is considered a moot point when legions of Imperial Army conscripts can pelt a target with a torrent of blaster fire with these weapons and achieve largely the same results.</description>
+		<techLevel>Spacer</techLevel>
+		<thingClass>ThingWithComps</thingClass>
+		<graphicData>
+			<texPath>Weapons/E10</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<equippedAngleOffset>45</equippedAngleOffset>
+		<soundInteract>kotorsound_select_slug</soundInteract>
+		<statBases>
+			<MarketValue>300</MarketValue>
+			<Mass>3.5</Mass>
+			<AccuracyTouch>0.30</AccuracyTouch>
+			<AccuracyShort>0.40</AccuracyShort>
+			<AccuracyMedium>0.70</AccuracyMedium>
+			<AccuracyLong>0.60</AccuracyLong>
+			<RangedWeapon_Cooldown>0.75</RangedWeapon_Cooldown>
+			<RangedWeapon_DamageMultiplier>1</RangedWeapon_DamageMultiplier>
+		</statBases>
+		
+		<weaponTags>
+			<li>SWRanged_E10rifle</li>
+			<li>SWRanged_AnyCommonRifle</li>
+		</weaponTags>
+		<tradeTags>
+			<li>guy762TT_KotORRanged</li>
+		</tradeTags>
+		<verbs>
+			<li>
+				<verbClass>Verb_Shoot</verbClass>
+				<hasStandardCommand>true</hasStandardCommand>
+				<defaultProjectile>KotORBlasterBolt_default</defaultProjectile>
+				<warmupTime>0.5</warmupTime>
+				<range>28</range>
+				<ticksBetweenBurstShots>10</ticksBetweenBurstShots>
+				<burstShotCount>1</burstShotCount>
+				<soundCast>kotorsound_E11carbine</soundCast>
+				<soundCastTail>GunTail_Medium</soundCastTail>
+				<muzzleFlashScale>9</muzzleFlashScale>
+			</li>
+		</verbs>
+		<tools>
+			<li>
+				<label>stock</label>
+				<capacities>
+					<li>Blunt</li>
+				</capacities>
+				<power>9</power>
+				<cooldownTime>2</cooldownTime>
+			</li>
+			<li>
+				<label>barrel</label>
+				<capacities>
+					<li>Blunt</li>
+					<li>Poke</li>
+				</capacities>
+				<power>9</power>
+				<cooldownTime>2</cooldownTime>
+			</li>
+		</tools>
+		<!--comps>
+			<li Class="ModularWeapons.CompProperties_ModularParts">
+				<compClass>ModularWeapons.CompModularParts</compClass>
+				<bundlePackageId>guy762.KotORWeaponsArmor</bundlePackageId>
+				<partKinds>
+					<li>guy762_slot_trigger_lgtrep</li>
+				</partKinds>
+			</li>
+		</comps-->
+	</ThingDef>
+	
+	
+	
+	
+	
+	
 	<ThingDef ParentName="KotORRangedModdable_TwoHand">
 		<defName>guy762_E11carbine</defName>
 		<label>E-11 blaster carbine</label>
-		<description>The most common blaster in the galaxy, the E-11 is utilized by nearly every armed force in the known galaxy, and is the standard-issue weapon of all branches of the Galactic Empire. Designed as a cheaper replacement to the Republic's DC-15 carbine, the E-11 is primarily made out of inexpensive milled steel and lightweight components.</description>
+		<description>The most widely-produced blaster in history, the E-11 is utilized by nearly every armed force in the known galaxy and is the standard-issue weapon of all military branches of the Galactic Empire. Designed as a cheaper replacement to the Republic's DC-15 carbine, the E-11 is primarily made out of inexpensive milled steel and lightweight components and serves as an efficient medium-range repeating carbine.</description>
 		<techLevel>Spacer</techLevel>
 		<thingClass>ThingWithComps</thingClass>
 		<graphicData>
@@ -104,31 +184,30 @@
 	
 	
 	<ThingDef ParentName="KotORRangedModdable_TwoHand">
-		<defName>guy762_E10rifle</defName>
-		<label>E-10 blaster rifle</label>
-		<description>.</description>
+		<defName>guy762_E11tactical</defName>
+		<label>E-11 tactical carbine</label>
+		<description>An improved version of the E-11 utilized by most Imperial special forces units outside of the Stormtrooper Corps, this carbine fires in quick bursts with greater accuracy than standard issue models.</description>
 		<techLevel>Spacer</techLevel>
 		<thingClass>ThingWithComps</thingClass>
 		<graphicData>
-			<texPath>Weapons/E10</texPath>
+			<texPath>Weapons/E11_tac</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
 		</graphicData>
-		<equippedAngleOffset>45</equippedAngleOffset>
 		<soundInteract>kotorsound_select_slug</soundInteract>
 		<statBases>
-			<MarketValue>300</MarketValue>
-			<Mass>3.5</Mass>
-			<AccuracyTouch>0.30</AccuracyTouch>
-			<AccuracyShort>0.40</AccuracyShort>
-			<AccuracyMedium>0.70</AccuracyMedium>
-			<AccuracyLong>0.60</AccuracyLong>
-			<RangedWeapon_Cooldown>0.75</RangedWeapon_Cooldown>
+			<MarketValue>625</MarketValue>
+			<Mass>3</Mass>
+			<AccuracyTouch>0.70</AccuracyTouch>
+			<AccuracyShort>0.80</AccuracyShort>
+			<AccuracyMedium>0.50</AccuracyMedium>
+			<AccuracyLong>0.40</AccuracyLong>
+			<RangedWeapon_Cooldown>1</RangedWeapon_Cooldown>
 			<RangedWeapon_DamageMultiplier>1</RangedWeapon_DamageMultiplier>
 		</statBases>
 		
 		<weaponTags>
-			<li>SWRanged_E10rifle</li>
-			<li>SWRanged_AnyCommonRifle</li>
+			<li>SWRanged_E11tac</li>
+			<li>SWRanged_AnyRareCarbine</li>
 		</weaponTags>
 		<tradeTags>
 			<li>guy762TT_KotORRanged</li>
@@ -139,10 +218,11 @@
 				<hasStandardCommand>true</hasStandardCommand>
 				<defaultProjectile>KotORBlasterBolt_default</defaultProjectile>
 				<warmupTime>0.5</warmupTime>
-				<range>28</range>
-				<ticksBetweenBurstShots>10</ticksBetweenBurstShots>
-				<burstShotCount>1</burstShotCount>
-				<soundCast>kotorsound_E11carbine</soundCast>
+				<defaultCooldownTime>1</defaultCooldownTime>
+				<range>25</range>
+				<ticksBetweenBurstShots>8</ticksBetweenBurstShots>
+				<burstShotCount>3</burstShotCount>
+				<soundCast>kotorsound_E5alt</soundCast>
 				<soundCastTail>GunTail_Medium</soundCastTail>
 				<muzzleFlashScale>9</muzzleFlashScale>
 			</li>
@@ -188,7 +268,7 @@
 	<ThingDef ParentName="KotORRangedModdable_TwoHand">
 		<defName>guy762_E22rifle</defName>
 		<label>E-22 double blaster rifle</label>
-		<description>.</description>
+		<description>An expertly-designed long-range counterpart to the E-11, the E-22 uses many of the same parts as the E-11 in an unusual double-barreled reciprocative design that is easy for BlasTech factories to produce. Both barrels can be fired at once for precise targeting and increased damage, or the weapon can be fired rapidly with suppressing fire capabilities comparable to that of the bulkier T-21 repeater.</description>
 		<techLevel>Spacer</techLevel>
 		<thingClass>ThingWithComps</thingClass>
 		<graphicData>

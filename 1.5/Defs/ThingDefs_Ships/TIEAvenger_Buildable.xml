@@ -1,11 +1,18 @@
 <?xml version="1.0" encoding="utf-8" ?>
 
 <Defs>
+	
+	<DesignatorDropdownGroupDef>
+		<defName>guy762_SWVehicleBPDropdown_TIEAvg</defName>
+	</DesignatorDropdownGroupDef>
+	
 	<Vehicles.VehicleBuildDef Name="guy762_SWVehicleBP_TIEAvg" ParentName="VehicleBaseBuildable">
 		<defName>guy762_SWVehicleBP_TIEAvg</defName>
 		<label>TIE/ad Avenger</label>
 		<description>.</description>
 		<designationCategory>MM_StarWarsShipBuildTab</designationCategory>
+		
+		<designatorDropdown>guy762_SWVehicleBPDropdown_TIEAvg</designatorDropdown>
 		
 		<graphicData>
 			<texPath>Starfighters/TIEAvenger/TIEAvenger</texPath>

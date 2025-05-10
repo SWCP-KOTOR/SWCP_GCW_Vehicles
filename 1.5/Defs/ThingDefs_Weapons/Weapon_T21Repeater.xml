@@ -7,11 +7,12 @@
 	<ThingDef ParentName="KotORRangedModdable_TwoHand">
 		<defName>guy762_T21repeater</defName>
 		<label>T-21 repeating blaster</label>
-		<description>.</description>
+		<description>Seeking to further prove the versatility of Stormtrooper infantry doctrine, the Imperial Stormtrooper corps commissioned BlasTech to design a heavy blaster capable of functioning both as an anti-tank rifle and as a squad automatic weapon to effectively counter a wider variety of targets. The result was the T-21, a cumbersome but powerful weapon used to great effect in counter-insurgency operations.</description>
 		<techLevel>Spacer</techLevel>
 		<thingClass>ThingWithComps</thingClass>
 		<graphicData>
-			<texPath>Weapons/T21_wood</texPath>
+			<!-- <texPath>Weapons/T21_wood</texPath> -->
+			<texPath>Weapons/T21</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
 			<drawSize>1.5</drawSize>
 		</graphicData>
@@ -47,7 +48,7 @@
 				<verbClass>Verb_Shoot</verbClass>
 				<hasStandardCommand>true</hasStandardCommand>
 				<defaultProjectile>KotORBlasterBolt_mstheavy</defaultProjectile>
-				<warmupTime>6</warmupTime>
+				<warmupTime>5</warmupTime>
 				<defaultCooldownTime>7.5</defaultCooldownTime>
 				<range>36</range>
 				<ticksBetweenBurstShots>18</ticksBetweenBurstShots>
@@ -129,7 +130,7 @@
 	<ThingDef ParentName="KotORRangedModdable_TwoHand">
 		<defName>guy762_T21Bheavyrifle</defName>
 		<label>T-21B heavy blaster</label>
-		<description>.</description>
+		<description>A more role-specific variation on the T-21 platform, the T-21B is a powerful anti-armor rifle inspired by the B2-HA Super Battle Droid's integrated blaster cannon arm. It is designed to be used alongside lighter repeating blasters such as the TL-50 or E-22, a combination capable of responding to both vehicle and infantry threats far quicker than units armed with the original T-21.</description>
 		<techLevel>Spacer</techLevel>
 		<thingClass>ThingWithComps</thingClass>
 		<graphicData>
@@ -169,8 +170,8 @@
 				<verbClass>Verb_Shoot</verbClass>
 				<hasStandardCommand>true</hasStandardCommand>
 				<defaultProjectile>KotORBlasterBolt_heavy</defaultProjectile>
-				<warmupTime>6</warmupTime>
-				<defaultCooldownTime>6.5</defaultCooldownTime>
+				<warmupTime>5.5</warmupTime>
+				<defaultCooldownTime>6</defaultCooldownTime>
 				<range>28</range>
 				<ticksBetweenBurstShots>40</ticksBetweenBurstShots>
 				<burstShotCount>3</burstShotCount>

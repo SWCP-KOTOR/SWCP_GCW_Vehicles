@@ -817,9 +817,9 @@
 		</specificApparelRequirements>
 
 		<biocodeWeaponChance>0.95</biocodeWeaponChance>
-		<weaponMoney>500~2200</weaponMoney>
+		<weaponMoney>625~2200</weaponMoney>
 		<weaponTags>
-			<li>SWRanged_E11carbine</li>
+			<li>SWRanged_E11tac</li>
 			<li>SWRanged_E22rifle</li>
 			<li>SWRanged_T21repeater</li>
 			<li>SWRanged_TL50blaster</li>

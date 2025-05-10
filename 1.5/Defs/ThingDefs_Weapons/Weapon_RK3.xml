@@ -5,7 +5,7 @@
 	<ThingDef ParentName="KotORRangedModdable_OffHand">
 		<defName>guy762_RK3pistol</defName>
 		<label>RK-3 blaster pistol</label>
-		<description>.</description>
+		<description>The Merr-Sonn RK-3 pistol was designed as an accurate, general-purpose sidearm to be issued to all Imperial military officers regardless of branch. While other pistols employed by the Empire (like the SE-14 or DH-17) were designed to fill a specific combat role if necessary, the RK-3 was designed as a simple self-defense weapon capable of achieving above holdout-level performace.</description>
 		<techLevel>Spacer</techLevel>
 		<thingClass>ThingWithComps</thingClass>
 		<graphicData>

@@ -37,7 +37,7 @@
 		</specificApparelRequirements>
 		<weaponMoney>99999999</weaponMoney>
 		<weaponTags>
-		  <li>SWRanged_RK3pistol</li> <!-- maybe swap for a westar pistol? -->
+		  <li>SWRanged_Power5pistol</li>
 		</weaponTags>
 		<skills>
 			<li>

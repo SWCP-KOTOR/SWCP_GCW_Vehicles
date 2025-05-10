@@ -226,7 +226,7 @@
 		<techLevel>Spacer</techLevel>
 		<description>.</description>
 		<graphicData>
-			<texPath>Apparel/Mandalorian/jodokast/Apparel_Male_south</texPath><drawSize>1.25</drawSize>
+			<texPath>Apparel/Mandalorian/jodokast/Apparel</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
 			<!-- <shaderType>CutoutComplex</shaderType> -->
 			<shaderType>CutoutMultiMask</shaderType>
@@ -321,7 +321,7 @@
 		<techLevel>Spacer</techLevel>
 		<description>.</description>
 		<graphicData>
-			<texPath>Apparel/Mandalorian/jodokast/helmet/helmet_south</texPath><drawSize>1.25</drawSize>
+			<texPath>Apparel/Mandalorian/jodokast/helmet/helmet</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
 			<shaderType>CutoutMultiMask</shaderType>
 			<!-- <shaderType>CutoutComplex</shaderType> -->

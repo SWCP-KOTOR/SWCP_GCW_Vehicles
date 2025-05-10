@@ -30,9 +30,10 @@
 		</specificApparelRequirements>
 
 		<biocodeWeaponChance>0</biocodeWeaponChance>
-		<weaponMoney>475</weaponMoney>
+		<weaponMoney>475~1050</weaponMoney>
 		<weaponTags>
 			<li>SWRanged_DL21pistol</li>
+			<li>SWRanged_Model57pistol</li>
 		</weaponTags>
 
 		<skills>
@@ -104,6 +105,7 @@
 		<weaponMoney>500~1500</weaponMoney>
 		<weaponTags>
 			<li>SWRanged_E11carbine</li>
+			<li>SWRanged_DL44pistol</li>
 			<li>SWRanged_CR1BlastCannon</li>
 		</weaponTags>
 
@@ -141,6 +143,40 @@
 	
 	
 	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 	<!--troopers-->
 
 
@@ -166,7 +202,7 @@
 		  <li>KotOREquipment_basic</li>
 		</apparelTags>
 		<apparelRequired>
-			<li>guy762_RebelHelmet</li>
+			<li>guy762_RebelHelmet_fleet</li>
 			<li>guy762_Jacket_scout</li>
 			<li>guy762_Clothing_rebel</li>
 		</apparelRequired>
@@ -232,7 +268,7 @@
 		  <li>KotOREquipment_basic</li>
 		</apparelTags>
 		<apparelRequired>
-			<li>guy762_RebelHelmet</li>
+			<li>guy762_RebelHelmet_fleet</li>
 			<li>guy762_ImpUniform_bigbelt</li>
 		</apparelRequired>
 		
@@ -311,9 +347,10 @@
 		</specificApparelRequirements>
 		
 		<biocodeWeaponChance>0</biocodeWeaponChance>
-		<weaponMoney>550~600</weaponMoney>
+		<weaponMoney>550~1050</weaponMoney>
 		<weaponTags>
 		  <li>SWRanged_DH17pistol</li>
+		  <li>SWRanged_Model57pistol</li>
 		</weaponTags>
 		
 		<skills>
@@ -352,7 +389,7 @@
 	  </PawnKindDef>
 	  
 	  
-	  <PawnKindDef Name="SWNewRepub_NavyCaptain" ParentName="KotORRepub_Base">
+	<PawnKindDef Name="SWNewRepub_NavyCaptain" ParentName="KotORRepub_Base">
 		<defName>SWNewRepub_NavyCaptain</defName>
 		<label>navy captain</label>
 		<combatPower>40</combatPower>
@@ -382,9 +419,10 @@
 		</specificApparelRequirements>
 		
 		<biocodeWeaponChance>0</biocodeWeaponChance>
-		<weaponMoney>550~600</weaponMoney>
+		<weaponMoney>550~1050</weaponMoney>
 		<weaponTags>
 		  <li>SWRanged_DH17pistol</li>
+		  <li>SWRanged_Power5pistol</li>
 		</weaponTags>
 		
 		<skills>
@@ -420,7 +458,95 @@
 			<!-- <li>ProductionCommand</li> -->
 			<!-- <li>MarksmanCommand</li> -->
 		</abilities>
-	  </PawnKindDef>
+	</PawnKindDef>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<PawnKindDef Name="SWNewRepub_ArmyGeneral" ParentName="KotORRepub_Base">
+		<defName>SWNewRepub_ArmyGeneral</defName>
+		<label>army general</label>
+		<combatPower>40</combatPower>
+		<minGenerationAge>24</minGenerationAge>
+		<maxGenerationAge>75</maxGenerationAge>
+		<itemQuality>Good</itemQuality>
+		
+		<maxPerGroup>2</maxPerGroup>
+		
+		<apparelMoney>1500~5500</apparelMoney>
+		<apparelAllowHeadgearChance>1</apparelAllowHeadgearChance>
+		<apparelTags>
+		  <li>KotOREquipment_officer</li>
+		  <li>NewRepublic_ArmyOfficer</li>
+		  <li>NewRepublic_endortrooperhelmet</li>
+		</apparelTags>
+		<apparelRequired>
+			<li>guy762_JKenergyshield</li>
+			<li>guy762_RebelOfficerDuster</li>
+			<li>guy762_GenericUniform_fatigues</li>
+		</apparelRequired>
+		
+		<specificApparelRequirements>
+			<li>
+				<apparelLayer>Middle</apparelLayer>
+				<apparelDef>guy762_RebelOfficerDuster</apparelDef>
+				<styleDef>guy762_RankStyleRebOvercoat_armygen</styleDef>
+			</li>
+			<li>
+				<apparelLayer>OnSkin</apparelLayer>
+				<color>(120,125,110)</color>  <!-- slate green -->
+			</li>
+		</specificApparelRequirements>
+		
+		<biocodeWeaponChance>0</biocodeWeaponChance>
+		<weaponMoney>550~1500</weaponMoney>
+		<weaponTags>
+		  <li>SWRanged_DH17pistol</li>
+		  <li>SWRanged_Power5pistol</li>
+		  <li>SWRanged_DL44pistol</li>
+		  <li>SWRanged_DH17rifle</li>
+		</weaponTags>
+		
+		<skills>
+			<li>
+				<skill>Shooting</skill>
+				<range>7~8</range>
+			</li>
+			<li>
+				<skill>Social</skill>
+				<range>14~15</range>
+			</li>
+			<li>
+				<skill>Intellectual</skill>
+				<range>14~15</range>
+			</li>
+		</skills>
+		
+		<inventoryOptions>
+			<skipChance>0</skipChance>
+			<subOptionsChooseOne>
+				<li>
+					<thingDef>guy762_medpac_life</thingDef>
+					<countRange>1~3</countRange>
+				</li>
+			</subOptionsChooseOne>
+		</inventoryOptions>
+		
+		<initialWillRange>0.5~2</initialWillRange>
+		<initialResistanceRange>5~10</initialResistanceRange>
+		
+		<abilities>
+			<li>guy762_Ability_CommandTierV</li>
+		</abilities>
+	</PawnKindDef>
 	  
 	  
 	  
@@ -433,7 +559,178 @@
 	  
 	  
 	  
-	  <PawnKindDef Name="SWNewRepub_trooper" ParentName="KotORRepub_Base">
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	<PawnKindDef Name="SWNewRepub_RebelAgent" ParentName="KotORRepub_Base">
+		<defName>SWNewRepub_RebelAgent</defName>
+		<label>agent</label>
+		<combatPower>100</combatPower>
+		<minGenerationAge>18</minGenerationAge>
+		<maxGenerationAge>35</maxGenerationAge>
+		<itemQuality>Normal</itemQuality>
+		
+		<xenotypeSet Inherit="False">
+		  <xenotypeChances>
+			<Baseliner MayRequire="Ludeon.RimWorld.Biotech">999</Baseliner>
+		  </xenotypeChances>
+		</xenotypeSet>
+		<useFactionXenotypes>false</useFactionXenotypes>
+
+		<apparelMoney>1500~5500</apparelMoney>
+		<apparelAllowHeadgearChance>1</apparelAllowHeadgearChance>
+		<apparelTags>
+			<li>KotORUtility_engi_novisor</li>
+			<li>KotORUtility_weakgrenade</li>
+			<li>NewRepublic_RebelAgent_hats</li>
+		</apparelTags>
+		<apparelRequired>
+			<li>guy762_Accessory_poncho</li>
+			<li>guy762_Jacket_scout</li>
+			<li>guy762_Clothing_rebel</li>
+		</apparelRequired>
+		<specificApparelRequirements>
+			<li>
+				<apparelLayer>Shell</apparelLayer>
+				<color>(80,80,90)</color>       <!-- engi hood stone blue -->
+			</li>
+			<li>
+				<apparelLayer>OnSkin</apparelLayer>
+				<colorGenerator Class="ColorGenerator_Options">
+					<options>
+						<li>
+							<weight>10</weight>
+							<only>(210,210,210)</only>    <!-- white -->
+						</li>
+						<li>
+							<weight>10</weight>
+							<only>(210,190,140)</only>    <!-- tan -->
+						</li>
+					</options>
+				</colorGenerator>
+			</li>
+		</specificApparelRequirements>
+
+		<biocodeWeaponChance>0</biocodeWeaponChance>
+		<weaponMoney>400~900</weaponMoney>
+		<weaponTags>
+			<li>SWRanged_RebelAgentPistolMix</li>
+		</weaponTags>
+
+		<skills>
+			<li>
+				<skill>Shooting</skill>
+				<range>8~10</range>
+			</li>
+			<li>
+				<skill>Construction</skill>
+				<range>6~8</range>
+			</li>
+			<li>
+				<skill>Crafting</skill>
+				<range>6~8</range>
+			</li>
+		</skills>
+		<inventoryOptions>
+			<skipChance>0</skipChance>
+			<subOptionsChooseOne>
+				<li>
+					<thingDef>guy762_medpac</thingDef>
+					<countRange>1~3</countRange>
+				</li>
+			</subOptionsChooseOne>
+		</inventoryOptions>
+
+		<initialWillRange>0.5~2</initialWillRange>
+		<initialResistanceRange>5~10</initialResistanceRange>
+	</PawnKindDef>
+	  
+	  
+	  
+	
+
+
+
+	<PawnKindDef Name="SWNewRepub_RebelTrooper" ParentName="KotORRepub_Base">
+		<defName>SWNewRepub_RebelTrooper</defName>
+		<label>rebel soldier</label>
+		<combatPower>65</combatPower>
+		<minGenerationAge>18</minGenerationAge>
+		<maxGenerationAge>45</maxGenerationAge>
+		<itemQuality>Normal</itemQuality>
+		
+		<apparelMoney>1500~5500</apparelMoney>
+		<apparelAllowHeadgearChance>1</apparelAllowHeadgearChance>
+		<apparelTags>
+		  <li>KotOREquipment_basic</li>
+		  <li>NewRepublic_rebeltrooper</li>
+		  <li>SWWarlordsAccessory_scumtrooper_poncho</li>
+		</apparelTags>
+		<apparelRequired>
+			<li>guy762_Jacket_scout</li>
+			<li>guy762_GenericUniform_fatigues</li>
+		</apparelRequired>
+		
+		<specificApparelRequirements>
+			<li>
+				<apparelLayer>Overhead</apparelLayer>
+				<requiredTag>NewRepublic_rebeltrooper</requiredTag>
+			</li>
+			<li>
+				<apparelLayer>Middle</apparelLayer>
+				<color>(135,110,80)</color>    <!-- darker beige -->
+				<!-- <requiredTag>NewRepublic_rebeltrooper</requiredTag> -->
+			</li>
+			<li>
+				<apparelLayer>OnSkin</apparelLayer>
+				<color>(75,75,75)</color>       <!-- dark grey -->
+			</li>
+		</specificApparelRequirements>
+		
+		<biocodeWeaponChance>0</biocodeWeaponChance>
+		<weaponMoney>300~2500</weaponMoney>
+		<weaponTags>
+		  <li>SWRanged_E10rifle</li>
+		  <li>SWRanged_E11carbine</li>
+		  <!-- <li>SWRanged_DH17rifle</li> -->
+		  <li>SWRanged_A280Crifle</li>
+		</weaponTags>
+		
+		<skills>
+			<li>
+				<skill>Shooting</skill>
+				<range>6~8</range>
+			</li>
+			<li>
+				<skill>Melee</skill>
+				<range>4~6</range>
+			</li>
+		</skills>
+		
+		<inventoryOptions>
+			<skipChance>0.5</skipChance>
+			<subOptionsChooseOne>
+				<li>
+					<thingDef>guy762_medpac</thingDef>
+					<countRange>1~3</countRange>
+				</li>
+			</subOptionsChooseOne>
+		</inventoryOptions>
+		
+		<initialWillRange>0.5~2</initialWillRange>
+		<initialResistanceRange>5~10</initialResistanceRange>
+	</PawnKindDef>
+	  
+	  
+	  
+	  
+	  
+	  
+	<PawnKindDef Name="SWNewRepub_trooper" ParentName="KotORRepub_Base">
 		<defName>SWNewRepub_trooper</defName>
 		<label>New Republic soldier</label>
 		<combatPower>65</combatPower>
@@ -463,7 +760,7 @@
 		<weaponMoney>500~2500</weaponMoney>
 		<weaponTags>
 		  <li>SWRanged_E11carbine</li>
-		  <li>SWRanged_DH17rifle</li>
+		  <!-- <li>SWRanged_DH17rifle</li> -->
 		  <li>SWRanged_A280Crifle</li>
 		</weaponTags>
 		
@@ -490,7 +787,35 @@
 		
 		<initialWillRange>0.5~2</initialWillRange>
 		<initialResistanceRange>5~10</initialResistanceRange>
-	  </PawnKindDef>
+	</PawnKindDef>
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
 	  
 	  
 	  
@@ -527,9 +852,10 @@
 		</specificApparelRequirements>
 
 		<biocodeWeaponChance>0</biocodeWeaponChance>
-		<weaponMoney>550</weaponMoney>
+		<weaponMoney>550~1050</weaponMoney>
 		<weaponTags>
 			<li>SWRanged_DH17pistol</li>
+			<li>SWRanged_Model57pistol</li>
 		</weaponTags>
 
 		<skills>
@@ -597,9 +923,10 @@
 		</specificApparelRequirements>
 
 		<biocodeWeaponChance>0</biocodeWeaponChance>
-		<weaponMoney>550</weaponMoney>
+		<weaponMoney>550~1050</weaponMoney>
 		<weaponTags>
 			<li>SWRanged_DH17pistol</li>
+			<li>SWRanged_Model57pistol</li>
 		</weaponTags>
 
 		<skills>
@@ -671,9 +998,10 @@
 		</specificApparelRequirements>
 
 		<biocodeWeaponChance>0</biocodeWeaponChance>
-		<weaponMoney>550</weaponMoney>
+		<weaponMoney>550~1050</weaponMoney>
 		<weaponTags>
 			<li>SWRanged_DH17pistol</li>
+			<li>SWRanged_Power5pistol</li>
 		</weaponTags>
 
 		<skills>

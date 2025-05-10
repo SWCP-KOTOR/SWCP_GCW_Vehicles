@@ -5,7 +5,7 @@
 	<ThingDef ParentName="KotORRangedModdable_OffHand">
 		<defName>guy762_DL18pistol</defName>
 		<label>DL-18 blaster pistol</label>
-		<description>.</description>
+		<description>First designed more than a century ago, the DL-18 is still favored today by many "underworld-types" as a cheap sidearm capable of reasonable levels of precision targeting.</description>
 		<techLevel>Spacer</techLevel>
 		<thingClass>ThingWithComps</thingClass>
 		<graphicData>
@@ -107,7 +107,7 @@
 	<ThingDef ParentName="KotORRangedModdable_OffHand">
 		<defName>guy762_DL21pistol</defName>
 		<label>DL-21 blaster pistol</label>
-		<description>.</description>
+		<description>Another pre-Clone Wars design, the BlasTech DL-21 was originally designed and sold specifically for many underworld elements, its marketing focusing on an unusual "spread shot" mode purportedly capable of clearing out an entire cantina table's worth of targets. It did not remain on the market for long before being outlawed by the Republic, though not long after a disgruntled BlasTech employee stole the blueprints and leaked the design to many underworld manufacturers in Hutt Space where it continues to be produced to this day.</description>
 		<techLevel>Spacer</techLevel>
 		<thingClass>ThingWithComps</thingClass>
 		<graphicData>

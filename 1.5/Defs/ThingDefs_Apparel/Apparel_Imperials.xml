@@ -150,6 +150,7 @@
 		  <tags Inherit="False">
 			<li>IndependentWarlord_armytrooper</li>
 			<li>IndependentWarlord_lgtcombatarmor</li>
+			<li>NewRepublic_rebeltrooper</li>
 		  </tags>
 		  <wornGraphicPath>Apparel/ImperialNavyTrooper/Apparel</wornGraphicPath>
 		  <useWornGraphicMask>true</useWornGraphicMask>
@@ -406,7 +407,7 @@
 		
 		<apparel Inherit="False">
 			<tags>
-				<li>RemnantEmpire_armytrooper</li>
+				<li>RemnantEmpire_armylieutenant</li>
 			</tags>
 			<wornGraphicPath>Apparel/ImperialArmyTrooper/armylieutenant/Apparel</wornGraphicPath>
 			<useWornGraphicMask>true</useWornGraphicMask>
@@ -474,6 +475,102 @@
 	
 	
 	
+	<ThingDef ParentName="KotORArmorModdable_hard">
+		<defName>guy762_ArmyOfficerArmor_midrank</defName>
+		<label>light battle armor, ranking officer's</label>
+		<techLevel>Spacer</techLevel>
+		<description>.</description>
+		<graphicData>
+			<texPath>Apparel/ImperialArmyTrooper/armymajor/Apparel</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<shaderType>CutoutComplex</shaderType>
+		</graphicData>
+		<statBases>
+			<Mass>6</Mass>
+			<MarketValue>2500</MarketValue>
+			
+			<MaxHitPoints>350</MaxHitPoints> <!-- mil suit stats -->
+			<ArmorRating_Sharp>0.65</ArmorRating_Sharp>
+			<ArmorRating_Blunt>0.5</ArmorRating_Blunt>
+			<ArmorRating_Heat>0.75</ArmorRating_Heat>
+			<EquipDelay>8</EquipDelay>
+		</statBases>
+		<equippedStatOffsets>
+			<MoveSpeed>-0.2</MoveSpeed>
+			<MeleeDodgeChance>-0.2</MeleeDodgeChance>
+			<IncomingDamageFactor>-0.1</IncomingDamageFactor>
+			
+			<SocialImpact>0.5</SocialImpact>
+		</equippedStatOffsets>
+		
+		<apparel Inherit="False">
+			<tags>
+				<li>RemnantEmpire_armymajor</li>
+			</tags>
+			<wornGraphicPath>Apparel/ImperialArmyTrooper/armymajor/Apparel</wornGraphicPath>
+			<useWornGraphicMask>true</useWornGraphicMask>
+			<layers>
+				<li>Middle</li>
+			</layers>
+			<bodyPartGroups>
+				<li>Torso</li>
+				<!-- <li>Shoulders</li> -->
+				<li>Neck</li>
+				<!-- <li>Arms</li> -->
+				<!-- <li>Hands</li> -->
+				<!-- <li>Legs</li> -->
+				<!-- <li>Feet</li> -->
+			</bodyPartGroups>
+			<useDeflectMetalEffect>true</useDeflectMetalEffect>
+		</apparel>
+		
+		<randomStyleChance>1</randomStyleChance>
+		<randomStyle>
+		  <li>
+			<styleDef>guy762_RankStyle_armymajor</styleDef>
+		  </li>
+		</randomStyle>
+		
+		<tradeTags>
+			<li>guy762TT_WarlordArmor</li>
+		</tradeTags>
+		<colorGenerator Class="ColorGenerator_Options" Inherit="False">
+			<options>
+				<li>
+					<weight>10</weight>
+					<only>(110,120,115)</only>  <!-- army slate green -->
+				</li>
+			</options>
+		</colorGenerator>
+
+		<!--comps>
+		  <li Class="ModularWeapons.CompProperties_ModularParts">
+			<compClass>ModularWeapons.CompModularParts</compClass>
+			<partKinds>
+			  <li>guy762_slot_underlay</li>
+			  <li>guy762_slot_overlay</li>
+			</partKinds>
+			<randomizeParts>true</randomizeParts>
+		  </li>
+		</comps-->
+	</ThingDef>	 
+	
+	<ThingStyleDef>
+		<defName>guy762_RankStyle_armymajor</defName>
+		<overrideLabel>light battle armor, army major's</overrideLabel>
+		<wornGraphicPath>Apparel/ImperialArmyTrooper/armymajor/Apparel</wornGraphicPath>
+		<graphicData>
+		  <texPath>Apparel/ImperialArmyTrooper/armymajor/Apparel</texPath>
+		  <graphicClass>Graphic_Single</graphicClass>
+		  <shaderType>CutoutComplex</shaderType>
+		</graphicData>
+	</ThingStyleDef>
+	
+	
+	
+	
+	
+	
 	
 	<ThingDef ParentName="KotORArmorModdable_hard">
 		<defName>guy762_ArmyOfficerArmor_highbrass</defName>
@@ -505,7 +602,7 @@
 		
 		<apparel Inherit="False">
 			<tags>
-				<li>RemnantEmpire_armytrooper</li>
+				<li>RemnantEmpire_armygeneral</li>
 			</tags>
 			<wornGraphicPath>Apparel/ImperialArmyTrooper/taskforceCO/Apparel</wornGraphicPath>
 			<useWornGraphicMask>true</useWornGraphicMask>

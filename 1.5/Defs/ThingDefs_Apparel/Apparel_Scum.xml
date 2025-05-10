@@ -179,7 +179,7 @@
 		<techLevel>Spacer</techLevel>
 		<description>.</description>
 		<graphicData>
-			<texPath>Apparel/Mandalorian/helmet_norangefinder/helmet_south</texPath><drawSize>1.25</drawSize>
+			<texPath>Apparel/Mandalorian/helmet_norangefinder/helmet</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
 			<shaderType>CutoutMultiMask</shaderType>
 			<!-- <shaderType>CutoutComplex</shaderType> -->
@@ -309,7 +309,7 @@
 		<techLevel>Spacer</techLevel>
 		<description>.</description>
 		<graphicData>
-			<texPath>Apparel/Mandalorian/helmet/helmet_south</texPath><drawSize>1.25</drawSize>
+			<texPath>Apparel/Mandalorian/helmet/helmet</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
 			<shaderType>CutoutMultiMask</shaderType>
 			<!-- <shaderType>CutoutComplex</shaderType> -->
@@ -455,7 +455,7 @@
 		<techLevel>Spacer</techLevel>
 		<description>.</description>
 		<graphicData>
-			<texPath>Apparel/Mandalorian/Apparel_Male_south</texPath><drawSize>1.25</drawSize>
+			<texPath>Apparel/Mandalorian/Apparel</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
 			<shaderType>CutoutMultiMask</shaderType>
 			<!-- <shaderType>CutoutComplex</shaderType> -->
@@ -586,7 +586,7 @@
 		<label>jetpack, Z-6</label>
 		<description>This jetpack comes equipped with a missile launcher that can be loaded with a variety of different missiles.</description>
 		<graphicData>
-		  <texPath>Apparel/Mandalorian/Z6jetpack/Z6jetpack_north</texPath><drawSize>1.25</drawSize>
+		  <texPath>Apparel/Mandalorian/Z6jetpack/Z6jetpack</texPath>
 		  <graphicClass>Graphic_Single</graphicClass>
 		  <shaderType>CutoutMultiMask</shaderType>
 		  <!-- <shaderType>CutoutComplex</shaderType> -->

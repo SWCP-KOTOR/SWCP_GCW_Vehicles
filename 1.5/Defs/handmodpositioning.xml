@@ -38,10 +38,19 @@
           </li>
 		  <li>
               <MainHand>(-0.050, 0.100, -0.130)</MainHand>
+              <SecHand>(0.175, -0.100, -0.125)</SecHand>
+              <ThingTargets>
+                 <li>guy762_E11tactical</li> <!-- E-11 tactical carbine -->
+              </ThingTargets>
+          </li>
+		  
+		  <li>
+              <MainHand>(-0.050, 0.100, -0.130)</MainHand>
               <ThingTargets>
                  <li>guy762_DH17pistol</li> <!-- DH-17 blaster pistol -->
               </ThingTargets>
           </li>
+		  
 		  <li>
               <MainHand>(-0.025, 0.100, -0.130)</MainHand>
               <SecHand>(0.275, -0.100, -0.065)</SecHand>
@@ -157,6 +166,32 @@
                  <li>guy762_WESTAR35pistol</li> <!-- WESTAR-35 blaster pistol -->
               </ThingTargets>
           </li>
+		  <li>
+              <MainHand>(-0.100, 0.100, -0.175)</MainHand>
+              <ThingTargets>
+                 <li>guy762_Model57pistol</li> <!-- Model 57 blaster pistol -->
+              </ThingTargets>
+          </li>
+		  <li>
+              <MainHand>(-0.100, 0.100, -0.175)</MainHand>
+              <ThingTargets>
+                 <li>guy762_Power5pistol</li> <!-- Power-5 blaster pistol -->
+              </ThingTargets>
+          </li>
+		  <li>
+              <MainHand>(-0.100, 0.100, -0.175)</MainHand>
+              <ThingTargets>
+                 <li>guy762_DL44pistol</li> <!-- DL-44 blaster pistol -->
+              </ThingTargets>
+          </li>
+		  <li>
+              <MainHand>(-0.100, 0.100, -0.175)</MainHand>
+              <ThingTargets>
+                 <li>guy762_DL44pistol_hasbroPotF</li> <!-- DL-44 blaster ("Smuggler's End") -->
+              </ThingTargets>
+          </li>
+		  
+		  
 		  <li>
 			  <MainHand>(-0.150, 0.100, -0.125)</MainHand>
               <SecHand>(0.250, -0.100, -0.075)</SecHand>

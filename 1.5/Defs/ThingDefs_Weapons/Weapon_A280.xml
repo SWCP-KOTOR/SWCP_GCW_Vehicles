@@ -7,7 +7,7 @@
 	<ThingDef ParentName="KotORRangedModdable_TwoHand">
 		<defName>guy762_A280_c</defName>
 		<label>A280-C blaster rifle</label>
-		<description>.</description>
+		<description>Widely considered one of the Rebel Alliance's finest pieces of equipment, the A280-C offers Rebel soldiers everything the E-11 can't: range, precision, and power.</description>
 		<techLevel>Spacer</techLevel>
 		<thingClass>ThingWithComps</thingClass>
 		<graphicData>

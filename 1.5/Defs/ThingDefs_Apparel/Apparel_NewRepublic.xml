@@ -49,6 +49,7 @@
 		  </layers>
 		  <tags>
 			<li>NewRepublic_engineer</li>
+			<li>NewRepublic_RebelAgent_hats</li>
 		  </tags>
 		  <countsAsClothingForNudity>false</countsAsClothingForNudity>
 		  <canBeGeneratedToSatisfyWarmth>false</canBeGeneratedToSatisfyWarmth>
@@ -69,7 +70,7 @@
 	
 	
 	<ThingDef ParentName="KotORArmorModdable_hard">
-		<defName>guy762_RebelHelmet</defName>
+		<defName>guy762_RebelHelmet_fleet</defName>
 		<label>militia combat helmet</label>
 		<techLevel>Spacer</techLevel>
 		<description>.</description>
@@ -96,6 +97,7 @@
 			<tags>
 				<li>NewRepublic_alderaanguard</li>
 				<li>NewRepublic_trooper</li>
+				<li>NewRepublicApparel_RebelHelmet</li>
 			</tags>
 			<wornGraphicPath>Apparel/Rebel/helmet</wornGraphicPath>
 			<useWornGraphicMask>true</useWornGraphicMask>
@@ -121,7 +123,7 @@
 	</ThingDef>
 	
 	<ThingDef ParentName="KotORArmorModdable_hard">
-		<defName>guy762_RebelHelmet_light</defName>
+		<defName>guy762_RebelHelmet_AWingTrooper</defName>
 		<label>light flight helmet</label>
 		<techLevel>Spacer</techLevel>
 		<description>.</description>
@@ -135,8 +137,8 @@
 		  <li>ArmorHeadgear</li>
 		</thingCategories>
 		<statBases>
-			<Mass>2</Mass>
-			<MarketValue>200</MarketValue>
+			<Mass>3</Mass>
+			<MarketValue>250</MarketValue>
 			
 			<MaxHitPoints>115</MaxHitPoints>
       		<ArmorRating_Sharp>0.35</ArmorRating_Sharp>
@@ -148,6 +150,7 @@
 		<apparel Inherit="False">
 			<tags>
 				<li>NewRepublic_trooper</li>
+				<li>NewRepublic_rebeltrooper</li>
 				<li>ScumAndVillainy_pilot</li>
 			</tags>
 			<wornGraphicPath>Apparel/RebelPilot/helmetAWing_trooper/helmet</wornGraphicPath>
@@ -168,6 +171,70 @@
 				<li>
 					<weight>10</weight>
 					<only>(50,50,50)</only>  <!-- black -->
+				</li>
+			</options>
+		</colorGenerator>
+	</ThingDef>
+	
+	
+	
+	
+	<ThingDef ParentName="KotORArmorModdable_hard">
+		<defName>guy762_RebelHelmet_endor</defName>
+		<label>light combat helmet</label>
+		<techLevel>Spacer</techLevel>
+		<description>.</description>
+		<graphicData>
+			<texPath>Apparel/Rebel/endorhelmet</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<shaderType>CutoutComplex</shaderType>
+			<colorTwo>(175,150,120)</colorTwo> <!-- bespin beige -->
+		</graphicData>
+		<thingCategories>
+		  <li>ArmorHeadgear</li>
+		</thingCategories>
+		<statBases>
+			<Mass>2</Mass>
+			<MarketValue>150</MarketValue>
+			
+			<MaxHitPoints>115</MaxHitPoints>
+      		<ArmorRating_Sharp>0.3</ArmorRating_Sharp>
+			<ArmorRating_Blunt>0.35</ArmorRating_Blunt>
+			<ArmorRating_Heat>0.4</ArmorRating_Heat>
+			<EquipDelay>2</EquipDelay>
+		</statBases>
+		
+		<apparel Inherit="False">
+			<tags>
+				<li>NewRepublic_rebeltrooper</li>
+				<li>NewRepublic_endortrooperhelmet</li>
+			</tags>
+			<wornGraphicPath>Apparel/Rebel/endorhelmet</wornGraphicPath>
+			<useWornGraphicMask>true</useWornGraphicMask>
+			<layers>
+				<li>Overhead</li>
+			</layers>
+			<bodyPartGroups>
+				<li>UpperHead</li>
+			</bodyPartGroups>
+			<useDeflectMetalEffect>true</useDeflectMetalEffect>
+		</apparel>
+		<tradeTags>
+			<li>guy762TT_ORArmor</li>
+		</tradeTags>
+		<colorGenerator Class="ColorGenerator_Options" Inherit="False">
+			<options>
+				<li>
+					<weight>10</weight>
+					<only>(95,130,80)</only>  <!-- rebel engi green -->
+				</li>
+				<li>
+					<weight>10</weight>
+					<only>(160,100,60)</only> <!-- rust -->
+				</li>
+				<li>
+					<weight>10</weight>
+					<only>(90,90,90)</only> <!-- grey -->
 				</li>
 			</options>
 		</colorGenerator>
@@ -233,6 +300,105 @@
 	  </ThingDef>
 	  
 	  
+	  
+	  
+	
+	
+	
+	
+	
+	
+	
+	
+	<ThingDef ParentName="KotORArmorModdable_soft">
+		<defName>guy762_RebelOfficerDuster</defName>
+		<label>rebel overcoat, officer's</label>
+		<description>This long overcoat is typically worn by ranking officers of the Rebel Alliance and New Republic.</description>
+		<graphicData>
+		  <texPath>Apparel/RebelArmyDuster/general/Apparel</texPath>
+		  <graphicClass>Graphic_Single</graphicClass>
+		  <shaderType>CutoutComplex</shaderType>
+		  <colorTwo>(175,120,55)</colorTwo> <!-- burnt orange -->
+		</graphicData>
+		<statBases>
+			<Mass>6</Mass>
+			<MarketValue>2500</MarketValue>
+			<MaxHitPoints>250</MaxHitPoints>
+			<ArmorRating_Sharp>0.1</ArmorRating_Sharp>
+			<ArmorRating_Blunt>0.15</ArmorRating_Blunt>
+			<ArmorRating_Heat>0.2</ArmorRating_Heat>
+			<Insulation_Cold>10</Insulation_Cold>
+			<Insulation_Heat>15</Insulation_Heat>
+			<EquipDelay>3</EquipDelay>
+		</statBases>
+		<equippedStatOffsets>
+		  <SocialImpact>0.8</SocialImpact>
+		</equippedStatOffsets>
+		<apparel>
+			<drawData>
+			  <dataNorth>
+				<!-- <layer>65</layer> FOR USE WITH SHELL LAYER ONLY!!! -->
+			  </dataNorth>
+			</drawData>
+			<layers>
+				<li>Middle</li>
+				<!-- <li>Shell</li> -->
+			</layers>
+			<bodyPartGroups>
+				<li>Torso</li>
+				<li>Neck</li>
+				<li>Shoulders</li>
+				<li>Arms</li>
+				<li>Legs</li>
+			</bodyPartGroups>
+			<tags Inherit="False">
+				<li>NewRepublic_ArmyOfficer</li>
+			</tags>
+			<wornGraphicPath>Apparel/RebelArmyDuster/general/Apparel</wornGraphicPath>
+			<useWornGraphicMask>true</useWornGraphicMask>
+		</apparel>
+		
+		<randomStyleChance>1</randomStyleChance>
+		<randomStyle>
+		  <li>
+			<styleDef>guy762_RankStyleRebOvercoat_armygen</styleDef>
+		  </li>
+		</randomStyle>
+		
+		<tradeTags>
+			<li>guy762TT_KotORClothes</li>
+		</tradeTags>
+
+		<colorGenerator Class="ColorGenerator_Options" Inherit="False">
+			<options>
+				<li>
+					<weight>15</weight>
+					<only>(175,150,120)</only>       <!-- bespin beige -->
+				</li>
+			</options>
+		</colorGenerator>
+		
+		<!-- <comps> -->
+		  <!-- <li Class="ModularWeapons.CompProperties_ModularParts"> -->
+			<!-- <compClass>ModularWeapons.CompModularParts</compClass> -->
+			<!-- <partKinds> -->
+			  <!-- <li>guy762_slot_underlay</li> -->
+			<!-- </partKinds> -->
+			<!-- <randomizeParts>true</randomizeParts> -->
+		  <!-- </li> -->
+		<!-- </comps> -->
+	</ThingDef>
+	  
+	<ThingStyleDef>
+		<defName>guy762_RankStyleRebOvercoat_armygen</defName>
+		<overrideLabel>rebel overcoat, general's</overrideLabel>
+		<wornGraphicPath>Apparel/RebelArmyDuster/general/Apparel</wornGraphicPath>
+		<graphicData>
+		  <texPath>Apparel/RebelArmyDuster/general/Apparel</texPath>
+		  <graphicClass>Graphic_Single</graphicClass>
+		  <shaderType>CutoutComplex</shaderType>
+		</graphicData>
+	  </ThingStyleDef>
 	  
 	  
 	  

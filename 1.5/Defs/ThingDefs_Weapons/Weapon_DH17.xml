@@ -5,7 +5,7 @@
 	<ThingDef ParentName="KotORRangedModdable_OffHand">
 		<defName>guy762_DH17pistol</defName>
 		<label>DH-17 blaster pistol</label>
-		<description>.</description>
+		<description>The DH-17 pistol is favored by many private security and planetary defense forces throughout the galaxy for its ability to be used as both a close-quarters repeater and as a precision targeting pistol. It is an effective weapon in staving off pirate boarding parties in tight starship hallways as well as taking potshots at suspected hostiles in more open environments. This versatility has made it an ideal sidearm for most New Republic personnel, where pilots, security officers, and clandestine agents alike employ these blaster pistols to combat elements of the Imperial Remnant.</description>
 		<techLevel>Spacer</techLevel>
 		<thingClass>ThingWithComps</thingClass>
 		<graphicData>
@@ -28,6 +28,7 @@
 			<li>SWRanged_DH17pistol</li>
 			<li>SWRanged_AnyCommonPistol</li>
 			<li>SWRanged_AnyRepeaterPistol</li>
+			<li>SWRanged_RebelAgentPistolMix</li>
 		</weaponTags>
 		<tradeTags>
 			<li>guy762TT_KotORRanged</li>
@@ -38,6 +39,7 @@
 				<hasStandardCommand>true</hasStandardCommand>
 				<defaultProjectile>KotORBlasterBolt_default</defaultProjectile>
 				<warmupTime>0.5</warmupTime>
+				<defaultCooldownTime>2</defaultCooldownTime>
 				<range>23</range>
 				<ticksBetweenBurstShots>10</ticksBetweenBurstShots>
 				<burstShotCount>3</burstShotCount>
@@ -54,6 +56,7 @@
 				<hasStandardCommand>true</hasStandardCommand>
 				<defaultProjectile>KotORBlasterBolt_sniper</defaultProjectile>
 				<warmupTime>2</warmupTime>
+				<defaultCooldownTime>1</defaultCooldownTime>
 				<range>28</range>
 				<accuracyMedium>0.95</accuracyMedium>
 				<accuracyLong>0.90</accuracyLong>
@@ -106,7 +109,7 @@
 	<ThingDef ParentName="KotORRangedModdable_TwoHand">
 		<defName>guy762_DH17rifle</defName>
 		<label>DH-17 blaster rifle</label>
-		<description>.</description>
+		<description>BlasTech's DH-17 rifle was designed, marketed, and sold alongside the DH-17 pistol primarily for use by planetary defense forces as lower-powered repeating blasters that Imperial weapons restrictions would be less likely to object to. While easily outclassed by other wartime designs, the DH-17 rifle remains a reliable, accurate, and lightweight infantry weapon.</description>
 		<techLevel>Spacer</techLevel>
 		<thingClass>ThingWithComps</thingClass>
 		<graphicData>
@@ -117,7 +120,7 @@
 		<soundInteract>kotorsound_select_carbine</soundInteract>
 		<statBases>
 			<MarketValue>1000</MarketValue>
-			<Mass>4</Mass>
+			<Mass>3</Mass>
 			<AccuracyTouch>0.60</AccuracyTouch>
 			<AccuracyShort>0.70</AccuracyShort>
 			<AccuracyMedium>0.90</AccuracyMedium>
@@ -184,7 +187,7 @@
 	<ThingDef ParentName="KotORRangedModdable_TwoHand">
 		<defName>guy762_DH17rifle_bayonet</defName>
 		<label>DH-17 blaster rifle (bayonet)</label>
-		<description>.</description>
+		<description>BlasTech's DH-17 rifle was designed, marketed, and sold alongside the DH-17 pistol primarily for use by planetary defense forces as lower-powered repeating blasters that Imperial weapons restrictions would be less likely to object to. While easily outclassed by other wartime designs, the DH-17 rifle remains a reliable, accurate, and lightweight infantry weapon.\n\nThis weapon appears to have a small vibroblade affixed as a bayonet. While bayonet tactics have historically been overlooked, the "Raptor" shock troopers of Warlord Zsinj's forces have been using them to terrifying effect on the battlefield.</description>
 		<techLevel>Spacer</techLevel>
 		<thingClass>ThingWithComps</thingClass>
 		<graphicData>
@@ -195,7 +198,7 @@
 		<soundInteract>kotorsound_select_carbine</soundInteract>
 		<statBases>
 			<MarketValue>1250</MarketValue>
-			<Mass>4</Mass>
+			<Mass>3</Mass>
 			<AccuracyTouch>0.60</AccuracyTouch>
 			<AccuracyShort>0.70</AccuracyShort>
 			<AccuracyMedium>0.90</AccuracyMedium>

@@ -160,6 +160,7 @@
 		</forcedTraits>
 		<requiredWorkTags>
 		  <li>Violent</li>
+		  <li>Social</li>
 		  <li>Intellectual</li>
 		</requiredWorkTags>
 		<workDisables>ManualDumb, Mining, Caring</workDisables>

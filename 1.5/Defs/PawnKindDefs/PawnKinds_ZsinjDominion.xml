@@ -34,11 +34,15 @@
 			<li>
 				<apparelLayer>Overhead</apparelLayer>
 				<requiredTag>ZsinjEmpire_armytrooper</requiredTag>
-				<color>(80,85,75)</color>       <!-- dark jungle green -->
+				<color>(80,90,75)</color>       <!-- dark jungle green -->
+			</li>
+			<li>
+				<apparelLayer>Shell</apparelLayer>
+				<color>(90,55,40)</color>       <!--K2 jedi knight-->
 			</li>
 			<li>
 				<apparelLayer>Middle</apparelLayer>
-				<color>(80,85,75)</color>       <!-- dark jungle green -->
+				<color>(80,90,75)</color>       <!-- dark jungle green -->
 			</li>
 			<li>
 				<apparelLayer>OnSkin</apparelLayer>
@@ -51,10 +55,11 @@
 		</specificApparelRequirements>
 
 		<biocodeWeaponChance>0</biocodeWeaponChance>
-		<weaponMoney>250~2000</weaponMoney>
+		<weaponMoney>300~2000</weaponMoney>
 		<weaponTags>
-			<li>SWRanged_E5rifle</li>
+			<!-- <li>SWRanged_E5rifle</li> -->
 			<li>SWRanged_E10rifle</li>
+			<li>SWRanged_E11carbine</li>
 			<li>SWRanged_E5Crifle</li>
 			<li>SWRanged_DLT18rifle</li>
 		</weaponTags>
@@ -89,17 +94,58 @@
 	<PawnKindDef Name="SWZsinj_ArmyLieutenant" ParentName="SWImpRemnant_ArmyLieutenant">
 		<defName>SWZsinj_ArmyLieutenant</defName>
 		<label>army lieutenant</label>
-		<specificApparelRequirements>
+		
+		<weaponMoney>400~1050</weaponMoney>
+		<weaponTags Inherit="False">
+			<li>SWRanged_SE14pistol</li>
+			<li>SWRanged_Power5pistol</li>
+		</weaponTags>
+		
+		<specificApparelRequirements Inherit="False">
 			<li>
 				<apparelLayer>Overhead</apparelLayer>
-				<color>(80,85,75)</color>       <!-- dark jungle green -->
+				<color>(80,90,75)</color>       <!-- dark jungle green -->
 			</li>
 			<li>
 				<apparelLayer>Middle</apparelLayer>
 				<apparelDef>guy762_ArmyOfficerArmor</apparelDef>
 				<styleDef>guy762_RankStyle_armylt</styleDef>
-				<color>(80,85,75)</color>       <!-- dark jungle green -->
+				<color>(80,90,75)</color>       <!-- dark jungle green -->
 				<quality>Normal</quality>
+			</li>
+			<li>
+				<apparelLayer>OnSkin</apparelLayer>
+				<color>(95,120,75)</color>       <!-- jungle green -->
+			</li>
+		</specificApparelRequirements>
+	</PawnKindDef>
+	
+	
+	
+	
+	
+	<PawnKindDef Name="SWZsinj_ArmyMajor" ParentName="SWImpRemnant_ArmyMajor">
+		<defName>SWZsinj_ArmyMajor</defName>
+		<label>army major</label>
+		
+		<weaponMoney>400~1450</weaponMoney>
+		<weaponTags Inherit="False">
+			<li>SWRanged_SE14pistol</li>
+			<li>SWRanged_Power5pistol</li>
+			<li>SWRanged_DL44pistol</li>
+		</weaponTags>
+		
+		<specificApparelRequirements Inherit="False">
+			<li>
+				<apparelLayer>Overhead</apparelLayer>
+				<color>(95,120,75)</color>       <!-- jungle green -->
+			</li>
+			<li>
+				<apparelLayer>Middle</apparelLayer>
+				<apparelDef>guy762_ArmyOfficerArmor</apparelDef>
+				<styleDef>guy762_RankStyle_armylt</styleDef>
+				<color>(80,90,75)</color>       <!-- dark jungle green -->
+				<quality>Good</quality>
 			</li>
 			<li>
 				<apparelLayer>OnSkin</apparelLayer>
@@ -115,6 +161,14 @@
 	<PawnKindDef Name="SWZsinj_ArmyGeneral_field" ParentName="SWImpRemnant_ArmyGeneral_field">
 		<defName>SWZsinj_ArmyGeneral_field</defName>
 		<label>army general</label>
+		
+		<weaponMoney>400~1450</weaponMoney>
+		<weaponTags Inherit="False">
+			<li>SWRanged_SE14pistol</li>
+			<li>SWRanged_Power5pistol</li>
+			<li>SWRanged_DL44pistol</li>
+		</weaponTags>
+		
 		<specificApparelRequirements Inherit="False">
 			<li>
 				<apparelLayer>Overhead</apparelLayer>
@@ -124,7 +178,7 @@
 				<apparelLayer>Middle</apparelLayer>
 				<apparelDef>guy762_ArmyOfficerArmor_highbrass</apparelDef>
 				<styleDef>guy762_RankStyle_taskforceCO</styleDef>
-				<color>(80,85,75)</color>       <!-- dark jungle green -->
+				<color>(80,90,75)</color>       <!-- dark jungle green -->
 				<quality>Excellent</quality>
 			</li>
 			<li>

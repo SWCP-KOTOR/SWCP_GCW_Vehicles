@@ -39,6 +39,7 @@
 				<hasStandardCommand>true</hasStandardCommand>
 				<defaultProjectile>KotORBlasterBolt_default</defaultProjectile>
 				<warmupTime>1</warmupTime>
+				<defaultCooldownTime>1.5</defaultCooldownTime>
 				<range>23</range>
 				<ticksBetweenBurstShots>12</ticksBetweenBurstShots>
 				<burstShotCount>3</burstShotCount>
@@ -54,8 +55,8 @@
 				<verbClass>Verb_Shoot</verbClass>
 				<hasStandardCommand>true</hasStandardCommand>
 				<defaultProjectile>KotORBlasterBolt_heavy</defaultProjectile>
-				<warmupTime>3.5</warmupTime>
-				<defaultCooldownTime>2</defaultCooldownTime>
+				<warmupTime>3</warmupTime>
+				<defaultCooldownTime>3.5</defaultCooldownTime>
 				<range>25</range>
 				<ticksBetweenBurstShots>18</ticksBetweenBurstShots>
 				<burstShotCount>1</burstShotCount>

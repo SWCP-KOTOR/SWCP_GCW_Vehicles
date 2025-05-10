@@ -49,10 +49,12 @@
 			</li>
 		</specificApparelRequirements>
 
-		<biocodeWeaponChance>0.5</biocodeWeaponChance>
-		<weaponMoney>550</weaponMoney>
+		<biocodeWeaponChance>0</biocodeWeaponChance>
+		<weaponMoney>250~800</weaponMoney>
 		<weaponTags>
-			<li>SWRanged_DH17pistol</li>
+			<li>SWRanged_DL18pistol</li>
+			<li>SWRanged_DL21pistol</li>
+			<li>SWRanged_Model57pistol</li>
 		</weaponTags>
 
 		<skills>
@@ -343,6 +345,8 @@
 		<biocodeWeaponChance>0</biocodeWeaponChance>
 		<weaponMoney>300~1600</weaponMoney>
 		<weaponTags>
+			<li>SWRanged_DL18pistol</li>
+			<li>SWRanged_Model57pistol</li>
 			<li>SWRanged_E10rifle</li>
 			<li>SWRanged_E11carbine</li>
 			<li>SWRanged_E22rifle</li>

@@ -2,7 +2,7 @@
 <Defs>
 
 	
-	<!--troopers-->
+	<!-- army personnel -->
 
 
 	<PawnKindDef Name="SWZsinj_ArmyTrooper" ParentName="KotORSith_TrooperBase">
@@ -142,8 +142,8 @@
 			</li>
 			<li>
 				<apparelLayer>Middle</apparelLayer>
-				<apparelDef>guy762_ArmyOfficerArmor</apparelDef>
-				<styleDef>guy762_RankStyle_armylt</styleDef>
+				<apparelDef>guy762_ArmyOfficerArmor_midrank</apparelDef>
+				<styleDef>guy762_RankStyle_armymajor</styleDef>
 				<color>(80,90,75)</color>       <!-- dark jungle green -->
 				<quality>Good</quality>
 			</li>
@@ -189,20 +189,25 @@
 	</PawnKindDef>
 	
 	
-	<PawnKindDef Name="SWZsinj_ArmyGeneral" ParentName="SWImpRemnant_ArmyGeneral">
-		<defName>SWZsinj_ArmyGeneral</defName>
-		<label>army general</label>
-		<specificApparelRequirements Inherit="False">
+	
+	
+	
+	
+	
+	
+	
+	
+	<PawnKindDef Name="SWZsinj_TankDriver" ParentName="SWImpRemnant_TankDriver">
+		<defName>SWZsinj_TankDriver</defName>
+		<defaultFactionType>guy762_SWWarlordsFaction_ZsinjDominion</defaultFactionType>
+		<specificApparelRequirements>
 			<li>
 				<apparelLayer>Overhead</apparelLayer>
-				<color>(95,120,75)</color>       <!-- jungle green -->
+				<color>(80,90,75)</color>       <!-- dark jungle green -->
 			</li>
 			<li>
 				<apparelLayer>OnSkin</apparelLayer>
-				<apparelDef>guy762_ImpUniform_highbrass</apparelDef>
-				<styleDef>guy762_RankStyle_armygen</styleDef>
-				<color>(95,120,75)</color>       <!-- jungle green -->
-				<quality>Excellent</quality>
+				<color>(90,90,90)</color>       <!-- dark grey -->
 			</li>
 		</specificApparelRequirements>
 	</PawnKindDef>
@@ -218,6 +223,8 @@
 	
 	
 	
+	
+				<!-- raptor corps -->
 	
 	
 	
@@ -322,11 +329,12 @@
 		</xenotypeSet>
 		<useFactionXenotypes>false</useFactionXenotypes>
 
-		<apparelMoney>1500~5500</apparelMoney>
+		<apparelMoney>3500~5500</apparelMoney>
 		<apparelAllowHeadgearChance>1</apparelAllowHeadgearChance>
 		<apparelTags>
 			<li>ZsinjEmpire_raptorarmor</li>
 			<li>KotOREquipment_basic</li>
+			<li>SWDetpackCase</li>
 		</apparelTags>
 		<apparelRequired>
 			<li>guy762_Accessory_stormiepauldron</li>
@@ -493,6 +501,75 @@
 		</disallowedTraits>
 		<initialWillRange>0.5~2</initialWillRange>
 		<initialResistanceRange>5~10</initialResistanceRange>
+	</PawnKindDef>
+	
+	
+	
+	
+	
+	
+	
+			<!-- officers -->
+	
+	<PawnKindDef Name="SWZsinj_NavyLt" ParentName="SWImpRemnant_NavyLt">
+		<defName>SWZsinj_NavyLt</defName>
+		<label>navy lieutenant</label>
+		<defaultFactionType>guy762_SWWarlordsFaction_ZsinjDominion</defaultFactionType>
+		<specificApparelRequirements Inherit="False">
+			<li>
+				<apparelLayer>Overhead</apparelLayer>
+				<color>(95,120,75)</color>       <!-- jungle green -->
+			</li>
+			<li>
+				<apparelLayer>OnSkin</apparelLayer>
+				<apparelDef>guy762_ImpUniform_lowrank</apparelDef>
+				<styleDef>guy762_RankStyle_navylt</styleDef>
+				<color>(95,120,75)</color>       <!-- jungle green -->
+				<quality>Normal</quality>
+			</li>
+		</specificApparelRequirements>
+	</PawnKindDef>
+	
+	
+	<PawnKindDef Name="SWZsinj_NavyAdmiral" ParentName="SWImpRemnant_NavyAdmiral">
+		<defName>SWZsinj_NavyAdmiral</defName>
+		<label>navy admiral</label>
+		<defaultFactionType>guy762_SWWarlordsFaction_ZsinjDominion</defaultFactionType>
+		<specificApparelRequirements Inherit="False">
+			<li>
+				<apparelLayer>Overhead</apparelLayer>
+				<color>(95,120,75)</color>       <!-- jungle green -->
+			</li>
+			<li>
+				<apparelLayer>OnSkin</apparelLayer>
+				<apparelDef>guy762_ImpUniform_highbrass</apparelDef>
+				<styleDef>guy762_RankStyle_navyadmiral</styleDef>
+				<color>(95,120,75)</color>       <!-- jungle green -->
+				<quality>Excellent</quality>
+			</li>
+		</specificApparelRequirements>
+	</PawnKindDef>
+	
+	
+	
+	
+	<PawnKindDef Name="SWZsinj_ArmyGeneral" ParentName="SWImpRemnant_ArmyGeneral">
+		<defName>SWZsinj_ArmyGeneral</defName>
+		<label>army general</label>
+		<defaultFactionType>guy762_SWWarlordsFaction_ZsinjDominion</defaultFactionType>
+		<specificApparelRequirements Inherit="False">
+			<li>
+				<apparelLayer>Overhead</apparelLayer>
+				<color>(95,120,75)</color>       <!-- jungle green -->
+			</li>
+			<li>
+				<apparelLayer>OnSkin</apparelLayer>
+				<apparelDef>guy762_ImpUniform_highbrass</apparelDef>
+				<styleDef>guy762_RankStyle_armygen</styleDef>
+				<color>(95,120,75)</color>       <!-- jungle green -->
+				<quality>Excellent</quality>
+			</li>
+		</specificApparelRequirements>
 	</PawnKindDef>
 	
 

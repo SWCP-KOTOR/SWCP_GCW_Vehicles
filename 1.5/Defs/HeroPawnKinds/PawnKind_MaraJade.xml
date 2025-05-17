@@ -94,7 +94,7 @@
 			</li>
 		</skills>
 		<forcedTraits>
-			<PsychicSensitivity>1</PsychicSensitivity>
+			<PsychicSensitivity>2</PsychicSensitivity>
 			<Nerves>2</Nerves>
 			<Nimble>0</Nimble>
 		</forcedTraits>
@@ -180,7 +180,7 @@
 			<Intellectual>10</Intellectual>
 		</skillGains>
 		<forcedTraits>
-		  <PsychicSensitivity>1</PsychicSensitivity>
+		  <PsychicSensitivity>2</PsychicSensitivity>
 		  <Nimble>0</Nimble>
 		</forcedTraits>
 		<requiredWorkTags>

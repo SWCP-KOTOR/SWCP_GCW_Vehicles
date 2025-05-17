@@ -1,0 +1,13 @@
+{
+  "TextureModID": "guy762.na.mm.swvehicles",
+  "ItemDefName": "guy762_ForcePike",
+  "ItemType": "ThingDef",
+  "ItemTypeNamespace": "Verse",
+  "OffX": 0.240700215,
+  "Rotation": 45.0,
+  "ScaleX": 1.5,
+  "ScaleY": 1.5,
+  "BladeStart": 0.218818381,
+  "BladeEnd": 1.06345737,
+  "MeleeWeaponType": 5
+}

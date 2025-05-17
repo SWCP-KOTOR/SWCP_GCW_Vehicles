@@ -42,7 +42,11 @@
 		<skills>
 			<li>
 				<skill>Shooting</skill>
-				<range>6~8</range>
+				<range>4~6</range>
+			</li>
+			<li>
+				<skill>Melee</skill> <!-- needs a lightfoil -->
+				<range>8~10</range>
 			</li>
 			<li>
 				<skill>Social</skill>
@@ -104,6 +108,13 @@
 		</modExtensions>
 	  </PawnKindDef>
 	  
+	  
+	  <PawnKindDef Name="SWPentastar_OctavianGrant"  ParentName="SWWEPlayableVillain_OctavianGrant">
+		<defName>SWPentastar_OctavianGrant</defName>
+		<defaultFactionType>guy762_SWWarlordsFaction_Pentastar</defaultFactionType>
+	  </PawnKindDef>
+	  
+	  
 	  <RulePackDef>
         <defName>guy762_HeroNamer_OctavianGrant</defName>
         <rulePack>
@@ -134,9 +145,9 @@
 		  <Jealous>0</Jealous>
 		</forcedTraits>
 		<requiredWorkTags>
-		  <li>Violent</li>
 		  <li>Intellectual</li>
 		</requiredWorkTags>
+		<workDisables>ManualDumb, Constructing, Crafting, Cooking, Mining, Caring</workDisables>
 		<bodyTypeMale>Thin</bodyTypeMale>
 		<bodyTypeFemale>Thin</bodyTypeFemale>
 		<nameMaker>guy762_HeroNamer_OctavianGrant</nameMaker>
@@ -162,7 +173,6 @@
 		  <li>Violent</li>
 		  <li>Intellectual</li>
 		</requiredWorkTags>
-		<workDisables>ManualDumb, Constructing, Crafting, Cooking, Mining, Caring</workDisables>
 		<bodyTypeMale>Thin</bodyTypeMale>
 		<bodyTypeFemale>Thin</bodyTypeFemale>
 		<nameMaker>guy762_HeroNamer_OctavianGrant</nameMaker>

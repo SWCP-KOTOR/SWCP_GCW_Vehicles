@@ -1,0 +1,11 @@
+{
+  "TextureModID": "guy762.na.mm.swvehicles",
+  "ItemDefName": "guy762_ElectroBatonGCW",
+  "ItemType": "ThingDef",
+  "ItemTypeNamespace": "Verse",
+  "OffX": 0.2478185,
+  "HandsMode": 1,
+  "BladeStart": 0.373472959,
+  "BladeEnd": 0.7015707,
+  "MeleeWeaponType": 40
+}

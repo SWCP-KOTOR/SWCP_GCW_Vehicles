@@ -435,7 +435,7 @@
 		<label>uniform, basic</label>
 		<description>These are simple garments that protect little more than the modesty of the wearer.</description>
 		<graphicData>
-		  <texPath>Apparel/Officer/default/Apparel</texPath>
+		  <texPath>Apparel/ImperialOfficer/default/Apparel</texPath>
 		  <graphicClass>Graphic_Single</graphicClass>
 		  <shaderType>CutoutComplex</shaderType>
 		</graphicData>
@@ -467,7 +467,7 @@
 		  <tags Inherit="False">
 			<li>RemnantEmpire_blankuniform</li>
 		  </tags>
-		  <wornGraphicPath>Apparel/Officer/default/Apparel</wornGraphicPath>
+		  <wornGraphicPath>Apparel/ImperialOfficer/default/Apparel</wornGraphicPath>
 		  <useWornGraphicMask>true</useWornGraphicMask>
 		  <defaultOutfitTags Inherit="False">
 			<li>Worker</li>
@@ -493,7 +493,7 @@
 		<label>uniform, guard's</label>
 		<description>These are simple garments that protect little more than the modesty of the wearer.</description>
 		<graphicData>
-		  <texPath>Apparel/Officer/bigbelt/Apparel</texPath>
+		  <texPath>Apparel/ImperialOfficer/bigbelt/Apparel</texPath>
 		  <graphicClass>Graphic_Single</graphicClass>
 		  <shaderType>CutoutComplex</shaderType>
 		</graphicData>
@@ -528,7 +528,7 @@
 		  <tags Inherit="False">
 			<li>RemnantEmpire_navytrooper</li>
 		  </tags>
-		  <wornGraphicPath>Apparel/Officer/bigbelt/Apparel</wornGraphicPath>
+		  <wornGraphicPath>Apparel/ImperialOfficer/bigbelt/Apparel</wornGraphicPath>
 		  <useWornGraphicMask>true</useWornGraphicMask>
 		  <defaultOutfitTags Inherit="False">
 			<li>Worker</li>
@@ -561,7 +561,7 @@
 		<label>imperial uniform cap</label>
 		<description>A formal cap for military personnel.</description>
 		<graphicData>
-		  <texPath>Apparel/Officer/hat</texPath>
+		  <texPath>Apparel/ImperialOfficer/hat</texPath>
 		  <graphicClass>Graphic_Single</graphicClass>
 		  <shaderType>CutoutComplex</shaderType>
 		</graphicData>
@@ -591,7 +591,7 @@
 		</costList>
 		
 		<apparel>
-		  <wornGraphicPath>Apparel/Officer/hat</wornGraphicPath>
+		  <wornGraphicPath>Apparel/ImperialOfficer/hat</wornGraphicPath>
 		  <useWornGraphicMask>true</useWornGraphicMask>
 		  <bodyPartGroups>
 			<li>UpperHead</li>
@@ -634,7 +634,7 @@
 		<label>imperial uniform, officer's</label>
 		<description>These are simple garments that protect little more than the modesty of the wearer.</description>
 		<graphicData>
-		  <texPath>Apparel/Officer/navylieutenant/Apparel</texPath>
+		  <texPath>Apparel/ImperialOfficer/navylieutenant/Apparel</texPath>
 		  <graphicClass>Graphic_Single</graphicClass>
 		  <shaderType>CutoutComplex</shaderType>
 		</graphicData>
@@ -669,7 +669,7 @@
 		  <tags Inherit="False">
 			<li>RemnantEmpire_impofficer</li>
 		  </tags>
-		  <wornGraphicPath>Apparel/Officer/navylieutenant/Apparel</wornGraphicPath>
+		  <wornGraphicPath>Apparel/ImperialOfficer/navylieutenant/Apparel</wornGraphicPath>
 		  <useWornGraphicMask>true</useWornGraphicMask>
 		  <defaultOutfitTags Inherit="False">
 			<li>Worker</li>
@@ -699,9 +699,9 @@
 	  <ThingStyleDef>
 		<defName>guy762_RankStyle_navylt</defName>
 		<overrideLabel>imperial uniform, navy lieutenant's</overrideLabel>
-		<wornGraphicPath>Apparel/Officer/navylieutenant/Apparel</wornGraphicPath>
+		<wornGraphicPath>Apparel/ImperialOfficer/navylieutenant/Apparel</wornGraphicPath>
 		<graphicData>
-		  <texPath>Apparel/Officer/navylieutenant/Apparel</texPath>
+		  <texPath>Apparel/ImperialOfficer/navylieutenant/Apparel</texPath>
 		  <graphicClass>Graphic_Single</graphicClass>
 		  <shaderType>CutoutComplex</shaderType>
 		</graphicData>
@@ -719,7 +719,7 @@
 		<label>imperial uniform, ranking officer's</label>
 		<description>These are simple garments that protect little more than the modesty of the wearer.</description>
 		<graphicData>
-		  <texPath>Apparel/Officer/linecaptain/Apparel</texPath>
+		  <texPath>Apparel/ImperialOfficer/linecaptain/Apparel</texPath>
 		  <graphicClass>Graphic_Single</graphicClass>
 		  <shaderType>CutoutComplex</shaderType>
 		</graphicData>
@@ -754,7 +754,7 @@
 		  <tags Inherit="False">
 			<li>RemnantEmpire_imprankingofficer</li>
 		  </tags>
-		  <wornGraphicPath>Apparel/Officer/linecaptain/Apparel</wornGraphicPath>
+		  <wornGraphicPath>Apparel/ImperialOfficer/linecaptain/Apparel</wornGraphicPath>
 		  <useWornGraphicMask>true</useWornGraphicMask>
 		  <defaultOutfitTags Inherit="False">
 			<li>Worker</li>
@@ -774,6 +774,13 @@
 		<tradeTags>
 			<li>guy762TT_SEArmor</li>
 		</tradeTags>
+		
+		<comps>
+            <li Class="FCP.Core.CompProperties_LabelColored">
+                <rarity>Rare</rarity>
+            </li>
+        </comps>
+		
 		<colorGenerator Class="ColorGenerator_Options" Inherit="False">
 			<options>
 				<li>
@@ -787,9 +794,9 @@
 	  <ThingStyleDef>
 		<defName>guy762_RankStyle_linecap</defName>
 		<overrideLabel>imperial uniform, captain of the line's</overrideLabel>
-		<wornGraphicPath>Apparel/Officer/linecaptain/Apparel</wornGraphicPath>
+		<wornGraphicPath>Apparel/ImperialOfficer/linecaptain/Apparel</wornGraphicPath>
 		<graphicData>
-		  <texPath>Apparel/Officer/linecaptain/Apparel</texPath>
+		  <texPath>Apparel/ImperialOfficer/linecaptain/Apparel</texPath>
 		  <graphicClass>Graphic_Single</graphicClass>
 		  <shaderType>CutoutComplex</shaderType>
 		</graphicData>
@@ -798,9 +805,9 @@
 	  <ThingStyleDef>
 		<defName>guy762_RankStyle_viceroy</defName>
 		<overrideLabel>imperial uniform, viceroy's</overrideLabel>
-		<wornGraphicPath>Apparel/Officer/viceroy/Apparel</wornGraphicPath>
+		<wornGraphicPath>Apparel/ImperialOfficer/viceroy/Apparel</wornGraphicPath>
 		<graphicData>
-		  <texPath>Apparel/Officer/viceroy/Apparel</texPath>
+		  <texPath>Apparel/ImperialOfficer/viceroy/Apparel</texPath>
 		  <graphicClass>Graphic_Single</graphicClass>
 		  <shaderType>CutoutComplex</shaderType>
 		</graphicData>
@@ -819,7 +826,7 @@
 		<label>imperial uniform, high brass</label>
 		<description>These are simple garments that protect little more than the modesty of the wearer.</description>
 		<graphicData>
-		  <texPath>Apparel/Officer/grandmoff/Apparel</texPath>
+		  <texPath>Apparel/ImperialOfficer/grandmoff/Apparel</texPath>
 		  <graphicClass>Graphic_Single</graphicClass>
 		  <shaderType>CutoutComplex</shaderType>
 		</graphicData>
@@ -854,7 +861,7 @@
 		  <tags Inherit="False">
 			<li>RemnantEmpire_warlord</li>
 		  </tags>
-		  <wornGraphicPath>Apparel/Officer/grandmoff/Apparel</wornGraphicPath>
+		  <wornGraphicPath>Apparel/ImperialOfficer/grandmoff/Apparel</wornGraphicPath>
 		  <useWornGraphicMask>true</useWornGraphicMask>
 		  <defaultOutfitTags Inherit="False">
 			<li>Worker</li>
@@ -878,11 +885,21 @@
 		  <li>
 			<styleDef>guy762_RankStyle_trigit</styleDef>
 		  </li>
+		  <li>
+			<styleDef>guy762_RankStyle_screed</styleDef>
+		  </li>
 		</randomStyle>
 		
 		<tradeTags>
 			<li>guy762TT_SEArmor</li>
 		</tradeTags>
+		
+		<comps>
+            <li Class="FCP.Core.CompProperties_LabelColored">
+                <rarity>Rare</rarity>
+            </li>
+        </comps>
+		
 		<colorGenerator Class="ColorGenerator_Options" Inherit="False">
 			<options>
 				<li>
@@ -896,9 +913,9 @@
 	  <ThingStyleDef>
 		<defName>guy762_RankStyle_armygen</defName>
 		<overrideLabel>imperial uniform, general's</overrideLabel>
-		<wornGraphicPath>Apparel/Officer/armygeneral/Apparel</wornGraphicPath>
+		<wornGraphicPath>Apparel/ImperialOfficer/armygeneral/Apparel</wornGraphicPath>
 		<graphicData>
-		  <texPath>Apparel/Officer/armygeneral/Apparel</texPath>
+		  <texPath>Apparel/ImperialOfficer/armygeneral/Apparel</texPath>
 		  <graphicClass>Graphic_Single</graphicClass>
 		  <shaderType>CutoutComplex</shaderType>
 		</graphicData>
@@ -907,9 +924,9 @@
 	  <ThingStyleDef>
 		<defName>guy762_RankStyle_navyadmiral</defName>
 		<overrideLabel>imperial uniform, admiral's</overrideLabel>
-		<wornGraphicPath>Apparel/Officer/navyadmiral/Apparel</wornGraphicPath>
+		<wornGraphicPath>Apparel/ImperialOfficer/navyadmiral/Apparel</wornGraphicPath>
 		<graphicData>
-		  <texPath>Apparel/Officer/navyadmiral/Apparel</texPath>
+		  <texPath>Apparel/ImperialOfficer/navyadmiral/Apparel</texPath>
 		  <graphicClass>Graphic_Single</graphicClass>
 		  <shaderType>CutoutComplex</shaderType>
 		</graphicData>
@@ -918,9 +935,9 @@
 	  <ThingStyleDef>
 		<defName>guy762_RankStyle_opsgeneral</defName>
 		<overrideLabel>imperial uniform, operations general's</overrideLabel>
-		<wornGraphicPath>Apparel/Officer/operationsgeneral/Apparel</wornGraphicPath>
+		<wornGraphicPath>Apparel/ImperialOfficer/operationsgeneral/Apparel</wornGraphicPath>
 		<graphicData>
-		  <texPath>Apparel/Officer/operationsgeneral/Apparel</texPath>
+		  <texPath>Apparel/ImperialOfficer/operationsgeneral/Apparel</texPath>
 		  <graphicClass>Graphic_Single</graphicClass>
 		  <shaderType>CutoutComplex</shaderType>
 		</graphicData>
@@ -929,9 +946,9 @@
 	  <ThingStyleDef>
 		<defName>guy762_RankStyle_moff</defName>
 		<overrideLabel>imperial uniform, moff's</overrideLabel>
-		<wornGraphicPath>Apparel/Officer/moff/Apparel</wornGraphicPath>
+		<wornGraphicPath>Apparel/ImperialOfficer/moff/Apparel</wornGraphicPath>
 		<graphicData>
-		  <texPath>Apparel/Officer/moff/Apparel</texPath>
+		  <texPath>Apparel/ImperialOfficer/moff/Apparel</texPath>
 		  <graphicClass>Graphic_Single</graphicClass>
 		  <shaderType>CutoutComplex</shaderType>
 		</graphicData>
@@ -940,9 +957,20 @@
 	  <ThingStyleDef>
 		<defName>guy762_RankStyle_trigit</defName>
 		<overrideLabel>imperial uniform, Trigit's</overrideLabel>
-		<wornGraphicPath>Apparel/Officer/trigit/Apparel</wornGraphicPath>
+		<wornGraphicPath>Apparel/ImperialOfficer/trigit/Apparel</wornGraphicPath>
 		<graphicData>
-		  <texPath>Apparel/Officer/trigit/Apparel</texPath>
+		  <texPath>Apparel/ImperialOfficer/trigit/Apparel</texPath>
+		  <graphicClass>Graphic_Single</graphicClass>
+		  <shaderType>CutoutComplex</shaderType>
+		</graphicData>
+	  </ThingStyleDef>
+	  
+	  <ThingStyleDef>
+		<defName>guy762_RankStyle_screed</defName>
+		<overrideLabel>imperial uniform, Screed's</overrideLabel>
+		<wornGraphicPath>Apparel/ImperialOfficer/screed/Apparel</wornGraphicPath>
+		<graphicData>
+		  <texPath>Apparel/ImperialOfficer/screed/Apparel</texPath>
 		  <graphicClass>Graphic_Single</graphicClass>
 		  <shaderType>CutoutComplex</shaderType>
 		</graphicData>
@@ -972,7 +1000,7 @@
 		<label>imperial uniform, top brass</label>
 		<description>These are simple garments that protect little more than the modesty of the wearer.</description>
 		<graphicData>
-		  <texPath>Apparel/Officer/grandmoff/Apparel</texPath>
+		  <texPath>Apparel/ImperialOfficer/grandmoff/Apparel</texPath>
 		  <graphicClass>Graphic_Single</graphicClass>
 		  <shaderType>CutoutComplex</shaderType>
 		</graphicData>
@@ -1007,7 +1035,7 @@
 		  <tags Inherit="False">
 			<li>RemnantEmpire_warlord</li>
 		  </tags>
-		  <wornGraphicPath>Apparel/Officer/grandmoff/Apparel</wornGraphicPath>
+		  <wornGraphicPath>Apparel/ImperialOfficer/grandmoff/Apparel</wornGraphicPath>
 		  <useWornGraphicMask>true</useWornGraphicMask>
 		  <defaultOutfitTags Inherit="False">
 			<li>Worker</li>
@@ -1036,6 +1064,13 @@
 		<tradeTags>
 			<li>guy762TT_SEArmor</li>
 		</tradeTags>
+		
+		<comps>
+            <li Class="FCP.Core.CompProperties_LabelColored">
+                <rarity>Unique</rarity>
+            </li>
+        </comps>
+		
 		<colorGenerator Class="ColorGenerator_Options" Inherit="False">
 			<options>
 				<li>
@@ -1065,9 +1100,9 @@
 	  <ThingStyleDef>
 		<defName>guy762_RankStyle_grandmoff</defName>
 		<overrideLabel>imperial uniform, grand moff's</overrideLabel>
-		<wornGraphicPath>Apparel/Officer/grandmoff/Apparel</wornGraphicPath>
+		<wornGraphicPath>Apparel/ImperialOfficer/grandmoff/Apparel</wornGraphicPath>
 		<graphicData>
-		  <texPath>Apparel/Officer/grandmoff/Apparel</texPath>
+		  <texPath>Apparel/ImperialOfficer/grandmoff/Apparel</texPath>
 		  <graphicClass>Graphic_Single</graphicClass>
 		  <shaderType>CutoutComplex</shaderType>
 		</graphicData>
@@ -1076,9 +1111,9 @@
 	  <ThingStyleDef>
 		<defName>guy762_RankStyle_grandadmiral</defName>
 		<overrideLabel>imperial uniform, grand admiral's</overrideLabel>
-		<wornGraphicPath>Apparel/Officer/grandadmiral/Apparel</wornGraphicPath>
+		<wornGraphicPath>Apparel/ImperialOfficer/grandadmiral/Apparel</wornGraphicPath>
 		<graphicData>
-		  <texPath>Apparel/Officer/grandadmiral/Apparel</texPath>
+		  <texPath>Apparel/ImperialOfficer/grandadmiral/Apparel</texPath>
 		  <graphicClass>Graphic_Single</graphicClass>
 		  <shaderType>CutoutComplex</shaderType>
 		</graphicData>
@@ -1087,9 +1122,9 @@
 	  <ThingStyleDef>
 		<defName>guy762_RankStyle_director</defName>
 		<overrideLabel>imperial uniform, director's</overrideLabel>
-		<wornGraphicPath>Apparel/Officer/director/Apparel</wornGraphicPath>
+		<wornGraphicPath>Apparel/ImperialOfficer/director/Apparel</wornGraphicPath>
 		<graphicData>
-		  <texPath>Apparel/Officer/director/Apparel</texPath>
+		  <texPath>Apparel/ImperialOfficer/director/Apparel</texPath>
 		  <graphicClass>Graphic_Single</graphicClass>
 		  <shaderType>CutoutComplex</shaderType>
 		</graphicData>
@@ -1098,9 +1133,9 @@
 	  <ThingStyleDef>
 		<defName>guy762_RankStyle_zsinj</defName>
 		<overrideLabel>imperial uniform, Zsinj's</overrideLabel>
-		<wornGraphicPath>Apparel/Officer/zsinj/Apparel</wornGraphicPath>
+		<wornGraphicPath>Apparel/ImperialOfficer/zsinj/Apparel</wornGraphicPath>
 		<graphicData>
-		  <texPath>Apparel/Officer/zsinj/Apparel</texPath>
+		  <texPath>Apparel/ImperialOfficer/zsinj/Apparel</texPath>
 		  <graphicClass>Graphic_Single</graphicClass>
 		  <shaderType>CutoutComplex</shaderType>
 		</graphicData>
@@ -1109,9 +1144,9 @@
 	  <ThingStyleDef>
 		<defName>guy762_RankStyle_tigellinus</defName>
 		<overrideLabel>imperial uniform, Tigellinus'</overrideLabel>
-		<wornGraphicPath>Apparel/Officer/tigellinus/Apparel</wornGraphicPath>
+		<wornGraphicPath>Apparel/ImperialOfficer/tigellinus/Apparel</wornGraphicPath>
 		<graphicData>
-		  <texPath>Apparel/Officer/tigellinus/Apparel</texPath>
+		  <texPath>Apparel/ImperialOfficer/tigellinus/Apparel</texPath>
 		  <graphicClass>Graphic_Single</graphicClass>
 		  <shaderType>CutoutComplex</shaderType>
 		</graphicData>

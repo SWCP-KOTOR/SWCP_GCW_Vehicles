@@ -98,6 +98,18 @@
 			  <forcedHair>VHE_Celebrity</forcedHair>
 			</value>
 		</li>
+		<li Class="PatchOperationReplace">
+		  <xpath>Defs/PawnKindDef[@Name="SWWEPlayableHero_Corran"]/forcedHair</xpath>
+			<value>
+			  <forcedHair>VHE_Marston</forcedHair>
+			</value>
+		</li>
+		<li Class="PatchOperationReplace">
+		  <xpath>Defs/PawnKindDef[@Name="SWWEPlayableVillain_YsanneIsard"]/forcedHair</xpath>
+			<value>
+			  <forcedHair>VHE_Micah</forcedHair>
+			</value>
+		</li>
 	  </operations>
 	</match>
   

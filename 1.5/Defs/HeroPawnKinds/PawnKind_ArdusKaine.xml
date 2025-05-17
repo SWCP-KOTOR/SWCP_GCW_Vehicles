@@ -103,6 +103,11 @@
 		</modExtensions>
 	  </PawnKindDef>
 	  
+	  <PawnKindDef Name="SWPentastar_ArdusKaine"  ParentName="SWWEPlayableVillain_ArdusKaine">
+		<defName>SWPentastar_ArdusKaine</defName>
+		<defaultFactionType>guy762_SWWarlordsFaction_Pentastar</defaultFactionType>
+	  </PawnKindDef>
+	  
 	  <RulePackDef>
         <defName>guy762_HeroNamer_ArdusKaine</defName>
         <rulePack>

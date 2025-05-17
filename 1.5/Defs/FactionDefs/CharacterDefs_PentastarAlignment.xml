@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+	
+	<FCP.Core.CharacterDef>
+        <defName>SWPentastarCharacter_ArdusKaine</defName>
+        <pawnKind>SWPentastar_ArdusKaine</pawnKind>
+        <faction>guy762_SWWarlordsFaction_Pentastar</faction>
+        <xenotype>Baseliner</xenotype>
+        <roles>
+            <li Class="FCP.Core.CharacterRole_FactionLeader">
+                <seniority>1000</seniority>
+            </li>
+        </roles>
+    </FCP.Core.CharacterDef>
+
+
+    <FCP.Core.CharacterDef>
+        <defName>SWPentastarCharacter_OctavianGrant</defName>
+        <pawnKind>SWPentastar_OctavianGrant</pawnKind>
+        <faction>guy762_SWWarlordsFaction_Pentastar</faction>
+        <xenotype>Baseliner</xenotype>
+        <roles>
+            <li Class="FCP.Core.CharacterRole_FactionLeader">
+                <seniority>900</seniority>
+            </li>
+        </roles>
+    </FCP.Core.CharacterDef>
+
+
+
+    <FCP.Core.CharacterDef>
+        <defName>SWPentastarCharacter_IbDekeet</defName>
+        <pawnKind>SWPentastar_Moff</pawnKind>
+        <faction>guy762_SWWarlordsFaction_Pentastar</faction>
+        <xenotype>Baseliner</xenotype>
+		<roles>
+            <li Class="FCP.Core.CharacterRole_FactionLeader">
+                <seniority>700</seniority>
+            </li>
+        </roles>
+        <definitions>
+            <li Class="FCP.Core.CharacterStoryDefinition">
+                <firstName>Ib</firstName>
+                <lastName>Dekeet</lastName>
+                <nickname>Dekeet</nickname>
+                <gender>Male</gender>
+                <age>53</age>
+            </li>
+            <li Class="FCP.Core.CharacterAppearanceDefinition">
+                <hairColor>(50,50,50)</hairColor>
+                <hairDef>Scatman</hairDef>
+                <beardDef>Machete</beardDef>
+                <skinColorOverride>(255,239,189)</skinColorOverride>
+                <headTypeDef>Male_AveragePointy</headTypeDef>
+                <bodyTypeDef>Male</bodyTypeDef>
+            </li>
+        </definitions>
+    </FCP.Core.CharacterDef>
+	
+	
+	<FCP.Core.CharacterDef>
+        <defName>SWPentastarCharacter_TessalaCorvae</defName>
+        <pawnKind>SWPentastar_TessalaCorvae</pawnKind>
+        <faction>guy762_SWWarlordsFaction_Pentastar</faction>
+        <xenotype>Baseliner</xenotype>
+        <roles>
+            <li Class="FCP.Core.CharacterRole_FactionLeader">
+                <seniority>500</seniority>
+            </li>
+        </roles>
+    </FCP.Core.CharacterDef>
+
+
+
+
+
+
+</Defs>

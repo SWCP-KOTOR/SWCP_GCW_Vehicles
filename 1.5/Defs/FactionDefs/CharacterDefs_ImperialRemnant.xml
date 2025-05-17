@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+    
+
+    <FCP.Core.CharacterDef>
+        <defName>SWImpRemnantCharacter_YsanneIsard</defName>
+        <pawnKind>SWImpRemnant_YsanneIsard</pawnKind>
+        <faction>guy762_SWWarlordsFaction_ImpRemnant</faction>
+        <xenotype>Baseliner</xenotype>
+        <roles>
+            <li Class="FCP.Core.CharacterRole_FactionLeader">
+                <seniority>1000</seniority>
+            </li>
+        </roles>
+    </FCP.Core.CharacterDef>
+	
+	
+	<FCP.Core.CharacterDef>
+        <defName>SWImpRemnantCharacter_RufaanTigellinus</defName>
+        <pawnKind>SWImpRemnant_RufaanTigellinus</pawnKind>
+        <faction>guy762_SWWarlordsFaction_ImpRemnant</faction>
+        <xenotype>Baseliner</xenotype>
+        <roles>
+            <li Class="FCP.Core.CharacterRole_FactionLeader">
+                <seniority>500</seniority>
+            </li>
+        </roles>
+    </FCP.Core.CharacterDef>
+	
+	
+	
+
+</Defs>

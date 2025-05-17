@@ -159,7 +159,7 @@
 					<key>passenger</key>
 					<label>Spotter</label>
 					<slots>1</slots>
-					<comfort>-0.5</comfort>
+					<comfort>-0.75</comfort>
 				</li>
 			</roles>
 		</properties>

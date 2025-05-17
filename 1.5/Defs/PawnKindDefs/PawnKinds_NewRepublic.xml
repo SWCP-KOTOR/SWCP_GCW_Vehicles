@@ -586,9 +586,11 @@
 		<apparelTags>
 			<li>KotORUtility_engi_novisor</li>
 			<li>KotORUtility_weakgrenade</li>
+			<li>SWDetpackCase</li>
 			<li>NewRepublic_RebelAgent_hats</li>
 		</apparelTags>
 		<apparelRequired>
+			<li>guy762_JKDetpackCase</li>
 			<li>guy762_Accessory_poncho</li>
 			<li>guy762_Jacket_scout</li>
 			<li>guy762_Clothing_rebel</li>

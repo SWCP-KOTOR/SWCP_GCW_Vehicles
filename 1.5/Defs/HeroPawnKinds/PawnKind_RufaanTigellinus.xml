@@ -111,6 +111,15 @@
 		</modExtensions>
 	  </PawnKindDef>
 	  
+	  
+	  
+	  <PawnKindDef Name="SWImpRemnant_RufaanTigellinus"  ParentName="SWWEPlayableVillain_RufaanTigellinus">
+		<defName>SWImpRemnant_RufaanTigellinus</defName>
+		<defaultFactionType>guy762_SWWarlordsFaction_ImpRemnant</defaultFactionType>
+	  </PawnKindDef>
+	  
+	  
+	  
 	  <RulePackDef>
         <defName>guy762_HeroNamer_RufaanTigellinus</defName>
         <rulePack>

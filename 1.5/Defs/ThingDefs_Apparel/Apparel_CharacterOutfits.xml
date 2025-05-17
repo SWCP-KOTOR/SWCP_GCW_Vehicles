@@ -76,6 +76,13 @@
 		<tradeTags>
 			<li>guy762TT_KotORCharacterItem</li>
 		</tradeTags>
+		
+		<comps>
+            <li Class="FCP.Core.CompProperties_LabelColored">
+                <rarity>Unique</rarity>
+            </li>
+        </comps>
+		
 		<colorGenerator Class="ColorGenerator_Options" Inherit="False">
 			<options>
 				<li>
@@ -148,6 +155,11 @@
 				</li>
 			</options>
 		</colorGenerator>
+		<comps>
+            <li Class="FCP.Core.CompProperties_LabelColored">
+                <rarity>Unique</rarity>
+            </li>
+        </comps>
 		<!--comps>
 		  <li Class="ModularWeapons.CompProperties_ModularParts">
 			<compClass>ModularWeapons.CompModularParts</compClass>
@@ -190,6 +202,18 @@
 		<tradeTags>
 			<li>guy762TT_KotORCharacterItem</li>
 		</tradeTags>
+		
+		<comps Inherit="False">
+            <li Class="CompProperties_Forbiddable" />
+			<li Class="CompProperties_Styleable"></li>
+			<li>
+				<compClass>CompColorable</compClass>
+			</li>
+			<li Class="FCP.Core.CompProperties_LabelColored">
+                <rarity>Unique</rarity>
+            </li>
+        </comps>
+		
 		<colorGenerator Class="ColorGenerator_Options" Inherit="False">
 			<options>
 				<li>
@@ -293,6 +317,13 @@
 		<tradeTags>
 			<li>guy762TT_KotORCharacterItem</li>
 		</tradeTags>
+		
+		<comps>
+            <li Class="FCP.Core.CompProperties_LabelColored">
+                <rarity>Unique</rarity>
+            </li>
+        </comps>
+		
 		<colorGenerator Class="ColorGenerator_Options" Inherit="False">
 			<options>
 				<li>
@@ -499,6 +530,13 @@
 		<tradeTags>
 			<li>guy762TT_KotORCharacterItem</li>
 		</tradeTags>
+		
+		<comps>
+            <li Class="FCP.Core.CompProperties_LabelColored">
+                <rarity>Unique</rarity>
+            </li>
+        </comps>
+		
 		<colorGenerator Class="ColorGenerator_Options" Inherit="False">
 			<options>
 				<li>
@@ -547,7 +585,7 @@
 			<SocialImpact>1</SocialImpact>
 		</equippedStatOffsets>
 		
-		<randomStyleChance>0.5</randomStyleChance>
+		<randomStyleChance>1</randomStyleChance>
 		<randomStyle>
 			  <li>
 				<styleDef>guy762_RebelPilotHelmetStyle_wedge</styleDef>
@@ -555,9 +593,15 @@
 			  <li>
 				<styleDef>guy762_RebelPilotHelmetStyle_luke</styleDef>
 			  </li>
+			  <li>
+				<styleDef>guy762_RebelPilotHelmetStyle_corran</styleDef>
+			  </li>
 		</randomStyle>
 		<comps>
 			<li Class="CompProperties_Styleable"></li>
+			<li Class="FCP.Core.CompProperties_LabelColored">
+                <rarity>Unique</rarity>
+            </li>
 		</comps>
 		
 		<apparel Inherit="False">
@@ -605,6 +649,17 @@
 		<wornGraphicPath>Apparel/RebelPilot/helmet_luke/helmet</wornGraphicPath>
 		<graphicData>
 		  <texPath>Apparel/RebelPilot/helmet_luke/helmet</texPath>
+		  <graphicClass>Graphic_Single</graphicClass>
+		  <shaderType>CutoutComplex</shaderType>
+		</graphicData>
+	</ThingStyleDef>
+	
+	<ThingStyleDef>
+		<defName>guy762_RebelPilotHelmetStyle_corran</defName>
+		<overrideLabel>K-22995 flight helmet (Corran's)</overrideLabel>
+		<wornGraphicPath>Apparel/RebelPilot/helmet_corran/helmet</wornGraphicPath>
+		<graphicData>
+		  <texPath>Apparel/RebelPilot/helmet_corran/helmet</texPath>
 		  <graphicClass>Graphic_Single</graphicClass>
 		  <shaderType>CutoutComplex</shaderType>
 		</graphicData>
@@ -668,9 +723,13 @@
 				<!-- <styleDef>guy762_RebelPilotHelmetStyle_novicestripe</styleDef> -->
 			  <!-- </li> -->
 		<!-- </randomStyle> -->
-		<!-- <comps> -->
+
+		<comps>
+            <li Class="FCP.Core.CompProperties_LabelColored">
+                <rarity>Unique</rarity>
+            </li>
 			<!-- <li Class="CompProperties_Styleable"></li> -->
-		<!-- </comps> -->
+        </comps>
 		
 		<apparel Inherit="False">
 			<tags>

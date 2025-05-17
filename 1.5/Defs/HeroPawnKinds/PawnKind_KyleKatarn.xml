@@ -22,7 +22,8 @@
 		<itemQuality>Legendary</itemQuality>
 		<apparelMoney>29999</apparelMoney>
 		<apparelTags>
-		  <li>KotORHeroAccessories_canderous</li>
+		  <!-- <li>KotORHeroAccessories_canderous</li> -->
+		  <li>SWDetpackCase</li>
 		</apparelTags>
 		<apparelRequired>
 		   <li>guy762_JKenergyshield_big</li>
@@ -84,7 +85,7 @@
 			</li>
 		</skills>
 		<forcedTraits>
-			<PsychicSensitivity>2</PsychicSensitivity>
+			<PsychicSensitivity>1</PsychicSensitivity>
 			<Tough>0</Tough>
 			<ShootingAccuracy>-1</ShootingAccuracy>
 		</forcedTraits>
@@ -125,9 +126,8 @@
 		</li>
 		<li MayRequire="lee.theforce.lightsaber" Class="Lightsaber.ModExtension_LightsaberPresets">
             <bladeColors>
-               <!-- classic blue -->
-               <li>(0, 64, 255, 255)</li>
-               <!-- <li>255, 0, 0, 255</li> -->
+               <li>(0, 64, 255, 255)</li> <!-- KotOR blue -->
+               <li>(0, 255, 0, 255)</li> <!-- basic green -->
             </bladeColors>
             <coreColors>
                <!-- White Core -->
@@ -196,7 +196,7 @@
 			<Melee>10</Melee>
 		</skillGains>
 		<forcedTraits>
-		  <PsychicSensitivity>2</PsychicSensitivity>
+		  <PsychicSensitivity>1</PsychicSensitivity>
 		</forcedTraits>
 		<bodyTypeMale>Male</bodyTypeMale>
 		<bodyTypeFemale>Female</bodyTypeFemale>

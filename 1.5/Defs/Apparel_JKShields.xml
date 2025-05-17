@@ -25,7 +25,8 @@
 	<!--stackLimit>10</stackLimit><drawGUIOverlay>true</drawGUIOverlay-->
     <apparel>
       <bodyPartGroups>
-        <li>Waist</li>
+        <!-- <li>Waist</li> -->
+		<li>Arms</li>
       </bodyPartGroups>
 	  <tags>
 		<li>SWShield_light</li>
@@ -133,6 +134,7 @@
 		  
 		  <li>Bomb</li>
 		  <li>guy762_GrenadeDamage_frag</li>
+		  <li>guy762_GrenadeDamage_detpack</li>
 		  <li MayRequire="guy762.NA.MM.SWVehicles">guy762_ExplosiveDamage_conc</li>
         </blockedDamageDefs>
 		<ignoredDamageDefs>
@@ -238,7 +240,8 @@
 	<!--stackLimit>10</stackLimit><drawGUIOverlay>true</drawGUIOverlay-->
     <apparel>
       <bodyPartGroups>
-        <li>Waist</li>
+        <!-- <li>Waist</li> -->
+		<li>Arms</li>
       </bodyPartGroups>
 	  <tags>
 		<li>SWShield_heavy</li>
@@ -270,6 +273,9 @@
 			<hotKey>Misc4</hotKey>
 			<chargeNoun>usage</chargeNoun>
 			<displayGizmoWhileUndrafted>false</displayGizmoWhileUndrafted>
+		</li>
+		<li Class="FCP.Core.CompProperties_LabelColored">
+			<rarity>Rare</rarity>
 		</li>
     </comps>
   </ThingDef>
@@ -346,6 +352,7 @@
 		  
 		  <li>Bomb</li>
 		  <li>guy762_GrenadeDamage_frag</li>
+		  <li>guy762_GrenadeDamage_detpack</li>
 		  <li MayRequire="guy762.NA.MM.SWVehicles">guy762_ExplosiveDamage_conc</li>
         </blockedDamageDefs>
 		<ignoredDamageDefs>

@@ -10,14 +10,14 @@
     <categoryTag>Empire</categoryTag>
     <requiredCountAtGameStart>1</requiredCountAtGameStart>
     <maxConfigurableAtWorldCreation>9999</maxConfigurableAtWorldCreation>
-	<listOrderPriority>1763</listOrderPriority>
-	<configurationListOrderPriority>1763</configurationListOrderPriority>
+	<listOrderPriority>1764</listOrderPriority>
+	<configurationListOrderPriority>1764</configurationListOrderPriority>
     <maxCountAtGameStart>1</maxCountAtGameStart>
 	<techLevel>Spacer</techLevel>
     <canMakeRandomly>true</canMakeRandomly>
     <canSiege>true</canSiege>
     <canStageAttacks>true</canStageAttacks>
-	<hostileToFactionlessHumanlikes>true</hostileToFactionlessHumanlikes>
+	<hostileToFactionlessHumanlikes>false</hostileToFactionlessHumanlikes>
     <factionIconPath>World/PentastarAlignment</factionIconPath>
 	<settlementTexturePath>World/WorldObjects/DefaultSettlement</settlementTexturePath>
 	<allowedArrivalTemperatureRange>-40~65</allowedArrivalTemperatureRange>
@@ -33,16 +33,14 @@
 	<leaderTitle>governor</leaderTitle>
 	<leaderForceGenerateNewPawn>true</leaderForceGenerateNewPawn>
 	<fixedLeaderKinds>
-      <!-- <li>SWImpRemnant_Viceroy</li> too low ranking -->
-      <li>SWImpRemnant_Moff</li>
-      <!-- <li>SWImpRemnant_GrandMoff</li> should be story quest-only -->
-      <!-- <li>SWImpRemnant_NavyAdmiral</li> -->
-      <!-- <li>SWImpRemnant_ArmyGeneral</li> political officers only, Zsinj/Maldrood/Eriadu could use military officers instead -->
+      <li>SWPentastar_Moff</li>
     </fixedLeaderKinds>
 	
 	<permanentEnemyToEveryoneExceptPlayer>true</permanentEnemyToEveryoneExceptPlayer>
 	<naturalEnemy>true</naturalEnemy>
-	<settlementGenerationWeight>2</settlementGenerationWeight>
+	
+	<!-- <settlementGenerationWeight>2</settlementGenerationWeight> -->
+	<settlementGenerationWeight>5</settlementGenerationWeight>
 	<modExtensions Inherit="False">
       <li MayRequire="Rick.FCP.Core.Tools.Beta" Class="FCP.Currencies.CurrencyReplacement">
 		<currency>guy762_KotORcredits</currency>
@@ -56,6 +54,7 @@
 	  <li Class="VFECore.FactionDefExtension">
 		<startingGoodwillByFactionDefs>
 			<guy762_SWWarlordsFaction_ImpRemnant>-50~0</guy762_SWWarlordsFaction_ImpRemnant>
+			<guy762_SWWarlordsFaction_ZsinjDominion>-100</guy762_SWWarlordsFaction_ZsinjDominion>
 			
 			<guy762_KotORFaction_HuttCartel>0</guy762_KotORFaction_HuttCartel>
 			<guy762_KotORFaction_ViciousHutts>0</guy762_KotORFaction_ViciousHutts>
@@ -71,6 +70,13 @@
 		<neverConnectToRoads>false</neverConnectToRoads>
 		<minDistanceToOtherSettlements>40</minDistanceToOtherSettlements>
       </li>
+	  <li Class="FCP.Core.ModExtension_FactionTerritory">
+			<territoryColor>(65,70,190,32)</territoryColor>
+			<territoryBorderColor>(30,35,85,128)</territoryBorderColor>
+			<factionLabelColor>(30,35,85,255)</factionLabelColor>
+			<initialTerritoryRadius>10</initialTerritoryRadius>
+			<renderTerritoryOverWater>false</renderTerritoryOverWater>
+	  </li>
 	  <li MayRequire="Rick.FCP.Core.Tools.Beta" Class="FCP.Core.ModExtension_FixedIdeo">
 		<ideoIconDef>guy762_IdeoIcon_empire</ideoIconDef>
 		<ideoColorDef>DarkGrey</ideoColorDef>
@@ -327,6 +333,8 @@
           <!-- <SWPentastar_ArmySniper>25</SWPentastar_ArmySniper> -->
           <SWPentastar_ArmyLieutenant>100</SWPentastar_ArmyLieutenant>
 		  
+          <SWPentastar_ArmyMajor>100</SWPentastar_ArmyMajor>
+		  
           <SWImpRemnant_ArmyCommando>50</SWImpRemnant_ArmyCommando>
 		  
 		  <SWPentastar_InQuestor_PotF MayRequire="guy762.Lee.KotORPotF">10</SWPentastar_InQuestor_PotF>
@@ -397,7 +405,7 @@
 		  
 		  <SWPentastar_EnforcerTrooper>25</SWPentastar_EnforcerTrooper>
 
-		  <SWImpRemnant_NavyLt>5</SWImpRemnant_NavyLt>
+		  <SWPentastar_NavyLt>5</SWPentastar_NavyLt>
 		  <SWPentastar_TIEpilot>5</SWPentastar_TIEpilot>
 		  <SWImpRemnant_TIEace>5</SWImpRemnant_TIEace>
 
@@ -405,10 +413,12 @@
           <!-- <SWPentastar_ArmyHeavy>5</SWPentastar_ArmyHeavy> -->
           <!-- <SWPentastar_ArmySniper>5</SWPentastar_ArmySniper> -->
           <SWPentastar_ArmyLieutenant>10</SWPentastar_ArmyLieutenant>
+		  <SWPentastar_ArmyMajor>5</SWPentastar_ArmyMajor>
 		  <SWPentastar_ArmyGeneral>5</SWPentastar_ArmyGeneral>
 		  
-		  <SWImpRemnant_Viceroy>5</SWImpRemnant_Viceroy>
-		  <SWImpRemnant_Moff>5</SWImpRemnant_Moff>
+		  <SWPentastar_OpsGeneral>5</SWPentastar_OpsGeneral>
+		  <SWPentastar_Viceroy>5</SWPentastar_Viceroy>
+		  <SWPentastar_Moff>5</SWPentastar_Moff>
 		  
 		  <SWPentastar_InQuestor_PotF MayRequire="guy762.Lee.KotORPotF">10</SWPentastar_InQuestor_PotF>
 		  

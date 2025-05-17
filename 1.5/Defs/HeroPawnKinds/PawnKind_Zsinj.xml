@@ -62,6 +62,7 @@
 			</li>
 		</skills>
 		<forcedTraits>
+			<Greedy>0</Greedy>
 			<Psychopath>0</Psychopath>
 			<TooSmart>0</TooSmart>
 			<Gourmand>0</Gourmand>
@@ -164,6 +165,7 @@
 			<Intellectual>10</Intellectual>
 		</skillGains>
 		<forcedTraits>
+		  <Greedy>0</Greedy>
 		  <Psychopath>0</Psychopath>
 		</forcedTraits>
 		<requiredWorkTags>

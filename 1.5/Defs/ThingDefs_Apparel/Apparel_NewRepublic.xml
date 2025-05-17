@@ -368,6 +368,12 @@
 		<tradeTags>
 			<li>guy762TT_KotORClothes</li>
 		</tradeTags>
+		
+		<comps>
+            <li Class="FCP.Core.CompProperties_LabelColored">
+                <rarity>Rare</rarity>
+            </li>
+        </comps>
 
 		<colorGenerator Class="ColorGenerator_Options" Inherit="False">
 			<options>

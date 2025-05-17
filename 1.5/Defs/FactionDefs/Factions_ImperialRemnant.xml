@@ -42,7 +42,9 @@
 	
 	<permanentEnemyToEveryoneExceptPlayer>true</permanentEnemyToEveryoneExceptPlayer>
 	<naturalEnemy>true</naturalEnemy>
-	<settlementGenerationWeight>2</settlementGenerationWeight>
+	
+	<!-- <settlementGenerationWeight>2</settlementGenerationWeight> -->
+	<settlementGenerationWeight>5</settlementGenerationWeight>
 	<modExtensions Inherit="False">
       <li MayRequire="Rick.FCP.Core.Tools.Beta" Class="FCP.Currencies.CurrencyReplacement">
 		<currency>guy762_KotORcredits</currency>
@@ -56,6 +58,7 @@
 	  <li Class="VFECore.FactionDefExtension">
 		<startingGoodwillByFactionDefs>
 			<guy762_SWWarlordsFaction_Pentastar>-50~0</guy762_SWWarlordsFaction_Pentastar>
+			<guy762_SWWarlordsFaction_ZsinjDominion>-100</guy762_SWWarlordsFaction_ZsinjDominion>
 			
 			<guy762_KotORFaction_HuttCartel>0</guy762_KotORFaction_HuttCartel>
 			<guy762_KotORFaction_ViciousHutts>0</guy762_KotORFaction_ViciousHutts>
@@ -71,6 +74,13 @@
 		<neverConnectToRoads>false</neverConnectToRoads>
 		<minDistanceToOtherSettlements>40</minDistanceToOtherSettlements>
       </li>
+	  <li Class="FCP.Core.ModExtension_FactionTerritory">
+			<territoryColor>(50,215,60,32)</territoryColor>
+			<territoryBorderColor>(25,110,30,128)</territoryBorderColor>
+			<factionLabelColor>(25,110,30,255)</factionLabelColor>
+			<initialTerritoryRadius>10</initialTerritoryRadius>
+			<renderTerritoryOverWater>false</renderTerritoryOverWater>
+	  </li>
 	  <li MayRequire="Rick.FCP.Core.Tools.Beta" Class="FCP.Core.ModExtension_FixedIdeo">
 		<ideoIconDef>guy762_IdeoIcon_empire</ideoIconDef>
 		<ideoColorDef>DarkGrey</ideoColorDef>
@@ -292,6 +302,8 @@
           <SWImpRemnant_ArmySniper>15</SWImpRemnant_ArmySniper>
           <!-- <SWImpRemnant_ArmyHeavy>25</SWImpRemnant_ArmyHeavy> -->
 		  
+          <SWImpRemnant_ArmyLieutenant>25</SWImpRemnant_ArmyLieutenant>
+		  
 		  <SWImpRemnant_stormtrooper>25</SWImpRemnant_stormtrooper>
 		  <SWImpRemnant_stormierifle>10</SWImpRemnant_stormierifle>
 		  <SWImpRemnant_stormieofficer>10</SWImpRemnant_stormieofficer>
@@ -398,9 +410,9 @@
         <options>
 		  <SWImpRemnant_stormcommando>50</SWImpRemnant_stormcommando>
 		  
-		  <KotORSith_assassin_PotF MayRequire="guy762.Lee.KotORPotF">100</KotORSith_assassin_PotF>
+		  <!-- <KotORSith_assassin_PotF MayRequire="guy762.Lee.KotORPotF">100</KotORSith_assassin_PotF> -->
 		  
-		  <KotORSith_assassin_VPE MayRequire="lee.theforce.psycast">100</KotORSith_assassin_VPE>
+		  <!-- <KotORSith_assassin_VPE MayRequire="lee.theforce.psycast">100</KotORSith_assassin_VPE> -->
         </options>
       </li>
 	  

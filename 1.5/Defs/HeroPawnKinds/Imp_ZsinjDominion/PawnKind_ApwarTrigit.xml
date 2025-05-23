@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>	
+	
+	<PawnKindDef Name="SWWEPlayableVillain_ApwarTrigit"  ParentName="guy762_HeroPawnKindBase">
+		<defName>SWWEPlayableVillain_ApwarTrigit</defName>
+		<nameMaker>guy762_HeroNamer_ApwarTrigit</nameMaker>
+		<label>Admiral</label>
+		<combatPower>500</combatPower>
+		<minGenerationAge>46</minGenerationAge>
+		<maxGenerationAge>47</maxGenerationAge>
+		<fixedGender>Male</fixedGender>
+		<forcedHair>Junkie</forcedHair>
+		<forcedHairColor>(50,50,50)</forcedHairColor>
+		<skinColorOverride>(228, 158, 90)</skinColorOverride>
+		<xenotypeSet>
+			<xenotypeChances>
+				<Baseliner>999</Baseliner>
+			</xenotypeChances>
+		</xenotypeSet>
+		<useFactionXenotypes>false</useFactionXenotypes>
+		<itemQuality>Legendary</itemQuality>
+		<apparelMoney>49999</apparelMoney>
+		<apparelTags>
+		  <li>KotOREquipment_officer</li>
+		</apparelTags>
+		<apparelRequired>
+		   <li>guy762_ImpUniform_highbrass</li>
+		</apparelRequired>
+		<specificApparelRequirements>
+			<li>
+				<apparelLayer>OnSkin</apparelLayer>
+				<apparelDef>guy762_ImpUniform_highbrass</apparelDef>
+				<styleDef>guy762_RankStyle_ImpOfficer_trigit</styleDef>
+				<color>(50,50,50)</color>
+				<quality>Legendary</quality>
+			</li>
+		</specificApparelRequirements>
+		<weaponMoney>99999999</weaponMoney>
+		<weaponTags>
+		  <li>SWRanged_Power5pistol</li>
+		</weaponTags>
+		<skills>
+			<li>
+				<skill>Shooting</skill>
+				<range>6~8</range>
+			</li>
+			<li>
+				<skill>Artistic</skill>
+				<range>8~10</range>
+			</li>
+			<li>
+				<skill>Social</skill>
+				<range>10~12</range>
+			</li>
+			<li>
+				<skill>Intellectual</skill>
+				<range>14~16</range>
+			</li>
+		</skills>
+		<forcedTraits>
+			<Nerves>1</Nerves>
+			<TooSmart>0</TooSmart>
+			<Beauty>1</Beauty>
+		</forcedTraits>
+		
+		<backstoryFiltersOverride>
+		  <li>
+			<categories>
+			  <li>guy762BSC_apwartrigit</li>
+			</categories>
+		  </li>
+		</backstoryFiltersOverride>
+		<abilities>
+			<li>guy762_Ability_CommandTierIV</li>
+		</abilities>
+		<modExtensions>
+			<li Class="BodyTypeForPawnKind.ModExtension_HeadTypesOfPawnKind">
+			  <whitelist>
+				<li>Male_AveragePointy</li>
+			  </whitelist>
+			  <blacklist>
+				<!--leave blank to disable-->
+			  </blacklist>
+			  <priority>
+				<li>Male_AveragePointy</li>
+			  </priority>
+			  <checkGender>False</checkGender>
+			</li>
+			<li Class="BodyTypeForPawnKind.ModExtension_ForcedStyleItem">
+			  <forcedBeard>Boxed</forcedBeard>
+			</li>
+			<li Class="AddGeneForPK.PKAdditionalGenes">
+			  <geneSets>
+				<li>
+				  <isXenogene>false</isXenogene>
+				  <chance>1</chance>
+				  <geneDefs>
+					<li>Hair_DarkBlack</li>
+					<li>Skin_Melanin7</li>
+				  </geneDefs>
+				</li>
+			  </geneSets>
+			</li>
+		</modExtensions>
+	  </PawnKindDef>
+	  
+	  <PawnKindDef Name="SWZsinj_ApwarTrigit"  ParentName="SWWEPlayableVillain_ApwarTrigit">
+		<defName>SWZsinj_ApwarTrigit</defName>
+		<defaultFactionType>guy762_SWWarlordsFaction_ZsinjDominion</defaultFactionType>
+	  </PawnKindDef>
+	  
+	  
+	  
+	  <RulePackDef>
+        <defName>guy762_HeroNamer_ApwarTrigit</defName>
+        <rulePack>
+            <rulesStrings>
+                <li>r_name->[apwar] '[trigit]' [trigit]</li>
+				<li>apwar->Apwar</li>
+				<li>trigit->Trigit</li>
+            </rulesStrings>
+        </rulePack>
+    </RulePackDef>
+	
+		<!--[PAWN_nameDef] [PAWN_possessive] [PAWN_pronoun]-->
+	
+	
+	<BackstoryDef>
+		<defName>guy762_BackstoryC_ApwarTrigit</defName>
+		<title>Sienar Test Pilot</title>
+		<titleShort>Test Pilot</titleShort>
+		<description>.</description>
+		<slot>Childhood</slot>
+		<skillGains>
+			<Intellectual>5</Intellectual>
+		</skillGains>
+		<!-- <forcedTraits> -->
+		  <!-- <Psychopath>0</Psychopath> -->
+		  <!-- <Jealous>0</Jealous> -->
+		<!-- </forcedTraits> -->
+		<requiredWorkTags>
+		  <li>Violent</li>
+		  <li>Intellectual</li>
+		</requiredWorkTags>
+		<bodyTypeMale>Male</bodyTypeMale>
+		<bodyTypeFemale>Female</bodyTypeFemale>
+		<nameMaker>guy762_HeroNamer_ApwarTrigit</nameMaker>
+		<spawnCategories>
+			<li>guy762BSC_apwartrigit</li>
+		</spawnCategories>
+		<!--shuffleable>False</shuffleable-->
+	</BackstoryDef>
+	
+	<BackstoryDef>
+		<defName>guy762_BackstoryA_ApwarTrigit</defName>
+		<title>Renegade Admiral</title>
+		<titleShort>Admiral</titleShort>
+		<description>.</description>
+		<slot>Adulthood</slot>
+		<skillGains>
+			<Intellectual>10</Intellectual>
+		</skillGains>
+		<!-- <forcedTraits> -->
+		  <!-- <Nerves>2</Nerves> -->
+		<!-- </forcedTraits> -->
+		<requiredWorkTags>
+		  <li>Violent</li>
+		  <li>Intellectual</li>
+		</requiredWorkTags>
+		<bodyTypeMale>Male</bodyTypeMale>
+		<bodyTypeFemale>Female</bodyTypeFemale>
+		<nameMaker>guy762_HeroNamer_ApwarTrigit</nameMaker>
+		<spawnCategories>
+			<li>guy762BSC_apwartrigit</li>
+		</spawnCategories>
+		<!--shuffleable>False</shuffleable-->
+	</BackstoryDef>
+	
+	
+
+</Defs>

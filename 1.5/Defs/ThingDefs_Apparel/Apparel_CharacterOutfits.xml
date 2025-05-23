@@ -551,6 +551,279 @@
 		</colorGenerator>
 	  </ThingDef>
 	  
+	
+	
+	
+	
+	
+	<ThingDef ParentName="KotORArmorModdable_soft">
+		<defName>guy762_NymOutfit</defName>
+		<label>Nym's jumpsuit</label>
+		<description>.</description>
+		<graphicData>
+		  <texPath>Apparel/CharacterOutfits/Nym/Apparel</texPath>
+		  <graphicClass>Graphic_Single</graphicClass>
+		  <shaderType>CutoutComplex</shaderType>
+		</graphicData>
+		<statBases>
+			<Mass>2</Mass>
+			<MarketValue>10</MarketValue>
+			<MaxHitPoints>100</MaxHitPoints>
+			<ArmorRating_Sharp>0.2</ArmorRating_Sharp>
+			<ArmorRating_Blunt>0.25</ArmorRating_Blunt>
+			<ArmorRating_Heat>0.3</ArmorRating_Heat>
+			<Insulation_Cold>10</Insulation_Cold>
+			<Insulation_Heat>25</Insulation_Heat>
+			<EquipDelay>3</EquipDelay>
+			
+			<!-- <WorkToMake>1000</WorkToMake> -->
+		</statBases>
+		<equippedStatOffsets>
+		  <SocialImpact>1</SocialImpact>
+		  <WorkSpeedGlobal>0.2</WorkSpeedGlobal>
+		</equippedStatOffsets>
+		
+		
+		<!-- <costList> -->
+		  <!-- <Cloth>75</Cloth> -->
+		<!-- </costList> -->
+		
+		<apparel>
+		  <layers>
+				<li>OnSkin</li>
+			</layers>
+			<bodyPartGroups>
+				<li>Torso</li>
+				<li>Legs</li>
+				<li>Feet</li>
+			</bodyPartGroups>
+		  <tags Inherit="False">
+			<li>NewRepublic_nym</li>
+		  </tags>
+		  <wornGraphicPath>Apparel/CharacterOutfits/Nym/Apparel</wornGraphicPath>
+		  <useWornGraphicMask>true</useWornGraphicMask>
+		  <defaultOutfitTags Inherit="False">
+			<li>Worker</li>
+		  </defaultOutfitTags>
+		  
+		  <gender>Male</gender>
+		</apparel>
+		<tradeTags>
+			<li>guy762TT_KotORCharacterItem</li>
+		</tradeTags>
+		
+		<comps>
+            <li Class="FCP.Core.CompProperties_LabelColored">
+                <rarity>Unique</rarity>
+            </li>
+        </comps>
+		
+		<colorGenerator Class="ColorGenerator_Options" Inherit="False">
+			<options>
+				<li>
+					<weight>15</weight>
+					<only>(230,155,70)</only> <!-- Nym's orange -->
+				</li>
+			</options>
+		</colorGenerator>
+	</ThingDef>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<ThingDef ParentName="guy762_TwilekHeadbandBase">
+		<defName>guy762_HeraSyndullaHat</defName>
+		<label>twi'lek headband, engineer's</label>
+		<description>Head dressings fit for a Twi'lek.\n\nNOTE: this does not scale correctly with narrow head types!</description>
+		<graphicData>
+		  <texPath>Apparel/CharacterOutfits/HeraSyndulla/Hat_Hera</texPath>
+		  <graphicClass>Graphic_Single</graphicClass>
+		  <shaderType>CutoutComplex</shaderType>
+		  <colorTwo>(160,115,35)</colorTwo> <!-- dark gold --> 
+		</graphicData>
+		<statBases>
+		  <MarketValue>250</MarketValue>
+		  <MaxHitPoints>100</MaxHitPoints>
+		  <Mass>0.5</Mass>
+		  <ArmorRating_Sharp>0.01</ArmorRating_Sharp>
+		  <ArmorRating_Blunt>0.01</ArmorRating_Blunt>
+		  <ArmorRating_Heat>0.01</ArmorRating_Heat>
+		  <Insulation_Cold>15</Insulation_Cold>
+		  <EquipDelay>0.5</EquipDelay>
+		  
+		  <WorkToMake>50</WorkToMake>
+		</statBases>
+		<equippedStatOffsets>
+			<WorkSpeedGlobal>0.2</WorkSpeedGlobal>
+		</equippedStatOffsets>
+		
+		<costList>
+			<Cloth>20</Cloth>
+			<ComponentIndustrial>1</ComponentIndustrial>
+		</costList>
+		
+		<apparel>
+		  <wornGraphicPath>Apparel/CharacterOutfits/HeraSyndulla/Hat_Hera</wornGraphicPath>
+		  <useWornGraphicMask>true</useWornGraphicMask>
+		  <renderSkipFlags>
+			<li>None</li>
+		  </renderSkipFlags>
+		  <drawData>
+			  <defaultData>
+				<layer>81</layer>
+			  </defaultData>
+			  <dataSouth>
+				  <layer>69</layer>
+			  </dataSouth>
+			</drawData>
+		  
+		  <bodyPartGroups>
+			<li>UpperHead</li>
+		  </bodyPartGroups>
+		  <layers>
+			<li>Overhead</li>
+		  </layers>
+		  <tags>
+			<li>NewRepublic_herasyndulla</li>
+		  </tags>
+		  <countsAsClothingForNudity>false</countsAsClothingForNudity>
+		  <canBeGeneratedToSatisfyWarmth>false</canBeGeneratedToSatisfyWarmth>
+		  <canBeGeneratedToSatisfyToxicEnvironmentResistance>false</canBeGeneratedToSatisfyToxicEnvironmentResistance>
+		  <wearPerDay>0</wearPerDay>
+		</apparel>
+		<tradeTags>
+			<li>guy762TT_KotORCharacterItem</li>
+		</tradeTags>
+		
+		<!-- <comps> -->
+		  <!-- <li Class="AthenaFramework.CompProperties_GeneLockedEquippable"> -->
+			<!-- <requiredGenes> -->
+				<!-- <li>guy762_Headbone_twilek</li> -->
+			<!-- </requiredGenes> -->
+			<!-- <cantReason>Incompatible head structure!</cantReason> -->
+			<!-- <dropWithoutRequirements>true</dropWithoutRequirements> -->
+		  <!-- </li> -->
+		<!-- </comps> -->
+		<modExtensions>
+		  <li Class="EBSGFramework.EquipRestrictExtension">
+			<requireOneOfGenesToEquip>
+				<li>guy762_Headbone_twilek</li>
+			</requireOneOfGenesToEquip>
+		  </li>
+		</modExtensions>
+		
+		<colorGenerator Class="ColorGenerator_Options" Inherit="False">
+			<options>
+				<li>
+					<weight>15</weight>
+					<only>(200,200,200)</only>
+				</li>
+			</options>
+		</colorGenerator>
+	</ThingDef>
+	  
+	  
+	  
+	<ThingDef ParentName="KotORArmorModdable_soft">
+		<defName>guy762_HeraSyndullaJumpsuit</defName>
+		<label>Hera's pilot coveralls</label>
+		<description>.</description>
+		<graphicData>
+		  <texPath>Apparel/CharacterOutfits/HeraSyndulla/Apparel</texPath>
+		  <graphicClass>Graphic_Single</graphicClass>
+		  <shaderType>CutoutComplex</shaderType>
+		  <colorTwo>(90,75,60)</colorTwo> <!-- patchleather --> 
+		</graphicData>
+		<statBases>
+			<Mass>5</Mass>
+			<MarketValue>500</MarketValue>
+			<MaxHitPoints>100</MaxHitPoints>
+			<ArmorRating_Sharp>0.2</ArmorRating_Sharp>
+			<ArmorRating_Blunt>0.25</ArmorRating_Blunt>
+			<ArmorRating_Heat>0.3</ArmorRating_Heat>
+			<Insulation_Cold>50</Insulation_Cold>
+			<Insulation_Heat>10</Insulation_Heat>
+			
+			<EquipDelay>3</EquipDelay>
+		</statBases>
+		<equippedStatOffsets>
+			<WorkSpeedGlobal>0.4</WorkSpeedGlobal>
+		</equippedStatOffsets>
+		
+		<apparel>
+			<layers>
+				<li>OnSkin</li>
+			</layers>
+			<bodyPartGroups>
+				<li>Torso</li>
+				<li>Shoulders</li>
+				<li>Neck</li>
+				<li>Arms</li>
+				<li>Hands</li>
+				<li>Legs</li>
+				<li>Feet</li>
+			</bodyPartGroups>
+			<useDeflectMetalEffect>false</useDeflectMetalEffect>
+			<tags Inherit="False">
+				<li>NewRepublic_herasyndulla</li>
+			</tags>
+			<wornGraphicPath>Apparel/CharacterOutfits/HeraSyndulla/Apparel</wornGraphicPath>
+			<useWornGraphicMask>true</useWornGraphicMask>
+			
+			<gender>Female</gender>
+		</apparel>
+		<tradeTags>
+			<li>guy762TT_KotORCharacterItem</li>
+		</tradeTags>
+		<colorGenerator Class="ColorGenerator_Options" Inherit="False">
+			<options>
+				<li>
+					<weight>10</weight>
+					<only>(190,110,0)</only> <!-- rebel pilot orange -->
+				</li>
+			</options>
+		</colorGenerator>
+		<comps>
+            <li Class="FCP.Core.CompProperties_LabelColored">
+                <rarity>Unique</rarity>
+            </li>
+        </comps>
+		<!--comps>
+		  <li Class="ModularWeapons.CompProperties_ModularParts">
+			<compClass>ModularWeapons.CompModularParts</compClass>
+			<partKinds>
+			  <li>guy762_slot_underlay</li>
+			</partKinds>
+			<randomizeParts>true</randomizeParts>
+		  </li>
+		</comps-->
+	  </ThingDef>
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
 	  
 	  
 	  
@@ -620,7 +893,7 @@
 			<useDeflectMetalEffect>true</useDeflectMetalEffect>
 		</apparel>
 		<tradeTags>
-			<li>guy762TT_ORArmor</li>
+			<li>guy762TT_KotORCharacterItem</li>
 		</tradeTags>
 		<colorGenerator Class="ColorGenerator_Options" Inherit="False">
 			<options>
@@ -746,7 +1019,7 @@
 			<useDeflectMetalEffect>true</useDeflectMetalEffect>
 		</apparel>
 		<tradeTags>
-			<li>guy762TT_ORArmor</li>
+			<li>guy762TT_KotORCharacterItem</li>
 		</tradeTags>
 		<colorGenerator Class="ColorGenerator_Options" Inherit="False">
 			<options>

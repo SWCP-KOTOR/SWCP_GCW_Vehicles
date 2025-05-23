@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>	
+	
+	<PawnKindDef Name="SWWEPlayableVillain_Screed"  ParentName="guy762_HeroPawnKindBase">
+		<defName>SWWEPlayableVillain_Screed</defName>
+		<nameMaker>guy762_HeroNamer_Screed</nameMaker>
+		<label>Admiral</label>
+		<combatPower>500</combatPower>
+		<minGenerationAge>68</minGenerationAge>
+		<maxGenerationAge>69</maxGenerationAge>
+		<fixedGender>Male</fixedGender>
+		<forcedHair>Shaved</forcedHair>
+		<forcedHairColor>(0.65, 0.65, 0.65)</forcedHairColor>
+		<skinColorOverride>(242, 199, 140)</skinColorOverride>
+		<xenotypeSet>
+			<xenotypeChances>
+				<Baseliner>999</Baseliner>
+			</xenotypeChances>
+		</xenotypeSet>
+		<useFactionXenotypes>false</useFactionXenotypes>
+		<itemQuality>Legendary</itemQuality>
+		<apparelMoney>49999</apparelMoney>
+		<apparelTags>
+		  <li>KotOREquipment_officer</li>
+		</apparelTags>
+		<apparelRequired>
+		   <li>guy762_UniformCap_imperial</li>
+		   <li>guy762_ImpUniform_highbrass</li>
+		</apparelRequired>
+		<specificApparelRequirements>
+			<li>
+				<apparelLayer>Overhead</apparelLayer>
+				<apparelDef>guy762_UniformCap_imperial</apparelDef>
+				<color>(110,110,110)</color>
+				<quality>Legendary</quality>
+			</li>
+			<li>
+				<apparelLayer>OnSkin</apparelLayer>
+				<apparelDef>guy762_ImpUniform_highbrass</apparelDef>
+				<styleDef>guy762_RankStyle_ImpOfficer_screed</styleDef>
+				<color>(110,110,110)</color>
+				<quality>Legendary</quality>
+			</li>
+		</specificApparelRequirements>
+		<weaponMoney>99999999</weaponMoney>
+		<weaponTags>
+		  <li>SWRanged_RK3pistol</li>
+		</weaponTags>
+		
+		<techHediffsMoney>9999999</techHediffsMoney>
+		<techHediffsChance>100</techHediffsChance>
+		<techHediffsTags>
+			<li>Spacer</li>
+			<li>Advanced</li>
+		</techHediffsTags>
+		<techHediffsRequired>
+		  <li>guy762_ImplantDock_II</li>
+		  <li>BionicArm</li>
+		  <li>BionicLeg</li>
+		  <li>BionicLeg</li>
+		  <li>BionicEye</li>
+		</techHediffsRequired>
+		<disallowedTraits><li>BodyPurist</li></disallowedTraits>
+		
+		<inventoryOptions>
+		  <skipChance>0</skipChance>
+		  <subOptionsChooseOne>
+			<li>
+			  <thingDef>guy762_ImplantItemSys_nerve</thingDef>
+			  <countRange>1</countRange>
+			</li>
+			<li>
+			  <thingDef>guy762_ImplantItemSys_antidote</thingDef>
+			  <countRange>1</countRange>
+			</li>
+			<li>
+			  <thingDef>guy762_ImplantItemImp_insight</thingDef>
+			  <countRange>1</countRange>
+			</li>
+			<li>
+			  <thingDef>guy762_ImplantItemPkg_memory</thingDef>
+			  <countRange>1</countRange>
+			</li>
+			<li>
+			  <thingDef>guy762_ImplantItemPkg_mentboost</thingDef>
+			  <countRange>1</countRange>
+			</li>
+		  </subOptionsChooseOne>
+		</inventoryOptions>
+		
+		<skills>
+			<li>
+				<skill>Shooting</skill>
+				<range>6~8</range>
+			</li>
+			<li>
+				<skill>Social</skill>
+				<range>8~10</range>
+			</li>
+			<li>
+				<skill>Intellectual</skill>
+				<range>14~16</range>
+			</li>
+		</skills>
+		<forcedTraits>
+			<Transhumanist>0</Transhumanist>
+			<Tough>0</Tough>
+			<Recluse>0</Recluse>
+			<Nerves>-1</Nerves>
+		</forcedTraits>
+		
+		<backstoryFiltersOverride>
+		  <li>
+			<categories>
+			  <li>guy762BSC_screed</li>
+			</categories>
+		  </li>
+		</backstoryFiltersOverride>
+		<abilities>
+			<li>guy762_Ability_CommandTierIII</li>
+			
+			<li MayRequire="Ludeon.RimWorld.Ideology">WorkDrive</li>
+		</abilities>
+		<modExtensions>
+			<li Class="BodyTypeForPawnKind.ModExtension_HeadTypesOfPawnKind">
+			  <whitelist>
+				<li>Male_NarrowWide</li>
+			  </whitelist>
+			  <blacklist>
+				<!--leave blank to disable-->
+			  </blacklist>
+			  <priority>
+				<li>Male_NarrowWide</li>
+			  </priority>
+			  <checkGender>False</checkGender>
+			</li>
+			<li Class="BodyTypeForPawnKind.ModExtension_ForcedStyleItem">
+			  <forcedBeard>NoBeard</forcedBeard>
+			</li>
+			<li Class="AddGeneForPK.PKAdditionalGenes">
+			  <geneSets>
+				<li>
+				  <isXenogene>false</isXenogene>
+				  <chance>1</chance>
+				  <geneDefs>
+					<li>Hair_Gray</li>
+					<li>Skin_Melanin6</li>
+				  </geneDefs>
+				</li>
+			  </geneSets>
+			</li>
+		</modExtensions>
+	  </PawnKindDef>
+	  
+	  <PawnKindDef Name="SWZsinj_Screed"  ParentName="SWWEPlayableVillain_Screed">
+		<defName>SWZsinj_Screed</defName>
+		<defaultFactionType>guy762_SWWarlordsFaction_ZsinjDominion</defaultFactionType>
+	  </PawnKindDef>
+	  
+	  
+	  
+	  <RulePackDef>
+        <defName>guy762_HeroNamer_Screed</defName>
+        <rulePack>
+            <rulesStrings>
+                <li>r_name->[terrinald] '[screed]' [screed]</li>
+				<li>terrinald->Terrinald</li>
+				<li>screed->Screed</li>
+            </rulesStrings>
+        </rulePack>
+    </RulePackDef>
+	
+		<!--[PAWN_nameDef] [PAWN_possessive] [PAWN_pronoun]-->
+	
+	
+	<BackstoryDef>
+		<defName>guy762_BackstoryC_Screed</defName>
+		<title>Judicial Forces Cadet</title>
+		<titleShort>Cadet</titleShort>
+		<description>.</description>
+		<slot>Childhood</slot>
+		<skillGains>
+			<Social>15</Social>
+			<Intellectual>10</Intellectual>
+		</skillGains>
+		<forcedTraits>
+			<Transhumanist>0</Transhumanist>
+			<Tough>0</Tough>
+		</forcedTraits>
+		<requiredWorkTags>
+		  <li>Violent</li>
+		  <li>Intellectual</li>
+		</requiredWorkTags>
+		<bodyTypeMale>Hulk</bodyTypeMale>
+		<bodyTypeFemale>Hulk</bodyTypeFemale>
+		<nameMaker>guy762_HeroNamer_Screed</nameMaker>
+		<spawnCategories>
+			<li>guy762BSC_screed</li>
+		</spawnCategories>
+		<!--shuffleable>False</shuffleable-->
+	</BackstoryDef>
+	
+	<BackstoryDef>
+		<defName>guy762_BackstoryA_Screed</defName>
+		<title>Corrupt Admiral</title>
+		<titleShort>Admiral</titleShort>
+		<description>.</description>
+		<slot>Adulthood</slot>
+		<skillGains>
+			<Social>-5</Social>
+			<Intellectual>5</Intellectual>
+		</skillGains>
+		<forcedTraits>
+			<Recluse>0</Recluse>
+			<Nerves>-1</Nerves>
+		</forcedTraits>
+		<requiredWorkTags>
+		  <li>Violent</li>
+		  <li>Intellectual</li>
+		</requiredWorkTags>
+		<bodyTypeMale>Hulk</bodyTypeMale>
+		<bodyTypeFemale>Hulk</bodyTypeFemale>
+		<nameMaker>guy762_HeroNamer_Screed</nameMaker>
+		<spawnCategories>
+			<li>guy762BSC_screed</li>
+		</spawnCategories>
+		<!--shuffleable>False</shuffleable-->
+	</BackstoryDef>
+	
+	
+
+</Defs>

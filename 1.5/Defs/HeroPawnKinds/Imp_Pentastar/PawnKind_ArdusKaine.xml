@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>	
+	
+	<PawnKindDef Name="SWWEPlayableVillain_ArdusKaine"  ParentName="guy762_HeroPawnKindBase">
+		<defName>SWWEPlayableVillain_ArdusKaine</defName>
+		<nameMaker>guy762_HeroNamer_ArdusKaine</nameMaker>
+		<label>Warlord</label>
+		<combatPower>500</combatPower>
+		<minGenerationAge>51</minGenerationAge>
+		<maxGenerationAge>52</maxGenerationAge>
+		<fixedGender>Male</fixedGender>
+		<forcedHair>Scatman</forcedHair>
+		<forcedHairColor>(95,88,82)</forcedHairColor>
+		<skinColorOverride>(255, 239, 201)</skinColorOverride>
+		<xenotypeSet>
+			<xenotypeChances>
+				<Baseliner>999</Baseliner>
+			</xenotypeChances>
+		</xenotypeSet>
+		<useFactionXenotypes>false</useFactionXenotypes>
+		<itemQuality>Legendary</itemQuality>
+		<apparelMoney>49999</apparelMoney>
+		<apparelTags>
+		  <li>KotOREquipment_officer</li>
+		</apparelTags>
+		<apparelRequired>
+		   <li>guy762_ImpUniform_topbrass</li>
+		</apparelRequired>
+		<specificApparelRequirements>
+			<li>
+				<apparelLayer>OnSkin</apparelLayer>
+				<apparelDef>guy762_ImpUniform_topbrass</apparelDef>
+				<styleDef>guy762_RankStyle_ImpOfficer_grandmoff</styleDef>
+				<color>(125,125,110)</color> <!-- imperial olive -->
+				<quality>Legendary</quality>
+			</li>
+		</specificApparelRequirements>
+		<weaponMoney>99999999</weaponMoney>
+		<weaponTags>
+		  <li>SWRanged_RK3pistol</li>
+		</weaponTags>
+		<skills>
+			<li>
+				<skill>Shooting</skill>
+				<range>6~8</range>
+			</li>
+			<li>
+				<skill>Social</skill>
+				<range>19~20</range>
+			</li>
+			<li>
+				<skill>Intellectual</skill>
+				<range>12~14</range>
+			</li>
+		</skills>
+		<forcedTraits>
+			<Greedy>0</Greedy>
+			<Industriousness>1</Industriousness>
+			<Nerves>2</Nerves>
+		</forcedTraits>
+		
+		<backstoryFiltersOverride>
+		  <li>
+			<categories>
+			  <li>guy762BSC_arduskaine</li>
+			</categories>
+		  </li>
+		</backstoryFiltersOverride>
+		<abilities>
+			<li>guy762_Ability_CommandTierIV</li>
+			
+			<li MayRequire="Ludeon.RimWorld.Ideology">LeaderSpeech</li>
+			<li MayRequire="Ludeon.RimWorld.Ideology">WorkDrive</li>
+		</abilities>
+		<modExtensions>
+			<li Class="BodyTypeForPawnKind.ModExtension_HeadTypesOfPawnKind">
+			  <whitelist>
+				<li>Male_NarrowNormal</li>
+			  </whitelist>
+			  <blacklist>
+				<!--leave blank to disable-->
+			  </blacklist>
+			  <priority>
+				<li>Male_NarrowNormal</li>
+			  </priority>
+			  <checkGender>False</checkGender>
+			</li>
+			<li Class="BodyTypeForPawnKind.ModExtension_ForcedStyleItem">
+			  <forcedBeard>NoBeard</forcedBeard>
+			</li>
+			<li Class="AddGeneForPK.PKAdditionalGenes">
+			  <geneSets>
+				<li>
+				  <isXenogene>false</isXenogene>
+				  <chance>1</chance>
+				  <geneDefs>
+					<li>Hair_MidBlack</li>
+					<li>Skin_Melanin3</li>
+				  </geneDefs>
+				</li>
+			  </geneSets>
+			</li>
+		</modExtensions>
+	  </PawnKindDef>
+	  
+	  <PawnKindDef Name="SWPentastar_ArdusKaine"  ParentName="SWWEPlayableVillain_ArdusKaine">
+		<defName>SWPentastar_ArdusKaine</defName>
+		<defaultFactionType>guy762_SWWarlordsFaction_Pentastar</defaultFactionType>
+	  </PawnKindDef>
+	  
+	  <RulePackDef>
+        <defName>guy762_HeroNamer_ArdusKaine</defName>
+        <rulePack>
+            <rulesStrings>
+                <li>r_name->[ardus] '[kaine]' [kaine]</li>
+				<li>ardus->Ardus</li>
+				<li>kaine->Kaine</li>
+            </rulesStrings>
+        </rulePack>
+    </RulePackDef>
+	
+		<!--[PAWN_nameDef] [PAWN_possessive] [PAWN_pronoun]-->
+	
+	
+	<BackstoryDef>
+		<defName>guy762_BackstoryC_ArdusKaine</defName>
+		<title>Insecure Cadet</title>
+		<titleShort>Cadet</titleShort>
+		<description>.</description>
+		<slot>Childhood</slot>
+		<skillGains>
+			<Shooting>5</Shooting>
+			<Social>5</Social>
+			<Intellectual>5</Intellectual>
+		</skillGains>
+		<forcedTraits>
+		  <Greedy>0</Greedy>
+		  <Industriousness>1</Industriousness>
+		</forcedTraits>
+		<requiredWorkTags>
+		  <li>Violent</li>
+		  <li>Intellectual</li>
+		</requiredWorkTags>
+		<bodyTypeMale>Male</bodyTypeMale>
+		<bodyTypeFemale>Female</bodyTypeFemale>
+		<nameMaker>guy762_HeroNamer_ArdusKaine</nameMaker>
+		<spawnCategories>
+			<li>guy762BSC_arduskaine</li>
+		</spawnCategories>
+		<!--shuffleable>False</shuffleable-->
+	</BackstoryDef>
+	
+	<BackstoryDef>
+		<defName>guy762_BackstoryA_ArdusKaine</defName>
+		<title>Grand Moff</title>
+		<titleShort>Grand Moff</titleShort>
+		<description>.</description>
+		<slot>Adulthood</slot>
+		<skillGains>
+			<Social>10</Social>
+			<Intellectual>10</Intellectual>
+		</skillGains>
+		<forcedTraits>
+		  <Nerves>2</Nerves>
+		</forcedTraits>
+		<requiredWorkTags>
+		  <li>Violent</li>
+		  <li>Social</li>
+		  <li>Intellectual</li>
+		</requiredWorkTags>
+		<workDisables>ManualDumb, Mining, Caring</workDisables>
+		<bodyTypeMale>Male</bodyTypeMale>
+		<bodyTypeFemale>Female</bodyTypeFemale>
+		<nameMaker>guy762_HeroNamer_ArdusKaine</nameMaker>
+		<spawnCategories>
+			<li>guy762BSC_arduskaine</li>
+		</spawnCategories>
+		<!--shuffleable>False</shuffleable-->
+	</BackstoryDef>
+	
+	
+
+</Defs>

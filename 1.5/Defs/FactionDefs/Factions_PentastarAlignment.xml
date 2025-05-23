@@ -27,8 +27,8 @@
     <!--permanentEnemy>true</permanentEnemy>
 	<permanentEnemyToEveryoneExceptPlayer>true</permanentEnemyToEveryoneExceptPlayer-->
 	
-    <factionNameMaker>guy762_NamerFaction_ImperialReseveFleet</factionNameMaker>
-	<settlementNameMaker>guy762_NamerSettlement_ORStarfleet</settlementNameMaker>
+    <factionNameMaker>guy762_NamerFaction_PentastarStarfleet</factionNameMaker>
+	<settlementNameMaker>guy762_NamerSettlement_GenericFleetBaseName</settlementNameMaker>
 	
 	<leaderTitle>governor</leaderTitle>
 	<leaderForceGenerateNewPawn>true</leaderForceGenerateNewPawn>
@@ -53,6 +53,8 @@
 	  </li>
 	  <li Class="VFECore.FactionDefExtension">
 		<startingGoodwillByFactionDefs>
+			<guy762_SWWarlordsFaction_NewRepublic>-50</guy762_SWWarlordsFaction_NewRepublic>
+			
 			<guy762_SWWarlordsFaction_ImpRemnant>-50~0</guy762_SWWarlordsFaction_ImpRemnant>
 			<guy762_SWWarlordsFaction_ZsinjDominion>-100</guy762_SWWarlordsFaction_ZsinjDominion>
 			
@@ -70,14 +72,16 @@
 		<neverConnectToRoads>false</neverConnectToRoads>
 		<minDistanceToOtherSettlements>40</minDistanceToOtherSettlements>
       </li>
-	  <li Class="FCP.Core.ModExtension_FactionTerritory">
-			<territoryColor>(65,70,190,32)</territoryColor>
-			<territoryBorderColor>(30,35,85,128)</territoryBorderColor>
-			<factionLabelColor>(30,35,85,255)</factionLabelColor>
-			<initialTerritoryRadius>10</initialTerritoryRadius>
-			<renderTerritoryOverWater>false</renderTerritoryOverWater>
-	  </li>
-	  <li MayRequire="Rick.FCP.Core.Tools.Beta" Class="FCP.Core.ModExtension_FixedIdeo">
+	  <!-- <li Class="FCP.Core.ModExtension_FactionTerritory"> -->
+			<!-- <territoryColor>(65,70,190,32)</territoryColor> -->
+			<!-- <territoryBorderColor>(65,70,190,128)</territoryBorderColor> -->
+			<!-- <factionLabelColor>(65,70,190,255)</factionLabelColor> -->
+			<!-- <initialTerritoryRadius>10</initialTerritoryRadius> -->
+			<!-- <renderTerritoryOverWater>false</renderTerritoryOverWater> -->
+	  <!-- </li> -->
+			<!-- <territoryBorderColor>(30,35,85,128)</territoryBorderColor> -->
+			<!-- <factionLabelColor>(30,35,85,255)</factionLabelColor> -->
+	  <li Class="FCP.Core.ModExtension_FixedIdeo">
 		<ideoIconDef>guy762_IdeoIcon_empire</ideoIconDef>
 		<ideoColorDef>DarkGrey</ideoColorDef>
 		<memberName>Imperial</memberName>
@@ -335,7 +339,7 @@
 		  
           <SWPentastar_ArmyMajor>100</SWPentastar_ArmyMajor>
 		  
-          <SWImpRemnant_ArmyCommando>50</SWImpRemnant_ArmyCommando>
+          <SWWarlords_ArmyCommando>50</SWWarlords_ArmyCommando>
 		  
 		  <SWPentastar_InQuestor_PotF MayRequire="guy762.Lee.KotORPotF">10</SWPentastar_InQuestor_PotF>
 		  
@@ -361,7 +365,7 @@
 		  
           <SWPentastar_ArmyGeneral_field>100</SWPentastar_ArmyGeneral_field>
 		  
-          <SWImpRemnant_ArmyCommando>50</SWImpRemnant_ArmyCommando>
+          <SWWarlords_ArmyCommando>50</SWWarlords_ArmyCommando>
 		  
 		  <SWPentastar_InQuestor_PotF MayRequire="guy762.Lee.KotORPotF">10</SWPentastar_InQuestor_PotF>
 		  
@@ -382,7 +386,7 @@
 			<li>ImmediateAttackBreaching</li>
 		</disallowedStrategies>
         <options>
-		  <SWImpRemnant_ArmyCommando>50</SWImpRemnant_ArmyCommando>
+		  <SWWarlords_ArmyCommando>50</SWWarlords_ArmyCommando>
 		  
 		  <SWPentastar_InQuestor_PotF MayRequire="guy762.Lee.KotORPotF">100</SWPentastar_InQuestor_PotF>
 		  
@@ -549,19 +553,31 @@
   
   
   
-  <!-- <RulePackDef> -->
-    <!-- <defName>guy762_NamerFaction_ImperialReseveFleet</defName> -->
-    <!-- <include> -->
-		<!-- <li>guy762_NamerFaction_OR_files</li> -->
-	<!-- </include> -->
-	<!-- <rulePack> -->
-	  <!-- <rulesStrings> -->
-		<!-- <li>r_name(p=6)->[SWORFN_SmallFleetNumber] [SWORFN_SmallPlanet] [reservefleet]</li> -->
-		<!-- <li>r_name(p=12)->[SWORFN_BigFleetNumber] [SWORFN_BigPlanet] [reservefleet]</li> -->
+  <RulePackDef>
+    <defName>guy762_NamerFactionFiles_PentastarPlanets</defName>
+    <rulePack>
+      <rulesFiles>
+		<li>SWPAFN_AnyPlanet->Names/SWfactionnames_PentastarPlanets</li>
+	  </rulesFiles>
+    </rulePack>
+  </RulePackDef>
+  
+  <RulePackDef>
+    <defName>guy762_NamerFaction_PentastarStarfleet</defName>
+    <include>
+		<li>guy762_NamerFactionFiles_GenericFleetName</li>
+		<li>guy762_NamerFactionFiles_PentastarPlanets</li>
+	</include>
+	<rulePack>
+	  <rulesStrings>
+		<li>r_name(p=6)->[SWFN_BigFleetNumber] [SWPAFN_AnyPlanet] [taskforce]</li>
 		
-		<!-- <li>reservefleet->Reserve Fleet</li> -->
-      <!-- </rulesStrings> -->
-    <!-- </rulePack> -->
-  <!-- </RulePackDef> -->
+		<li>taskforce->Task Force</li>
+      </rulesStrings>
+    </rulePack>
+  </RulePackDef>
+  
+  
+  
   
 </Defs>

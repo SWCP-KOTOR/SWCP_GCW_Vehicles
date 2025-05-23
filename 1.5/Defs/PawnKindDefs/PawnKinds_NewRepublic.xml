@@ -1,7 +1,59 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Defs>
 
-	<PawnKindDef Name="SWNewRepub_Engineer" ParentName="KotORRepub_Base">
+	<PawnKindDef Name="SWNewRepub_Base" Abstract="True">
+		<defaultFactionType>guy762_SWWarlordsFaction_NewRepublic</defaultFactionType>
+		<race>Human</race>
+		<nameMaker>guy762_PawnNamer_Bf2</nameMaker>
+		
+		<backstoryCryptosleepCommonality>0.08</backstoryCryptosleepCommonality>
+		<backstoryFiltersOverride>
+		  <li>
+			<categories>
+			  <li>Offworld</li>
+			  <li>ImperialFighter</li>
+			</categories>
+		  </li>
+		</backstoryFiltersOverride>
+		
+		<!-- <chemicalAddictionChance>0.1</chemicalAddictionChance> -->
+		<!--combatEnhancingDrugsChance>0.15</combatEnhancingDrugsChance>
+		<combatEnhancingDrugsCount>0~2</combatEnhancingDrugsCount-->
+		<invFoodDef>MealSurvivalPack</invFoodDef>
+		<invNutrition>2</invNutrition>
+		
+		<apparelAllowHeadgearChance>0.5</apparelAllowHeadgearChance>
+		<apparelMoney>4000~5000</apparelMoney>
+		<apparelIgnoreSeasons>true</apparelIgnoreSeasons>
+		
+		<techHediffsTags>
+		  <li>Spacer</li>
+		  <li>Advanced</li>
+		  <li>AdvancedWeapon</li>
+		</techHediffsTags>
+		
+		<requiredWorkTags>
+			<li>Violent</li>
+		</requiredWorkTags>
+	  </PawnKindDef>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<PawnKindDef Name="SWNewRepub_Engineer" ParentName="SWNewRepub_Base">
 		<defName>SWNewRepub_Engineer</defName>
 		<label>engineer</label>
 		<combatPower>40</combatPower>
@@ -65,21 +117,25 @@
 	</PawnKindDef>
 	
 	
-	<PawnKindDef Name="SWNewRepub_EngiCombat" ParentName="KotORRepub_Base">
+	
+	
+	
+	<PawnKindDef Name="SWNewRepub_EngiCombat" ParentName="SWNewRepub_Base">
 		<defName>SWNewRepub_EngiCombat</defName>
 		<label>combat engineer</label>
 		<combatPower>100</combatPower>
-		<minGenerationAge>18</minGenerationAge>
+		<minGenerationAge>20</minGenerationAge>
 		<maxGenerationAge>40</maxGenerationAge>
 		<itemQuality>Good</itemQuality>
 		
 		<maxPerGroup>6</maxPerGroup>
 
-		<apparelMoney>1500~5500</apparelMoney>
+		<apparelMoney>3500~5500</apparelMoney>
 		<apparelAllowHeadgearChance>1</apparelAllowHeadgearChance>
 		<apparelTags>
 			<li>KotORUtility_engi_novisor</li>
 			<li>NewRepublic_combatengineer</li>
+			<li>SWDetpackCase</li>
 		</apparelTags>
 		<apparelRequired>
 			<li>guy762_RebelEngiCap</li>
@@ -112,11 +168,11 @@
 		<skills>
 			<li>
 				<skill>Shooting</skill>
-				<range>4~8</range>
+				<range>6~8</range>
 			</li>
 			<li>
 				<skill>Construction</skill>
-				<range>8~10</range>
+				<range>10~12</range>
 			</li>
 			<li>
 				<skill>Crafting</skill>
@@ -132,6 +188,78 @@
 				<!-- </li> -->
 				<li>
 					<thingDef>ComponentIndustrial</thingDef>
+					<countRange>1~3</countRange>
+				</li>
+			</subOptionsChooseOne>
+		</inventoryOptions>
+
+		<initialWillRange>0.5~2</initialWillRange>
+		<initialResistanceRange>5~10</initialResistanceRange>
+	</PawnKindDef>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<PawnKindDef Name="SWNewRepub_TankPilot" ParentName="SWNewRepub_Base">
+		<defName>SWNewRepub_TankPilot</defName>
+		<label>armor pilot</label>
+		<combatPower>40</combatPower>
+		<minGenerationAge>20</minGenerationAge>
+		<maxGenerationAge>50</maxGenerationAge>
+		<itemQuality>Normal</itemQuality>
+
+		<apparelMoney>1500~5500</apparelMoney>
+		<apparelAllowHeadgearChance>1</apparelAllowHeadgearChance>
+		<apparelTags>
+			<li>KotORUtility_engi_novisor</li>
+		</apparelTags>
+		<apparelRequired>
+			<li>guy762_RebelFlakCap_goggles</li>
+			<li>guy762_Accessory_suspendersB</li>
+			<li>guy762_FlightVest</li>
+			<li>guy762_GenericUniform_fatigues</li>
+		</apparelRequired>
+		<specificApparelRequirements>
+			<li>
+				<apparelLayer>Shell</apparelLayer>
+				<color>(130,125,140)</color>         <!-- bley -->
+			</li>
+			<li>
+				<apparelLayer>Middle</apparelLayer>
+				<color>(250,250,250)</color>       <!-- white -->
+			</li>
+			<li>
+				<apparelLayer>OnSkin</apparelLayer>
+				<color>(200,200,200)</color>       <!-- light grey -->
+			</li>
+		</specificApparelRequirements>
+
+		<biocodeWeaponChance>0</biocodeWeaponChance>
+		<weaponMoney>620</weaponMoney>
+		<weaponTags>
+			<li>SWRanged_Model57pistol</li>
+		</weaponTags>
+
+		<skills>
+			<li>
+				<skill>Shooting</skill>
+				<range>6~8</range>
+			</li>
+			<li>
+				<skill>Construction</skill>
+				<range>6~8</range>
+			</li>
+		</skills>
+		<inventoryOptions>
+			<skipChance>0.25</skipChance>
+			<subOptionsChooseOne>
+				<li>
+					<thingDef>guy762_medpac</thingDef>
 					<countRange>1~3</countRange>
 				</li>
 			</subOptionsChooseOne>
@@ -176,12 +304,11 @@
 	
 	
 	
-	
 	<!--troopers-->
 
 
 	
-	<PawnKindDef Name="SWNewRepub_alderaanguard" ParentName="KotORRepub_Base">
+	<PawnKindDef Name="SWNewRepub_alderaanguard" ParentName="SWNewRepub_Base">
 		<defName>SWNewRepub_alderaanguard</defName>
 		<label>fleet trooper</label>
 		<combatPower>40</combatPower>
@@ -254,7 +381,7 @@
 	  
 	  
 	  
-	  <PawnKindDef Name="SWNewRepub_fleettrooper" ParentName="KotORRepub_Base">
+	  <PawnKindDef Name="SWNewRepub_fleettrooper" ParentName="SWNewRepub_Base">
 		<defName>SWNewRepub_fleettrooper</defName>
 		<label>fleet trooper</label>
 		<combatPower>40</combatPower>
@@ -316,7 +443,7 @@
 	  
 	  
 	  
-	  <PawnKindDef Name="SWNewRepub_NavyLt" ParentName="KotORRepub_Base">
+	  <PawnKindDef Name="SWNewRepub_NavyLt" ParentName="SWNewRepub_Base">
 		<defName>SWNewRepub_NavyLt</defName>
 		<label>navy lieutenant</label>
 		<combatPower>40</combatPower>
@@ -389,7 +516,7 @@
 	  </PawnKindDef>
 	  
 	  
-	<PawnKindDef Name="SWNewRepub_NavyCaptain" ParentName="KotORRepub_Base">
+	<PawnKindDef Name="SWNewRepub_NavyCaptain" ParentName="SWNewRepub_Base">
 		<defName>SWNewRepub_NavyCaptain</defName>
 		<label>navy captain</label>
 		<combatPower>40</combatPower>
@@ -471,7 +598,7 @@
 	
 	
 	
-	<PawnKindDef Name="SWNewRepub_ArmyGeneral" ParentName="KotORRepub_Base">
+	<PawnKindDef Name="SWNewRepub_ArmyGeneral" ParentName="SWNewRepub_Base">
 		<defName>SWNewRepub_ArmyGeneral</defName>
 		<label>army general</label>
 		<combatPower>40</combatPower>
@@ -566,7 +693,7 @@
 	  
 	  
 	  
-	<PawnKindDef Name="SWNewRepub_RebelAgent" ParentName="KotORRepub_Base">
+	<PawnKindDef Name="SWNewRepub_RebelAgent" ParentName="SWNewRepub_Base">
 		<defName>SWNewRepub_RebelAgent</defName>
 		<label>agent</label>
 		<combatPower>100</combatPower>
@@ -657,7 +784,7 @@
 
 
 
-	<PawnKindDef Name="SWNewRepub_RebelTrooper" ParentName="KotORRepub_Base">
+	<PawnKindDef Name="SWNewRepub_RebelTrooper" ParentName="SWNewRepub_Base">
 		<defName>SWNewRepub_RebelTrooper</defName>
 		<label>rebel soldier</label>
 		<combatPower>65</combatPower>
@@ -732,7 +859,7 @@
 	  
 	  
 	  
-	<PawnKindDef Name="SWNewRepub_trooper" ParentName="KotORRepub_Base">
+	<PawnKindDef Name="SWNewRepub_trooper" ParentName="SWNewRepub_Base">
 		<defName>SWNewRepub_trooper</defName>
 		<label>New Republic soldier</label>
 		<combatPower>65</combatPower>
@@ -823,7 +950,7 @@
 	  
 	  
 	  
-	  <PawnKindDef Name="SWNewRepub_Rebelpilot" ParentName="KotORRepub_Base">
+	  <PawnKindDef Name="SWNewRepub_Rebelpilot" ParentName="SWNewRepub_Base">
 		<defName>SWNewRepub_Rebelpilot</defName>
 		<label>Rebel pilot</label>
 		<combatPower>65</combatPower>
@@ -894,7 +1021,7 @@
 	
 	
 	
-	<PawnKindDef Name="SWNewRepub_Rebelpilot_AWing" ParentName="KotORRepub_Base">
+	<PawnKindDef Name="SWNewRepub_Rebelpilot_AWing" ParentName="SWNewRepub_Base">
 		<defName>SWNewRepub_Rebelpilot_AWing</defName>
 		<label>Rebel pilot</label>
 		<combatPower>65</combatPower>
@@ -965,7 +1092,7 @@
 	
 	
 	  
-	  <PawnKindDef Name="SWNewRepub_NRpilot" ParentName="KotORRepub_Base">
+	  <PawnKindDef Name="SWNewRepub_NRpilot" ParentName="SWNewRepub_Base">
 		<defName>SWNewRepub_NRpilot</defName>
 		<label>New Republic pilot</label>
 		<combatPower>65</combatPower>

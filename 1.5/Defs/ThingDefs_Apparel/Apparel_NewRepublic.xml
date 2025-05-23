@@ -3,6 +3,161 @@
 
 	
 	<ThingDef ParentName="guy762_HatCraftableBase">
+		<defName>guy762_RebelFlakCap</defName>
+		<label>flak hat</label>
+		<description>A durable, padded armorweave head cover.</description>
+		<graphicData>
+		  <texPath>Apparel/Rebel/PaoHat/PaoHat</texPath>
+		  <graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<statBases>
+		  <MarketValue>100</MarketValue>
+		  <MaxHitPoints>115</MaxHitPoints>
+		  <Mass>0.5</Mass>
+		  <ArmorRating_Sharp>0.2</ArmorRating_Sharp>
+		  <ArmorRating_Blunt>0.25</ArmorRating_Blunt>
+		  <ArmorRating_Heat>0.3</ArmorRating_Heat>
+		  <EquipDelay>0.1</EquipDelay>
+		  
+		  
+		  <WorkToMake>1000</WorkToMake>
+		</statBases>
+		<!-- <equippedStatOffsets> -->
+		  <!-- <SocialImpact>0.1</SocialImpact> -->
+		<!-- </equippedStatOffsets> -->
+		
+		<recipeMaker>
+			<skillRequirements>
+				<Crafting>4</Crafting>
+			</skillRequirements>
+		</recipeMaker>
+		<costList>
+			<KOTOR_FabricArmorweave>20</KOTOR_FabricArmorweave>
+		</costList>
+		
+		<apparel>
+		  <wornGraphicPath>Apparel/Rebel/PaoHat/PaoHat</wornGraphicPath>
+		  <bodyPartGroups>
+			<li>UpperHead</li>
+		  </bodyPartGroups>
+		  <layers>
+			<li>Overhead</li>
+		  </layers>
+		  <tags>
+			<li>NewRepublic_rebeltrooper</li>
+			<li>NewRepublic_RebelAgent_hats</li>
+		  </tags>
+		  <countsAsClothingForNudity>false</countsAsClothingForNudity>
+		  <canBeGeneratedToSatisfyWarmth>false</canBeGeneratedToSatisfyWarmth>
+		  <canBeGeneratedToSatisfyToxicEnvironmentResistance>false</canBeGeneratedToSatisfyToxicEnvironmentResistance>
+		</apparel>
+		<tradeTags>
+			<li>guy762TT_SEArmor</li>
+		</tradeTags>
+		<colorGenerator Class="ColorGenerator_Options" Inherit="False">
+			<options>
+				<li>
+					<weight>15</weight>
+					<only>(160,115,80)</only>       <!-- darker khaki -->
+				</li>
+			</options>
+		</colorGenerator>
+	</ThingDef> 
+	
+	
+	
+	<ThingDef ParentName="guy762_HatCraftableBase">
+		<defName>guy762_RebelFlakCap_goggles</defName>
+		<label>flak hat, goggles</label>
+		<description>A durable, padded armorweave head cover.</description>
+		<graphicData>
+		  <texPath>Apparel/Rebel/PaoHat/PaoHat_Goggles</texPath>
+		  <graphicClass>Graphic_Single</graphicClass>
+		  <shaderType>CutoutComplex</shaderType>
+		  <colorTwo>(170,170,190)</colorTwo> <!-- sith grey -->
+		</graphicData>
+		<statBases>
+		  <MarketValue>100</MarketValue>
+		  <MaxHitPoints>115</MaxHitPoints>
+		  <Mass>0.5</Mass>
+		  <ArmorRating_Sharp>0.2</ArmorRating_Sharp>
+		  <ArmorRating_Blunt>0.25</ArmorRating_Blunt>
+		  <ArmorRating_Heat>0.3</ArmorRating_Heat>
+		  <EquipDelay>0.1</EquipDelay>
+		  
+		  
+		  <WorkToMake>1200</WorkToMake>
+		</statBases>
+		<equippedStatOffsets>
+			<MortarMissRadiusFactor>-0.2</MortarMissRadiusFactor>
+		</equippedStatOffsets>
+		
+		<recipeMaker>
+			<skillRequirements>
+				<Crafting>4</Crafting>
+			</skillRequirements>
+		</recipeMaker>
+		<costList>
+			<KOTOR_FabricArmorweave>20</KOTOR_FabricArmorweave>
+			<ComponentIndustrial>1</ComponentIndustrial>
+		</costList>
+		
+		<apparel>
+		  <wornGraphicPath>Apparel/Rebel/PaoHat/PaoHat_Goggles</wornGraphicPath>
+		  <useWornGraphicMask>true</useWornGraphicMask>
+		  <bodyPartGroups>
+			<li>UpperHead</li>
+			<!-- <li>Neck</li> -->
+		  </bodyPartGroups>
+		  <layers>
+			<li>Overhead</li>
+		  </layers>
+		  <tags>
+			<li>NewRepublic_tankpilot</li>
+			<li>NewRepublic_RebelAgent_hats</li>
+		  </tags>
+		  <countsAsClothingForNudity>false</countsAsClothingForNudity>
+		  <canBeGeneratedToSatisfyWarmth>false</canBeGeneratedToSatisfyWarmth>
+		  <canBeGeneratedToSatisfyToxicEnvironmentResistance>false</canBeGeneratedToSatisfyToxicEnvironmentResistance>
+		</apparel>
+		<tradeTags>
+			<li>guy762TT_SEArmor</li>
+		</tradeTags>
+		<colorGenerator Class="ColorGenerator_Options" Inherit="False">
+			<options>
+				<li>
+					<weight>15</weight>
+					<only>(160,115,80)</only>       <!-- darker khaki -->
+				</li>
+			</options>
+		</colorGenerator>
+	</ThingDef> 
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<ThingDef ParentName="guy762_HatCraftableBase">
 		<defName>guy762_RebelEngiCap</defName>
 		<label>engineer's cap</label>
 		<description>A rugged cap with a scarf for engineering personnel.</description>
@@ -19,10 +174,11 @@
 		  <ArmorRating_Sharp>0.01</ArmorRating_Sharp>
 		  <ArmorRating_Blunt>0.01</ArmorRating_Blunt>
 		  <ArmorRating_Heat>0.01</ArmorRating_Heat>
+		  <Insulation_Cold>15</Insulation_Cold>
 		  <EquipDelay>0.1</EquipDelay>
 		  
 		  
-		  <WorkToMake>1000</WorkToMake>
+		  <WorkToMake>1200</WorkToMake>
 		</statBases>
 		<equippedStatOffsets>
 		  <WorkSpeedGlobal>0.2</WorkSpeedGlobal>
@@ -34,7 +190,8 @@
 			</skillRequirements>
 		</recipeMaker>
 		<costList>
-			<Synthread>20</Synthread>
+			<Cloth>30</Cloth>
+			<ComponentIndustrial>1</ComponentIndustrial>
 		</costList>
 		
 		<apparel>

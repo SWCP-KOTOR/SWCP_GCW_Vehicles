@@ -27,8 +27,8 @@
     <!--permanentEnemy>true</permanentEnemy>
 	<permanentEnemyToEveryoneExceptPlayer>true</permanentEnemyToEveryoneExceptPlayer-->
 	
-    <factionNameMaker>guy762_NamerFaction_ImperialReseveFleet</factionNameMaker>
-	<settlementNameMaker>guy762_NamerSettlement_ORStarfleet</settlementNameMaker>
+    <factionNameMaker>guy762_NamerFaction_ZsinjStarfleet</factionNameMaker>
+	<settlementNameMaker>guy762_NamerSettlement_GenericFleetBaseName</settlementNameMaker>
 	
 	<leaderTitle>governor</leaderTitle>
 	<leaderForceGenerateNewPawn>true</leaderForceGenerateNewPawn>
@@ -54,6 +54,8 @@
 	  </li>
 	  <li Class="VFECore.FactionDefExtension">
 		<startingGoodwillByFactionDefs>
+			<guy762_SWWarlordsFaction_NewRepublic>-100</guy762_SWWarlordsFaction_NewRepublic>
+			
 			<guy762_SWWarlordsFaction_ImpRemnant>-100</guy762_SWWarlordsFaction_ImpRemnant>
 			<guy762_SWWarlordsFaction_Pentastar>-100</guy762_SWWarlordsFaction_Pentastar>
 			
@@ -71,14 +73,16 @@
 		<neverConnectToRoads>false</neverConnectToRoads>
 		<minDistanceToOtherSettlements>40</minDistanceToOtherSettlements>
       </li>
-	  <li Class="FCP.Core.ModExtension_FactionTerritory">
-			<territoryColor>(165,155,80,32)</territoryColor>
-			<territoryBorderColor>(80,75,40,128)</territoryBorderColor>
-			<factionLabelColor>(80,75,40,255)</factionLabelColor>
-			<initialTerritoryRadius>10</initialTerritoryRadius>
-			<renderTerritoryOverWater>false</renderTerritoryOverWater>
-	  </li>
-	  <li MayRequire="Rick.FCP.Core.Tools.Beta" Class="FCP.Core.ModExtension_FixedIdeo">
+	  <!-- <li Class="FCP.Core.ModExtension_FactionTerritory"> -->
+			<!-- <territoryColor>(165,155,80,32)</territoryColor> -->
+			<!-- <territoryBorderColor>(165,155,80,128)</territoryBorderColor> -->
+			<!-- <factionLabelColor>(165,155,80,255)</factionLabelColor> -->
+			<!-- <initialTerritoryRadius>10</initialTerritoryRadius> -->
+			<!-- <renderTerritoryOverWater>false</renderTerritoryOverWater> -->
+	  <!-- </li> -->
+			<!-- <territoryBorderColor>(80,75,40,128)</territoryBorderColor> -->
+			<!-- <factionLabelColor>(80,75,40,255)</factionLabelColor> -->
+	  <li Class="FCP.Core.ModExtension_FixedIdeo">
 		<ideoIconDef>guy762_IdeoIcon_empire</ideoIconDef>
 		<ideoColorDef>DarkGrey</ideoColorDef>
 		<memberName>Imperial</memberName>
@@ -116,7 +120,7 @@
 	
 	
     <allowedCultures>
-		<li>guy762_culture_coreworlds</li>
+		<li>guy762_culture_outerrim</li>
 	</allowedCultures>
 	
 	<requiredMemes>
@@ -521,19 +525,39 @@
   
   
   
-  <!-- <RulePackDef> -->
-    <!-- <defName>guy762_NamerFaction_ImperialReseveFleet</defName> -->
-    <!-- <include> -->
-		<!-- <li>guy762_NamerFaction_OR_files</li> -->
-	<!-- </include> -->
-	<!-- <rulePack> -->
-	  <!-- <rulesStrings> -->
-		<!-- <li>r_name(p=6)->[SWORFN_SmallFleetNumber] [SWORFN_SmallPlanet] [reservefleet]</li> -->
-		<!-- <li>r_name(p=12)->[SWORFN_BigFleetNumber] [SWORFN_BigPlanet] [reservefleet]</li> -->
+  <RulePackDef>
+    <defName>guy762_NamerFactionFiles_ZsinjPlanets</defName>
+    <rulePack>
+      <rulesFiles>
+		<li>SWZDFN_AnyPlanet->Names/SWfactionnames_ZsinjPlanets</li>
+	  </rulesFiles>
+    </rulePack>
+  </RulePackDef>
+  
+  <RulePackDef>
+    <defName>guy762_NamerFactionFiles_CSAPlanets</defName>
+    <rulePack>
+      <rulesFiles>
+		<li>SWCSAFN_AnyPlanet->Names/SWfactionnames_CSAPlanets</li>
+	  </rulesFiles>
+    </rulePack>
+  </RulePackDef>
+  
+  <RulePackDef>
+    <defName>guy762_NamerFaction_ZsinjStarfleet</defName>
+    <include>
+		<li>guy762_NamerFactionFiles_GenericFleetName</li>
+		<li>guy762_NamerFactionFiles_ZsinjPlanets</li>
+		<!-- <li>guy762_NamerFactionFiles_CSAPlanets</li> -->
+	</include>
+	<rulePack>
+	  <rulesStrings>
+		<li>r_name(p=6)->[SWFN_BigFleetNumber] [SWZDFN_AnyPlanet] [starfleet]</li>
+		<!-- <li>r_name(p=1)->[SWFN_SmallFleetNumber] [SWCSAFN_AnyPlanet] [starfleet]</li> -->
 		
-		<!-- <li>reservefleet->Reserve Fleet</li> -->
-      <!-- </rulesStrings> -->
-    <!-- </rulePack> -->
-  <!-- </RulePackDef> -->
+		<li>starfleet->Starfleet</li>
+      </rulesStrings>
+    </rulePack>
+  </RulePackDef>
   
 </Defs>

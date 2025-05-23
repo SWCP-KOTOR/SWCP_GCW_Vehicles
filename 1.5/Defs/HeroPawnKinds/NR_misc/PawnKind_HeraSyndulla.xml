@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>	
+	
+	<PawnKindDef Name="SWWEPlayableHero_HeraSyndulla"  ParentName="guy762_HeroPawnKindBase">
+		<defName>SWWEPlayableHero_HeraSyndulla</defName>
+		<nameMaker>guy762_HeroNamer_HeraSyndulla</nameMaker>
+		<label>General</label>
+		<combatPower>500</combatPower>
+		<minGenerationAge>33</minGenerationAge>
+		<maxGenerationAge>34</maxGenerationAge>
+		<fixedGender>Female</fixedGender>
+		
+		<xenotypeSet>
+			<xenotypeChances>
+				<guy762_xenotype_twilek>999</guy762_xenotype_twilek>
+			</xenotypeChances>
+		</xenotypeSet>
+		
+		<useFactionXenotypes>false</useFactionXenotypes>
+		<itemQuality>Legendary</itemQuality>
+		<apparelMoney>49999</apparelMoney>
+		<apparelTags>
+		  <li>KotOREquipment_officer</li>
+		  <li>SWMedicBelt</li>
+		  <li>NewRepublic_herasyndulla</li>
+		</apparelTags>
+		<apparelRequired>
+		   <li>guy762_HeraSyndullaHat</li>
+		   <li>guy762_HeraSyndullaJumpsuit</li>
+		</apparelRequired>
+		<specificApparelRequirements>
+			<li>
+				<apparelLayer>Overhead</apparelLayer>
+				<apparelDef>guy762_HeraSyndullaHat</apparelDef>
+				<quality>Legendary</quality>
+			</li>
+		</specificApparelRequirements>
+		
+		<weaponMoney>99999999</weaponMoney>
+		<weaponTags>
+		  <li>SWRanged_DH17pistol</li>
+		</weaponTags>
+		<skills>
+			<li>
+				<skill>Shooting</skill>
+				<range>10~12</range>
+			</li>
+			<li>
+				<skill>Construction</skill>
+				<range>14~16</range>
+			</li>
+			<li>
+				<skill>Crafting</skill>
+				<range>14~16</range>
+			</li>
+			<li>
+				<skill>Medicine</skill>
+				<range>4~6</range>
+			</li>
+			<li>
+				<skill>Social</skill>
+				<range>16~18</range>
+			</li>
+			<li>
+				<skill>Intellectual</skill>
+				<range>19~20</range>
+			</li>
+		</skills>
+		<!-- <inventoryOptions> -->
+			<!-- <skipChance>0</skipChance> -->
+			<!-- <subOptionsChooseOne> -->
+				<!-- <li> -->
+					<!-- <thingDef>KOTOR_SpacerMedKit</thingDef> -->
+					<!-- <countRange>1~2</countRange> -->
+				<!-- </li> -->
+			<!-- </subOptionsChooseOne> -->
+		<!-- </inventoryOptions> -->
+		
+		
+		<forcedTraits>
+			<FastLearner>0</FastLearner>
+			<Kind>0</Kind>
+			<Nerves>1</Nerves>
+		</forcedTraits>
+		
+		<backstoryFiltersOverride>
+		  <li>
+			<categories>
+			  <li>guy762BSC_hera</li>
+			</categories>
+		  </li>
+		</backstoryFiltersOverride>
+		<abilities>
+			<li>guy762_Ability_CommandTierIII</li>
+			<li MayRequire="Ludeon.RimWorld.Ideology">LeaderSpeech</li>
+			<li MayRequire="Ludeon.RimWorld.Ideology">ProductionCommand</li>
+		</abilities>
+		<modExtensions>
+			<li Class="BodyTypeForPawnKind.ModExtension_HeadTypesOfPawnKind">
+			  <whitelist>
+				<li>Female_AverageNormal</li>
+			  </whitelist>
+			  <blacklist>
+				<!--leave blank to disable-->
+			  </blacklist>
+			  <priority>
+				<li>Female_AverageNormal</li>
+			  </priority>
+			  <checkGender>False</checkGender>
+			</li>
+			<li Class="BodyTypeForPawnKind.ModExtension_ForcedStyleItem">
+			  <forcedBeard>NoBeard</forcedBeard>
+			</li>
+			<li Class="AddGeneForPK.PKAdditionalGenes">
+			  <geneSets>
+				<li>
+				  <isXenogene>true</isXenogene>
+				  <chance>1</chance>
+				  <geneDefs>
+					<li>Skin_DeepYellow</li>
+				  </geneDefs>
+				</li>
+			  </geneSets>
+			</li>
+		</modExtensions>
+	  </PawnKindDef>
+	  
+	  <RulePackDef>
+        <defName>guy762_HeroNamer_HeraSyndulla</defName>
+        <rulePack>
+            <rulesStrings>
+                <li>r_name->[hera] '[syndulla]' [syndulla]</li>
+				<li>hera->Hera</li>
+				<li>syndulla->Syndulla</li>
+            </rulesStrings>
+        </rulePack>
+    </RulePackDef>
+	
+		<!--[PAWN_nameDef] [PAWN_possessive] [PAWN_pronoun]-->
+	
+	
+	<BackstoryDef>
+		<defName>guy762_BackstoryC_HeraSyndulla</defName>
+		<title>Revolutionary Trainee</title>
+		<titleShort>Trainee</titleShort>
+		<description>.</description>
+		<slot>Childhood</slot>
+		<skillGains>
+			<Construction>10</Construction>
+			<Crafting>10</Crafting>
+		</skillGains>
+		<forcedTraits>
+			<FastLearner>0</FastLearner>
+		</forcedTraits>
+		<requiredWorkTags>
+		  <li>Violent</li>
+		</requiredWorkTags>
+		<bodyTypeMale>Male</bodyTypeMale>
+		<bodyTypeFemale>Female</bodyTypeFemale>
+		<nameMaker>guy762_HeroNamer_HeraSyndulla</nameMaker>
+		<spawnCategories>
+			<li>guy762BSC_hera</li>
+		</spawnCategories>
+		<!--shuffleable>False</shuffleable-->
+	</BackstoryDef>
+	
+	<BackstoryDef>
+		<defName>guy762_BackstoryA_HeraSyndulla</defName>
+		<title>Phoenix Cell General</title>
+		<titleShort>General</titleShort>
+		<description>.</description>
+		<slot>Adulthood</slot>
+		<skillGains>
+			<Social>10</Social>
+			<Intellectual>10</Intellectual>
+		</skillGains>
+		<forcedTraits>
+		  <Nerves>1</Nerves>
+		</forcedTraits>
+		<requiredWorkTags>
+		  <li>Violent</li>
+		  <li>Intellectual</li>
+		</requiredWorkTags>
+		<bodyTypeMale>Male</bodyTypeMale>
+		<bodyTypeFemale>Female</bodyTypeFemale>
+		<nameMaker>guy762_HeroNamer_HeraSyndulla</nameMaker>
+		<spawnCategories>
+			<li>guy762BSC_hera</li>
+		</spawnCategories>
+		<!--shuffleable>False</shuffleable-->
+	</BackstoryDef>
+	
+	
+
+</Defs>

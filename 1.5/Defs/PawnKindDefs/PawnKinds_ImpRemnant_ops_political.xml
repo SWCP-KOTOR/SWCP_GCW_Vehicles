@@ -74,6 +74,86 @@
 	
 	
 	
+	<PawnKindDef Name="SWImpRemnant_ForceUserBase" ParentName="SWImpRemnant_Base" Abstract="True">
+		<disallowedTraits Inherit="False">
+			<li>BodyPurist</li>
+			<li>Wimp</li>
+		</disallowedTraits>
+		<disallowedTraitsWithDegree Inherit="False">
+			<PsychicSensitivity>-1</PsychicSensitivity>
+			<PsychicSensitivity>-2</PsychicSensitivity>
+		</disallowedTraitsWithDegree>
+		<useFactionXenotypes>false</useFactionXenotypes>
+		<xenotypeSet>
+			<xenotypeChances>
+				<Baseliner MayRequire="Ludeon.RimWorld.Biotech">0.63</Baseliner>
+				<guy762_xenotype_arkanian MayRequire="guy762.StarWarsXenotypes">0.05</guy762_xenotype_arkanian>
+				<guy762_xenotype_devaronian MayRequire="guy762.StarWarsXenotypes">0.01</guy762_xenotype_devaronian>
+				<guy762_xenotype_echani MayRequire="guy762.StarWarsXenotypes">0.05</guy762_xenotype_echani>
+				<guy762_xenotype_iridonian MayRequire="guy762.StarWarsXenotypes">0.03</guy762_xenotype_iridonian>
+				<guy762_xenotype_kaleesh MayRequire="guy762.StarWarsXenotypes">0.02</guy762_xenotype_kaleesh>
+				<guy762_xenotype_miraluka MayRequire="guy762.StarWarsXenotypes">0.02</guy762_xenotype_miraluka>
+				<guy762_xenotype_mirialan MayRequire="guy762.StarWarsXenotypes">0.03</guy762_xenotype_mirialan>
+				<guy762_xenotype_pantoran MayRequire="guy762.StarWarsXenotypes">0.05</guy762_xenotype_pantoran>
+				<guy762_xenotype_twilek MayRequire="guy762.StarWarsXenotypes">0.01</guy762_xenotype_twilek>
+				<guy762_xenotype_umbaran MayRequire="guy762.StarWarsXenotypes">0.03</guy762_xenotype_umbaran>
+				<guy762_xenotype_zabrakDathomiri MayRequire="guy762.StarWarsXenotypes">0.03</guy762_xenotype_zabrakDathomiri>
+				<guy762_xenotype_zeltron MayRequire="guy762.StarWarsXenotypes">0.03</guy762_xenotype_zeltron>
+				<guy762_xenotype_zygerrian MayRequire="guy762.StarWarsXenotypes">0.01</guy762_xenotype_zygerrian>
+			</xenotypeChances>
+		</xenotypeSet>
+	</PawnKindDef>
+
+	<PawnKindDef Name="SWImpRemnant_ForceUserXenoList" ParentName="SWImpRemnant_ForceUserBase" Abstract="True">
+		<xenotypeSet Inherit="False">			<!--full list minus special ones-->
+			<xenotypeChances>
+				<Baseliner MayRequire="Ludeon.RimWorld.Biotech">0.01</Baseliner>
+				<guy762_xenotype_aqualish MayRequire="guy762.StarWarsXenotypes">0.01</guy762_xenotype_aqualish>
+				<guy762_xenotype_arkanian MayRequire="guy762.StarWarsXenotypes">0.01</guy762_xenotype_arkanian>
+				<guy762_xenotype_bith MayRequire="guy762.StarWarsXenotypes">0.01</guy762_xenotype_bith>
+				<guy762_xenotype_bothan MayRequire="guy762.StarWarsXenotypes">0.01</guy762_xenotype_bothan>
+				<guy762_xenotype_cathar MayRequire="guy762.StarWarsXenotypes">0.01</guy762_xenotype_cathar>
+				<!--<guy762_xenotype_chadrafan MayRequire="guy762.StarWarsXenotypes">0.01</guy762_xenotype_chadrafan>-->
+				<guy762_xenotype_defel MayRequire="guy762.StarWarsXenotypes">0.01</guy762_xenotype_defel>
+				<guy762_xenotype_devaronian MayRequire="guy762.StarWarsXenotypes">0.01</guy762_xenotype_devaronian>
+				<guy762_xenotype_duros MayRequire="guy762.StarWarsXenotypes">0.01</guy762_xenotype_duros>
+				<guy762_xenotype_echani MayRequire="guy762.StarWarsXenotypes">0.01</guy762_xenotype_echani>
+				<guy762_xenotype_falleen MayRequire="guy762.StarWarsXenotypes">0.01</guy762_xenotype_falleen>
+				<guy762_xenotype_feeorin MayRequire="guy762.StarWarsXenotypes">0.01</guy762_xenotype_feeorin>
+				<!--<guy762_xenotype_gand MayRequire="guy762.StarWarsXenotypes">0.01</guy762_xenotype_gand>-->
+				<guy762_xenotype_iridonian MayRequire="guy762.StarWarsXenotypes">0.01</guy762_xenotype_iridonian>
+				<!--<guy762_xenotype_ithorian MayRequire="guy762.StarWarsXenotypes">0.01</guy762_xenotype_ithorian>-->
+				<guy762_xenotype_kaleesh MayRequire="guy762.StarWarsXenotypes">0.01</guy762_xenotype_kaleesh>
+				<!--<guy762_xenotype_keldor MayRequire="guy762.StarWarsXenotypes">0.01</guy762_xenotype_keldor>-->
+				<guy762_xenotype_klatoonian MayRequire="guy762.StarWarsXenotypes">0.01</guy762_xenotype_klatoonian>
+				<guy762_xenotype_kubaz MayRequire="guy762.StarWarsXenotypes">0.01</guy762_xenotype_kubaz>
+				<guy762_xenotype_lasat MayRequire="guy762.StarWarsXenotypes">0.01</guy762_xenotype_lasat>
+				<guy762_xenotype_mimbanese MayRequire="guy762.StarWarsXenotypes">0.01</guy762_xenotype_mimbanese>
+				<guy762_xenotype_miraluka MayRequire="guy762.StarWarsXenotypes">0.01</guy762_xenotype_miraluka>
+				<guy762_xenotype_mirialan MayRequire="guy762.StarWarsXenotypes">0.01</guy762_xenotype_mirialan>
+				<guy762_xenotype_moncal MayRequire="guy762.StarWarsXenotypes">0.01</guy762_xenotype_moncal>
+				<guy762_xenotype_nautolan MayRequire="guy762.StarWarsXenotypes">0.01</guy762_xenotype_nautolan>
+				<guy762_xenotype_nemoidian MayRequire="guy762.StarWarsXenotypes">0.01</guy762_xenotype_nemoidian>
+				<guy762_xenotype_nikto MayRequire="guy762.StarWarsXenotypes">0.01</guy762_xenotype_nikto>
+				<guy762_xenotype_pantoran MayRequire="guy762.StarWarsXenotypes">0.01</guy762_xenotype_pantoran>
+				<guy762_xenotype_quarren MayRequire="guy762.StarWarsXenotypes">0.01</guy762_xenotype_quarren>
+				<guy762_xenotype_rodian MayRequire="guy762.StarWarsXenotypes">0.01</guy762_xenotype_rodian>
+				<!--<guy762_xenotype_selkath MayRequire="guy762.StarWarsXenotypes">0.01</guy762_xenotype_selkath>-->
+				<!--<guy762_xenotype_snivvian MayRequire="guy762.StarWarsXenotypes">0.01</guy762_xenotype_snivvian>-->
+				<!--<guy762_xenotype_sullustan MayRequire="guy762.StarWarsXenotypes">0.01</guy762_xenotype_sullustan>-->
+				<guy762_xenotype_togruta MayRequire="guy762.StarWarsXenotypes">0.01</guy762_xenotype_togruta>
+				<guy762_xenotype_trandoshan MayRequire="guy762.StarWarsXenotypes">0.01</guy762_xenotype_trandoshan>
+				<guy762_xenotype_twilek MayRequire="guy762.StarWarsXenotypes">0.01</guy762_xenotype_twilek>
+				<!--<guy762_xenotype_ugnaught MayRequire="guy762.StarWarsXenotypes">0.01</guy762_xenotype_ugnaught>-->
+				<guy762_xenotype_umbaran MayRequire="guy762.StarWarsXenotypes">0.01</guy762_xenotype_umbaran>
+				<guy762_xenotype_weequay MayRequire="guy762.StarWarsXenotypes">0.01</guy762_xenotype_weequay>
+				<guy762_xenotype_zabrak MayRequire="guy762.StarWarsXenotypes">0.01</guy762_xenotype_zabrak>
+				<guy762_xenotype_zabrakDathomiri MayRequire="guy762.StarWarsXenotypes">0.01</guy762_xenotype_zabrakDathomiri>
+				<guy762_xenotype_zeltron MayRequire="guy762.StarWarsXenotypes">0.01</guy762_xenotype_zeltron>
+				<guy762_xenotype_zygerrian MayRequire="guy762.StarWarsXenotypes">0.01</guy762_xenotype_zygerrian>
+			</xenotypeChances>
+		</xenotypeSet>
+	</PawnKindDef>
 	
 	
 	
@@ -87,6 +167,22 @@
 	
 	
 	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<!-- laborers and engnineers -->
 	
 	
 	
@@ -289,6 +385,14 @@
 	</PawnKindDef>
 	
 	
+	
+	
+	
+	
+	<!-- logistics officers -->
+	
+	
+	
 	<PawnKindDef Name="SWImpRemnant_OpsGeneral" ParentName="SWImpRemnant_Base">
 		<defName>SWImpRemnant_OpsGeneral</defName>
 		<label>Imperial logistics general</label>
@@ -319,7 +423,7 @@
 			<li>
 				<apparelLayer>OnSkin</apparelLayer>
 				<apparelDef>guy762_ImpUniform_highbrass</apparelDef>
-				<styleDef>guy762_RankStyle_opsgeneral</styleDef>
+				<styleDef>guy762_RankStyle_ImpOfficer_opsgeneral</styleDef>
 				<color>(125,125,110)</color>       <!-- imperial olive -->
 				<quality>Excellent</quality>
 			</li>
@@ -410,7 +514,7 @@
 			<li>
 				<apparelLayer>OnSkin</apparelLayer>
 				<apparelDef>guy762_ImpUniform_midrank</apparelDef>
-				<styleDef>guy762_RankStyle_viceroy</styleDef>
+				<styleDef>guy762_RankStyle_ImpOfficer_viceroy</styleDef>
 				<color>(125,125,110)</color>       <!-- imperial olive -->
 				<quality>Excellent</quality>
 			</li>
@@ -481,7 +585,7 @@
 			<li>
 				<apparelLayer>OnSkin</apparelLayer>
 				<apparelDef>guy762_ImpUniform_highbrass</apparelDef>
-				<styleDef>guy762_RankStyle_moff</styleDef>
+				<styleDef>guy762_RankStyle_ImpOfficer_moff</styleDef>
 				<color>(125,125,110)</color>       <!-- imperial olive -->
 				<quality>Excellent</quality>
 			</li>

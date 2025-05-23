@@ -27,7 +27,8 @@
             <li Class="CompProperties_ApparelReloadable">
                 <maxCharges>3</maxCharges>
                 <ammoDef>guy762_JKDetpack_item</ammoDef>                <!-- Change into any def you want-->
-                <ammoCountToRefill>3</ammoCountToRefill>                <!-- Important for reloading -->
+                <ammoCountPerCharge>1</ammoCountPerCharge>                <!-- Important for reloading -->
+                <!-- <ammoCountToRefill>3</ammoCountToRefill> -->
                 <baseReloadTicks>60</baseReloadTicks>
                 <soundReload>Standard_Reload</soundReload>
                 <hotKey>Misc4</hotKey>

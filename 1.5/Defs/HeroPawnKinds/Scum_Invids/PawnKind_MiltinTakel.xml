@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>	
+	
+	<PawnKindDef Name="SWWEPlayableVillain_MiltinTakel"  ParentName="guy762_HeroPawnKindBase">
+		<defName>SWWEPlayableVillain_MiltinTakel</defName>
+		<nameMaker>guy762_HeroNamer_MiltinTakel</nameMaker>
+		<label>Grand Admiral</label>
+		<combatPower>500</combatPower>
+		<minGenerationAge>37</minGenerationAge>
+		<maxGenerationAge>38</maxGenerationAge>
+		<fixedGender>Male</fixedGender>
+		<forcedHair>GreasySwoop</forcedHair>
+		<forcedHairColor>(0.25, 0.2, 0.15)</forcedHairColor>
+		<skinColorOverride>(242,237,224)</skinColorOverride>
+		<xenotypeSet>
+			<xenotypeChances>
+				<Baseliner>999</Baseliner>
+			</xenotypeChances>
+		</xenotypeSet>
+		<useFactionXenotypes>false</useFactionXenotypes>
+		<itemQuality>Legendary</itemQuality>
+		<apparelMoney>49999</apparelMoney>
+		<apparelTags>
+		  <li>KotOREquipment_officer</li>
+		</apparelTags>
+		<apparelRequired>
+		   <li>guy762_Accessory_travelerbag</li>
+		   <li>guy762_ImpUniform_topbrass</li>
+		</apparelRequired>
+		<specificApparelRequirements>
+			<li>
+				<apparelLayer>Shell</apparelLayer>
+				<apparelDef>guy762_Accessory_travelerbag</apparelDef>
+				<color>(150,0,0)</color> <!-- gundark leather -->
+				<quality>Legendary</quality>
+			</li>
+			<li>
+				<apparelLayer>OnSkin</apparelLayer>
+				<apparelDef>guy762_ImpUniform_topbrass</apparelDef>
+				<styleDef>guy762_RankStyle_ImpOfficer_grandadmiral</styleDef>
+				<color>(250,250,250)</color>
+				<quality>Legendary</quality>
+			</li>
+		</specificApparelRequirements>
+		<weaponMoney>99999999</weaponMoney>
+		<weaponTags>
+		  <li>SWRanged_WESTAR35</li>
+		</weaponTags>
+		
+		<inventoryOptions>
+		  <skipChance>0</skipChance>
+		  <subOptionsChooseOne>
+			<li>
+			  <thingDef>KOTOR_Spice</thingDef>
+			  <countRange>5~7</countRange>
+			</li>
+		  </subOptionsChooseOne>
+		</inventoryOptions>
+		
+		<skills>
+			<li>
+				<skill>Shooting</skill>
+				<range>6~8</range>
+			</li>
+			<li>
+				<skill>Medicine</skill>
+				<range>6~8</range>
+			</li>
+			<li>
+				<skill>Social</skill>
+				<range>12~14</range>
+			</li>
+			<li>
+				<skill>Intellectual</skill>
+				<range>15~17</range>
+			</li>
+		</skills>
+		<forcedTraits>
+			<DrugDesire>2</DrugDesire>
+			<PsychicSensitivity>1</PsychicSensitivity>
+			<Polyamorous MayRequire="Mlie.RationalRomance">0</Polyamorous>
+			<HAR_Xenophobia MayRequire="erdelf.HumanoidAlienRaces">-1</HAR_Xenophobia>
+		</forcedTraits>
+		
+		<backstoryFiltersOverride>
+		  <li>
+			<categories>
+			  <li>guy762BSC_miltintakel</li>
+			</categories>
+		  </li>
+		</backstoryFiltersOverride>
+		<abilities>
+			<li>guy762_Ability_CommandTierII</li>
+			
+			<li MayRequire="Ludeon.RimWorld.Ideology">LeaderSpeech</li>
+			<li MayRequire="Ludeon.RimWorld.Ideology">WorkDrive</li>
+		</abilities>
+		<modExtensions>
+			<li Class="BodyTypeForPawnKind.ModExtension_HeadTypesOfPawnKind">
+			  <whitelist>
+				<li>Male_AverageNormal</li>
+			  </whitelist>
+			  <blacklist>
+				<!--leave blank to disable-->
+			  </blacklist>
+			  <priority>
+				<li>Male_AverageNormal</li>
+			  </priority>
+			  <checkGender>False</checkGender>
+			</li>
+			<li Class="BodyTypeForPawnKind.ModExtension_ForcedStyleItem">
+			  <forcedBeard>Moustache</forcedBeard>
+			</li>
+			<li Class="AddGeneForPK.PKAdditionalGenes">
+			  <geneSets>
+				<li>
+				  <isXenogene>false</isXenogene>
+				  <chance>1</chance>
+				  <geneDefs>
+					<li>Hair_DarkReddish</li>
+					<li>Skin_Melanin1</li>
+				  </geneDefs>
+				</li>
+			  </geneSets>
+			</li>
+		</modExtensions>
+	  </PawnKindDef>
+	  
+	  <RulePackDef>
+        <defName>guy762_HeroNamer_MiltinTakel</defName>
+        <rulePack>
+            <rulesStrings>
+                <li>r_name->[miltin] '[takel]' [takel]</li>
+				<li>miltin->Miltin</li>
+				<li>takel->Takel</li>
+            </rulesStrings>
+        </rulePack>
+    </RulePackDef>
+	
+		<!--[PAWN_nameDef] [PAWN_possessive] [PAWN_pronoun]-->
+	
+	
+	<BackstoryDef>
+		<defName>guy762_BackstoryC_MiltinTakel</defName>
+		<title>Socialite Groupie</title>
+		<titleShort>Groupie</titleShort>
+		<description>.</description>
+		<slot>Childhood</slot>
+		<skillGains>
+			<Social>10</Social>
+		</skillGains>
+		<forcedTraits>
+		  <DrugDesire>2</DrugDesire>
+		  <Polyamorous MayRequire="Mlie.RationalRomance">0</Polyamorous>
+		  <HAR_Xenophobia MayRequire="erdelf.HumanoidAlienRaces">-1</HAR_Xenophobia>
+		</forcedTraits>
+		<workDisables>ManualDumb, Constructing, Crafting, Mining</workDisables>
+		<bodyTypeMale>Thin</bodyTypeMale>
+		<bodyTypeFemale>Thin</bodyTypeFemale>
+		<nameMaker>guy762_HeroNamer_MiltinTakel</nameMaker>
+		<spawnCategories>
+			<li>guy762BSC_miltintakel</li>
+		</spawnCategories>
+		<!--shuffleable>False</shuffleable-->
+	</BackstoryDef>
+	
+	<BackstoryDef>
+		<defName>guy762_BackstoryA_MiltinTakel</defName>
+		<title>Grand Admiral</title>
+		<titleShort>Grand Admiral</titleShort>
+		<description>.</description>
+		<slot>Adulthood</slot>
+		<skillGains>
+			<Shooting>5</Shooting>
+			<Intellectual>10</Intellectual>
+		</skillGains>
+		<forcedTraits>
+			<PsychicSensitivity>1</PsychicSensitivity>
+		</forcedTraits>
+		<requiredWorkTags>
+		  <li>Violent</li>
+		  <li>Intellectual</li>
+		</requiredWorkTags>
+		<bodyTypeMale>Thin</bodyTypeMale>
+		<bodyTypeFemale>Thin</bodyTypeFemale>
+		<nameMaker>guy762_HeroNamer_MiltinTakel</nameMaker>
+		<spawnCategories>
+			<li>guy762BSC_miltintakel</li>
+		</spawnCategories>
+		<!--shuffleable>False</shuffleable-->
+	</BackstoryDef>
+	
+	
+
+</Defs>

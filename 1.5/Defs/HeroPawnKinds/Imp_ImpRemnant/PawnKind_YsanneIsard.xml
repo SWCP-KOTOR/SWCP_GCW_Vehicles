@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>	
+	
+	<PawnKindDef Name="SWWEPlayableVillain_YsanneIsard"  ParentName="guy762_HeroPawnKindBase">
+		<defName>SWWEPlayableVillain_YsanneIsard</defName>
+		<nameMaker>guy762_HeroNamer_YsanneIsard</nameMaker>
+		<label>Intelligence Director</label>
+		<combatPower>500</combatPower>
+		<minGenerationAge>34</minGenerationAge>
+		<maxGenerationAge>35</maxGenerationAge>
+		<fixedGender>Female</fixedGender>
+		<forcedHair>Snazzy</forcedHair>
+		<forcedHairColor>(50,50,50)</forcedHairColor>
+		<skinColorOverride>(255, 239, 213)</skinColorOverride>
+		<xenotypeSet>
+			<xenotypeChances>
+				<Baseliner>999</Baseliner>
+			</xenotypeChances>
+		</xenotypeSet>
+		<useFactionXenotypes>false</useFactionXenotypes>
+		<itemQuality>Legendary</itemQuality>
+		<apparelMoney>49999</apparelMoney>
+		<apparelTags>
+		  <li>KotOREquipment_officer</li>
+		</apparelTags>
+		<apparelRequired>
+		   <li>guy762_ImpUniform_topbrass</li>
+		</apparelRequired>
+		<specificApparelRequirements>
+			<li>
+				<apparelLayer>OnSkin</apparelLayer>
+				<apparelDef>guy762_ImpUniform_topbrass</apparelDef>
+				<styleDef>guy762_RankStyle_ImpOfficer_director</styleDef>
+				<color>(195,55,45)</color> <!-- isard's red -->
+				<quality>Legendary</quality>
+			</li>
+		</specificApparelRequirements>
+		<weaponMoney>99999999</weaponMoney>
+		<weaponTags>
+		  <li>SWRanged_Power5pistol</li>
+		</weaponTags>
+		<skills>
+			<li>
+				<skill>Shooting</skill>
+				<range>10~12</range>
+			</li>
+			<li>
+				<skill>Melee</skill>
+				<range>10~12</range>
+			</li>
+			<li>
+				<skill>Social</skill>
+				<range>19~20</range>
+			</li>
+			<li>
+				<skill>Intellectual</skill>
+				<range>14~16</range>
+			</li>
+		</skills>
+		<forcedTraits>
+			<Beauty>2</Beauty>
+			<Psychopath>0</Psychopath>
+			<Bloodlust>0</Bloodlust>
+			<Nerves>-2</Nerves>
+		</forcedTraits>
+		
+		<backstoryFiltersOverride>
+		  <li>
+			<categories>
+			  <li>guy762BSC_isard</li>
+			</categories>
+		  </li>
+		</backstoryFiltersOverride>
+		<abilities>
+			<li>guy762_Ability_CommandTierIV</li>
+			
+			<li MayRequire="Ludeon.RimWorld.Ideology">LeaderSpeech</li>
+			<li MayRequire="Ludeon.RimWorld.Ideology">WorkDrive</li>
+		</abilities>
+		<modExtensions>
+			<li Class="BodyTypeForPawnKind.ModExtension_HeadTypesOfPawnKind">
+			  <whitelist>
+				<li>Female_AveragePointy</li>
+			  </whitelist>
+			  <blacklist>
+				<!--leave blank to disable-->
+			  </blacklist>
+			  <priority>
+				<li>Female_AveragePointy</li>
+			  </priority>
+			  <checkGender>False</checkGender>
+			</li>
+			<li Class="BodyTypeForPawnKind.ModExtension_ForcedStyleItem">
+			  <forcedBeard>NoBeard</forcedBeard>
+			</li>
+			<li Class="AddGeneForPK.PKAdditionalGenes">
+			  <geneSets>
+				<li>
+				  <isXenogene>false</isXenogene>
+				  <chance>1</chance>
+				  <geneDefs>
+					<li>Hair_DarkBlack</li>
+					<li>Skin_Melanin2</li>
+				  </geneDefs>
+				</li>
+			  </geneSets>
+			</li>
+		</modExtensions>
+	  </PawnKindDef>
+	  
+	  
+	  <PawnKindDef Name="SWImpRemnant_YsanneIsard"  ParentName="SWWEPlayableVillain_YsanneIsard">
+		<defName>SWImpRemnant_YsanneIsard</defName>
+		<defaultFactionType>guy762_SWWarlordsFaction_ImpRemnant</defaultFactionType>
+	  </PawnKindDef>
+	  
+	  
+	  <RulePackDef>
+        <defName>guy762_HeroNamer_YsanneIsard</defName>
+        <rulePack>
+            <rulesStrings>
+                <li>r_name->[ysanne] '[iceheart]' [isard]</li>
+				<li>ysanne->Ysanne</li>
+				<li>iceheart->Iceheart</li>
+				<li>isard->Isard</li>
+            </rulesStrings>
+        </rulePack>
+    </RulePackDef>
+	
+		<!--[PAWN_nameDef] [PAWN_possessive] [PAWN_pronoun]-->
+	
+	
+	<BackstoryDef>
+		<defName>guy762_BackstoryC_YsanneIsard</defName>
+		<title>Junior Intelligence Officer</title>
+		<titleShort>Intelligence Officer</titleShort>
+		<description>.</description>
+		<slot>Childhood</slot>
+		<skillGains>
+			<Social>5</Social>
+			<Intellectual>5</Intellectual>
+		</skillGains>
+		<forcedTraits>
+			<Psychopath>0</Psychopath>
+		</forcedTraits>
+		<requiredWorkTags>
+		  <li>Violent</li>
+		  <li>Social</li>
+		  <li>Intellectual</li>
+		</requiredWorkTags>
+		<bodyTypeMale>Male</bodyTypeMale>
+		<bodyTypeFemale>Female</bodyTypeFemale>
+		<nameMaker>guy762_HeroNamer_YsanneIsard</nameMaker>
+		<spawnCategories>
+			<li>guy762BSC_isard</li>
+		</spawnCategories>
+		<!--shuffleable>False</shuffleable-->
+	</BackstoryDef>
+	
+	<BackstoryDef>
+		<defName>guy762_BackstoryA_YsanneIsard</defName>
+		<title>Imperial Intelligence Director</title>
+		<titleShort>Director</titleShort>
+		<description>.</description>
+		<slot>Adulthood</slot>
+		<skillGains>
+			<Shooting>5</Shooting>
+			<Melee>5</Melee>
+			<Social>15</Social>
+			<Intellectual>10</Intellectual>
+		</skillGains>
+		<forcedTraits>
+			<Bloodlust>0</Bloodlust>
+			<Nerves>-2</Nerves>
+		</forcedTraits>
+		<requiredWorkTags>
+		  <li>Violent</li>
+		  <li>Social</li>
+		  <li>Intellectual</li>
+		</requiredWorkTags>
+		<workDisables>ManualDumb, Artistic, PlantWork, Cooking, Mining, Caring</workDisables>
+		<bodyTypeMale>Male</bodyTypeMale>
+		<bodyTypeFemale>Female</bodyTypeFemale>
+		<nameMaker>guy762_HeroNamer_YsanneIsard</nameMaker>
+		<spawnCategories>
+			<li>guy762BSC_isard</li>
+		</spawnCategories>
+		<!--shuffleable>False</shuffleable-->
+	</BackstoryDef>
+	
+	
+
+</Defs>

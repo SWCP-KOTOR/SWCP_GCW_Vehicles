@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>	
+	
+	<PawnKindDef Name="SWWEPlayableVillain_Melvar"  ParentName="guy762_HeroPawnKindBase">
+		<defName>SWWEPlayableVillain_Melvar</defName>
+		<nameMaker>guy762_HeroNamer_Melvar</nameMaker>
+		<label>General</label>
+		<combatPower>500</combatPower>
+		<minGenerationAge>33</minGenerationAge>
+		<maxGenerationAge>34</maxGenerationAge>
+		<fixedGender>Male</fixedGender>
+		<forcedHair>Scatman</forcedHair>
+		<forcedHairColor>(237, 202, 156)</forcedHairColor>
+		<skinColorOverride>(249, 219, 165)</skinColorOverride>
+		<xenotypeSet>
+			<xenotypeChances>
+				<Baseliner>999</Baseliner>
+			</xenotypeChances>
+		</xenotypeSet>
+		<useFactionXenotypes>false</useFactionXenotypes>
+		<itemQuality>Legendary</itemQuality>
+		<apparelMoney>49999</apparelMoney>
+		<apparelTags>
+		  <li>KotOREquipment_officer</li>
+		</apparelTags>
+		<apparelRequired>
+		   <li>guy762_ImpUniform_midrank</li>
+		</apparelRequired>
+		<specificApparelRequirements>
+			<li>
+				<apparelLayer>OnSkin</apparelLayer>
+				<apparelDef>guy762_ImpUniform_midrank</apparelDef>
+				<styleDef>guy762_RankStyle_ImpOfficer_tasksquadCO</styleDef>
+				<color>(175,155,115)</color> <!-- outer rim garrison beige -->
+				<quality>Legendary</quality>
+			</li>
+		</specificApparelRequirements>
+		<weaponMoney>99999999</weaponMoney>
+		<weaponTags>
+		  <li>SWRanged_Power5pistol</li>
+		</weaponTags>
+		
+		<techHediffsRequired>
+		  <li>guy762_ImplantDock_I</li>
+		  <li>HandTalon</li>
+		  <li>HandTalon</li>
+		  <li>ElbowBlade</li>
+		  <li>ElbowBlade</li>
+		  <li>KneeSpike</li>
+		  <li>KneeSpike</li>
+		  <li>VenomTalon</li>
+		  <li>VenomTalon</li>
+		</techHediffsRequired>
+		<disallowedTraits><li>BodyPurist</li></disallowedTraits>
+		
+		<inventoryOptions>
+		  <skipChance>0</skipChance>
+		  <subOptionsChooseOne>
+			<li>
+			  <thingDef>guy762_ImplantItemImp_durability</thingDef>
+			  <countRange>1</countRange>
+			</li>
+			<li>
+			  <thingDef>guy762_ImplantItemImp_alacrity</thingDef>
+			  <countRange>1</countRange>
+			</li>
+			<li>
+			  <thingDef>guy762_ImplantItemImp_power</thingDef>
+			  <countRange>1</countRange>
+			</li>
+		  </subOptionsChooseOne>
+		</inventoryOptions>
+		
+		<skills>
+			<li>
+				<skill>Shooting</skill>
+				<range>4~6</range>
+			</li>
+			<li>
+				<skill>Melee</skill>
+				<range>14~16</range>
+			</li>
+			<li>
+				<skill>Social</skill>
+				<range>12~14</range>
+			</li>
+			<li>
+				<skill>Intellectual</skill>
+				<range>10~12</range>
+			</li>
+		</skills>
+		<forcedTraits>
+			<Bloodlust>0</Bloodlust>
+			<Psychopath>0</Psychopath>
+			<Transhumanist>0</Transhumanist>
+			<Beauty>-1</Beauty>
+		</forcedTraits>
+		
+		<backstoryFiltersOverride>
+		  <li>
+			<categories>
+			  <li>guy762BSC_melvar</li>
+			</categories>
+		  </li>
+		</backstoryFiltersOverride>
+		<abilities>
+			<li>guy762_Ability_CommandTierV</li>
+
+			<li MayRequire="Ludeon.RimWorld.Ideology">WorkDrive</li>
+		</abilities>
+		<modExtensions>
+			<li Class="BodyTypeForPawnKind.ModExtension_HeadTypesOfPawnKind">
+			  <whitelist>
+				<li>Male_NarrowNormal</li>
+			  </whitelist>
+			  <blacklist>
+				<!--leave blank to disable-->
+			  </blacklist>
+			  <priority>
+				<li>Male_NarrowNormal</li>
+			  </priority>
+			  <checkGender>False</checkGender>
+			</li>
+			<li Class="BodyTypeForPawnKind.ModExtension_ForcedStyleItem">
+			  <forcedBeard>NoBeard</forcedBeard>
+			</li>
+			<li Class="AddGeneForPK.PKAdditionalGenes">
+			  <geneSets>
+				<li>
+				  <isXenogene>false</isXenogene>
+				  <chance>1</chance>
+				  <geneDefs>
+					<li>Hair_Blonde</li>
+					<li>Skin_Melanin5</li>
+				  </geneDefs>
+				</li>
+			  </geneSets>
+			</li>
+		</modExtensions>
+	  </PawnKindDef>
+	  
+	  <PawnKindDef Name="SWZsinj_Melvar"  ParentName="SWWEPlayableVillain_Melvar">
+		<defName>SWZsinj_Melvar</defName>
+		<defaultFactionType>guy762_SWWarlordsFaction_ZsinjDominion</defaultFactionType>
+	  </PawnKindDef>
+	  
+	  <RulePackDef>
+        <defName>guy762_HeroNamer_Melvar</defName>
+        <rulePack>
+            <rulesStrings>
+                <li>r_name->[oswald] '[melvar]' [melvar]</li>
+				<li>oswald->Oswald</li>
+				<li>melvar->Melvar</li>
+            </rulesStrings>
+        </rulePack>
+    </RulePackDef>
+	
+		<!--[PAWN_nameDef] [PAWN_possessive] [PAWN_pronoun]-->
+	
+	
+	<BackstoryDef>
+		<defName>guy762_BackstoryC_Melvar</defName>
+		<title>Imperial Intelligence Agent</title>
+		<titleShort>Agent</titleShort>
+		<description>.</description>
+		<slot>Childhood</slot>
+		<skillGains>
+			<Melee>5</Melee>
+			<Social>5</Social>
+		</skillGains>
+		<forcedTraits>
+			<Bloodlust>0</Bloodlust>
+			<Psychopath>0</Psychopath>
+		</forcedTraits>
+		<requiredWorkTags>
+		  <li>Violent</li>
+		  <li>Social</li>
+		</requiredWorkTags>
+		<bodyTypeMale>Thin</bodyTypeMale>
+		<bodyTypeFemale>Thin</bodyTypeFemale>
+		<workDisables>ManualDumb, Artistic, PlantWork, Cooking, Mining, Caring</workDisables>
+		<nameMaker>guy762_HeroNamer_Melvar</nameMaker>
+		<spawnCategories>
+			<li>guy762BSC_melvar</li>
+		</spawnCategories>
+		<!--shuffleable>False</shuffleable-->
+	</BackstoryDef>
+	
+	<BackstoryDef>
+		<defName>guy762_BackstoryA_Melvar</defName>
+		<title>Zsinj's General</title>
+		<titleShort>General</titleShort>
+		<description>.</description>
+		<slot>Adulthood</slot>
+		<skillGains>
+			<Melee>10</Melee>
+			<Social>5</Social>
+			<Intellectual>10</Intellectual>
+		</skillGains>
+		<forcedTraits>
+			<Transhumanist>0</Transhumanist>
+			<Beauty>-1</Beauty>
+		</forcedTraits>
+		<requiredWorkTags>
+		  <li>Violent</li>
+		  <li>Intellectual</li>
+		</requiredWorkTags>
+		<bodyTypeMale>Thin</bodyTypeMale>
+		<bodyTypeFemale>Thin</bodyTypeFemale>
+		<nameMaker>guy762_HeroNamer_Melvar</nameMaker>
+		<spawnCategories>
+			<li>guy762BSC_melvar</li>
+		</spawnCategories>
+		<!--shuffleable>False</shuffleable-->
+	</BackstoryDef>
+	
+	
+
+</Defs>

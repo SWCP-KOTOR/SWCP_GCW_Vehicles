@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>	
+	
+	<PawnKindDef Name="SWWEPlayableVillain_TessalaCorvae"  ParentName="guy762_HeroPawnKindBase">
+		<defName>SWWEPlayableVillain_TessalaCorvae</defName>
+		<nameMaker>guy762_HeroNamer_TessalaCorvae</nameMaker>
+		<label>General</label>
+		<combatPower>500</combatPower>
+		<minGenerationAge>27</minGenerationAge>
+		<maxGenerationAge>28</maxGenerationAge>
+		<fixedGender>Female</fixedGender>
+		<forcedHair>Decent</forcedHair>
+		<forcedHairColor>(50,50,50)</forcedHairColor>
+		<skinColorOverride>(255,239,189)</skinColorOverride>
+		<xenotypeSet>
+			<xenotypeChances>
+				<Baseliner>999</Baseliner>
+			</xenotypeChances>
+		</xenotypeSet>
+		<useFactionXenotypes>false</useFactionXenotypes>
+		<itemQuality>Legendary</itemQuality>
+		<apparelMoney>49999</apparelMoney>
+		<apparelTags>
+		  <li>KotOREquipment_officer</li>
+		</apparelTags>
+		<apparelRequired>
+		   <li>guy762_ImpTankTrooperHelmet</li>
+		   <li>guy762_ArmyOfficerArmor_midrank</li>
+		   <li>guy762_GenericUniform_fatigues</li>
+		</apparelRequired>
+		<specificApparelRequirements>
+			<li>
+				<apparelLayer>Overhead</apparelLayer>
+				<color>(50,50,55)</color>       <!-- blue-tint black -->
+			</li>
+			<li>
+				<apparelLayer>Middle</apparelLayer>
+				<apparelDef>guy762_ArmyOfficerArmor_midrank</apparelDef>
+				<styleDef>guy762_RankStyle_ImpOfficerArmor_tasksquadCO</styleDef>
+				<color>(50,50,55)</color>       <!-- blue-tint black -->
+				<quality>Legendary</quality>
+			</li>
+			<li>
+				<apparelLayer>OnSkin</apparelLayer>
+				<apparelDef>guy762_GenericUniform_fatigues</apparelDef>
+				<color>(90,90,95)</color>        <!-- blued grey -->
+				<quality>Legendary</quality>
+			</li>
+		</specificApparelRequirements>
+		<weaponMoney>99999999</weaponMoney>
+		<weaponTags>
+		  <li>SWRanged_TL50blaster</li>
+		</weaponTags>
+		<skills>
+			<li>
+				<skill>Shooting</skill>
+				<range>12~14</range>
+			</li>
+			<li>
+				<skill>Melee</skill> <!-- needs a lightfoil -->
+				<range>14~16</range>
+			</li>
+			<li>
+				<skill>Social</skill>
+				<range>12~14</range>
+			</li>
+			<li>
+				<skill>Intellectual</skill>
+				<range>12~14</range>
+			</li>
+		</skills>
+		<forcedTraits>
+			<SpeedOffset>2</SpeedOffset>
+			<Nerves>2</Nerves>
+			<DislikesMen>0</DislikesMen>
+		</forcedTraits>
+		
+		<backstoryFiltersOverride>
+		  <li>
+			<categories>
+			  <li>guy762BSC_tessalacorvae</li>
+			</categories>
+		  </li>
+		</backstoryFiltersOverride>
+		<abilities>
+			<li>guy762_Ability_CommandTierIII</li>
+			
+			<li MayRequire="Ludeon.RimWorld.Ideology">LeaderSpeech</li>
+			<li MayRequire="Ludeon.RimWorld.Ideology">WorkDrive</li>
+		</abilities>
+		<modExtensions>
+			<li Class="BodyTypeForPawnKind.ModExtension_HeadTypesOfPawnKind">
+			  <whitelist>
+				<li>Female_AveragePointy</li>
+			  </whitelist>
+			  <blacklist>
+				<!--leave blank to disable-->
+			  </blacklist>
+			  <priority>
+				<li>Female_AveragePointy</li>
+			  </priority>
+			  <checkGender>False</checkGender>
+			</li>
+			<li Class="BodyTypeForPawnKind.ModExtension_ForcedStyleItem">
+			  <forcedBeard>NoBeard</forcedBeard>
+			</li>
+			<li Class="AddGeneForPK.PKAdditionalGenes">
+			  <geneSets>
+				<li>
+				  <isXenogene>false</isXenogene>
+				  <chance>1</chance>
+				  <geneDefs>
+					<li>Hair_DarkBlack</li>
+					<li>Skin_Melanin4</li>
+				  </geneDefs>
+				</li>
+			  </geneSets>
+			</li>
+		</modExtensions>
+	  </PawnKindDef>
+	  
+	  
+	  <PawnKindDef Name="SWPentastar_TessalaCorvae"  ParentName="SWWEPlayableVillain_TessalaCorvae">
+		<defName>SWPentastar_TessalaCorvae</defName>
+		<defaultFactionType>guy762_SWWarlordsFaction_Pentastar</defaultFactionType>
+	  </PawnKindDef>
+	  
+	  
+	  <RulePackDef>
+        <defName>guy762_HeroNamer_TessalaCorvae</defName>
+        <rulePack>
+            <rulesStrings>
+                <li>r_name->[tessala] '[corvae]' [corvae]</li>
+				<li>tessala->Tessala</li>
+				<li>corvae->Corvae</li>
+            </rulesStrings>
+        </rulePack>
+    </RulePackDef>
+	
+		<!--[PAWN_nameDef] [PAWN_possessive] [PAWN_pronoun]-->
+	
+	
+	<BackstoryDef>
+		<defName>guy762_BackstoryC_TessalaCorvae</defName>
+		<title>Tapani Noble</title>
+		<titleShort>Noble</titleShort>
+		<description>.</description>
+		<slot>Childhood</slot>
+		<skillGains>
+			<Social>5</Social>
+			<Intellectual>5</Intellectual>
+		</skillGains>
+		<!-- <forcedTraits> -->
+		  <!-- <HAR_Xenophobia MayRequire="erdelf.HumanoidAlienRaces">1</HAR_Xenophobia> -->
+		  <!-- <Jealous>0</Jealous> -->
+		<!-- </forcedTraits> -->
+		<requiredWorkTags>
+		  <li>Social</li>
+		  <li>Intellectual</li>
+		</requiredWorkTags>
+		<workDisables>ManualDumb, PlantWork, Cooking, Mining</workDisables>
+		<bodyTypeMale>Thin</bodyTypeMale>
+		<bodyTypeFemale>Thin</bodyTypeFemale>
+		<nameMaker>guy762_HeroNamer_TessalaCorvae</nameMaker>
+		<spawnCategories>
+			<li>guy762BSC_tessalacorvae</li>
+		</spawnCategories>
+		<!--shuffleable>False</shuffleable-->
+	</BackstoryDef>
+	
+	<BackstoryDef>
+		<defName>guy762_BackstoryA_TessalaCorvae</defName>
+		<title>Firebird General</title>
+		<titleShort>General</titleShort>
+		<description>.</description>
+		<slot>Adulthood</slot>
+		<skillGains>
+			<Shooting>5</Shooting>
+			<Social>5</Social>
+			<Intellectual>5</Intellectual>
+		</skillGains>
+		<forcedTraits>
+		  <Nerves>2</Nerves>
+		  <DislikesMen>0</DislikesMen>
+		</forcedTraits>
+		<requiredWorkTags>
+		  <li>Violent</li>
+		  <li>Intellectual</li>
+		</requiredWorkTags>
+		<bodyTypeMale>Thin</bodyTypeMale>
+		<bodyTypeFemale>Thin</bodyTypeFemale>
+		<nameMaker>guy762_HeroNamer_TessalaCorvae</nameMaker>
+		<spawnCategories>
+			<li>guy762BSC_tessalacorvae</li>
+		</spawnCategories>
+		<!--shuffleable>False</shuffleable-->
+	</BackstoryDef>
+	
+	
+
+</Defs>

@@ -3,7 +3,7 @@
 
 <FactionDef ParentName="FactionBase">
     <defName>guy762_SWWarlordsFaction_ImpRemnant</defName>
-    <label>imperial remnant fleet</label>
+    <label>Imperial Remnant fleet</label>
     <description>.</description>
     <pawnSingular>imperial</pawnSingular>
     <pawnsPlural>imperials</pawnsPlural>
@@ -27,8 +27,8 @@
     <!--permanentEnemy>true</permanentEnemy>
 	<permanentEnemyToEveryoneExceptPlayer>true</permanentEnemyToEveryoneExceptPlayer-->
 	
-    <factionNameMaker>guy762_NamerFaction_ImperialReseveFleet</factionNameMaker>
-	<settlementNameMaker>guy762_NamerSettlement_ORStarfleet</settlementNameMaker>
+    <factionNameMaker>guy762_NamerFaction_ImpRemnantStarfleet</factionNameMaker>
+	<settlementNameMaker>guy762_NamerSettlement_GenericFleetBaseName</settlementNameMaker>
 	
 	<leaderTitle>governor</leaderTitle>
 	<leaderForceGenerateNewPawn>true</leaderForceGenerateNewPawn>
@@ -57,6 +57,8 @@
 	  </li>
 	  <li Class="VFECore.FactionDefExtension">
 		<startingGoodwillByFactionDefs>
+			<guy762_SWWarlordsFaction_NewRepublic>-100</guy762_SWWarlordsFaction_NewRepublic>
+			
 			<guy762_SWWarlordsFaction_Pentastar>-50~0</guy762_SWWarlordsFaction_Pentastar>
 			<guy762_SWWarlordsFaction_ZsinjDominion>-100</guy762_SWWarlordsFaction_ZsinjDominion>
 			
@@ -72,16 +74,18 @@
 		<excludeFromCommConsole>false</excludeFromCommConsole>
 		<hasCities>true</hasCities>
 		<neverConnectToRoads>false</neverConnectToRoads>
-		<minDistanceToOtherSettlements>40</minDistanceToOtherSettlements>
+		<!-- <minDistanceToOtherSettlements>40</minDistanceToOtherSettlements> -->
       </li>
 	  <li Class="FCP.Core.ModExtension_FactionTerritory">
-			<territoryColor>(50,215,60,32)</territoryColor>
+			<territoryColor>(25,110,30,32)</territoryColor>
 			<territoryBorderColor>(25,110,30,128)</territoryBorderColor>
 			<factionLabelColor>(25,110,30,255)</factionLabelColor>
 			<initialTerritoryRadius>10</initialTerritoryRadius>
 			<renderTerritoryOverWater>false</renderTerritoryOverWater>
 	  </li>
-	  <li MayRequire="Rick.FCP.Core.Tools.Beta" Class="FCP.Core.ModExtension_FixedIdeo">
+			<!-- <territoryBorderColor>(25,110,30,128)</territoryBorderColor> -->
+			<!-- <factionLabelColor>(25,110,30,255)</factionLabelColor> -->
+	  <li Class="FCP.Core.ModExtension_FixedIdeo">
 		<ideoIconDef>guy762_IdeoIcon_empire</ideoIconDef>
 		<ideoColorDef>DarkGrey</ideoColorDef>
 		<memberName>Imperial</memberName>
@@ -582,17 +586,27 @@
   
   
   
+  
   <RulePackDef>
-    <defName>guy762_NamerFaction_ImperialReseveFleet</defName>
+    <defName>guy762_NamerFactionFiles_ImpRemnantPlanets</defName>
+    <rulePack>
+      <rulesFiles>
+		<li>SWIRFN_AnyPlanet->Names/SWfactionnames_ImpRemnantPlanets</li>
+	  </rulesFiles>
+    </rulePack>
+  </RulePackDef>
+  
+  <RulePackDef>
+    <defName>guy762_NamerFaction_ImpRemnantStarfleet</defName>
     <include>
-		<li>guy762_NamerFaction_OR_files</li>
+		<li>guy762_NamerFactionFiles_GenericFleetName</li>
+		<li>guy762_NamerFactionFiles_ImpRemnantPlanets</li>
 	</include>
 	<rulePack>
 	  <rulesStrings>
-		<li>r_name(p=6)->[SWORFN_SmallFleetNumber] [SWORFN_SmallPlanet] [reservefleet]</li>
-		<li>r_name(p=12)->[SWORFN_BigFleetNumber] [SWORFN_BigPlanet] [reservefleet]</li>
+		<li>r_name(p=12)->[SWFN_BigFleetNumber] [SWIRFN_AnyPlanet] [starfleet]</li>
 		
-		<li>reservefleet->Reserve Fleet</li>
+		<li>starfleet->Starfleet</li>
       </rulesStrings>
     </rulePack>
   </RulePackDef>

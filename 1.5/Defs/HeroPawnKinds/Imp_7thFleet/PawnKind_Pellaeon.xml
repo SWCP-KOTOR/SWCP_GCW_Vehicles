@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>	
+	
+	<PawnKindDef Name="SWWEPlayableVillain_Pellaeon"  ParentName="guy762_HeroPawnKindBase">
+		<defName>SWWEPlayableVillain_Pellaeon</defName>
+		<nameMaker>guy762_HeroNamer_Pellaeon</nameMaker>
+		<label>Captain</label>
+		<combatPower>500</combatPower>
+		<minGenerationAge>55</minGenerationAge>
+		<maxGenerationAge>56</maxGenerationAge>
+		<fixedGender>Male</fixedGender>
+		<forcedHair>Recruit</forcedHair>
+		<forcedHairColor>(0.65, 0.65, 0.65)</forcedHairColor>
+		<skinColorOverride>(249, 219, 165)</skinColorOverride>
+		<xenotypeSet>
+			<xenotypeChances>
+				<Baseliner>999</Baseliner>
+			</xenotypeChances>
+		</xenotypeSet>
+		<useFactionXenotypes>false</useFactionXenotypes>
+		<itemQuality>Legendary</itemQuality>
+		<apparelMoney>49999</apparelMoney>
+		<apparelTags>
+		  <li>KotOREquipment_officer</li>
+		</apparelTags>
+		<apparelRequired>
+		   <li>guy762_UniformCap_imperial</li>
+		   <li>guy762_ImpUniform_midrank</li>
+		</apparelRequired>
+		<specificApparelRequirements>
+			<li>
+				<apparelLayer>Overhead</apparelLayer>
+				<apparelDef>guy762_UniformCap_imperial</apparelDef>
+				<color>(50,50,50)</color>
+				<quality>Legendary</quality>
+			</li>
+			<li>
+				<apparelLayer>OnSkin</apparelLayer>
+				<apparelDef>guy762_ImpUniform_midrank</apparelDef>
+				<styleDef>guy762_RankStyle_ImpOfficer_linecap</styleDef>
+				<color>(50,50,50)</color>
+				<quality>Legendary</quality>
+			</li>
+		</specificApparelRequirements>
+		<weaponMoney>99999999</weaponMoney>
+		<weaponTags>
+		  <li>SWRanged_SE14pistol</li>
+		</weaponTags>
+		<skills>
+			<li>
+				<skill>Shooting</skill>
+				<range>6~8</range>
+			</li>
+			<li>
+				<skill>Plants</skill>
+				<range>12~14</range>
+			</li>
+			<li>
+				<skill>Social</skill>
+				<range>14~16</range>
+			</li>
+			<li>
+				<skill>Intellectual</skill>
+				<range>14~16</range>
+			</li>
+		</skills>
+		<forcedTraits>
+			<Nerves>1</Nerves>
+			<Industriousness>1</Industriousness>
+			<Ascetic>0</Ascetic>
+			<Kind>0</Kind>
+		</forcedTraits>
+		
+		<backstoryFiltersOverride>
+		  <li>
+			<categories>
+			  <li>guy762BSC_pellaeon</li>
+			</categories>
+		  </li>
+		</backstoryFiltersOverride>
+		<abilities>
+			<li>guy762_Ability_CommandTierII</li>
+		</abilities>
+		<modExtensions>
+			<li Class="BodyTypeForPawnKind.ModExtension_HeadTypesOfPawnKind">
+			  <whitelist>
+				<li>Male_AverageNormal</li>
+			  </whitelist>
+			  <blacklist>
+				<!--leave blank to disable-->
+			  </blacklist>
+			  <priority>
+				<li>Male_AverageNormal</li>
+			  </priority>
+			  <checkGender>False</checkGender>
+			</li>
+			<li Class="BodyTypeForPawnKind.ModExtension_ForcedStyleItem">
+			  <forcedBeard>Moustache</forcedBeard>
+			</li>
+			<li Class="AddGeneForPK.PKAdditionalGenes">
+			  <geneSets>
+				<li>
+				  <isXenogene>false</isXenogene>
+				  <chance>1</chance>
+				  <geneDefs>
+					<li>Hair_Gray</li>
+					<li>Skin_Melanin5</li>
+				  </geneDefs>
+				</li>
+			  </geneSets>
+			</li>
+		</modExtensions>
+	  </PawnKindDef>
+	  
+	  <RulePackDef>
+        <defName>guy762_HeroNamer_Pellaeon</defName>
+        <rulePack>
+            <rulesStrings>
+                <li>r_name->[gilad] '[pellaeon]' [pellaeon]</li>
+				<li>gilad->Gilad</li>
+				<li>pellaeon->Pellaeon</li>
+            </rulesStrings>
+        </rulePack>
+    </RulePackDef>
+	
+		<!--[PAWN_nameDef] [PAWN_possessive] [PAWN_pronoun]-->
+	
+	
+	<BackstoryDef>
+		<defName>guy762_BackstoryC_Pellaeon</defName>
+		<title>Judicial Forces Cadet</title>
+		<titleShort>Cadet</titleShort>
+		<description>.</description>
+		<slot>Childhood</slot>
+		<skillGains>
+			<Intellectual>5</Intellectual>
+		</skillGains>
+		<!-- <forcedTraits> -->
+		  <!-- <Psychopath>0</Psychopath> -->
+		  <!-- <Jealous>0</Jealous> -->
+		<!-- </forcedTraits> -->
+		<requiredWorkTags>
+		  <li>Violent</li>
+		  <li>Intellectual</li>
+		</requiredWorkTags>
+		<bodyTypeMale>Male</bodyTypeMale>
+		<bodyTypeFemale>Female</bodyTypeFemale>
+		<nameMaker>guy762_HeroNamer_Pellaeon</nameMaker>
+		<spawnCategories>
+			<li>guy762BSC_pellaeon</li>
+		</spawnCategories>
+		<!--shuffleable>False</shuffleable-->
+	</BackstoryDef>
+	
+	<BackstoryDef>
+		<defName>guy762_BackstoryA_Pellaeon</defName>
+		<title>7th Fleet Captain</title>
+		<titleShort>Captain</titleShort>
+		<description>.</description>
+		<slot>Adulthood</slot>
+		<skillGains>
+			<Intellectual>10</Intellectual>
+		</skillGains>
+		<!-- <forcedTraits> -->
+		  <!-- <Nerves>2</Nerves> -->
+		<!-- </forcedTraits> -->
+		<requiredWorkTags>
+		  <li>Violent</li>
+		  <li>Intellectual</li>
+		</requiredWorkTags>
+		<bodyTypeMale>Male</bodyTypeMale>
+		<bodyTypeFemale>Female</bodyTypeFemale>
+		<nameMaker>guy762_HeroNamer_Pellaeon</nameMaker>
+		<spawnCategories>
+			<li>guy762BSC_pellaeon</li>
+		</spawnCategories>
+		<!--shuffleable>False</shuffleable-->
+	</BackstoryDef>
+	
+	
+
+</Defs>

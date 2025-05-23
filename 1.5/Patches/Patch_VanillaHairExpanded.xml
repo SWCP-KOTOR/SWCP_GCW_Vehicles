@@ -110,6 +110,24 @@
 			  <forcedHair>VHE_Micah</forcedHair>
 			</value>
 		</li>
+		<li Class="PatchOperationReplace">
+		  <xpath>Defs/PawnKindDef[@Name="SWWEPlayableVillain_Melvar"]/forcedHair</xpath>
+			<value>
+			  <forcedHair>VHE_Maniac</forcedHair>
+			</value>
+		</li>
+		<li Class="PatchOperationReplace">
+		  <xpath>Defs/PawnKindDef[@Name="SWWEPlayableVillain_AfsheenMakati"]/forcedHair</xpath>
+			<value>
+			  <forcedHair>VHE_Chosen</forcedHair>
+			</value>
+		</li>
+		<li Class="PatchOperationReplace">
+		  <xpath>Defs/PawnKindDef[@Name="SWWEPlayableVillain_MalcorBrashin"]/forcedHair</xpath>
+			<value>
+			  <forcedHair>VHE_Smith</forcedHair>
+			</value>
+		</li>
 	  </operations>
 	</match>
   

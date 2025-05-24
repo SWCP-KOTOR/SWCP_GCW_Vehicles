@@ -246,8 +246,8 @@
 			<maxAircraftCount>8</maxAircraftCount>
 			<options>
 				<!-- <guy762_SWVehicle_TIEFighter_bot_PawnKind>5</guy762_SWVehicle_TIEFighter_bot_PawnKind> -->
-				<guy762_SWVehicle_TIEInterceptor_bot_PawnKind>2</guy762_SWVehicle_TIEInterceptor_bot_PawnKind>
-				<guy762_SWVehicle_TIEBomber_bot_PawnKind>3</guy762_SWVehicle_TIEBomber_bot_PawnKind>
+				<guy762_SWVehicle_Z95Zsinj_bot_PawnKind>4</guy762_SWVehicle_Z95Zsinj_bot_PawnKind>
+				<guy762_SWVehicle_TIEBomber_bot_PawnKind>2</guy762_SWVehicle_TIEBomber_bot_PawnKind>
 				<!-- <guy762_SWVehicle_TIEDefender_bot_PawnKind>1</guy762_SWVehicle_TIEDefender_bot_PawnKind> -->
 			</options>
 	  </li>
@@ -256,7 +256,7 @@
 	  <li>
 		<kindDef>Peaceful</kindDef>
 		<options>
-		  <SWPentastar_EnforcerTrooper>100</SWPentastar_EnforcerTrooper>
+		  <SWZsinj_ArmyTrooper>100</SWZsinj_ArmyTrooper>
 		  <SWZsinj_ArmyLieutenant>50</SWZsinj_ArmyLieutenant>
 		</options>
 	  </li>
@@ -297,7 +297,7 @@
 		</disallowedStrategies>
         <options>
           <SWZsinj_ArmyTrooper>100</SWZsinj_ArmyTrooper>
-          <!-- <SWPentastar_ArmyHeavy>50</SWPentastar_ArmyHeavy> -->
+          <SWZsinj_ArmyHeavy>50</SWZsinj_ArmyHeavy>
           <!-- <SWPentastar_ArmySniper>25</SWPentastar_ArmySniper> -->
 		  <SWZsinj_ArmyLieutenant>50</SWZsinj_ArmyLieutenant>
         </options>
@@ -317,7 +317,7 @@
 		</disallowedStrategies>
         <options>
           <SWZsinj_ArmyTrooper>100</SWZsinj_ArmyTrooper>
-          <!-- <SWPentastar_ArmyHeavy>50</SWPentastar_ArmyHeavy> -->
+          <SWZsinj_ArmyHeavy>50</SWZsinj_ArmyHeavy>
           <!-- <SWPentastar_ArmySniper>25</SWPentastar_ArmySniper> -->
 		  
           <SWZsinj_ArmyLieutenant>100</SWZsinj_ArmyLieutenant>
@@ -335,7 +335,7 @@
 		</disallowedStrategies>
         <options>
 		  <SWZsinj_ArmyTrooper>100</SWZsinj_ArmyTrooper>
-          <!-- <SWPentastar_ArmyHeavy>50</SWPentastar_ArmyHeavy> -->
+          <SWZsinj_ArmyHeavy>50</SWZsinj_ArmyHeavy>
           <!-- <SWPentastar_ArmySniper>25</SWPentastar_ArmySniper> -->
           <SWZsinj_ArmyLieutenant>100</SWZsinj_ArmyLieutenant>
           <SWZsinj_ArmyMajor>100</SWZsinj_ArmyMajor>
@@ -357,7 +357,7 @@
 		</disallowedStrategies>
         <options>
 		  <SWZsinj_ArmyTrooper>100</SWZsinj_ArmyTrooper>
-          <!-- <SWPentastar_ArmyHeavy>50</SWPentastar_ArmyHeavy> -->
+          <SWZsinj_ArmyHeavy>50</SWZsinj_ArmyHeavy>
           <!-- <SWPentastar_ArmySniper>25</SWPentastar_ArmySniper> -->
           <SWZsinj_ArmyLieutenant>100</SWZsinj_ArmyLieutenant>
 		  
@@ -382,22 +382,22 @@
 		  <SWImpRemnant_Engineer>10</SWImpRemnant_Engineer>
 		  <SWImpRemnant_EngiCombat>5</SWImpRemnant_EngiCombat>
 
-		  <SWImpRemnant_NavyLt>5</SWImpRemnant_NavyLt>
 		  <SWZsinj_RaptorPilot>5</SWZsinj_RaptorPilot>
 
 		  <SWZsinj_ArmyTrooper>25</SWZsinj_ArmyTrooper>
-          <!-- <SWPentastar_ArmyHeavy>5</SWPentastar_ArmyHeavy> -->
+          <SWZsinj_ArmyHeavy>5</SWZsinj_ArmyHeavy>
           <!-- <SWPentastar_ArmySniper>5</SWPentastar_ArmySniper> -->
 		  
           <SWZsinj_ArmyLieutenant>10</SWZsinj_ArmyLieutenant>
 		  <SWZsinj_ArmyMajor>5</SWZsinj_ArmyMajor>
-		  <SWZsinj_ArmyGeneral>5</SWZsinj_ArmyGeneral>
+		  <SWZsinj_ArmyGeneral>1</SWZsinj_ArmyGeneral>
 		  
 		  <SWZsinj_Raptor>10</SWZsinj_Raptor>
           <SWZsinj_RaptorHvy>10</SWZsinj_RaptorHvy>
 		  
-		  <SWImpRemnant_Viceroy>5</SWImpRemnant_Viceroy>
-		  <SWImpRemnant_Moff>5</SWImpRemnant_Moff>
+		  <SWZsinj_NavyLt>1</SWZsinj_NavyLt>
+		  <SWZsinj_NavyCaptain>1</SWZsinj_NavyCaptain>
+		  <SWZsinj_NavyAdmiral>1</SWZsinj_NavyAdmiral>
 		  
 		</options>
 	  </li>

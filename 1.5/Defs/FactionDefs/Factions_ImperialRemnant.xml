@@ -259,17 +259,34 @@
 	  <li>
 		<kindDef>Peaceful</kindDef>
 		<options>
-		  <KotORSith_trooper>100</KotORSith_trooper>
-          <KotORSith_droid_SentWD MayRequire="guy762.KotORDroids">25</KotORSith_droid_SentWD>
-          <KotORSith_elite>10</KotORSith_elite>
-		  <KotORSith_lieutenant>50</KotORSith_lieutenant>
+          <SWImpRemnant_ArmyTrooper>50</SWImpRemnant_ArmyTrooper>
+          <SWImpRemnant_ArmyLieutenant>25</SWImpRemnant_ArmyLieutenant>
+		  <SWImpRemnant_ArmyMajor>100</SWImpRemnant_ArmyMajor>
+		  <SWWarlords_ArmyMedic>25</SWWarlords_ArmyMedic>
 		</options>
 	  </li>
 		  
       <li>
+        <!-- scout trooper skirmish -->
+        <kindDef>Combat</kindDef>
+        <commonality>10</commonality>
+		<disallowedStrategies>
+			<li>Siege</li>
+			<li>EmergeFromWater</li>
+			<li>StageThenAttack</li>
+			<li>ImmediateAttackSappers</li>
+			<li>ImmediateAttackBreaching</li>
+			<li>ImmediateAttackBreachingSmart</li>
+		</disallowedStrategies>
+        <options>
+          <SWImpRemnant_scouttrooper>100</SWImpRemnant_scouttrooper>
+        </options>
+      </li>
+	  
+	  <li>
         <!-- stormtrooper only raid -->
         <kindDef>Combat</kindDef>
-        <commonality>100</commonality>
+        <commonality>25</commonality>
 		<disallowedStrategies>
 			<li>Siege</li>
 			<li>EmergeFromWater</li>
@@ -289,7 +306,7 @@
       </li>
 	  
 	  <li>
-        <!-- skirmish -->
+        <!-- army skirmish -->
         <kindDef>Combat</kindDef>
         <commonality>75</commonality>
 		<disallowedStrategies>
@@ -302,15 +319,16 @@
 		</disallowedStrategies>
         <options>
           <SWImpRemnant_ArmyConscript>100</SWImpRemnant_ArmyConscript>
-          <SWImpRemnant_ArmyTrooper>50</SWImpRemnant_ArmyTrooper>
-          <SWImpRemnant_ArmySniper>15</SWImpRemnant_ArmySniper>
-          <!-- <SWImpRemnant_ArmyHeavy>25</SWImpRemnant_ArmyHeavy> -->
+          <SWImpRemnant_ArmyTrooper>25</SWImpRemnant_ArmyTrooper>
+          <SWImpRemnant_ArmySniper>25</SWImpRemnant_ArmySniper>
+          <SWImpRemnant_ArmyHeavy>15</SWImpRemnant_ArmyHeavy>
 		  
           <SWImpRemnant_ArmyLieutenant>25</SWImpRemnant_ArmyLieutenant>
 		  
-		  <SWImpRemnant_stormtrooper>25</SWImpRemnant_stormtrooper>
-		  <SWImpRemnant_stormierifle>10</SWImpRemnant_stormierifle>
-		  <SWImpRemnant_stormieofficer>10</SWImpRemnant_stormieofficer>
+		  <!-- <SWImpRemnant_stormtrooper>25</SWImpRemnant_stormtrooper> -->
+		  <!-- <SWImpRemnant_stormierifle>10</SWImpRemnant_stormierifle> -->
+		  <!-- <SWImpRemnant_stormiehvy>25</SWImpRemnant_stormiehvy> -->
+		  <!-- <SWImpRemnant_stormieofficer>10</SWImpRemnant_stormieofficer> -->
         </options>
       </li>
 	  
@@ -327,21 +345,14 @@
 			<li>ImmediateAttackBreachingSmart</li>
 		</disallowedStrategies>
         <options>
-          <KotORSith_trooper>100</KotORSith_trooper>
-          <KotORSith_troopermelee>25</KotORSith_troopermelee>
-		  <KotORSith_hvytrooper>25</KotORSith_hvytrooper>
-          <KotORSith_droid_SentWD MayRequire="guy762.KotORDroids">75</KotORSith_droid_SentWD>
-		  <KotORSith_droid_ADMkI MayRequire="guy762.KotORDroids">50</KotORSith_droid_ADMkI>
-          <KotORSith_droid_ADMkIV MayRequire="guy762.KotORDroids">25</KotORSith_droid_ADMkIV>
-          <KotORSith_elite>10</KotORSith_elite>
-          <KotORSith_elitemelee>5</KotORSith_elitemelee>
-          <KotORSith_lieutenant>100</KotORSith_lieutenant>
+          <SWImpRemnant_ArmyConscript>50</SWImpRemnant_ArmyConscript>
+          <SWImpRemnant_ArmyTrooper>75</SWImpRemnant_ArmyTrooper>
+          <SWImpRemnant_ArmySniper>15</SWImpRemnant_ArmySniper>
+          <SWImpRemnant_ArmyHeavy>25</SWImpRemnant_ArmyHeavy>
 		  
-		  <KotORSith_acolyte_PotF MayRequire="guy762.Lee.KotORPotF">10</KotORSith_acolyte_PotF>
-          <KotORSith_warrior_PotF MayRequire="guy762.Lee.KotORPotF">5</KotORSith_warrior_PotF>
+          <SWImpRemnant_ArmyLieutenant>25</SWImpRemnant_ArmyLieutenant>
 		  
-		  <KotORSith_acolyte_VPE MayRequire="lee.theforce.psycast">10</KotORSith_acolyte_VPE>
-          <KotORSith_warrior_VPE MayRequire="lee.theforce.psycast">5</KotORSith_warrior_VPE>
+          <SWWarlords_ArmyMedic>25</SWWarlords_ArmyMedic>
         </options>
       </li>
 	  
@@ -355,27 +366,20 @@
 			<li>ImmediateAttack</li>
 		</disallowedStrategies>
         <options>
-          <KotORSith_droid_SentWD MayRequire="guy762.KotORDroids">100</KotORSith_droid_SentWD>
-		  <KotORSith_droid_ADMkI MayRequire="guy762.KotORDroids">75</KotORSith_droid_ADMkI>
-          <KotORSith_droid_ADMkIV MayRequire="guy762.KotORDroids">50</KotORSith_droid_ADMkIV>
-		  <KotORSith_trooper>75</KotORSith_trooper>
-          <KotORSith_troopermelee>25</KotORSith_troopermelee>
-		  <KotORSith_hvytrooper>50</KotORSith_hvytrooper>
-		  <KotORSith_elite>25</KotORSith_elite>
-          <KotORSith_elitemelee>10</KotORSith_elitemelee>
-		  <KotORSith_lieutenant>100</KotORSith_lieutenant>
-          <KotORSith_operative>50</KotORSith_operative>
+          <SWImpRemnant_ArmyConscript>75</SWImpRemnant_ArmyConscript>
+          <SWImpRemnant_ArmyTrooper>75</SWImpRemnant_ArmyTrooper>
+          <SWImpRemnant_ArmySniper>10</SWImpRemnant_ArmySniper>
+          <SWImpRemnant_ArmyHeavy>35</SWImpRemnant_ArmyHeavy>
 		  
-		  <KotORSith_acolyte_PotF MayRequire="guy762.Lee.KotORPotF">25</KotORSith_acolyte_PotF>
-          <KotORSith_warrior_PotF MayRequire="guy762.Lee.KotORPotF">10</KotORSith_warrior_PotF>
+          <SWImpRemnant_ArmyLieutenant>25</SWImpRemnant_ArmyLieutenant>
+          <SWImpRemnant_ArmyMajor>100</SWImpRemnant_ArmyMajor>
 		  
-		  <KotORSith_acolyte_VPE MayRequire="lee.theforce.psycast">25</KotORSith_acolyte_VPE>
-          <KotORSith_warrior_VPE MayRequire="lee.theforce.psycast">10</KotORSith_warrior_VPE>
+		  <SWWarlords_ArmyMedic>25</SWWarlords_ArmyMedic>
         </options>
       </li>
 	  
 	  <li>
-        <!-- mega assault -->
+        <!-- combined mega assault -->
         <kindDef>Combat</kindDef>
         <commonality>10</commonality>
 		<disallowedStrategies>
@@ -384,21 +388,28 @@
 			<li>ImmediateAttack</li>
 		</disallowedStrategies>
         <options>
-		  <KotORSith_droid_ADMkI MayRequire="guy762.KotORDroids">75</KotORSith_droid_ADMkI>
-          <KotORSith_droid_ADMkIV MayRequire="guy762.KotORDroids">50</KotORSith_droid_ADMkIV>
-		  <KotORSith_hvytrooper>25</KotORSith_hvytrooper>
-		  <KotORSith_elite>50</KotORSith_elite>
-          <KotORSith_elitemelee>25</KotORSith_elitemelee>
-          <KotORSith_shocktrooper>50</KotORSith_shocktrooper>
-		  <KotORSith_lieutenant>100</KotORSith_lieutenant>
+		  <SWImpRemnant_ArmyConscript>75</SWImpRemnant_ArmyConscript>
+          <SWImpRemnant_ArmyTrooper>100</SWImpRemnant_ArmyTrooper>
+          <SWImpRemnant_ArmySniper>15</SWImpRemnant_ArmySniper>
+          <SWImpRemnant_ArmyHeavy>50</SWImpRemnant_ArmyHeavy>
 		  
-          <KotORSith_warrior_PotF MayRequire="guy762.Lee.KotORPotF">25</KotORSith_warrior_PotF>
-          <KotORSith_marauder_PotF MayRequire="guy762.Lee.KotORPotF">10</KotORSith_marauder_PotF>
+          <SWImpRemnant_ArmyLieutenant>25</SWImpRemnant_ArmyLieutenant>
+          <SWImpRemnant_ArmyGeneral_field>100</SWImpRemnant_ArmyGeneral_field>
 		  
-		  <KotORSith_warrior_VPE MayRequire="lee.theforce.psycast">25</KotORSith_warrior_VPE>
-          <KotORSith_marauder_VPE MayRequire="lee.theforce.psycast">10</KotORSith_marauder_VPE>
+		  <SWWarlords_ArmyMedic>100</SWWarlords_ArmyMedic>
+		  
+		  <SWImpRemnant_stormtrooper>50</SWImpRemnant_stormtrooper>
+		  <SWImpRemnant_stormierifle>15</SWImpRemnant_stormierifle>
+		  <SWImpRemnant_stormiehvy>25</SWImpRemnant_stormiehvy>
+		  <SWImpRemnant_stormieofficer>25</SWImpRemnant_stormieofficer>
         </options>
       </li>
+	  
+	  
+	  
+	  
+	  
+	  
 	  
 	  
 	  <li>
@@ -413,10 +424,6 @@
 		</disallowedStrategies>
         <options>
 		  <SWImpRemnant_stormcommando>50</SWImpRemnant_stormcommando>
-		  
-		  <!-- <KotORSith_assassin_PotF MayRequire="guy762.Lee.KotORPotF">100</KotORSith_assassin_PotF> -->
-		  
-		  <!-- <KotORSith_assassin_VPE MayRequire="lee.theforce.psycast">100</KotORSith_assassin_VPE> -->
         </options>
       </li>
 	  
@@ -452,14 +459,13 @@
 		  
 		  <SWImpRemnant_ArmyTrooper>10</SWImpRemnant_ArmyTrooper>
 		  <SWImpRemnant_ArmyLieutenant>10</SWImpRemnant_ArmyLieutenant>
-		  <SWImpRemnant_ArmyGeneral>5</SWImpRemnant_ArmyGeneral>
+		  <SWImpRemnant_ArmyMajor>5</SWImpRemnant_ArmyMajor>
+		  <SWImpRemnant_ArmyGeneral>1</SWImpRemnant_ArmyGeneral>
+		  
+		  <SWWarlords_ArmyMedic>25</SWWarlords_ArmyMedic>
 		  
 		  <SWImpRemnant_Viceroy>5</SWImpRemnant_Viceroy>
-		  <SWImpRemnant_Moff>5</SWImpRemnant_Moff>
-		  
-		  <KotORSith_darkjedi_PotF MayRequire="guy762.Lee.KotORPotF">5</KotORSith_darkjedi_PotF>
-		  
-		  <KotORSith_darkjedi_VPE MayRequire="lee.theforce.psycast">10</KotORSith_darkjedi_VPE>
+		  <SWImpRemnant_Moff>1</SWImpRemnant_Moff>
 		</options>
 	  </li>
 

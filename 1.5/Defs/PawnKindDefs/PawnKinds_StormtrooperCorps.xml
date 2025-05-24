@@ -317,9 +317,10 @@
 		</specificApparelRequirements>
 
 		<biocodeWeaponChance>0.75</biocodeWeaponChance>
-		<weaponMoney>2000~3800</weaponMoney>
+		<!-- <weaponMoney>2000~3800</weaponMoney> -->
+		<weaponMoney>3200</weaponMoney>
 		<weaponTags>
-			<li>SWRanged_FC1flechette</li>
+			<!-- <li>SWRanged_FC1flechette</li> -->
 			<li>SWRanged_TL50conc</li>
 		</weaponTags>
 

@@ -784,6 +784,7 @@
 
 
 
+	
 	<PawnKindDef Name="SWNewRepub_RebelTrooper" ParentName="SWNewRepub_Base">
 		<defName>SWNewRepub_RebelTrooper</defName>
 		<label>rebel soldier</label>
@@ -797,10 +798,10 @@
 		<apparelTags>
 		  <li>KotOREquipment_basic</li>
 		  <li>NewRepublic_rebeltrooper</li>
-		  <li>SWWarlordsAccessory_scumtrooper_poncho</li>
+		  <li>SWWarlordsAccessory_scumtrooper</li>
 		</apparelTags>
 		<apparelRequired>
-			<li>guy762_Jacket_scout</li>
+			<li>guy762_RebelCombatSuit</li>
 			<li>guy762_GenericUniform_fatigues</li>
 		</apparelRequired>
 		
@@ -810,13 +811,31 @@
 				<requiredTag>NewRepublic_rebeltrooper</requiredTag>
 			</li>
 			<li>
-				<apparelLayer>Middle</apparelLayer>
-				<color>(135,110,80)</color>    <!-- darker beige -->
-				<!-- <requiredTag>NewRepublic_rebeltrooper</requiredTag> -->
+				<apparelLayer>Shell</apparelLayer>
+				<color>(130,125,105)</color>         <!-- khaki -->
 			</li>
 			<li>
 				<apparelLayer>OnSkin</apparelLayer>
-				<color>(75,75,75)</color>       <!-- dark grey -->
+				<colorGenerator Class="ColorGenerator_Options">
+					<options>
+						<li>
+							<weight>10</weight>
+							<only>(175,150,120)</only>       <!-- bespin beige -->
+						</li>
+						<li>
+							<weight>10</weight>
+							<only>(95,100,70)</only> <!-- forest green -->
+						</li>
+						<li>
+							<weight>1</weight>
+							<only>(120,125,110)</only>  <!-- slate green -->
+						</li>
+						<li>
+							<weight>1</weight>
+							<only>(105,80,65)</only> <!-- dull brown -->
+						</li>
+					</options>
+				</colorGenerator>
 			</li>
 		</specificApparelRequirements>
 		
@@ -853,6 +872,110 @@
 		<initialWillRange>0.5~2</initialWillRange>
 		<initialResistanceRange>5~10</initialResistanceRange>
 	</PawnKindDef>
+	
+	
+	
+	
+	<PawnKindDef Name="SWNewRepub_RebelSniper" ParentName="SWNewRepub_Base">
+		<defName>SWNewRepub_RebelSniper</defName>
+		<label>rebel sharpshooter</label>
+		<combatPower>75</combatPower>
+		<minGenerationAge>18</minGenerationAge>
+		<maxGenerationAge>35</maxGenerationAge>
+		<itemQuality>Normal</itemQuality>
+		
+		<apparelMoney>1500~5500</apparelMoney>
+		<apparelAllowHeadgearChance>1</apparelAllowHeadgearChance>
+		<apparelTags>
+		  <li>KotOREquipment_basic</li>
+		  <li>NewRepublic_sharpshooterhat</li>
+		  <li>SWWarlordsAccessory_onlyponcho</li>
+		</apparelTags>
+		<apparelRequired>
+			<li>guy762_Jacket_scout</li>
+			<li>guy762_GenericUniform_fatigues</li>
+		</apparelRequired>
+		
+		<specificApparelRequirements>
+			<li>
+				<apparelLayer>Overhead</apparelLayer>
+				<requiredTag>NewRepublic_sharpshooterhat</requiredTag>
+			</li>
+			<li>
+				<apparelLayer>Middle</apparelLayer>
+				<color>(135,110,80)</color>    <!-- darker beige -->
+				<!-- <requiredTag>NewRepublic_rebeltrooper</requiredTag> -->
+			</li>
+			<li>
+				<apparelLayer>OnSkin</apparelLayer>
+				<color>(75,75,75)</color>       <!-- dark grey -->
+			</li>
+		</specificApparelRequirements>
+		
+		<biocodeWeaponChance>0</biocodeWeaponChance>
+		<weaponMoney>2500</weaponMoney>
+		<weaponTags>
+			<li>SWRanged_DLT20Asniper</li>
+		</weaponTags>
+		
+		<skills>
+			<li>
+				<skill>Shooting</skill>
+				<range>10~12</range>
+			</li>
+		</skills>
+		
+		<inventoryOptions>
+			<skipChance>0.5</skipChance>
+			<subOptionsChooseOne>
+				<li>
+					<thingDef>guy762_medpac</thingDef>
+					<countRange>1~3</countRange>
+				</li>
+			</subOptionsChooseOne>
+		</inventoryOptions>
+		
+		<initialWillRange>0.5~2</initialWillRange>
+		<initialResistanceRange>5~10</initialResistanceRange>
+	</PawnKindDef>
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
 	  
 	  
 	  
@@ -861,7 +984,7 @@
 	  
 	<PawnKindDef Name="SWNewRepub_trooper" ParentName="SWNewRepub_Base">
 		<defName>SWNewRepub_trooper</defName>
-		<label>New Republic soldier</label>
+		<label>New Republic marine</label>
 		<combatPower>65</combatPower>
 		<minGenerationAge>20</minGenerationAge>
 		<maxGenerationAge>35</maxGenerationAge>

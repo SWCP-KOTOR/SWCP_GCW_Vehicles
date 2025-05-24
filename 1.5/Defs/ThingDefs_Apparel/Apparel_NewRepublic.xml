@@ -46,6 +46,7 @@
 		  <tags>
 			<li>NewRepublic_rebeltrooper</li>
 			<li>NewRepublic_RebelAgent_hats</li>
+			<li>NewRepublic_sharpshooterhat</li>
 		  </tags>
 		  <countsAsClothingForNudity>false</countsAsClothingForNudity>
 		  <canBeGeneratedToSatisfyWarmth>false</canBeGeneratedToSatisfyWarmth>
@@ -254,6 +255,7 @@
 			<tags>
 				<li>NewRepublic_alderaanguard</li>
 				<li>NewRepublic_trooper</li>
+				<li>NewRepublic_rebeltrooper</li>
 				<li>NewRepublicApparel_RebelHelmet</li>
 			</tags>
 			<wornGraphicPath>Apparel/Rebel/helmet</wornGraphicPath>
@@ -365,6 +367,7 @@
 			<tags>
 				<li>NewRepublic_rebeltrooper</li>
 				<li>NewRepublic_endortrooperhelmet</li>
+				<li>NewRepublic_sharpshooterhat</li>
 			</tags>
 			<wornGraphicPath>Apparel/Rebel/endorhelmet</wornGraphicPath>
 			<useWornGraphicMask>true</useWornGraphicMask>
@@ -564,7 +567,158 @@
 	  </ThingStyleDef>
 	  
 	  
-	  
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<ThingDef Name="guy762_RebelCombatSuit" ParentName="KotORArmorModdable_hard">
+		<defName>guy762_RebelCombatSuit</defName>
+		<label>rebel combat suit</label>
+		<description>.</description>
+		<graphicData>
+		  <texPath>Apparel/Rebel/Apparel</texPath>
+		  <graphicClass>Graphic_Single</graphicClass>
+		  <shaderType>CutoutComplex</shaderType>
+		  <colorTwo>(230,185,45)</colorTwo>       <!-- republic yellow -->
+		</graphicData>
+		<statBases>
+			<Mass>5</Mass>
+			<MarketValue>250</MarketValue>
+			<MaxHitPoints>225</MaxHitPoints> <!-- combat suit stats -->
+			<ArmorRating_Sharp>0.4</ArmorRating_Sharp>
+			<ArmorRating_Blunt>0.45</ArmorRating_Blunt>
+			<ArmorRating_Heat>0.5</ArmorRating_Heat>
+			<EquipDelay>3</EquipDelay>
+		</statBases>
+		<equippedStatOffsets>
+			<IncomingDamageFactor>-0.05</IncomingDamageFactor>
+		</equippedStatOffsets>
+		
+		<apparel>
+		  <tags Inherit="False">
+			<li>NewRepublic_rebeltrooper</li>
+		  </tags>
+		  <wornGraphicPath>Apparel/Rebel/Apparel</wornGraphicPath>
+		  <useWornGraphicMask>true</useWornGraphicMask>
+		  <defaultOutfitTags Inherit="False">
+			<li>Worker</li>
+		  </defaultOutfitTags>
+		  <layers Inherit="False">
+			<li>Middle</li>
+		  </layers>
+		  <bodyPartGroups Inherit="False">
+			<li>Torso</li>
+			<li>Neck</li>
+			<li>Shoulders</li>
+			<!-- <li>Arms</li> -->
+			<!-- <li>Hands</li> -->
+			<!-- <li>Legs</li> -->
+			<!-- <li>Feet</li> -->
+		  </bodyPartGroups>
+		</apparel>
+		<tradeTags>
+			<li>guy762TT_KotORArmor</li>
+		</tradeTags>
+		<colorGenerator Class="ColorGenerator_Options" Inherit="False">
+			<options>
+				<li>
+					<weight>10</weight>
+					<only>(110,110,110)</only>  <!-- grey -->
+				</li>
+			</options>
+		</colorGenerator>
+	</ThingDef>
+	
+	
+	
+	
+	<ThingDef ParentName="guy762_RebelCombatSuit">
+		<defName>guy762_RebelCombatSuit_lowrank</defName>
+		<label>rebel combat suit, officer's</label>
+		<description>.</description>
+		<graphicData>
+		  <texPath>Apparel/Rebel/armylt/Apparel</texPath>
+		</graphicData>
+		<statBases>
+			<MarketValue>500</MarketValue>
+		</statBases>
+		<equippedStatOffsets>
+			<SocialImpact>0.2</SocialImpact>
+		</equippedStatOffsets>
+		
+		<apparel>
+		  <wornGraphicPath>Apparel/Rebel/armylt/Apparel</wornGraphicPath>
+		  <tags Inherit="False">
+			<li>NewRepublic_rebeltrooper</li>
+		  </tags>
+		</apparel>
+		
+		<randomStyleChance>1</randomStyleChance>
+		<randomStyle>
+		  <li>
+			<styleDef>guy762_RankStyle_RebOfficerArmor_armylt</styleDef>
+		  </li>
+		</randomStyle>
+		
+		<tradeTags>
+			<li>guy762TT_KotORArmor</li>
+		</tradeTags>
+	</ThingDef>
+	
+	<ThingStyleDef>
+		<defName>guy762_RankStyle_RebOfficerArmor_armylt</defName>
+		<overrideLabel>rebel combat suit, army lieutenant's</overrideLabel>
+		<wornGraphicPath>Apparel/Rebel/armylt/Apparel</wornGraphicPath>
+		<graphicData>
+		  <texPath>Apparel/Rebel/armylt/Apparel</texPath>
+		  <graphicClass>Graphic_Single</graphicClass>
+		  <shaderType>CutoutComplex</shaderType>
+		</graphicData>
+	</ThingStyleDef>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 	  
 	  
 	  
@@ -574,7 +728,7 @@
 	  
 	  <ThingDef ParentName="KotORArmorModdable_hard">
 		<defName>guy762_NewRepublicHelmet</defName>
-		<label>New Republic battle helmet</label>
+		<label>New Republic marine helmet</label>
 		<techLevel>Spacer</techLevel>
 		<description>.</description>
 		<graphicData>
@@ -631,7 +785,7 @@
 	
 	<ThingDef ParentName="KotORArmorModdable_hard">
 		<defName>guy762_NewRepublicHelmet_resistance</defName>
-		<label>New Republic battle helmet</label>
+		<label>New Republic marine helmet</label>
 		<techLevel>Spacer</techLevel>
 		<description>.</description>
 		<graphicData>
@@ -702,7 +856,7 @@
 	
 	<ThingDef ParentName="KotORArmorModdable_hard">
 		<defName>guy762_NewRepublicArmor_light</defName>
-		<label>New Republic combat armor</label>
+		<label>New Republic marine armor</label>
 		<description>.</description>
 		<graphicData>
 		  <texPath>Apparel/NewRepublic/Apparel</texPath>
@@ -712,7 +866,7 @@
 		</graphicData>
 		<statBases>
 			<Mass>4.5</Mass>
-			<MarketValue>300</MarketValue>
+			<MarketValue>500</MarketValue>
 			
 			<MaxHitPoints>350</MaxHitPoints> <!-- mil suit stats -->
 			<ArmorRating_Sharp>0.65</ArmorRating_Sharp>
@@ -766,7 +920,7 @@
 	  
 	  <ThingDef ParentName="KotORArmorModdable_hard">
 		<defName>guy762_NewRepublicArmor_resistance</defName>
-		<label>New Republic combat armor</label>
+		<label>New Republic marine armor</label>
 		<description>.</description>
 		<graphicData>
 		  <texPath>Apparel/NewRepublic/Apparel</texPath>
@@ -776,7 +930,7 @@
 		</graphicData>
 		<statBases>
 			<Mass>4.5</Mass>
-			<MarketValue>300</MarketValue>
+			<MarketValue>500</MarketValue>
 			
 			<MaxHitPoints>350</MaxHitPoints> <!-- mil suit stats -->
 			<ArmorRating_Sharp>0.65</ArmorRating_Sharp>

@@ -184,31 +184,47 @@
   
   
   
-  <!-- <PawnKindDef Name="SWScum_JKRocketTrando" ParentName="SWScum_JKTrando"> -->
-    <!-- <defName>SWScum_JKRocketTrando</defName> -->
-	<!-- <label>underworld blaster</label> -->
-    <!-- <combatPower>200</combatPower> -->
-	<!-- <maxPerGroup>1</maxPerGroup> -->
+  <PawnKindDef Name="SWScum_JKRocketTrando" ParentName="SWScum_JKTrando">
+    <defName>SWScum_JKRocketTrando</defName>
+	<label>underworld blaster</label>
+    <combatPower>200</combatPower>
+	<maxPerGroup>1</maxPerGroup>
 	
-	<!-- <canBeSapper>true</canBeSapper> -->
-	<!-- <isGoodBreacher>true</isGoodBreacher> -->
-	<!-- <specificApparelRequirements Inherit="False"> -->
-		<!-- <li> -->
-			<!-- <apparelLayer>OnSkin</apparelLayer> -->
-			<!-- <color>(95,100,70)</color> -->
-		<!-- </li> -->
-		<!-- <li> -->
-			<!-- <apparelLayer>Middle</apparelLayer> -->
-			<!-- <color>(250,250,250)</color> -->
-		<!-- </li> -->
-	<!-- </specificApparelRequirements> -->
+	<canBeSapper>true</canBeSapper>
+	<isGoodBreacher>true</isGoodBreacher>
+	<specificApparelRequirements Inherit="False">
+		<li>
+			<apparelLayer>OnSkin</apparelLayer>
+			<color>(95,100,70)</color>
+		</li>
+		<li>
+			<apparelLayer>Middle</apparelLayer>
+			<color>(250,250,250)</color>
+		</li>
+	</specificApparelRequirements>
 	
-    <!-- <weaponMoney>40000</weaponMoney> -->
-    <!-- <weaponTags Inherit="False"> -->
-	  <!-- <li>KotORRocketRifle</li> -->
-    <!-- </weaponTags> -->
-	<!-- <biocodeWeaponChance>1</biocodeWeaponChance> -->
-  <!-- </PawnKindDef> -->
+    <weaponMoney>40000</weaponMoney>
+    <weaponTags Inherit="False">
+	  <li>SWRanged_PLX4LRocketRifle</li>
+    </weaponTags>
+	<biocodeWeaponChance>1</biocodeWeaponChance>
+	
+	<modExtensions Inherit="False">
+		<li Class="BodyTypeForPawnKind.ModExtension_BodyTypesOfPawnKind">
+			<whitelist>
+				<li>Hulk</li>
+			</whitelist>
+			<blacklist>
+			</blacklist>
+			<priority>
+				<!--When violates the black/whitelist, selected from these-->
+				<li>Hulk</li>
+			</priority>
+			<!--Align body gender to pawn's gender (default: True)-->
+			<checkGender>False</checkGender>
+		</li>
+	</modExtensions>
+  </PawnKindDef>
   
   
   

@@ -218,10 +218,10 @@
 		</specificApparelRequirements>
 
 		<biocodeWeaponChance>0.75</biocodeWeaponChance>
-		<weaponMoney>2000</weaponMoney>
+		<weaponMoney>2000~12000</weaponMoney>
 		<weaponTags>
 			<li>SWRanged_T21repeater</li>
-			<!-- <li>SWRanged_FC1flechette</li> -->
+			<li>SWRanged_MMPTLMissieLauncher</li>
 		</weaponTags>
 
 		<techHediffsChance>2</techHediffsChance>

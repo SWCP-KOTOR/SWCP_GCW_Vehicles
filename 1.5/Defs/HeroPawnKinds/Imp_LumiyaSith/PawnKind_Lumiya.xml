@@ -71,19 +71,19 @@
 		<skills>
 			<li>
 				<skill>Shooting</skill>
-				<range>10~14</range>
+				<range>12~14</range>
 			</li>
 			<li>
 				<skill>Melee</skill>
-				<range>10~14</range>
+				<range>12~14</range>
 			</li>
 			<li>
 				<skill>Crafting</skill>
-				<range>8~12</range>
+				<range>10~12</range>
 			</li>
 			<li>
 				<skill>Social</skill>
-				<range>8~12</range>
+				<range>10~12</range>
 			</li>
 			<li>
 				<skill>Intellectual</skill>
@@ -135,8 +135,28 @@
           </priority>
           <checkGender>False</checkGender>
         </li>
+		
+		<li MayRequire="lee.theforce.lightsaber" Class="Lightsaber.ModExtension_LightsaberPresets">
+            <bladeColors>
+               <!-- purple -->
+               <li>(255, 0, 255, 255)</li>
+            </bladeColors>
+            <coreColors>
+               <!-- White Core -->
+               <li>(1.0, 1.0, 1.0, 1.0)</li>
+            </coreColors>
+            <defaultBladeLength1>1.1</defaultBladeLength1>
+            <hiltColorOne>(255, 255, 255, 255)</hiltColorOne>
+            <hiltColorTwo>(255, 255, 255, 255)</hiltColorTwo>
+            <preferredHilts>
+               <li>Force_LightsaberHilt_MaraJade</li> <!-- canonically stole mara's lightsaber -->
+            </preferredHilts>
+            <!-- <preferredHiltParts> -->
+               <!-- <li>Force_AdeganCrystalHiltPart</li> -->
+            <!-- </preferredHiltParts> -->
+        </li>
       </modExtensions>
-	  </PawnKindDef>
+	</PawnKindDef>
 	  
 	  <RulePackDef>
         <defName>guy762_HeroNamer_Lumiya</defName>

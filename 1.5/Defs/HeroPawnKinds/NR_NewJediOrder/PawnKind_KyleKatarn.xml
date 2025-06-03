@@ -59,6 +59,10 @@
 			  <thingDef>guy762_FC1Flechette</thingDef>
 			  <countRange>1</countRange>
 			</li>
+			<li>
+			  <thingDef>guy762_PLX4LRocketRifle</thingDef>
+			  <countRange>1</countRange>
+			</li>
 		  </subOptionsChooseOne>
 		</inventoryOptions>
 		

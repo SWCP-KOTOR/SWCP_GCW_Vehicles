@@ -310,7 +310,7 @@
 		<shotSound>kotorsound_TankMissileLauncher</shotSound>
 		<reloadSound>kotorsound_reloadlauncher</reloadSound>
 		
-		<projectile>SWVehicleBullet_AVAAconcMissile</projectile>
+		<projectile>SWVehicleBullet_AIAAconcMissile</projectile>
 		<reloadTimer>3.5</reloadTimer>
 		<warmUpTimer>1.5</warmUpTimer> <!-- all dorsal turrets = 1 minimum -->
 		

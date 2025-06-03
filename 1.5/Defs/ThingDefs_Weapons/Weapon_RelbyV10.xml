@@ -53,7 +53,7 @@
 				<commandIcon>Weapons/Projectiles/Grenades/grenade_flechettelauncher</commandIcon>
 				<verbClass>Verb_Shoot</verbClass>
 				<hasStandardCommand>true</hasStandardCommand>
-				<defaultProjectile>SWProj_FC1FragGrenade</defaultProjectile>
+				<defaultProjectile>SWProj_GrenadeLauncherProtonGrenade</defaultProjectile>
 				<warmupTime>4</warmupTime>
 				<defaultCooldownTime>6</defaultCooldownTime>
 				<range>28</range>

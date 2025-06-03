@@ -260,28 +260,6 @@
 		  <SWZsinj_ArmyLieutenant>50</SWZsinj_ArmyLieutenant>
 		</options>
 	  </li>
-		  
-      <li>
-        <!-- raptor only raid -->
-        <kindDef>Combat</kindDef>
-        <commonality>100</commonality>
-		<disallowedStrategies>
-			<li>Siege</li>
-			<li>EmergeFromWater</li>
-			<li>StageThenAttack</li>
-			<li>ImmediateAttackSappers</li>
-			<li>ImmediateAttackBreaching</li>
-			<li>ImmediateAttackBreachingSmart</li>
-		</disallowedStrategies>
-        <options>
-          <!-- <SWImpRemnant_scouttrooper>50</SWImpRemnant_scouttrooper> -->
-		  
-          <SWZsinj_Raptor>100</SWZsinj_Raptor>
-		  <!-- <SWImpRemnant_stormierifle>50</SWImpRemnant_stormierifle> -->
-		  <SWZsinj_RaptorHvy>50</SWZsinj_RaptorHvy>
-		  <!-- <SWImpRemnant_stormieofficer>100</SWImpRemnant_stormieofficer> -->
-        </options>
-      </li>
 	  
 	  <li>
         <!-- army skirmish -->
@@ -321,6 +299,28 @@
           <!-- <SWPentastar_ArmySniper>25</SWPentastar_ArmySniper> -->
 		  
           <SWZsinj_ArmyLieutenant>100</SWZsinj_ArmyLieutenant>
+        </options>
+      </li>
+	  
+	  
+	  <li>
+        <!-- raptor only raid -->
+        <kindDef>Combat</kindDef>
+        <commonality>50</commonality>
+		<disallowedStrategies>
+			<li>Siege</li>
+			<li>EmergeFromWater</li>
+			<li>StageThenAttack</li>
+			<li>ImmediateAttack</li>
+			<li>ImmediateAttackSappers</li>
+			<li>ImmediateAttackBreaching</li>
+			<li>ImmediateAttackBreachingSmart</li>
+		</disallowedStrategies>
+        <options>
+          <SWZsinj_Raptor>100</SWZsinj_Raptor>
+		  <!-- <SWImpRemnant_stormierifle>50</SWImpRemnant_stormierifle> -->
+		  <SWZsinj_RaptorHvy>100</SWZsinj_RaptorHvy>
+		  <SWZsinj_RaptorOfficer>100</SWZsinj_RaptorOfficer>
         </options>
       </li>
 	  
@@ -394,6 +394,7 @@
 		  
 		  <SWZsinj_Raptor>10</SWZsinj_Raptor>
           <SWZsinj_RaptorHvy>10</SWZsinj_RaptorHvy>
+		  <SWZsinj_RaptorOfficer>10</SWZsinj_RaptorOfficer>
 		  
 		  <SWZsinj_NavyLt>1</SWZsinj_NavyLt>
 		  <SWZsinj_NavyCaptain>1</SWZsinj_NavyCaptain>

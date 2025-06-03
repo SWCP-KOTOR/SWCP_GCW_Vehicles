@@ -164,6 +164,210 @@
 		<initialResistanceRange>5~10</initialResistanceRange>
 	</PawnKindDef>
 	
+	<PawnKindDef Name="SWPentastar_EnforcerTrooper_48x" ParentName="SWPentastar_EnforcerTrooper">
+		<defName>SWPentastar_EnforcerTrooper_48x</defName>
+		<maxPerGroup>48</maxPerGroup>
+	</PawnKindDef>
+	
+	
+	
+	<PawnKindDef Name="SWPentastar_EnforcerHeavy" ParentName="SWPentastar_TrooperBase">
+		<defName>SWPentastar_EnforcerHeavy</defName>
+		<label>enforcer heavy trooper</label>
+		<combatPower>200</combatPower>
+		<minGenerationAge>18</minGenerationAge>
+		<maxGenerationAge>40</maxGenerationAge>
+		<itemQuality>Normal</itemQuality>
+		
+		<maxPerGroup>6</maxPerGroup>
+		
+		<!-- <xenotypeSet Inherit="False"> -->
+		  <!-- <xenotypeChances> -->
+			<!-- <Baseliner MayRequire="Ludeon.RimWorld.Biotech">999</Baseliner> -->
+		  <!-- </xenotypeChances> -->
+		<!-- </xenotypeSet> -->
+		<!-- <useFactionXenotypes>false</useFactionXenotypes> -->
+
+		<apparelMoney>1500~5500</apparelMoney>
+		<apparelAllowHeadgearChance>1</apparelAllowHeadgearChance>
+		<apparelTags>
+			<li>KotOREquipment_basic</li>
+		</apparelTags>
+		<apparelRequired>
+			<li>guy762_NavyTrooperHelmet</li>
+			<li>guy762_Accessory_suspendersA</li>
+			<li>guy762_ImpLightCombatArmor</li>
+			<li>guy762_GenericUniform_fatigues</li>
+		</apparelRequired>
+		<specificApparelRequirements>
+			<li>
+				<apparelLayer>Overhead</apparelLayer>
+				<color>(250,250,250)</color>       <!-- white -->
+			</li>
+			<li>
+				<apparelLayer>Shell</apparelLayer>
+				<color>(90,90,90)</color>  <!-- dark grey -->
+			</li>
+			<li>
+				<apparelLayer>Middle</apparelLayer>
+				<color>(50,50,55)</color>       <!-- blue-tint black -->
+			</li>
+			<li>
+				<apparelLayer>OnSkin</apparelLayer>
+				<color>(90,90,95)</color>        <!-- blued grey -->
+			</li>
+		</specificApparelRequirements>
+
+		<biocodeWeaponChance>0.5</biocodeWeaponChance>
+		<weaponMoney>6000</weaponMoney>
+		<weaponTags>
+			<li>SWRanged_PLX4LRocketRifle</li>
+		</weaponTags>
+
+		<skills>
+			<li>
+				<skill>Shooting</skill>
+				<range>6~8</range>
+			</li>
+		</skills>
+		<!-- <inventoryOptions> -->
+			<!-- <skipChance>0.25</skipChance> -->
+			<!-- <subOptionsChooseOne> -->
+				<!-- <li> -->
+					<!-- <thingDef>guy762_medpac</thingDef> -->
+					<!-- <countRange>1~3</countRange> -->
+				<!-- </li> -->
+			<!-- </subOptionsChooseOne> -->
+		<!-- </inventoryOptions> -->
+
+		<!-- <disallowedTraits> -->
+			<!-- <li>Brawler</li> -->
+		<!-- </disallowedTraits> -->
+		<initialWillRange>0.5~2</initialWillRange>
+		<initialResistanceRange>5~10</initialResistanceRange>
+		
+		<modExtensions Inherit="False">
+			<li Class="BodyTypeForPawnKind.ModExtension_BodyTypesOfPawnKind">
+				<whitelist>
+					<li>Hulk</li>
+				</whitelist>
+				<blacklist>
+				</blacklist>
+				<priority>
+					<!--When violates the black/whitelist, selected from these-->
+					<li>Hulk</li>
+				</priority>
+				<!--Align body gender to pawn's gender (default: True)-->
+				<checkGender>False</checkGender>
+			</li>
+		</modExtensions>
+	</PawnKindDef>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<PawnKindDef Name="SWPentastar_GuardianProtector" ParentName="SWPentastar_TrooperBase">
+		<defName>SWPentastar_GuardianProtector</defName>
+		<label>Guardian Protector</label>
+		<combatPower>125</combatPower>
+		<minGenerationAge>18</minGenerationAge>
+		<maxGenerationAge>35</maxGenerationAge>
+		<itemQuality>Good</itemQuality>
+		
+		<!-- <maxPerGroup>6</maxPerGroup> -->
+		
+		<xenotypeSet Inherit="False">
+		  <xenotypeChances>
+			<Baseliner MayRequire="Ludeon.RimWorld.Biotech">999</Baseliner>
+		  </xenotypeChances>
+		</xenotypeSet>
+		<useFactionXenotypes>false</useFactionXenotypes>
+
+		<apparelMoney>15000~20000</apparelMoney>
+		<apparelAllowHeadgearChance>1</apparelAllowHeadgearChance>
+		<apparelTags>
+			<li>KotOREquipment_adv</li>
+			<li>PentastarAlignment_GuardianProtector</li>
+		</apparelTags>
+		<apparelRequired>
+			<li>guy762_PAGuardianProtectorHelmet</li>
+			<li>Apparel_Cape</li>
+			<li>guy762_PAGuardianProtectorArmor</li>
+			<li>guy762_Bodysuit</li>
+		</apparelRequired>
+		<specificApparelRequirements>
+			<li>
+				<apparelLayer>Shell</apparelLayer>
+				<stuff>KOTOR_FabricArmorweave</stuff>
+				<color>(250,250,250)</color>  <!-- white -->
+			</li>
+			<li>
+				<apparelLayer>OnSkin</apparelLayer>
+				<color>(90,90,90)</color>
+			</li>
+		</specificApparelRequirements>
+
+		<biocodeWeaponChance>0</biocodeWeaponChance>
+		<weaponMoney>625</weaponMoney>
+		<weaponTags>
+			<li>SWRanged_E11tac</li>
+		</weaponTags>
+
+		<skills>
+			<li>
+				<skill>Shooting</skill>
+				<range>6~8</range>
+			</li>
+			<li>
+				<skill>Melee</skill>
+				<range>6~8</range>
+			</li>
+		</skills>
+		<inventoryOptions>
+			<skipChance>0</skipChance>
+			<subOptionsChooseOne>
+				<li>
+					<thingDef>guy762_medpac_adv</thingDef>
+					<countRange>1~3</countRange>
+				</li>
+				<li>
+					<thingDef>guy762_stim_hyperbattle</thingDef>
+					<countRange>1~2</countRange>
+				</li>
+			</subOptionsChooseOne>
+		</inventoryOptions>
+
+		<disallowedTraits>
+			<li>Brawler</li>
+		</disallowedTraits>
+		<initialWillRange>0.5~2</initialWillRange>
+		<initialResistanceRange>5~10</initialResistanceRange>
+		
+		<modExtensions Inherit="False">
+			<li Class="BodyTypeForPawnKind.ModExtension_BodyTypesOfPawnKind">
+				<whitelist>
+				</whitelist>
+				<blacklist>
+					<li>Fat</li>
+					<li>Thin</li>
+					<li>Baby</li>
+					<li>Child</li>
+				</blacklist>
+				<priority>
+					<!--When violates the black/whitelist, selected from these-->
+				</priority>
+				<!--Align body gender to pawn's gender (default: True)-->
+				<checkGender>True</checkGender>
+			</li>
+		</modExtensions>
+		
+	</PawnKindDef>
+	
 	
 	
 	
@@ -255,6 +459,14 @@
 		<initialWillRange>0.5~2</initialWillRange>
 		<initialResistanceRange>5~10</initialResistanceRange>
 	</PawnKindDef>
+	
+	<PawnKindDef Name="SWPentastar_ArmyTrooper_40x" ParentName="SWPentastar_ArmyTrooper">
+		<defName>SWPentastar_ArmyTrooper_40x</defName>
+		<maxPerGroup>40</maxPerGroup>
+	</PawnKindDef>
+	
+	
+	
 	
 	<PawnKindDef Name="SWPentastar_ArmyHeavy" ParentName="SWImpRemnant_ArmyHeavy">
 		<defName>SWPentastar_ArmyHeavy</defName>

@@ -256,6 +256,7 @@
 		<kindDef>Peaceful</kindDef>
 		<options>
 		  <SWPentastar_EnforcerTrooper>100</SWPentastar_EnforcerTrooper>
+		  <SWPentastar_EnforcerHeavy>25</SWPentastar_EnforcerHeavy>
 		  <SWPentastar_ArmyLieutenant>50</SWPentastar_ArmyLieutenant>
 		</options>
 	  </li>
@@ -273,11 +274,13 @@
 			<li>ImmediateAttackBreachingSmart</li>
 		</disallowedStrategies>
         <options>
-          <SWPentastar_EnforcerTrooper>50</SWPentastar_EnforcerTrooper>
-		  <SWPentastar_ArmyLieutenant>25</SWPentastar_ArmyLieutenant>
+          <SWPentastar_EnforcerTrooper_48x>100</SWPentastar_EnforcerTrooper_48x>
+          <SWPentastar_EnforcerHeavy>100</SWPentastar_EnforcerHeavy>
+		  <SWPentastar_ArmyLieutenant>100</SWPentastar_ArmyLieutenant>
 		  
-		  <KotORSith_droid_MPDMkI MayRequire="guy762.KotORDroids">75</KotORSith_droid_MPDMkI>
-		  <KotORSith_droid_SentWD MayRequire="guy762.KotORDroids">25</KotORSith_droid_SentWD>
+		  <!-- <SWPentastar_EnforcerTrooper>50</SWPentastar_EnforcerTrooper> -->
+          <!-- <SWPentastar_EnforcerHeavy>25</SWPentastar_EnforcerHeavy> -->
+		  <!-- <SWPentastar_ArmyLieutenant>25</SWPentastar_ArmyLieutenant> -->
         </options>
       </li>
 	  
@@ -294,10 +297,15 @@
 			<li>ImmediateAttackBreachingSmart</li>
 		</disallowedStrategies>
         <options>
-          <SWPentastar_ArmyTrooper>100</SWPentastar_ArmyTrooper>
+          <SWPentastar_ArmyTrooper_40x>100</SWPentastar_ArmyTrooper_40x>
+          <SWPentastar_ArmyHeavy>100</SWPentastar_ArmyHeavy>
+		  <SWPentastar_ArmyLieutenant>100</SWPentastar_ArmyLieutenant>
+		  <!-- MISSING: ion weapon gunner -->
+		  
+		  <!-- <SWPentastar_ArmyTrooper>100</SWPentastar_ArmyTrooper> -->
           <!-- <SWPentastar_ArmyHeavy>50</SWPentastar_ArmyHeavy> -->
           <!-- <SWPentastar_ArmySniper>25</SWPentastar_ArmySniper> -->
-		  <SWPentastar_ArmyLieutenant>50</SWPentastar_ArmyLieutenant>
+		  <!-- <SWPentastar_ArmyLieutenant>50</SWPentastar_ArmyLieutenant> -->
         </options>
       </li>
 	  
@@ -315,7 +323,7 @@
 		</disallowedStrategies>
         <options>
           <SWPentastar_ArmyTrooper>100</SWPentastar_ArmyTrooper>
-          <!-- <SWPentastar_ArmyHeavy>50</SWPentastar_ArmyHeavy> -->
+          <SWPentastar_ArmyHeavy>50</SWPentastar_ArmyHeavy>
           <!-- <SWPentastar_ArmySniper>25</SWPentastar_ArmySniper> -->
 		  
           <SWPentastar_ArmyLieutenant>100</SWPentastar_ArmyLieutenant>
@@ -323,7 +331,7 @@
       </li>
 	  
 	  <li>
-        <!-- assault -->
+        <!-- army assault -->
         <kindDef>Combat</kindDef>
         <commonality>25</commonality>
 		<disallowedStrategies>
@@ -333,7 +341,7 @@
 		</disallowedStrategies>
         <options>
 		  <SWPentastar_ArmyTrooper>100</SWPentastar_ArmyTrooper>
-          <!-- <SWPentastar_ArmyHeavy>50</SWPentastar_ArmyHeavy> -->
+          <SWPentastar_ArmyHeavy>50</SWPentastar_ArmyHeavy>
           <!-- <SWPentastar_ArmySniper>25</SWPentastar_ArmySniper> -->
           <SWPentastar_ArmyLieutenant>100</SWPentastar_ArmyLieutenant>
 		  
@@ -358,11 +366,15 @@
 			<li>ImmediateAttack</li>
 		</disallowedStrategies>
         <options>
+		  <SWPentastar_EnforcerTrooper>200</SWPentastar_EnforcerTrooper>
+          <SWPentastar_EnforcerHeavy>50</SWPentastar_EnforcerHeavy>
+		  
 		  <SWPentastar_ArmyTrooper>100</SWPentastar_ArmyTrooper>
-          <!-- <SWPentastar_ArmyHeavy>50</SWPentastar_ArmyHeavy> -->
+          <SWPentastar_ArmyHeavy>50</SWPentastar_ArmyHeavy>
           <!-- <SWPentastar_ArmySniper>25</SWPentastar_ArmySniper> -->
           <SWPentastar_ArmyLieutenant>100</SWPentastar_ArmyLieutenant>
 		  
+          <SWPentastar_GuardianProtector>25</SWPentastar_GuardianProtector>
           <SWPentastar_ArmyGeneral_field>100</SWPentastar_ArmyGeneral_field>
 		  
           <SWWarlords_ArmyCommando>50</SWWarlords_ArmyCommando>
@@ -376,7 +388,7 @@
 	  
 	  
 	  <li>
-        <!-- assassination team -->
+        <!-- inquisitorus assassination team -->
         <kindDef>Combat</kindDef>
         <commonality>10</commonality>
 		<disallowedStrategies>
@@ -386,7 +398,7 @@
 			<li>ImmediateAttackBreaching</li>
 		</disallowedStrategies>
         <options>
-		  <SWWarlords_ArmyCommando>50</SWWarlords_ArmyCommando>
+		  <SWWarlords_ArmyCommando>50</SWWarlords_ArmyCommando> <!-- replace with purge troopers -->
 		  
 		  <SWPentastar_InQuestor_PotF MayRequire="guy762.Lee.KotORPotF">100</SWPentastar_InQuestor_PotF>
 		  
@@ -414,7 +426,7 @@
 		  <SWImpRemnant_TIEace>5</SWImpRemnant_TIEace>
 
 		  <SWPentastar_ArmyTrooper>10</SWPentastar_ArmyTrooper>
-          <!-- <SWPentastar_ArmyHeavy>5</SWPentastar_ArmyHeavy> -->
+          <SWPentastar_ArmyHeavy>5</SWPentastar_ArmyHeavy>
           <!-- <SWPentastar_ArmySniper>5</SWPentastar_ArmySniper> -->
           <SWPentastar_ArmyLieutenant>10</SWPentastar_ArmyLieutenant>
 		  <SWPentastar_ArmyMajor>5</SWPentastar_ArmyMajor>
@@ -423,6 +435,7 @@
 		  <SWPentastar_OpsGeneral>5</SWPentastar_OpsGeneral>
 		  <SWPentastar_Viceroy>5</SWPentastar_Viceroy>
 		  <SWPentastar_Moff>5</SWPentastar_Moff>
+		  <SWPentastar_GuardianProtector>10</SWPentastar_GuardianProtector>
 		  
 		  <SWPentastar_InQuestor_PotF MayRequire="guy762.Lee.KotORPotF">10</SWPentastar_InQuestor_PotF>
 		  

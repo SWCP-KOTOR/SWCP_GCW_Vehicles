@@ -35,6 +35,7 @@
 		<weaponTags>
 			<li>SWRanged_T21repeater</li>
 			<li>SWRanged_AnyHeavyRifle</li>
+			<li>SWRanged_AnyAntiVehicleRifle</li>
 		</weaponTags>
 		<tradeTags>
 			<li>guy762TT_KotORRanged</li>
@@ -157,6 +158,7 @@
 		<weaponTags>
 			<li>SWRanged_T21Bheavy</li>
 			<li>SWRanged_AnyHeavyRifle</li>
+			<li>SWRanged_AnyAntiVehicleRifle</li>
 		</weaponTags>
 		<tradeTags>
 			<li>guy762TT_KotORRanged</li>

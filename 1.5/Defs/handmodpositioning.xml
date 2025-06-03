@@ -227,6 +227,27 @@
                  <li>guy762_T21Bheavyrifle</li> <!-- T-21B heavy blaster -->
               </ThingTargets>
           </li>
+		  <li>
+              <MainHand>(-0.115, 0.100, -0.100)</MainHand>
+              <SecHand>(0.175, -0.100, -0.065)</SecHand>
+              <ThingTargets>
+                 <li>guy762_HH4GrenadeLauncher</li> <!-- HH-4 proton grenade launcher -->
+              </ThingTargets>
+          </li>
+		  <li>
+			  <MainHand>(-0.175, 0.100, -0.135)</MainHand>
+              <SecHand>(0.100, -0.100, -0.100)</SecHand>
+              <ThingTargets>
+                 <li>guy762_PLX4LRocketRifle</li> <!-- PLX-4L light rocket launcher -->
+              </ThingTargets>
+          </li>
+		  <li>
+			  <MainHand>(0.090, 0.100, -0.010)</MainHand>
+              <SecHand>(0.235, -0.100, 0.200)</SecHand>
+              <ThingTargets>
+                 <li>guy762_MMPTLMissieLauncher</li> <!-- MiniMag-PTL missile launcher -->
+              </ThingTargets>
+          </li>
 		  
 		  
 		  <li>

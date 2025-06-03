@@ -389,6 +389,130 @@
 	
 	
 	
+	<!-- ISB/ImpIntelligence officers -->
+	
+	<PawnKindDef Name="SWImpRemnant_ISBLt" ParentName="SWImpRemnant_Base">
+		<defName>SWImpRemnant_ISBLt</defName>
+		<label>ISB supervisor</label>
+		<combatPower>40</combatPower>
+		<minGenerationAge>23</minGenerationAge>
+		<maxGenerationAge>70</maxGenerationAge>
+		<itemQuality>Good</itemQuality>
+		
+		<maxPerGroup>1</maxPerGroup>
+		
+		<xenotypeSet Inherit="False">
+		  <xenotypeChances>
+			<Baseliner MayRequire="Ludeon.RimWorld.Biotech">999</Baseliner>
+		  </xenotypeChances>
+		</xenotypeSet>
+		<useFactionXenotypes>false</useFactionXenotypes>
+
+		<apparelMoney>1500~5500</apparelMoney>
+		<apparelAllowHeadgearChance>1</apparelAllowHeadgearChance>
+		<apparelTags>
+			<li>KotOREquipment_basic</li>
+		</apparelTags>
+		<apparelRequired>
+			<li>guy762_UniformCap_imperial</li>
+			<li>guy762_ImpUniform_lowrank</li>
+		</apparelRequired>
+		<specificApparelRequirements>
+			<li>
+				<apparelLayer>Overhead</apparelLayer>
+				<color>(50,50,50)</color>       <!-- black -->
+			</li>
+			<li>
+				<apparelLayer>OnSkin</apparelLayer>
+				<apparelDef>guy762_ImpUniform_lowrank</apparelDef>
+				<styleDef>guy762_RankStyle_ImpOfficer_ISBlt</styleDef>
+				<color>(250,250,250)</color> <!-- white -->
+				<quality>Good</quality>
+			</li>
+		</specificApparelRequirements>
+
+		<biocodeWeaponChance>0.9</biocodeWeaponChance>
+		<weaponMoney>825</weaponMoney>
+		<weaponTags>
+			<li>SWRanged_Power5pistol</li>
+		</weaponTags>
+
+		<skills>
+			<li>
+				<skill>Social</skill>
+				<range>6~8</range>
+			</li>
+			<li>
+				<skill>Intellectual</skill>
+				<range>4~6</range>
+			</li>
+		</skills>
+		<inventoryOptions>
+			<skipChance>0.25</skipChance>
+			<subOptionsChooseOne>
+				<li>
+					<thingDef>guy762_medpac</thingDef>
+					<countRange>1~3</countRange>
+				</li>
+			</subOptionsChooseOne>
+		</inventoryOptions>
+
+		<!-- <disallowedTraits> -->
+			<!-- <li>Brawler</li> -->
+		<!-- </disallowedTraits> -->
+		<initialWillRange>0.5~2</initialWillRange>
+		<initialResistanceRange>5~10</initialResistanceRange>
+		
+		<abilities>
+			<!-- <li>WorkDrive</li> -->
+			<!-- <li>ProductionCommand</li> -->
+			<!-- <li>MarksmanCommand</li> -->
+		</abilities>
+	</PawnKindDef>
+	
+	<PawnKindDef Name="SWImpRemnant_INTLt" ParentName="SWImpRemnant_ISBLt">
+		<defName>SWImpRemnant_INTLt</defName>
+		<label>intelligence lieutenant</label>
+		<specificApparelRequirements Inherit="False">
+			<li>
+				<apparelLayer>Overhead</apparelLayer>
+				<color>(50,50,50)</color>       <!-- black -->
+			</li>
+			<li>
+				<apparelLayer>OnSkin</apparelLayer>
+				<apparelDef>guy762_ImpUniform_lowrank</apparelDef>
+				<styleDef>guy762_RankStyle_ImpOfficer_INTlt</styleDef>
+				<color>(250,250,250)</color> <!-- white -->
+				<quality>Good</quality>
+			</li>
+		</specificApparelRequirements>
+		
+	</PawnKindDef>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 	<!-- logistics officers -->
 	
 	

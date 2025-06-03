@@ -344,6 +344,12 @@
 		  <li>
 			<styleDef>guy762_RankStyle_ImpOfficer_navylt</styleDef>
 		  </li>
+		  <li>
+			<styleDef>guy762_RankStyle_ImpOfficer_ISBlt</styleDef>
+		  </li>
+		  <li>
+			<styleDef>guy762_RankStyle_ImpOfficer_INTlt</styleDef>
+		  </li>
 		</randomStyle>
 		
 		<tradeTags>
@@ -365,6 +371,28 @@
 		<wornGraphicPath>Apparel/ImperialOfficer/navylieutenant/Apparel</wornGraphicPath>
 		<graphicData>
 		  <texPath>Apparel/ImperialOfficer/navylieutenant/Apparel</texPath>
+		  <graphicClass>Graphic_Single</graphicClass>
+		  <shaderType>CutoutComplex</shaderType>
+		</graphicData>
+	  </ThingStyleDef>
+	  
+	  <ThingStyleDef>
+		<defName>guy762_RankStyle_ImpOfficer_ISBlt</defName>
+		<overrideLabel>imperial uniform, ISB lieutenant's</overrideLabel>
+		<wornGraphicPath>Apparel/ImperialOfficer/ISBlieutenant/Apparel</wornGraphicPath>
+		<graphicData>
+		  <texPath>Apparel/ImperialOfficer/ISBlieutenant/Apparel</texPath>
+		  <graphicClass>Graphic_Single</graphicClass>
+		  <shaderType>CutoutComplex</shaderType>
+		</graphicData>
+	  </ThingStyleDef>
+	  
+	  <ThingStyleDef>
+		<defName>guy762_RankStyle_ImpOfficer_INTlt</defName>
+		<overrideLabel>imperial uniform, intelligence lieutenant's</overrideLabel>
+		<wornGraphicPath>Apparel/ImperialOfficer/INTlieutenant/Apparel</wornGraphicPath>
+		<graphicData>
+		  <texPath>Apparel/ImperialOfficer/INTlieutenant/Apparel</texPath>
 		  <graphicClass>Graphic_Single</graphicClass>
 		  <shaderType>CutoutComplex</shaderType>
 		</graphicData>

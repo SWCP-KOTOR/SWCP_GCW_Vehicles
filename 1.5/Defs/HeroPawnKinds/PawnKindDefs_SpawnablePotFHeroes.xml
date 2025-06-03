@@ -319,6 +319,57 @@
 	</PawnKindDef>
 	
 	
+	
+	
+	
+	<PawnKindDef MayRequire="guy762.Lee.KotORPotF" Name="SWWEPlayableVillain_MaarekStele_PotF"  ParentName="SWWarlordsHeroBase_MaarekStele">
+		<defName>SWWEPlayableVillain_MaarekStele_PotF</defName>
+		<modExtensions>
+         <li Class="ItsSorceryFramework.ModExtension_PawnGenSchemaSet">
+				<schemaSets>
+				  <li>
+					<schemaMappings> <!-- all required nodes must be listed, not just the ones that give abilities -->
+					  <li>
+						<schema>SWPotF_ForceSchema</schema>
+						<weight>1</weight>
+						
+						<forceLevel>True</forceLevel>
+						<level>6</level>
+						<baseClassDef>SWPotF_ProgressTrackerClass_1thru10_ForceLvl</baseClassDef>
+						<!-- <classChanges> -->
+							<!-- <li> -->
+								<!-- <classDef>SWPotF_ProgressTrackerClass_10thru20_ForceLvl</classDef> -->
+								<!-- <levelReset>False</levelReset> -->
+								<!-- <benefitReset>False</benefitReset> -->
+								<!-- <removePostClassChange>True</removePostClassChange> -->
+							<!-- </li> -->
+						<!-- </classChanges> -->
+						
+						<!--forcePoints>True</forcePoints>
+						<points>5</points-->
+						
+						<requiredNodes>
+						  <li><nodeDef>SWPotF_ForceTreeNodeUniv_push</nodeDef><forceLevel>True</forceLevel></li>
+						  <li><nodeDef>SWPotF_ForceTreeNodeUniv_pull</nodeDef><forceLevel>True</forceLevel></li>
+						  
+						  <li><nodeDef>SWPotF_ForceTreeNodeUniv_confusion</nodeDef><forceLevel>True</forceLevel></li>
+						  
+						  <li><nodeDef>SWPotF_ForceTreeNodeUniv_BlasterStormI</nodeDef><forceLevel>True</forceLevel></li>
+						  
+						  <li><nodeDef>SWPotF_ForceTreeNodeUniv_breathcontrol</nodeDef><forceLevel>True</forceLevel></li>
+						  
+						  <li><nodeDef>SWPotF_ForceTreeNodeLS_focusI</nodeDef><forceLevel>True</forceLevel></li>
+						  
+						</requiredNodes>
+					  </li>
+					</schemaMappings>
+				  </li>
+				</schemaSets>
+		  </li>
+      </modExtensions>
+	</PawnKindDef>
+	
+	
 	  
 	
 </Defs>

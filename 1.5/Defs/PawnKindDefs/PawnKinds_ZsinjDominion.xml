@@ -201,11 +201,11 @@
 		<label>army lieutenant</label>
 		<defaultFactionType>guy762_SWWarlordsFaction_ZsinjDominion</defaultFactionType>
 		
-		<weaponMoney>400~1050</weaponMoney>
-		<weaponTags Inherit="False">
-			<li>SWRanged_SE14pistol</li>
-			<li>SWRanged_Power5pistol</li>
-		</weaponTags>
+		<!-- <weaponMoney>400~1050</weaponMoney> -->
+		<!-- <weaponTags Inherit="False"> -->
+			<!-- <li>SWRanged_SE14pistol</li> -->
+			<!-- <li>SWRanged_Power5pistol</li> -->
+		<!-- </weaponTags> -->
 		
 		<specificApparelRequirements Inherit="False">
 			<li>
@@ -380,17 +380,17 @@
 			<li>guy762_RaptorHelmet</li>
 			<li>guy762_RaptorArmor</li>
 			<li>guy762_Bodysuit</li>
-			<li>Apparel_Cape</li>
+			<!-- <li>Apparel_Cape</li> -->
 		</apparelRequired>
 		<specificApparelRequirements>
 			<li>
 				<apparelLayer>OnSkin</apparelLayer>
 				<color>(90,90,90)</color>
 			</li>
-			<li>
-				<apparelLayer>Shell</apparelLayer>
-				<stuff>KOTOR_FabricArmorweave</stuff>
-			</li>
+			<!-- <li> -->
+				<!-- <apparelLayer>Shell</apparelLayer> -->
+				<!-- <stuff>KOTOR_FabricArmorweave</stuff> -->
+			<!-- </li> -->
 		</specificApparelRequirements>
 
 		<biocodeWeaponChance>0.75</biocodeWeaponChance>
@@ -478,20 +478,21 @@
 			<li>
 				<bodyPartGroup>Neck</bodyPartGroup>
 				<apparelLayer>Shell</apparelLayer>
-				<color>(40,40,40)</color>
+				<!-- <color>(40,40,40)</color> -->
+				<color>(225,220,75)</color>         <!-- banana yellow -->
 			</li>
 			<li>
 				<bodyPartGroup>Torso</bodyPartGroup>
 				<apparelLayer>Shell</apparelLayer>
-				<color>(90,90,90)</color>
+				<color>(50,50,50)</color>
 			</li>
 		</specificApparelRequirements>
 
 		<biocodeWeaponChance>0.75</biocodeWeaponChance>
-		<weaponMoney>2000~2200</weaponMoney>
+		<weaponMoney>2000~12000</weaponMoney>
 		<weaponTags>
 			<li>SWRanged_T21repeater</li>
-			<li>SWRanged_FC1flechette</li>
+			<li>SWRanged_MMPTLMissieLauncher</li>
 		</weaponTags>
 
 		<techHediffsChance>1</techHediffsChance>
@@ -545,6 +546,117 @@
 			</li>
 		</modExtensions>
 	</PawnKindDef>
+	
+	
+	
+	
+	
+	<PawnKindDef Name="SWZsinj_RaptorOfficer" ParentName="SWZsinj_TrooperBase">
+		<defName>SWZsinj_RaptorOfficer</defName>
+		<label>Raptor field officer</label>
+		<combatPower>125</combatPower>
+		<minGenerationAge>23</minGenerationAge>
+		<maxGenerationAge>40</maxGenerationAge>
+		<itemQuality>Good</itemQuality>
+		
+		<maxPerGroup>2</maxPerGroup>
+		
+		<xenotypeSet Inherit="False">
+		  <xenotypeChances>
+			<Baseliner MayRequire="Ludeon.RimWorld.Biotech">999</Baseliner>
+		  </xenotypeChances>
+		</xenotypeSet>
+		<useFactionXenotypes>false</useFactionXenotypes>
+
+		<apparelMoney>1500~5500</apparelMoney>
+		<apparelAllowHeadgearChance>1</apparelAllowHeadgearChance>
+		<apparelTags>
+			<li>ZsinjEmpire_raptorarmor</li>
+			<li>KotOREquipment_adv</li>
+		</apparelTags>
+		<apparelRequired>
+			<li>guy762_Accessory_stormiepauldron</li>
+			<li>guy762_Accessory_suspendersA</li>
+			<li>guy762_RaptorHelmet</li>
+			<li>guy762_RaptorArmor</li>
+			<li>guy762_Bodysuit</li>
+		</apparelRequired>
+		<specificApparelRequirements>
+			<li>
+				<bodyPartGroup>Torso</bodyPartGroup>
+				<apparelLayer>Shell</apparelLayer>
+				<color>(50,50,50)</color>
+			</li>
+			<li>
+				<bodyPartGroup>Neck</bodyPartGroup>
+				<apparelLayer>Shell</apparelLayer>
+				<color>(200,50,70)</color> <!-- raptor's red -->
+			</li>
+			<li>
+				<apparelLayer>OnSkin</apparelLayer>
+				<color>(90,90,90)</color>
+			</li>
+		</specificApparelRequirements>
+
+		<biocodeWeaponChance>0.75</biocodeWeaponChance>
+		<weaponMoney>1800</weaponMoney>
+		<weaponTags>
+			<li>SWRanged_TL50blaster</li>
+		</weaponTags>
+
+		<techHediffsChance>2</techHediffsChance>
+		<techHediffsMoney>
+			<min>1200</min>
+			<max>2400</max>
+		</techHediffsMoney>
+
+		<skills>
+			<li>
+				<skill>Shooting</skill>
+				<range>8~14</range>
+			</li>
+			<li>
+				<skill>Melee</skill>
+				<range>6~8</range>
+			</li>
+			<li>
+				<skill>Social</skill>
+				<range>8~10</range>
+			</li>
+			<li>
+				<skill>Intellectual</skill>
+				<range>6~8</range>
+			</li>
+		</skills>
+		<inventoryOptions>
+			<skipChance>0</skipChance>
+			<subOptionsChooseOne>
+				<li>
+					<thingDef>guy762_medpac_adv</thingDef>
+					<countRange>1~3</countRange>
+				</li>
+			</subOptionsChooseOne>
+		</inventoryOptions>
+
+		<disallowedTraits>
+			<li>Brawler</li>
+		</disallowedTraits>
+		<initialWillRange>0.5~2</initialWillRange>
+		<initialResistanceRange>5~10</initialResistanceRange>
+		
+		<abilities>
+			<li>MarksmanCommand</li>
+		</abilities>
+	</PawnKindDef>
+	
+	
+	
+	
+	
+	
+	
+	
+	
 	
 	
 	

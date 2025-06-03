@@ -827,6 +827,10 @@
 							<only>(95,100,70)</only> <!-- forest green -->
 						</li>
 						<li>
+							<weight>10</weight>
+							<only>(90,105,120)</only> <!-- muted blue -->
+						</li>
+						<li>
 							<weight>1</weight>
 							<only>(120,125,110)</only>  <!-- slate green -->
 						</li>
@@ -840,7 +844,7 @@
 		</specificApparelRequirements>
 		
 		<biocodeWeaponChance>0</biocodeWeaponChance>
-		<weaponMoney>300~2500</weaponMoney>
+		<weaponMoney>300~3000</weaponMoney>
 		<weaponTags>
 		  <li>SWRanged_E10rifle</li>
 		  <li>SWRanged_E11carbine</li>
@@ -1009,7 +1013,7 @@
 		</specificApparelRequirements>
 		
 		<biocodeWeaponChance>0</biocodeWeaponChance>
-		<weaponMoney>500~2500</weaponMoney>
+		<weaponMoney>500~3000</weaponMoney>
 		<weaponTags>
 		  <li>SWRanged_E11carbine</li>
 		  <!-- <li>SWRanged_DH17rifle</li> -->

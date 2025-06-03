@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ModMetaData>
   <name>Star Wars: X-Wing</name>
-  <modIconPath IgnoreIfNoMatchingField="True">UI/ModIcon_guy762_KotORVehicles</modIconPath>
+  <modIconPath IgnoreIfNoMatchingField="True">UI/ModIcon_guy762_SWWarlordEmpire</modIconPath>
   <author>guy762, NelsonArts, MajesticMadman</author>
   <supportedVersions>
     <li>1.5</li>

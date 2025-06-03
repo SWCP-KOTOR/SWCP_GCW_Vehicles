@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<ThingDef ParentName="KotORRangedWeapon_TwoHand">
+		<defName>guy762_PLX4LRocketRifle</defName>
+		<label>PLX-4L light rocket launcher</label>
+		<description>.</description>
+		<techLevel>Spacer</techLevel>
+		<thingClass>ThingWithComps</thingClass>
+		<graphicData>
+			<texPath>Weapons/PLX4L</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>1.2</drawSize>
+		</graphicData>
+		<soundInteract>kotorsound_select_hvyrep</soundInteract>
+		<statBases>
+			<MarketValue>6000</MarketValue>
+			<Mass>10</Mass>
+			<AccuracyTouch>0.30</AccuracyTouch>
+			<AccuracyShort>0.40</AccuracyShort>
+			<AccuracyMedium>0.70</AccuracyMedium>
+			<AccuracyLong>0.60</AccuracyLong>
+			<RangedWeapon_Cooldown>10</RangedWeapon_Cooldown>
+		</statBases>
+		<weaponTags>
+			<li>SWRanged_PLX4LRocketRifle</li>
+			<li>SWRanged_AnyOrdinance</li>
+		</weaponTags>
+		<tradeTags>
+			<li>guy762TT_KotORWeapon_illegal</li>
+		</tradeTags>
+		<verbs>
+			<li>
+				<label>anti-infantry rockets</label>
+				<verbClass>Verb_Shoot</verbClass>
+				<hasStandardCommand>true</hasStandardCommand>
+				<defaultProjectile>KotORRocket</defaultProjectile>
+				<warmupTime>4</warmupTime>
+				<defaultCooldownTime>10</defaultCooldownTime>
+				<range>28</range>
+				<ticksBetweenBurstShots>40</ticksBetweenBurstShots>
+				<burstShotCount>3</burstShotCount>
+				<soundCast>kotorsound_JKrocket</soundCast>
+				<soundCastTail>GunTail_Medium</soundCastTail>
+				<muzzleFlashScale>9</muzzleFlashScale>
+				<ai_IsWeapon>true</ai_IsWeapon>
+				
+				<forcedMissRadius>2</forcedMissRadius>
+				<!-- <onlyManualCast>true</onlyManualCast> -->
+				<ai_IsBuildingDestroyer>true</ai_IsBuildingDestroyer>
+				<ai_AvoidFriendlyFireRadius>3</ai_AvoidFriendlyFireRadius>
+				<targetParams>
+					<canTargetLocations>true</canTargetLocations>
+				</targetParams>
+			</li>
+			<li>
+				<label>homing AV missile</label>
+				<commandIcon>UI/targetlock</commandIcon>
+				<verbClass>Verb_Shoot</verbClass>
+				<hasStandardCommand>true</hasStandardCommand>
+				<defaultProjectile>SWProj_SAAVProtonMissile_light</defaultProjectile>
+				<warmupTime>6</warmupTime>
+				<defaultCooldownTime>10</defaultCooldownTime>
+				<range>36</range>
+				<ticksBetweenBurstShots>20</ticksBetweenBurstShots>
+				<burstShotCount>1</burstShotCount>
+				<soundCast>kotorsound_JKrocket_alt</soundCast>
+				<soundCastTail>GunTail_Medium</soundCastTail>
+				<muzzleFlashScale>9</muzzleFlashScale>
+				<ai_IsWeapon>true</ai_IsWeapon>
+				
+				<forcedMissRadius>0.5</forcedMissRadius>
+				<onlyManualCast>true</onlyManualCast>
+				<ai_IsBuildingDestroyer>true</ai_IsBuildingDestroyer>
+				<ai_AvoidFriendlyFireRadius>3</ai_AvoidFriendlyFireRadius>
+			</li>
+		</verbs>
+		<tools>
+			<li>
+				<label>stock</label>
+				<capacities>
+					<li>Blunt</li>
+				</capacities>
+				<power>12</power>
+				<cooldownTime>2</cooldownTime>
+			</li>
+			<li>
+				<label>barrel</label>
+				<capacities>
+					<li>Blunt</li>
+					<li>Poke</li>
+				</capacities>
+				<power>9</power>
+				<cooldownTime>2</cooldownTime>
+			</li>
+		</tools>
+		<thingSetMakerTags>
+		  <li>RewardStandardLowFreq</li>
+		</thingSetMakerTags>
+	</ThingDef>
+	
+	
+
+	
+	
+
+</Defs>

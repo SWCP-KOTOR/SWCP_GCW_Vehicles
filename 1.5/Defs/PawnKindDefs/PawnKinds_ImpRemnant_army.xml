@@ -31,12 +31,12 @@
 		<apparelAllowHeadgearChance>0.75</apparelAllowHeadgearChance>
 		<apparelTags>
 			<li>RemnantEmpire_armyconscript</li>
-			<li>RemnantEmpire_armytrooper</li>
+			<!-- <li>RemnantEmpire_armytrooper</li> -->
 		</apparelTags>
 		<apparelRequired>
 			<!-- <li>guy762_ArmyTrooperHelmet</li> -->
 			<li>guy762_UniformCap_impConscript</li>
-			<li>guy762_ArmyTrooperArmor</li>
+			<!-- <li>guy762_ArmyTrooperArmor</li> -->
 			<li>guy762_GenericUniform_fatigues</li>
 		</apparelRequired>
 		<specificApparelRequirements>
@@ -205,7 +205,7 @@
 		<maxGenerationAge>35</maxGenerationAge>
 		<itemQuality>Poor</itemQuality>
 		
-		<maxPerGroup>6</maxPerGroup>
+		<maxPerGroup>2</maxPerGroup>
 		
 		<xenotypeSet Inherit="False">
 		  <xenotypeChances>
@@ -241,9 +241,9 @@
 		</specificApparelRequirements>
 
 		<biocodeWeaponChance>0.25</biocodeWeaponChance>
-		<weaponMoney>2000</weaponMoney>
+		<weaponMoney>2500</weaponMoney>
 		<weaponTags>
-			<li>SWRanged_FC1flechette</li> <!-- needs more grenade launchers -->
+			<li>SWRanged_HH4ProtonGrenadeLauncher</li>
 		</weaponTags>
 		
 		<skills>
@@ -476,7 +476,7 @@
 		<maxGenerationAge>55</maxGenerationAge>
 		<itemQuality>Normal</itemQuality>
 		
-		<maxPerGroup>4</maxPerGroup>
+		<maxPerGroup>2</maxPerGroup>
 		
 		<xenotypeSet Inherit="False">
 		  <xenotypeChances>
@@ -510,12 +510,17 @@
 			</li>
 		</specificApparelRequirements>
 
-		<biocodeWeaponChance>0.5</biocodeWeaponChance>
-		<weaponMoney>400~600</weaponMoney>
+		<biocodeWeaponChance>0.75</biocodeWeaponChance>
+		<weaponMoney>3200</weaponMoney>
 		<weaponTags>
-			<li>SWRanged_SE14pistol</li>
-			<li>SWRanged_E11carbine</li>
+			<li>SWRanged_TL50conc</li>
 		</weaponTags>
+		<!-- <biocodeWeaponChance>0.5</biocodeWeaponChance> -->
+		<!-- <weaponMoney>400~600</weaponMoney> -->
+		<!-- <weaponTags> -->
+			<!-- <li>SWRanged_SE14pistol</li> -->
+			<!-- <li>SWRanged_E11carbine</li> -->
+		<!-- </weaponTags> -->
 		
 		<skills>
 			<li>

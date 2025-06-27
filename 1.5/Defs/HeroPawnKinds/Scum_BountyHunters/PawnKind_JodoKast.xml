@@ -84,6 +84,11 @@
 			</categories>
 		  </li>
 		</backstoryFiltersOverride>
+		
+		<abilities>
+			<!-- ACE TIER 5 -->
+		</abilities>
+		
 		<modExtensions>
 			<li Class="BodyTypeForPawnKind.ModExtension_HeadTypesOfPawnKind">
 			  <whitelist>

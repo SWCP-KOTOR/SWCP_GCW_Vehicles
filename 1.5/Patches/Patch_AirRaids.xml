@@ -1,23 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Patch>
-	<Operation Class="PatchOperationAdd">
-		<xpath>Defs/FactionDef[defName="guy762_KotORFaction_SithRemnant"]/pawnGroupMakers</xpath>
-		<value>
-			<li Class="taranchuk_flightcombat.PawnGroupMaker_FlightRaid">
-				<kindDef>Combat</kindDef>
-				<commonality>10000</commonality>
-				<minPoints>2000</minPoints>
-				<minAircraftCount>4</minAircraftCount>
-				<maxAircraftCount>10</maxAircraftCount>
-				<options>
-					<guy762_SWVehicle_TIEFighter_bot_PawnKind>5</guy762_SWVehicle_TIEFighter_bot_PawnKind>
-					<guy762_SWVehicle_TIEInterceptor_bot_PawnKind>2</guy762_SWVehicle_TIEInterceptor_bot_PawnKind>
-					<guy762_SWVehicle_TIEBomber_bot_PawnKind>3</guy762_SWVehicle_TIEBomber_bot_PawnKind>
-					<guy762_SWVehicle_TIEDefender_bot_PawnKind>1</guy762_SWVehicle_TIEDefender_bot_PawnKind>
-				</options>
-			</li>
-		</value>
-	</Operation>
+
 	
 	
 	<Operation Class="PatchOperationAdd">

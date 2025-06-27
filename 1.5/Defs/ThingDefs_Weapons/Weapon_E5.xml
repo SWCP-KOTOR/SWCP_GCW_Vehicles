@@ -121,7 +121,7 @@
 				<defaultProjectile>KotORBlasterBolt_default</defaultProjectile>
 				<warmupTime>0.75</warmupTime>
 				<defaultCooldownTime>1</defaultCooldownTime>
-				<range>28</range>
+				<range>30</range>
 				<ticksBetweenBurstShots>10</ticksBetweenBurstShots>
 				<burstShotCount>3</burstShotCount>
 				<soundCast>kotorsound_E5alt</soundCast>

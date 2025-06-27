@@ -3,7 +3,7 @@
 
 	<ThingDef ParentName="KotORRangedWeapon_TwoHand">
 		<defName>guy762_MMPTLMissieLauncher</defName>
-		<label>MiniMag-PTL missile launcher</label>
+		<label>MiniMag-PTL heavy missile launcher</label>
 		<description>.</description>
 		<techLevel>Spacer</techLevel>
 		<thingClass>ThingWithComps</thingClass>
@@ -22,9 +22,10 @@
 			<AccuracyMedium>0.40</AccuracyMedium>
 			<AccuracyLong>0.50</AccuracyLong>
 			<RangedWeapon_Cooldown>10</RangedWeapon_Cooldown>
+			<RangedWeapon_DamageMultiplier>1.4</RangedWeapon_DamageMultiplier>
 		</statBases>
 		<equippedStatOffsets>
-			<MoveSpeed>-0.2</MoveSpeed>
+			<MoveSpeed>-0.4</MoveSpeed>
 		</equippedStatOffsets>
 		
 		<weaponTags>
@@ -35,30 +36,35 @@
 			<li>guy762TT_KotORWeapon_illegal</li>
 		</tradeTags>
 		<verbs>
-			<li>
-				<label>homing AV missile</label>
+			<li Class="VerbShootVehicle.VerbPropertiesAntiVehicle">
+				<label>homing AV/AA missile</label>
 				<commandIcon>UI/targetlock</commandIcon>
-				<verbClass>Verb_Shoot</verbClass>
+				<verbClass>VerbShootVehicle.Verb_ShootAntiVehicle</verbClass>
 				<hasStandardCommand>true</hasStandardCommand>
 				<defaultProjectile>SWProj_SAAVProtonMissile_heavy</defaultProjectile>
 				<warmupTime>6</warmupTime>
 				<defaultCooldownTime>10</defaultCooldownTime>
-				<range>36</range>
+				<!-- <range>36</range> -->
+				<range>60</range>
 				<ticksBetweenBurstShots>20</ticksBetweenBurstShots>
 				<burstShotCount>1</burstShotCount>
 				<soundCast>kotorsound_BF1missile</soundCast>
-				<soundCastTail>GunTail_Medium</soundCastTail>
-				<muzzleFlashScale>9</muzzleFlashScale>
+				<soundCastTail>GunTail_Heavy</soundCastTail>
+				<muzzleFlashScale>14</muzzleFlashScale>
 				<ai_IsWeapon>true</ai_IsWeapon>
 				
 				<forcedMissRadius>0.5</forcedMissRadius>
-				<onlyManualCast>true</onlyManualCast>
+				<!-- <onlyManualCast>true</onlyManualCast> -->
 				<ai_IsBuildingDestroyer>true</ai_IsBuildingDestroyer>
 				<ai_AvoidFriendlyFireRadius>3</ai_AvoidFriendlyFireRadius>
-				<targetParams>
-					<canTargetLocations>true</canTargetLocations>
-				</targetParams>
-			</li>
+				
+                <targetParams>
+                    <canTargetLocations>false</canTargetLocations>
+                </targetParams>
+                <onlyTargetVehicle>True</onlyTargetVehicle>
+                <onlyTargetFleshType>False</onlyTargetFleshType>
+                <!-- <fleshTypeDef>FleshTypeDef</fleshTypeDef> -->
+            </li>
 		</verbs>
 		<tools>
 			<li>

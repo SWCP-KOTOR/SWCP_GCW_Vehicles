@@ -1,0 +1,866 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<!-- combat suit stat level -->
+	
+  <ThingDef ParentName="KotORArmorModdable_hard">
+	<defName>guy762_TIEpilotArmor</defName>
+	<label>TIE pilot flight armor</label>
+	<description>This combat-ready flight vest provides additional protection against vacuum for limited periods. Its many models appeal to a wide range of users, from military pilots and mercenaries to fringe explorers and space pirates. Built-in grav thrusters also assist with movement in open space.</description>
+	<graphicData>
+	  <texPath>Apparel/TIEPilot/Apparel</texPath>
+	  <graphicClass>Graphic_Single</graphicClass>
+	  <shaderType>CutoutComplex</shaderType>
+	</graphicData>
+	<statBases>
+		<Mass>3</Mass>
+		<MarketValue>500</MarketValue>
+		
+		<MaxHitPoints>225</MaxHitPoints>
+		<ArmorRating_Sharp>0.45</ArmorRating_Sharp>
+		<ArmorRating_Blunt>0.3</ArmorRating_Blunt>
+		<ArmorRating_Heat>0.55</ArmorRating_Heat>
+		<Insulation_Cold>100</Insulation_Cold>
+		<Insulation_Heat>100</Insulation_Heat>
+		<EquipDelay>5</EquipDelay>
+	</statBases>
+	<equippedStatOffsets>
+		<IncomingDamageFactor>-0.05</IncomingDamageFactor>
+		<VacuumSpeedMultiplier MayRequire="kentington.saveourship2">2</VacuumSpeedMultiplier>
+		<DecompressionResistance MayRequire="kentington.saveourship2">0.125</DecompressionResistance>
+	</equippedStatOffsets>
+	<apparel>
+	  <tags Inherit="False">
+		<li>RemnantEmpire_TIEpilot</li>
+	  </tags>
+	  <wornGraphicPath>Apparel/TIEPilot/Apparel</wornGraphicPath>
+	  <useWornGraphicMask>true</useWornGraphicMask>
+	  <defaultOutfitTags Inherit="False">
+		<li>Worker</li>
+	  </defaultOutfitTags>
+	  <layers Inherit="False">
+		<li>Middle</li>
+	  </layers>
+	  <bodyPartGroups Inherit="False">
+		<li>Torso</li>
+	  </bodyPartGroups>
+	</apparel>
+	<tradeTags>
+		<li>guy762TT_KotORArmor</li>
+		<li>guy762TT_KotORArmor_space</li>
+		<li>guy762TT_KotORArmor_powered</li>
+	</tradeTags>
+	<colorGenerator Class="ColorGenerator_Options" Inherit="False">
+		<options>
+			<li>
+				<weight>15</weight>
+				<only>(40,40,40)</only>
+			</li>
+		</options>
+	</colorGenerator>
+  </ThingDef>
+	  
+	  
+	
+	
+	<!-- heavy combat suit stat level -->
+
+  
+	
+	
+  
+  
+  <ThingDef ParentName="KotORArmorModdable_hard">
+		<defName>guy762_ImpLightCombatArmor</defName>
+		<label>light combat armor</label>
+		<description>.</description>
+		<graphicData>
+		  <texPath>Apparel/ImperialNavyTrooper/Apparel</texPath>
+		  <graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<statBases>
+			<Mass>3</Mass>
+			<MarketValue>250</MarketValue>
+			
+			<MaxHitPoints>225</MaxHitPoints>
+			<ArmorRating_Sharp>0.55</ArmorRating_Sharp>
+			<ArmorRating_Blunt>0.4</ArmorRating_Blunt>
+			<ArmorRating_Heat>0.65</ArmorRating_Heat>
+			<EquipDelay>5</EquipDelay>
+		</statBases>
+		<equippedStatOffsets>
+			<MoveSpeed>-0.1</MoveSpeed>
+			<MeleeDodgeChance>-0.1</MeleeDodgeChance>
+			<IncomingDamageFactor>-0.05</IncomingDamageFactor>
+		</equippedStatOffsets>
+		<apparel>
+		  <tags Inherit="False">
+			<li>RemnantEmpire_navytrooper</li>
+			<li>RemnantEmpire_lgtcombatarmor</li>
+		  </tags>
+		  <wornGraphicPath>Apparel/ImperialNavyTrooper/Apparel</wornGraphicPath>
+		  <layers Inherit="False">
+			<li>Middle</li>
+		  </layers>
+		  <bodyPartGroups Inherit="False">
+			<li>Torso</li>
+		  </bodyPartGroups>
+		</apparel>
+		<tradeTags>
+			<li>guy762TT_KotORArmor</li>
+		</tradeTags>
+		<colorGenerator Class="ColorGenerator_Options" Inherit="False">
+			<options>
+				<li>
+					<weight>15</weight>
+					<only>(250,250,250)</only>
+				</li>
+			</options>
+		</colorGenerator>
+	  </ThingDef>
+	  
+	  
+	  
+	  <ThingDef ParentName="KotORArmorModdable_hard">
+		<defName>guy762_RemnantLightArmor</defName>
+		<label>light combat armor, rusty</label>
+		<description>.</description>
+		<graphicData>
+		  <texPath>Apparel/ImperialNavyTrooper/Apparel</texPath>
+		  <graphicClass>Graphic_Single</graphicClass>
+		  <shaderType>CutoutComplex</shaderType>
+		  <colorTwo>(200,100,50)</colorTwo> <!-- rusty red -->
+		</graphicData>
+		<statBases>
+			<Mass>3</Mass>
+			<MarketValue>250</MarketValue>
+			
+			<MaxHitPoints>225</MaxHitPoints>
+			<ArmorRating_Sharp>0.55</ArmorRating_Sharp>
+			<ArmorRating_Blunt>0.4</ArmorRating_Blunt>
+			<ArmorRating_Heat>0.65</ArmorRating_Heat>
+			<EquipDelay>5</EquipDelay>
+		</statBases>
+		<equippedStatOffsets>
+			<MoveSpeed>-0.1</MoveSpeed>
+			<MeleeDodgeChance>-0.1</MeleeDodgeChance>
+			<IncomingDamageFactor>-0.05</IncomingDamageFactor>
+		</equippedStatOffsets>
+		<apparel>
+		  <tags Inherit="False">
+			<li>IndependentWarlord_armytrooper</li>
+			<li>IndependentWarlord_lgtcombatarmor</li>
+			<li>NewRepublic_rebeltrooper</li>
+		  </tags>
+		  <wornGraphicPath>Apparel/ImperialNavyTrooper/Apparel</wornGraphicPath>
+		  <useWornGraphicMask>true</useWornGraphicMask>
+		  <layers Inherit="False">
+			<li>Middle</li>
+		  </layers>
+		  <bodyPartGroups Inherit="False">
+			<li>Torso</li>
+		  </bodyPartGroups>
+		</apparel>
+		<tradeTags>
+			<li>guy762TT_KotORArmor</li>
+		</tradeTags>
+		<colorGenerator Class="ColorGenerator_Options" Inherit="False">
+			<options>
+				<li>
+					<weight>10</weight>
+					<only>(110,120,115)</only>  <!-- army slate green -->
+				</li>
+			</options>
+		</colorGenerator>
+	  </ThingDef>
+	  
+	  
+	  
+	
+	
+	
+	
+	
+	
+	
+	
+	<ThingDef ParentName="KotORArmorModdable_hard">
+		<defName>guy762_NavyTrooperHelmet</defName>
+		<label>navy combat helmet</label>
+		<techLevel>Spacer</techLevel>
+		<description>.</description>
+		<graphicData>
+			<texPath>Apparel/ImperialNavyTrooper/helmet</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<shaderType>CutoutComplex</shaderType>
+		</graphicData>
+		<thingCategories>
+		  <li>ArmorHeadgear</li>
+		</thingCategories>
+		<statBases>
+			<Mass>3.5</Mass>
+			<MarketValue>100</MarketValue>
+			
+			<MaxHitPoints>175</MaxHitPoints>
+      		<ArmorRating_Sharp>0.45</ArmorRating_Sharp>
+			<ArmorRating_Blunt>0.3</ArmorRating_Blunt>
+			<ArmorRating_Heat>0.55</ArmorRating_Heat>
+			<EquipDelay>2</EquipDelay>
+		</statBases>
+		
+		<apparel Inherit="False">
+			<tags>
+				<li>RemnantEmpire_navytrooper</li>
+			</tags>
+			<wornGraphicPath>Apparel/ImperialNavyTrooper/helmet</wornGraphicPath>
+			<useWornGraphicMask>true</useWornGraphicMask>
+			<layers>
+				<li>Overhead</li>
+			</layers>
+			<bodyPartGroups>
+				<li>UpperHead</li>
+			</bodyPartGroups>
+			<useDeflectMetalEffect>true</useDeflectMetalEffect>
+		</apparel>
+		<tradeTags>
+			<li>guy762TT_ORArmor</li>
+		</tradeTags>
+		<colorGenerator Class="ColorGenerator_Options" Inherit="False">
+			<options>
+				<li>
+					<weight>10</weight>
+					<only>(40,40,40)</only>  <!-- deeper black -->
+				</li>
+			</options>
+		</colorGenerator>
+	</ThingDef>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<ThingDef ParentName="KotORArmorModdable_hard">
+		<defName>guy762_ImpNavyCommandoHelmet</defName>
+		<label>navy commando helmet</label>
+		<techLevel>Spacer</techLevel>
+		<description>.</description>
+		<graphicData>
+			<texPath>Apparel/ImpNavyCommando/helmet</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<shaderType>CutoutComplex</shaderType>
+		</graphicData>
+		<thingCategories>
+		  <li>ArmorHeadgear</li>
+		</thingCategories>
+		<statBases>
+			<Mass>4</Mass>
+			<MarketValue>400</MarketValue>
+			<MaxHitPoints>115</MaxHitPoints>
+      		<ArmorRating_Sharp>0.35</ArmorRating_Sharp>
+			<ArmorRating_Blunt>0.2</ArmorRating_Blunt>
+			<ArmorRating_Heat>0.75</ArmorRating_Heat>
+			<EquipDelay>2</EquipDelay>
+		</statBases>
+		<equippedStatOffsets>
+			<!-- <ShootingAccuracyPawn>-0.2</ShootingAccuracyPawn> -->
+			<AimingDelayFactor>-0.1</AimingDelayFactor>
+			
+			<ToxicEnvironmentResistance>1</ToxicEnvironmentResistance>
+			<HypoxiaResistance MayRequire="kentington.saveourship2">1</HypoxiaResistance>
+			<DecompressionResistance MayRequire="kentington.saveourship2">0.25</DecompressionResistance>
+		</equippedStatOffsets>
+		
+		<apparel Inherit="False">
+			<tags>
+				<li>GreaterMaldrood_navycommando</li>
+			</tags>
+			<wornGraphicPath>Apparel/ImpNavyCommando/helmet</wornGraphicPath>
+			<useWornGraphicMask>true</useWornGraphicMask>
+			<layers>
+				<li>Overhead</li>
+				<li>EyeCover</li>
+			</layers>
+			<bodyPartGroups>
+				<li>FullHead</li>
+			</bodyPartGroups>
+			<useDeflectMetalEffect>false</useDeflectMetalEffect>
+		</apparel>
+		<tradeTags>
+			<li>guy762TT_WarlordArmor</li>
+		</tradeTags>
+		<colorGenerator Class="ColorGenerator_Options" Inherit="False">
+			<options>
+				<li>
+					<weight>10</weight>
+					<only>(250,250,250)</only>  <!-- white -->
+				</li>
+			</options>
+		</colorGenerator>
+		<!--comps>
+		  <li Class="ModularWeapons.CompProperties_ModularParts">
+			<compClass>ModularWeapons.CompModularParts</compClass>
+			<partKinds>
+			  <li>guy762_slot_overlay</li>
+			  <li>guy762_slot_underlay_hat</li>
+			</partKinds>
+			<randomizeParts>true</randomizeParts>
+		  </li>
+		</comps-->
+	</ThingDef>
+	
+	
+	
+	
+	
+	<ThingDef ParentName="KotORArmorModdable_hard">
+		<defName>guy762_ImpNavyCommandoArmor</defName>
+		<label>navy commando armor</label>
+		<description>.</description>
+		<graphicData>
+		  <texPath>Apparel/ImpNavyCommando/Apparel</texPath>
+		  <graphicClass>Graphic_Single</graphicClass>
+		  <shaderType>CutoutComplex</shaderType>
+		  <colorTwo>(250,250,250)</colorTwo>
+		</graphicData>
+		<statBases>
+			<Mass>6</Mass>
+			<MarketValue>700</MarketValue>
+			
+			<MaxHitPoints>225</MaxHitPoints> <!-- stormtrooper armor stats -1 -->
+			<ArmorRating_Sharp>0.35</ArmorRating_Sharp>
+			<ArmorRating_Blunt>0.2</ArmorRating_Blunt>
+			<ArmorRating_Heat>0.75</ArmorRating_Heat>
+			<EquipDelay>15</EquipDelay>
+		</statBases>
+		<equippedStatOffsets>
+			<!-- no movement penalty -->
+			<IncomingDamageFactor>-0.1</IncomingDamageFactor>
+		</equippedStatOffsets>
+		
+		<apparel>
+		  <tags Inherit="False">
+			<li>GreaterMaldrood_navycommando</li>
+		  </tags>
+		  <wornGraphicPath>Apparel/ImpNavyCommando/Apparel</wornGraphicPath>
+		  <useWornGraphicMask>true</useWornGraphicMask>
+		  <layers Inherit="False">
+			<li>Middle</li>
+		  </layers>
+		  <bodyPartGroups Inherit="False">
+			<li>Shoulders</li>
+			<li>Neck</li>
+			<li>Arms</li>
+			<!-- <li>Hands</li> -->
+			<!-- <li>Legs</li> -->
+			<li>Feet</li>
+		  </bodyPartGroups>
+		  <useDeflectMetalEffect>false</useDeflectMetalEffect>
+		</apparel>
+		<tradeTags>
+			<li>guy762TT_KotORArmor</li>
+		</tradeTags>
+		<colorGenerator Class="ColorGenerator_Options" Inherit="False">
+			<options>
+				<li>
+					<weight>15</weight>
+					<only>(250,250,250)</only>
+				</li>
+			</options>
+		</colorGenerator>
+
+		<verbs>
+            <li>
+                <label>throw stun grenade</label>
+                <verbClass>Verb_LaunchProjectileStatic</verbClass>
+                <hasStandardCommand>true</hasStandardCommand>
+                <range>15</range>
+                <forcedMissRadius>1.9</forcedMissRadius>
+                <warmupTime>1.75</warmupTime>
+                <noiseRadius>4</noiseRadius>
+                <burstShotCount>1</burstShotCount>
+                <soundCast>kotorsound_grenadethrow</soundCast>
+                <onlyManualCast>true</onlyManualCast>
+                <rangedFireRulepack>Combat_RangedFire_Thrown</rangedFireRulepack>
+                <defaultProjectile>guy762_ThrownGrenade_stormtrooper</defaultProjectile>
+                <ai_AvoidFriendlyFireRadius>6.9</ai_AvoidFriendlyFireRadius>
+				<ai_IsBuildingDestroyer>false</ai_IsBuildingDestroyer>
+				<ai_IsWeapon>true</ai_IsWeapon>
+                <targetParams>
+                    <canTargetLocations>true</canTargetLocations>
+                </targetParams>
+            </li>
+        </verbs>
+        <comps>
+            <li Class="CompProperties_ApparelReloadable">
+                <maxCharges>1</maxCharges>
+                <destroyOnEmpty>false</destroyOnEmpty>
+                <hotKey>Misc4</hotKey>
+                <chargeNoun>grenades</chargeNoun>
+                <displayGizmoWhileUndrafted>false</displayGizmoWhileUndrafted>
+				<ammoDef>ComponentIndustrial</ammoDef>
+				<ammoCountToRefill>2</ammoCountToRefill>
+				<baseReloadTicks>60</baseReloadTicks>
+            </li>
+			<li Class="CompProperties_Styleable"></li>
+        </comps>
+	  </ThingDef>
+	
+	
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	
+	
+	
+	
+	  
+	  <ThingDef ParentName="KotORArmorModdable_hard">
+		<defName>guy762_TIEpilotHelmet</defName>
+		<label>TIE pilot Helmet</label>
+		<techLevel>Spacer</techLevel>
+		<description>.</description>
+		<graphicData>
+			<texPath>Apparel/TIEPilot/helmet</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<shaderType>CutoutComplex</shaderType>
+			<colorTwo>(250,250,250)</colorTwo> <!-- white -->
+		</graphicData>
+		<thingCategories>
+		  <li>ArmorHeadgear</li>
+		</thingCategories>
+		<statBases>
+			<Mass>4</Mass>
+			<MarketValue>300</MarketValue>
+			<MaxHitPoints>115</MaxHitPoints>
+      		<ArmorRating_Sharp>0.35</ArmorRating_Sharp>
+			<ArmorRating_Blunt>0.2</ArmorRating_Blunt>
+			<ArmorRating_Heat>0.45</ArmorRating_Heat>
+			<EquipDelay>2</EquipDelay>
+		</statBases>
+		<equippedStatOffsets>
+			<ToxicEnvironmentResistance>1</ToxicEnvironmentResistance>
+			<HypoxiaResistance MayRequire="kentington.saveourship2">1</HypoxiaResistance>
+			<DecompressionResistance MayRequire="kentington.saveourship2">0.25</DecompressionResistance>
+		</equippedStatOffsets>
+		
+		<apparel Inherit="False">
+			<tags>
+				<li>RemnantEmpire_TIEpilot</li>
+			</tags>
+			<wornGraphicPath>Apparel/TIEPilot/helmet</wornGraphicPath>
+			<useWornGraphicMask>true</useWornGraphicMask>
+			<layers>
+				<li>Overhead</li>
+				<li>EyeCover</li>
+			</layers>
+			<bodyPartGroups>
+				<li>FullHead</li>
+			</bodyPartGroups>
+			<useDeflectMetalEffect>false</useDeflectMetalEffect>
+		</apparel>
+		<tradeTags>
+			<li>guy762TT_WarlordArmor</li>
+		</tradeTags>
+		<colorGenerator Class="ColorGenerator_Options" Inherit="False">
+			<options>
+				<li>
+					<weight>15</weight>
+					<only>(40,40,40)</only> <!-- darker black -->
+				</li>
+			</options>
+		</colorGenerator>
+	</ThingDef>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<ThingDef ParentName="KotORArmorModdable_hard">
+		<defName>guy762_TIEpilotHelmet_PA</defName>
+		<label>TIE pilot Helmet (Pentastar Alignment)</label>
+		<techLevel>Spacer</techLevel>
+		<description>.</description>
+		<graphicData>
+			<texPath>Apparel/TIEPilot/PentastarHelmet/helmet</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<shaderType>CutoutComplex</shaderType>
+			<colorTwo>(65,70,190)</colorTwo> <!-- pentastar blue -->
+		</graphicData>
+		<thingCategories>
+		  <li>ArmorHeadgear</li>
+		</thingCategories>
+		<statBases>
+			<Mass>4</Mass>
+			<MarketValue>300</MarketValue>
+			<MaxHitPoints>115</MaxHitPoints>
+      		<ArmorRating_Sharp>0.35</ArmorRating_Sharp>
+			<ArmorRating_Blunt>0.2</ArmorRating_Blunt>
+			<ArmorRating_Heat>0.45</ArmorRating_Heat>
+			<EquipDelay>2</EquipDelay>
+		</statBases>
+		<equippedStatOffsets>
+			<ToxicEnvironmentResistance>1</ToxicEnvironmentResistance>
+			<HypoxiaResistance MayRequire="kentington.saveourship2">1</HypoxiaResistance>
+			<DecompressionResistance MayRequire="kentington.saveourship2">0.25</DecompressionResistance>
+		</equippedStatOffsets>
+		
+		<apparel Inherit="False">
+			<tags>
+				<li>PentastarAlignment_TIEpilot</li>
+			</tags>
+			<wornGraphicPath>Apparel/TIEPilot/PentastarHelmet/helmet</wornGraphicPath>
+			<useWornGraphicMask>true</useWornGraphicMask>
+			<layers>
+				<li>Overhead</li>
+				<li>EyeCover</li>
+			</layers>
+			<bodyPartGroups>
+				<li>FullHead</li>
+			</bodyPartGroups>
+			<useDeflectMetalEffect>false</useDeflectMetalEffect>
+		</apparel>
+		<tradeTags>
+			<li>guy762TT_WarlordArmor</li>
+		</tradeTags>
+		<colorGenerator Class="ColorGenerator_Options" Inherit="False">
+			<options>
+				<li>
+					<weight>15</weight>
+					<only>(40,40,45)</only> <!-- blue-tint black -->
+				</li>
+			</options>
+		</colorGenerator>
+	</ThingDef>
+	
+	
+	
+	
+	
+	<ThingDef ParentName="guy762_FullBodyClothingBase">
+		<defName>guy762_Bodysuit_TIEpilot</defName>
+		<label>bodysuit, pilot's</label>
+		<description>These are simple garments that protect little more than the modesty of the wearer.</description>
+		<graphicData>
+		  <texPath>Apparel/ImperialCrew/Apparel</texPath>
+		  <graphicClass>Graphic_Single</graphicClass>
+		  <shaderType>CutoutComplex</shaderType>
+		</graphicData>
+		<statBases>
+			<Mass>4.5</Mass>
+			<MarketValue>1000</MarketValue>
+			<MaxHitPoints>150</MaxHitPoints>
+			<ArmorRating_Sharp>0.05</ArmorRating_Sharp>
+			<ArmorRating_Blunt>0.05</ArmorRating_Blunt>
+			<ArmorRating_Heat>0.05</ArmorRating_Heat>
+			<Insulation_Cold>25</Insulation_Cold>
+			<Insulation_Heat>10</Insulation_Heat>
+			<EquipDelay>3</EquipDelay>
+			
+			<WorkToMake>4000</WorkToMake>
+		</statBases>
+		<equippedStatOffsets>
+		  <DecompressionResistance MayRequire="kentington.saveourship2">0.75</DecompressionResistance>
+		</equippedStatOffsets>
+		
+		<costList>
+		  <Synthread>75</Synthread>
+		</costList>
+		
+		<apparel>
+		  <tags Inherit="False">
+			<li>RemnantEmpire_TIEpilot</li>
+		  </tags>
+		  <wornGraphicPath>Apparel/ImperialCrew/Apparel</wornGraphicPath>
+		  <useWornGraphicMask>true</useWornGraphicMask>
+		  <defaultOutfitTags Inherit="False">
+			<li>Worker</li>
+		  </defaultOutfitTags>
+		</apparel>
+		<tradeTags>
+			<li>guy762TT_KotORClothes</li>
+			<li>guy762TT_KotORUnderArmor</li>
+		</tradeTags>
+		<colorGenerator Class="ColorGenerator_Options" Inherit="False">
+			<options>
+				<li>
+					<weight>15</weight>
+					<only>(50,50,50)</only>
+				</li>
+			</options>
+		</colorGenerator>
+	  </ThingDef>
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<ThingDef ParentName="KotORArmorModdable_hard">
+		<defName>guy762_TIEpilotAceHelmet</defName>
+		<label>TIE pilot Helmet (ace)</label>
+		<techLevel>Spacer</techLevel>
+		<description>.</description>
+		<graphicData>
+			<texPath>Apparel/TIEPilot/AceHelmet/helmet</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<shaderType>CutoutComplex</shaderType>
+			<colorTwo>(140,0,0)</colorTwo> <!-- dark red -->
+		</graphicData>
+		<thingCategories>
+		  <li>ArmorHeadgear</li>
+		</thingCategories>
+		<statBases>
+			<Mass>4</Mass>
+			<MarketValue>1200</MarketValue>
+			<MaxHitPoints>115</MaxHitPoints>
+      		<ArmorRating_Sharp>0.35</ArmorRating_Sharp>
+			<ArmorRating_Blunt>0.2</ArmorRating_Blunt>
+			<ArmorRating_Heat>0.45</ArmorRating_Heat>
+			<EquipDelay>2</EquipDelay>
+		</statBases>
+		<equippedStatOffsets>
+			<ToxicEnvironmentResistance>1</ToxicEnvironmentResistance>
+			<HypoxiaResistance MayRequire="kentington.saveourship2">1</HypoxiaResistance>
+			<DecompressionResistance MayRequire="kentington.saveourship2">0.25</DecompressionResistance>
+			<SocialImpact>0.5</SocialImpact>
+		</equippedStatOffsets>
+		
+		<randomStyleChance>1</randomStyleChance>
+		<randomStyle>
+		  <li>
+			<styleDef>guy762_TIEAceHelmetStyle_ace</styleDef>
+		  </li>
+		  <li>
+			<styleDef>guy762_TIEAceHelmetStyle_veteran</styleDef>
+		  </li>
+		</randomStyle>
+		<comps>
+			<li Class="CompProperties_Styleable"></li>
+            <li Class="FCP.Core.CompProperties_LabelColored">
+                <rarity>Rare</rarity>
+            </li>
+        </comps>
+		
+		<apparel Inherit="False">
+			<tags>
+				<li>RemnantEmpire_TIEpilotAce</li>
+			</tags>
+			<wornGraphicPath>Apparel/TIEPilot/AceHelmet/helmet</wornGraphicPath>
+			<useWornGraphicMask>true</useWornGraphicMask>
+			<layers>
+				<li>Overhead</li>
+				<li>EyeCover</li>
+			</layers>
+			<bodyPartGroups>
+				<li>FullHead</li>
+			</bodyPartGroups>
+			<useDeflectMetalEffect>false</useDeflectMetalEffect>
+		</apparel>
+		<tradeTags>
+			<li>guy762TT_WarlordArmor</li>
+		</tradeTags>
+		<colorGenerator Class="ColorGenerator_Options" Inherit="False">
+			<options>
+				<li>
+					<weight>15</weight>
+					<only>(40,40,40)</only> <!-- darker black -->
+				</li>
+			</options>
+		</colorGenerator>
+	</ThingDef>
+	
+	
+	<ThingStyleDef>
+		<defName>guy762_TIEAceHelmetStyle_ace</defName>
+		<overrideLabel>TIE pilot Helmet (ace)</overrideLabel>
+		<wornGraphicPath>Apparel/TIEPilot/AceHelmet/helmet</wornGraphicPath>
+		<graphicData>
+		  <texPath>Apparel/TIEPilot/AceHelmet/helmet</texPath>
+		  <graphicClass>Graphic_Single</graphicClass>
+		  <shaderType>CutoutComplex</shaderType>
+		</graphicData>
+	</ThingStyleDef>
+	
+	<ThingStyleDef>
+		<defName>guy762_TIEAceHelmetStyle_veteran</defName>
+		<overrideLabel>TIE pilot Helmet (veteran)</overrideLabel>
+		<wornGraphicPath>Apparel/TIEPilot/VeteranHelmet/helmet</wornGraphicPath>
+		<graphicData>
+		  <texPath>Apparel/TIEPilot/VeteranHelmet/helmet</texPath>
+		  <graphicClass>Graphic_Single</graphicClass>
+		  <shaderType>CutoutComplex</shaderType>
+		</graphicData>
+	</ThingStyleDef>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	  
+	  
+	  
+	  
+	  
+	  
+	  <ThingDef ParentName="guy762_FullBodyClothingBase">
+		<defName>guy762_Bodysuit_TIEace</defName>
+		<label>bodysuit, ace pilot's</label>
+		<description>These are simple garments that protect little more than the modesty of the wearer.</description>
+		<graphicData>
+		  <texPath>Apparel/ImperialEngineer/Apparel</texPath>
+		  <graphicClass>Graphic_Single</graphicClass>
+		  <shaderType>CutoutComplex</shaderType>
+		  <colorTwo>(140,0,0)</colorTwo> <!-- dark red -->
+		</graphicData>
+		<statBases>
+			<Mass>4.5</Mass>
+			<MarketValue>7500</MarketValue>
+			<MaxHitPoints>150</MaxHitPoints>
+			<ArmorRating_Sharp>0.05</ArmorRating_Sharp>
+			<ArmorRating_Blunt>0.05</ArmorRating_Blunt>
+			<ArmorRating_Heat>0.05</ArmorRating_Heat>
+			<Insulation_Cold>25</Insulation_Cold>
+			<Insulation_Heat>10</Insulation_Heat>
+			<EquipDelay>3</EquipDelay>
+			
+			<WorkToMake>4000</WorkToMake>
+		</statBases>
+		<equippedStatOffsets>
+		  <DecompressionResistance MayRequire="kentington.saveourship2">0.75</DecompressionResistance>
+		  <VEF_MassCarryCapacity>5</VEF_MassCarryCapacity>
+		  <SocialImpact>0.5</SocialImpact>
+		</equippedStatOffsets>
+		
+		<costList>
+		  <Synthread>75</Synthread>
+		</costList>
+		
+		<randomStyleChance>0.5</randomStyleChance>
+		<randomStyle>
+		  <li>
+			<styleDef>guy762_TIEAceUniformStyle_yellowstripe</styleDef>
+		  </li>
+		</randomStyle>
+		<comps>
+			<li Class="CompProperties_Styleable"></li>
+		</comps>
+		
+		<apparel>
+		  <tags Inherit="False">
+			<li>RemnantEmpire_TIEpilotAce</li>
+		  </tags>
+		  <wornGraphicPath>Apparel/ImperialEngineer/Apparel</wornGraphicPath>
+		  <useWornGraphicMask>true</useWornGraphicMask>
+		  <defaultOutfitTags Inherit="False">
+			<li>Worker</li>
+		  </defaultOutfitTags>
+		</apparel>
+		<tradeTags>
+			<li>guy762TT_KotORClothes</li>
+			<li>guy762TT_KotORUnderArmor</li>
+		</tradeTags>
+		<colorGenerator Class="ColorGenerator_Options" Inherit="False">
+			<options>
+				<li>
+					<weight>15</weight>
+					<only>(75,75,75)</only>
+				</li>
+			</options>
+		</colorGenerator>
+	  </ThingDef>
+	  
+	  
+	  <ThingStyleDef>
+		<defName>guy762_TIEAceUniformStyle_yellowstripe</defName>
+		<overrideLabel>bodysuit, ace pilot's</overrideLabel>
+		<wornGraphicPath>Apparel/ImperialEngineer/Apparel</wornGraphicPath>
+		<graphicData>
+		  <texPath>Apparel/ImperialEngineer/Apparel</texPath>
+		  <graphicClass>Graphic_Single</graphicClass>
+		  <shaderType>CutoutComplex</shaderType>
+		  <colorTwo>(220,190,0)</colorTwo> <!-- mid yellow -->
+		</graphicData>
+	  </ThingStyleDef>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+</Defs>

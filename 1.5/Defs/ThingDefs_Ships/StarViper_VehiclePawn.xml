@@ -279,6 +279,8 @@
 						
 						<aimPieOffset>(0, 2.55)</aimPieOffset>
 						
+						<autoTargetingActive>True</autoTargetingActive>
+						
 						<key>StarViperKey_gun_1</key>
 					</li>
 					<li>
@@ -292,6 +294,8 @@
 						<gizmoLabel>main gun</gizmoLabel>
 						
 						<aimPieOffset>(0, 2.55)</aimPieOffset>
+						
+						<autoTargetingActive>True</autoTargetingActive>
 						
 						<key>StarViperKey_gun_2</key>
 					</li>

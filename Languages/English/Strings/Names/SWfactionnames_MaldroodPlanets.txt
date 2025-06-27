@@ -4,6 +4,7 @@ Balamak
 Belderone
 Bimmisaari
 Boonta
+Bracca
 Cejansij
 Centares
 Charros IV
@@ -14,6 +15,7 @@ Lantilles
 Metalorn
 Murkhana
 Nam Chorios
+Niamos
 Oovo IV
 Roche
 Ryvester

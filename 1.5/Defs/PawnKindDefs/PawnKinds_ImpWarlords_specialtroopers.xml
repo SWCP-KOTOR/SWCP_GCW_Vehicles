@@ -217,7 +217,7 @@
 			</li>
 			<li>
 				<apparelLayer>OnSkin</apparelLayer>
-				<color>(75,75,90)</color>
+				<color>(75,75,90)</color>    <!-- obsidian purple -->
 			</li>
 		</specificApparelRequirements>
 

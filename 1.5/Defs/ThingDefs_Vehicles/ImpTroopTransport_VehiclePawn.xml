@@ -36,10 +36,10 @@
 			<!--ArmorRating_Sharp>+0.05</ArmorRating_Sharp>
 			<ArmorRating_Blunt>-0.1</ArmorRating_Blunt>        BASE CURVE FOR HARD ARMOR
 			<ArmorRating_Heat>+0.15</ArmorRating_Heat-->
-			<ArmorRating_Sharp>0.55</ArmorRating_Sharp>
-			<ArmorRating_Blunt>0.4</ArmorRating_Blunt> <!-- # of estimated XWMG hull points * 0.1, apply to hard armor curve -->
-			<ArmorRating_Heat>0.65</ArmorRating_Heat>
-			<MaxHitPoints>5000</MaxHitPoints> <!-- # of estimated XWMG hull points * 1000 -->
+			<ArmorRating_Sharp>0.45</ArmorRating_Sharp>
+			<ArmorRating_Blunt>0.3</ArmorRating_Blunt> <!-- # of estimated XWMG hull points * 0.1, apply to hard armor curve -->
+			<ArmorRating_Heat>0.55</ArmorRating_Heat>
+			<MaxHitPoints>400</MaxHitPoints> <!-- # of estimated XWMG hull points * 100 -->
 			
 			<Flammability>0.5</Flammability>
 			<MarketValue>5800</MarketValue>
@@ -49,22 +49,22 @@
 			<li>
 				<start>IgnitionOn</start>
 				<stop>MoveStart</stop>
-				<value>kotorsound_speederbike_idle</value>
+				<value>kotorsound_hovercar_idle</value>
 			</li>
 			<li>
 				<start>MoveStart</start>
 				<stop>MoveStop</stop>
-				<value>kotorsound_hovertankheavy_moving</value>
+				<value>kotorsound_hovercar_moving</value>
 			</li>
 			<li>
 				<start>MoveStop</start>
 				<stop>MoveStart</stop>
-				<value>kotorsound_speederbike_idle</value>
+				<value>kotorsound_hovercar_idle</value>
 			</li>
 			<li>
 				<start>MoveStop</start>
 				<stop>IgnitionOff</stop>
-				<value>kotorsound_speederbike_idle</value>
+				<value>kotorsound_hovercar_idle</value>
 			</li>
 		</soundSustainersOnEvent>
 		
@@ -108,11 +108,19 @@
 		
 		<properties>
 			<diagonalRotation>false</diagonalRotation>
-			
-			<worldSpeedMultiplier>0.7</worldSpeedMultiplier>
-			<!-- <winterSpeedMultiplier>1</winterSpeedMultiplier> -->
 			<manhunterTargetsVehicle>true</manhunterTargetsVehicle>
-			<offRoadMultiplier>2</offRoadMultiplier>
+			
+			<worldSpeedMultiplier>0.7</worldSpeedMultiplier> <!-- higher number = faster travel -->
+			<winterSpeedMultiplier>1</winterSpeedMultiplier> <!-- lower number = faster winter travel -->
+			<offRoadMultiplier>1</offRoadMultiplier> <!-- lower number = faster travel -->
+			
+			<customRoadCosts AssignDefaults = "0.5" /> <!-- vanilla default is 0.5, lower number = faster -->
+			<!-- <customTerrainCosts AllowTerrainWithTag="Water" PathCost="1"/> -->
+			<track Class = "Vehicles.VehicleTrack_Wake">
+				<speed>1</speed>
+			</track>
+			
+			<riverCost>2</riverCost> <!-- higher = slower, <1 = very fast on world map -->
 			
 			<vehicleJobLimitations>
 				<li>(RepairVehicle, 4)</li> <!-- how many pawns can repair this vehicle at a time -->
@@ -143,8 +151,8 @@
 					</handlingTypes>
 					
 					<turretIds>
+						<li>ImpTroopTransportKey_gun_1</li>
 						<li>ImpTroopTransportKey_gun_2</li>
-						<li>ImpTroopTransportKey_gun_3</li>
 					</turretIds>
 				</li>
 				<li>
@@ -156,7 +164,7 @@
 					<handlingTypes>Turret</handlingTypes>
 					
 					<turretIds>
-						<li>ImpTroopTransportKey_gun_1</li>
+						<li>ImpTroopTransportKey_gun_3</li>
 					</turretIds>
 				</li>
 				<li>
@@ -379,7 +387,7 @@
 			<li>
 				<key>ImpTroopTransportKey_engine</key>
 				<label>Engine</label>
-				<health>25</health>
+				<health>5</health>
 				<priorityStatEfficiency>true</priorityStatEfficiency>
 				<depth>Internal</depth>
 				
@@ -389,7 +397,7 @@
 						<chance>0.25</chance>
 						<maxHealth>0.2</maxHealth>
 						<radius>3</radius>
-						<damageDef>Flame</damageDef>
+						<damageDef>guy762_ExplosiveDamage_energy</damageDef>
 					</li>
 				</reactors>
 				
@@ -400,7 +408,7 @@
 			<li>
 				<key>ImpTroopTransportKey_repulsor</key>
 				<label>Repulsorlift Generator</label>
-				<health>75</health>
+				<health>5</health>
 				<depth>Internal</depth>
 				
 				<categories>
@@ -410,7 +418,7 @@
 			<li>
 				<key>ImpTroopTransportKey_thrust</key>
 				<label>Thrust Repulsor</label>
-				<health>50</health>
+				<health>5</health>
 				<depth>Internal</depth>
 				
 				<tags>
@@ -447,24 +455,6 @@
 			<li Class="Vehicles.CompProperties_VehicleTurrets">
 				<turrets>
 					<li>
-						<turretDef>guy762_VehicleTurret_ImpTroopTransport_dorsal</turretDef>
-						
-						<renderProperties>
-							<north>(0, -0.1)</north>
-							<south>(0, 1.95)</south>
-							<east>(-1.275,0.675)</east>
-							<west>(1.275,0.675)</west>
-						</renderProperties>
-						<defaultAngleRotated>0</defaultAngleRotated>
-						<!-- <angleRestricted>(315,45)</angleRestricted> -->
-						<gizmoLabel>dorsal AV/AA turret</gizmoLabel>
-						
-						<drawLayer>15</drawLayer>
-						<aimPieOffset>(0, 2.55)</aimPieOffset>
-						
-						<key>ImpTroopTransportKey_gun_1</key>
-					</li>
-					<li>
 						<turretDef>guy762_VehicleTurret_ImpTroopTransport_main</turretDef>
 						
 						<renderProperties>
@@ -479,7 +469,7 @@
 						
 						<aimPieOffset>(0, 2.55)</aimPieOffset>
 						
-						<key>ImpTroopTransportKey_gun_2</key>
+						<key>ImpTroopTransportKey_gun_1</key>
 					</li>
 					<li>
 						<turretDef>guy762_VehicleTurret_ImpTroopTransport_main</turretDef>
@@ -494,6 +484,26 @@
 						<angleRestricted>(315,45)</angleRestricted>
 						<gizmoLabel>light AI gun</gizmoLabel>
 						
+						<aimPieOffset>(0, 2.55)</aimPieOffset>
+						
+						<key>ImpTroopTransportKey_gun_2</key>
+					</li>
+					<li>
+						<turretDef>guy762_VehicleTurret_ImpTroopTransport_dorsal</turretDef>
+						
+						<renderProperties>
+							<north>(0, -0.1)</north>
+							<south>(0, 1.95)</south>
+							<east>(-1.275,0.675)</east>
+							<west>(1.275,0.675)</west>
+						</renderProperties>
+						<defaultAngleRotated>0</defaultAngleRotated>
+						<!-- <angleRestricted>(315,45)</angleRestricted> -->
+						<gizmoLabel>dorsal AV/AA turret</gizmoLabel>
+						
+						<autoTargetingActive>True</autoTargetingActive>
+						
+						<drawLayer>15</drawLayer>
 						<aimPieOffset>(0, 2.55)</aimPieOffset>
 						
 						<key>ImpTroopTransportKey_gun_3</key>

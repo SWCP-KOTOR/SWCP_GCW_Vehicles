@@ -43,7 +43,7 @@
 				<defaultProjectile>SWProj_ScatterBlasterBolt</defaultProjectile>
 				<warmupTime>2</warmupTime>
 				<defaultCooldownTime>3</defaultCooldownTime>
-				<range>23</range>
+				<range>25</range>
 				<accuracyTouch>0.35</accuracyTouch>
 				<accuracyShort>0.45</accuracyShort>
 				<accuracyMedium>0.45</accuracyMedium>
@@ -66,7 +66,7 @@
 				<defaultProjectile>KotORBlasterBolt_default</defaultProjectile>
 				<warmupTime>4</warmupTime>
 				<defaultCooldownTime>5</defaultCooldownTime>
-				<range>28</range>
+				<range>30</range>
 				<accuracyTouch>0.45</accuracyTouch>
 				<accuracyShort>0.55</accuracyShort>
 				<accuracyMedium>0.55</accuracyMedium>

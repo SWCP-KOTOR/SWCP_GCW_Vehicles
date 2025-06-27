@@ -17,7 +17,7 @@
 		<graphicData>
 			<texPath>LandVehicles/AAC1/AAC1</texPath>
 			<graphicClass>Vehicles.Graphic_Vehicle</graphicClass>
-			<drawSize>(6,6)</drawSize>
+			<drawSize>(7,7)</drawSize>
 			<shaderType>CutoutComplexPattern</shaderType>
 			<pattern>guy762_SWVehiclePattern_AAC1Tank</pattern>
 			<color>(185,180,175)</color> <!-- warm grey -->
@@ -26,10 +26,10 @@
 		
 		<fillPercent>1</fillPercent>
 		
-		<nameable>false</nameable>
+		<nameable>true</nameable>
 		<buildDef>guy762_SWVehicleBP_AAC1Tank</buildDef>
 		
-		<size>(3,5)</size>
+		<size>(4,6)</size>
 		<uiIconScale>1</uiIconScale>
 		
 		<vehicleMovementPermissions>DriverNeeded</vehicleMovementPermissions>
@@ -38,9 +38,11 @@
 		<vehicleType>Land</vehicleType>
 				
 		<statBases> <!-- blanket applies to all parts without specified armor ratings -->
-			<ArmorRating_Sharp>0.45</ArmorRating_Sharp>
-			<ArmorRating_Blunt>0.3</ArmorRating_Blunt> <!-- # of estimated XWMG hull points * 0.1, apply to hard armor curve -->
-			<ArmorRating_Heat>0.55</ArmorRating_Heat>
+			<ArmorRating_Sharp>0.35</ArmorRating_Sharp>
+			<ArmorRating_Blunt>0.2</ArmorRating_Blunt> <!-- # of estimated XWMG hull points * 0.1, apply to hard armor curve -->
+			<ArmorRating_Heat>0.45</ArmorRating_Heat>
+			<MaxHitPoints>300</MaxHitPoints> <!-- # of estimated XWMG hull points * 100 -->
+			
 			<Flammability>0.5</Flammability>
 			<MarketValue>5800</MarketValue>
 		</statBases>
@@ -49,7 +51,7 @@
 			<li>
 				<start>IgnitionOn</start>
 				<stop>MoveStart</stop>
-				<value>kotorsound_speederbike_idle</value>
+				<value>kotorsound_hovercar_idle</value>
 			</li>
 			<li>
 				<start>MoveStart</start>
@@ -59,12 +61,12 @@
 			<li>
 				<start>MoveStop</start>
 				<stop>MoveStart</stop>
-				<value>kotorsound_speederbike_idle</value>
+				<value>kotorsound_hovercar_idle</value>
 			</li>
 			<li>
 				<start>MoveStop</start>
 				<stop>IgnitionOff</stop>
-				<value>kotorsound_speederbike_idle</value>
+				<value>kotorsound_hovercar_idle</value>
 			</li>
 		</soundSustainersOnEvent>
 		
@@ -93,10 +95,19 @@
 		
 		<properties>
 			<diagonalRotation>false</diagonalRotation>
+			<manhunterTargetsVehicle>false</manhunterTargetsVehicle>
 			
-			<worldSpeedMultiplier>0.5</worldSpeedMultiplier>
-			<!-- <winterSpeedMultiplier>1</winterSpeedMultiplier> -->
-			<offRoadMultiplier>1.5</offRoadMultiplier> <!-- 1 for walkers and speeder bikes, 1.5 for light vehicles, 2 for heavy vehicles -->
+			<worldSpeedMultiplier>0.5</worldSpeedMultiplier> <!-- higher number = faster travel -->
+			<winterSpeedMultiplier>1</winterSpeedMultiplier> <!-- lower number = faster winter travel -->
+			<offRoadMultiplier>1</offRoadMultiplier> <!-- lower number = faster travel -->
+			
+			<customRoadCosts AssignDefaults = "0.5" /> <!-- vanilla default is 0.5, lower number = faster -->
+			<!-- <customTerrainCosts AllowTerrainWithTag="Water" PathCost="1"/> -->
+			<track Class = "Vehicles.VehicleTrack_Wake">
+				<speed>1</speed>
+			</track>
+			
+			<riverCost>2</riverCost> <!-- higher = slower, <1 = very fast on world map -->
 			
 			<!-- <customHillinessCosts> -->
 				<!-- <SmallHills>0.25</SmallHills> -->
@@ -127,8 +138,8 @@
 					</handlingTypes>
 					
 					<turretIds>
+						<li>AAC1Key_gun_1</li>
 						<li>AAC1Key_gun_2</li>
-						<li>AAC1Key_gun_3</li>
 					</turretIds>
 				</li>
 				<li>
@@ -140,7 +151,7 @@
 					<handlingTypes>Turret</handlingTypes>
 					
 					<turretIds>
-						<li>AAC1Key_gun_1</li>
+						<li>AAC1Key_gun_3</li>
 					</turretIds>
 				</li>
 			</roles>
@@ -175,7 +186,7 @@
 			<li>
 				<key>AAC1Key_engine</key>
 				<label>Engine</label>
-				<health>25</health>
+				<health>5</health>
 				<priorityStatEfficiency>true</priorityStatEfficiency>
 				<depth>Internal</depth>
 				
@@ -185,7 +196,7 @@
 						<chance>0.25</chance>
 						<maxHealth>0.2</maxHealth>
 						<radius>3</radius>
-						<damageDef>Flame</damageDef>
+						<damageDef>guy762_ExplosiveDamage_energy</damageDef>
 					</li>
 				</reactors>
 				
@@ -196,7 +207,7 @@
 			<li>
 				<key>AAC1Key_repulsor</key>
 				<label>Repulsorlift Generator</label>
-				<health>75</health>
+				<health>5</health>
 				<depth>Internal</depth>
 				
 				<categories>
@@ -206,7 +217,7 @@
 			<li>
 				<key>AAC1Key_thrust</key>
 				<label>Thrust Repulsor</label>
-				<health>50</health>
+				<health>5</health>
 				<depth>Internal</depth>
 				
 				<tags>
@@ -243,20 +254,21 @@
 			<li Class="Vehicles.CompProperties_VehicleTurrets">
 				<turrets>
 					<li>
-						<turretDef>guy762_VehicleTurret_AAC1_missilepod</turretDef>
+						<turretDef>guy762_VehicleTurret_AAC1_main</turretDef>
 						
 						<renderProperties>
-							<north>(0, -1.25)</north>
-							<south>(0, 1.5)</south>
-							<east>(-1.5, 0.5)</east>
-							<west>(1.5, 0.5)</west>
+							<north>(-0.95, 2.75)</north>
+							<south>(0.95, -2.25)</south>
+							<east>(2.9, 1.2)</east>
+							<west>(-2.9, -0.2)</west>
 						</renderProperties>
 						<defaultAngleRotated>0</defaultAngleRotated>
-						<!-- <angleRestricted>(315,45)</angleRestricted> -->
-						<gizmoLabel>dorsal missile pods</gizmoLabel>
+						<angleRestricted>(315,45)</angleRestricted>
+						<gizmoLabel>light AV gun</gizmoLabel>
 						
-						<drawLayer>15</drawLayer>
 						<aimPieOffset>(0, 2.55)</aimPieOffset>
+						
+						<autoTargetingActive>True</autoTargetingActive>
 						
 						<key>AAC1Key_gun_1</key>
 					</li>
@@ -264,10 +276,10 @@
 						<turretDef>guy762_VehicleTurret_AAC1_main</turretDef>
 						
 						<renderProperties>
-							<north>(-0.825, 2.2)</north>
-							<south>(0.825, -1.85)</south>
-							<east>(2.4, 1)</east>
-							<west>(-2.4, -0.2)</west>
+							<north>(0.95, 2.75)</north>
+							<south>(-0.95, -2.25)</south>
+							<east>(2.9, -0.2)</east>
+							<west>(-2.9, 1.2)</west>
 						</renderProperties>
 						<defaultAngleRotated>0</defaultAngleRotated>
 						<angleRestricted>(315,45)</angleRestricted>
@@ -275,21 +287,24 @@
 						
 						<aimPieOffset>(0, 2.55)</aimPieOffset>
 						
+						<autoTargetingActive>True</autoTargetingActive>
+						
 						<key>AAC1Key_gun_2</key>
 					</li>
 					<li>
-						<turretDef>guy762_VehicleTurret_AAC1_main</turretDef>
+						<turretDef>guy762_VehicleTurret_AAC1_missilepod</turretDef>
 						
 						<renderProperties>
-							<north>(0.825, 2.2)</north>
-							<south>(-0.825, -1.85)</south>
-							<east>(2.4, -0.2)</east>
-							<west>(-2.4, 1)</west>
+							<north>(0, -1.425)</north>
+							<south>(0, 1.9)</south>
+							<east>(-1.75, 0.5)</east>
+							<west>(1.75, 0.5)</west>
 						</renderProperties>
 						<defaultAngleRotated>0</defaultAngleRotated>
-						<angleRestricted>(315,45)</angleRestricted>
-						<gizmoLabel>light AV gun</gizmoLabel>
+						<!-- <angleRestricted>(315,45)</angleRestricted> -->
+						<gizmoLabel>dorsal missile pods</gizmoLabel>
 						
+						<drawLayer>15</drawLayer>
 						<aimPieOffset>(0, 2.55)</aimPieOffset>
 						
 						<key>AAC1Key_gun_3</key>
@@ -367,7 +382,8 @@
 			<texPath>LandVehicles/AAC1/AAC1_gun</texPath>
 			<graphicClass>Vehicles.Graphic_Turret</graphicClass>
 			<shaderType>CutoutComplex</shaderType>
-			<drawSize>(4,4)</drawSize>
+			<drawSize>(4.5,4.5)</drawSize>
+			<!-- <drawSize>(5,5)</drawSize> -->
 			<color>(185,180,175)</color> <!-- warm grey -->
 			<colorTwo>(140,60,60)</colorTwo>
 		</graphicData>

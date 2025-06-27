@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>	
+	
+	<PawnKindDef Name="SWWEPlayableVillain_CountessRyad"  ParentName="guy762_HeroPawnKindBase">
+		<defName>SWWEPlayableVillain_CountessRyad</defName>
+		<nameMaker>guy762_HeroNamer_CountessRyad</nameMaker>
+		<label>Countess</label>
+		<combatPower>500</combatPower>
+		<minGenerationAge>32</minGenerationAge>
+		<maxGenerationAge>33</maxGenerationAge>
+		<fixedGender>Female</fixedGender>
+		<forcedHair>Victoria</forcedHair>
+		<forcedHairColor>(237, 202, 156)</forcedHairColor>
+		<skinColorOverride>(255,239,201)</skinColorOverride>
+		<xenotypeSet>
+			<xenotypeChances>
+				<Baseliner>999</Baseliner>
+			</xenotypeChances>
+		</xenotypeSet>
+		<useFactionXenotypes>false</useFactionXenotypes>
+		<itemQuality>Legendary</itemQuality>
+		<apparelMoney>49999</apparelMoney>
+		<apparelTags>
+		  <li>KotOREquipment_officer</li>
+		</apparelTags>
+		<apparelRequired>
+		   <li>guy762_JKenergyshield</li>
+		   <li>Apparel_Cape</li>
+		   <li>guy762_TIEpilotAceHelmet</li>
+		   <li>guy762_TIEpilotArmor</li>
+		   <li>guy762_Bodysuit_TIEace</li>
+		</apparelRequired>
+		<specificApparelRequirements>
+			<li>
+				<apparelLayer>Overhead</apparelLayer>
+				<apparelDef>guy762_TIEpilotAceHelmet</apparelDef>
+				<styleDef>guy762_TIEAceHelmetStyle_ace</styleDef>
+				<!-- <styleDef>guy762_TIEAceHelmetStyle_ryad</styleDef> -->
+			</li>
+			<li>
+				<apparelLayer>Shell</apparelLayer>
+				<apparelDef>Apparel_Cape</apparelDef>
+				<quality>Legendary</quality>
+				<stuff>DevilstrandCloth</stuff>
+			</li>
+			<li>
+				<apparelLayer>OnSkin</apparelLayer>
+				<apparelDef>guy762_Bodysuit_TIEace</apparelDef>
+				<quality>Legendary</quality>
+			</li>
+		</specificApparelRequirements>
+		<weaponMoney>99999999</weaponMoney>
+		<weaponTags>
+		  <li>SWRanged_RK3pistol</li>
+		</weaponTags>
+		<skills>
+			<li>
+				<skill>Shooting</skill>
+				<range>8~10</range>
+			</li>
+			<li>
+				<skill>Social</skill>
+				<range>14~16</range>
+			</li>
+			<li>
+				<skill>Intellectual</skill>
+				<range>14~16</range>
+			</li>
+		</skills>
+		<forcedTraits>
+			<Greedy>0</Greedy>
+			<Bloodlust>0</Bloodlust>
+		</forcedTraits>
+		
+		<backstoryFiltersOverride>
+		  <li>
+			<categories>
+			  <li>guy762BSC_countessryad</li>
+			</categories>
+		  </li>
+		</backstoryFiltersOverride>
+		
+		<abilities>
+			<li>guy762_Ability_CommandTierV</li>
+			<li MayRequire="Ludeon.RimWorld.Ideology">LeaderSpeech</li>
+			<!-- ACE TIER 3 -->
+		</abilities>
+		
+		<modExtensions>
+			<li Class="BodyTypeForPawnKind.ModExtension_HeadTypesOfPawnKind">
+			  <whitelist>
+				<li>Female_NarrowNormal</li>
+			  </whitelist>
+			  <blacklist>
+				<!--leave blank to disable-->
+			  </blacklist>
+			  <priority>
+				<li>Female_NarrowNormal</li>
+			  </priority>
+			  <checkGender>False</checkGender>
+			</li>
+			<li Class="BodyTypeForPawnKind.ModExtension_ForcedStyleItem">
+			  <forcedBeard>NoBeard</forcedBeard>
+			</li>
+			<li Class="AddGeneForPK.PKAdditionalGenes">
+			  <geneSets>
+				<li>
+				  <isXenogene>false</isXenogene>
+				  <chance>1</chance>
+				  <geneDefs>
+					<li>Hair_Blonde</li>
+					<li>Skin_Melanin3</li>
+				  </geneDefs>
+				</li>
+			  </geneSets>
+			</li>
+			
+			<!-- <li MayRequire="telefonmast.itempainter" Class="RWPaintingTool.AvailablePalettes_ModExtension"> -->
+                <!-- <pawnIdAsSeed>true</pawnIdAsSeed> true means all apparel pawn will have the same color set from "palettes", false means random for each apparel (optional, by default true) -->
+                <!-- <palettes> -->
+                    <!-- <li>(40,40,40), (220,190,0) (175,175,175)</li> -->
+                    <!-- <li>(75,75,75), (220,190,0) (255,255,255)</li> -->
+                <!-- </palettes> -->
+            <!-- </li> -->
+		</modExtensions>
+	  </PawnKindDef>
+	  
+	  <RulePackDef>
+        <defName>guy762_HeroNamer_CountessRyad</defName>
+        <rulePack>
+            <rulesStrings>
+                <li>r_name->[iran] '[countess]' [ryad]</li>
+				<li>iran->Iran</li>
+				<li>countess->Countess Ryad</li>
+				<li>ryad->Ryad</li>
+            </rulesStrings>
+        </rulePack>
+    </RulePackDef>
+	
+		<!--[PAWN_nameDef] [PAWN_possessive] [PAWN_pronoun]-->
+	
+	
+	<BackstoryDef>
+		<defName>guy762_BackstoryC_CountessRyad</defName>
+		<title>Alsakani Noble</title>
+		<titleShort>Noble</titleShort>
+		<description>.</description>
+		<slot>Childhood</slot>
+		<skillGains>
+			<Social>10</Social>
+			<Intellectual>5</Intellectual>
+		</skillGains>
+		<forcedTraits>
+		  <Greedy>0</Greedy>
+		</forcedTraits>
+		<requiredWorkTags>
+		  <li>Social</li>
+		</requiredWorkTags>
+		<workDisables>ManualDumb, PlantWork, Cooking, Mining, Caring</workDisables>
+		<bodyTypeMale>Male</bodyTypeMale>
+		<bodyTypeFemale>Female</bodyTypeFemale>
+		<nameMaker>guy762_HeroNamer_CountessRyad</nameMaker>
+		<spawnCategories>
+			<li>guy762BSC_countessryad</li>
+		</spawnCategories>
+		<!--shuffleable>False</shuffleable-->
+	</BackstoryDef>
+	
+	<BackstoryDef>
+		<defName>guy762_BackstoryA_CountessRyad</defName>
+		<title>Red Star Commander</title>
+		<titleShort>Commander</titleShort>
+		<description>.</description>
+		<slot>Adulthood</slot>
+		<skillGains>
+			<Shooting>10</Shooting>
+			<Social>5</Social>
+			<Intellectual>10</Intellectual>
+		</skillGains>
+		<forcedTraits>
+			<Bloodlust>0</Bloodlust>
+		</forcedTraits>
+		<requiredWorkTags>
+		  <li>Violent</li>
+		  <li>Intellectual</li>
+		</requiredWorkTags>
+		<bodyTypeMale>Male</bodyTypeMale>
+		<bodyTypeFemale>Female</bodyTypeFemale>
+		<nameMaker>guy762_HeroNamer_CountessRyad</nameMaker>
+		<spawnCategories>
+			<li>guy762BSC_countessryad</li>
+		</spawnCategories>
+		<!--shuffleable>False</shuffleable-->
+	</BackstoryDef>
+	
+	
+
+</Defs>

@@ -51,7 +51,7 @@
 				<defaultProjectile>KotORBlasterBolt_mstheavy</defaultProjectile>
 				<warmupTime>5</warmupTime>
 				<defaultCooldownTime>7.5</defaultCooldownTime>
-				<range>36</range>
+				<range>40</range>
 				<ticksBetweenBurstShots>18</ticksBetweenBurstShots>
 				<burstShotCount>1</burstShotCount>
 				<!--soundAiming>kotorsound_powercharge</soundAiming-->
@@ -70,7 +70,7 @@
 				<defaultProjectile>KotORBlasterBolt_default</defaultProjectile>
 				<warmupTime>4</warmupTime>
 				<defaultCooldownTime>4</defaultCooldownTime>
-				<range>28</range>
+				<range>30</range>
 				<ticksBetweenBurstShots>8</ticksBetweenBurstShots>
 				<burstShotCount>12</burstShotCount>
 				<forcedMissRadius>2</forcedMissRadius>
@@ -174,7 +174,7 @@
 				<defaultProjectile>KotORBlasterBolt_heavy</defaultProjectile>
 				<warmupTime>5.5</warmupTime>
 				<defaultCooldownTime>6</defaultCooldownTime>
-				<range>28</range>
+				<range>30</range>
 				<ticksBetweenBurstShots>40</ticksBetweenBurstShots>
 				<burstShotCount>3</burstShotCount>
 				<!--soundAiming>kotorsound_powercharge</soundAiming-->

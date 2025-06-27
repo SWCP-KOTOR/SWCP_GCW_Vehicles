@@ -264,7 +264,7 @@
 			<li Class="Vehicles.CompProperties_VehicleTurrets">
 				<turrets>
 					<li>
-						<turretDef>guy762_VehicleTurret_TIEInterceptor_main</turretDef>
+						<turretDef>guy762_VehicleTurret_TIEAvenger_main</turretDef>
 						
 						<renderProperties>
 							<north>(-2.6, 5.5)</north>
@@ -274,11 +274,13 @@
 						<gizmoLabel>main gun</gizmoLabel>
 						
 						<aimPieOffset>(0, 2.55)</aimPieOffset>
+						
+						<autoTargetingActive>True</autoTargetingActive>
 						
 						<key>TIEAvgKey_gun_1</key>
 					</li>
 					<li>
-						<turretDef>guy762_VehicleTurret_TIEInterceptor_two</turretDef>
+						<turretDef>guy762_VehicleTurret_TIEAvenger_two</turretDef>
 						
 						<renderProperties>
 							<north>(2.6, 5.5)</north>
@@ -289,10 +291,12 @@
 						
 						<aimPieOffset>(0, 2.55)</aimPieOffset>
 						
+						<autoTargetingActive>True</autoTargetingActive>
+						
 						<key>TIEAvgKey_gun_2</key>
 					</li>
 					<li>
-						<turretDef>guy762_VehicleTurret_TIEInterceptor_three</turretDef>
+						<turretDef>guy762_VehicleTurret_TIEAvenger_three</turretDef>
 						
 						<renderProperties>
 							<north>(-2.6, 5.5)</north>
@@ -303,10 +307,12 @@
 						
 						<aimPieOffset>(0, 2.55)</aimPieOffset>
 						
+						<autoTargetingActive>True</autoTargetingActive>
+						
 						<key>TIEAvgKey_gun_3</key>
 					</li>
 					<li>
-						<turretDef>guy762_VehicleTurret_TIEInterceptor_four</turretDef>
+						<turretDef>guy762_VehicleTurret_TIEAvenger_four</turretDef>
 						
 						<renderProperties>
 							<north>(2.6, 5.5)</north>
@@ -316,6 +322,8 @@
 						<gizmoLabel>main gun</gizmoLabel>
 						
 						<aimPieOffset>(0, 2.55)</aimPieOffset>
+						
+						<autoTargetingActive>True</autoTargetingActive>
 						
 						<key>TIEAvgKey_gun_4</key>
 					</li>
@@ -683,7 +691,7 @@
 			<li Class="Vehicles.CompProperties_VehicleTurrets">
 				<turrets>
 					<li>
-						<turretDef>guy762_VehicleTurret_TIEInterceptor_main</turretDef>
+						<turretDef>guy762_VehicleTurret_TIEInterceptor_main</turretDef> <!-- PROTOTYPE KEEPS THE INTERCEPTOR GUNS -->
 						
 						<renderProperties>
 							<north>(-2.6, 5.5)</north>
@@ -693,11 +701,13 @@
 						<gizmoLabel>main gun</gizmoLabel>
 						
 						<aimPieOffset>(0, 2.55)</aimPieOffset>
+						
+						<autoTargetingActive>True</autoTargetingActive>
 						
 						<key>TIEAvgKey_gun_1</key>
 					</li>
 					<li>
-						<turretDef>guy762_VehicleTurret_TIEInterceptor_two</turretDef>
+						<turretDef>guy762_VehicleTurret_TIEInterceptor_two</turretDef> <!-- PROTOTYPE KEEPS THE INTERCEPTOR GUNS -->
 						
 						<renderProperties>
 							<north>(2.6, 5.5)</north>
@@ -708,10 +718,12 @@
 						
 						<aimPieOffset>(0, 2.55)</aimPieOffset>
 						
+						<autoTargetingActive>True</autoTargetingActive>
+						
 						<key>TIEAvgKey_gun_2</key>
 					</li>
 					<li>
-						<turretDef>guy762_VehicleTurret_TIEInterceptor_three</turretDef>
+						<turretDef>guy762_VehicleTurret_TIEInterceptor_three</turretDef> <!-- PROTOTYPE KEEPS THE INTERCEPTOR GUNS -->
 						
 						<renderProperties>
 							<north>(-2.6, 5.5)</north>
@@ -722,10 +734,12 @@
 						
 						<aimPieOffset>(0, 2.55)</aimPieOffset>
 						
+						<autoTargetingActive>True</autoTargetingActive>
+						
 						<key>TIEAvgKey_gun_3</key>
 					</li>
 					<li>
-						<turretDef>guy762_VehicleTurret_TIEInterceptor_four</turretDef>
+						<turretDef>guy762_VehicleTurret_TIEInterceptor_four</turretDef> <!-- PROTOTYPE KEEPS THE INTERCEPTOR GUNS -->
 						
 						<renderProperties>
 							<north>(2.6, 5.5)</north>
@@ -735,6 +749,8 @@
 						<gizmoLabel>main gun</gizmoLabel>
 						
 						<aimPieOffset>(0, 2.55)</aimPieOffset>
+						
+						<autoTargetingActive>True</autoTargetingActive>
 						
 						<key>TIEAvgKey_gun_4</key>
 					</li>
@@ -783,6 +799,8 @@
 						<gizmoLabel>port ion cannon</gizmoLabel>
 						
 						<aimPieOffset>(0, 2.55)</aimPieOffset>
+						
+						<autoTargetingActive>True</autoTargetingActive>
 						
 						<key>TIEAvgKey_gun_7</key>
 					</li>
@@ -1078,7 +1096,7 @@
 			<li Class="Vehicles.CompProperties_VehicleTurrets">
 				<turrets>
 					<li>
-						<turretDef>guy762_VehicleTurret_TIEInterceptor_main</turretDef>
+						<turretDef>guy762_VehicleTurret_TIEAvenger_main</turretDef>
 						
 						<renderProperties>
 							<north>(-2.6, 5.5)</north>
@@ -1088,11 +1106,13 @@
 						<gizmoLabel>main gun</gizmoLabel>
 						
 						<aimPieOffset>(0, 2.55)</aimPieOffset>
+						
+						<autoTargetingActive>True</autoTargetingActive>
 						
 						<key>TIEAvgKey_gun_1</key>
 					</li>
 					<li>
-						<turretDef>guy762_VehicleTurret_TIEInterceptor_two</turretDef>
+						<turretDef>guy762_VehicleTurret_TIEAvenger_two</turretDef>
 						
 						<renderProperties>
 							<north>(2.6, 5.5)</north>
@@ -1103,10 +1123,12 @@
 						
 						<aimPieOffset>(0, 2.55)</aimPieOffset>
 						
+						<autoTargetingActive>True</autoTargetingActive>
+						
 						<key>TIEAvgKey_gun_2</key>
 					</li>
 					<li>
-						<turretDef>guy762_VehicleTurret_TIEInterceptor_three</turretDef>
+						<turretDef>guy762_VehicleTurret_TIEAvenger_three</turretDef>
 						
 						<renderProperties>
 							<north>(-2.6, 5.5)</north>
@@ -1117,10 +1139,12 @@
 						
 						<aimPieOffset>(0, 2.55)</aimPieOffset>
 						
+						<autoTargetingActive>True</autoTargetingActive>
+						
 						<key>TIEAvgKey_gun_3</key>
 					</li>
 					<li>
-						<turretDef>guy762_VehicleTurret_TIEInterceptor_four</turretDef>
+						<turretDef>guy762_VehicleTurret_TIEAvenger_four</turretDef>
 						
 						<renderProperties>
 							<north>(2.6, 5.5)</north>
@@ -1130,6 +1154,8 @@
 						<gizmoLabel>main gun</gizmoLabel>
 						
 						<aimPieOffset>(0, 2.55)</aimPieOffset>
+						
+						<autoTargetingActive>True</autoTargetingActive>
 						
 						<key>TIEAvgKey_gun_4</key>
 					</li>
@@ -1177,6 +1203,74 @@
 	
 	
 	
+	
+	
+	
+	
+	<Vehicles.VehicleTurretDef Name="guy762_VehicleTurret_TIEAvenger_main" ParentName="VehicleTurretBase">
+		<defName>guy762_VehicleTurret_TIEAvenger_main</defName>
+		<label>TIE/ad main gun</label>
+		<description>The main gun of a TIE Avenger.</description>
+		
+		<turretType>Rotatable</turretType>
+		<shotSound>kotorsound_TIEgun_short</shotSound>
+		
+		<projectile>SWVehicleBullet_SFgreen</projectile>
+		<reloadTimer>3.5</reloadTimer>
+		<warmUpTimer>0</warmUpTimer>
+		
+		<magazineCapacity>999</magazineCapacity>
+		
+		<hitFlags>IntendedTarget</hitFlags>
+		
+		<autoSnapTargeting>true</autoSnapTargeting>
+		<rotationSpeed>5</rotationSpeed>
+		
+		<projectileOffset>2.1</projectileOffset> <!-- keep this on starfighters-->
+		
+		<minRange>5</minRange>
+		<maxRange>90</maxRange>
+
+		<fireModes>
+			<li>
+				<shotsPerBurst>3</shotsPerBurst>
+				<ticksBetweenShots>20</ticksBetweenShots>
+				<ticksBetweenBursts>60</ticksBetweenBursts>
+				<label>Burst</label>
+				<texPath>UI/Rapid_Shot</texPath>
+			</li>
+		</fireModes>
+
+		<graphicData>
+			<texPath>NullTex</texPath>
+			<graphicClass>Vehicles.Graphic_Turret</graphicClass>
+		</graphicData>
+		
+		<gizmoIconTexPath>Items/cannon_blank</gizmoIconTexPath>
+		
+	</Vehicles.VehicleTurretDef>
+	
+	
+	<Vehicles.VehicleTurretDef ParentName="guy762_VehicleTurret_TIEAvenger_main">
+		<defName>guy762_VehicleTurret_TIEAvenger_two</defName>
+
+		<warmUpTimer>0.1</warmUpTimer>
+
+	</Vehicles.VehicleTurretDef>
+	
+	<Vehicles.VehicleTurretDef ParentName="guy762_VehicleTurret_TIEAvenger_main">
+		<defName>guy762_VehicleTurret_TIEAvenger_three</defName>
+
+		<warmUpTimer>0.2</warmUpTimer>
+
+	</Vehicles.VehicleTurretDef>
+	
+	<Vehicles.VehicleTurretDef ParentName="guy762_VehicleTurret_TIEAvenger_main">
+		<defName>guy762_VehicleTurret_TIEAvenger_four</defName>
+
+		<warmUpTimer>0.3</warmUpTimer>
+
+	</Vehicles.VehicleTurretDef>
 	
 	
 	

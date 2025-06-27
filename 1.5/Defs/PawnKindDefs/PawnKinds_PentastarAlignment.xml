@@ -538,7 +538,7 @@
 		<specificApparelRequirements Inherit="False">
 			<li>
 				<apparelLayer>Overhead</apparelLayer>
-				<color>(50,50,55)</color>       <!-- blue-tint black -->
+				<color>(90,90,95)</color>        <!-- blued grey -->
 			</li>
 			<li>
 				<apparelLayer>Middle</apparelLayer>
@@ -924,7 +924,6 @@
 		<apparelMoney>4000~6000</apparelMoney>
 		<apparelAllowHeadgearChance>0.75</apparelAllowHeadgearChance>
 		<apparelTags>
-			<li>KotORShield_sith</li>
 			<li>KotOREquipment_sith</li>
 			<li>Cape</li>
 		</apparelTags>

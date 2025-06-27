@@ -264,6 +264,8 @@
 						
 						<aimPieOffset>(0, 2.55)</aimPieOffset>
 						
+						<autoTargetingActive>True</autoTargetingActive>
+						
 						<key>M3AScykKey_gun_1</key>
 					</li>
 					<li>
@@ -277,6 +279,8 @@
 						<gizmoLabel>main gun</gizmoLabel>
 						
 						<aimPieOffset>(0, 2.55)</aimPieOffset>
+						
+						<autoTargetingActive>True</autoTargetingActive>
 						
 						<key>M3AScykKey_gun_2</key>
 					</li>

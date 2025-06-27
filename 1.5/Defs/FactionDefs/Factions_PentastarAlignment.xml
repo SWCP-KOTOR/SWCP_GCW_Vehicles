@@ -301,6 +301,7 @@
           <SWPentastar_ArmyHeavy>100</SWPentastar_ArmyHeavy>
 		  <SWPentastar_ArmyLieutenant>100</SWPentastar_ArmyLieutenant>
 		  <!-- MISSING: ion weapon gunner -->
+		  <SWWarlords_ArmyMedic>100</SWWarlords_ArmyMedic>
 		  
 		  <!-- <SWPentastar_ArmyTrooper>100</SWPentastar_ArmyTrooper> -->
           <!-- <SWPentastar_ArmyHeavy>50</SWPentastar_ArmyHeavy> -->
@@ -325,6 +326,7 @@
           <SWPentastar_ArmyTrooper>100</SWPentastar_ArmyTrooper>
           <SWPentastar_ArmyHeavy>50</SWPentastar_ArmyHeavy>
           <!-- <SWPentastar_ArmySniper>25</SWPentastar_ArmySniper> -->
+		  <SWWarlords_ArmyMedic>100</SWWarlords_ArmyMedic>
 		  
           <SWPentastar_ArmyLieutenant>100</SWPentastar_ArmyLieutenant>
         </options>
@@ -343,6 +345,7 @@
 		  <SWPentastar_ArmyTrooper>100</SWPentastar_ArmyTrooper>
           <SWPentastar_ArmyHeavy>50</SWPentastar_ArmyHeavy>
           <!-- <SWPentastar_ArmySniper>25</SWPentastar_ArmySniper> -->
+		  <SWWarlords_ArmyMedic>100</SWWarlords_ArmyMedic>
           <SWPentastar_ArmyLieutenant>100</SWPentastar_ArmyLieutenant>
 		  
           <SWPentastar_ArmyMajor>100</SWPentastar_ArmyMajor>
@@ -372,6 +375,7 @@
 		  <SWPentastar_ArmyTrooper>100</SWPentastar_ArmyTrooper>
           <SWPentastar_ArmyHeavy>50</SWPentastar_ArmyHeavy>
           <!-- <SWPentastar_ArmySniper>25</SWPentastar_ArmySniper> -->
+		  <SWWarlords_ArmyMedic>100</SWWarlords_ArmyMedic>
           <SWPentastar_ArmyLieutenant>100</SWPentastar_ArmyLieutenant>
 		  
           <SWPentastar_GuardianProtector>25</SWPentastar_GuardianProtector>

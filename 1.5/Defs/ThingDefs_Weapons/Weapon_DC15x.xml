@@ -40,7 +40,7 @@
 				<!-- <defaultProjectile>KotORBlasterBolt_default</defaultProjectile> -->
 				<!-- <warmupTime>1.75</warmupTime> -->
 				<!-- <defaultCooldownTime>1.5</defaultCooldownTime> -->
-				<!-- <range>28</range> -->
+				<!-- <range>30</range> -->
 				<!-- <ticksBetweenBurstShots>10</ticksBetweenBurstShots> -->
 				<!-- <burstShotCount>1</burstShotCount> -->
 				<!-- <soundCast>kotorsound_impsniper</soundCast> -->
@@ -55,7 +55,7 @@
 				<defaultProjectile>KotORIonBolt_sniper</defaultProjectile>
 				<warmupTime>3.35</warmupTime>
 				<defaultCooldownTime>4</defaultCooldownTime>
-				<range>48</range>
+				<range>60</range>
 				<accuracyMedium>1.00</accuracyMedium>
 				<accuracyLong>1.00</accuracyLong>
 				<ticksBetweenBurstShots>20</ticksBetweenBurstShots>

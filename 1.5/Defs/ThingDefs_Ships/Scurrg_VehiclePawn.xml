@@ -326,6 +326,8 @@
 						
 						<aimPieOffset>(0, 2.55)</aimPieOffset>
 						
+						<autoTargetingActive>True</autoTargetingActive>
+						
 						<key>ScurrgKey_gun_1</key>
 					</li>
 					<li>
@@ -340,6 +342,8 @@
 						
 						<aimPieOffset>(0, 2.55)</aimPieOffset>
 						
+						<autoTargetingActive>True</autoTargetingActive>
+						
 						<key>ScurrgKey_gun_2</key>
 					</li>
 					<li>
@@ -353,6 +357,8 @@
 						<gizmoLabel>dorsal turret</gizmoLabel>
 						
 						<aimPieOffset>(0, 2.55)</aimPieOffset>
+						
+						<autoTargetingActive>True</autoTargetingActive>
 						
 						<key>ScurrgKey_gun_3</key>
 					</li>

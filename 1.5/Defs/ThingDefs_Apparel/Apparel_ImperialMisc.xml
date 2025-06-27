@@ -1,0 +1,1128 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<!-- heavy battle armor stat level -->	 	  
+	  
+	  
+	<ThingDef ParentName="KotORArmorModdable_hard">
+		<defName>guy762_PAGuardianProtectorArmor</defName>
+		<label>Guardian Protector armor</label>
+		<techLevel>Spacer</techLevel>
+		<description>.</description>
+		<graphicData>
+			<texPath>Apparel/PAGuardianProtector/Apparel</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<shaderType>CutoutComplex</shaderType>
+			<colorTwo>(65,70,190)</colorTwo> <!-- pentastar blue -->
+		</graphicData>
+		
+		<statBases>
+			<Mass>14</Mass> <!-- durasteel battle armor stats -->
+			<MarketValue>13000</MarketValue>
+			<MaxHitPoints>475</MaxHitPoints>
+      		<ArmorRating_Sharp>1.05</ArmorRating_Sharp>
+			<ArmorRating_Blunt>0.9</ArmorRating_Blunt>
+			<ArmorRating_Heat>1.15</ArmorRating_Heat>
+			<EquipDelay>10</EquipDelay>
+		</statBases>
+		<equippedStatOffsets>
+			<MoveSpeed>-0.5</MoveSpeed>
+			<MeleeDodgeChance>-0.5</MeleeDodgeChance>
+			<IncomingDamageFactor>-0.15</IncomingDamageFactor>
+		</equippedStatOffsets>
+		
+		<apparel Inherit="False">
+			<tags>
+				<li>PentastarAlignment_GuardianProtector</li>
+			</tags>
+			<wornGraphicPath>Apparel/PAGuardianProtector/Apparel</wornGraphicPath>
+			<useWornGraphicMask>true</useWornGraphicMask>
+			<layers>
+				<li>Middle</li>
+			</layers>
+			<bodyPartGroups>
+				<li>Torso</li>
+				<li>Shoulders</li>
+				<li>Neck</li>
+				<li>Arms</li>
+				<li>Hands</li>
+				<li>Legs</li>
+				<li>Feet</li>
+			</bodyPartGroups>
+			<useDeflectMetalEffect>true</useDeflectMetalEffect>
+		</apparel>
+		<tradeTags>
+			<li>guy762TT_WarlordArmor</li>
+		</tradeTags>
+		<colorGenerator Class="ColorGenerator_Options" Inherit="False">
+			<options>
+				<li>
+					<weight>10</weight>
+					<only>(250,250,250)</only>  <!-- white -->
+				</li>
+			</options>
+		</colorGenerator>
+
+		<verbs>
+            <li>
+                <label>throw stun grenade</label>
+                <verbClass>Verb_LaunchProjectileStatic</verbClass>
+                <hasStandardCommand>true</hasStandardCommand>
+                <range>15</range>
+                <forcedMissRadius>1.9</forcedMissRadius>
+                <warmupTime>1.75</warmupTime>
+                <noiseRadius>4</noiseRadius>
+                <burstShotCount>1</burstShotCount>
+                <soundCast>kotorsound_grenadethrow</soundCast>
+                <onlyManualCast>true</onlyManualCast>
+                <rangedFireRulepack>Combat_RangedFire_Thrown</rangedFireRulepack>
+                <defaultProjectile>guy762_ThrownGrenade_stormtrooper</defaultProjectile>
+                <ai_AvoidFriendlyFireRadius>6.9</ai_AvoidFriendlyFireRadius>
+				<ai_IsBuildingDestroyer>false</ai_IsBuildingDestroyer>
+				<ai_IsWeapon>true</ai_IsWeapon>
+                <targetParams>
+                    <canTargetLocations>true</canTargetLocations>
+                </targetParams>
+            </li>
+        </verbs>
+        <comps>
+            <li Class="CompProperties_ApparelReloadable">
+                <maxCharges>1</maxCharges>
+                <destroyOnEmpty>false</destroyOnEmpty>
+                <hotKey>Misc4</hotKey>
+                <chargeNoun>grenades</chargeNoun>
+                <displayGizmoWhileUndrafted>false</displayGizmoWhileUndrafted>
+				<ammoDef>ComponentIndustrial</ammoDef>
+				<ammoCountToRefill>2</ammoCountToRefill>
+				<baseReloadTicks>60</baseReloadTicks>
+            </li>
+        </comps>
+		<!--comps>
+		  <li Class="ModularWeapons.CompProperties_ModularParts">
+			<compClass>ModularWeapons.CompModularParts</compClass>
+			<partKinds>
+			  <li>guy762_slot_underlay</li>
+			  <li>guy762_slot_overlay</li>
+			</partKinds>
+			<randomizeParts>true</randomizeParts>
+		  </li>
+		</comps-->
+	</ThingDef>
+	  
+	  
+	  
+	  
+	<ThingDef ParentName="guy762_HelmetModdable_hard">
+		<defName>guy762_PAGuardianProtectorHelmet</defName>
+		<label>Guardian Protector helmet</label>
+		<techLevel>Spacer</techLevel>
+		<description>.</description>
+		<graphicData>
+			<texPath>Apparel/PAGuardianProtector/helmet</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<shaderType>CutoutComplex</shaderType>
+			<colorTwo>(65,70,190)</colorTwo> <!-- pentastar blue -->
+		</graphicData>
+		<statBases>
+			<Mass>8</Mass>
+			<MarketValue>6000</MarketValue> <!-- powered battle helmet stats -->
+			<MaxHitPoints>235</MaxHitPoints>
+      		<ArmorRating_Sharp>0.85</ArmorRating_Sharp>
+			<ArmorRating_Blunt>0.7</ArmorRating_Blunt>
+			<ArmorRating_Heat>0.95</ArmorRating_Heat>
+			<EquipDelay>6</EquipDelay>
+		</statBases>
+		<equippedStatOffsets>
+			<ShootingAccuracyPawn>-0.2</ShootingAccuracyPawn>
+			<AimingDelayFactor>-0.2</AimingDelayFactor>
+			
+			<ToxicEnvironmentResistance>1</ToxicEnvironmentResistance>
+			<HypoxiaResistance MayRequire="kentington.saveourship2">1</HypoxiaResistance>
+			<DecompressionResistance MayRequire="kentington.saveourship2">0.25</DecompressionResistance>
+		</equippedStatOffsets>
+		
+		<apparel Inherit="False">
+			<tags>
+				<!--li>EVA</li-->
+				<li>PentastarAlignment_GuardianProtector</li>
+			</tags>
+			<wornGraphicPath>Apparel/PAGuardianProtector/helmet</wornGraphicPath>
+			<useWornGraphicMask>true</useWornGraphicMask>
+			<layers>
+				<li>Overhead</li>
+				<li>EyeCover</li>
+			</layers>
+			<bodyPartGroups>
+				<li>FullHead</li>
+			</bodyPartGroups>
+			<useDeflectMetalEffect>true</useDeflectMetalEffect>
+		</apparel>
+		
+		<tradeTags>
+			<li>guy762TT_KotORArmor_powered</li>
+			<li>guy762TT_WarlordArmor</li>
+		</tradeTags>
+		<colorGenerator Class="ColorGenerator_Options" Inherit="False">
+			<options>
+				<li>
+					<weight>10</weight>
+					<only>(250,250,250)</only>  <!-- white -->
+				</li>
+			</options>
+		</colorGenerator>
+		
+		
+		<!-- <comps> -->
+		  <!-- <li Class="ModularWeapons.CompProperties_ModularParts"> -->
+			<!-- <compClass>ModularWeapons.CompModularParts</compClass> -->
+			<!-- <partKinds> -->
+			  <!-- <li>guy762_slot_overlay</li> -->
+			  <!-- <li>guy762_slot_underlay_hat</li> -->
+			  <!-- <li>guy762_slot_helmettech</li> -->
+			<!-- </partKinds> -->
+			<!-- <randomizeParts>true</randomizeParts> -->
+		  <!-- </li> -->
+		<!-- </comps> -->
+	</ThingDef> 
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+
+	
+	
+	
+	
+	
+	
+	
+	
+  
+  
+  
+  
+	
+	
+	
+	
+	
+	
+  
+  
+
+	<ThingDef MayRequire="Ludeon.RimWorld.Biotech" ParentName="BaseGrenadeProjectile">
+		<defName>guy762_ThrownGrenade_raptor</defName>
+		<label>posion grenade</label>
+		<thingClass>Projectile_Explosive</thingClass>
+		<graphicData>
+		  <texPath>Weapons/Projectiles/Grenades/grenade_raptor</texPath>
+		  <graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<projectile>
+		  <damageDef>ToxGas</damageDef>
+		  <explosionDelay>100</explosionDelay>
+		  <explosionRadius>1.9</explosionRadius>
+		  <explosionRadiusDisplayPadding>2</explosionRadiusDisplayPadding>
+		  <postExplosionGasType>ToxGas</postExplosionGasType>
+		  <screenShakeFactor>0.5</screenShakeFactor>
+		  <!--soundAmbient>kotorsound_grenadecook</soundAmbient-->
+		  <soundExplode>kotorsound_poisongrenade</soundExplode>
+		</projectile>
+	</ThingDef>
+	
+	<ThingDef ParentName="KotORArmorModdable_hard">
+		<defName>guy762_RaptorArmor</defName>
+		<label>Raptor armor</label>
+		<techLevel>Spacer</techLevel>
+		<description>.</description>
+		<graphicData>
+			<texPath>Apparel/Stormtrooper/raptor/Apparel</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<shaderType>CutoutComplex</shaderType>
+			<colorTwo>(225,220,75)</colorTwo> <!-- banana yellow -->
+		</graphicData>
+		<statBases>
+			<Mass>6</Mass>
+			<MarketValue>750</MarketValue>
+			<MaxHitPoints>350</MaxHitPoints>
+			<ArmorRating_Sharp>0.45</ArmorRating_Sharp>
+			<ArmorRating_Blunt>0.3</ArmorRating_Blunt>
+			<ArmorRating_Heat>0.85</ArmorRating_Heat>
+			<EquipDelay>10</EquipDelay>
+		</statBases>
+		<equippedStatOffsets>
+			<MoveSpeed>-0.2</MoveSpeed>
+			<MeleeDodgeChance>-0.2</MeleeDodgeChance>
+			<IncomingDamageFactor>-0.1</IncomingDamageFactor>
+		</equippedStatOffsets>
+		<apparel>
+			<tags>
+				<li>ZsinjEmpire_raptorarmor</li>
+			</tags>
+			<wornGraphicPath>Apparel/Stormtrooper/raptor/Apparel</wornGraphicPath>
+			<useWornGraphicMask>true</useWornGraphicMask>
+			<layers>
+				<li>Middle</li>
+			</layers>
+			<bodyPartGroups>
+				<li>Torso</li>
+				<li>Shoulders</li>
+				<li>Neck</li>
+				<li>Arms</li>
+				<li>Hands</li>
+				<li>Legs</li>
+				<li>Feet</li>
+			</bodyPartGroups>
+			<useDeflectMetalEffect>false</useDeflectMetalEffect>
+		</apparel>
+		<tradeTags>
+			<li>guy762TT_WarlordArmor</li>
+		</tradeTags>
+		<colorGenerator Class="ColorGenerator_Options" Inherit="False">
+			<options>
+				<li>
+					<weight>10</weight>
+					<only>(90,90,90)</only>  <!-- grey -->
+				</li>
+			</options>
+		</colorGenerator>
+		
+		
+		<verbs>
+            <li MayRequire="Ludeon.RimWorld.Biotech">
+                <label>throw poison grenade</label>
+                <verbClass>Verb_LaunchProjectileStatic</verbClass>
+                <hasStandardCommand>true</hasStandardCommand>
+                <range>15</range>
+                <forcedMissRadius>1.9</forcedMissRadius>
+                <warmupTime>1.75</warmupTime>
+                <noiseRadius>4</noiseRadius>
+                <burstShotCount>1</burstShotCount>
+                <soundCast>kotorsound_grenadethrow</soundCast>
+                <onlyManualCast>true</onlyManualCast>
+                <rangedFireRulepack>Combat_RangedFire_Thrown</rangedFireRulepack>
+                <defaultProjectile>guy762_ThrownGrenade_raptor</defaultProjectile>
+                <ai_AvoidFriendlyFireRadius>6.9</ai_AvoidFriendlyFireRadius>
+				<ai_IsBuildingDestroyer>false</ai_IsBuildingDestroyer>
+				<ai_IsWeapon>true</ai_IsWeapon>
+                <targetParams>
+                    <canTargetLocations>true</canTargetLocations>
+                </targetParams>
+            </li>
+        </verbs>
+        <comps>
+            <li Class="CompProperties_ApparelReloadable">
+                <maxCharges>1</maxCharges>
+                <destroyOnEmpty>false</destroyOnEmpty>
+                <hotKey>Misc4</hotKey>
+                <chargeNoun>grenades</chargeNoun>
+                <displayGizmoWhileUndrafted>false</displayGizmoWhileUndrafted>
+				<ammoDef>Wastepack</ammoDef>
+				<ammoCountToRefill>1</ammoCountToRefill>
+				<baseReloadTicks>60</baseReloadTicks>
+            </li>
+        </comps>
+		<!--comps>
+		  <li Class="ModularWeapons.CompProperties_ModularParts">
+			<compClass>ModularWeapons.CompModularParts</compClass>
+			<partKinds>
+			  <li>guy762_slot_underlay</li>
+			  <li>guy762_slot_overlay</li>
+			</partKinds>
+			<randomizeParts>true</randomizeParts>
+		  </li>
+		</comps-->
+	</ThingDef>	
+	
+	<ThingDef ParentName="KotORArmorModdable_hard">
+		<defName>guy762_RaptorHelmet</defName>
+		<label>Raptor helmet</label>
+		<techLevel>Spacer</techLevel>
+		<description>.</description>
+		<graphicData>
+			<texPath>Apparel/Stormtrooper/raptor/raptorhelmet</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<shaderType>CutoutComplex</shaderType>
+			<colorTwo>(225,220,75)</colorTwo> <!-- banana yellow -->
+		</graphicData>
+		<thingCategories>
+		  <li>ArmorHeadgear</li>
+		</thingCategories>
+		<statBases>
+			<Mass>4</Mass>
+			<MarketValue>500</MarketValue>
+			<MaxHitPoints>175</MaxHitPoints>
+      		<ArmorRating_Sharp>0.35</ArmorRating_Sharp>
+			<ArmorRating_Blunt>0.2</ArmorRating_Blunt>
+			<ArmorRating_Heat>0.75</ArmorRating_Heat>
+			<EquipDelay>2</EquipDelay>
+		</statBases>
+		<equippedStatOffsets>
+			<ToxicEnvironmentResistance>1</ToxicEnvironmentResistance>
+			<HypoxiaResistance MayRequire="kentington.saveourship2">1</HypoxiaResistance>
+			<DecompressionResistance MayRequire="kentington.saveourship2">0.25</DecompressionResistance>
+			
+			<PainShockThreshold>0.1</PainShockThreshold>
+			<SuppressionPower MayRequire="Ludeon.RimWorld.Ideology">0.1</SuppressionPower>
+		</equippedStatOffsets>
+		
+		<apparel Inherit="False">
+			<tags>
+				<li>ZsinjEmpire_raptorarmor</li>
+			</tags>
+			<wornGraphicPath>Apparel/Stormtrooper/raptor/raptorhelmet</wornGraphicPath>
+			<useWornGraphicMask>true</useWornGraphicMask>
+			<layers>
+				<li>Overhead</li>
+				<li>EyeCover</li>
+			</layers>
+			<bodyPartGroups>
+				<li>FullHead</li>
+			</bodyPartGroups>
+			<useDeflectMetalEffect>false</useDeflectMetalEffect>
+		</apparel>
+		<tradeTags>
+			<li>guy762TT_WarlordArmor</li>
+		</tradeTags>
+		<colorGenerator Class="ColorGenerator_Options" Inherit="False">
+			<options>
+				<li>
+					<weight>10</weight>
+					<only>(200,50,70)</only> <!-- raptor's red -->
+				</li>
+			</options>
+		</colorGenerator>
+		<!--comps>
+		  <li Class="ModularWeapons.CompProperties_ModularParts">
+			<compClass>ModularWeapons.CompModularParts</compClass>
+			<partKinds>
+			  <li>guy762_slot_overlay</li>
+			  <li>guy762_slot_underlay_hat</li>
+			</partKinds>
+			<randomizeParts>true</randomizeParts>
+		  </li>
+		</comps-->
+	</ThingDef>
+	
+	
+	
+	
+	
+	
+	<ThingDef ParentName="KotORArmorModdable_hard">
+		<defName>guy762_RaptorHelmet_pilot</defName>
+		<label>Raptor Pilot helmet</label>
+		<techLevel>Spacer</techLevel>
+		<description>.</description>
+		<graphicData>
+			<texPath>Apparel/TIEPilot/raptorpilot</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<shaderType>CutoutComplex</shaderType>
+			<colorTwo>(225,220,75)</colorTwo> <!-- banana yellow -->
+		</graphicData>
+		<thingCategories>
+		  <li>ArmorHeadgear</li>
+		</thingCategories>
+		<statBases>
+			<Mass>4</Mass>
+			<MarketValue>500</MarketValue>
+			<MaxHitPoints>175</MaxHitPoints>
+      		<ArmorRating_Sharp>0.35</ArmorRating_Sharp>
+			<ArmorRating_Blunt>0.2</ArmorRating_Blunt>
+			<ArmorRating_Heat>0.75</ArmorRating_Heat>
+			<EquipDelay>2</EquipDelay>
+		</statBases>
+		<equippedStatOffsets>
+			<ToxicEnvironmentResistance>1</ToxicEnvironmentResistance>
+			<HypoxiaResistance MayRequire="kentington.saveourship2">1</HypoxiaResistance>
+			<DecompressionResistance MayRequire="kentington.saveourship2">0.25</DecompressionResistance>
+			
+			<PainShockThreshold>0.1</PainShockThreshold>
+			<SuppressionPower MayRequire="Ludeon.RimWorld.Ideology">0.1</SuppressionPower>
+		</equippedStatOffsets>
+		
+		<apparel Inherit="False">
+			<tags>
+				<li>ZsinjEmpire_raptorpilot</li>
+			</tags>
+			<wornGraphicPath>Apparel/TIEPilot/raptorpilot</wornGraphicPath>
+			<useWornGraphicMask>true</useWornGraphicMask>
+			<layers>
+				<li>Overhead</li>
+				<li>EyeCover</li>
+			</layers>
+			<bodyPartGroups>
+				<li>FullHead</li>
+			</bodyPartGroups>
+			<useDeflectMetalEffect>false</useDeflectMetalEffect>
+		</apparel>
+		<tradeTags>
+			<li>guy762TT_WarlordArmor</li>
+		</tradeTags>
+		<colorGenerator Class="ColorGenerator_Options" Inherit="False">
+			<options>
+				<li>
+					<weight>10</weight>
+					<only>(200,50,70)</only> <!-- raptor's red -->
+				</li>
+			</options>
+		</colorGenerator>
+		<!--comps>
+		  <li Class="ModularWeapons.CompProperties_ModularParts">
+			<compClass>ModularWeapons.CompModularParts</compClass>
+			<partKinds>
+			  <li>guy762_slot_overlay</li>
+			  <li>guy762_slot_underlay_hat</li>
+			</partKinds>
+			<randomizeParts>true</randomizeParts>
+		  </li>
+		</comps-->
+	</ThingDef>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<ThingDef ParentName="KotORArmorModdable_hard">
+		<defName>guy762_ImpWorkerHelmet</defName>
+		<label>worker's helmet</label>
+		<techLevel>Spacer</techLevel>
+		<description>.</description>
+		<graphicData>
+			<texPath>Apparel/ImperialWorker/helmet</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<shaderType>CutoutComplex</shaderType>
+		</graphicData>
+		<thingCategories>
+		  <li>ArmorHeadgear</li>
+		</thingCategories>
+		<statBases>
+			<Mass>6</Mass>
+			<MarketValue>300</MarketValue>
+			<MaxHitPoints>235</MaxHitPoints>
+      		<ArmorRating_Sharp>0.35</ArmorRating_Sharp>
+			<ArmorRating_Blunt>0.5</ArmorRating_Blunt> <!-- +0.3 -->
+			<ArmorRating_Heat>0.45</ArmorRating_Heat>
+			<EquipDelay>4</EquipDelay>
+		</statBases>
+		<equippedStatOffsets>
+			<WorkSpeedGlobal>0.1</WorkSpeedGlobal>
+			
+			<MiningSpeed>0.2</MiningSpeed>
+		    <SmoothingSpeed>0.2</SmoothingSpeed>
+			
+			<ToxicEnvironmentResistance>1</ToxicEnvironmentResistance>
+		</equippedStatOffsets>
+		
+		<apparel Inherit="False">
+			<tags>
+				<li>RemnantEmpire_impworker</li>
+			</tags>
+			<wornGraphicPath>Apparel/ImperialWorker/helmet</wornGraphicPath>
+			<useWornGraphicMask>true</useWornGraphicMask>
+			<layers>
+				<li>Overhead</li>
+				<li>EyeCover</li>
+			</layers>
+			<bodyPartGroups>
+				<li>FullHead</li>
+			</bodyPartGroups>
+			<useDeflectMetalEffect>true</useDeflectMetalEffect>
+		</apparel>
+		<tradeTags>
+			<li>guy762TT_WarlordArmor</li>
+		</tradeTags>
+		<colorGenerator Class="ColorGenerator_Options" Inherit="False">
+			<options>
+				<li>
+					<weight>15</weight>
+					<only>(90,90,75)</only> <!-- stone green -->
+				</li>
+			</options>
+		</colorGenerator>
+		<!--comps>
+		  <li Class="ModularWeapons.CompProperties_ModularParts">
+			<compClass>ModularWeapons.CompModularParts</compClass>
+			<partKinds>
+			  <li>guy762_slot_overlay</li>
+			  <li>guy762_slot_underlay_hat</li>
+			</partKinds>
+			<randomizeParts>true</randomizeParts>
+		  </li>
+		</comps-->
+	</ThingDef>
+	
+	
+	
+	
+	
+	
+	<ThingDef Name="guy762_ImpEngiHelmet" ParentName="KotORArmorModdable_hard">
+		<defName>guy762_ImpEngiHelmet</defName>
+		<label>imperial engineer's helmet</label>
+		<techLevel>Spacer</techLevel>
+		<description>.</description>
+		<graphicData>
+			<texPath>Apparel/ImperialEngineer/helmet</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<shaderType>CutoutComplex</shaderType>
+			<!-- <colorTwo>(230,185,45)</colorTwo> republic yellow -->
+		</graphicData>
+		<thingCategories>
+		  <li>ArmorHeadgear</li>
+		</thingCategories>
+		<statBases>
+			<Mass>4</Mass>
+			<MarketValue>500</MarketValue>
+			<MaxHitPoints>235</MaxHitPoints>
+      		<ArmorRating_Sharp>0.65</ArmorRating_Sharp>
+			<ArmorRating_Blunt>0.5</ArmorRating_Blunt>
+			<ArmorRating_Heat>0.75</ArmorRating_Heat>
+			<EquipDelay>4</EquipDelay>
+		</statBases>
+		<equippedStatOffsets>
+			<AimingDelayFactor>0.2</AimingDelayFactor>
+			
+			<ConstructionSpeed>0.4</ConstructionSpeed>
+			<MechRepairSpeed MayRequire="Ludeon.RimWorld.Biotech">0.4</MechRepairSpeed>
+		    <FixBrokenDownBuildingSuccessChance>0.4</FixBrokenDownBuildingSuccessChance>
+		    <ConstructSuccessChance>0.4</ConstructSuccessChance>
+			
+			<MortarMissRadiusFactor>-0.6</MortarMissRadiusFactor>
+		</equippedStatOffsets>
+		
+		<apparel Inherit="False">
+			<tags>
+				<li>RemnantEmpire_impengi</li>
+			</tags>
+			<wornGraphicPath>Apparel/ImperialEngineer/helmet</wornGraphicPath>
+			<useWornGraphicMask>true</useWornGraphicMask>
+			<layers>
+				<li>Overhead</li>
+				<li>EyeCover</li>
+			</layers>
+			<bodyPartGroups>
+				<li>FullHead</li>
+			</bodyPartGroups>
+			<useDeflectMetalEffect>true</useDeflectMetalEffect>
+		</apparel>
+		<tradeTags>
+			<li>guy762TT_WarlordArmor</li>
+		</tradeTags>
+		<colorGenerator Class="ColorGenerator_Options" Inherit="False">
+			<options>
+				<li>
+					<weight>15</weight>
+					<only>(40,40,40)</only> <!-- darker black -->
+				</li>
+			</options>
+		</colorGenerator>
+		<!--comps>
+		  <li Class="ModularWeapons.CompProperties_ModularParts">
+			<compClass>ModularWeapons.CompModularParts</compClass>
+			<partKinds>
+			  <li>guy762_slot_overlay</li>
+			  <li>guy762_slot_underlay_hat</li>
+			</partKinds>
+			<randomizeParts>true</randomizeParts>
+		  </li>
+		</comps-->
+	</ThingDef>
+	
+	<ThingDef ParentName="guy762_ImpEngiHelmet">
+		<defName>guy762_ImpEngiHelmet_chief</defName>
+		<label>imperial engineer chief's helmet</label>
+		<graphicData>
+			<colorTwo>(230,185,45)</colorTwo> <!-- republic yellow -->
+		</graphicData>
+
+		<statBases>
+			<MarketValue>750</MarketValue>
+		</statBases>
+		<equippedStatOffsets>
+			<SocialImpact>0.3</SocialImpact>
+		</equippedStatOffsets>
+		
+		<comps>
+            <li Class="FCP.Core.CompProperties_LabelColored">
+                <rarity>Rare</rarity>
+            </li>
+        </comps>
+
+	</ThingDef>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<ThingDef ParentName="KotORArmorModdable_hard">
+		<defName>guy762_InquisitorArmor</defName>
+		<label>Inquisitor armor</label>
+		<description>Designed for those who relish personal combat, and know that power comes to those who take it, this armor offers good protection with no hindrance to movement.</description>
+		<graphicData>
+		  <texPath>Apparel/Inquisitor/Armor/Apparel</texPath>
+		  <graphicClass>Graphic_Single</graphicClass>
+		  <shaderType>CutoutComplex</shaderType>
+		</graphicData>
+		<statBases>
+			<Mass>3</Mass>
+			<MarketValue>500</MarketValue>
+			
+			<MaxHitPoints>225</MaxHitPoints> <!-- hvy combat suit stats -->
+			<ArmorRating_Sharp>0.55</ArmorRating_Sharp>
+			<ArmorRating_Blunt>0.4</ArmorRating_Blunt>
+			<ArmorRating_Heat>0.65</ArmorRating_Heat>
+			<EquipDelay>5</EquipDelay>
+		</statBases>
+		<equippedStatOffsets>
+			<MoveSpeed>-0.1</MoveSpeed>
+			<MeleeDodgeChance>-0.1</MeleeDodgeChance>
+			<IncomingDamageFactor>-0.05</IncomingDamageFactor>
+		</equippedStatOffsets>
+		<apparel>
+		  <tags Inherit="False">
+			<li>PentastarAlignment_InQuestor</li>
+		  </tags>
+		  <wornGraphicPath>Apparel/Inquisitor/Armor/Apparel</wornGraphicPath>
+		  <useWornGraphicMask>true</useWornGraphicMask>
+		  <defaultOutfitTags Inherit="False">
+			<li>Worker</li>
+		  </defaultOutfitTags>
+		  <layers Inherit="False">
+			<li>Middle</li>
+		  </layers>
+		  <bodyPartGroups Inherit="False">
+			<li>Torso</li>
+			<li>Neck</li>
+			<li>Shoulders</li>
+		  </bodyPartGroups>
+		  <useDeflectMetalEffect>true</useDeflectMetalEffect>
+		</apparel>
+		
+		<comps>
+            <li Class="FCP.Core.CompProperties_LabelColored">
+                <rarity>Rare</rarity>
+            </li>
+        </comps>
+		
+		<!-- <tradeTags> -->
+			<!-- <li>guy762TT_KotORArmor</li> -->
+		<!-- </tradeTags> -->
+		<colorGenerator Class="ColorGenerator_Options" Inherit="False">
+			<options>
+				<li>
+					<weight>15</weight>
+					<only>(40,40,40)</only>
+				</li>
+				<!-- <li> -->
+					<!-- <weight>15</weight> -->
+					<!-- <only>(45,45,50)</only> -->
+				<!-- </li> -->
+			</options>
+		</colorGenerator>
+	  </ThingDef>
+	  
+	  
+	  
+	
+	<ThingDef ParentName="KotORArmorModdable_soft">
+		<defName>guy762_InquisitorTunic_default</defName>
+		<label>Inquisitor tunic</label>
+		<description>Designed for those who relish personal combat, and know that power comes to those who take it, these robes offer good protection with no hindrance to movement.</description>
+		<graphicData>
+		  <texPath>Apparel/Inquisitor/Apparel</texPath>
+		  <graphicClass>Graphic_Single</graphicClass>
+		  <shaderType>CutoutComplex</shaderType>
+		  <colorTwo>(160,35,50)</colorTwo> <!-- inquisitor red -->
+		</graphicData>
+		<statBases>
+			<Mass>3</Mass>
+			<MarketValue>2200</MarketValue>
+			<MaxHitPoints>150</MaxHitPoints>
+			<ArmorRating_Sharp>0.1</ArmorRating_Sharp>
+			<ArmorRating_Blunt>0.1</ArmorRating_Blunt>
+			<ArmorRating_Heat>0.1</ArmorRating_Heat>
+			<Insulation_Cold>15</Insulation_Cold>
+			<Insulation_Heat>15</Insulation_Heat>
+			<EquipDelay>6</EquipDelay>
+			
+			<WorkToMake>10000</WorkToMake>
+		</statBases>
+		<equippedStatOffsets>
+		  <PsychicSensitivity>0.1</PsychicSensitivity>
+		</equippedStatOffsets>
+		
+		<costList Inherit="False">
+			<Synthread>80</Synthread>
+			<!--VPE_Eltex>3</VPE_Eltex> added by patch -->
+		  </costList>
+		  <recipeMaker>
+			<researchPrerequisite>guy762_ResearchKotOR_sith</researchPrerequisite>
+			<skillRequirements>
+			  <Crafting>12</Crafting>
+			</skillRequirements>
+		  </recipeMaker>
+		
+		<apparel>
+			<layers>
+				<li>OnSkin</li>
+			</layers>
+			<bodyPartGroups>
+				<li>Torso</li>
+				<li>Neck</li>
+				<li>Shoulders</li>
+				<li>Arms</li>
+				<li>Hands</li>
+				<li>Legs</li>
+				<li>Feet</li>
+			</bodyPartGroups>
+			<tags Inherit="False">
+				<li>PentastarAlignment_InQuestor</li>
+			</tags>
+			<wornGraphicPath>Apparel/Inquisitor/Apparel</wornGraphicPath>
+			<useWornGraphicMask>true</useWornGraphicMask>
+		</apparel>
+		<!-- <tradeTags> -->
+			<!-- <li>guy762TT_SEArmor</li> -->
+		<!-- </tradeTags> -->
+		<colorGenerator Class="ColorGenerator_Options" Inherit="False">
+			<options>
+				<li>
+					<weight>10</weight>
+					<only>(50,50,50)</only> <!-- black -->
+				</li>
+				<!-- <li> -->
+					<!-- <weight>10</weight> -->
+					<!-- <only>(90,90,95)</only> blued grey -->
+				<!-- </li> -->
+			</options>
+		</colorGenerator>
+		
+		<comps>
+            <li Class="FCP.Core.CompProperties_LabelColored">
+                <rarity>Rare</rarity>
+            </li>
+        </comps>
+		<!-- <comps> -->
+		  <!-- <li Class="ModularWeapons.CompProperties_ModularParts"> -->
+			<!-- <compClass>ModularWeapons.CompModularParts</compClass> -->
+			<!-- <partKinds> -->
+			  <!-- <li>guy762_slot_underlay_robe</li> -->
+			<!-- </partKinds> -->
+			<!-- <randomizeParts>true</randomizeParts> -->
+		  <!-- </li> -->
+		<!-- </comps> -->
+	  </ThingDef>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	  
+	  <ThingDef ParentName="KotORArmorModdable_hard">
+		<defName>guy762_ImpRoyalGuardHelmet</defName>
+		<label>Sovereign Protector helmet</label>
+		<techLevel>Spacer</techLevel>
+		<description>.</description>
+		<graphicData>
+			<texPath>Apparel/RoyalGuard/helmet</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<shaderType>CutoutComplex</shaderType>
+			<colorTwo>(200,45,65)</colorTwo> <!-- royal guard red -->
+		</graphicData>
+		<thingCategories>
+		  <li>ArmorHeadgear</li>
+		</thingCategories>
+		<statBases>
+			<Mass>4</Mass>
+			<MarketValue>5000</MarketValue>
+			<MaxHitPoints>175</MaxHitPoints> <!-- medium armor hitpoints -->
+      		<ArmorRating_Sharp>0.55</ArmorRating_Sharp>
+			<ArmorRating_Blunt>0.4</ArmorRating_Blunt>
+			<ArmorRating_Heat>0.65</ArmorRating_Heat>
+			<EquipDelay>2</EquipDelay>
+		</statBases>
+		<equippedStatOffsets>
+			<PainShockThreshold>0.3</PainShockThreshold>
+			<SuppressionPower MayRequire="Ludeon.RimWorld.Ideology">0.3</SuppressionPower>
+		</equippedStatOffsets>
+		
+		<apparel Inherit="False">
+			<tags>
+				<li>RemnantEmpire_royalguard</li>
+			</tags>
+			<wornGraphicPath>Apparel/RoyalGuard/helmet</wornGraphicPath>
+			<useWornGraphicMask>true</useWornGraphicMask>
+			<layers>
+				<li>Overhead</li>
+				<li>EyeCover</li>
+			</layers>
+			<bodyPartGroups>
+				<li>FullHead</li>
+				<li>Neck</li>
+			</bodyPartGroups>
+			<useDeflectMetalEffect>true</useDeflectMetalEffect>
+		</apparel>
+		<tradeTags>
+			<li>guy762TT_WarlordArmor</li>
+		</tradeTags>
+		<colorGenerator Class="ColorGenerator_Options" Inherit="False">
+			<options>
+				<li>
+					<weight>10</weight>
+					<only>(200,45,65)</only> <!-- royal guard red -->
+				</li>
+			</options>
+		</colorGenerator> <!-- 200,45,65 royal guard red -->
+		
+		<comps>
+            <li Class="FCP.Core.CompProperties_LabelColored">
+                <rarity>Rare</rarity>
+            </li>
+        </comps>
+		<!--comps>
+		  <li Class="ModularWeapons.CompProperties_ModularParts">
+			<compClass>ModularWeapons.CompModularParts</compClass>
+			<partKinds>
+			  <li>guy762_slot_overlay</li>
+			  <li>guy762_slot_underlay_hat</li>
+			</partKinds>
+			<randomizeParts>true</randomizeParts>
+		  </li>
+		</comps-->
+	</ThingDef>
+	
+	
+	
+	
+	
+	<ThingDef Name="guy762_ImpRoyalGuardArmor" ParentName="KotORArmorModdable_soft">
+		<defName>guy762_ImpRoyalGuardArmor</defName>
+		<label>Sovereign Protector heavy combat suit</label>
+		<techLevel>Spacer</techLevel>
+		<description>.</description>
+		<graphicData>
+			<texPath>Apparel/RoyalGuard/Apparel</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<shaderType>CutoutComplex</shaderType>
+			<colorTwo>(40,40,40)</colorTwo> <!-- darker black -->
+		</graphicData>
+		<statBases>
+			<Mass>6</Mass>
+			<MarketValue>10000</MarketValue>
+			<MaxHitPoints>350</MaxHitPoints> <!-- medium armor hitpoints -->
+      		<ArmorRating_Sharp>0.6</ArmorRating_Sharp>
+			<ArmorRating_Blunt>0.65</ArmorRating_Blunt>
+			<ArmorRating_Heat>0.7</ArmorRating_Heat>
+			<Insulation_Cold>10</Insulation_Cold>
+			<Insulation_Heat>10</Insulation_Heat>
+			<EquipDelay>10</EquipDelay>
+		</statBases>
+		<equippedStatOffsets>
+			<MoveSpeed>-0.1</MoveSpeed>
+			<MeleeDodgeChance>-0.1</MeleeDodgeChance>
+			<IncomingDamageFactor>-0.05</IncomingDamageFactor>
+			
+			<PainShockThreshold>0.3</PainShockThreshold>
+			<SuppressionPower MayRequire="Ludeon.RimWorld.Ideology">0.3</SuppressionPower>
+		</equippedStatOffsets>
+		
+		<apparel Inherit="False">
+			<tags>
+				<li>RemnantEmpire_royalguard</li>
+			</tags>
+			<wornGraphicPath>Apparel/RoyalGuard/Apparel</wornGraphicPath>
+			<useWornGraphicMask>true</useWornGraphicMask>
+			<layers>
+				<li>Middle</li>
+				<li>OnSkin</li>
+			</layers>
+			<bodyPartGroups>
+				<li>Torso</li>
+				<li>Shoulders</li>
+				<li>Neck</li>
+				<li>Arms</li>
+				<li>Hands</li>
+				<li>Legs</li>
+				<li>Feet</li>
+			</bodyPartGroups>
+			<useDeflectMetalEffect>false</useDeflectMetalEffect>
+		</apparel>
+		<tradeTags>
+			<li>guy762TT_WarlordArmor</li>
+		</tradeTags>
+		<colorGenerator Class="ColorGenerator_Options" Inherit="False">
+			<options>
+				<li>
+					<weight>10</weight>
+					<only>(200,45,65)</only> <!-- royal guard red -->
+				</li>
+			</options>
+		</colorGenerator>
+		
+		<comps>
+            <li Class="FCP.Core.CompProperties_LabelColored">
+                <rarity>Rare</rarity>
+            </li>
+        </comps>
+		<!-- <comps> -->
+		  <!-- <li Class="ModularWeapons.CompProperties_ModularParts"> -->
+			<!-- <compClass>ModularWeapons.CompModularParts</compClass> -->
+			<!-- <partKinds> -->
+			  <!-- <li>guy762_slot_underlay</li> -->
+			  <!-- <li>guy762_slot_overlay</li> -->
+			<!-- </partKinds> -->
+			<!-- <randomizeParts>true</randomizeParts> -->
+		  <!-- </li> -->
+		<!-- </comps> -->
+	</ThingDef>
+	
+	
+	
+	
+	
+	
+	<ThingDef ParentName="guy762_armorbase_soft">
+		<defName>guy762_ImpRoyalGuardCloak</defName>
+		<label>cloak, full</label>
+		<description>This cloak covers the wearer's entire body.</description>
+		<graphicData>
+		  <texPath>Apparel/RoyalGuard/cloak/Apparel</texPath>
+		  <graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<statBases>
+			<Mass>5</Mass>
+			<MarketValue>50</MarketValue>
+			<MaxHitPoints>100</MaxHitPoints>
+			<ArmorRating_Sharp>0.01</ArmorRating_Sharp>
+			<ArmorRating_Blunt>0.01</ArmorRating_Blunt>
+			<ArmorRating_Heat>0.01</ArmorRating_Heat>
+			<Insulation_Cold>25</Insulation_Cold>
+			<Insulation_Heat>25</Insulation_Heat>
+			<EquipDelay>3</EquipDelay>
+			
+			<WorkToMake>9500</WorkToMake>
+		</statBases>
+		<!--equippedStatOffsets>
+		  <PsychicSensitivity>0.1</PsychicSensitivity>
+		  <PsychicEntropyRecoveryRate>0.1</PsychicEntropyRecoveryRate>
+		</equippedStatOffsets-->
+		<apparel>
+			<drawData>
+			  <dataNorth>
+				<layer>65</layer>
+			  </dataNorth>
+			</drawData>
+			<layers>
+				<li>Shell</li>
+			</layers>
+			<bodyPartGroups>
+				<li>Torso</li>
+				<li>Neck</li>
+				<li>Shoulders</li>
+				<li>Arms</li>
+				<li>Legs</li>
+			</bodyPartGroups>
+			<tags Inherit="False">
+				<li>RemnantEmpire_royalguard</li>
+			</tags>
+			<wornGraphicPath>Apparel/RoyalGuard/cloak/Apparel</wornGraphicPath>
+		</apparel>
+		<tradeTags>
+			<li>guy762TT_WarlordArmor</li>
+		</tradeTags>
+		<costList>
+			<Synthread>80</Synthread>
+		</costList>
+		<recipeMaker>
+			<skillRequirements>
+				<Crafting>4</Crafting>
+			</skillRequirements>
+			<recipeUsers Inherit="False">
+				<li>HandTailoringBench</li>
+				<li>ElectricTailoringBench</li>
+				<li>guy762_KotORWorkbench</li>
+			</recipeUsers>
+		</recipeMaker>
+		<colorGenerator Class="ColorGenerator_Options" Inherit="False">
+			<options>
+				<li>
+					<weight>10</weight>
+					<only>(200,45,65)</only> <!-- royal guard red -->
+				</li>
+			</options>
+		</colorGenerator>
+	</ThingDef>
+	  
+	
+	
+	
+	
+</Defs>

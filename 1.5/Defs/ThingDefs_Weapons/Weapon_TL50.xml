@@ -39,7 +39,7 @@
 				<hasStandardCommand>true</hasStandardCommand>
 				<defaultProjectile>SWProj_TL50slugbolt</defaultProjectile>
 				<warmupTime>2.5</warmupTime>
-				<range>28</range>
+				<range>30</range>
 				<defaultCooldownTime>4</defaultCooldownTime>
 				<ticksBetweenBurstShots>6</ticksBetweenBurstShots>
 				<burstShotCount>12</burstShotCount>
@@ -57,7 +57,7 @@
 				<defaultProjectile>SWProj_TL50conc</defaultProjectile>
 				<warmupTime>5.5</warmupTime>
 				<defaultCooldownTime>8</defaultCooldownTime>
-				<range>28</range>
+				<range>30</range>
 				<ticksBetweenBurstShots>20</ticksBetweenBurstShots>
 				<burstShotCount>1</burstShotCount>
 				<!--soundAiming>kotorsound_powercharge</soundAiming-->
@@ -148,7 +148,7 @@
 				<hasStandardCommand>true</hasStandardCommand>
 				<defaultProjectile>KotORBlasterBolt_default</defaultProjectile>
 				<warmupTime>2.5</warmupTime>
-				<range>28</range>
+				<range>30</range>
 				<ticksBetweenBurstShots>6</ticksBetweenBurstShots>
 				<burstShotCount>12</burstShotCount>
 				<soundCast>kotorsound_SWGLrepeater</soundCast>

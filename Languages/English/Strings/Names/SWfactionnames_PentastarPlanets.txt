@@ -18,6 +18,7 @@ Mygeeto
 Ord Biniir
 Ord Trasi
 Prefsbelt
+Scipio
 Sernpidal
 Taspir III
 Yaga Minor

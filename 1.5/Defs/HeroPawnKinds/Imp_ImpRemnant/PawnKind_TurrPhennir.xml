@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>	
+	
+	<PawnKindDef Name="SWWEPlayableVillain_TurrPhennir"  ParentName="guy762_HeroPawnKindBase">
+		<defName>SWWEPlayableVillain_TurrPhennir</defName>
+		<nameMaker>guy762_HeroNamer_TurrPhennir</nameMaker>
+		<label>181st Ace</label>
+		<combatPower>500</combatPower>
+		<minGenerationAge>27</minGenerationAge>
+		<maxGenerationAge>28</maxGenerationAge>
+		<fixedGender>Male</fixedGender>
+		<forcedHair>Messy</forcedHair>
+		<forcedHairColor>(193, 146, 85)</forcedHairColor>
+		<skinColorOverride>(249, 219, 165)</skinColorOverride>
+		<xenotypeSet>
+			<xenotypeChances>
+				<Baseliner>999</Baseliner>
+			</xenotypeChances>
+		</xenotypeSet>
+		<useFactionXenotypes>false</useFactionXenotypes>
+		<itemQuality>Legendary</itemQuality>
+		<apparelMoney>49999</apparelMoney>
+		<apparelTags>
+		  <li>KotOREquipment_officer</li>
+		</apparelTags>
+		<apparelRequired>
+		   <li>guy762_TIEpilotAceHelmet</li>
+		   <li>guy762_RebelPilot_suitbox</li>
+		   <li>guy762_FlightVest</li>
+		   <li>guy762_Bodysuit_TIEace</li>
+		</apparelRequired>
+		<specificApparelRequirements>
+			<li>
+				<apparelLayer>Overhead</apparelLayer>
+				<apparelDef>guy762_TIEpilotAceHelmet</apparelDef>
+				<styleDef>guy762_TIEAceHelmetStyle_ace</styleDef>
+			</li>
+			<li>
+				<apparelLayer>Middle</apparelLayer>
+				<apparelDef>guy762_FlightVest</apparelDef>
+				<color>(200,200,200)</color> <!-- light grey -->
+				<quality>Legendary</quality>
+			</li>
+			<li>
+				<apparelLayer>OnSkin</apparelLayer>
+				<apparelDef>guy762_Bodysuit_TIEace</apparelDef>
+				<color>(95,125,155)</color> <!-- 181st blue -->
+				<quality>Legendary</quality>
+			</li>
+		</specificApparelRequirements>
+		<weaponMoney>99999999</weaponMoney>
+		<weaponTags>
+		  <li>SWRanged_E11tac</li>
+		</weaponTags>
+		<skills>
+			<li>
+				<skill>Shooting</skill>
+				<range>14~16</range>
+			</li>
+			<li>
+				<skill>Construction</skill>
+				<range>6~8</range>
+			</li>
+			<li>
+				<skill>Crafting</skill>
+				<range>6~8</range>
+			</li>
+			<li>
+				<skill>Intellectual</skill>
+				<range>14~16</range>
+			</li>
+		</skills>
+		<forcedTraits>
+			<Bloodlust>0</Bloodlust>
+			<ShootingAccuracy>-1</ShootingAccuracy>
+			<Abrasive>0</Abrasive>
+		</forcedTraits>
+		
+		<backstoryFiltersOverride>
+		  <li>
+			<categories>
+			  <li>guy762BSC_turrphennir</li>
+			</categories>
+		  </li>
+		</backstoryFiltersOverride>
+		
+		<abilities>
+			<!-- ACE TIER 3 -->
+		</abilities>
+		
+		<modExtensions>
+			<li Class="BodyTypeForPawnKind.ModExtension_HeadTypesOfPawnKind">
+			  <whitelist>
+				<li>Male_AveragePointy</li>
+			  </whitelist>
+			  <blacklist>
+				<!--leave blank to disable-->
+			  </blacklist>
+			  <priority>
+				<li>Male_AveragePointy</li>
+			  </priority>
+			  <checkGender>False</checkGender>
+			</li>
+			<li Class="BodyTypeForPawnKind.ModExtension_ForcedStyleItem">
+			  <forcedBeard>NoBeard</forcedBeard>
+			</li>
+			<li Class="AddGeneForPK.PKAdditionalGenes">
+			  <geneSets>
+				<li>
+				  <isXenogene>false</isXenogene>
+				  <chance>1</chance>
+				  <geneDefs>
+					<li>Hair_SandyBlonde</li>
+					<li>Skin_Melanin5</li>
+				  </geneDefs>
+				</li>
+			  </geneSets>
+			</li>
+		</modExtensions>
+	  </PawnKindDef>
+	  
+	  <RulePackDef>
+        <defName>guy762_HeroNamer_TurrPhennir</defName>
+        <rulePack>
+            <rulesStrings>
+                <li>r_name->[turr] '[phennir]' [phennir]</li>
+				<li>turr->Turr</li>
+				<li>phennir->Phennir</li>
+            </rulesStrings>
+        </rulePack>
+    </RulePackDef>
+	
+		<!--[PAWN_nameDef] [PAWN_possessive] [PAWN_pronoun]-->
+	
+	
+	<BackstoryDef>
+		<defName>guy762_BackstoryC_TurrPhennir</defName>
+		<title>D'Asta Sector Aristocrat</title>
+		<titleShort>Aristocrat</titleShort>
+		<description>.</description>
+		<slot>Childhood</slot>
+		<skillGains>
+			<Shooting>5</Shooting>
+			<Intellectual>5</Intellectual>
+		</skillGains>
+		<forcedTraits>
+		  <Abrasive>0</Abrasive>
+		</forcedTraits>
+		<requiredWorkTags>
+		  <li>Violent</li>
+		  <li>Intellectual</li>
+		</requiredWorkTags>
+		<bodyTypeMale>Male</bodyTypeMale>
+		<bodyTypeFemale>Female</bodyTypeFemale>
+		<nameMaker>guy762_HeroNamer_TurrPhennir</nameMaker>
+		<spawnCategories>
+			<li>guy762BSC_turrphennir</li>
+		</spawnCategories>
+		<!--shuffleable>False</shuffleable-->
+	</BackstoryDef>
+	
+	<BackstoryDef>
+		<defName>guy762_BackstoryA_TurrPhennir</defName>
+		<title>181st Commander</title>
+		<titleShort>Commander</titleShort>
+		<description>.</description>
+		<slot>Adulthood</slot>
+		<skillGains>
+			<Shooting>10</Shooting>
+			<Construction>5</Construction>
+			<Crafting>5</Crafting>
+			<Intellectual>10</Intellectual>
+		</skillGains>
+		<forcedTraits>
+			<Bloodlust>0</Bloodlust>
+			<ShootingAccuracy>-1</ShootingAccuracy>
+		</forcedTraits>
+		<requiredWorkTags>
+		  <li>Violent</li>
+		  <li>Intellectual</li>
+		</requiredWorkTags>
+		<bodyTypeMale>Male</bodyTypeMale>
+		<bodyTypeFemale>Female</bodyTypeFemale>
+		<nameMaker>guy762_HeroNamer_TurrPhennir</nameMaker>
+		<spawnCategories>
+			<li>guy762BSC_turrphennir</li>
+		</spawnCategories>
+		<!--shuffleable>False</shuffleable-->
+	</BackstoryDef>
+	
+	
+
+</Defs>

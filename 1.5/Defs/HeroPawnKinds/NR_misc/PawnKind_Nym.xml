@@ -113,11 +113,14 @@
 			</categories>
 		  </li>
 		</backstoryFiltersOverride>
+		
 		<abilities>
 			<li>guy762_Ability_CommandTierIII</li>
 			<li MayRequire="Ludeon.RimWorld.Ideology">LeaderSpeech</li>
 			<li MayRequire="Ludeon.RimWorld.Ideology">ProductionCommand</li>
+			<!-- ACE TIER 2 -->
 		</abilities>
+		
 		<modExtensions>
 			<li Class="BodyTypeForPawnKind.ModExtension_HeadTypesOfPawnKind">
 			  <whitelist>

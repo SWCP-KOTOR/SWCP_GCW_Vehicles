@@ -17,7 +17,7 @@
 		<graphicData>
 			<texPath>LandVehicles/AA5/AA5</texPath>
 			<graphicClass>Vehicles.Graphic_Vehicle</graphicClass>
-			<drawSize>(9,9)</drawSize>
+			<drawSize>(11,11)</drawSize>
 			<shaderType>CutoutComplexPattern</shaderType>
 			<pattern>guy762_SWVehiclePattern_AA5Truck</pattern>
 			<color>(170,160,135)</color> <!-- stanky beige -->
@@ -26,10 +26,10 @@
 		
 		<fillPercent>1</fillPercent>
 		
-		<nameable>false</nameable>
+		<nameable>true</nameable>
 		<buildDef>guy762_SWVehicleBP_AA5Truck</buildDef>
 		
-		<size>(5,8)</size>
+		<size>(5,9)</size>
 		<uiIconScale>1</uiIconScale>
 		
 		<vehicleMovementPermissions>DriverNeeded</vehicleMovementPermissions>
@@ -42,6 +42,8 @@
 			<ArmorRating_Sharp>0.65</ArmorRating_Sharp>
 			<ArmorRating_Blunt>0.5</ArmorRating_Blunt> <!-- # of estimated XWMG hull points * 0.1, apply to hard armor curve -->
 			<ArmorRating_Heat>0.75</ArmorRating_Heat>
+			<MaxHitPoints>600</MaxHitPoints> <!-- # of estimated XWMG hull points * 100 -->
+			
 			<Flammability>0.5</Flammability>
 			<MarketValue>5800</MarketValue>
 		</statBases>
@@ -50,22 +52,22 @@
 			<li>
 				<start>IgnitionOn</start>
 				<stop>MoveStart</stop>
-				<value>kotorsound_speederbike_idle</value>
+				<value>kotorsound_hovertankheavy_idle</value>
 			</li>
 			<li>
 				<start>MoveStart</start>
 				<stop>MoveStop</stop>
-				<value>kotorsound_hovercar_moving</value>
+				<value>kotorsound_hovertankheavy_moving</value>
 			</li>
 			<li>
 				<start>MoveStop</start>
 				<stop>MoveStart</stop>
-				<value>kotorsound_speederbike_idle</value>
+				<value>kotorsound_hovertankheavy_idle</value>
 			</li>
 			<li>
 				<start>MoveStop</start>
 				<stop>IgnitionOff</stop>
-				<value>kotorsound_speederbike_idle</value>
+				<value>kotorsound_hovertankheavy_idle</value>
 			</li>
 		</soundSustainersOnEvent>
 		
@@ -94,10 +96,19 @@
 		
 		<properties>
 			<diagonalRotation>false</diagonalRotation>
+			<manhunterTargetsVehicle>false</manhunterTargetsVehicle>
 			
-			<worldSpeedMultiplier>0.7</worldSpeedMultiplier>
-			<!-- <winterSpeedMultiplier>1</winterSpeedMultiplier> -->
-			<offRoadMultiplier>2</offRoadMultiplier>
+			<worldSpeedMultiplier>0.7</worldSpeedMultiplier> <!-- higher number = faster travel -->
+			<winterSpeedMultiplier>1.25</winterSpeedMultiplier> <!-- lower number = faster winter travel -->
+			<offRoadMultiplier>1</offRoadMultiplier> <!-- lower number = faster travel -->
+			
+			<customRoadCosts AssignDefaults = "0.5" /> <!-- vanilla default is 0.5, lower number = faster -->
+			<!-- <customTerrainCosts AllowTerrainWithTag="Water" PathCost="1"/> -->
+			<track Class = "Vehicles.VehicleTrack_Wake">
+				<speed>1</speed>
+			</track>
+			
+			<riverCost>3</riverCost> <!-- higher = slower, <1 = very fast on world map -->
 			
 			<vehicleJobLimitations>
 				<li>(RepairVehicle, 4)</li> <!-- how many pawns can repair this vehicle at a time -->
@@ -181,7 +192,7 @@
 			<li>
 				<key>AA5TruckKey_engine</key>
 				<label>Engine</label>
-				<health>25</health>
+				<health>5</health>
 				<priorityStatEfficiency>true</priorityStatEfficiency>
 				<depth>Internal</depth>
 				
@@ -191,7 +202,7 @@
 						<chance>0.25</chance>
 						<maxHealth>0.2</maxHealth>
 						<radius>3</radius>
-						<damageDef>Flame</damageDef>
+						<damageDef>guy762_ExplosiveDamage_energy</damageDef>
 					</li>
 				</reactors>
 				
@@ -202,7 +213,7 @@
 			<li>
 				<key>AA5TruckKey_repulsor</key>
 				<label>Repulsorlift Generator</label>
-				<health>75</health>
+				<health>5</health>
 				<depth>Internal</depth>
 				
 				<categories>
@@ -212,7 +223,7 @@
 			<li>
 				<key>AA5TruckKey_thrust</key>
 				<label>Thrust Repulsor</label>
-				<health>50</health>
+				<health>5</health>
 				<depth>Internal</depth>
 				
 				<tags>
@@ -241,9 +252,10 @@
 		
 		<comps>
 			<li Class="Vehicles.CompProperties_FueledTravel">
-				<electricPowered>true</electricPowered>
+				<fuelType>KOTOR_Rhydonium</fuelType>
+				<leakDef>Filth_Fuel</leakDef>
 				<fuelConsumptionRate>12.5</fuelConsumptionRate>
-				<fuelCapacity>300</fuelCapacity>
+				<fuelCapacity>175</fuelCapacity>
 				<fuelConsumptionWorldMultiplier>10</fuelConsumptionWorldMultiplier>
 			</li>
 			<li Class="Vehicles.CompProperties_VehicleTurrets">
@@ -252,10 +264,10 @@
 						<turretDef>guy762_VehicleTurret_AA5Truck_dorsal</turretDef>
 						
 						<renderProperties>
-							<north>(-0.575, 1.6)</north>
-							<south>(-0.575, -0.35)</south>
-							<east>(0.975, 1.375)</east>
-							<west>(-0.975, 1.375)</west>
+							<north>(-0.7, 2)</north>
+							<south>(-0.7, -0.4)</south>
+							<east>(1.315, 1.825)</east>
+							<west>(-1.315, 1.825)</west>
 						</renderProperties>
 						<defaultAngleRotated>0</defaultAngleRotated>
 						<!-- <angleRestricted>(315,45)</angleRestricted> -->
@@ -310,7 +322,7 @@
 		<graphicData>
 			<texPath>Starfighters/YT2400/YT2400_gun</texPath>
 			<graphicClass>Vehicles.Graphic_Turret</graphicClass>
-			<drawSize>(4,4)</drawSize>
+			<drawSize>(5,5)</drawSize>
 		</graphicData>
 		
 		<gizmoIconTexPath>Starfighters/YT2400/YT2400_gun</gizmoIconTexPath>

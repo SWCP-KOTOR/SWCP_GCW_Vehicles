@@ -58,6 +58,10 @@
 		<size>(8,9)</size>
 		<vehicleMovementPermissions>DriverNeeded</vehicleMovementPermissions>
 		
+		<killedLeavings>
+		  <guy762_ShipChunk_z95a>1</guy762_ShipChunk_z95a>
+		</killedLeavings>
+		
 		<canCaravan>false</canCaravan>
 		<vehicleCategory>Combat</vehicleCategory>
 		<techLevel>Spacer</techLevel>
@@ -282,6 +286,8 @@
 						
 						<aimPieOffset>(0, 2.55)</aimPieOffset>
 						
+						<autoTargetingActive>True</autoTargetingActive>
+						
 						<key>Z95Key_gun_1</key>
 					</li>
 					<li>
@@ -295,6 +301,8 @@
 						<gizmoLabel>main gun</gizmoLabel>
 						
 						<aimPieOffset>(0, 2.55)</aimPieOffset>
+						
+						<autoTargetingActive>True</autoTargetingActive>
 						
 						<key>Z95Key_gun_2</key>
 					</li>

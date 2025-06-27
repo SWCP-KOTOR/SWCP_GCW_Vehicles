@@ -104,11 +104,19 @@
 		
 		<properties>
 			<diagonalRotation>false</diagonalRotation>
-			
-			<worldSpeedMultiplier>0.5</worldSpeedMultiplier>
-			<!-- <winterSpeedMultiplier>1</winterSpeedMultiplier> -->
 			<manhunterTargetsVehicle>true</manhunterTargetsVehicle>
-			<offRoadMultiplier>1</offRoadMultiplier>
+			
+			<worldSpeedMultiplier>0.5</worldSpeedMultiplier> <!-- higher number = faster travel -->
+			<winterSpeedMultiplier>1</winterSpeedMultiplier> <!-- lower number = faster winter travel -->
+			<offRoadMultiplier>1</offRoadMultiplier> <!-- lower number = faster travel -->
+			
+			<customRoadCosts AssignDefaults = "0.5" /> <!-- vanilla default is 0.5, lower number = faster -->
+			<!-- <customTerrainCosts AllowTerrainWithTag="Water" PathCost="1"/> -->
+			<track Class = "Vehicles.VehicleTrack_Wake">
+				<speed>2</speed>
+			</track>
+			
+			<riverCost>1</riverCost> <!-- higher = slower, <1 = very fast on world map -->
 			
 			<!-- <customHillinessCosts> -->
 				<!-- <SmallHills>0.25</SmallHills> -->
@@ -180,7 +188,7 @@
 			<li>
 				<key>74ZSpeederKey_engine</key>
 				<label>Engine</label>
-				<health>25</health>
+				<health>1</health>
 				<priorityStatEfficiency>true</priorityStatEfficiency>
 				<depth>Internal</depth>
 				
@@ -190,7 +198,7 @@
 						<chance>0.25</chance>
 						<maxHealth>0.2</maxHealth>
 						<radius>3</radius>
-						<damageDef>Flame</damageDef>
+						<damageDef>guy762_ExplosiveDamage_energy</damageDef>
 					</li>
 				</reactors>
 				
@@ -201,7 +209,7 @@
 			<li>
 				<key>74ZSpeederKey_repulsor</key>
 				<label>Repulsorlift Generator</label>
-				<health>75</health>
+				<health>1</health>
 				<depth>Internal</depth>
 				
 				<categories>
@@ -211,7 +219,7 @@
 			<li>
 				<key>74ZSpeederKey_thrust</key>
 				<label>Thrust Repulsor</label>
-				<health>50</health>
+				<health>1</health>
 				<depth>Internal</depth>
 				
 				<tags>

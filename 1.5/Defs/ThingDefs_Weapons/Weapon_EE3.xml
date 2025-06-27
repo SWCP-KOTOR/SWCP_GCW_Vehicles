@@ -55,8 +55,7 @@
 				<hasStandardCommand>true</hasStandardCommand>
 				<defaultProjectile>KotORBlasterBolt_sniper</defaultProjectile>
 				<warmupTime>3.5</warmupTime>
-				<!-- <range>42</range> -->
-				<range>36</range>
+				<range>35</range>
 				<accuracyMedium>1.00</accuracyMedium>
 				<accuracyLong>0.95</accuracyLong>
 				<ticksBetweenBurstShots>20</ticksBetweenBurstShots>

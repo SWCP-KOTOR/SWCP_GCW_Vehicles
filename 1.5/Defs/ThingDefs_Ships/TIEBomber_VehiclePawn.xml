@@ -49,10 +49,10 @@
 			<Flammability>0</Flammability>
 		</statBases>
 		<vehicleStats>
-			<Mass>350</Mass>
+			<Mass>650</Mass>
 			
 			<FlightSpeed>12</FlightSpeed> <!-- this is for world map flight, NOT in-tile flight-->
-			<CargoCapacity>200</CargoCapacity>
+			<CargoCapacity>300</CargoCapacity>
 			<SoS2CombatDodgeChance MayRequire="kentington.saveourship2">27.5</SoS2CombatDodgeChance> <!-- 3/8 chance to dodge on XWMG green dice = 0.375 | 0.375*10 + 10 = 13.75 | 13.75 * X = SoS2DC | X = estimated # of XWMG green dice -->
 		</vehicleStats>
 		
@@ -132,7 +132,7 @@
 				
 				<!-- <damageMultiplierFromNonAntiAirProjectiles>0.3</damageMultiplierFromNonAntiAirProjectiles> -->
 				
-				<fuelConsumptionPerTick>0.001</fuelConsumptionPerTick>
+				<fuelConsumptionPerTick>0.0001</fuelConsumptionPerTick>
 				
 				<flightSpeedPerTick>0.8</flightSpeedPerTick> <!-- MAXIMUM XWMG speed: speed5 = 1, speed1 = 0.2 | + 0.1 for blue 5, -0.1 for red highest -->
 				<flightSpeedTurningPerTick>0.4</flightSpeedTurningPerTick> <!-- highest speed in which all 5 standard maneuvers are available | +0.1 for a full row of blues, -0.1 for any red turns -->
@@ -247,6 +247,8 @@
 						<gizmoLabel>dual gun</gizmoLabel>
 						
 						<aimPieOffset>(0, 2.55)</aimPieOffset>
+						
+						<autoTargetingActive>True</autoTargetingActive>
 						
 						<key>TIEBomberKey_gun_1</key>
 					</li>

@@ -2,62 +2,7 @@
 <Defs>
 
 
-  <ThingDef Name="guy762_TurretBase" ParentName="BuildingBase" Abstract="True">
-    <thingClass>Building_TurretGun</thingClass>
-    <drawerType>MapMeshAndRealTime</drawerType>
-    
-    <minifiedDef>MinifiedThing</minifiedDef>
-    <altitudeLayer>Building</altitudeLayer>
-    
-    <stealable>false</stealable>
-    <size>(2,2)</size>
-    <passability>PassThroughOnly</passability>
-    <pathCost>50</pathCost>
-    <thingCategories>
-      <li>BuildingsSecurity</li>
-    </thingCategories>
-    <tickerType>Normal</tickerType>
-    <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
-    
-    <soundInteract>kotorsound_select_shipgun</soundInteract>
-	
-	
-    <comps>
-      <li Class="CompProperties_Forbiddable"/>
-	  <li Class="CompProperties_Stunnable">
-        <affectedDamageDefs>
-          <li>EMP</li>
-        </affectedDamageDefs>
-      </li>
-    </comps>
-    <statBases>
-      <MaxHitPoints>180</MaxHitPoints>
-      <Flammability>0.7</Flammability>
-      <WorkToBuild>2000</WorkToBuild>
-      <Mass>30</Mass>
-      <Beauty>-20</Beauty>
-    </statBases>
-    <building>
-      <turretBurstWarmupTime>4.0</turretBurstWarmupTime>
-      <turretBurstCooldownTime>28.0</turretBurstCooldownTime>
-	  
-	  <ai_combatDangerous>true</ai_combatDangerous>
-      <turretTopDrawSize>2.7</turretTopDrawSize>
-      <turretTopOffset>(0, 0.05)</turretTopOffset>
-    </building>
-    <placeWorkers>
-      <li>PlaceWorker_NotUnderRoof</li>
-      <li>PlaceWorker_TurretTop</li>
-      <li>PlaceWorker_PreventInteractionSpotOverlap</li>
-    </placeWorkers>
-	
-	<designationCategory>KOTOR_BuildTab</designationCategory>
-    <constructionSkillPrerequisite>5</constructionSkillPrerequisite>
-    <researchPrerequisites>
-      <li>Mortars</li>
-    </researchPrerequisites>
-  </ThingDef>
-
+  
 
   <!--=============== Atgar P-Tower anti-vehicle turret ===============-->
 
@@ -82,8 +27,13 @@
 
 	
     <statBases>
-      <ShootingAccuracyTurret>0.98</ShootingAccuracyTurret> <!-- like level 14 human shooter -->
+      <MaxHitPoints>250</MaxHitPoints>
+	  
+	  <ShootingAccuracyTurret>0.98</ShootingAccuracyTurret> <!-- like level 14 human shooter -->
     </statBases>
+	
+	
+	
     <costList>
       <Steel>300</Steel>
       <Plasteel>30</Plasteel>

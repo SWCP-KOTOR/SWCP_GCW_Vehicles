@@ -77,11 +77,11 @@
 					<label>Pilot</label>
 					<slots>1</slots>
 					<slotsToOperate>1</slotsToOperate>
-					<!-- <handlingTypes> -->
-						<!-- <li>Movement</li> -->
-						<!-- <li>Turret</li> -->
-					<!-- </handlingTypes> -->
-					<comfort>-0.5</comfort>
+					<handlingTypes>
+						<li>Movement</li>
+						<li>Turret</li>
+					</handlingTypes>
+					<comfort>-0.25</comfort>
 					
 					<turretIds>
 						<li>TIEFighterKey_gun_1</li>
@@ -229,6 +229,8 @@
 						<gizmoLabel>dual gun</gizmoLabel>
 						
 						<aimPieOffset>(0, 2.55)</aimPieOffset>
+						
+						<autoTargetingActive>True</autoTargetingActive>
 						
 						<key>TIEFighterKey_gun_1</key>
 					</li>
@@ -437,7 +439,7 @@
 						<!-- <li>Movement</li> -->
 						<!-- <li>Turret</li> -->
 					<!-- </handlingTypes> -->
-					<comfort>-0.5</comfort>
+					<comfort>-0.25</comfort>
 					
 					<turretIds>
 						<li>TIEFighterKey_gun_1</li>

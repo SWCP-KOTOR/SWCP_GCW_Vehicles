@@ -826,18 +826,6 @@
 							<weight>10</weight>
 							<only>(95,100,70)</only> <!-- forest green -->
 						</li>
-						<li>
-							<weight>10</weight>
-							<only>(90,105,120)</only> <!-- muted blue -->
-						</li>
-						<li>
-							<weight>1</weight>
-							<only>(120,125,110)</only>  <!-- slate green -->
-						</li>
-						<li>
-							<weight>1</weight>
-							<only>(105,80,65)</only> <!-- dull brown -->
-						</li>
 					</options>
 				</colorGenerator>
 			</li>
@@ -947,8 +935,267 @@
 	  
 	  
 	  
+	<PawnKindDef Name="SWNewRepub_RebelHeavy" ParentName="SWNewRepub_Base">
+		<defName>SWNewRepub_RebelHeavy</defName>
+		<label>rebel heavy trooper</label>
+		<combatPower>200</combatPower>
+		<minGenerationAge>20</minGenerationAge>
+		<maxGenerationAge>35</maxGenerationAge>
+		<itemQuality>Normal</itemQuality>
+		
+		<maxPerGroup>8</maxPerGroup>
+		
+		<apparelMoney>1500~5500</apparelMoney>
+		<apparelAllowHeadgearChance>1</apparelAllowHeadgearChance>
+		<apparelTags>
+		  <li>KotOREquipment_basic</li>
+		  <li>NewRepublic_rebelheavytrooper</li>
+		  <li>SWWarlordsAccessory_scumtrooper</li>
+		</apparelTags>
+		<apparelRequired>
+			<li>guy762_RebelHelmet_vanguard</li>
+			<li>guy762_RebelCloneArmor</li>
+			<li>guy762_Bodysuit_Dyeable</li>
+		</apparelRequired>
+		
+		<specificApparelRequirements>
+			<li>
+				<apparelLayer>Shell</apparelLayer>
+				<color>(130,125,105)</color>         <!-- khaki -->
+			</li>
+			<li>
+				<apparelLayer>OnSkin</apparelLayer>
+				<color>(150,140,95)</color>         <!-- dijon -->
+			</li>
+		</specificApparelRequirements>
+		
+		<biocodeWeaponChance>0</biocodeWeaponChance>
+		<weaponMoney>6000~6400</weaponMoney>
+		<weaponTags>
+			<li>SWRanged_PLX4LRocketRifle</li>
+			<li>SWRanged_HH15MissieLauncher</li>
+		</weaponTags>
+		
+		<skills>
+			<li>
+				<skill>Shooting</skill>
+				<range>8~10</range>
+			</li>
+			<li>
+				<skill>Melee</skill>
+				<range>4~6</range>
+			</li>
+		</skills>
+		
+		<inventoryOptions>
+			<skipChance>0.5</skipChance>
+			<subOptionsChooseOne>
+				<li>
+					<thingDef>guy762_medpac</thingDef>
+					<countRange>1~3</countRange>
+				</li>
+			</subOptionsChooseOne>
+		</inventoryOptions>
+		
+		<initialWillRange>0.5~2</initialWillRange>
+		<initialResistanceRange>5~10</initialResistanceRange>
+		
+		<modExtensions Inherit="False">
+			<li Class="BodyTypeForPawnKind.ModExtension_BodyTypesOfPawnKind">
+				<whitelist>
+					<li>Hulk</li>
+				</whitelist>
+				<blacklist>
+				</blacklist>
+				<priority>
+					<!--When violates the black/whitelist, selected from these-->
+					<li>Hulk</li>
+				</priority>
+				<!--Align body gender to pawn's gender (default: True)-->
+				<checkGender>False</checkGender>
+			</li>
+		</modExtensions>
+	</PawnKindDef>
+	
+	
+	
+	
+	
+	
+	
+	
+	<PawnKindDef Name="SWNewRepub_RebelMedic" ParentName="SWNewRepub_Base">
+		<defName>SWNewRepub_RebelMedic</defName>
+		<label>rebel combat medic</label>
+		<combatPower>50</combatPower>
+		<minGenerationAge>20</minGenerationAge>
+		<maxGenerationAge>55</maxGenerationAge>
+		<itemQuality>Normal</itemQuality>
+		
+		<maxPerGroup>2</maxPerGroup>
+		
+		<xenotypeSet Inherit="False">
+		  <xenotypeChances>
+			<Baseliner MayRequire="Ludeon.RimWorld.Biotech">999</Baseliner>
+		  </xenotypeChances>
+		</xenotypeSet>
+		<useFactionXenotypes>false</useFactionXenotypes>
+
+		<apparelMoney>5500~7500</apparelMoney>
+		<apparelAllowHeadgearChance>1</apparelAllowHeadgearChance>
+		<apparelTags>
+			<li>KotORUtility_StabilizerGauntlets</li>
+			<li>NewRepublic_rebelmedic</li>
+			<li>SWMedicBelt</li>
+		</apparelTags>
+		<apparelRequired>
+			<li>guy762_MedicBelt</li>
+			<!-- <li>Apparel_PackBroadshield</li> -->
+			<li>guy762_RebelHelmet_vanguard</li>
+			<li>guy762_RebelCombatSuit_medic</li>
+			<li>guy762_GenericUniform_fatigues</li>
+		</apparelRequired>
+		<specificApparelRequirements>
+			<li>
+				<apparelLayer>OnSkin</apparelLayer>
+				<color>(90,105,120)</color>      <!-- muted blue -->
+			</li>
+		</specificApparelRequirements>
+
+		<biocodeWeaponChance>0</biocodeWeaponChance>
+		<weaponMoney>500~600</weaponMoney>
+		<weaponTags>
+			<li>SWRanged_E11carbine</li>
+			<li>SWRanged_DH17pistol</li>
+		</weaponTags>
+		
+		<skills>
+			<li>
+				<skill>Shooting</skill>
+				<range>4~8</range>
+			</li>
+			<li>
+				<skill>Medicine</skill>
+				<range>8~12</range>
+			</li>
+		</skills>
+		<inventoryOptions>
+			<skipChance>0</skipChance>
+			<subOptionsChooseOne>
+				<li>
+					<thingDef>KOTOR_SpacerMedKit</thingDef>
+					<countRange>3~4</countRange>
+				</li>
+				<li>
+					<thingDef>KOTOR_kolto</thingDef>
+					<countRange>2~3</countRange>
+				</li>
+			</subOptionsChooseOne>
+		</inventoryOptions>
+
+		<initialWillRange>0.5~2</initialWillRange>
+		<initialResistanceRange>5~10</initialResistanceRange>
+	</PawnKindDef>
 	  
 	  
+	  
+	
+
+
+
+
+	<PawnKindDef Name="SWNewRepub_RebelArmyLt" ParentName="SWNewRepub_Base">
+		<defName>SWNewRepub_RebelArmyLt</defName>
+		<label>rebel lieutenant</label>
+		<combatPower>75</combatPower>
+		<minGenerationAge>22</minGenerationAge>
+		<maxGenerationAge>45</maxGenerationAge>
+		<itemQuality>Good</itemQuality>
+		
+		<maxPerGroup>2</maxPerGroup>
+		
+		<apparelMoney>1500~5500</apparelMoney>
+		<apparelAllowHeadgearChance>1</apparelAllowHeadgearChance>
+		<apparelTags>
+		  <li>KotOREquipment_basic</li>
+		  <li>NewRepublic_rebeltrooper</li>
+		  <li>SWWarlordsAccessory_scumtrooper</li>
+		</apparelTags>
+		<apparelRequired>
+			<li>guy762_RebelHelmet_vanguard</li>
+			<li>guy762_RebelCombatSuit_lowrank</li>
+			<li>guy762_GenericUniform_fatigues</li>
+		</apparelRequired>
+		
+		<specificApparelRequirements>
+			<li>
+				<apparelLayer>Shell</apparelLayer>
+				<color>(130,125,105)</color>         <!-- khaki -->
+			</li>
+			<li>
+				<apparelLayer>Middle</apparelLayer>
+				<apparelDef>guy762_RebelCombatSuit_lowrank</apparelDef>
+				<styleDef>guy762_RankStyle_RebOfficerArmor_armylt</styleDef>
+				<quality>Good</quality>
+			</li>
+			<li>
+				<apparelLayer>OnSkin</apparelLayer>
+				<colorGenerator Class="ColorGenerator_Options">
+					<options>
+						<li>
+							<weight>10</weight>
+							<only>(120,125,110)</only>  <!-- slate green -->
+						</li>
+						<li>
+							<weight>10</weight>
+							<only>(105,80,65)</only> <!-- dull brown -->
+						</li>
+					</options>
+				</colorGenerator>
+			</li>
+		</specificApparelRequirements>
+		
+		<biocodeWeaponChance>0</biocodeWeaponChance>
+		<weaponMoney>500~3000</weaponMoney>
+		<weaponTags>
+		  <li>SWRanged_E11carbine</li>
+		  <li>SWRanged_A280Crifle</li> <!-- replace with RT-97c -->
+		</weaponTags>
+		
+		<skills>
+			<li>
+				<skill>Shooting</skill>
+				<range>8~10</range>
+			</li>
+			<li>
+				<skill>Melee</skill>
+				<range>4~6</range>
+			</li>
+			<li>
+				<skill>Social</skill>
+				<range>6~8</range>
+			</li>
+		</skills>
+		
+		<inventoryOptions>
+			<skipChance>0</skipChance>
+			<subOptionsChooseOne>
+				<li>
+					<thingDef>guy762_medpac_adv</thingDef>
+					<countRange>1~3</countRange>
+				</li>
+			</subOptionsChooseOne>
+		</inventoryOptions>
+		
+		<initialWillRange>0.5~2</initialWillRange>
+		<initialResistanceRange>5~10</initialResistanceRange>
+		
+		<abilities>
+			<!-- <li>WorkDrive</li> -->
+			<!-- <li>ProductionCommand</li> -->
+			<li>MarksmanCommand</li>
+		</abilities>
+	</PawnKindDef>
 	  
 	  
 	  

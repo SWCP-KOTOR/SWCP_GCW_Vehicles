@@ -37,7 +37,7 @@
 				<defaultProjectile>KotORRocket</defaultProjectile>
 				<warmupTime>4</warmupTime>
 				<defaultCooldownTime>10</defaultCooldownTime>
-				<range>28</range>
+				<range>30</range>
 				<ticksBetweenBurstShots>40</ticksBetweenBurstShots>
 				<burstShotCount>3</burstShotCount>
 				<soundCast>kotorsound_JKrocket</soundCast>
@@ -53,26 +53,33 @@
 					<canTargetLocations>true</canTargetLocations>
 				</targetParams>
 			</li>
-			<li>
-				<label>homing AV missile</label>
+			<li Class="VerbShootVehicle.VerbPropertiesAntiVehicle">
+				<label>homing AA/AV missile</label>
 				<commandIcon>UI/targetlock</commandIcon>
-				<verbClass>Verb_Shoot</verbClass>
+				<verbClass>VerbShootVehicle.Verb_ShootAntiVehicle</verbClass>
 				<hasStandardCommand>true</hasStandardCommand>
 				<defaultProjectile>SWProj_SAAVProtonMissile_light</defaultProjectile>
 				<warmupTime>6</warmupTime>
 				<defaultCooldownTime>10</defaultCooldownTime>
-				<range>36</range>
+				<range>40</range>
 				<ticksBetweenBurstShots>20</ticksBetweenBurstShots>
 				<burstShotCount>1</burstShotCount>
 				<soundCast>kotorsound_JKrocket_alt</soundCast>
-				<soundCastTail>GunTail_Medium</soundCastTail>
-				<muzzleFlashScale>9</muzzleFlashScale>
+				<soundCastTail>GunTail_Heavy</soundCastTail>
+				<muzzleFlashScale>14</muzzleFlashScale>
 				<ai_IsWeapon>true</ai_IsWeapon>
 				
 				<forcedMissRadius>0.5</forcedMissRadius>
 				<onlyManualCast>true</onlyManualCast>
 				<ai_IsBuildingDestroyer>true</ai_IsBuildingDestroyer>
 				<ai_AvoidFriendlyFireRadius>3</ai_AvoidFriendlyFireRadius>
+				
+				<targetParams>
+                    <canTargetLocations>false</canTargetLocations>
+                </targetParams>
+                <onlyTargetVehicle>True</onlyTargetVehicle>
+                <onlyTargetFleshType>False</onlyTargetFleshType>
+                <!-- <fleshTypeDef>FleshTypeDef</fleshTypeDef> -->
 			</li>
 		</verbs>
 		<tools>

@@ -39,7 +39,7 @@
 				<hasStandardCommand>true</hasStandardCommand>
 				<defaultProjectile>KotORBlasterBolt_default</defaultProjectile>
 				<warmupTime>0.5</warmupTime>
-				<range>17</range>
+				<range>20</range>
 				<ticksBetweenBurstShots>8</ticksBetweenBurstShots>
 				<burstShotCount>3</burstShotCount>
 				<soundCast>kotorsound_CISpistol</soundCast>

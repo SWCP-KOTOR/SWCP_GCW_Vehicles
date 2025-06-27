@@ -250,7 +250,7 @@
 		<techLevel>Spacer</techLevel>
 		<description>.</description>
 		<graphicData>
-			<texPath>Apparel/Mandalorian/jodokast/Apparel</texPath>
+			<texPath>Apparel/Mandalorian/jodokast/Apparel_item</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
 			<!-- <shaderType>CutoutComplex</shaderType> -->
 			<shaderType>CutoutMultiMask</shaderType>
@@ -352,7 +352,7 @@
 		<techLevel>Spacer</techLevel>
 		<description>.</description>
 		<graphicData>
-			<texPath>Apparel/Mandalorian/jodokast/helmet/helmet</texPath>
+			<texPath>Apparel/Mandalorian/jodokast/helmet/helmet_item</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
 			<shaderType>CutoutMultiMask</shaderType>
 			<!-- <shaderType>CutoutComplex</shaderType> -->
@@ -974,9 +974,9 @@
 			<MarketValue>7620</MarketValue>
 			
 			<MaxHitPoints>115</MaxHitPoints>
-      		<ArmorRating_Sharp>0.35</ArmorRating_Sharp>
-			<ArmorRating_Blunt>0.2</ArmorRating_Blunt>
-			<ArmorRating_Heat>0.45</ArmorRating_Heat>
+      		<ArmorRating_Sharp>0.45</ArmorRating_Sharp>
+			<ArmorRating_Blunt>0.3</ArmorRating_Blunt>
+			<ArmorRating_Heat>0.55</ArmorRating_Heat>
 			<EquipDelay>2</EquipDelay>
 		</statBases>
 		<equippedStatOffsets>

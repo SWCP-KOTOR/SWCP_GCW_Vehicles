@@ -291,6 +291,8 @@
 						
 						<aimPieOffset>(0, 2.55)</aimPieOffset>
 						
+						<autoTargetingActive>True</autoTargetingActive>
+						
 						<key>YWingKey_gun_1</key>
 					</li>
 					<li>
@@ -301,9 +303,11 @@
 						</renderProperties>
 						<defaultAngleRotated>0</defaultAngleRotated>
 						<!-- <angleRestricted>(315,45)</angleRestricted> -->
-						<gizmoLabel>dorsal turret</gizmoLabel>
+						<gizmoLabel>dorsal ion turret</gizmoLabel>
 						
 						<aimPieOffset>(0, 2.55)</aimPieOffset>
+						
+						<autoTargetingActive>True</autoTargetingActive>
 						
 						<key>YWingKey_gun_2</key>
 					</li>

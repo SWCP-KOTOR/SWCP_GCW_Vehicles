@@ -38,7 +38,7 @@
 				<defaultProjectile>KotORBlasterBolt_default</defaultProjectile>
 				<warmupTime>0.5</warmupTime>
 				<defaultCooldownTime>1</defaultCooldownTime>
-				<range>23</range>
+				<range>20</range>
 				<ticksBetweenBurstShots>12</ticksBetweenBurstShots>
 				<burstShotCount>1</burstShotCount>
 				<soundCast>kotorsound_dl44han</soundCast>
@@ -116,7 +116,7 @@
 				<defaultProjectile>KotORBlasterBolt_default</defaultProjectile>
 				<warmupTime>1</warmupTime>
 				<defaultCooldownTime>2</defaultCooldownTime>
-				<range>23</range>
+				<range>20</range>
 				<ticksBetweenBurstShots>12</ticksBetweenBurstShots>
 				<burstShotCount>3</burstShotCount>
 				<soundCast>kotorsound_dl44han</soundCast>
@@ -196,7 +196,7 @@
 				<defaultProjectile>KotORBlasterBolt_default</defaultProjectile>
 				<warmupTime>0.5</warmupTime>
 				<defaultCooldownTime>1</defaultCooldownTime>
-				<range>23</range>
+				<range>20</range>
 				<ticksBetweenBurstShots>12</ticksBetweenBurstShots>
 				<burstShotCount>1</burstShotCount>
 				<soundCast>kotorsound_dl44han</soundCast>
@@ -293,7 +293,7 @@
 				<defaultProjectile>KotORBlasterBolt_default</defaultProjectile>
 				<warmupTime>1</warmupTime>
 				<defaultCooldownTime>2</defaultCooldownTime>
-				<range>23</range>
+				<range>20</range>
 				<ticksBetweenBurstShots>12</ticksBetweenBurstShots>
 				<burstShotCount>3</burstShotCount>
 				<soundCast>kotorsound_dl44han</soundCast>

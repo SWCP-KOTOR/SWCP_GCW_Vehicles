@@ -280,6 +280,8 @@
 						
 						<aimPieOffset>(0, 2.55)</aimPieOffset>
 						
+						<autoTargetingActive>True</autoTargetingActive>
+						
 						<key>XWingKey_gun_1</key>
 					</li>
 					<li>
@@ -293,6 +295,8 @@
 						<gizmoLabel>main gun</gizmoLabel>
 						
 						<aimPieOffset>(0, 2.55)</aimPieOffset>
+						
+						<autoTargetingActive>True</autoTargetingActive>
 						
 						<key>XWingKey_gun_2</key>
 					</li>
@@ -308,6 +312,8 @@
 						
 						<aimPieOffset>(0, 2.55)</aimPieOffset>
 						
+						<autoTargetingActive>True</autoTargetingActive>
+						
 						<key>XWingKey_gun_3</key>
 					</li>
 					<li>
@@ -321,6 +327,8 @@
 						<gizmoLabel>main gun</gizmoLabel>
 						
 						<aimPieOffset>(0, 2.55)</aimPieOffset>
+						
+						<autoTargetingActive>True</autoTargetingActive>
 						
 						<key>XWingKey_gun_4</key>
 					</li>

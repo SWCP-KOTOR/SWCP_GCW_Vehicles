@@ -56,7 +56,7 @@
 				<defaultProjectile>SWProj_FC1FragGrenade</defaultProjectile>
 				<warmupTime>2.5</warmupTime>
 				<defaultCooldownTime>8</defaultCooldownTime>
-				<range>28</range>
+				<range>30</range>
 				<ticksBetweenBurstShots>0</ticksBetweenBurstShots>
 				<burstShotCount>2</burstShotCount>
 				<!--soundAiming>kotorsound_powercharge</soundAiming-->

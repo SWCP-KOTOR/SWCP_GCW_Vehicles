@@ -73,6 +73,10 @@
 				</li>
 			</subOptionsChooseOne>
 		</inventoryOptions>
+		
+		<forcedTraits>
+			<Psychopath>0</Psychopath>
+		</forcedTraits>
 
 		<disallowedTraits>
 			<li>Brawler</li>
@@ -160,6 +164,11 @@
 				</li>
 			</subOptionsChooseOne>
 		</inventoryOptions>
+		
+		<forcedTraits>
+			<Psychopath>0</Psychopath>
+		</forcedTraits>
+
 
 		<disallowedTraits>
 			<li>Brawler</li>
@@ -249,6 +258,10 @@
 				</li>
 			</subOptionsChooseOne>
 		</inventoryOptions>
+		
+		<forcedTraits>
+			<Psychopath>0</Psychopath>
+		</forcedTraits>
 
 		<disallowedTraits>
 			<li>Brawler</li>
@@ -357,6 +370,10 @@
 				</li>
 			</subOptionsChooseOne>
 		</inventoryOptions>
+		
+		<forcedTraits>
+			<Psychopath>0</Psychopath>
+		</forcedTraits>
 
 		<disallowedTraits>
 			<li>Brawler</li>
@@ -631,6 +648,10 @@
 				</li>
 			</subOptionsChooseOne>
 		</inventoryOptions>
+		
+		<forcedTraits>
+			<Psychopath>0</Psychopath>
+		</forcedTraits>
 
 		<disallowedTraits>
 			<li>Brawler</li>

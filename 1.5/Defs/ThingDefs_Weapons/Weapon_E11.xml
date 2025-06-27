@@ -39,7 +39,7 @@
 				<hasStandardCommand>true</hasStandardCommand>
 				<defaultProjectile>KotORBlasterBolt_default</defaultProjectile>
 				<warmupTime>0.5</warmupTime>
-				<range>28</range>
+				<range>30</range>
 				<ticksBetweenBurstShots>10</ticksBetweenBurstShots>
 				<burstShotCount>1</burstShotCount>
 				<soundCast>kotorsound_E11carbine</soundCast>
@@ -134,7 +134,7 @@
 				<defaultProjectile>KotORBlasterBolt_default</defaultProjectile>
 				<warmupTime>2</warmupTime>
 				<defaultCooldownTime>4</defaultCooldownTime>
-				<range>17</range>
+				<range>20</range>
 				<ticksBetweenBurstShots>8</ticksBetweenBurstShots>
 				<burstShotCount>6</burstShotCount>
 				<forcedMissRadius>1.75</forcedMissRadius>
@@ -302,7 +302,7 @@
 				<defaultProjectile>SWProj_DoubleBlasterBolt</defaultProjectile>
 				<warmupTime>1.5</warmupTime>
 				<defaultCooldownTime>3.25</defaultCooldownTime>
-				<range>28</range>
+				<range>30</range>
 				<ticksBetweenBurstShots>40</ticksBetweenBurstShots>
 				<burstShotCount>3</burstShotCount>
 				<soundCast>kotorsound_E11carbine</soundCast>
@@ -319,7 +319,7 @@
 				<defaultProjectile>KotORBlasterBolt_default</defaultProjectile>
 				<warmupTime>4</warmupTime>
 				<defaultCooldownTime>4</defaultCooldownTime>
-				<range>23</range>
+				<range>25</range>
 				<ticksBetweenBurstShots>8</ticksBetweenBurstShots>
 				<burstShotCount>12</burstShotCount>
 				<forcedMissRadius>2</forcedMissRadius>

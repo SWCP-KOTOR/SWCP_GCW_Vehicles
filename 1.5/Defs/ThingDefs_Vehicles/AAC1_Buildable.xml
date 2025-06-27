@@ -10,7 +10,7 @@
 		<graphicData>
 			<texPath>LandVehicles/AAC1/AAC1</texPath>
 			<graphicClass>Graphic_Multi</graphicClass>
-			<drawSize>(6,6)</drawSize>
+			<drawSize>(7,7)</drawSize>
 			<!-- <drawOffset>(0, 0, 1)</drawOffset> -->
 		</graphicData>
 		
@@ -20,7 +20,7 @@
 			<Flammability>0.05</Flammability>
 		</statBases>
 		
-		<size>(3,5)</size>
+		<size>(4,6)</size>
 		
 		<!--researchPrerequisites>
 			<li>VVE_BasicVehicles</li>

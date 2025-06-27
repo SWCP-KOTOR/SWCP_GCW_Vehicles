@@ -12,16 +12,16 @@
 			<texPath>LandVehicles/TIECrawler/TIECrawler</texPath>
 			<graphicClass>Vehicles.Graphic_Vehicle</graphicClass>
 			<shaderType>CutoutComplexPattern</shaderType>
-			<drawSize>(7,7)</drawSize>
+			<drawSize>(9,9)</drawSize>
 			<color>(140,140,160)</color>
 		</graphicData>
 		
 		<fillPercent>1</fillPercent>
 		
-		<nameable>false</nameable>
+		<nameable>true</nameable>
 		<buildDef>guy762_SWVehicleBP_TIECrawler</buildDef>
 		
-		<size>(6,5)</size>
+		<size>(8,6)</size>
 		<uiIconScale>1</uiIconScale>
 		
 		<vehicleMovementPermissions>DriverNeeded</vehicleMovementPermissions>
@@ -36,7 +36,7 @@
 			<ArmorRating_Sharp>0.45</ArmorRating_Sharp>
 			<ArmorRating_Blunt>0.3</ArmorRating_Blunt> <!-- # of estimated XWMG hull points * 0.1, apply to hard armor curve -->
 			<ArmorRating_Heat>0.55</ArmorRating_Heat>
-			<MaxHitPoints>4000</MaxHitPoints> <!-- # of estimated XWMG hull points * 1000 -->
+			<MaxHitPoints>400</MaxHitPoints> <!-- # of estimated XWMG hull points * 100 -->
 			
 			<Flammability>0.5</Flammability>
 			<MarketValue>5800</MarketValue>
@@ -90,12 +90,14 @@
 		
 		<properties>
 			<diagonalRotation>false</diagonalRotation>
+			<manhunterTargetsVehicle>false</manhunterTargetsVehicle>
 			
-			<worldSpeedMultiplier>0.3</worldSpeedMultiplier>
-			<winterSpeedMultiplier>3.25</winterSpeedMultiplier>
-			<offRoadMultiplier>2</offRoadMultiplier>
+			<worldSpeedMultiplier>0.3</worldSpeedMultiplier> <!-- higher number = faster travel -->
+			<winterSpeedMultiplier>3.25</winterSpeedMultiplier> <!-- lower number = faster winter travel -->
+			<offRoadMultiplier>2</offRoadMultiplier> <!-- lower number = faster travel -->
 			
-			<customRoadCosts AssignDefaults = "0.4" />
+			<customRoadCosts AssignDefaults = "0.5" /> <!-- vanilla default is 0.5, lower number = faster -->
+			
 			<vehicleJobLimitations>
 				<li>(RepairVehicle, 2)</li> <!-- how many pawns can repair this vehicle at a time -->
 			</vehicleJobLimitations> <!-- guy762 RULES: repair job count should be twice the amount of pawns to fully operate the vehicle -->
@@ -162,7 +164,7 @@
 			<li>
 				<key>TIECrawlerKey_engine</key>
 				<label>Engine</label>
-				<health>25</health>
+				<health>5</health>
 				<priorityStatEfficiency>true</priorityStatEfficiency>
 				<depth>Internal</depth>
 				
@@ -172,7 +174,7 @@
 						<chance>0.5</chance>
 						<maxHealth>0.2</maxHealth>
 						<radius>3</radius>
-						<damageDef>Flame</damageDef>
+						<damageDef>guy762_ExplosiveDamage_energy</damageDef>
 					</li>
 				</reactors>
 				
@@ -183,7 +185,7 @@
 			<li>
 				<key>TIECrawlerKey_leftaxle</key>
 				<label>Left Axle</label>
-				<health>25</health>
+				<health>10</health>
 				<depth>Internal</depth>
 				
 				<categories>
@@ -193,7 +195,7 @@
 			<li>
 				<key>TIECrawlerKey_rightaxle</key>
 				<label>Right Axle</label>
-				<health>25</health>
+				<health>10</health>
 				<depth>Internal</depth>
 				
 				<categories>
@@ -203,7 +205,7 @@
 			<li>
 				<key>TIECrawlerKey_tread_left</key>
 				<label>Left Treads</label>
-				<health>50</health>
+				<health>5</health>
 				<depth>Internal</depth>
 				
 				<tags>
@@ -217,7 +219,7 @@
 			<li>
 				<key>TIECrawlerKey_tread_right</key>
 				<label>Right Treads</label>
-				<health>50</health>
+				<health>5</health>
 				<depth>Internal</depth>
 				
 				<tags>
@@ -258,10 +260,10 @@
 						<turretDef>guy762_VehicleTurret_TIECrawler_main</turretDef>
 						
 						<renderProperties>
-							<north>(0, 1.4)</north>
-							<south>(0, -1.8)</south>
-							<east>(1.8, 0)</east>
-							<west>(-1.8, 0)</west>
+							<north>(0, 1.65)</north>
+							<south>(0, -2.25)</south>
+							<east>(2.25, 0)</east>
+							<west>(-2.25, 0)</west>
 						</renderProperties>
 						<defaultAngleRotated>0</defaultAngleRotated>
 						<angleRestricted>(315,45)</angleRestricted>
@@ -279,14 +281,16 @@
 						<turretDef>guy762_VehicleTurret_TIECrawler_AV</turretDef>
 						
 						<renderProperties>
-							<north>(0, 1.4)</north>
-							<south>(0, -1.8)</south>
-							<east>(1.8, 0)</east>
-							<west>(-1.8, 0)</west>
+							<north>(0, 1.65)</north>
+							<south>(0, -2.25)</south>
+							<east>(2.25, 0)</east>
+							<west>(-2.25, 0)</west>
 						</renderProperties>
 						<defaultAngleRotated>0</defaultAngleRotated>
 						<angleRestricted>(315,45)</angleRestricted>
 						<gizmoLabel>AV gun</gizmoLabel>
+						
+						<autoTargetingActive>True</autoTargetingActive>
 						
 						<aimPieOffset>(0, 2.55)</aimPieOffset>
 						

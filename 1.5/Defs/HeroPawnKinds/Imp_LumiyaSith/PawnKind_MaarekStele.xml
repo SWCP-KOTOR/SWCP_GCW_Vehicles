@@ -80,9 +80,11 @@
 			</categories>
 		  </li>
 		</backstoryFiltersOverride>
+		
 		<abilities>
-			<!-- <li MayRequire="Ludeon.RimWorld.Ideology">LeaderSpeech</li> -->
+			<!-- ACE TIER 2 -->
 		</abilities>
+		
 		<modExtensions>
 			<li Class="BodyTypeForPawnKind.ModExtension_HeadTypesOfPawnKind">
 			  <whitelist>

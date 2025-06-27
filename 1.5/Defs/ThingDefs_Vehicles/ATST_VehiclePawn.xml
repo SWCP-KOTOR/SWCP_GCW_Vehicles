@@ -29,7 +29,7 @@
 		
 		<fillPercent>1</fillPercent>
 		
-		<nameable>false</nameable>
+		<nameable>true</nameable>
 		<buildDef>guy762_SWVehicleBP_ATST</buildDef>
 		
 		<size>(5,5)</size>
@@ -47,7 +47,7 @@
 			<ArmorRating_Sharp>0.35</ArmorRating_Sharp>
 			<ArmorRating_Blunt>0.2</ArmorRating_Blunt> <!-- # of estimated XWMG hull points * 0.1, apply to hard armor curve -->
 			<ArmorRating_Heat>0.45</ArmorRating_Heat>
-			<MaxHitPoints>3000</MaxHitPoints> <!-- # of estimated XWMG hull points * 1000 -->
+			<MaxHitPoints>300</MaxHitPoints> <!-- # of estimated XWMG hull points * 100 -->
 			
 			<Flammability>0.5</Flammability>
 			<MarketValue>5800</MarketValue>
@@ -101,12 +101,20 @@
 		
 		<properties>
 			<diagonalRotation>false</diagonalRotation>
+			<manhunterTargetsVehicle>false</manhunterTargetsVehicle>
 			
-			<worldSpeedMultiplier>0.5</worldSpeedMultiplier>
-			<winterSpeedMultiplier>3.25</winterSpeedMultiplier>
-			<offRoadMultiplier>1</offRoadMultiplier>
+			<worldSpeedMultiplier>0.5</worldSpeedMultiplier> <!-- higher number = faster travel -->
+			<winterSpeedMultiplier>3.25</winterSpeedMultiplier> <!-- lower number = faster winter travel -->
+			<offRoadMultiplier>1</offRoadMultiplier> <!-- lower number = faster travel -->
 			
-			<customRoadCosts AssignDefaults = "0.4" />
+			<customRoadCosts AssignDefaults = "0.5" /> <!-- vanilla default is 0.5, lower number = faster -->
+			<!-- <customTerrainCosts AllowTerrainWithTag="Water" PathCost="1"/>         "All Terrain" walker but can't traverse deep water -->
+			<track Class = "Vehicles.VehicleTrack_Wake">
+				<speed>1</speed>
+			</track>
+			
+			<riverCost>5</riverCost> <!-- higher = slower, <1 = very fast on world map -->
+			
 			<vehicleJobLimitations>
 				<li>(RepairVehicle, 4)</li> <!-- how many pawns can repair this vehicle at a time -->
 			</vehicleJobLimitations> <!-- guy762 RULES: repair job count should be twice the amount of pawns to fully operate the vehicle -->
@@ -193,7 +201,7 @@
 			<li>
 				<key>ATSTKey_engine</key>
 				<label>Engine</label>
-				<health>25</health>
+				<health>5</health>
 				<priorityStatEfficiency>true</priorityStatEfficiency>
 				<depth>Internal</depth>
 				
@@ -203,7 +211,7 @@
 						<chance>0.5</chance>
 						<maxHealth>0.2</maxHealth>
 						<radius>3</radius>
-						<damageDef>Flame</damageDef>
+						<damageDef>guy762_ExplosiveDamage_energy</damageDef>
 					</li>
 				</reactors>
 				
@@ -214,7 +222,7 @@
 			<li>
 				<key>ATSTKey_leftleg</key>
 				<label>Left Leg</label>
-				<health>25</health>
+				<health>10</health>
 				<depth>Internal</depth>
 				
 				<categories>
@@ -224,7 +232,7 @@
 			<li>
 				<key>ATSTKey_rightleg</key>
 				<label>Right Leg</label>
-				<health>25</health>
+				<health>10</health>
 				<depth>Internal</depth>
 				
 				<categories>
@@ -234,7 +242,7 @@
 			<li>
 				<key>ATSTKey_leftfoot</key>
 				<label>Left Foot</label>
-				<health>50</health>
+				<health>10</health>
 				<depth>Internal</depth>
 				
 				<tags>
@@ -248,7 +256,7 @@
 			<li>
 				<key>ATSTKey_rightfoot</key>
 				<label>Right Foot</label>
-				<health>50</health>
+				<health>10</health>
 				<depth>Internal</depth>
 				
 				<tags>
@@ -314,6 +322,8 @@
 						<angleRestricted>(315,45)</angleRestricted>
 						<gizmoLabel>light AI repeater</gizmoLabel>
 						
+						<autoTargetingActive>True</autoTargetingActive>
+						
 						<aimPieOffset>(0, 2.55)</aimPieOffset>
 						
 						<key>ATSTKey_gun_2</key>
@@ -344,7 +354,7 @@
 	
 	<Vehicles.VehicleTurretDef ParentName="VehicleTurretBase">
 		<defName>guy762_VehicleTurret_ATST_main</defName>
-		<label>AT-ST anti-infantry gun</label>
+		<label>AT-ST heavy anti-infantry gun</label>
 		<description>The main gun of an AT-ST walker.</description>
 		
 		<turretType>Rotatable</turretType>

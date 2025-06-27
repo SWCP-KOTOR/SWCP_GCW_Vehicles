@@ -37,7 +37,7 @@
 				<hasStandardCommand>true</hasStandardCommand>
 				<defaultProjectile>KotORBlasterBolt_default</defaultProjectile>
 				<warmupTime>0.5</warmupTime>
-				<range>23</range>
+				<range>20</range>
 				<ticksBetweenBurstShots>12</ticksBetweenBurstShots>
 				<burstShotCount>1</burstShotCount>
 				<soundCast>kotorsound_DL18pistol</soundCast>
@@ -53,7 +53,7 @@
 				<hasStandardCommand>true</hasStandardCommand>
 				<defaultProjectile>KotORBlasterBolt_sniper</defaultProjectile>
 				<warmupTime>2</warmupTime>
-				<range>28</range>
+				<range>30</range>
 				<accuracyMedium>0.95</accuracyMedium>
 				<accuracyLong>0.90</accuracyLong>
 				<ticksBetweenBurstShots>20</ticksBetweenBurstShots>
@@ -140,7 +140,7 @@
 				<defaultProjectile>KotORBlasterBolt_default</defaultProjectile>
 				<warmupTime>0.5</warmupTime>
 				<defaultCooldownTime>1</defaultCooldownTime>
-				<range>23</range>
+				<range>20</range>
 				<ticksBetweenBurstShots>14</ticksBetweenBurstShots>
 				<burstShotCount>1</burstShotCount>
 				<soundCast>kotorsound_DL21pistol</soundCast>
@@ -157,7 +157,7 @@
 				<defaultProjectile>SWProj_ScatterBlasterBolt</defaultProjectile>
 				<warmupTime>2</warmupTime>
 				<defaultCooldownTime>3.5</defaultCooldownTime>
-				<range>23</range>
+				<range>20</range>
 				<accuracyTouch>0.45</accuracyTouch>
 				<accuracyShort>0.55</accuracyShort>
 				<accuracyMedium>0.55</accuracyMedium>

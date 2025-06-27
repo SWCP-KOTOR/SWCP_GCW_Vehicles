@@ -256,6 +256,8 @@
 						
 						<aimPieOffset>(0, 2.55)</aimPieOffset>
 						
+						<autoTargetingActive>True</autoTargetingActive>
+						
 						<key>TIEDefKey_gun_1</key>
 					</li>
 					<li>
@@ -270,6 +272,8 @@
 						
 						<aimPieOffset>(0, 2.55)</aimPieOffset>
 						
+						<autoTargetingActive>True</autoTargetingActive>
+						
 						<key>TIEDefKey_gun_2</key>
 					</li>
 					<li>
@@ -283,6 +287,8 @@
 						<gizmoLabel>dual gun</gizmoLabel>
 						
 						<aimPieOffset>(0, 2.55)</aimPieOffset>
+						
+						<autoTargetingActive>True</autoTargetingActive>
 						
 						<key>TIEDefKey_gun_3</key>
 					</li>

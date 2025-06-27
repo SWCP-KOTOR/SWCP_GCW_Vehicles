@@ -46,6 +46,10 @@
 		<size>(6,8)</size>
 		<vehicleMovementPermissions>DriverNeeded</vehicleMovementPermissions>
 		
+		<killedLeavings>
+		  <guy762_ShipChunk_TIEInterceptor>1</guy762_ShipChunk_TIEInterceptor>
+		</killedLeavings>
+		
 		<canCaravan>false</canCaravan>
 		<vehicleCategory>Combat</vehicleCategory>
 		<techLevel>Spacer</techLevel>
@@ -246,6 +250,8 @@
 						
 						<aimPieOffset>(0, 2.55)</aimPieOffset>
 						
+						<autoTargetingActive>True</autoTargetingActive>
+						
 						<key>TIEIntKey_gun_1</key>
 					</li>
 					<li>
@@ -259,6 +265,8 @@
 						<gizmoLabel>main gun</gizmoLabel>
 						
 						<aimPieOffset>(0, 2.55)</aimPieOffset>
+						
+						<autoTargetingActive>True</autoTargetingActive>
 						
 						<key>TIEIntKey_gun_2</key>
 					</li>
@@ -274,6 +282,8 @@
 						
 						<aimPieOffset>(0, 2.55)</aimPieOffset>
 						
+						<autoTargetingActive>True</autoTargetingActive>
+						
 						<key>TIEIntKey_gun_3</key>
 					</li>
 					<li>
@@ -287,6 +297,8 @@
 						<gizmoLabel>main gun</gizmoLabel>
 						
 						<aimPieOffset>(0, 2.55)</aimPieOffset>
+						
+						<autoTargetingActive>True</autoTargetingActive>
 						
 						<key>TIEIntKey_gun_4</key>
 					</li>

@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>	
+	
+	<PawnKindDef Name="SWWEPlayableVillain_Weir"  ParentName="guy762_HeroPawnKindBase">
+		<defName>SWWEPlayableVillain_Weir</defName>
+		<nameMaker>guy762_HeroNamer_GeneralWeir</nameMaker>
+		<label>Storm Commando General</label>
+		<combatPower>500</combatPower>
+		<minGenerationAge>30</minGenerationAge>
+		<maxGenerationAge>31</maxGenerationAge>
+		<fixedGender>Male</fixedGender>
+		<forcedHair>Shaved</forcedHair>
+		<forcedHairColor>(250,250,250)</forcedHairColor>
+		<skinColorOverride>(228, 158, 90)</skinColorOverride>
+		<xenotypeSet>
+			<xenotypeChances>
+				<Baseliner>999</Baseliner>
+			</xenotypeChances>
+		</xenotypeSet>
+		<useFactionXenotypes>false</useFactionXenotypes>
+		<itemQuality>Legendary</itemQuality>
+		<apparelMoney>49999</apparelMoney>
+		<apparelTags>
+		  <li>KotORHeroAccessories_canderous</li>
+		  <li>SWDetpackCase</li>
+		</apparelTags>
+		<apparelRequired>
+			<li>guy762_JKenergyshield_big</li>
+			<li>guy762_Accessory_bandolierA</li>
+			<li>guy762_StormCommandoHelmet</li>
+			<li>guy762_StormCommandoArmor</li>
+			<li>guy762_Bodysuit</li>
+		</apparelRequired>
+		<specificApparelRequirements>
+			<li>
+				<apparelLayer>Shell</apparelLayer>
+				<requiredTag>guy762_Accessory_bandolierA</requiredTag>
+				<color>(155,30,25)</color>
+				<quality>Legendary</quality>
+			</li>
+			<li>
+				<apparelLayer>OnSkin</apparelLayer>
+				<apparelDef>guy762_Bodysuit</apparelDef>
+				<color>(90,90,90)</color>
+				<quality>Legendary</quality>
+			</li>
+		</specificApparelRequirements>
+		
+		<weaponMoney>99999999</weaponMoney>
+		<weaponTags>
+		  <li>SWRanged_FC1flechette</li>
+		</weaponTags>
+		<techHediffsRequired>
+		  <li>guy762_ImplantDock_I</li>
+		</techHediffsRequired>
+		
+		<skills>
+			<li>
+				<skill>Shooting</skill>
+				<range>16~18</range>
+			</li>
+			<li>
+				<skill>Melee</skill>
+				<range>14~16</range>
+			</li>
+			<li>
+				<skill>Social</skill>
+				<range>14~16</range>
+			</li>
+			<li>
+				<skill>Intellectual</skill>
+				<range>8~10</range>
+			</li>
+		</skills>
+		<forcedTraits>
+			<Psychopath>0</Psychopath>
+			<Bloodlust>0</Bloodlust>
+			<Nerves>2</Nerves>
+		</forcedTraits>
+		
+		<backstoryFiltersOverride>
+		  <li>
+			<categories>
+			  <li>guy762BSC_generalweir</li>
+			</categories>
+		  </li>
+		</backstoryFiltersOverride>
+		
+		<abilities>
+			<li>guy762_Ability_CommandTierIV</li>
+			<!-- ACE TIER 5 -->
+		</abilities>
+		
+		<modExtensions>
+			<li Class="BodyTypeForPawnKind.ModExtension_HeadTypesOfPawnKind">
+			  <whitelist>
+				<li>Male_AverageWide</li>
+			  </whitelist>
+			  <blacklist>
+				<!--leave blank to disable-->
+			  </blacklist>
+			  <priority>
+				<li>Male_AverageWide</li>
+			  </priority>
+			  <checkGender>False</checkGender>
+			</li>
+			<li Class="BodyTypeForPawnKind.ModExtension_ForcedStyleItem">
+			  <forcedBeard>SoulPatch</forcedBeard>
+			</li>
+			<li Class="AddGeneForPK.PKAdditionalGenes">
+			  <geneSets>
+				<li>
+				  <isXenogene>false</isXenogene>
+				  <chance>1</chance>
+				  <geneDefs>
+					<li>Hair_SnowWhite</li>
+					<li>Skin_Melanin7</li>
+				  </geneDefs>
+				</li>
+			  </geneSets>
+			</li>
+		</modExtensions>
+	  </PawnKindDef>
+	  
+	  <RulePackDef>
+        <defName>guy762_HeroNamer_GeneralWeir</defName>
+        <rulePack>
+            <rulesStrings>
+                <li>r_name->[strom] '[weir]' [weir]</li>
+				<li>strom->Strom</li>
+				<li>weir->Weir</li>
+            </rulesStrings>
+        </rulePack>
+    </RulePackDef>
+	
+		<!--[PAWN_nameDef] [PAWN_possessive] [PAWN_pronoun]-->
+	
+	
+	<BackstoryDef>
+		<defName>guy762_BackstoryC_GeneralWeir</defName>
+		<title>Zealous Cadet</title>
+		<titleShort>Cadet</titleShort>
+		<description>.</description>
+		<slot>Childhood</slot>
+		<skillGains>
+			<Shooting>5</Shooting>
+			<Melee>5</Melee>
+		</skillGains>
+		<forcedTraits>
+		  <Nerves>2</Nerves>
+		  <Psychopath>0</Psychopath>
+		</forcedTraits>
+		<requiredWorkTags>
+		  <li>Violent</li>
+		</requiredWorkTags>
+		<bodyTypeMale>Hulk</bodyTypeMale>
+		<bodyTypeFemale>Hulk</bodyTypeFemale>
+		<nameMaker>guy762_HeroNamer_GeneralWeir</nameMaker>
+		<spawnCategories>
+			<li>guy762BSC_generalweir</li>
+		</spawnCategories>
+		<!--shuffleable>False</shuffleable-->
+	</BackstoryDef>
+	
+	<BackstoryDef>
+		<defName>guy762_BackstoryA_GeneralWeir</defName>
+		<title>Storm Commando General</title>
+		<titleShort>General</titleShort>
+		<description>.</description>
+		<slot>Adulthood</slot>
+		<skillGains>
+			<Shooting>10</Shooting>
+			<Social>10</Social>
+		</skillGains>
+		<forcedTraits>
+		  <Bloodlust>0</Bloodlust>
+		</forcedTraits>
+		<requiredWorkTags>
+		  <li>Violent</li>
+		</requiredWorkTags>
+		<bodyTypeMale>Hulk</bodyTypeMale>
+		<bodyTypeFemale>Hulk</bodyTypeFemale>
+		<nameMaker>guy762_HeroNamer_GeneralWeir</nameMaker>
+		<workDisables>Artistic, PlantWork, Cooking, Mining, Caring</workDisables>
+		<spawnCategories>
+			<li>guy762BSC_generalweir</li>
+		</spawnCategories>
+		<!--shuffleable>False</shuffleable-->
+	</BackstoryDef>
+	
+	
+
+</Defs>

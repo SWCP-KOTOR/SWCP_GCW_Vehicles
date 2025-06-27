@@ -103,6 +103,11 @@
 			</categories>
 		  </li>
 		</backstoryFiltersOverride>
+		
+		<abilities>
+			<!-- ACE TIER 1 -->
+		</abilities>
+		
 		<modExtensions>
 		 <li Class="AddGeneForPK.PKAdditionalGenes"> <!-- NOTE: this mod extension cannot be split between two different PKDefs, all genes have to go in the same block!!! -->
           <geneSets>

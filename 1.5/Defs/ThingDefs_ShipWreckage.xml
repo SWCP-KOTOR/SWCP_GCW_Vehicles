@@ -128,18 +128,135 @@
 	  
 	  
 	  
+	  <ThingDef ParentName="BuildingBase">
+		<defName>guy762_ShipChunk_TIEInterceptor</defName>
+		<label>starfighter wreckage</label>
+		<description>A chunk of a military spacecraft. It seems to have been torn off either by uncontrolled re-entry forces or some kind of weapon.\n\nHaving landed not long ago, it still contains useful resources which you can acquire by deconstructing it.</description>
+		<category>Building</category>
+		<graphicData>
+		  <texPath>VehicleWreckage/wreckage_TIEInterceptor</texPath>
+		  <graphicClass>Graphic_Single</graphicClass>
+		  <drawSize>(8.75,8.75)</drawSize>
+		  <damageData>
+			<rect>(0.1,0.1,1.8,1.8)</rect>
+		  </damageData>
+		  <shadowData>
+			<volume>(1.39,0.5,1.25)</volume>
+		  </shadowData>
+		</graphicData>
+		<altitudeLayer>Building</altitudeLayer>
+		<pathCost>42</pathCost>
+		<blockWind>true</blockWind>
+		<passability>PassThroughOnly</passability>
+		<fillPercent>0.50</fillPercent>
+		<size>(6,8)</size>
+		<statBases>
+		  <MaxHitPoints>1000</MaxHitPoints>
+		  <Flammability>0</Flammability>
+		  <Beauty>-10</Beauty>
+		  <WorkToBuild>36000</WorkToBuild>
+		</statBases>
+		<leaveResourcesWhenKilled>true</leaveResourcesWhenKilled>
+		
+		<!-- ADJUST BEFORE RELEASE!!! -->
+		
+		<killedLeavings>
+		  <ChunkSlagSteel>10</ChunkSlagSteel>
+		  <Steel>100</Steel>
+		  <ComponentIndustrial>10</ComponentIndustrial>
+		  <Plasteel>40</Plasteel>
+		  <ComponentSpacer>4</ComponentSpacer>
+		</killedLeavings>
+		<costList>
+		  <Steel>400</Steel>
+		  <Plasteel>100</Plasteel>
+		  <Uranium>100</Uranium>
+		  <ComponentIndustrial>32</ComponentIndustrial>
+		  <ComponentSpacer>14</ComponentSpacer>
+		</costList>
+		
+		<!-- ADJUST BEFORE RELEASE!!! -->
+		
+		<building>
+		  <claimable>false</claimable>
+		  <alwaysDeconstructible>true</alwaysDeconstructible>
+		</building>
+		<selectable>true</selectable>
+		<soundImpactDefault>BulletImpact_Metal</soundImpactDefault>
+		<drawerType>MapMeshOnly</drawerType>
+		<repairEffect>ConstructMetal</repairEffect>
+	  </ThingDef>
 	  
 	  
+	  
+	  <ThingDef ParentName="BuildingBase">
+		<defName>guy762_ShipChunk_z95a</defName>
+		<label>starfighter wreckage</label>
+		<description>A chunk of a military spacecraft. It seems to have been torn off either by uncontrolled re-entry forces or some kind of weapon.\n\nHaving landed not long ago, it still contains useful resources which you can acquire by deconstructing it.</description>
+		<category>Building</category>
+		<graphicData>
+		  <texPath>VehicleWreckage/wreckage_Z95</texPath>
+		  <graphicClass>Graphic_Single</graphicClass>
+		  <drawSize>(12,12)</drawSize>
+		  <damageData>
+			<rect>(0.1,0.1,1.8,1.8)</rect>
+		  </damageData>
+		  <shadowData>
+			<volume>(1.39,0.5,1.25)</volume>
+		  </shadowData>
+		</graphicData>
+		<altitudeLayer>Building</altitudeLayer>
+		<pathCost>42</pathCost>
+		<blockWind>true</blockWind>
+		<passability>PassThroughOnly</passability>
+		<fillPercent>0.50</fillPercent>
+		<size>(10,11)</size>
+		<statBases>
+		  <MaxHitPoints>1000</MaxHitPoints>
+		  <Flammability>0</Flammability>
+		  <Beauty>-10</Beauty>
+		  <WorkToBuild>36000</WorkToBuild>
+		</statBases>
+		<leaveResourcesWhenKilled>true</leaveResourcesWhenKilled>
+		
+		<!-- ADJUST BEFORE RELEASE!!! -->
+		
+		<killedLeavings>
+		  <ChunkSlagSteel>10</ChunkSlagSteel>
+		  <Steel>100</Steel>
+		  <ComponentIndustrial>10</ComponentIndustrial>
+		  <Plasteel>40</Plasteel>
+		  <ComponentSpacer>4</ComponentSpacer>
+		</killedLeavings>
+		<costList>
+		  <Steel>400</Steel>
+		  <Plasteel>100</Plasteel>
+		  <Uranium>100</Uranium>
+		  <ComponentIndustrial>32</ComponentIndustrial>
+		  <ComponentSpacer>14</ComponentSpacer>
+		</costList>
+		
+		<!-- ADJUST BEFORE RELEASE!!! -->
+		
+		<building>
+		  <claimable>false</claimable>
+		  <alwaysDeconstructible>true</alwaysDeconstructible>
+		</building>
+		<selectable>true</selectable>
+		<soundImpactDefault>BulletImpact_Metal</soundImpactDefault>
+		<drawerType>MapMeshOnly</drawerType>
+		<repairEffect>ConstructMetal</repairEffect>
+	  </ThingDef>
 	  
 	  
 	  
 	  <ThingDef ParentName="BuildingBase">
 		<defName>guy762_ShipChunk_YWing</defName>
-		<label>ship chunk</label>
+		<label>starfighter wreckage</label>
 		<description>A chunk of a military spacecraft. It seems to have been torn off either by uncontrolled re-entry forces or some kind of weapon.\n\nHaving landed not long ago, it still contains useful resources which you can acquire by deconstructing it.</description>
 		<category>Building</category>
 		<graphicData>
-		  <texPath>Starfighters/wreckage_YWing</texPath>
+		  <texPath>VehicleWreckage/wreckage_YWing</texPath>
 		  <graphicClass>Graphic_Single</graphicClass>
 		  <drawSize>(19,19)</drawSize>
 		  <damageData>
@@ -162,6 +279,9 @@
 		  <WorkToBuild>36000</WorkToBuild>
 		</statBases>
 		<leaveResourcesWhenKilled>true</leaveResourcesWhenKilled>
+		
+		<!-- ADJUST BEFORE RELEASE!!! -->
+		
 		<killedLeavings>
 		  <ChunkSlagSteel>10</ChunkSlagSteel>
 		  <Steel>100</Steel>
@@ -173,9 +293,12 @@
 		  <Steel>400</Steel>
 		  <Plasteel>100</Plasteel>
 		  <Uranium>100</Uranium>
-		  <ComponentIndustrial>36</ComponentIndustrial>
-		  <ComponentSpacer>16</ComponentSpacer>
+		  <ComponentIndustrial>32</ComponentIndustrial>
+		  <ComponentSpacer>14</ComponentSpacer>
 		</costList>
+		
+		<!-- ADJUST BEFORE RELEASE!!! -->
+		
 		<building>
 		  <claimable>false</claimable>
 		  <alwaysDeconstructible>true</alwaysDeconstructible>
@@ -198,11 +321,11 @@
 	  
 	  <ThingDef ParentName="BuildingBase">
 		<defName>guy762_ShipChunk_YT2400a</defName>
-		<label>ship chunk</label>
+		<label>ship wreckage</label>
 		<description>A chunk of a military spacecraft. It seems to have been torn off either by uncontrolled re-entry forces or some kind of weapon.\n\nUnlike other chunks in the area, this seems to contain a barely-functional power plant capable of producing a minor amount of electricity.</description>
 		<category>Building</category>
 		<graphicData>
-		  <texPath>Starfighters/wreckage_YT2400</texPath>
+		  <texPath>VehicleWreckage/wreckage_YT2400</texPath>
 		  <graphicClass>Graphic_Single</graphicClass>
 		  <drawSize>(23,23)</drawSize>
 		  <damageData>
@@ -225,6 +348,9 @@
 		  <WorkToBuild>36000</WorkToBuild>
 		</statBases>
 		<leaveResourcesWhenKilled>true</leaveResourcesWhenKilled>
+		
+		<!-- ADJUST BEFORE RELEASE!!! -->
+		
 		<killedLeavings>
 		  <ChunkSlagSteel>10</ChunkSlagSteel>
 		  <Steel>100</Steel>
@@ -239,6 +365,9 @@
 		  <ComponentIndustrial>32</ComponentIndustrial>
 		  <ComponentSpacer>14</ComponentSpacer>
 		</costList>
+		
+		<!-- ADJUST BEFORE RELEASE!!! -->
+		
 		<building>
 		  <claimable>true</claimable>
 		  <alwaysDeconstructible>true</alwaysDeconstructible>

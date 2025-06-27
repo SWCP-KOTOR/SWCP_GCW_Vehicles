@@ -39,7 +39,7 @@
 				<hasStandardCommand>true</hasStandardCommand>
 				<defaultProjectile>KotORBlasterBolt_default</defaultProjectile>
 				<warmupTime>0.5</warmupTime>
-				<range>28</range>
+				<range>30</range>
 				<ticksBetweenBurstShots>14</ticksBetweenBurstShots>
 				<burstShotCount>1</burstShotCount>
 				<soundCast>kotorsound_relby</soundCast>
@@ -56,7 +56,7 @@
 				<defaultProjectile>SWProj_GrenadeLauncherProtonGrenade</defaultProjectile>
 				<warmupTime>4</warmupTime>
 				<defaultCooldownTime>6</defaultCooldownTime>
-				<range>28</range>
+				<range>30</range>
 				<ticksBetweenBurstShots>0</ticksBetweenBurstShots>
 				<burstShotCount>1</burstShotCount>
 				<!--soundAiming>kotorsound_powercharge</soundAiming-->

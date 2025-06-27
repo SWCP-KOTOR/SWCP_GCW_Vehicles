@@ -135,7 +135,13 @@
 				<li>
 					<key>passenger</key>
 					<label>Passenger</label>
-					<slots>12</slots>
+					<slots>6</slots>
+				</li>
+				<li>
+					<key>passenger2</key>
+					<label>Passenger (cargo hold)</label>
+					<slots>16</slots>
+					<comfort>-0.5</comfort>
 				</li>
 			</roles>
 		</properties>
@@ -301,6 +307,8 @@
 						
 						<aimPieOffset>(0, 2.55)</aimPieOffset>
 						
+						<autoTargetingActive>True</autoTargetingActive>
+						
 						<key>YT2400Key_gun_1</key>
 					</li>
 					<li>
@@ -313,6 +321,8 @@
 						<gizmoLabel>ventral gun</gizmoLabel>
 						
 						<aimPieOffset>(0, 2.55)</aimPieOffset>
+						
+						<autoTargetingActive>True</autoTargetingActive>
 						
 						<drawLayer>-1</drawLayer>
 						
@@ -513,6 +523,14 @@
 		</graphicData>
 		
 		<gizmoIconTexPath>Starfighters/YT2400/YT2400_gun</gizmoIconTexPath>
+		
+		
+		<!-- <reloadTimerMultiplierPerCrewCount> USE FOR HUGE TRANSPORT WEAPONS -->
+            <!-- <points> -->
+                <!-- <li>(1, 1)</li> -->
+                <!-- <li>(2, 0.75)</li> -->
+            <!-- </points> -->
+        <!-- </reloadTimerMultiplierPerCrewCount> -->
 		
 	</Vehicles.VehicleTurretDef>
 	

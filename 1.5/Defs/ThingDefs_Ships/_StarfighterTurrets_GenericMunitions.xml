@@ -16,6 +16,13 @@
 		<reloadTimer>3.5</reloadTimer>
 		<warmUpTimer>0.4</warmUpTimer>
 		
+		<!-- <reloadTimerMultiplierPerCrewCount> USE FOR HUGE TRANSPORT WEAPONS -->
+            <!-- <points> -->
+                <!-- <li>(1, 1)</li> -->
+                <!-- <li>(2, 0.75)</li> -->
+            <!-- </points> -->
+        <!-- </reloadTimerMultiplierPerCrewCount> -->
+		
 		<magazineCapacity>1</magazineCapacity>
 		<genericAmmo>true</genericAmmo>
 		
@@ -176,6 +183,13 @@
 		<projectile>SWVehicleBullet_protonbomb</projectile>
 		<reloadTimer>3.5</reloadTimer>
 		<warmUpTimer>0.2</warmUpTimer>
+		
+		<!-- <reloadTimerMultiplierPerCrewCount> USE FOR HUGE TRANSPORT WEAPONS -->
+            <!-- <points> -->
+                <!-- <li>(1, 1)</li> -->
+                <!-- <li>(2, 0.75)</li> -->
+            <!-- </points> -->
+        <!-- </reloadTimerMultiplierPerCrewCount> -->
 		
 		<magazineCapacity>999</magazineCapacity>
 		

@@ -31,6 +31,11 @@
 		</apparelRequired>
 		<specificApparelRequirements>
 			<li>
+				<apparelLayer>Overhead</apparelLayer>
+				<apparelDef>guy762_TIEpilotAceHelmet</apparelDef>
+				<styleDef>guy762_TIEAceHelmetStyle_ace</styleDef>
+			</li>
+			<li>
 				<apparelLayer>Middle</apparelLayer>
 				<apparelDef>guy762_FlightVest</apparelDef>
 				<color>(200,200,200)</color> <!-- light grey -->
@@ -79,6 +84,7 @@
 		</backstoryFiltersOverride>
 		<abilities>
 			<li MayRequire="Ludeon.RimWorld.Ideology">LeaderSpeech</li>
+			<!-- ACE TIER 1 -->
 		</abilities>
 		<modExtensions>
 			<li Class="BodyTypeForPawnKind.ModExtension_HeadTypesOfPawnKind">

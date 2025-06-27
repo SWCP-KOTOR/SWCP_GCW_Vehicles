@@ -128,6 +128,12 @@
 			  <forcedHair>VHE_Smith</forcedHair>
 			</value>
 		</li>
+		<li Class="PatchOperationReplace">
+		  <xpath>Defs/PawnKindDef[@Name="SWWEPlayableVillain_CountessRyad"]/forcedHair</xpath>
+			<value>
+			  <forcedHair>VHE_LongPonytail</forcedHair>
+			</value>
+		</li>
 	  </operations>
 	</match>
   

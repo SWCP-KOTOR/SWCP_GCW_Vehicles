@@ -26,6 +26,30 @@
 	
 	
 	
+	<RWPaintingTool.PaletteDef>
+		<defName>guy762_ItemPainterPalette_genericmandohelmet</defName>
+		<label>Scum and Villainy (helmet)</label>
+		<palette>
+			<colorOne>(90,90,80)</colorOne> <!-- dirty grey -->
+			<colorTwo>(225,225,225)</colorTwo>
+			<colorThree>(135,105,55)</colorThree> <!-- scummy burnt orange -->
+		</palette>
+	</RWPaintingTool.PaletteDef>
+	
+	<RWPaintingTool.PaletteDef>
+		<defName>guy762_ItemPainterPalette_genericmandotorso</defName>
+		<label>Scum and Villainy (torso)</label>
+		<palette>
+			<colorOne>(135,105,55)</colorOne> <!-- scummy burnt orange -->
+			<colorTwo>(90,90,80)</colorTwo> <!-- dirty grey -->
+			<colorThree>(70,70,60)</colorThree>
+		</palette>
+	</RWPaintingTool.PaletteDef>
+	
+	
+	
+	
+	
 	
 	
 	<RWPaintingTool.PaletteDef>

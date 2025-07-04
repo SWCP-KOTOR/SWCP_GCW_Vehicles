@@ -22,7 +22,7 @@
 			<AccuracyShort>0.70</AccuracyShort>
 			<AccuracyMedium>0.50</AccuracyMedium>
 			<AccuracyLong>0.40</AccuracyLong>
-			<RangedWeapon_Cooldown>1</RangedWeapon_Cooldown>
+			<RangedWeapon_Cooldown>1.25</RangedWeapon_Cooldown>
 			<RangedWeapon_DamageMultiplier>1.5</RangedWeapon_DamageMultiplier>
 		</statBases>
 		

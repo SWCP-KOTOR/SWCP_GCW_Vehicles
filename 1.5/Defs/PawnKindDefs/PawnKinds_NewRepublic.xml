@@ -788,7 +788,7 @@
 	<PawnKindDef Name="SWNewRepub_RebelTrooper" ParentName="SWNewRepub_Base">
 		<defName>SWNewRepub_RebelTrooper</defName>
 		<label>rebel soldier</label>
-		<combatPower>65</combatPower>
+		<combatPower>55</combatPower>
 		<minGenerationAge>18</minGenerationAge>
 		<maxGenerationAge>45</maxGenerationAge>
 		<itemQuality>Normal</itemQuality>
@@ -871,7 +871,7 @@
 	<PawnKindDef Name="SWNewRepub_RebelSniper" ParentName="SWNewRepub_Base">
 		<defName>SWNewRepub_RebelSniper</defName>
 		<label>rebel sharpshooter</label>
-		<combatPower>75</combatPower>
+		<combatPower>65</combatPower>
 		<minGenerationAge>18</minGenerationAge>
 		<maxGenerationAge>35</maxGenerationAge>
 		<itemQuality>Normal</itemQuality>
@@ -938,7 +938,7 @@
 	<PawnKindDef Name="SWNewRepub_RebelHeavy" ParentName="SWNewRepub_Base">
 		<defName>SWNewRepub_RebelHeavy</defName>
 		<label>rebel heavy trooper</label>
-		<combatPower>200</combatPower>
+		<combatPower>150</combatPower>
 		<minGenerationAge>20</minGenerationAge>
 		<maxGenerationAge>35</maxGenerationAge>
 		<itemQuality>Normal</itemQuality>
@@ -1199,7 +1199,86 @@
 	  
 	  
 	  
-	  
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<PawnKindDef Name="SWNewRepub_wookieeheavy" ParentName="SWNewRepub_Base">
+		<defName>SWNewRepub_wookieeheavy</defName>
+		<label>Wookiee demolisher</label>
+		<combatPower>200</combatPower>
+		<nameMaker>KoTOR_NamerWookiee</nameMaker>
+		<minGenerationAge>20</minGenerationAge>
+		<maxGenerationAge>40</maxGenerationAge> <!-- should probably be higher but things start to break when these are set over 100 -->
+		<chronologicalAgeRange>75~200</chronologicalAgeRange>
+		<xenotypeSet Inherit="False">
+			<xenotypeChances>
+				<guy762_xenotype_wookiee>999</guy762_xenotype_wookiee>
+			</xenotypeChances>
+		</xenotypeSet>
+		<useFactionXenotypes>false</useFactionXenotypes>
+		
+		<maxPerGroup>4</maxPerGroup>
+		
+		<itemQuality>Good</itemQuality>
+		<apparelMoney>2250~3250</apparelMoney>
+		<apparelTags Inherit="False">
+		  <li>KotORUtility_utilitygrenade</li>
+		  <li>KotORUtility_stronggrenade</li>
+		  <li>SWWarlordsAccessory_scumtrooper</li>
+		</apparelTags>
+		<apparelAllowHeadgearChance>0</apparelAllowHeadgearChance>
+		<weaponMoney>2250~9999</weaponMoney>
+		<weaponTags>
+		  <li>SWRanged_HH4ProtonGrenadeLauncher</li>
+		  <li>SWRanged_T21repeater</li>
+		  <li>SWRanged_T21Bheavy</li>
+		</weaponTags>
+	
+		<invNutrition>4</invNutrition>
+		<invFoodDef>Pemmican</invFoodDef>
+		<inventoryOptions>
+		  <skipChance>0</skipChance>
+		  <subOptionsChooseOne>
+			<li>
+			  <thingDef>guy762_stim_battle</thingDef>
+			  <countRange>1~2</countRange>
+			</li>
+			<li>
+			  <thingDef>guy762_stim_con</thingDef>
+			  <countRange>1~2</countRange>
+			</li>
+			<li>
+				<thingDef>guy762_medpac_life</thingDef>
+				<countRange>1~3</countRange>
+			</li>
+		  </subOptionsChooseOne>
+		</inventoryOptions>
+		<skills>
+			<li>
+				<skill>Shooting</skill>
+				<range>12~15</range>
+			</li>
+		</skills>
+		<disallowedTraits>
+		  <li>Brawler</li>
+		</disallowedTraits>
+		
+		<initialWillRange>0.5~2</initialWillRange>
+		<initialResistanceRange>5~10</initialResistanceRange>
+		
+		<apparelIgnoreSeasons>true</apparelIgnoreSeasons>
+	</PawnKindDef>
 	  
 	  
 	  

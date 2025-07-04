@@ -117,6 +117,14 @@
 				</li>
 			  </geneSets>
 			</li>
+			
+			<li MayRequire="telefonmast.itempainter" Class="RWPaintingTool.AvailablePalettes_ModExtension">
+                <pawnIdAsSeed>true</pawnIdAsSeed>
+                <apparelLayer>Belt</apparelLayer>
+				<palettes>
+                    <li>(90,120,85), (230,185,45), (45,100,185)</li>
+                </palettes>
+            </li>
 		</modExtensions>
 	  </PawnKindDef>
 	  

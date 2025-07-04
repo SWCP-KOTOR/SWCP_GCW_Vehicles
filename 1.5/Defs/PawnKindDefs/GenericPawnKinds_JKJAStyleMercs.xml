@@ -61,60 +61,52 @@
   
   
   
-  <!-- <PawnKindDef Name="SWScum_JKWeequay" ParentName="KotORMercBase"> -->
-    <!-- <defName>SWScum_JKWeequay</defName> -->
-	<!-- <label>underworld shooter</label> -->
-    <!-- <combatPower>75</combatPower> -->
+  <PawnKindDef Name="SWScum_JKWeequay" ParentName="KotORMercBase">
+    <defName>SWScum_JKWeequay</defName>
+	<label>underworld shooter</label>
+    <combatPower>75</combatPower>
 	
-	<!-- <useFactionXenotypes>false</useFactionXenotypes> -->
-	<!-- <xenotypeSet> -->
-      <!-- <xenotypeChances> -->
-		<!-- <guy762_xenotype_weequay MayRequire="guy762.StarWarsXenotypes">999</guy762_xenotype_weequay> -->
-      <!-- </xenotypeChances> -->
-    <!-- </xenotypeSet> -->
+	<useFactionXenotypes>false</useFactionXenotypes>
+	<xenotypeSet>
+      <xenotypeChances>
+		<guy762_xenotype_weequay MayRequire="guy762.StarWarsXenotypes">999</guy762_xenotype_weequay>
+      </xenotypeChances>
+    </xenotypeSet>
 
-    <!-- <itemQuality>Normal</itemQuality> -->
-    <!-- <apparelMoney>500~1000</apparelMoney> -->
-    <!-- <apparelAllowHeadgearChance>0.25</apparelAllowHeadgearChance> -->
-    <!-- <apparelTags> -->
-	  <!-- <li>KotORHeadband_combat</li> -->
-	  <!-- <li>KotORHeadband_bandana</li> -->
-	  <!-- <li>KotORShield_basic</li> -->
-    <!-- </apparelTags> -->
-	<!-- <apparelRequired> -->
-	   <!-- <li>guy762_Clothing_scum</li> -->
-	   <!-- <li>guy762_CombatSuit</li> -->
-	<!-- </apparelRequired> -->
-	<!-- <specificApparelRequirements> -->
-		<!-- <li> -->
-			<!-- <apparelLayer>Middle</apparelLayer> -->
-			<!-- <stuff>KOTOR_FabricArmorweave</stuff> -->
-			<!-- <color>(100,80,60)</color> -->
-		<!-- </li> -->
-	<!-- </specificApparelRequirements> -->
+    <itemQuality>Normal</itemQuality>
+    <apparelMoney>500~1000</apparelMoney>
+    <apparelAllowHeadgearChance>0.25</apparelAllowHeadgearChance>
+    <apparelTags>
+	  <li>KotORHeadband_bandana</li>
+	  <li>SaV_outfit_JKWeequay</li>
+    </apparelTags>
+	<apparelRequired>
+	   <li>guy762_ScumWeequayArmor</li>
+	   <li>guy762_Clothing_scum</li>
+	</apparelRequired>
 	
-    <!-- <weaponMoney>1000~4500</weaponMoney> -->
-    <!-- <weaponTags> -->
-	  <!-- <li>SaV_JKweequay</li> -->
-    <!-- </weaponTags> -->
-	<!-- <biocodeWeaponChance>0.25</biocodeWeaponChance> -->
+    <weaponMoney>1000~4500</weaponMoney>
+    <weaponTags>
+	  <li>SaV_JKweequay</li>
+    </weaponTags>
+	<biocodeWeaponChance>0.25</biocodeWeaponChance>
 	
-	<!-- <skills> -->
-		<!-- <li> -->
-			<!-- <skill>Shooting</skill> -->
-			<!-- <range>5~10</range> -->
-		<!-- </li> -->
-		<!-- <li> -->
-			<!-- <skill>Melee</skill> -->
-			<!-- <range>5~10</range> -->
-		<!-- </li> -->
-	<!-- </skills> -->
+	<skills>
+		<li>
+			<skill>Shooting</skill>
+			<range>5~10</range>
+		</li>
+		<li>
+			<skill>Melee</skill>
+			<range>5~10</range>
+		</li>
+	</skills>
 	
-    <!-- <initialWillRange>0.2~1.6</initialWillRange> -->
-    <!-- <initialResistanceRange>3~7</initialResistanceRange> -->
-	<!-- <isFighter>true</isFighter> -->
-	<!-- <apparelIgnoreSeasons>true</apparelIgnoreSeasons> -->
-  <!-- </PawnKindDef> -->
+    <initialWillRange>0.2~1.6</initialWillRange>
+    <initialResistanceRange>3~7</initialResistanceRange>
+	<isFighter>true</isFighter>
+	<apparelIgnoreSeasons>true</apparelIgnoreSeasons>
+  </PawnKindDef>
   
   
   

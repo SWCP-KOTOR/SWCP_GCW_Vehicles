@@ -83,6 +83,72 @@
 	
 	
 	
+	<ThingDef ParentName="KotORArmorModdable_soft">
+		<defName>guy762_ScumWeequayArmor</defName>
+		<label>combat suit</label>
+		<techLevel>Spacer</techLevel>
+		<description>.</description>
+		<graphicData>
+			<texPath>Apparel/JAWeequay/Apparel</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<shaderType>CutoutComplex</shaderType>
+			<colorTwo>(220,175,80)</colorTwo> <!-- bronzium -->
+		</graphicData>
+		<statBases>
+			<Mass>4</Mass>
+			<MarketValue>500</MarketValue>
+			<MaxHitPoints>225</MaxHitPoints>
+      		<ArmorRating_Sharp>0.4</ArmorRating_Sharp>
+			<ArmorRating_Blunt>0.45</ArmorRating_Blunt>
+			<ArmorRating_Heat>0.5</ArmorRating_Heat>
+			<EquipDelay>6</EquipDelay>
+		</statBases>
+		<equippedStatOffsets>
+			<IncomingDamageFactor>-0.05</IncomingDamageFactor>
+		</equippedStatOffsets>
+		
+		<apparel Inherit="False">
+			<tags>
+				<li>SaV_outfit_JKWeequay</li>
+				<li>SaV_outfit_weakmerc</li>
+			</tags>
+			<wornGraphicPath>Apparel/JAWeequay/Apparel</wornGraphicPath>
+			<useWornGraphicMask>true</useWornGraphicMask>
+			<layers>
+				<li>Middle</li>
+			</layers>
+			<bodyPartGroups>
+				<li>Torso</li>
+				<li>Shoulders</li>
+				<li>Neck</li>
+			</bodyPartGroups>
+			<useDeflectMetalEffect>false</useDeflectMetalEffect>
+		</apparel>
+		<tradeTags>
+			<li>guy762TT_KotORArmor</li>
+		</tradeTags>
+		<colorGenerator Class="ColorGenerator_Options" Inherit="False">
+			<options>
+				<li>
+					<weight>15</weight>
+					<only>(90,75,60)</only> <!-- patchleather -->
+				</li>
+			</options>
+		</colorGenerator>
+		
+		<!-- <comps> -->
+		  <!-- <li Class="ModularWeapons.CompProperties_ModularParts"> -->
+			<!-- <compClass>ModularWeapons.CompModularParts</compClass> -->
+			<!-- <partKinds> -->
+			  <!-- <li>guy762_slot_underlay</li> -->
+			  <!-- <li>guy762_slot_overlay</li> -->
+			<!-- </partKinds> -->
+			<!-- <randomizeParts>true</randomizeParts> -->
+		  <!-- </li> -->
+		<!-- </comps> -->
+	</ThingDef>
+	
+	
 	
 	<ThingDef ParentName="KotORArmorModdable_soft">
 		<defName>guy762_ScumMercArmor</defName>
@@ -99,9 +165,9 @@
 			<Mass>6</Mass>
 			<MarketValue>500</MarketValue>
 			<MaxHitPoints>225</MaxHitPoints>
-      		<ArmorRating_Sharp>0.4</ArmorRating_Sharp>
-			<ArmorRating_Blunt>0.45</ArmorRating_Blunt>
-			<ArmorRating_Heat>0.5</ArmorRating_Heat>
+      		<ArmorRating_Sharp>0.5</ArmorRating_Sharp>
+			<ArmorRating_Blunt>0.55</ArmorRating_Blunt>
+			<ArmorRating_Heat>0.6</ArmorRating_Heat>
 			<Insulation_Cold>35</Insulation_Cold>
 			<EquipDelay>10</EquipDelay>
 		</statBases>
@@ -117,6 +183,7 @@
 		<apparel Inherit="False">
 			<tags>
 				<li>SaV_outfit_merc</li>
+				<li>SaV_outfit_JKmerc</li>
 			</tags>
 			<wornGraphicPath>Apparel/JAMerc/Apparel</wornGraphicPath>
 			<useWornGraphicMask>true</useWornGraphicMask>
@@ -295,6 +362,149 @@
 				</li>
 			</options>
 		</colorGenerator>
+	</ThingDef>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<ThingDef ParentName="KotORArmorModdable_hard">
+		<defName>guy762_ZannBattleHelmet</defName>
+		<label>Consortium light battle helmet</label>
+		<techLevel>Spacer</techLevel>
+		<description>.</description>
+		<graphicData>
+			<texPath>Apparel/ZannMerc/helmet</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<shaderType>CutoutComplex</shaderType>
+		</graphicData>
+		<thingCategories>
+		  <li>ArmorHeadgear</li>
+		</thingCategories>
+		<statBases>
+			<Mass>6</Mass>
+			<MarketValue>750</MarketValue>
+			
+			<MaxHitPoints>175</MaxHitPoints>
+      		<ArmorRating_Sharp>0.65</ArmorRating_Sharp>
+			<ArmorRating_Blunt>0.5</ArmorRating_Blunt>
+			<ArmorRating_Heat>0.75</ArmorRating_Heat>
+			<EquipDelay>2</EquipDelay>
+		</statBases>
+		
+		<apparel Inherit="False">
+			<tags>
+				<li>ZannConsortium_DisruptorMerc</li>
+			</tags>
+			<wornGraphicPath>Apparel/ZannMerc/helmet</wornGraphicPath>
+			<useWornGraphicMask>true</useWornGraphicMask>
+			<layers>
+				<li>Overhead</li>
+			</layers>
+			<bodyPartGroups>
+				<li>UpperHead</li>
+			</bodyPartGroups>
+			<useDeflectMetalEffect>true</useDeflectMetalEffect>
+		</apparel>
+		<tradeTags>
+			<li>guy762TT_KotORArmor</li>
+		</tradeTags>
+		<colorGenerator Class="ColorGenerator_Options" Inherit="False">
+			<options>
+				<li>
+					<weight>15</weight>
+					<only>(200,180,85)</only> <!-- zann consortium yellow -->
+				</li>
+			</options>
+		</colorGenerator>
+	</ThingDef>
+	
+	
+	
+	
+	<ThingDef ParentName="KotORArmorModdable_hard">
+		<defName>guy762_ZannBattleArmor</defName>
+		<label>Consortium light battle armor</label>
+		<techLevel>Spacer</techLevel>
+		<description>.</description>
+		<graphicData>
+			<texPath>Apparel/ZannMerc/Apparel</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<shaderType>CutoutComplex</shaderType>
+			<colorTwo>(75,75,75)</colorTwo> <!-- dark grey -->
+		</graphicData>
+		<statBases>
+			<Mass>10</Mass>
+			<MarketValue>1450</MarketValue>
+			<MaxHitPoints>350</MaxHitPoints>
+      		<ArmorRating_Sharp>0.75</ArmorRating_Sharp>
+			<ArmorRating_Blunt>0.6</ArmorRating_Blunt>
+			<ArmorRating_Heat>0.85</ArmorRating_Heat>
+			<EquipDelay>10</EquipDelay>
+		</statBases>
+		<equippedStatOffsets>
+			<MoveSpeed>-0.3</MoveSpeed>
+			<MeleeDodgeChance>-0.3</MeleeDodgeChance>
+			<IncomingDamageFactor>-0.1</IncomingDamageFactor>
+		</equippedStatOffsets>
+		
+		<apparel Inherit="False">
+			<tags>
+				<li>ZannConsortium_DisruptorMerc</li>
+			</tags>
+			<wornGraphicPath>Apparel/ZannMerc/Apparel</wornGraphicPath>
+			<useWornGraphicMask>true</useWornGraphicMask>
+			<layers>
+				<li>Middle</li>
+			</layers>
+			<bodyPartGroups>
+				<li>Torso</li>
+				<li>Shoulders</li>
+				<li>Neck</li>
+				<!-- <li>Arms</li> -->
+				<!-- <li>Hands</li> -->
+				<li>Legs</li>
+				<li>Feet</li>
+			</bodyPartGroups>
+			<useDeflectMetalEffect>true</useDeflectMetalEffect>
+		</apparel>
+		<tradeTags>
+			<li>guy762TT_KotORArmor</li>
+		</tradeTags>
+		<colorGenerator Class="ColorGenerator_Options" Inherit="False">
+			<options>
+				<li>
+					<weight>15</weight>
+					<only>(200,180,85)</only> <!-- zann consortium yellow -->
+				</li>
+			</options>
+		</colorGenerator>
+		
+		<!-- <comps> -->
+		  <!-- <li Class="ModularWeapons.CompProperties_ModularParts"> -->
+			<!-- <compClass>ModularWeapons.CompModularParts</compClass> -->
+			<!-- <partKinds> -->
+			  <!-- <li>guy762_slot_underlay</li> -->
+			  <!-- <li>guy762_slot_overlay</li> -->
+			<!-- </partKinds> -->
+			<!-- <randomizeParts>true</randomizeParts> -->
+		  <!-- </li> -->
+		<!-- </comps> -->
 	</ThingDef>
 	
 	

@@ -39,6 +39,10 @@
 		<vehicleCategory>Combat</vehicleCategory>
 		<techLevel>Spacer</techLevel>
 		<vehicleType>Land</vehicleType>
+		
+		<killedLeavings>
+		  <guy762_ShipChunk_ATST>1</guy762_ShipChunk_ATST>
+		</killedLeavings>
 				
 		<statBases> <!-- blanket applies to all parts without specified armor ratings -->
 			<!--ArmorRating_Sharp>+0.05</ArmorRating_Sharp>

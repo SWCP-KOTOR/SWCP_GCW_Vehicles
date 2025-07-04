@@ -3,7 +3,7 @@
 
   
   
-  <ThingDef ParentName="guy762_clothingbase">
+  <ThingDef ParentName="guy762_glovelessclothingbase">
 		<defName>guy762_ImpUniform_default</defName>
 		<label>uniform, basic</label>
 		<description>These are simple garments that protect little more than the modesty of the wearer.</description>
@@ -61,7 +61,7 @@
 	  
 	  
   
-  <ThingDef ParentName="guy762_clothingbase">
+  <ThingDef ParentName="guy762_FullBodyClothingBase">
 		<defName>guy762_ImpUniform_bigbelt</defName>
 		<label>uniform, guard's</label>
 		<description>These are simple garments that protect little more than the modesty of the wearer.</description>
@@ -292,7 +292,7 @@
 	  
 	  
 	  
-	  <ThingDef ParentName="guy762_clothingbase">
+	  <ThingDef ParentName="guy762_glovelessclothingbase">
 		<defName>guy762_ImpUniform_lowrank</defName>
 		<label>imperial uniform, officer's</label>
 		<description>These are simple garments that protect little more than the modesty of the wearer.</description>
@@ -405,7 +405,7 @@
 	  
 	  
 	  
-	  <ThingDef ParentName="guy762_clothingbase">
+	  <ThingDef ParentName="guy762_glovelessclothingbase">
 		<defName>guy762_ImpUniform_midrank</defName>
 		<label>imperial uniform, ranking officer's</label>
 		<description>These are simple garments that protect little more than the modesty of the wearer.</description>
@@ -540,7 +540,7 @@
 	  
 	  
 	  
-	  <ThingDef ParentName="guy762_clothingbase">
+	  <ThingDef ParentName="guy762_glovelessclothingbase">
 		<defName>guy762_ImpUniform_highbrass</defName>
 		<label>imperial uniform, high brass</label>
 		<description>These are simple garments that protect little more than the modesty of the wearer.</description>
@@ -714,7 +714,7 @@
 	  
 	  
 	  
-	  <ThingDef ParentName="guy762_clothingbase">
+	  <ThingDef ParentName="guy762_glovelessclothingbase">
 		<defName>guy762_ImpUniform_topbrass</defName>
 		<label>imperial uniform, top brass</label>
 		<description>These are simple garments that protect little more than the modesty of the wearer.</description>

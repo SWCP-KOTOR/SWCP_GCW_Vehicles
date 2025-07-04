@@ -143,35 +143,46 @@
 	
 	<xenotypeSet Inherit="False">
 	  <xenotypeChances>
-		<Baseliner MayRequire="Ludeon.RimWorld.Biotech">0.15</Baseliner>
-		<guy762_xenotype_aqualish MayRequire="guy762.StarWarsXenotypes">0.01</guy762_xenotype_aqualish>
+		<Baseliner MayRequire="Ludeon.RimWorld.Biotech">0.10</Baseliner>
+		
+		<guy762_xenotype_aqualish MayRequire="guy762.StarWarsXenotypes">0.02</guy762_xenotype_aqualish>
 		<guy762_xenotype_bith MayRequire="guy762.StarWarsXenotypes">0.01</guy762_xenotype_bith>
-		<guy762_xenotype_bothan MayRequire="guy762.StarWarsXenotypes">0.01</guy762_xenotype_bothan>
-		<guy762_xenotype_cathar MayRequire="guy762.StarWarsXenotypes">0.05</guy762_xenotype_cathar>
-		<guy762_xenotype_defel MayRequire="guy762.StarWarsXenotypes">0.01</guy762_xenotype_defel>
-		<guy762_xenotype_devaronian MayRequire="guy762.StarWarsXenotypes">0.02</guy762_xenotype_devaronian>
+		
+		<guy762_xenotype_bothan MayRequire="guy762.StarWarsXenotypes">0.05</guy762_xenotype_bothan>
+		<guy762_xenotype_devaronian MayRequire="guy762.StarWarsXenotypes">0.01</guy762_xenotype_devaronian>
+		
 		<guy762_xenotype_duros MayRequire="guy762.StarWarsXenotypes">0.10</guy762_xenotype_duros>
-		<guy762_xenotype_echani MayRequire="guy762.StarWarsXenotypes">0.01</guy762_xenotype_echani>
-		<guy762_xenotype_falleen MayRequire="guy762.StarWarsXenotypes">0.01</guy762_xenotype_falleen>
-		<guy762_xenotype_feeorin MayRequire="guy762.StarWarsXenotypes">0.01</guy762_xenotype_feeorin>
-		<guy762_xenotype_ithorian MayRequire="guy762.StarWarsXenotypes">0.01</guy762_xenotype_ithorian>
-		<guy762_xenotype_iridonian MayRequire="guy762.StarWarsXenotypes">0.03</guy762_xenotype_iridonian>
-		<guy762_xenotype_lasat MayRequire="guy762.StarWarsXenotypes">0.01</guy762_xenotype_lasat>
+		<guy762_xenotype_gungan MayRequire="guy762.StarWarsXenotypes">0.01</guy762_xenotype_gungan>
+		
+		<guy762_xenotype_ithorian MayRequire="guy762.StarWarsXenotypes">0.02</guy762_xenotype_ithorian>
+		<guy762_xenotype_iridonian MayRequire="guy762.StarWarsXenotypes">0.02</guy762_xenotype_iridonian>
+		
+		<guy762_xenotype_keldor MayRequire="guy762.StarWarsXenotypes">0.01</guy762_xenotype_keldor>
+		<guy762_xenotype_lasat MayRequire="guy762.StarWarsXenotypes">0.02</guy762_xenotype_lasat>
+		
 		<guy762_xenotype_mimbanese MayRequire="guy762.StarWarsXenotypes">0.01</guy762_xenotype_mimbanese>
-		<guy762_xenotype_mirialan MayRequire="guy762.StarWarsXenotypes">0.01</guy762_xenotype_mirialan>
-		<guy762_xenotype_nautolan MayRequire="guy762.StarWarsXenotypes">0.01</guy762_xenotype_nautolan>
-		<guy762_xenotype_pantoran MayRequire="guy762.StarWarsXenotypes">0.05</guy762_xenotype_pantoran>
+		<guy762_xenotype_mirialan MayRequire="guy762.StarWarsXenotypes">0.03</guy762_xenotype_mirialan>
+		
+		<guy762_xenotype_moncal MayRequire="guy762.StarWarsXenotypes">0.10</guy762_xenotype_moncal>
+		<guy762_xenotype_nautolan MayRequire="guy762.StarWarsXenotypes">0.02</guy762_xenotype_nautolan>
+		
+		<guy762_xenotype_pantoran MayRequire="guy762.StarWarsXenotypes">0.03</guy762_xenotype_pantoran>
 		<guy762_xenotype_quarren MayRequire="guy762.StarWarsXenotypes">0.05</guy762_xenotype_quarren>
-		<guy762_xenotype_rodian MayRequire="guy762.StarWarsXenotypes">0.10</guy762_xenotype_rodian>
+		
+		<guy762_xenotype_rodian MayRequire="guy762.StarWarsXenotypes">0.05</guy762_xenotype_rodian>
 		<guy762_xenotype_selkath MayRequire="guy762.StarWarsXenotypes">0.01</guy762_xenotype_selkath>
+		
 		<guy762_xenotype_snivvian MayRequire="guy762.StarWarsXenotypes">0.01</guy762_xenotype_snivvian>
-		<guy762_xenotype_sullustan MayRequire="guy762.StarWarsXenotypes">0.01</guy762_xenotype_sullustan>
-		<guy762_xenotype_togruta MayRequire="guy762.StarWarsXenotypes">0.05</guy762_xenotype_togruta>
-		<guy762_xenotype_twilek MayRequire="guy762.StarWarsXenotypes">0.15</guy762_xenotype_twilek>
+		<guy762_xenotype_sullustan MayRequire="guy762.StarWarsXenotypes">0.10</guy762_xenotype_sullustan>
+		
+		<guy762_xenotype_togruta MayRequire="guy762.StarWarsXenotypes">0.04</guy762_xenotype_togruta>
+		<guy762_xenotype_twilek MayRequire="guy762.StarWarsXenotypes">0.10</guy762_xenotype_twilek>
+		
 		<guy762_xenotype_umbaran MayRequire="guy762.StarWarsXenotypes">0.01</guy762_xenotype_umbaran>
 		<guy762_xenotype_weequay MayRequire="guy762.StarWarsXenotypes">0.01</guy762_xenotype_weequay>
-		<guy762_xenotype_zabrak MayRequire="guy762.StarWarsXenotypes">0.07</guy762_xenotype_zabrak>
-		<guy762_xenotype_zeltron MayRequire="guy762.StarWarsXenotypes">0.01</guy762_xenotype_zeltron>
+		
+		<guy762_xenotype_zabrak MayRequire="guy762.StarWarsXenotypes">0.03</guy762_xenotype_zabrak>
+		<guy762_xenotype_zeltron MayRequire="guy762.StarWarsXenotypes">0.03</guy762_xenotype_zeltron>
 
 	  </xenotypeChances>
 	</xenotypeSet>
@@ -221,15 +232,17 @@
 	  <li>
 		<kindDef>Peaceful</kindDef>
 		<options>
-		  <KotORRepub_soldier>50</KotORRepub_soldier>
-          <KotORRepub_droid_SentWD MayRequire="guy762.KotORDroids">25</KotORRepub_droid_SentWD>
-		  <KotORRepub_lieutenant>50</KotORRepub_lieutenant>
+		  <SWNewRepub_RebelTrooper>50</SWNewRepub_RebelTrooper>
+          <SWNewRepub_RebelSniper>25</SWNewRepub_RebelSniper>
+          <SWNewRepub_RebelHeavy>25</SWNewRepub_RebelHeavy>
+		  <SWNewRepub_RebelMedic>100</SWNewRepub_RebelMedic>
+		  <SWNewRepub_RebelArmyLt>100</SWNewRepub_RebelArmyLt>
 		</options>
 	  </li>
 		  
 		  
 	  <li>
-        <!-- skirmish -->
+        <!-- rebel skirmish -->
         <kindDef>Combat</kindDef>
         <commonality>75</commonality>
 		<disallowedStrategies>
@@ -241,12 +254,11 @@
 			<li>ImmediateAttackBreachingSmart</li>
 		</disallowedStrategies>
         <options>
-          <KotORRepub_soldier>50</KotORRepub_soldier>
-          <KotORRepub_hvysoldier>25</KotORRepub_hvysoldier>
-		  <KotORRepub_droid_MPDMkI MayRequire="guy762.KotORDroids">50</KotORRepub_droid_MPDMkI>
-          <KotORRepub_droid_SentWD MayRequire="guy762.KotORDroids">25</KotORRepub_droid_SentWD>
-		  <KotORRepub_medic>50</KotORRepub_medic>
-		  <KotORRepub_lieutenant>50</KotORRepub_lieutenant>
+          <SWNewRepub_RebelTrooper>50</SWNewRepub_RebelTrooper>
+          <SWNewRepub_RebelSniper>25</SWNewRepub_RebelSniper>
+          <SWNewRepub_RebelHeavy>25</SWNewRepub_RebelHeavy>
+		  <SWNewRepub_RebelMedic>100</SWNewRepub_RebelMedic>
+		  <SWNewRepub_RebelArmyLt>100</SWNewRepub_RebelArmyLt>
         </options>
       </li>
 	  
@@ -263,13 +275,13 @@
 			<li>ImmediateAttackBreachingSmart</li>
 		</disallowedStrategies>
         <options>
-		  <KotORRepub_soldier>100</KotORRepub_soldier>
-          <KotORRepub_hvysoldier>50</KotORRepub_hvysoldier>
-          <KotORRepub_droid_SentWD MayRequire="guy762.KotORDroids">75</KotORRepub_droid_SentWD>
-		  <KotORRepub_droid_ADMkIV MayRequire="guy762.KotORDroids">25</KotORRepub_droid_ADMkIV>
-		  <KotORRepub_medic>50</KotORRepub_medic>
-		  <KotORRepub_lieutenant>100</KotORRepub_lieutenant>
-		  <KotORRepub_commando>10</KotORRepub_commando>
+		  <SWNewRepub_RebelTrooper>50</SWNewRepub_RebelTrooper>
+          <SWNewRepub_RebelSniper>25</SWNewRepub_RebelSniper>
+          <SWNewRepub_RebelHeavy>25</SWNewRepub_RebelHeavy>
+		  <SWNewRepub_RebelMedic>100</SWNewRepub_RebelMedic>
+		  <SWNewRepub_RebelArmyLt>100</SWNewRepub_RebelArmyLt>
+		  
+		  <SWNewRepub_wookieeheavy>100</SWNewRepub_wookieeheavy>
         </options>
       </li>
 	  
@@ -283,15 +295,13 @@
 			<li>ImmediateAttack</li>
 		</disallowedStrategies>
         <options>
-          <KotORRepub_soldier>100</KotORRepub_soldier>
-          <KotORRepub_hvysoldier>50</KotORRepub_hvysoldier>
-          <KotORRepub_droid_SentWD MayRequire="guy762.KotORDroids">75</KotORRepub_droid_SentWD>
-		  <KotORRepub_droid_ADMkIV MayRequire="guy762.KotORDroids">25</KotORRepub_droid_ADMkIV>
-		  <KotORRepub_medic>50</KotORRepub_medic>
-		  <KotORRepub_lieutenant>100</KotORRepub_lieutenant>
+          <SWNewRepub_RebelTrooper>50</SWNewRepub_RebelTrooper>
+          <SWNewRepub_RebelSniper>25</SWNewRepub_RebelSniper>
+          <SWNewRepub_RebelHeavy>25</SWNewRepub_RebelHeavy>
+		  <SWNewRepub_RebelMedic>100</SWNewRepub_RebelMedic>
+		  <SWNewRepub_RebelArmyLt>100</SWNewRepub_RebelArmyLt>
 		  
-          <KotORRepub_commando>100</KotORRepub_commando>
-		  <KotORRepub_saboteur>100</KotORRepub_saboteur>
+          <SWNewRepub_wookieeheavy>100</SWNewRepub_wookieeheavy>
 		  
 		  <KotORRepub_jediguardian_PotF MayRequire="guy762.Lee.KotORPotF">10</KotORRepub_jediguardian_PotF>
 		  <KotORRepub_jedisentinel_PotF MayRequire="guy762.Lee.KotORPotF">10</KotORRepub_jedisentinel_PotF>
@@ -315,13 +325,11 @@
 			<li>ImmediateAttackBreaching</li>
 		</disallowedStrategies>
         <options>
-          <KotORRepub_soldier>25</KotORRepub_soldier>
-		  <KotORRepub_lieutenant>50</KotORRepub_lieutenant>
-		  <KotORRepub_droid_SentWD MayRequire="guy762.KotORDroids">100</KotORRepub_droid_SentWD>
-		  <KotORRepub_droid_ADMkIV MayRequire="guy762.KotORDroids">50</KotORRepub_droid_ADMkIV>
+          <SWNewRepub_RebelTrooper>50</SWNewRepub_RebelTrooper>
+		  <SWNewRepub_RebelArmyLt>100</SWNewRepub_RebelArmyLt>
 		  
 		  <KotORRepub_commando>100</KotORRepub_commando>
-		  <KotORRepub_saboteur>100</KotORRepub_saboteur>
+		  <SWNewRepub_RebelAgent>100</SWNewRepub_RebelAgent>
         </options>
       </li>
 	  

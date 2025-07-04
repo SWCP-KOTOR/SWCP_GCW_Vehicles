@@ -22,6 +22,17 @@
 			<groups>
 				<li>
 				  <things>
+					<guy762_ShipChunk_ATST>1</guy762_ShipChunk_ATST>
+				  </things>
+				  <indoorRuin>false</indoorRuin>
+				  <coveredCellsPer10Cells>1.25~2</coveredCellsPer10Cells>
+				  <filthDef>Filth_MachineBits</filthDef>
+				  <filthExpandBy>1</filthExpandBy>
+				  <filthChance>0.8</filthChance>
+				  <clusterRectRadius>12~16</clusterRectRadius>
+				</li>
+				<li>
+				  <things>
 					<guy762_ShipChunk_TIEInterceptor>1</guy762_ShipChunk_TIEInterceptor>
 				  </things>
 				  <indoorRuin>false</indoorRuin>

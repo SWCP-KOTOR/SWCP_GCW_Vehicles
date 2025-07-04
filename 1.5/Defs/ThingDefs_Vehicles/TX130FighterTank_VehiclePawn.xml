@@ -524,7 +524,7 @@
 			<!-- <armorPenetrationBase>1</armorPenetrationBase> -->
 			<stoppingPower>5</stoppingPower>
 			<speed>10000</speed>
-			<soundAmbient>kotorsound_beam_midair</soundAmbient>
+			<!-- <soundAmbient>kotorsound_beam_midair</soundAmbient> -->
 		</projectile>
 		<modExtensions>
 			<li Class="taranchuk_lasers.LaserProperties">
@@ -541,6 +541,10 @@
 				<fleckChancePerTick>0.32</fleckChancePerTick>
 				<textureScrollOffsetPerTick>(0, -0.1)</textureScrollOffsetPerTick>
 				<lockOnTarget>true</lockOnTarget>
+				
+				<sustainerSoundDef>kotorsound_beam_midair</sustainerSoundDef>
+				<sustainerTickPeriod>100</sustainerTickPeriod>
+				<trailSoundDef>GunTail_Medium</trailSoundDef>
 			</li>
 		</modExtensions>
 	</ThingDef>

@@ -1,0 +1,331 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<Defs>	
+	
+	<Vehicles.PatternDef>
+		<defName>guy762_SWVehiclePattern_X34Landspeeder</defName>
+		<label>X-34 Landspeeder</label>
+		<path>LandVehicles/X34Landspeeder/X34Landspeeder_pattern</path>
+	</Vehicles.PatternDef>
+	
+	<Vehicles.VehicleDef ParentName="guy762_SpeederBikeOrUnarmoredVehicle_base">
+		<defName>guy762_SWVehicle_X34Landspeeder</defName>
+		<label>X-34 Landspeeder</label>
+		<description>. \n\n&lt;color=#bb8f04&gt;Crew:&lt;/color&gt; Driver x1</description>
+		
+		<graphicData>
+			<texPath>LandVehicles/X34Landspeeder/X34Landspeeder_L1</texPath>
+			<graphicClass>Vehicles.Graphic_Vehicle</graphicClass>
+			<shaderType>CutoutComplexPattern</shaderType>
+			<drawSize>(6,6)</drawSize>
+			<pattern>guy762_SWVehiclePattern_X34Landspeeder</pattern>
+			<color>(170,160,135)</color> <!-- stanky beige -->
+			<colorTwo>(140,90,60)</colorTwo> <!-- soft brown -->
+		</graphicData>
+		
+		<fillPercent>0.4</fillPercent>
+		
+		<nameable>false</nameable>
+		<buildDef>guy762_SWVehicleBP_X34Landspeeder</buildDef>
+		
+		<size>(4,4)</size>
+		<uiIconScale>1</uiIconScale>
+		
+		<vehicleMovementPermissions>DriverNeeded</vehicleMovementPermissions>
+		<vehicleCategory>Transport</vehicleCategory>
+		<techLevel>Spacer</techLevel>
+		<vehicleType>Land</vehicleType>
+				
+		<statBases>
+			<ArmorRating_Sharp>0.55</ArmorRating_Sharp> <!-- all speeder bikes should use this same stat block -->
+			<ArmorRating_Blunt>0.4</ArmorRating_Blunt>
+			<ArmorRating_Heat>0.65</ArmorRating_Heat>
+			<MaxHitPoints>500</MaxHitPoints>
+			<Flammability>0.5</Flammability>
+			<MarketValue>2500</MarketValue>
+		</statBases>
+		
+		<soundSustainersOnEvent>
+			<!--li>
+				<start>MoveStop</start>
+				<stop>MoveStart</stop>
+				<value>kotorsound_speederbike_idle</value>
+			</li-->
+			<li>
+				<start>MoveStart</start>
+				<stop>MoveStop</stop>
+				<value>kotorsound_speederbike_moving</value>
+			</li>
+		</soundSustainersOnEvent>
+		
+		<soundOneShotsOnEvent>
+			<li>
+				<key>IgnitionOn</key>
+				<value>kotorsound_speederbike_activate</value>
+			</li>
+			<li>
+				<key>IgnitionOff</key>
+				<value>kotorsound_speederbike_deactivate</value>
+			</li>
+			<!-- <li> -->
+				<!-- <key>DamageTaken</key> -->
+				<!-- <value>kotorsound_speederbike_damaged</value> -->
+			<!-- </li> -->
+			<!-- <li> -->
+				<!-- <key>CargoAdded</key> -->
+				<!-- <value>kotorsound_bag_open</value> -->
+			<!-- </li> -->
+			<!-- <li> -->
+				<!-- <key>CargoRemoved</key> -->
+				<!-- <value>kotorsound_bag_close</value> -->
+			<!-- </li> -->
+		</soundOneShotsOnEvent>
+		
+		<race>
+			<baseBodySize>1</baseBodySize>
+		</race>
+		
+		<drawProperties>
+			<graphicOverlays>
+				<li>
+					<graphicData>
+						<texPath>LandVehicles/X34Landspeeder/X34Landspeeder_L2</texPath>
+						<graphicClass>Vehicles.Graphic_Vehicle</graphicClass> <!-- Graphic_RGB if not using the pattern system -->
+						<shaderType>CutoutComplexPattern</shaderType>
+						<drawSize>(6,6)</drawSize>
+						<layer>2</layer>
+						<pattern>guy762_SWVehiclePattern_X34Landspeeder</pattern>
+						<color>(170,160,135)</color> <!-- stanky beige -->
+						<colorTwo>(140,90,60)</colorTwo> <!-- soft brown -->
+					</graphicData>
+				</li>
+			</graphicOverlays>
+		</drawProperties>
+		
+		<vehicleStats>
+			<Mass>100</Mass>
+			<MoveSpeed>25</MoveSpeed>
+			<CargoCapacity>50</CargoCapacity>
+			<RepairRate>1</RepairRate>
+			<!--AccelerationRate>0.08</AccelerationRate-->
+		</vehicleStats>
+		
+		<properties>
+			<diagonalRotation>false</diagonalRotation>
+			<manhunterTargetsVehicle>true</manhunterTargetsVehicle>
+			
+			<worldSpeedMultiplier>0.5</worldSpeedMultiplier> <!-- higher number = faster travel -->
+			<winterSpeedMultiplier>1.5</winterSpeedMultiplier> <!-- lower number = faster winter travel -->
+			<offRoadMultiplier>1</offRoadMultiplier> <!-- lower number = faster travel -->
+			
+			<customRoadCosts AssignDefaults = "0.4" /> <!-- vanilla default is 0.5, lower number = faster -->
+			<!-- <customTerrainCosts AllowTerrainWithTag="Water" PathCost="1"/> -->
+			<track Class = "Vehicles.VehicleTrack_Wake">
+				<speed>2</speed>
+			</track>
+			
+			<riverCost>1</riverCost> <!-- higher = slower, <1 = very fast on world map -->
+			
+			<!-- <customHillinessCosts> -->
+				<!-- <SmallHills>0.25</SmallHills> -->
+				<!-- <LargeHills>0.75</LargeHills> -->
+				<!-- <Mountainous>1.5</Mountainous> -->
+				<!-- <Impassable>1.5</Impassable> -->
+			<!-- </customHillinessCosts> -->
+			
+			<!--customSnowCategoryTicks>
+				<Dusting>4</Dusting>
+				<Thin>8</Thin>
+				<Medium>16</Medium>
+				<Thick>24</Thick>
+			</customSnowCategoryTicks-->
+			
+			<roles>
+				<li>
+					<key>driver</key>
+					<label>Driver</label>
+					<slots>1</slots>
+					<slotsToOperate>1</slotsToOperate>
+					<exposed>true</exposed>
+					
+					<hitbox>
+						<side>Body</side>
+					</hitbox>
+					
+					<handlingTypes>
+						<li>Movement</li>
+					</handlingTypes>
+				
+					<pawnRenderer>
+						<layerEast>0</layerEast>
+						<layerWest>2</layerWest>
+						
+						<layer>0</layer>
+						<layerNorth>0</layerNorth>
+						<layerSouth>0</layerSouth>
+						<angleNorth>0</angleNorth>
+						<angleEast>342</angleEast>
+						<angleNorthEast>0</angleNorthEast>
+						<angleSouthEast>0</angleSouthEast>
+						
+						<drawOffsetNorth>(-0.425,0,0)</drawOffsetNorth>
+						
+						<drawOffsetSouth>(0.425,0,0.25)</drawOffsetSouth>
+						
+						<drawOffsetEast>(-0.1,0,0.4)</drawOffsetEast>
+						
+						<drawOffsetWest>(0.1,0,-0.1)</drawOffsetWest>
+					</pawnRenderer>
+				</li>
+				<li>
+					<key>shotgun</key>
+					<label>Shotgun</label>
+					<slots>1</slots>
+					<slotsToOperate>1</slotsToOperate>
+					<exposed>true</exposed>
+					
+					<hitbox>
+						<side>Body</side>
+					</hitbox>
+				
+					<pawnRenderer>
+						<layerEast>2</layerEast>
+						<layerWest>0</layerWest>
+						
+						<layer>0</layer>
+						<layerNorth>0</layerNorth>
+						<layerSouth>0</layerSouth>
+						<angleNorth>0</angleNorth>
+						<angleEast>342</angleEast>
+						<angleNorthEast>0</angleNorthEast>
+						<angleSouthEast>0</angleSouthEast>
+						
+						<drawOffsetNorth>(0.425,0,0)</drawOffsetNorth>
+						
+						<drawOffsetSouth>(-0.425,0,0.25)</drawOffsetSouth>
+						
+						<drawOffsetEast>(-0.1,0,-0.1)</drawOffsetEast>
+						
+						<drawOffsetWest>(0.1,0,0.4)</drawOffsetWest>
+					</pawnRenderer>
+				</li>
+			</roles>
+		</properties>
+		
+		<components>
+			<li>
+				<key>X34LandspeederKey_hull</key>
+				<label>Hull</label>
+				<depth>External</depth>
+				
+				<armor> <!-- all speeder bikes should use this same stat block -->
+					<ArmorRating_Sharp>0.55</ArmorRating_Sharp>
+					<ArmorRating_Blunt>0.4</ArmorRating_Blunt>
+					<ArmorRating_Heat>0.65</ArmorRating_Heat>
+					<IncomingDamageFactor>-0.05</IncomingDamageFactor>
+				</armor>
+				<health>100</health>
+				
+				<hitbox>
+					<side>Body</side>
+				</hitbox>
+			</li>
+			<li>
+				<key>X34LandspeederKey_engine</key>
+				<label>Engine</label>
+				<health>1</health>
+				<priorityStatEfficiency>true</priorityStatEfficiency>
+				<depth>Internal</depth>
+				
+				<reactors>
+					<li Class = "Vehicles.Reactor_Explosive">
+						<indicator>VF_Explosive</indicator>
+						<chance>0.25</chance>
+						<maxHealth>0.2</maxHealth>
+						<radius>3</radius>
+						<damageDef>guy762_ExplosiveDamage_energy</damageDef>
+					</li>
+				</reactors>
+				
+				<categories>
+					<li>MoveSpeed</li>
+				</categories>
+			</li>
+			<li>
+				<key>X34LandspeederKey_repulsor</key>
+				<label>Repulsorlift Generator</label>
+				<health>1</health>
+				<depth>Internal</depth>
+				
+				<categories>
+					<li>MoveSpeed</li>
+				</categories>
+			</li>
+			<li>
+				<key>X34LandspeederKey_thrust_one</key>
+				<label>Dorsal Thrust Repulsor</label>
+				<health>1</health>
+				<depth>Internal</depth>
+				
+				<tags>
+					<li>Wheel</li>
+				</tags>
+				
+				<categories>
+					<li>MoveSpeed</li>
+				</categories>
+			</li>
+			<li>
+				<key>X34LandspeederKey_thrust_two</key>
+				<label>Port Thrust Repulsor</label>
+				<health>1</health>
+				<depth>Internal</depth>
+				
+				<tags>
+					<li>Wheel</li>
+				</tags>
+				
+				<categories>
+					<li>MoveSpeed</li>
+				</categories>
+			</li>
+			<li>
+				<key>X34LandspeederKey_thrust_three</key>
+				<label>Starboard Thrust Repulsor</label>
+				<health>1</health>
+				<depth>Internal</depth>
+				
+				<tags>
+					<li>Wheel</li>
+				</tags>
+				
+				<categories>
+					<li>MoveSpeed</li>
+				</categories>
+			</li>
+		</components>
+
+		<!--modExtensions>
+			<li Class="VanillaVehiclesExpanded.StatExtension">
+				<statToAdd>
+					<li>VVE_VehicleTier</li>
+				</statToAdd>
+				<statValues>
+					<li>VVE_Tier1</li>
+				</statValues>
+				<statDescriptions>
+					<li>VVE_Tier1Desc</li>
+				</statDescriptions>
+			</li>
+		</modExtensions-->
+		
+		<comps>
+			<li Class="Vehicles.CompProperties_FueledTravel">
+				<electricPowered>true</electricPowered>
+				<fuelConsumptionRate>10</fuelConsumptionRate>
+				<fuelCapacity>75</fuelCapacity>
+				<fuelConsumptionWorldMultiplier>15</fuelConsumptionWorldMultiplier>
+			</li>
+		</comps>
+	</Vehicles.VehicleDef>
+</Defs>

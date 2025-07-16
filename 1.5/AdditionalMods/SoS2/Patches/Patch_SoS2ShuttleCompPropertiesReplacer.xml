@@ -3,12 +3,10 @@
 
 
 	<Operation Class="PatchOperationAdd">
-	  <xpath>Defs/Vehicles.VehicleDef[@Name="MM-VF-Vehicle_Pawn"]</xpath>
+	  <xpath>Defs/Vehicles.VehicleDef[@Name="MM-VF-Vehicle_Pawn"]/statBases</xpath>
 	  <value>
-		<statBases>
-			<DecompressionResistance>1</DecompressionResistance>
-			<VacuumSpeedMultiplier>4</VacuumSpeedMultiplier>
-		</statBases>
+		<DecompressionResistance>1</DecompressionResistance>
+		<VacuumSpeedMultiplier>4</VacuumSpeedMultiplier>
 	  </value>
 	</Operation>
 

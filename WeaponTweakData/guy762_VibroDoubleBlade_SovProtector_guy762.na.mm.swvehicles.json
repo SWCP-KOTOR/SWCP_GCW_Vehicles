@@ -1,0 +1,20 @@
+{
+  "TextureModID": "guy762.na.mm.swvehicles",
+  "ItemDefName": "guy762_VibroDoubleBlade_SovProtector",
+  "ItemType": "ThingDef",
+  "ItemTypeNamespace": "Verse",
+  "OffX": -0.0663176253,
+  "OffY": 0.0362173021,
+  "Rotation": 45.0,
+  "ScaleX": 1.75,
+  "ScaleY": 1.75,
+  "BladeStart": -0.5735568,
+  "BladeEnd": -1.21787715,
+  "MeleeWeaponType": 48,
+  "TrailTint": {
+    "r": 0.0,
+    "g": 0.0,
+    "b": 0.0,
+    "a": 0.0
+  }
+}

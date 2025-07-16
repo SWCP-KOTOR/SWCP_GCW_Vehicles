@@ -6,7 +6,7 @@
 	
 	<ThingDef ParentName="KotORRangedModdable_TwoHand">
 		<defName>guy762_T21repeater</defName>
-		<label>T-21 repeating blaster</label>
+		<label>T-21 heavy repeating blaster</label>
 		<description>Seeking to further prove the versatility of Stormtrooper infantry doctrine, the Imperial Stormtrooper corps commissioned BlasTech to design a heavy blaster capable of functioning both as an anti-tank rifle and as a squad automatic weapon to effectively counter a wider variety of targets. The result was the T-21, a cumbersome but powerful weapon used to great effect in counter-insurgency operations.</description>
 		<techLevel>Spacer</techLevel>
 		<thingClass>ThingWithComps</thingClass>
@@ -36,6 +36,7 @@
 			<li>SWRanged_T21repeater</li>
 			<li>SWRanged_AnyHeavyRifle</li>
 			<li>SWRanged_AnyAntiVehicleRifle</li>
+			<li>SWKotORWeaponCategoryTag_heavyranged</li>
 		</weaponTags>
 		<tradeTags>
 			<li>guy762TT_KotORRanged</li>
@@ -159,6 +160,7 @@
 			<li>SWRanged_T21Bheavy</li>
 			<li>SWRanged_AnyHeavyRifle</li>
 			<li>SWRanged_AnyAntiVehicleRifle</li>
+			<li>SWKotORWeaponCategoryTag_heavyranged</li>
 		</weaponTags>
 		<tradeTags>
 			<li>guy762TT_KotORRanged</li>

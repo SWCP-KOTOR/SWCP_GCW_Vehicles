@@ -1,0 +1,73 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<Defs>
+	  
+	<PawnKindDef Name="SWCivilian_smuggler" ParentName="KotORCivilian_Base">
+		<defName>SWCivilian_smuggler</defName>
+		<label>smuggler</label>
+		<trader>true</trader>
+		<combatPower>50</combatPower>
+		<minGenerationAge>18</minGenerationAge>
+		<maxGenerationAge>75</maxGenerationAge>
+		<xenotypeSet>
+			<xenotypeChances Inherit="False">
+				<Baseliner>0.3</Baseliner>
+				<guy762_xenotype_duros>0.1</guy762_xenotype_duros>
+				<guy762_xenotype_rodian>0.1</guy762_xenotype_rodian>
+				<guy762_xenotype_twilek>0.2</guy762_xenotype_twilek>
+				<guy762_xenotype_devaronian>0.15</guy762_xenotype_devaronian>
+				<guy762_xenotype_zabrak>0.15</guy762_xenotype_zabrak>
+			</xenotypeChances>
+		</xenotypeSet>
+		<useFactionXenotypes>false</useFactionXenotypes>
+		
+		<itemQuality>Normal</itemQuality>
+		<apparelMoney>9999</apparelMoney>
+		<apparelTags Inherit="False">
+		  <!-- <li>KotORShield_basic</li> -->
+		  <!-- <li>KotORHeadband_combat</li> -->
+		  <!-- <li>KotORHeadband_tech</li> -->
+		  <li>KotOREquipment_tech</li>
+		  <li>KotORUtility_weakgrenade</li>
+		  <li>KotORClothing_smuggler</li>
+		</apparelTags>
+		<skills>
+		  <li>
+			<skill>Shooting</skill>
+			<range>8~16</range>
+		  </li>
+		  <li>
+			<skill>Social</skill>
+			<range>8~14</range>
+		  </li>
+		  <li>
+			<skill>Intellectual</skill>
+			<range>6~12</range>
+		  </li>
+		</skills>
+		<apparelAllowHeadgearChance>0.15</apparelAllowHeadgearChance>
+		<weaponMoney>250~5000</weaponMoney>
+		<weaponTags>
+		  <li>SWRanged_DL18pistol</li>
+		  <li>SWRanged_DL21pistol</li>
+		  <li>SWRanged_Model57pistol</li>
+		  <li>SWRanged_SE14pistol</li>
+		</weaponTags>
+		<biocodeWeaponChance>0.6</biocodeWeaponChance>
+		<inventoryOptions>
+		  <subOptionsChooseOne>
+			<li>
+				<thingDef>guy762_KotORcredits</thingDef>
+				<countRange>0~1000</countRange>
+			</li>
+		  </subOptionsChooseOne>
+		</inventoryOptions>
+		<initialWillRange>0.5~2</initialWillRange>
+		<initialResistanceRange>5~10</initialResistanceRange>
+		<isFighter>true</isFighter>
+		<apparelIgnoreSeasons>false</apparelIgnoreSeasons>
+	</PawnKindDef>
+	
+
+
+ </Defs>

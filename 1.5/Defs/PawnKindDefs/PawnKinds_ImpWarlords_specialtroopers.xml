@@ -402,10 +402,10 @@
 		</specificApparelRequirements>
 
 		<biocodeWeaponChance>0.75</biocodeWeaponChance>
-		<weaponMoney>625~6500</weaponMoney>
+		<weaponMoney>1500~6500</weaponMoney>
 		<weaponTags>
-			<li>SWRanged_E11tac</li>
 			<li>SWRanged_E22rifle</li>
+			<li>SWRanged_DLT19repeater</li>
 			<li>SWRanged_T21Bheavy</li>
 		</weaponTags>
 		
@@ -475,7 +475,7 @@
 	
 	
 	
-	<PawnKindDef Name="SWWarlords_thrawnstormie" ParentName="SWImpRemnant_TrooperBase">
+	<PawnKindDef Name="SWWarlords_thrawnstormie" ParentName="SWImpRemnant_StormtrooperCorpsBase">
 		<defName>SWWarlords_thrawnstormie</defName>
 		<label>7th Fleet Stormtrooper</label>
 		<combatPower>125</combatPower>
@@ -521,12 +521,12 @@
 		</specificApparelRequirements>
 
 		<biocodeWeaponChance>0.95</biocodeWeaponChance>
-		<weaponMoney>625~3500</weaponMoney>
+		<weaponMoney>625~4500</weaponMoney>
 		<weaponTags>
 			<li>SWRanged_E11tac</li>
 			<li>SWRanged_E22rifle</li>
 			<li>SWRanged_DXR4DisruptorRifle</li>
-			<li>SWRanged_T21repeater</li>
+			<!-- <li>SWRanged_DLT19repeater</li> -->
 		</weaponTags>
 
 		<techHediffsChance>2</techHediffsChance>
@@ -571,7 +571,7 @@
 	
 	
 	
-	<PawnKindDef Name="SWWarlords_shadowstormie" ParentName="SWImpRemnant_TrooperBase">
+	<PawnKindDef Name="SWWarlords_shadowstormie" ParentName="SWImpRemnant_StormtrooperCorpsBase">
 		<defName>SWWarlords_shadowstormie</defName>
 		<label>Shadow Stormtrooper</label>
 		<combatPower>150</combatPower>

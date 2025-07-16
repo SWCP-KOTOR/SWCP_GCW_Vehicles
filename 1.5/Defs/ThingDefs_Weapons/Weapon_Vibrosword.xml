@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<ThingDef ParentName="KotORMeleeNoQualityModMake_OneHand">
+		<defName>guy762_VibroswordGCW</defName>
+		<label>Vibrosword</label>
+		<description>.</description>
+		<soundInteract>kotorsound_swordinteract</soundInteract>
+		<meleeHitSound>kotorsound_blade_hitsoft</meleeHitSound>
+		<graphicData>
+			<texPath>Weapons/Vibrosword</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<shaderType>Cutout</shaderType>
+			<drawSize>1.25</drawSize>
+		</graphicData>
+		<equippedAngleOffset>-65</equippedAngleOffset>
+		<techLevel>Spacer</techLevel>
+		<weaponClasses><li>MeleePiercer</li></weaponClasses>
+		<statBases>
+			<MarketValue>1685</MarketValue>
+			<Mass>5</Mass>
+			
+			<WorkToMake>24000</WorkToMake>
+		</statBases>
+		
+		<recipeMaker>
+			<researchPrerequisite>guy762_ResearchKotOR_vibroweapons</researchPrerequisite>
+			<skillRequirements>
+				<Crafting>6</Crafting>
+			</skillRequirements>
+		</recipeMaker>
+		<costList>
+			<KOTOR_IngotCortosis>2</KOTOR_IngotCortosis>
+			<ComponentSpacer>2</ComponentSpacer>
+			<Plasteel>30</Plasteel>
+			<Steel>50</Steel>
+		</costList>
+		
+		<comps>
+		  <li Class="CompExtraSounds.CompProperties_ExtraSounds">
+			<compClass>CompExtraSounds.CompExtraSounds</compClass>
+			<soundMiss>kotorsound_blade_swing</soundMiss>
+			<soundHitPawn>kotorsound_blade_hitsoft</soundHitPawn>
+			<soundHitBuilding>kotorsound_blade_hithard</soundHitBuilding>
+		  </li>
+		</comps>
+		<tools>
+			<li>
+				<label>handle</label>
+				<capacities>
+					<li>Blunt</li>
+				</capacities>
+				<!---->
+				<power>8</power>
+				<chanceFactor>0.05</chanceFactor>
+				<cooldownTime>3</cooldownTime>
+			</li>
+			<li>
+				<label>point</label>
+				<capacities>
+					<li>Stab</li>
+				</capacities>
+				<!---->
+				<power>20</power>
+				<armorPenetration>0.25</armorPenetration>
+				<chanceFactor>0.75</chanceFactor>
+				<cooldownTime>2.4</cooldownTime>
+			</li>
+			<li>
+				<label>edge</label>
+				<capacities>
+					<li>Cut</li>
+				</capacities>
+				<!---->
+				<power>24</power>
+				<armorPenetration>0.25</armorPenetration>
+				<chanceFactor>1.25</chanceFactor>
+				<cooldownTime>2.4</cooldownTime>
+			</li>
+		</tools>
+		<weaponTags Inherit="False">
+			<li>SWMelee_Vibrosword</li>
+			<li>SWKotORWeaponCategoryTag_melee</li>
+		</weaponTags>
+		<tradeTags>
+			<li>guy762TT_KotORMelee</li>
+			<li>guy762TT_KotORGeneric_adv</li>
+			<li>guy762TT_KotORGeneric_CivLegal</li>
+		</tradeTags>
+		<thingSetMakerTags>
+		  <!-- <li>RewardStandardLowFreq</li> -->
+		  <!-- <li>RewardStandardQualitySuper</li> -->
+		</thingSetMakerTags>
+	</ThingDef>
+	
+	
+
+</Defs>

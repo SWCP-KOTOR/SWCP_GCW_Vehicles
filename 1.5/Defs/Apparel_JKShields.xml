@@ -53,7 +53,7 @@
     </verbs>
 	<comps>
 		<li Class="CompProperties_ApparelReloadable">
-			<maxCharges>5</maxCharges>
+			<maxCharges>2</maxCharges>
 			<destroyOnEmpty>false</destroyOnEmpty>
 			<hotKey>Misc4</hotKey>
 			<chargeNoun>usage</chargeNoun>
@@ -268,7 +268,7 @@
     </verbs>
 	<comps>
 		<li Class="CompProperties_ApparelReloadable">
-			<maxCharges>5</maxCharges>
+			<maxCharges>4</maxCharges>
 			<destroyOnEmpty>false</destroyOnEmpty>
 			<hotKey>Misc4</hotKey>
 			<chargeNoun>usage</chargeNoun>

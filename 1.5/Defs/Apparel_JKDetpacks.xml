@@ -18,7 +18,7 @@
             <Flammability>1</Flammability>
             <EquipDelay>1</EquipDelay>
 			
-			<MarketValue>5080</MarketValue>
+			<!-- <MarketValue>5080</MarketValue> -->
         </statBases>
 		
 		<soundInteract>kotorsound_select_JKdetpack</soundInteract>

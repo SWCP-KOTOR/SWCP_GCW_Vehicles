@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	
+	
+	
+	<ThingDef ParentName="KotORRangedModdable_OneHand">
+		<defName>guy762_BH4DoubleBlaster</defName>
+		<label>BH-4 Double Blaster Pistol</label>
+		<description>.</description>
+		<techLevel>Spacer</techLevel>
+		<thingClass>ThingWithComps</thingClass>
+		<graphicData>
+			<texPath>Weapons/BH4</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<soundInteract>kotorsound_select_SotE</soundInteract>
+		<statBases>
+			<MarketValue>1450</MarketValue>
+			<Mass>4</Mass>
+			<AccuracyTouch>0.90</AccuracyTouch>
+			<AccuracyShort>0.80</AccuracyShort>
+			<AccuracyMedium>0.60</AccuracyMedium>
+			<AccuracyLong>0.50</AccuracyLong>
+			<RangedWeapon_Cooldown>1.5</RangedWeapon_Cooldown>
+			<RangedWeapon_DamageMultiplier>0.8</RangedWeapon_DamageMultiplier>
+		</statBases>
+		
+		<weaponTags>
+			<li>SWRanged_BH4DoubleBlaster</li>
+			<li>SWKotORWeaponCategoryTag_pistol</li>
+		</weaponTags>
+		<tradeTags>
+			<li>guy762TT_KotORRanged</li>
+		</tradeTags>
+		<verbs>
+			<li>
+				<verbClass>Verb_Shoot</verbClass>
+				<hasStandardCommand>true</hasStandardCommand>
+				<defaultProjectile>SWProj_DoubleBlasterBolt</defaultProjectile>
+				<warmupTime>0.5</warmupTime>
+				<defaultCooldownTime>1.5</defaultCooldownTime>
+				<range>20</range>
+				<ticksBetweenBurstShots>40</ticksBetweenBurstShots>
+				<burstShotCount>1</burstShotCount>
+				<soundCast>kotorsound_SBDtrishot</soundCast>
+				<soundCastTail>GunTail_Medium</soundCastTail>
+				<muzzleFlashScale>9</muzzleFlashScale>
+			</li>
+		</verbs>
+		<tools>
+			<li>
+				<label>stock</label>
+				<capacities>
+					<li>Blunt</li>
+				</capacities>
+				<power>9</power>
+				<cooldownTime>2</cooldownTime>
+			</li>
+			<li>
+				<label>barrel</label>
+				<capacities>
+					<li>Blunt</li>
+					<li>Poke</li>
+				</capacities>
+				<power>9</power>
+				<cooldownTime>2</cooldownTime>
+			</li>
+		</tools>
+		<!--comps>
+			<li Class="ModularWeapons.CompProperties_ModularParts">
+				<compClass>ModularWeapons.CompModularParts</compClass>
+				<bundlePackageId>guy762.KotORWeaponsArmor</bundlePackageId>
+				<partKinds>
+					<li>guy762_slot_trigger_lgtrep</li>
+				</partKinds>
+			</li>
+		</comps-->
+	</ThingDef>
+	
+	
+</Defs>

@@ -424,12 +424,12 @@
 		</colorGenerator>
 	  </ThingDef>
 	  
-
+	  
 	  
 	  
 	  <ThingDef ParentName="guy762_clothingbase">
-		<defName>guy762_NewRepUniform_lowrank</defName>
-		<label>New Republic uniform, officer's</label>
+		<defName>guy762_RebelUniform_lowrank</defName>
+		<label>Rebel Alliance uniform, officer's</label>
 		<description>These are simple garments that protect little more than the modesty of the wearer.</description>
 		<graphicData>
 		  <texPath>Apparel/RebelOfficer/navylieutenant/Apparel</texPath>
@@ -466,9 +466,200 @@
 		
 		<apparel>
 		  <tags Inherit="False">
-			<li>NewRepublic_lowrankofficer</li>
+			<li>RebelAlliance_lowrankofficer</li>
 		  </tags>
 		  <wornGraphicPath>Apparel/RebelOfficer/navylieutenant/Apparel</wornGraphicPath>
+		  <useWornGraphicMask>true</useWornGraphicMask>
+		  <defaultOutfitTags Inherit="False">
+			<li>Worker</li>
+		  </defaultOutfitTags>
+		</apparel>
+		
+		<randomStyleChance>1</randomStyleChance>
+		<randomStyle>
+		  <li>
+			<styleDef>guy762_RankStyleRebOfficer_navylt</styleDef>
+		  </li>
+		  <li>
+			<styleDef>guy762_RankStyleRebOfficer_navycap</styleDef>
+		  </li>
+		</randomStyle>
+		
+		<tradeTags>
+			<li>guy762TT_KotORArmor</li>
+		</tradeTags>
+		<colorGenerator Class="ColorGenerator_Options" Inherit="False">
+			<options>
+				<li>
+					<weight>15</weight>
+					<only>(170,135,100)</only> <!-- darker beige -->
+				</li>
+			</options>
+		</colorGenerator>
+	  </ThingDef>
+	  
+	  <ThingStyleDef>
+		<defName>guy762_RankStyleRebOfficer_navylt</defName>
+		<overrideLabel>Rebel Alliance uniform, navy lieutenant's</overrideLabel>
+		<wornGraphicPath>Apparel/RebelOfficer/navylieutenant/Apparel</wornGraphicPath>
+		<graphicData>
+		  <texPath>Apparel/RebelOfficer/navylieutenant/Apparel</texPath>
+		  <graphicClass>Graphic_Single</graphicClass>
+		  <shaderType>CutoutComplex</shaderType>
+		</graphicData>
+	  </ThingStyleDef>
+	  
+	  <ThingStyleDef>
+		<defName>guy762_RankStyleRebOfficer_navycap</defName>
+		<overrideLabel>Rebel Alliance uniform, navy captain's</overrideLabel>
+		<wornGraphicPath>Apparel/RebelOfficer/navycaptain/Apparel</wornGraphicPath>
+		<graphicData>
+		  <texPath>Apparel/RebelOfficer/navycaptain/Apparel</texPath>
+		  <graphicClass>Graphic_Single</graphicClass>
+		  <shaderType>CutoutComplex</shaderType>
+		</graphicData>
+	  </ThingStyleDef>
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	<ThingDef ParentName="guy762_clothingbase">
+		<defName>guy762_NewRepUniform_bigbelt</defName>
+		<label>New Republic uniform, guard's</label>
+		<description>These are simple garments that protect little more than the modesty of the wearer.</description>
+		<graphicData>
+		  <texPath>Apparel/NewRepublicOfficer/bigbelt/Apparel</texPath>
+		  <graphicClass>Graphic_Single</graphicClass>
+		  <shaderType>CutoutComplex</shaderType>
+		  <colorTwo>(250,250,250)</colorTwo> <!-- white -->
+		</graphicData>
+		<statBases>
+			<Mass>4</Mass>
+			<MarketValue>170</MarketValue>
+			<MaxHitPoints>100</MaxHitPoints>
+			<ArmorRating_Sharp>0.1</ArmorRating_Sharp>
+			<ArmorRating_Blunt>0.15</ArmorRating_Blunt>
+			<ArmorRating_Heat>0.2</ArmorRating_Heat>
+			<Insulation_Cold>15</Insulation_Cold>
+			<EquipDelay>3</EquipDelay>
+			
+			<WorkToMake>5000</WorkToMake>
+		</statBases>
+		<equippedStatOffsets>
+		  <VEF_MassCarryCapacity>5</VEF_MassCarryCapacity>
+		</equippedStatOffsets>
+		
+		<recipeMaker>
+			<researchPrerequisite>guy762_ResearchKotOR_sith</researchPrerequisite>
+			<skillRequirements>
+				<Crafting>6</Crafting>
+			</skillRequirements>
+		</recipeMaker>
+		<costList>
+		  <Synthread>75</Synthread>
+		  <Plasteel>15</Plasteel>
+		</costList>
+		
+		<apparel>
+		  <tags Inherit="False">
+			<li>NewRepublic_guard</li>
+		  </tags>
+		  <layers Inherit="False">
+			<li>Middle</li>
+			<li>OnSkin</li>
+		  </layers>
+		  
+		  <wornGraphicPath>Apparel/NewRepublicOfficer/bigbelt/Apparel</wornGraphicPath>
+		  <useWornGraphicMask>true</useWornGraphicMask>
+		  <defaultOutfitTags Inherit="False">
+			<li>Worker</li>
+		  </defaultOutfitTags>
+		</apparel>
+		<tradeTags>
+			<li>guy762TT_SEArmor</li>
+		</tradeTags>
+		<colorGenerator Class="ColorGenerator_Options" Inherit="False">
+			<options>
+				<li>
+					<weight>15</weight>
+					<only>(70,90,125)</only>       <!--K1 blue-->
+				</li>
+			</options>
+		</colorGenerator>
+	  </ThingDef>
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+
+	  
+	  
+	  <ThingDef ParentName="guy762_clothingbase">
+		<defName>guy762_NewRepUniform_lowrank</defName>
+		<label>New Republic uniform, officer's</label>
+		<description>These are simple garments that protect little more than the modesty of the wearer.</description>
+		<graphicData>
+		  <texPath>Apparel/NewRepublicOfficer/navylieutenant/Apparel</texPath>
+		  <graphicClass>Graphic_Single</graphicClass>
+		  <shaderType>CutoutComplex</shaderType>
+		  <colorTwo>(250,250,250)</colorTwo> <!-- white -->
+		</graphicData>
+		<statBases>
+			<Mass>4</Mass>
+			<MarketValue>1070</MarketValue>
+			<MaxHitPoints>100</MaxHitPoints>
+			<ArmorRating_Sharp>0.1</ArmorRating_Sharp>
+			<ArmorRating_Blunt>0.15</ArmorRating_Blunt>
+			<ArmorRating_Heat>0.2</ArmorRating_Heat>
+			<Insulation_Cold>15</Insulation_Cold>
+			<EquipDelay>3</EquipDelay>
+			
+			<WorkToMake>5000</WorkToMake>
+		</statBases>
+		<equippedStatOffsets>
+		  <SocialImpact>0.2</SocialImpact>
+		</equippedStatOffsets>
+		
+		<recipeMaker>
+			<researchPrerequisite>guy762_ResearchKotOR_sith</researchPrerequisite>
+			<skillRequirements>
+				<Crafting>6</Crafting>
+			</skillRequirements>
+		</recipeMaker>
+		<costList>
+		  <Synthread>75</Synthread>
+		  <Plasteel>15</Plasteel>
+		</costList>
+		
+		<apparel>
+		  <tags Inherit="False">
+			<li>NewRepublic_lowrankofficer</li>
+		  </tags>
+		  <layers Inherit="False">
+			<li>Middle</li>
+			<li>OnSkin</li>
+		  </layers>
+		  
+		  <wornGraphicPath>Apparel/NewRepublicOfficer/navylieutenant/Apparel</wornGraphicPath>
 		  <useWornGraphicMask>true</useWornGraphicMask>
 		  <defaultOutfitTags Inherit="False">
 			<li>Worker</li>
@@ -492,7 +683,7 @@
 			<options>
 				<li>
 					<weight>15</weight>
-					<only>(170,135,100)</only> <!-- darker beige -->
+					<only>(70,135,190)</only> <!-- new republic azure blue -->
 				</li>
 			</options>
 		</colorGenerator>
@@ -501,9 +692,9 @@
 	  <ThingStyleDef>
 		<defName>guy762_RankStyleNR_navylt</defName>
 		<overrideLabel>New Republic uniform, navy lieutenant's</overrideLabel>
-		<wornGraphicPath>Apparel/RebelOfficer/navylieutenant/Apparel</wornGraphicPath>
+		<wornGraphicPath>Apparel/NewRepublicOfficer/navylieutenant/Apparel</wornGraphicPath>
 		<graphicData>
-		  <texPath>Apparel/RebelOfficer/navylieutenant/Apparel</texPath>
+		  <texPath>Apparel/NewRepublicOfficer/navylieutenant/Apparel</texPath>
 		  <graphicClass>Graphic_Single</graphicClass>
 		  <shaderType>CutoutComplex</shaderType>
 		</graphicData>
@@ -512,9 +703,9 @@
 	  <ThingStyleDef>
 		<defName>guy762_RankStyleNR_navycap</defName>
 		<overrideLabel>New Republic uniform, navy captain's</overrideLabel>
-		<wornGraphicPath>Apparel/RebelOfficer/navycaptain/Apparel</wornGraphicPath>
+		<wornGraphicPath>Apparel/NewRepublicOfficer/navycaptain/Apparel</wornGraphicPath>
 		<graphicData>
-		  <texPath>Apparel/RebelOfficer/navycaptain/Apparel</texPath>
+		  <texPath>Apparel/NewRepublicOfficer/navycaptain/Apparel</texPath>
 		  <graphicClass>Graphic_Single</graphicClass>
 		  <shaderType>CutoutComplex</shaderType>
 		</graphicData>

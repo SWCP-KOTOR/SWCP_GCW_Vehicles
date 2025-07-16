@@ -1,0 +1,372 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <FactionDef ParentName="FactionBase">
+    <defName>guy762_SWWarlordsFaction_ZannConsortium</defName>
+    <label>Zann Consortium</label>
+    <pawnSingular>goon</pawnSingular>
+    <pawnsPlural>goons</pawnsPlural>
+    <categoryTag>Pirate</categoryTag>
+    <description>.</description>
+    <factionIconPath>World/ZannConsortium</factionIconPath>
+    <fixedName>Zann Consortium</fixedName> <!-- !!!IDEA!!!: faction names are local 'front' corporations?  -->
+    <settlementNameMaker>NamerSettlementPirate</settlementNameMaker>
+    <colorSpectrum>
+      <li>(230,170,45)</li>
+    </colorSpectrum>
+    <requiredCountAtGameStart>1</requiredCountAtGameStart>
+    <maxConfigurableAtWorldCreation>1</maxConfigurableAtWorldCreation>
+	<listOrderPriority>1766</listOrderPriority>
+	<configurationListOrderPriority>1766</configurationListOrderPriority>
+    <mustStartOneEnemy>false</mustStartOneEnemy>
+    <maxCountAtGameStart>1</maxCountAtGameStart>
+    <techLevel>Spacer</techLevel>
+	
+	<allowedArrivalTemperatureRange>-40~45</allowedArrivalTemperatureRange>
+	<canMakeRandomly>true</canMakeRandomly>
+    <canSiege>false</canSiege>
+    <canStageAttacks>true</canStageAttacks>
+	<hostileToFactionlessHumanlikes>true</hostileToFactionlessHumanlikes>
+    <hidden>false</hidden> <!-- I guess titles just flat-out don't work with hidden factions :/ -->
+	
+	<naturalEnemy>true</naturalEnemy>
+	
+	<settlementGenerationWeight>1</settlementGenerationWeight>
+	<modExtensions Inherit="False">
+      <li MayRequire="Rick.FCP.Core.Tools.Beta" Class="FCP.Currencies.CurrencyReplacement">
+		<currency>guy762_KotORcredits</currency>
+	  </li>
+	  <li Class="FCP.Core.ModExtension_FactionBannedArrivalModes">
+		<arrivalModes>
+			<li>CenterDrop</li>
+			<li>RandomDrop</li>
+		</arrivalModes>
+	  </li>
+	  <li Class="VFECore.FactionDefExtension">
+		<startingGoodwillByFactionDefs>
+			<guy762_SWWarlordsFaction_NewRepublic>-75~-25</guy762_SWWarlordsFaction_NewRepublic>
+			
+			<guy762_SWWarlordsFaction_ImpRemnant>-25~25</guy762_SWWarlordsFaction_ImpRemnant>
+			<guy762_SWWarlordsFaction_ZsinjDominion>25~50</guy762_SWWarlordsFaction_ZsinjDominion>
+			<guy762_SWWarlordsFaction_Pentastar>-100</guy762_SWWarlordsFaction_Pentastar>
+			
+			<guy762_SWWarlordsFaction_BlackSun>-50</guy762_SWWarlordsFaction_BlackSun>
+			<!-- . -->
+			<guy762_KotORFaction_HuttCartel>-100~0</guy762_KotORFaction_HuttCartel>
+			<guy762_KotORFaction_ViciousHutts>-100</guy762_KotORFaction_ViciousHutts>
+			
+			<guy762_KotORFaction_MandoClan>0~100</guy762_KotORFaction_MandoClan>
+			<guy762_KotORFaction_SavageMandos>-25~0</guy762_KotORFaction_SavageMandos>
+			
+			<guy762_KotORFaction_Civilians>-25</guy762_KotORFaction_Civilians>
+		</startingGoodwillByFactionDefs>
+		<excludeFromCommConsole>true</excludeFromCommConsole>
+		<hasCities>true</hasCities>
+		<minDistanceToOtherSettlements>20</minDistanceToOtherSettlements>
+      </li>
+    </modExtensions>
+	
+	
+	<!--basicMemberKind>Exchange_soldier</basicMemberKind-->
+	<leaderTitle>underboss</leaderTitle>
+	<leaderForceGenerateNewPawn>true</leaderForceGenerateNewPawn>
+	<fixedLeaderKinds>
+		<li>KotORExchg_vigo</li>
+	</fixedLeaderKinds>
+	
+    <allowedCultures>
+		<li>guy762_culture_exchange</li>
+	</allowedCultures>
+	
+	<requiredMemes>
+		<li>guy762_MemeDef_exchange</li>
+		<li MayRequire="VanillaExpanded.VMemesE">VME_Structure_Corporate</li>
+		<li MayRequire="Ludeon.RimWorld.Ideology">Loyalist</li>
+	</requiredMemes>
+	<allowedMemes>
+		<li MayRequire="Ludeon.RimWorld.Ideology">Supremacist</li>
+		<li MayRequire="Ludeon.RimWorld.Ideology">Raider</li>
+		<li MayRequire="VanillaExpanded.VMemesE">VME_Trader</li>
+		<li MayRequire="Ludeon.RimWorld.Ideology">Structure_Ideological</li>
+	</allowedMemes>
+	<disallowedPrecepts>
+		<li MayRequire="Ludeon.RimWorld.Ideology">ApparelDesired_Strong_Subordinate</li>
+		<li MayRequire="Ludeon.RimWorld.Ideology">ApparelDesired_Soft_Subordinate</li>
+		<li MayRequire="Ludeon.RimWorld.Ideology">NobleDespisedWeapons</li>
+		
+		<li MayRequire="Ludeon.RimWorld.Ideology">Charity_Essential</li>
+		<li MayRequire="Ludeon.RimWorld.Ideology">Charity_Important</li>
+		<li MayRequire="Ludeon.RimWorld.Ideology">Charity_Worthwhile</li>
+		
+		<li MayRequire="Ludeon.RimWorld.Ideology">Execution_Abhorrent</li>
+		<li MayRequire="Ludeon.RimWorld.Ideology">Execution_Horrible</li>
+		<li MayRequire="Ludeon.RimWorld.Ideology">Execution_HorribleIfInnocent</li>
+		
+		<li MayRequire="Ludeon.RimWorld.Ideology">DrugUse_Prohibited</li>
+		<li MayRequire="Ludeon.RimWorld.Ideology">DrugUse_MedicalOnly</li>
+		<li MayRequire="Ludeon.RimWorld.Ideology">DrugUse_MedicalOrSocial</li>
+		
+		<li MayRequire="Ludeon.RimWorld.Ideology">Slavery_Abhorrent</li>
+		<li MayRequire="Ludeon.RimWorld.Ideology">Slavery_Horrible</li>
+		<li MayRequire="Ludeon.RimWorld.Ideology">Slavery_Disapproved</li>
+		
+		<li MayRequire="erdelf.HumanoidAlienRaces">HAR_AlienSlavery_Abhorrent</li>
+		<li MayRequire="erdelf.HumanoidAlienRaces">HAR_AlienSlavery_Horrible</li>
+		<li MayRequire="erdelf.HumanoidAlienRaces">HAR_AlienSlavery_Disapproved</li>
+	</disallowedPrecepts>
+	
+	
+    <xenotypeSet>
+      <xenotypeChances>
+		<Baseliner MayRequire="Ludeon.RimWorld.Biotech">0.25</Baseliner>
+		<guy762_xenotype_bith MayRequire="guy762.StarWarsXenotypes">0.01</guy762_xenotype_bith>
+		<!-- <guy762_xenotype_cathar MayRequire="guy762.StarWarsXenotypes">0.01</guy762_xenotype_cathar> -->
+		<!-- <guy762_xenotype_defel MayRequire="guy762.StarWarsXenotypes">0.01</guy762_xenotype_defel> -->
+		<guy762_xenotype_devaronian MayRequire="guy762.StarWarsXenotypes">0.07</guy762_xenotype_devaronian>
+		<guy762_xenotype_duros MayRequire="guy762.StarWarsXenotypes">0.10</guy762_xenotype_duros>
+		<!-- <guy762_xenotype_echani MayRequire="guy762.StarWarsXenotypes">0.02</guy762_xenotype_echani> -->
+		<guy762_xenotype_falleen MayRequire="guy762.StarWarsXenotypes">0.05</guy762_xenotype_falleen>
+		<guy762_xenotype_iridonian MayRequire="guy762.StarWarsXenotypes">0.05</guy762_xenotype_iridonian>
+		<guy762_xenotype_mirialan MayRequire="guy762.StarWarsXenotypes">0.03</guy762_xenotype_mirialan>
+		<guy762_xenotype_nautolan MayRequire="guy762.StarWarsXenotypes">0.02</guy762_xenotype_nautolan>
+		<guy762_xenotype_pantoran MayRequire="guy762.StarWarsXenotypes">0.03</guy762_xenotype_pantoran>
+		<guy762_xenotype_quarren MayRequire="guy762.StarWarsXenotypes">0.03</guy762_xenotype_quarren>
+		<guy762_xenotype_rodian MayRequire="guy762.StarWarsXenotypes">0.07</guy762_xenotype_rodian> <!-- 1.00 total -->
+		<guy762_xenotype_snivvian MayRequire="guy762.StarWarsXenotypes">0.02</guy762_xenotype_snivvian>
+		<guy762_xenotype_togruta MayRequire="guy762.StarWarsXenotypes">0.03</guy762_xenotype_togruta>
+		<guy762_xenotype_twilek MayRequire="guy762.StarWarsXenotypes">0.08</guy762_xenotype_twilek>
+		<guy762_xenotype_umbaran MayRequire="guy762.StarWarsXenotypes">0.01</guy762_xenotype_umbaran>
+		<guy762_xenotype_weequay MayRequire="guy762.StarWarsXenotypes">0.03</guy762_xenotype_weequay>
+		<guy762_xenotype_zabrak MayRequire="guy762.StarWarsXenotypes">0.07</guy762_xenotype_zabrak>
+		<guy762_xenotype_zeltron MayRequire="guy762.StarWarsXenotypes">0.05</guy762_xenotype_zeltron>
+      </xenotypeChances>
+    </xenotypeSet>
+	
+	
+	
+    <backstoryFilters>
+      <li>
+        <categories>
+          <li>Outlander</li>
+        </categories>
+        <commonality>0.25</commonality>
+      </li>
+      <li>
+        <categories>
+          <li>Offworld</li>
+        </categories>
+        <commonality>0.25</commonality>
+      </li>
+	  <li>
+        <categories>
+          <li>Pirate</li>
+        </categories>
+		<commonality>0.5</commonality>
+      </li>
+    </backstoryFilters>
+    <settlementTexturePath>World/WorldObjects/Expanding/SettlementTemporary</settlementTexturePath>
+	
+	<maxPawnCostPerTotalPointsCurve>
+      <points>
+        <li>(0,50)</li> <!-- cost of thug shooter/brawler -->
+        <li>(100, 75)</li> <!-- cost of hitman -->
+        <li>(250, 100)</li> <!-- cost of JKJA goons minus rocket launcher -->
+        <li>(1000, 200)</li> <!-- cost of most ethnic mercs -->
+        <li>(2500, 10000)</li> <!-- eligible for the bounty hunter kill squad -->
+      </points>
+    </maxPawnCostPerTotalPointsCurve>
+	
+	
+	<pawnGroupMakers>
+		<li Class="taranchuk_flightcombat.PawnGroupMaker_FlightRaid">
+			<kindDef>Combat</kindDef>
+			<commonality>10000</commonality>
+			<minPoints>2000</minPoints>
+			<minAircraftCount>4</minAircraftCount>
+			<maxAircraftCount>10</maxAircraftCount>
+			<options>
+				<guy762_SWVehicle_Z95Rebel_bot_PawnKind>5</guy762_SWVehicle_Z95Rebel_bot_PawnKind>
+				<guy762_SWVehicle_StarViperZannCon_bot_PawnKind>3</guy762_SWVehicle_StarViperZannCon_bot_PawnKind>
+			</options>
+		</li>
+	  
+	  
+	  
+	  <li>
+		<kindDef>Peaceful</kindDef>
+		<options>
+		  <SWBlackSun_FalleenSoldier>100</SWBlackSun_FalleenSoldier>
+          <KotORMerc_shooter>50</KotORMerc_shooter>
+          <KotORMerc_brawler>50</KotORMerc_brawler>
+		</options>
+	  </li>
+		  
+	  <li>
+        <!-- thug raid -->
+        <kindDef>Combat</kindDef>
+        <commonality>100</commonality>
+		<disallowedStrategies>
+			<li>Siege</li>
+			<li>EmergeFromWater</li>
+			<li>StageThenAttack</li>
+			<li>ImmediateAttackSappers</li>
+			<li>ImmediateAttackBreaching</li>
+			<li>ImmediateAttackBreachingSmart</li>
+		</disallowedStrategies>
+        <options>
+          <KotORMerc_thug>100</KotORMerc_thug>
+		  <KotORMerc_shooter>50</KotORMerc_shooter>
+          <KotORMerc_brawler>50</KotORMerc_brawler>
+        </options>
+      </li>
+	  
+	  <li>
+        <!-- raid -->
+        <kindDef>Combat</kindDef>
+        <commonality>75</commonality>
+		<disallowedStrategies>
+			<li>Siege</li>
+			<li>EmergeFromWater</li>
+			<li>StageThenAttack</li>
+			<li>ImmediateAttack</li>
+			<li>ImmediateAttackSappers</li>
+			<li>ImmediateAttackBreaching</li>
+			<li>ImmediateAttackBreachingSmart</li>
+		</disallowedStrategies>
+        <options>
+          <SWBlackSun_FalleenSoldier>100</SWBlackSun_FalleenSoldier>
+          <KotORMerc_shooter>50</KotORMerc_shooter>
+          <KotORMerc_brawler>50</KotORMerc_brawler>
+        </options>
+      </li>
+	  
+	  <li>
+		<!-- jedi outcast-style skirmish -->
+		<kindDef>Combat</kindDef>
+		<commonality>75</commonality>
+		<disallowedStrategies>
+			<li>Siege</li>
+			<li>EmergeFromWater</li>
+			<li>ImmediateAttackSmart</li>
+			<li>ImmediateAttackSappers</li>
+			<li>ImmediateAttackBreaching</li>
+			<li>ImmediateAttackBreachingSmart</li>
+		</disallowedStrategies>
+		<options>
+		  <SWScum_JKRodian>100</SWScum_JKRodian>
+		  <SWScum_JKHumanMerc>75</SWScum_JKHumanMerc>
+		  <SWScum_JKWeequay>50</SWScum_JKWeequay>
+		  <SWScum_JKTrando>25</SWScum_JKTrando>
+		  <KotORMerc_JKSniperRodian>10</KotORMerc_JKSniperRodian>
+		  
+		  <SWScum_JKRocketTrando>100</SWScum_JKRocketTrando>
+		</options>
+	  </li>
+	  
+	  <li>
+		<kindDef>Combat</kindDef> <!-- merc assault -->
+		<commonality>50</commonality>
+		<disallowedStrategies>
+			<li>Siege</li>
+			<li>EmergeFromWater</li>
+			<li>StageThenAttack</li>
+			<li>ImmediateAttack</li>
+			<li>ImmediateAttackSappers</li>
+			<li>ImmediateAttackBreaching</li>
+			<li>ImmediateAttackBreachingSmart</li>
+		</disallowedStrategies>
+		<options>
+		  <SWZannCon_DisruptorMerc>100</SWZannCon_DisruptorMerc>
+		  <SWZannCon_Defiler>100</SWZannCon_Defiler>
+		  <SWScum_mandomerc>25</SWScum_mandomerc>
+		  <SWScum_mandocommando>10</SWScum_mandocommando>
+		</options>
+	  </li>
+
+	  
+	  
+	  <li>
+        <!-- assassination team -->
+        <kindDef>Combat</kindDef>
+        <commonality>25</commonality>
+		<disallowedStrategies>
+			<li>Siege</li>
+			<li>EmergeFromWater</li>
+			<li>StageThenAttack</li>
+			<li>ImmediateAttack</li>
+			<li>ImmediateAttackBreaching</li>
+		</disallowedStrategies>
+        <options>
+          <SWZannCon_Defiler>100</SWZannCon_Defiler>
+        </options>
+      </li>
+	  
+	  <li>
+		<kindDef>Combat</kindDef> <!-- bounty hunter boss raid -->
+		<commonality>10</commonality>
+		<disallowedStrategies>
+			<li>Siege</li>
+			<li>EmergeFromWater</li>
+			<li>StageThenAttack</li>
+			<li>ImmediateAttack</li>
+			<li>ImmediateAttackSappers</li>
+			<li>ImmediateAttackBreaching</li>
+			<li>ImmediateAttackBreachingSmart</li>
+		</disallowedStrategies>
+		<options>
+		  <KotORMerc_JKRocketTrando>100</KotORMerc_JKRocketTrando>
+		  <KotORBntyHntr_star>100</KotORBntyHntr_star>
+		  <KotORBntyHntr_mandostar>100</KotORBntyHntr_mandostar>
+		  <KotORDroidBad_hk50boss>100</KotORDroidBad_hk50boss>
+		  
+		  <KotORSith_darkjedi_PotF MayRequire="guy762.Lee.KotORPotF">25</KotORSith_darkjedi_PotF>
+		  
+		  <KotORSith_darkjedi_VPE MayRequire="lee.theforce.psycast">25</KotORSith_darkjedi_VPE>
+		</options>
+	  </li>
+	  
+	  
+	  <li>
+		<kindDef>Settlement</kindDef> <!-- the bing -->
+		<commonality>1</commonality>
+		<options>
+		  <!-- civilians -->
+		  <KotORCiv_SlaveEntertainer>20</KotORCiv_SlaveEntertainer>
+		  
+		  <!-- factional -->
+		  
+		  <KotORDroidBad_hk50>1</KotORDroidBad_hk50>
+		  
+		  <KotORMerc_gandmelee>5</KotORMerc_gandmelee>
+		  <KotORMerc_gandranged>5</KotORMerc_gandranged>
+		  
+		  <KotORMerc_kaleeshmelee>2.5</KotORMerc_kaleeshmelee>
+		  <KotORMerc_kaleeshranged>2.5</KotORMerc_kaleeshranged>
+		  
+		  <KotORMerc_nagaimelee>1</KotORMerc_nagaimelee>
+		  <KotORMerc_nagairanged>1</KotORMerc_nagairanged>
+		  
+		  <KotORBntyHntr_mandoweak>5</KotORBntyHntr_mandoweak>
+		  <KotORBntyHntr_mandomid>2.5</KotORBntyHntr_mandomid>
+		  <KotORBntyHntr_mandostar>1</KotORBntyHntr_mandostar>
+		  
+          <KotORMerc_shooter>5</KotORMerc_shooter>
+          <KotORMerc_brawler>5</KotORMerc_brawler>
+		  <KotORExchg_hitman>10</KotORExchg_hitman>
+		  
+		  <KotORExchg_capo>100</KotORExchg_capo>
+		  <KotORExchg_vigo>100</KotORExchg_vigo>
+		</options>
+	  </li>
+	  
+    </pawnGroupMakers>
+	
+	<raidLootMaker>guy762_RaidLootMaker_KotORExchange</raidLootMaker>
+  </FactionDef>
+  
+  
+  
+  
+  
+
+</Defs>

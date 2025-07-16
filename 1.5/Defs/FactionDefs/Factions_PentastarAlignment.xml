@@ -36,7 +36,7 @@
       <li>SWPentastar_Moff</li>
     </fixedLeaderKinds>
 	
-	<permanentEnemyToEveryoneExceptPlayer>true</permanentEnemyToEveryoneExceptPlayer>
+	<!-- <permanentEnemyToEveryoneExceptPlayer>true</permanentEnemyToEveryoneExceptPlayer> -->
 	<naturalEnemy>true</naturalEnemy>
 	
 	<!-- <settlementGenerationWeight>2</settlementGenerationWeight> -->
@@ -58,6 +58,9 @@
 			<guy762_SWWarlordsFaction_ImpRemnant>-50~0</guy762_SWWarlordsFaction_ImpRemnant>
 			<guy762_SWWarlordsFaction_ZsinjDominion>-100</guy762_SWWarlordsFaction_ZsinjDominion>
 			
+			<guy762_SWWarlordsFaction_ZannConsortium>-100</guy762_SWWarlordsFaction_ZannConsortium>
+			<guy762_SWWarlordsFaction_BlackSun>-100</guy762_SWWarlordsFaction_BlackSun>
+			<!-- . -->
 			<guy762_KotORFaction_HuttCartel>0</guy762_KotORFaction_HuttCartel>
 			<guy762_KotORFaction_ViciousHutts>0</guy762_KotORFaction_ViciousHutts>
 			
@@ -174,14 +177,14 @@
 	
 	<xenotypeSet>
 	  <xenotypeChances>
-		<Baseliner MayRequire="Ludeon.RimWorld.Biotech">0.90</Baseliner>
-		<guy762_xenotype_arkanian MayRequire="guy762.StarWarsXenotypes">0.01</guy762_xenotype_arkanian>
-		<guy762_xenotype_echani MayRequire="guy762.StarWarsXenotypes">0.01</guy762_xenotype_echani>
+		<Baseliner MayRequire="Ludeon.RimWorld.Biotech">0.95</Baseliner>
+		<!-- <guy762_xenotype_arkanian MayRequire="guy762.StarWarsXenotypes">0.01</guy762_xenotype_arkanian> -->
+		<!-- <guy762_xenotype_echani MayRequire="guy762.StarWarsXenotypes">0.01</guy762_xenotype_echani> -->
 		<guy762_xenotype_mirialan MayRequire="guy762.StarWarsXenotypes">0.01</guy762_xenotype_mirialan>
 		<guy762_xenotype_pantoran MayRequire="guy762.StarWarsXenotypes">0.01</guy762_xenotype_pantoran>
 		<guy762_xenotype_umbaran MayRequire="guy762.StarWarsXenotypes">0.01</guy762_xenotype_umbaran>
 		<guy762_xenotype_zabrak MayRequire="guy762.StarWarsXenotypes">0.01</guy762_xenotype_zabrak>
-		<guy762_xenotype_zeltron MayRequire="guy762.StarWarsXenotypes">0.01</guy762_xenotype_zeltron><!-- total 0.97 -->
+		<guy762_xenotype_zeltron MayRequire="guy762.StarWarsXenotypes">0.01</guy762_xenotype_zeltron><!-- total 0.95 -->
 	  </xenotypeChances>
 	</xenotypeSet>
 		
@@ -436,9 +439,11 @@
 		  <SWPentastar_ArmyMajor>5</SWPentastar_ArmyMajor>
 		  <SWPentastar_ArmyGeneral>5</SWPentastar_ArmyGeneral>
 		  
-		  <SWPentastar_OpsGeneral>5</SWPentastar_OpsGeneral>
-		  <SWPentastar_Viceroy>5</SWPentastar_Viceroy>
-		  <SWPentastar_Moff>5</SWPentastar_Moff>
+		  <SWPentastar_OpsLt>0.1</SWPentastar_OpsLt>
+		  <SWPentastar_OpsGeneral>0.1</SWPentastar_OpsGeneral>
+		  
+		  <SWPentastar_Viceroy>1</SWPentastar_Viceroy>
+		  <SWPentastar_Moff>0.1</SWPentastar_Moff>
 		  <SWPentastar_GuardianProtector>10</SWPentastar_GuardianProtector>
 		  
 		  <SWPentastar_InQuestor_PotF MayRequire="guy762.Lee.KotORPotF">10</SWPentastar_InQuestor_PotF>

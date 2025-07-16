@@ -824,7 +824,32 @@
 	
 	
 	
-	<PawnKindDef Name="SWPentastar_OpsGeneral" ParentName="SWImpRemnant_Moff">
+	<PawnKindDef Name="SWPentastar_OpsLt" ParentName="SWImpRemnant_OpsLt">
+		<defName>SWPentastar_OpsLt</defName>
+		<label>logistics lieutenant</label>
+		<defaultFactionType>guy762_SWWarlordsFaction_Pentastar</defaultFactionType>
+		<!-- <apparelRequired> -->
+			<!-- <li>guy762_UniformCap_imperial</li> -->
+		<!-- </apparelRequired> -->
+		<specificApparelRequirements Inherit="False">
+			<li>
+				<apparelLayer>Overhead</apparelLayer>
+				<color>(90,90,95)</color>        <!-- blued grey -->
+			</li>
+			<li>
+				<apparelLayer>OnSkin</apparelLayer>
+				<apparelDef>guy762_ImpUniform_lowrank</apparelDef>
+				<styleDef>guy762_RankStyle_ImpOfficer_opslt</styleDef>
+				<color>(90,90,95)</color>        <!-- blued grey -->
+				<quality>Normal</quality>
+			</li>
+		</specificApparelRequirements>
+	</PawnKindDef>
+	
+	
+	
+	
+	<PawnKindDef Name="SWPentastar_OpsGeneral" ParentName="SWImpRemnant_OpsGeneral">
 		<defName>SWPentastar_OpsGeneral</defName>
 		<label>logistics general</label>
 		<defaultFactionType>guy762_SWWarlordsFaction_Pentastar</defaultFactionType>

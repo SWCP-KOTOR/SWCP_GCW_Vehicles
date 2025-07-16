@@ -90,6 +90,7 @@
 		</tools>
 		<weaponTags Inherit="False">
 			<li>SWMelee_forcepike</li>
+			<li>SWKotORWeaponCategoryTag_melee</li>
 		</weaponTags>
 		<!-- <tradeTags> -->
 			<!-- <li>guy762TT_KotORMelee</li> -->

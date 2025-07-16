@@ -27,6 +27,7 @@
 			<li>SWRanged_Model57pistol</li>
 			<li>SWRanged_AnyCommonPistol</li>
 			<li>SWRanged_RebelAgentPistolMix</li>
+			<li>SWKotORWeaponCategoryTag_pistol</li>
 		</weaponTags>
 		<tradeTags>
 			<li>guy762TT_KotORRanged</li>
@@ -105,6 +106,7 @@
 			<li>SWRanged_Power5pistol</li>
 			<li>SWRanged_AnyCommonPistol</li>
 			<li>SWRanged_AnyRepeaterPistol</li>
+			<li>SWKotORWeaponCategoryTag_pistol</li>
 		</weaponTags>
 		<tradeTags>
 			<li>guy762TT_KotORRanged</li>
@@ -185,6 +187,7 @@
 		<weaponTags>
 			<li>SWRanged_DL44pistol</li>
 			<li>SWRanged_AnyRarePistol</li>
+			<li>SWKotORWeaponCategoryTag_pistol</li>
 		</weaponTags>
 		<tradeTags>
 			<li>guy762TT_KotORRanged</li>
@@ -282,6 +285,7 @@
 		
 		<weaponTags>
 			<li>SWRanged_DL44pistol_hasbroPotF</li>
+			<li>SWKotORWeaponCategoryTag_pistol</li>
 		</weaponTags>
 		<tradeTags>
 			<li>guy762TT_KotORLegendary</li>

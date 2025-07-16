@@ -561,7 +561,7 @@
 			<li>
 				<shotsPerBurst>1</shotsPerBurst>
 				<ticksBetweenShots>12</ticksBetweenShots>
-				<ticksBetweenBursts>30</ticksBetweenBursts>
+				<ticksBetweenBursts>40</ticksBetweenBursts>
 				<label>Single</label>
 				<texPath>UI/Sniper_Shot</texPath>
 			</li>
@@ -601,6 +601,50 @@
 			<pattern>guy762_SWVehiclePattern_StarViperB_open</pattern>
 			<color>(50,50,50)</color>
 			<colorTwo>(225,225,225)</colorTwo>
+			<colorThree>(200,200,200)</colorThree>
+		</graphicData>
+		
+		<buildDef Inherit="False" />
+		
+		<vehicleMovementPermissions>NoDriverNeeded</vehicleMovementPermissions>
+		
+		<properties>
+			<roles Inherit="False">
+				<li>
+					<key>pilot</key>
+					<label>Pilot</label>
+					<slots>1</slots>
+					<slotsToOperate>1</slotsToOperate>
+					<!-- <handlingTypes> -->
+						<!-- <li>Movement</li> -->
+						<!-- <li>Turret</li> -->
+					<!-- </handlingTypes> -->
+					<comfort>1.25</comfort>
+					
+					<turretIds>
+						<li>StarViperKey_gun_1</li>
+						<li>StarViperKey_gun_2</li>
+						<li>StarViperKey_gun_3</li>
+						<li>StarViperKey_gun_4</li>
+					</turretIds>
+				</li>
+			</roles>
+		</properties>
+
+	</Vehicles.VehicleDef>
+	
+	
+	
+	
+	
+	<Vehicles.VehicleDef Name="guy762_SWVehicle_StarViperZannCon_bot" ParentName="guy762_SWVehicle_StarViper">
+		<defName>guy762_SWVehicle_StarViperZannCon_bot</defName>
+		
+		<graphicData>
+			<texPath>Starfighters/StarViper/StarViper_Open</texPath>
+			<pattern>guy762_SWVehiclePattern_StarViperA_open</pattern>
+			<color>(225,225,225)</color>
+			<colorTwo>(50,50,50)</colorTwo>
 			<colorThree>(200,200,200)</colorThree>
 		</graphicData>
 		

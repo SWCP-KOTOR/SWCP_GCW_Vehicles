@@ -37,7 +37,7 @@
       <li>SWZsinj_ArmyGeneral</li>
     </fixedLeaderKinds>
 	
-	<permanentEnemyToEveryoneExceptPlayer>true</permanentEnemyToEveryoneExceptPlayer>
+	<!-- <permanentEnemyToEveryoneExceptPlayer>true</permanentEnemyToEveryoneExceptPlayer> -->
 	<naturalEnemy>true</naturalEnemy>
 	
 	<!-- <settlementGenerationWeight>2</settlementGenerationWeight> -->
@@ -59,6 +59,9 @@
 			<guy762_SWWarlordsFaction_ImpRemnant>-100</guy762_SWWarlordsFaction_ImpRemnant>
 			<guy762_SWWarlordsFaction_Pentastar>-100</guy762_SWWarlordsFaction_Pentastar>
 			
+			<guy762_SWWarlordsFaction_ZannConsortium>100</guy762_SWWarlordsFaction_ZannConsortium>
+			<guy762_SWWarlordsFaction_BlackSun>25~50</guy762_SWWarlordsFaction_BlackSun>
+			<!-- . -->
 			<guy762_KotORFaction_HuttCartel>0~50</guy762_KotORFaction_HuttCartel>
 			<guy762_KotORFaction_ViciousHutts>0~50</guy762_KotORFaction_ViciousHutts>
 			
@@ -175,14 +178,14 @@
 	
 	<xenotypeSet>
 	  <xenotypeChances>
-		<Baseliner MayRequire="Ludeon.RimWorld.Biotech">0.90</Baseliner>
-		<guy762_xenotype_arkanian MayRequire="guy762.StarWarsXenotypes">0.01</guy762_xenotype_arkanian>
-		<guy762_xenotype_echani MayRequire="guy762.StarWarsXenotypes">0.01</guy762_xenotype_echani>
+		<Baseliner MayRequire="Ludeon.RimWorld.Biotech">0.95</Baseliner>
+		<!-- <guy762_xenotype_arkanian MayRequire="guy762.StarWarsXenotypes">0.01</guy762_xenotype_arkanian> -->
+		<!-- <guy762_xenotype_echani MayRequire="guy762.StarWarsXenotypes">0.01</guy762_xenotype_echani> -->
 		<guy762_xenotype_mirialan MayRequire="guy762.StarWarsXenotypes">0.01</guy762_xenotype_mirialan>
 		<guy762_xenotype_pantoran MayRequire="guy762.StarWarsXenotypes">0.01</guy762_xenotype_pantoran>
 		<guy762_xenotype_umbaran MayRequire="guy762.StarWarsXenotypes">0.01</guy762_xenotype_umbaran>
 		<guy762_xenotype_zabrak MayRequire="guy762.StarWarsXenotypes">0.01</guy762_xenotype_zabrak>
-		<guy762_xenotype_zeltron MayRequire="guy762.StarWarsXenotypes">0.01</guy762_xenotype_zeltron><!-- total 0.97 -->
+		<guy762_xenotype_zeltron MayRequire="guy762.StarWarsXenotypes">0.01</guy762_xenotype_zeltron><!-- total 0.95 -->
 	  </xenotypeChances>
 	</xenotypeSet>
 		

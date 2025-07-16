@@ -30,6 +30,7 @@
 		<weaponTags>
 			<li>SWRanged_HH15MissieLauncher</li>
 			<li>SWRanged_AnyOrdinance</li>
+			<li>SWKotORWeaponCategoryTag_heavyranged</li>
 		</weaponTags>
 		<tradeTags>
 			<li>guy762TT_KotORWeapon_illegal</li>

@@ -516,10 +516,79 @@
 	<!-- logistics officers -->
 	
 	
+	<PawnKindDef Name="SWImpRemnant_OpsLt" ParentName="SWImpRemnant_Base">
+		<defName>SWImpRemnant_OpsLt</defName>
+		<label>logistics lieutenant</label>
+		<combatPower>40</combatPower>
+		<minGenerationAge>20</minGenerationAge>
+		<maxGenerationAge>70</maxGenerationAge>
+		<itemQuality>Normal</itemQuality>
+		
+		<!-- <maxPerGroup>4</maxPerGroup> -->
+		
+		<xenotypeSet Inherit="False">
+		  <xenotypeChances>
+			<Baseliner MayRequire="Ludeon.RimWorld.Biotech">999</Baseliner>
+		  </xenotypeChances>
+		</xenotypeSet>
+		<useFactionXenotypes>false</useFactionXenotypes>
+
+		<apparelMoney>1500~5500</apparelMoney>
+		<apparelAllowHeadgearChance>1</apparelAllowHeadgearChance>
+		<apparelTags>
+			<li>KotOREquipment_basic</li>
+		</apparelTags>
+		<apparelRequired>
+			<li>guy762_UniformCap_imperial</li>
+			<li>guy762_ImpUniform_lowrank</li>
+		</apparelRequired>
+		<specificApparelRequirements>
+			<li>
+				<apparelLayer>OnSkin</apparelLayer>
+				<apparelDef>guy762_ImpUniform_lowrank</apparelDef>
+				<styleDef>guy762_RankStyle_ImpOfficer_opslt</styleDef>
+				<color>(125,125,110)</color> <!-- imperial olive -->
+				<quality>Normal</quality>
+			</li>
+		</specificApparelRequirements>
+
+		<biocodeWeaponChance>0.9</biocodeWeaponChance>
+		<weaponMoney>350~500</weaponMoney>
+		<weaponTags>
+			<li>SWRanged_RK3pistol</li>
+		</weaponTags>
+
+		<skills>
+			<li>
+				<skill>Social</skill>
+				<range>6~8</range>
+			</li>
+			<li>
+				<skill>Intellectual</skill>
+				<range>4~6</range>
+			</li>
+		</skills>
+
+		<!-- <disallowedTraits> -->
+			<!-- <li>Brawler</li> -->
+		<!-- </disallowedTraits> -->
+		<initialWillRange>0.5~2</initialWillRange>
+		<initialResistanceRange>5~10</initialResistanceRange>
+		
+		<abilities>
+			<!-- <li>WorkDrive</li> -->
+			<!-- <li>ProductionCommand</li> -->
+			<!-- <li>MarksmanCommand</li> -->
+		</abilities>
+	</PawnKindDef>
+	
+	
+	
+	
 	
 	<PawnKindDef Name="SWImpRemnant_OpsGeneral" ParentName="SWImpRemnant_Base">
 		<defName>SWImpRemnant_OpsGeneral</defName>
-		<label>Imperial logistics general</label>
+		<label>logistics general</label>
 		<combatPower>40</combatPower>
 		<minGenerationAge>40</minGenerationAge>
 		<maxGenerationAge>85</maxGenerationAge>

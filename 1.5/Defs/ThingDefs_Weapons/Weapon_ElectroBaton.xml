@@ -87,6 +87,7 @@
 		</tools>
 		<weaponTags Inherit="False">
 			<li>SWMelee_electrobaton</li>
+			<li>SWKotORWeaponCategoryTag_melee</li>
 		</weaponTags>
 		<!-- <tradeTags> -->
 			<!-- <li>guy762TT_KotORMelee</li> -->

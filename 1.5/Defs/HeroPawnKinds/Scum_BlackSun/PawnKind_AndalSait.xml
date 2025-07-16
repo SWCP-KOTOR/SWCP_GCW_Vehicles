@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>	
+	
+	<PawnKindDef Name="SWWEPlayableVillain_AndalSait"  ParentName="guy762_HeroPawnKindBase">
+		<defName>SWWEPlayableVillain_AndalSait</defName>
+		<nameMaker>guy762_HeroNamer_AndalSait</nameMaker>
+		<label>Grand Admiral</label>
+		<combatPower>500</combatPower>
+		<minGenerationAge>62</minGenerationAge>
+		<maxGenerationAge>63</maxGenerationAge>
+		<fixedGender>Male</fixedGender>
+		<forcedHair>Topdog</forcedHair>
+		<forcedHairColor>(0.65, 0.65, 0.65)</forcedHairColor>
+		<skinColorOverride>(249,219,165)</skinColorOverride>
+		<xenotypeSet>
+			<xenotypeChances>
+				<Baseliner>999</Baseliner>
+			</xenotypeChances>
+		</xenotypeSet>
+		<useFactionXenotypes>false</useFactionXenotypes>
+		<itemQuality>Legendary</itemQuality>
+		<apparelMoney>49999</apparelMoney>
+		<apparelTags>
+		  <li>KotOREquipment_officer</li>
+		</apparelTags>
+		<apparelRequired>
+		   <li>guy762_ImpUniform_midrank</li>
+		</apparelRequired>
+		<specificApparelRequirements>
+			<li>
+				<apparelLayer>OnSkin</apparelLayer>
+				<apparelDef>guy762_ImpUniform_midrank</apparelDef>
+				<styleDef>guy762_RankStyle_ImpOfficer_fakeGA</styleDef>
+				<color>(220,225,220)</color> <!-- off-white -->
+				<quality>Legendary</quality>
+			</li>
+		</specificApparelRequirements>
+		<weaponMoney>99999999</weaponMoney>
+		<weaponTags>
+			<li>SWRanged_DXP2DisruptorPistol</li>
+		</weaponTags>
+		<skills>
+			<li>
+				<skill>Shooting</skill>
+				<range>8~10</range>
+			</li>
+			<li>
+				<skill>Social</skill>
+				<range>12~14</range>
+			</li>
+			<li>
+				<skill>Intellectual</skill>
+				<range>10~12</range>
+			</li>
+		</skills>
+		<forcedTraits>
+			<Greedy>0</Greedy>
+			<Abrasive>0</Abrasive>
+			<DrugDesire>1</DrugDesire>
+		</forcedTraits>
+		
+		<backstoryFiltersOverride>
+		  <li>
+			<categories>
+			  <li>guy762BSC_andalsait</li>
+			</categories>
+		  </li>
+		</backstoryFiltersOverride>
+		<abilities>
+			<li>guy762_Ability_CommandTierV</li>
+		</abilities>
+		<modExtensions>
+			<li Class="BodyTypeForPawnKind.ModExtension_HeadTypesOfPawnKind">
+			  <whitelist>
+				<li>Male_AveragePointy</li>
+			  </whitelist>
+			  <blacklist>
+				<!--leave blank to disable-->
+			  </blacklist>
+			  <priority>
+				<li>Male_AveragePointy</li>
+			  </priority>
+			  <checkGender>False</checkGender>
+			</li>
+			<li Class="BodyTypeForPawnKind.ModExtension_ForcedStyleItem">
+			  <forcedBeard>Stubble</forcedBeard>
+			</li>
+			<li Class="AddGeneForPK.PKAdditionalGenes">
+			  <geneSets>
+				<li>
+				  <isXenogene>false</isXenogene>
+				  <chance>1</chance>
+				  <geneDefs>
+					<li>Hair_Gray</li>
+					<li>Skin_Melanin5</li>
+				  </geneDefs>
+				</li>
+			  </geneSets>
+			</li>
+		</modExtensions>
+	  </PawnKindDef>
+	  
+	  <RulePackDef>
+        <defName>guy762_HeroNamer_AndalSait</defName>
+        <rulePack>
+            <rulesStrings>
+                <li>r_name->[andal] '[sait]' [sait]</li>
+				<li>andal->Andal</li>
+				<li>sait->Sait</li>
+            </rulesStrings>
+        </rulePack>
+    </RulePackDef>
+	
+		<!--[PAWN_nameDef] [PAWN_possessive] [PAWN_pronoun]-->
+	
+	
+	<BackstoryDef>
+		<defName>guy762_BackstoryC_AndalSait</defName>
+		<title>Corrupt Cadet</title>
+		<titleShort>Cadet</titleShort>
+		<description>.</description>
+		<slot>Childhood</slot>
+		<skillGains>
+			<Social>5</Social>
+			<Intellectual>5</Intellectual>
+		</skillGains>
+		<forcedTraits>
+			<Greedy>0</Greedy>
+			<DrugDesire>1</DrugDesire>
+		</forcedTraits>
+		<requiredWorkTags>
+		  <li>Violent</li>
+		</requiredWorkTags>
+		<bodyTypeMale>Hulk</bodyTypeMale>
+		<bodyTypeFemale>Hulk</bodyTypeFemale>
+		<nameMaker>guy762_HeroNamer_AndalSait</nameMaker>
+		<spawnCategories>
+			<li>guy762BSC_andalsait</li>
+		</spawnCategories>
+		<!--shuffleable>False</shuffleable-->
+	</BackstoryDef>
+	
+	<BackstoryDef>
+		<defName>guy762_BackstoryA_AndalSait</defName>
+		<title>Fake Grand Admiral</title>
+		<titleShort>Grand Admiral</titleShort>
+		<description>.</description>
+		<slot>Adulthood</slot>
+		<skillGains>
+			<Social>5</Social>
+		</skillGains>
+		<forcedTraits>
+			<Abrasive>0</Abrasive>
+		</forcedTraits>
+		<requiredWorkTags>
+		  <li>Violent</li>
+		  <li>Intellectual</li>
+		</requiredWorkTags>
+		<workDisables>PlantWork, Mining, Caring</workDisables>
+		<bodyTypeMale>Hulk</bodyTypeMale>
+		<bodyTypeFemale>Hulk</bodyTypeFemale>
+		<nameMaker>guy762_HeroNamer_AndalSait</nameMaker>
+		<spawnCategories>
+			<li>guy762BSC_andalsait</li>
+		</spawnCategories>
+		<!--shuffleable>False</shuffleable-->
+	</BackstoryDef>
+	
+	
+
+</Defs>

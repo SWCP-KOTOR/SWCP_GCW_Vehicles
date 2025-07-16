@@ -28,6 +28,7 @@
 		<weaponTags>
 			<li>SWRanged_TL50conc</li>
 			<li>SWRanged_AnyHeavyRifle</li>
+			<li>SWKotORWeaponCategoryTag_rifle</li>
 		</weaponTags>
 		<!--tradeTags Inherit="False">
 			<li>guy762TT_KotORRanged</li>
@@ -137,6 +138,7 @@
 		<weaponTags>
 			<li>SWRanged_TL50blaster</li>
 			<li>SWRanged_AnyRareRifle</li>
+			<li>SWKotORWeaponCategoryTag_rifle</li>
 		</weaponTags>
 		<!--tradeTags Inherit="False">
 			<li>guy762TT_KotORRanged</li>

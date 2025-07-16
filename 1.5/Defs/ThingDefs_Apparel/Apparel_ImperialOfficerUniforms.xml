@@ -345,6 +345,9 @@
 			<styleDef>guy762_RankStyle_ImpOfficer_navylt</styleDef>
 		  </li>
 		  <li>
+			<styleDef>guy762_RankStyle_ImpOfficer_opslt</styleDef>
+		  </li>
+		  <li>
 			<styleDef>guy762_RankStyle_ImpOfficer_ISBlt</styleDef>
 		  </li>
 		  <li>
@@ -371,6 +374,17 @@
 		<wornGraphicPath>Apparel/ImperialOfficer/navylieutenant/Apparel</wornGraphicPath>
 		<graphicData>
 		  <texPath>Apparel/ImperialOfficer/navylieutenant/Apparel</texPath>
+		  <graphicClass>Graphic_Single</graphicClass>
+		  <shaderType>CutoutComplex</shaderType>
+		</graphicData>
+	  </ThingStyleDef>
+	  
+	  <ThingStyleDef>
+		<defName>guy762_RankStyle_ImpOfficer_opslt</defName>
+		<overrideLabel>imperial uniform, operations lieutenant's</overrideLabel>
+		<wornGraphicPath>Apparel/ImperialOfficer/operationslieutenant/Apparel</wornGraphicPath>
+		<graphicData>
+		  <texPath>Apparel/ImperialOfficer/operationslieutenant/Apparel</texPath>
 		  <graphicClass>Graphic_Single</graphicClass>
 		  <shaderType>CutoutComplex</shaderType>
 		</graphicData>
@@ -466,6 +480,9 @@
 		  <li>
 			<styleDef>guy762_RankStyle_ImpOfficer_viceroy</styleDef>
 		  </li>
+		  <li>
+			<styleDef>guy762_RankStyle_ImpOfficer_fakeGA</styleDef>
+		  </li>
 		</randomStyle>
 		
 		<tradeTags>
@@ -527,6 +544,17 @@
 		<wornGraphicPath>Apparel/ImperialOfficer/viceroy/Apparel</wornGraphicPath>
 		<graphicData>
 		  <texPath>Apparel/ImperialOfficer/viceroy/Apparel</texPath>
+		  <graphicClass>Graphic_Single</graphicClass>
+		  <shaderType>CutoutComplex</shaderType>
+		</graphicData>
+	  </ThingStyleDef>
+	  
+	  <ThingStyleDef>
+		<defName>guy762_RankStyle_ImpOfficer_fakeGA</defName>
+		<overrideLabel>imperial uniform, fake grand admiral's</overrideLabel>
+		<wornGraphicPath>Apparel/ImperialOfficer/fakeGA/Apparel</wornGraphicPath>
+		<graphicData>
+		  <texPath>Apparel/ImperialOfficer/fakeGA/Apparel</texPath>
 		  <graphicClass>Graphic_Single</graphicClass>
 		  <shaderType>CutoutComplex</shaderType>
 		</graphicData>

@@ -1,11 +1,53 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Defs>
+	
+	
+	
+	<PawnKindDef Name="SWImpRemnant_StormtrooperCorpsBase" ParentName="SWImpRemnant_Base" Abstract="True">
+		<modExtensions>
+			<li Class="BodyTypeForPawnKind.ModExtension_BodyTypesOfPawnKind">
+				<whitelist>
+				</whitelist>
+				<blacklist>
+					<li>Fat</li>
+					<li>Thin</li>
+					<li>Baby</li>
+					<li>Child</li>
+				</blacklist>
+				<priority>
+					<!--When violates the black/whitelist, selected from these-->
+				</priority>
+				<!--Align body gender to pawn's gender (default: True)-->
+				<checkGender>True</checkGender>
+			</li>
+			
+			<li Class="BodyTypeForPawnKind.ModExtension_ForcedStyleItem">
+			  <forcedBeard>NoBeard</forcedBeard>
+			</li>
+		</modExtensions>
+		
+		<nameMaker>guy762_NamerPawnKind_StormtrooperID</nameMaker>
+		
+		<forcedHair>Shaved</forcedHair>
+		
+		<forcedTraits>
+			<Psychopath>0</Psychopath>
+		</forcedTraits>
 
+		<disallowedTraits>
+			<li>Wimp</li>
+		</disallowedTraits>
+	</PawnKindDef>
+	
+	
+	
+	
+	
 	
 	<!--troopers-->
 
 
-	<PawnKindDef Name="SWImpRemnant_stormtrooper" ParentName="SWImpRemnant_TrooperBase">
+	<PawnKindDef Name="SWImpRemnant_stormtrooper" ParentName="SWImpRemnant_StormtrooperCorpsBase">
 		<defName>SWImpRemnant_stormtrooper</defName>
 		<label>Stormtrooper</label>
 		<combatPower>85</combatPower>
@@ -73,10 +115,6 @@
 				</li>
 			</subOptionsChooseOne>
 		</inventoryOptions>
-		
-		<forcedTraits>
-			<Psychopath>0</Psychopath>
-		</forcedTraits>
 
 		<disallowedTraits>
 			<li>Brawler</li>
@@ -88,7 +126,7 @@
 	
 	
 	
-	<PawnKindDef Name="SWImpRemnant_stormierifle" ParentName="SWImpRemnant_TrooperBase">
+	<PawnKindDef Name="SWImpRemnant_stormierifle" ParentName="SWImpRemnant_StormtrooperCorpsBase">
 		<defName>SWImpRemnant_stormierifle</defName>
 		<label>Stormtrooper rifleman</label>
 		<combatPower>100</combatPower>
@@ -132,6 +170,7 @@
 		<biocodeWeaponChance>0.75</biocodeWeaponChance>
 		<weaponMoney>2500</weaponMoney>
 		<weaponTags>
+			<li>SWRanged_DLT19repeater</li>
 			<li>SWRanged_DLT20Asniper</li>
 		</weaponTags>
 
@@ -179,7 +218,7 @@
 	
 	
 	
-	<PawnKindDef Name="SWImpRemnant_stormiehvy" ParentName="SWImpRemnant_TrooperBase">
+	<PawnKindDef Name="SWImpRemnant_stormiehvy" ParentName="SWImpRemnant_StormtrooperCorpsBase">
 		<defName>SWImpRemnant_stormiehvy</defName>
 		<label>Stormtrooper specialist</label>
 		<combatPower>125</combatPower>
@@ -288,7 +327,7 @@
 	
 	
 	
-	<PawnKindDef Name="SWImpRemnant_stormieofficer" ParentName="SWImpRemnant_TrooperBase">
+	<PawnKindDef Name="SWImpRemnant_stormieofficer" ParentName="SWImpRemnant_StormtrooperCorpsBase">
 		<defName>SWImpRemnant_stormieofficer</defName>
 		<label>Stormtrooper field officer</label>
 		<combatPower>125</combatPower>
@@ -400,7 +439,7 @@
 	
 	
 	
-	<PawnKindDef Name="SWImpRemnant_meleescouttrooper" ParentName="SWImpRemnant_TrooperBase">
+	<PawnKindDef Name="SWImpRemnant_meleescouttrooper" ParentName="SWImpRemnant_StormtrooperCorpsBase">
 		<defName>SWImpRemnant_meleescouttrooper</defName>
 		<label>scout trooper skirmisher</label>
 		<combatPower>85</combatPower>
@@ -483,7 +522,7 @@
 	
 	
 	
-	<PawnKindDef Name="SWImpRemnant_scouttrooper" ParentName="SWImpRemnant_TrooperBase">
+	<PawnKindDef Name="SWImpRemnant_scouttrooper" ParentName="SWImpRemnant_StormtrooperCorpsBase">
 		<defName>SWImpRemnant_scouttrooper</defName>
 		<label>scout trooper</label>
 		<combatPower>85</combatPower>
@@ -518,7 +557,7 @@
 		<biocodeWeaponChance>0.75</biocodeWeaponChance>
 		<weaponMoney>3000</weaponMoney>
 		<weaponTags>
-			<li>SWRanged_DC15xsniper</li>
+			<li>SWRanged_DLT19Xsniper</li>
 			<!-- <li>SWMelee_electrobaton</li> -->
 		</weaponTags>
 
@@ -569,12 +608,12 @@
 	
 	
 	
-	<PawnKindDef Name="SWImpRemnant_stormcommando" ParentName="SWImpRemnant_TrooperBase">
+	<PawnKindDef Name="SWImpRemnant_stormcommando" ParentName="SWImpRemnant_StormtrooperCorpsBase">
 		<defName>SWImpRemnant_stormcommando</defName>
 		<label>Storm Commando</label>
 		<combatPower>125</combatPower>
-		<minGenerationAge>18</minGenerationAge>
-		<maxGenerationAge>40</maxGenerationAge>
+		<minGenerationAge>20</minGenerationAge>
+		<maxGenerationAge>35</maxGenerationAge>
 		<itemQuality>Excellent</itemQuality>
 		
 		<xenotypeSet Inherit="False">
@@ -607,8 +646,8 @@
 		<weaponMoney>1800~5000</weaponMoney>
 		<weaponTags>
 			<li>SWRanged_TL50blaster</li>
-			<li>SWRanged_FC1flechette</li>
 			<li>SWRanged_EE3carbine</li>
+			<li>SWRanged_DLT19repeater</li>
 			<li>SWRanged_DLT20Asniper</li>
 		</weaponTags>
 

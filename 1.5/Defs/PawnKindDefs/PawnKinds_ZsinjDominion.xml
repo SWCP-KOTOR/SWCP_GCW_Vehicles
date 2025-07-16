@@ -72,6 +72,42 @@
 	
 	
 	
+	
+	
+	
+	<PawnKindDef Name="SWZsinj_RaptorCorpsBase" ParentName="SWZsinj_Base" Abstract="True">
+		<modExtensions>
+			<li Class="BodyTypeForPawnKind.ModExtension_BodyTypesOfPawnKind">
+				<whitelist>
+				</whitelist>
+				<blacklist>
+					<li>Fat</li>
+					<li>Thin</li>
+					<li>Baby</li>
+					<li>Child</li>
+				</blacklist>
+				<priority>
+					<!--When violates the black/whitelist, selected from these-->
+				</priority>
+				<!--Align body gender to pawn's gender (default: True)-->
+				<checkGender>True</checkGender>
+			</li>
+		</modExtensions>
+		
+		<!-- <nameMaker>guy762_NamerPawnKind_StormtrooperID</nameMaker> -->
+
+		<forcedTraits>
+			<Bloodlust>0</Bloodlust>
+			<Psychopath>0</Psychopath>
+		</forcedTraits>
+
+		<disallowedTraits>
+			<li>Wimp</li>
+		</disallowedTraits>
+	</PawnKindDef>
+	
+	
+	
 	<!-- army personnel -->
 
 
@@ -355,7 +391,7 @@
 	
 	
 	
-	<PawnKindDef Name="SWZsinj_Raptor" ParentName="SWZsinj_TrooperBase">
+	<PawnKindDef Name="SWZsinj_Raptor" ParentName="SWZsinj_RaptorCorpsBase">
 		<defName>SWZsinj_Raptor</defName>
 		<label>Raptor trooper</label>
 		<combatPower>100</combatPower>
@@ -439,7 +475,7 @@
 	
 	
 	
-	<PawnKindDef Name="SWZsinj_RaptorHvy" ParentName="SWZsinj_TrooperBase">
+	<PawnKindDef Name="SWZsinj_RaptorHvy" ParentName="SWZsinj_RaptorCorpsBase">
 		<defName>SWZsinj_RaptorHvy</defName>
 		<label>Raptor heavy trooper</label>
 		<combatPower>150</combatPower>
@@ -551,7 +587,7 @@
 	
 	
 	
-	<PawnKindDef Name="SWZsinj_RaptorOfficer" ParentName="SWZsinj_TrooperBase">
+	<PawnKindDef Name="SWZsinj_RaptorOfficer" ParentName="SWZsinj_RaptorCorpsBase">
 		<defName>SWZsinj_RaptorOfficer</defName>
 		<label>Raptor field officer</label>
 		<combatPower>125</combatPower>
@@ -601,6 +637,7 @@
 		<biocodeWeaponChance>0.75</biocodeWeaponChance>
 		<weaponMoney>1800</weaponMoney>
 		<weaponTags>
+			<!-- <li>SWRanged_DLT19repeater</li> -->
 			<li>SWRanged_TL50blaster</li>
 		</weaponTags>
 
@@ -669,7 +706,7 @@
 	
 	
 	
-	<PawnKindDef Name="SWZsinj_RaptorPilot" ParentName="SWZsinj_TrooperBase">
+	<PawnKindDef Name="SWZsinj_RaptorPilot" ParentName="SWZsinj_RaptorCorpsBase">
 		<defName>SWZsinj_RaptorPilot</defName>
 		<label>Raptor pilot</label>
 		<combatPower>65</combatPower>
@@ -741,6 +778,21 @@
 		<initialWillRange>0.5~2</initialWillRange>
 		<initialResistanceRange>5~10</initialResistanceRange>
 	</PawnKindDef>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 	
 	
 	

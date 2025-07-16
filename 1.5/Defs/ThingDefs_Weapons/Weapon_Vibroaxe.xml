@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	
+	<ThingDef ParentName="KotORMeleeModdable_TwoHand">
+		<defName>guy762_VibroAxeGCW</defName>
+		<label>Vibroaxe</label>
+		<description>The underlings of the Hutt clans have wielded these weapons for many millenia, though as the military involvement of the Hutts has decreased since the Xim wars, these are mostly just used to indimidate outlanders who do business with the Kajidics.</description>
+		<soundInteract>kotorsound_swordinteract</soundInteract>
+		<meleeHitSound>kotorsound_blade_hitsoft</meleeHitSound>
+		<graphicData>
+			<texPath>Weapons/vibroaxe_hutt</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>1.5</drawSize>
+		</graphicData>
+		<equippedAngleOffset>-30</equippedAngleOffset>
+		
+		<techLevel>Spacer</techLevel>
+		<weaponClasses><li>MeleePiercer</li></weaponClasses>
+		<statBases>
+			<MarketValue>1283</MarketValue>
+			<Mass>7</Mass>
+		</statBases>
+		<tools>
+			<li>
+				<label>handle</label>
+				<capacities>
+					<li>Blunt</li>
+				</capacities>
+				<!---->
+				<power>12</power>
+				<chanceFactor>0.25</chanceFactor>
+				<cooldownTime>2.5</cooldownTime>
+				<extraMeleeDamages>
+				  <li>
+					<def>Stun</def>
+					<amount>2</amount>
+				  </li>
+				</extraMeleeDamages>
+			</li>
+			<li>
+				<label>edge</label>
+				<capacities>
+					<li>Cut</li>
+				</capacities>
+				<!---->
+				<power>30</power>
+				<armorPenetration>0.25</armorPenetration>
+				<chanceFactor>1</chanceFactor>
+				<cooldownTime>4.5</cooldownTime>
+			</li>
+		</tools>
+		<weaponTags Inherit="False">
+			<li>SWMelee_Vibroaxe</li>
+			<li>SWKotORWeaponCategoryTag_melee</li>
+		</weaponTags>
+		<tradeTags>
+			<li>guy762TT_KotORMelee</li>
+			<li>guy762TT_KotORWeapon_exotic</li>
+		</tradeTags>
+		<comps>
+			<li Class="CompExtraSounds.CompProperties_ExtraSounds">
+				<compClass>CompExtraSounds.CompExtraSounds</compClass>
+				<soundMiss>kotorsound_blade_swing</soundMiss>
+				<soundHitPawn>kotorsound_blade_hitsoft</soundHitPawn>
+				<soundHitBuilding>kotorsound_blade_hithard</soundHitBuilding>
+			</li>
+			<!-- <li Class="ModularWeapons.CompProperties_ModularParts"> -->
+				<!-- <compClass>ModularWeapons.CompModularParts</compClass> -->
+				<!-- <bundlePackageId>guy762.KotORWeaponsArmor</bundlePackageId> -->
+				<!-- <partKinds> -->
+					<!-- <li>guy762_slot_edge</li> -->
+					<!-- <li>guy762_slot_cell_vaxe</li> -->
+				<!-- </partKinds> -->
+			<!-- </li> -->
+		</comps>
+	</ThingDef>
+	
+	
+
+</Defs>

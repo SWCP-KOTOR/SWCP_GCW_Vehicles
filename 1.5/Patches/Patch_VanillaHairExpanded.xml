@@ -134,6 +134,12 @@
 			  <forcedHair>VHE_LongPonytail</forcedHair>
 			</value>
 		</li>
+		<li Class="PatchOperationReplace">
+		  <xpath>Defs/PawnKindDef[@Name="SWWEPlayableVillain_AndalSait"]/forcedHair</xpath>
+			<value>
+			  <forcedHair>VHE_Gangster</forcedHair>
+			</value>
+		</li>
 	  </operations>
 	</match>
   

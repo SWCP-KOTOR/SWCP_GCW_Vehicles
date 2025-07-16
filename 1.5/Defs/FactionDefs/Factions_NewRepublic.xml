@@ -24,6 +24,7 @@
     <colorSpectrum>
       <li>RGB(205,125,20)</li>
     </colorSpectrum>
+	
     <permanentEnemy>false</permanentEnemy>
 	<!--permanentEnemyToEveryoneExceptPlayer>true</permanentEnemyToEveryoneExceptPlayer-->
 	
@@ -63,6 +64,9 @@
 			<guy762_SWWarlordsFaction_ZsinjDominion>-100</guy762_SWWarlordsFaction_ZsinjDominion>
 			<guy762_SWWarlordsFaction_Pentastar>-50</guy762_SWWarlordsFaction_Pentastar>
 			
+			<guy762_SWWarlordsFaction_ZannConsortium>-75</guy762_SWWarlordsFaction_ZannConsortium>
+			<guy762_SWWarlordsFaction_BlackSun>-75~-25</guy762_SWWarlordsFaction_BlackSun>
+			<!-- . -->
 			<guy762_KotORFaction_HuttCartel>-25~25</guy762_KotORFaction_HuttCartel>
 			<guy762_KotORFaction_ViciousHutts>-100</guy762_KotORFaction_ViciousHutts>
 			
@@ -229,6 +233,20 @@
 	
 	
     <pawnGroupMakers>
+		<li Class="taranchuk_flightcombat.PawnGroupMaker_FlightRaid">
+			<kindDef>Combat</kindDef>
+			<commonality>10000</commonality>
+			<minPoints>2000</minPoints>
+			<minAircraftCount>4</minAircraftCount>
+			<maxAircraftCount>10</maxAircraftCount>
+			<options>
+				<guy762_SWVehicle_AWingNR_bot_PawnKind>3</guy762_SWVehicle_AWingNR_bot_PawnKind>
+				<guy762_SWVehicle_XWingNR_bot_PawnKind>4</guy762_SWVehicle_XWingNR_bot_PawnKind>
+			</options>
+		</li>
+	  
+	  
+	  
 	  <li>
 		<kindDef>Peaceful</kindDef>
 		<options>

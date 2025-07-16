@@ -28,6 +28,7 @@
 		<weaponTags>
 			<li>SWRanged_E5rifle</li>
 			<li>SWRanged_AnyCommonCarbine</li>
+			<li>SWKotORWeaponCategoryTag_rifle</li>
 		</weaponTags>
 		<tradeTags>
 			<li>guy762TT_KotORRanged</li>
@@ -110,6 +111,7 @@
 		<weaponTags>
 			<li>SWRanged_E5Crifle</li>
 			<li>SWRanged_AnyRareRifle</li>
+			<li>SWKotORWeaponCategoryTag_rifle</li>
 		</weaponTags>
 		<tradeTags>
 			<li>guy762TT_KotORRanged</li>

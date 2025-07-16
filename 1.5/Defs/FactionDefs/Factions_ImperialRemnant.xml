@@ -40,7 +40,7 @@
       <!-- <li>SWImpRemnant_ArmyGeneral</li> political officers only, Zsinj/Maldrood/Eriadu could use military officers instead -->
     </fixedLeaderKinds>
 	
-	<permanentEnemyToEveryoneExceptPlayer>true</permanentEnemyToEveryoneExceptPlayer>
+	<!-- <permanentEnemyToEveryoneExceptPlayer>true</permanentEnemyToEveryoneExceptPlayer> -->
 	<naturalEnemy>true</naturalEnemy>
 	
 	<!-- <settlementGenerationWeight>2</settlementGenerationWeight> -->
@@ -62,6 +62,9 @@
 			<guy762_SWWarlordsFaction_Pentastar>-50~0</guy762_SWWarlordsFaction_Pentastar>
 			<guy762_SWWarlordsFaction_ZsinjDominion>-100</guy762_SWWarlordsFaction_ZsinjDominion>
 			
+			<guy762_SWWarlordsFaction_ZannConsortium>-100</guy762_SWWarlordsFaction_ZannConsortium>
+			<guy762_SWWarlordsFaction_BlackSun>-25~25</guy762_SWWarlordsFaction_BlackSun>
+			<!-- . -->
 			<guy762_KotORFaction_HuttCartel>0</guy762_KotORFaction_HuttCartel>
 			<guy762_KotORFaction_ViciousHutts>0</guy762_KotORFaction_ViciousHutts>
 			
@@ -178,14 +181,14 @@
 	
 	<xenotypeSet>
 	  <xenotypeChances>
-		<Baseliner MayRequire="Ludeon.RimWorld.Biotech">0.90</Baseliner>
-		<guy762_xenotype_arkanian MayRequire="guy762.StarWarsXenotypes">0.01</guy762_xenotype_arkanian>
-		<guy762_xenotype_echani MayRequire="guy762.StarWarsXenotypes">0.01</guy762_xenotype_echani>
+		<Baseliner MayRequire="Ludeon.RimWorld.Biotech">0.95</Baseliner>
+		<!-- <guy762_xenotype_arkanian MayRequire="guy762.StarWarsXenotypes">0.01</guy762_xenotype_arkanian> -->
+		<!-- <guy762_xenotype_echani MayRequire="guy762.StarWarsXenotypes">0.01</guy762_xenotype_echani> -->
 		<guy762_xenotype_mirialan MayRequire="guy762.StarWarsXenotypes">0.01</guy762_xenotype_mirialan>
 		<guy762_xenotype_pantoran MayRequire="guy762.StarWarsXenotypes">0.01</guy762_xenotype_pantoran>
 		<guy762_xenotype_umbaran MayRequire="guy762.StarWarsXenotypes">0.01</guy762_xenotype_umbaran>
 		<guy762_xenotype_zabrak MayRequire="guy762.StarWarsXenotypes">0.01</guy762_xenotype_zabrak>
-		<guy762_xenotype_zeltron MayRequire="guy762.StarWarsXenotypes">0.01</guy762_xenotype_zeltron><!-- total 0.97 -->
+		<guy762_xenotype_zeltron MayRequire="guy762.StarWarsXenotypes">0.01</guy762_xenotype_zeltron><!-- total 0.95 -->
 	  </xenotypeChances>
 	</xenotypeSet>
 		
@@ -446,7 +449,7 @@
 		  
 		  <SWImpRemnant_NavyGuard>10</SWImpRemnant_NavyGuard>
 		  <SWImpRemnant_NavyTrooper>5</SWImpRemnant_NavyTrooper>
-		  <SWImpRemnant_NavyLt>5</SWImpRemnant_NavyLt>
+		  <SWImpRemnant_NavyLt>1</SWImpRemnant_NavyLt>
 		  <SWImpRemnant_TIEpilot>5</SWImpRemnant_TIEpilot>
 		  <SWImpRemnant_TIEace>5</SWImpRemnant_TIEace>
 		  
@@ -459,13 +462,16 @@
 		  
 		  <SWImpRemnant_ArmyTrooper>10</SWImpRemnant_ArmyTrooper>
 		  <SWImpRemnant_ArmyLieutenant>10</SWImpRemnant_ArmyLieutenant>
-		  <SWImpRemnant_ArmyMajor>5</SWImpRemnant_ArmyMajor>
-		  <SWImpRemnant_ArmyGeneral>1</SWImpRemnant_ArmyGeneral>
+		  <SWImpRemnant_ArmyMajor>1</SWImpRemnant_ArmyMajor>
+		  <SWImpRemnant_ArmyGeneral>0.1</SWImpRemnant_ArmyGeneral>
 		  
 		  <SWWarlords_ArmyMedic>25</SWWarlords_ArmyMedic>
 		  
-		  <SWImpRemnant_Viceroy>5</SWImpRemnant_Viceroy>
-		  <SWImpRemnant_Moff>1</SWImpRemnant_Moff>
+		  <SWImpRemnant_OpsLt>5</SWImpRemnant_OpsLt>
+		  <SWImpRemnant_OpsGeneral>0.1</SWImpRemnant_OpsGeneral>
+		  
+		  <SWImpRemnant_Viceroy>1</SWImpRemnant_Viceroy>
+		  <SWImpRemnant_Moff>0.1</SWImpRemnant_Moff>
 		</options>
 	  </li>
 

@@ -39,6 +39,7 @@
 		<apparel>
 		  <tags Inherit="False">
 			<li>RemnantEmpire_blankuniform</li>
+			<li>SWGCWSpecificApparelItem_BlankImperialOfficerUniform</li>
 		  </tags>
 		  <wornGraphicPath>Apparel/ImperialOfficer/default/Apparel</wornGraphicPath>
 		  <useWornGraphicMask>true</useWornGraphicMask>
@@ -100,6 +101,7 @@
 		<apparel>
 		  <tags Inherit="False">
 			<li>RemnantEmpire_navytrooper</li>
+			<li>SWGCWSpecificApparelItem_BigBeltImperialOfficerUniform</li>
 		  </tags>
 		  <wornGraphicPath>Apparel/ImperialOfficer/bigbelt/Apparel</wornGraphicPath>
 		  <useWornGraphicMask>true</useWornGraphicMask>
@@ -171,6 +173,7 @@
 			<li>RemnantEmpire_armyconscript</li>
 			<!-- <li>KotORRoyaltyTag_ORprivI</li> -->
 			<!-- <li>KotORRoyaltyTag_ORprivII</li> -->
+			<li>SWGCWSpecificApparelItem_ImperialUniformHat</li>
 		  </tags>
 		  <countsAsClothingForNudity>false</countsAsClothingForNudity>
 		  <canBeGeneratedToSatisfyWarmth>false</canBeGeneratedToSatisfyWarmth>
@@ -240,6 +243,7 @@
 			<li>RemnantEmpire_impofficer</li>
 			<!-- <li>KotORRoyaltyTag_ORprivI</li> -->
 			<!-- <li>KotORRoyaltyTag_ORprivII</li> -->
+			<li>SWGCWSpecificApparelItem_ImperialOfficerHat</li>
 		  </tags>
 		  <countsAsClothingForNudity>false</countsAsClothingForNudity>
 		  <canBeGeneratedToSatisfyWarmth>false</canBeGeneratedToSatisfyWarmth>
@@ -331,6 +335,7 @@
 		<apparel>
 		  <tags Inherit="False">
 			<li>RemnantEmpire_impofficer</li>
+			<li>SWGCWSpecificApparelItem_LowRankImperialOfficerUniform</li>
 		  </tags>
 		  <wornGraphicPath>Apparel/ImperialOfficer/navylieutenant/Apparel</wornGraphicPath>
 		  <useWornGraphicMask>true</useWornGraphicMask>
@@ -458,6 +463,7 @@
 		<apparel>
 		  <tags Inherit="False">
 			<li>RemnantEmpire_imprankingofficer</li>
+			<li>SWGCWSpecificApparelItem_MidRankImperialOfficerUniform</li>
 		  </tags>
 		  <wornGraphicPath>Apparel/ImperialOfficer/linecaptain/Apparel</wornGraphicPath>
 		  <useWornGraphicMask>true</useWornGraphicMask>
@@ -607,6 +613,7 @@
 		<apparel>
 		  <tags Inherit="False">
 			<li>RemnantEmpire_warlord</li>
+			<li>SWGCWSpecificApparelItem_HighRankImperialOfficerUniform</li>
 		  </tags>
 		  <wornGraphicPath>Apparel/ImperialOfficer/grandmoff/Apparel</wornGraphicPath>
 		  <useWornGraphicMask>true</useWornGraphicMask>
@@ -781,6 +788,7 @@
 		<apparel>
 		  <tags Inherit="False">
 			<li>RemnantEmpire_warlord</li>
+			<li>SWGCWSpecificApparelItem_TopBrassImperialOfficerUniform</li>
 		  </tags>
 		  <wornGraphicPath>Apparel/ImperialOfficer/grandmoff/Apparel</wornGraphicPath>
 		  <useWornGraphicMask>true</useWornGraphicMask>

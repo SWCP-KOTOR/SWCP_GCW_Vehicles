@@ -34,6 +34,7 @@
 		<apparel>
 		  <tags Inherit="False">
 			<li>RemnantEmpire_armycommando</li>
+			<li>SWGCWSpecificApparelItem_EmpireTankTrooperArmor</li>
 		  </tags>
 		  <wornGraphicPath>Apparel/ImperialTankTrooper/Apparel</wornGraphicPath>
 		  <!-- <useWornGraphicMask>true</useWornGraphicMask> -->
@@ -175,6 +176,7 @@
 		<apparel Inherit="False">
 			<tags>
 				<li>RemnantEmpire_armylieutenant</li>
+				<li>SWGCWSpecificApparelItem_LowRankImperialArmyArmor</li>
 			</tags>
 			<wornGraphicPath>Apparel/ImperialArmyTrooper/armylieutenant/Apparel</wornGraphicPath>
 			<useWornGraphicMask>true</useWornGraphicMask>
@@ -273,6 +275,7 @@
 		<apparel Inherit="False">
 			<tags>
 				<li>RemnantEmpire_armymajor</li>
+				<li>SWGCWSpecificApparelItem_MidRankImperialArmyArmor</li>
 			</tags>
 			<wornGraphicPath>Apparel/ImperialArmyTrooper/armymajor/Apparel</wornGraphicPath>
 			<useWornGraphicMask>true</useWornGraphicMask>
@@ -389,6 +392,7 @@
 		<apparel Inherit="False">
 			<tags>
 				<li>RemnantEmpire_armygeneral</li>
+				<li>SWGCWSpecificApparelItem_HighRankImperialArmyArmor</li>
 			</tags>
 			<wornGraphicPath>Apparel/ImperialArmyTrooper/taskforceCO/Apparel</wornGraphicPath>
 			<useWornGraphicMask>true</useWornGraphicMask>
@@ -510,6 +514,7 @@
 		<apparel Inherit="False">
 			<tags>
 				<li>RemnantEmpire_grandgeneral</li>
+				<li>SWGCWSpecificApparelItem_TopBrassImperialArmyArmor</li>
 			</tags>
 			<wornGraphicPath>Apparel/ImperialArmyTrooper/grandgeneral/Apparel</wornGraphicPath>
 			<useWornGraphicMask>true</useWornGraphicMask>
@@ -618,6 +623,7 @@
 			<tags>
 				<li>RemnantEmpire_armytrooper</li>
 				<li>RemnantEmpire_armyconscript</li>
+				<li>SWGCWSpecificApparelItem_ImperialArmyArmor</li>
 			</tags>
 			<wornGraphicPath>Apparel/ImperialArmyTrooper/Apparel</wornGraphicPath>
 			<useWornGraphicMask>false</useWornGraphicMask>
@@ -692,6 +698,7 @@
 		<apparel Inherit="False">
 			<tags>
 				<li>ZsinjEmpire_armytrooper</li>
+				<li>SWGCWSpecificApparelItem_RustyImperialArmyArmor</li>
 			</tags>
 			<wornGraphicPath>Apparel/ImperialArmyTrooper/Apparel</wornGraphicPath>
 			<useWornGraphicMask>true</useWornGraphicMask>
@@ -792,6 +799,7 @@
 			<tags>
 				<li>RemnantEmpire_armytrooper</li>
 				<li>ZsinjEmpire_armytrooper</li>
+				<li>SWGCWSpecificApparelItem_ImperialArmyHelmet</li>
 			</tags>
 			<wornGraphicPath>Apparel/ImperialArmyTrooper/helmet</wornGraphicPath>
 			<useWornGraphicMask>true</useWornGraphicMask>
@@ -888,6 +896,7 @@
 		  </layers>
 		  <tags>
 			<li>RemnantEmpire_armyveterantrooper</li>
+			<li>SWGCWSpecificApparelItem_ImperialArmyGasmask</li>
 		  </tags>
 		  <countsAsClothingForNudity>false</countsAsClothingForNudity>
 		  <canBeGeneratedToSatisfyWarmth>false</canBeGeneratedToSatisfyWarmth>
@@ -965,6 +974,7 @@
 		<apparel Inherit="False">
 			<tags>
 				<li>ZsinjEmpire_armytrooper</li>
+				<li>SWGCWSpecificApparelItem_RaiderMaskedImperialArmyHelmet</li>
 			</tags>
 			<wornGraphicPath>Apparel/ArmyTrooper_RemnantKitbashes/helmet_norust_visorup/helmet</wornGraphicPath>
 			<useWornGraphicMask>true</useWornGraphicMask>
@@ -1051,6 +1061,7 @@
 		<apparel Inherit="False">
 			<tags>
 				<li>IndependentWarlord_armytrooper</li>
+				<li>SWGCWSpecificApparelItem_RustyImperialArmyHelmet</li>
 			</tags>
 			<wornGraphicPath>Apparel/ArmyTrooper_RemnantKitbashes/helmet</wornGraphicPath>
 			<useWornGraphicMask>true</useWornGraphicMask>
@@ -1140,11 +1151,13 @@
 			<ToxicEnvironmentResistance>1</ToxicEnvironmentResistance>
 			<HypoxiaResistance MayRequire="kentington.saveourship2">1</HypoxiaResistance>
 			<DecompressionResistance MayRequire="kentington.saveourship2">0.25</DecompressionResistance>
+			<VacuumResistance MayRequire="Ludeon.RimWorld.Odyssey">0.69</VacuumResistance>
 		</equippedStatOffsets>
 		
 		<apparel Inherit="False">
 			<tags>
 				<li>RemnantEmpire_armycommando</li>
+				<li>SWGCWSpecificApparelItem_ImperialTankTrooperHelmet</li>
 			</tags>
 			<wornGraphicPath>Apparel/ImperialTankTrooper/helmet</wornGraphicPath>
 			<useWornGraphicMask>true</useWornGraphicMask>

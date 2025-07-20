@@ -31,6 +31,7 @@
 	  <tags>
 		<li>SWShield_light</li>
 		<li>SWShield_any</li>
+		<li>SWGCWSpecificGadgetItem_JKSmallEShield</li>
 	  </tags>
     </apparel>
 	<tradeTags>
@@ -246,6 +247,7 @@
 	  <tags>
 		<li>SWShield_heavy</li>
 		<li>SWShield_any</li>
+		<li>SWGCWSpecificGadgetItem_JKBigEShield</li>
 	  </tags>
     </apparel>
 	<tradeTags>

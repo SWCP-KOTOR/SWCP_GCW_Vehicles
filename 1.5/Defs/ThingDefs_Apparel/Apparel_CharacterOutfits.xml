@@ -68,6 +68,7 @@
 		  </layers>
 		  <tags>
 			<li>RemnantEmpire_Lumiya</li>
+			<li>SWGCWSpecificApparelItem_LumiyaHeaddress</li>
 		  </tags>
 		  <countsAsClothingForNudity>false</countsAsClothingForNudity>
 		  <canBeGeneratedToSatisfyWarmth>false</canBeGeneratedToSatisfyWarmth>
@@ -138,6 +139,7 @@
 			<useDeflectMetalEffect>true</useDeflectMetalEffect>
 			<tags Inherit="False">
 				<li>RemnantEmpire_Lumiya</li>
+				<li>SWGCWSpecificApparelItem_LumiyaArmor</li>
 			</tags>
 			<wornGraphicPath>Apparel/CharacterOutfits/Lumiya/Apparel</wornGraphicPath>
 			<useWornGraphicMask>true</useWornGraphicMask>
@@ -196,6 +198,7 @@
 		<apparel>
 			<tags Inherit="False">
 				<li>RemnantEmpire_CarnorJax</li>
+				<li>SWGCWSpecificApparelItem_CarnorJaxRoyalGuardArmor</li>
 			</tags>
 		</apparel>
 
@@ -294,6 +297,7 @@
 		<apparel Inherit="False">
 			<tags>
 				<li>SaV_JodoKast</li>
+				<li>SWGCWSpecificApparelItem_JodoKastMandoArmor</li>
 			</tags>
 			
 			<gender>Male</gender>
@@ -375,6 +379,7 @@
 			<ToxicEnvironmentResistance>0.5</ToxicEnvironmentResistance>
 			<HypoxiaResistance MayRequire="kentington.saveourship2">1</HypoxiaResistance>
 			<DecompressionResistance MayRequire="kentington.saveourship2">0.25</DecompressionResistance>
+			<VacuumResistance MayRequire="Ludeon.RimWorld.Odyssey">0.69</VacuumResistance>
 		</equippedStatOffsets>
 		
 		<recipeMaker>
@@ -401,6 +406,7 @@
 			<!--immuneToToxGasExposure>true</immuneToToxGasExposure-->
 			<tags>
 				<li>SaV_JodoKast</li>
+				<li>SWGCWSpecificApparelItem_WornMandoHelmet</li>
 			</tags>
 			<wornGraphicPath>Apparel/Mandalorian/jodokast/helmet/helmet</wornGraphicPath>
 			<useWornGraphicMask>true</useWornGraphicMask>
@@ -518,6 +524,7 @@
 			</bodyPartGroups>
 		  <tags Inherit="False">
 			<li>NewRepublic_kylekatarn</li>
+			<li>SWGCWSpecificApparelItem_KyleKatarnClothes</li>
 		  </tags>
 		  <wornGraphicPath>Apparel/CharacterOutfits/KyleKatarn/Apparel</wornGraphicPath>
 		  <useWornGraphicMask>true</useWornGraphicMask>
@@ -581,6 +588,8 @@
 		<equippedStatOffsets>
 		  <SocialImpact>1</SocialImpact>
 		  <WorkSpeedGlobal>0.2</WorkSpeedGlobal>
+		  
+		  <PilotingAbility MayRequire="Ludeon.RimWorld.Odyssey">0.2</PilotingAbility>
 		</equippedStatOffsets>
 		
 		
@@ -599,6 +608,7 @@
 			</bodyPartGroups>
 		  <tags Inherit="False">
 			<li>NewRepublic_nym</li>
+			<li>SWGCWSpecificApparelItem_NymBodysuit</li>
 		  </tags>
 		  <wornGraphicPath>Apparel/CharacterOutfits/Nym/Apparel</wornGraphicPath>
 		  <useWornGraphicMask>true</useWornGraphicMask>
@@ -671,6 +681,8 @@
 		</statBases>
 		<equippedStatOffsets>
 			<WorkSpeedGlobal>0.2</WorkSpeedGlobal>
+
+			<PilotingAbility MayRequire="Ludeon.RimWorld.Odyssey">0.2</PilotingAbility>
 		</equippedStatOffsets>
 		
 		<costList>
@@ -701,6 +713,7 @@
 		  </layers>
 		  <tags>
 			<li>NewRepublic_herasyndulla</li>
+			<li>SWGCWSpecificApparelItem_HeraSyndullaTwilekHat</li>
 		  </tags>
 		  <countsAsClothingForNudity>false</countsAsClothingForNudity>
 		  <canBeGeneratedToSatisfyWarmth>false</canBeGeneratedToSatisfyWarmth>
@@ -764,6 +777,8 @@
 		</statBases>
 		<equippedStatOffsets>
 			<WorkSpeedGlobal>0.4</WorkSpeedGlobal>
+
+			<PilotingAbility MayRequire="Ludeon.RimWorld.Odyssey">0.2</PilotingAbility>
 		</equippedStatOffsets>
 		
 		<apparel>
@@ -782,6 +797,7 @@
 			<useDeflectMetalEffect>false</useDeflectMetalEffect>
 			<tags Inherit="False">
 				<li>NewRepublic_herasyndulla</li>
+				<li>SWGCWSpecificApparelItem_HeraSyndullaBodysuit</li>
 			</tags>
 			<wornGraphicPath>Apparel/CharacterOutfits/HeraSyndulla/Apparel</wornGraphicPath>
 			<useWornGraphicMask>true</useWornGraphicMask>
@@ -856,6 +872,8 @@
 		</statBases>
 		<equippedStatOffsets>
 			<SocialImpact>1</SocialImpact>
+			
+			<PilotingAbility MayRequire="Ludeon.RimWorld.Odyssey">0.5</PilotingAbility>
 		</equippedStatOffsets>
 		
 		<randomStyleChance>1</randomStyleChance>
@@ -880,6 +898,7 @@
 		<apparel Inherit="False">
 			<tags>
 				<li>NewRepublic_roguesquadron</li>
+				<li>SWGCWSpecificApparelItem_CharacterXWingPilotHelmet</li>
 			</tags>
 			<wornGraphicPath>Apparel/RebelPilot/helmet_wedge/helmet</wornGraphicPath>
 			<useWornGraphicMask>true</useWornGraphicMask>
@@ -982,6 +1001,8 @@
 		<equippedStatOffsets>
 			<SocialImpact>0.5</SocialImpact>
 			<PsychicSensitivity>0.1</PsychicSensitivity>
+			
+			<PilotingAbility MayRequire="Ludeon.RimWorld.Odyssey">0.5</PilotingAbility>
 		</equippedStatOffsets>
 		
 		<!-- <randomStyleChance>0.5</randomStyleChance> -->
@@ -1007,6 +1028,7 @@
 		<apparel Inherit="False">
 			<tags>
 				<li>NewRepublic_keo</li>
+				<li>SWGCWSpecificApparelItem_CharacterAWingPilotHelmet</li>
 			</tags>
 			<wornGraphicPath>Apparel/RebelPilot/helmetAWing_keo/helmet</wornGraphicPath>
 			<useWornGraphicMask>true</useWornGraphicMask>

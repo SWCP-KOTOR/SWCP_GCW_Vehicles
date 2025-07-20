@@ -123,6 +123,8 @@
 		<apparelMoney>1000</apparelMoney>
 		<apparelTags Inherit="False">
 		  <li>KotORGloves_gamorrean</li>
+		  <li>SWCPSpecificApparelItem_GamorreanHood</li>
+		  <li>SWCPSpecificApparelItem_GamorreanLeathers</li>
 		</apparelTags>
 		<apparelRequired>
 			<li>guy762_Clothing_gamorrean</li>
@@ -175,6 +177,10 @@
 		<apparelTags Inherit="False">
 		  <li>KotORShield_mid</li>
 		  <li>KotORAccessory_lightdiagonalonly</li>
+		  <li>SWCPSpecificApparelItem_GamorreanHood</li>
+		  <li>SWCPSpecificApparelItem_GamorreanLeathers</li>
+		  <li>SWKotORSpecificApparelItem_GamorreanHeavyBattleArmor</li>
+		  <li>SWCPSpecificGadgetItem_GamorreanGloves</li>
 		</apparelTags>
 		<apparelRequired>
 			<li>guy762_HvyArmor_gamorrean</li>
@@ -316,6 +322,8 @@
 		  <li>ScumAndVillainy_flakhat</li>
 		  <li>KotORHeadband_bandana</li>
 		  <li>SWWarlordsAccessory_scumtrooper</li>
+		  <li>SWGCWSpecificApparelItem_TantelArmor</li>
+		  <li>SWCPSpecificApparelItem_TwoToneRusticClothing</li>
 		</apparelTags>
 		<apparelAllowHeadgearChance>0.5</apparelAllowHeadgearChance>
 		<apparelRequired>
@@ -381,6 +389,7 @@
 		  <li>ScumAndVillainy_flakhat</li>
 		  <li>SWWarlordsAccessory_scumtrooper</li>
 		  <li>SaV_outfit_JKmerc</li>
+		  <li>SWGCWSpecificApparelItem_JKJAMercArmor</li>
 		</apparelTags>
 		<apparelRequired>
 		   <li>guy762_ScumMercArmor</li>
@@ -459,6 +468,9 @@
 			<li>ScumAndVillainy_pilot</li>
 			<li>KotORHeadband_bandana</li>
 			<li>SaV_outfit_JKWeequay</li>
+			<li>SWCPSpecificApparelItem_RebelFlightSuitBox</li>
+			<li>SWGCWSpecificApparelItem_WeequayCombatSuit</li>
+			<li>SWCPSpecificApparelItem_DyeableFatigues</li>
 		</apparelTags>
 		<apparelRequired>
 			<li>guy762_RebelPilot_suitbox</li>
@@ -529,6 +541,7 @@
 		<apparelAllowHeadgearChance>1</apparelAllowHeadgearChance>
 		<apparelTags>
 			<li>czkera_slave</li>
+			<li>SWCPSpecificApparelItem_RusticClothing</li>
 		</apparelTags>
 		<apparelRequired>
 		   <li>Apparel_BodyStrap</li>	
@@ -664,6 +677,7 @@
 		  <li>guy762PatchedTag_Sash</li>
           <li>guy762PatchedTag_Cape</li>
 		  <li>KotORClothing_simplecloak</li>
+		  <li>guy762PatchedTag_RoyalHats</li>
 		</apparelTags>
 		<apparelAllowHeadgearChance>0.35</apparelAllowHeadgearChance>
 		<specificApparelRequirements>
@@ -855,6 +869,7 @@
 		  <li>guy762PatchedTag_PrestigeRobe</li>
 		  <li>KotORClothing_simplecloak</li>
 		  <li>KotORHeadband_regalvisor</li>
+		  <li>SWCPSpecificApparelItem_KotOROnderonRobes</li>
 		</apparelTags>
 		<apparelRequired>
 			<li>guy762_Robes_onderon</li>

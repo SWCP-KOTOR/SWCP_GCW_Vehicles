@@ -41,6 +41,7 @@
 		<apparel Inherit="False">
 			<tags>
 				<li>HuttKajidics_tantelarmor</li>
+				<li>SWGCWSpecificApparelItem_TantelHelmet</li>
 			</tags>
 			<wornGraphicPath>Apparel/Helmets/CombatHelmet</wornGraphicPath>
 			<useWornGraphicMask>true</useWornGraphicMask>
@@ -132,6 +133,7 @@
 			</bodyPartGroups>
 			<tags Inherit="False">
 				<li>HuttKajidics_tantelarmor</li>
+				<li>SWGCWSpecificApparelItem_TantelArmor</li>
 			</tags>
 			<wornGraphicPath>Apparel/TantelArmor/Apparel</wornGraphicPath>
 			<useWornGraphicMask>true</useWornGraphicMask>
@@ -210,6 +212,7 @@
 			<tags>
 				<li>SaV_outfit_JKWeequay</li>
 				<li>SaV_outfit_weakmerc</li>
+				<li>SWGCWSpecificApparelItem_WeequayCombatSuit</li>
 			</tags>
 			<wornGraphicPath>Apparel/JAWeequay/Apparel</wornGraphicPath>
 			<useWornGraphicMask>true</useWornGraphicMask>
@@ -311,6 +314,7 @@
 		<apparel Inherit="False">
 			<tags>
 				<li>SaV_outfit_merc</li>
+				<li>SWGCWSpecificApparelItem_JKJAMercHelmet</li>
 			</tags>
 			<wornGraphicPath>Apparel/JAMerc/helmet</wornGraphicPath>
 			<useWornGraphicMask>true</useWornGraphicMask>
@@ -375,6 +379,7 @@
 			<tags>
 				<li>SaV_outfit_merc</li>
 				<li>SaV_outfit_JKmerc</li>
+				<li>SWGCWSpecificApparelItem_JKJAMercArmor</li>
 			</tags>
 			<wornGraphicPath>Apparel/JAMerc/Apparel</wornGraphicPath>
 			<useWornGraphicMask>true</useWornGraphicMask>
@@ -454,6 +459,7 @@
 		<apparel Inherit="False">
 			<tags>
 				<li>BlackSun_FalleenSoldier</li>
+				<li>SWGCWSpecificApparelItem_BlackSunSoldierArmor</li>
 			</tags>
 			<wornGraphicPath>Apparel/BlackSun/Apparel</wornGraphicPath>
 			<useWornGraphicMask>true</useWornGraphicMask>
@@ -523,13 +529,12 @@
 		</statBases>
 		<equippedStatOffsets>
 			<ToxicEnvironmentResistance>0.5</ToxicEnvironmentResistance>
-			<HypoxiaResistance MayRequire="kentington.saveourship2">1</HypoxiaResistance>
-			<DecompressionResistance MayRequire="kentington.saveourship2">0.25</DecompressionResistance>
 		</equippedStatOffsets>
 		
 		<apparel Inherit="False">
 			<tags>
 				<li>BlackSun_FalleenSoldier</li>
+				<li>SWGCWSpecificApparelItem_BlackSunSoldierHelmet</li>
 			</tags>
 			<wornGraphicPath>Apparel/BlackSun/helmet</wornGraphicPath>
 			<useWornGraphicMask>true</useWornGraphicMask>
@@ -601,6 +606,7 @@
 		<apparel Inherit="False">
 			<tags>
 				<li>ZannConsortium_DisruptorMerc</li>
+				<li>SWGCWSpecificApparelItem_ZannConsortiumMercHelmet</li>
 			</tags>
 			<wornGraphicPath>Apparel/ZannMerc/helmet</wornGraphicPath>
 			<useWornGraphicMask>true</useWornGraphicMask>
@@ -657,6 +663,7 @@
 		<apparel Inherit="False">
 			<tags>
 				<li>ZannConsortium_DisruptorMerc</li>
+				<li>SWGCWSpecificApparelItem_ZannConsortiumMercArmor</li>
 			</tags>
 			<wornGraphicPath>Apparel/ZannMerc/Apparel</wornGraphicPath>
 			<useWornGraphicMask>true</useWornGraphicMask>
@@ -737,11 +744,13 @@
 			<ToxicEnvironmentResistance>1</ToxicEnvironmentResistance>
 			<HypoxiaResistance MayRequire="kentington.saveourship2">1</HypoxiaResistance>
 			<DecompressionResistance MayRequire="kentington.saveourship2">0.25</DecompressionResistance>
+			<VacuumResistance MayRequire="Ludeon.RimWorld.Odyssey">0.69</VacuumResistance>
 		</equippedStatOffsets>
 		
 		<apparel Inherit="False">
 			<tags>
 				<li>ZannConsortium_defiler</li>
+				<li>SWGCWSpecificApparelItem_ZannConsortiumDefilerHelmet</li>
 			</tags>
 			<wornGraphicPath>Apparel/ZannDefiler/helmet</wornGraphicPath>
 			<useWornGraphicMask>true</useWornGraphicMask>
@@ -802,11 +811,13 @@
 			<VEF_MassCarryCapacity>10</VEF_MassCarryCapacity>
 			
 			<DecompressionResistance MayRequire="kentington.saveourship2">0.75</DecompressionResistance>
+			<VacuumResistance MayRequire="Ludeon.RimWorld.Odyssey">0.32</VacuumResistance>
 		</equippedStatOffsets>
 		
 		<apparel Inherit="False">
 			<tags>
 				<li>ZannConsortium_defiler</li>
+				<li>SWGCWSpecificApparelItem_ZannConsortiumDefilerArmor</li>
 			</tags>
 			<wornGraphicPath>Apparel/ZannDefiler/Apparel</wornGraphicPath>
 			<useWornGraphicMask>true</useWornGraphicMask>

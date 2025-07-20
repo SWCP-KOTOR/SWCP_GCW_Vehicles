@@ -22,6 +22,7 @@
     <apparelAllowHeadgearChance>0.25</apparelAllowHeadgearChance>
     <apparelTags>
 	  <li>KotOREquipment_basic</li>
+	  <li>SWCPSpecificApparelItem_StripedFatigues</li>
     </apparelTags>
 	<apparelRequired>
 	   <li>guy762_Bodysuit_striped</li>
@@ -79,6 +80,8 @@
     <apparelTags>
 	  <li>KotORHeadband_bandana</li>
 	  <li>SaV_outfit_JKWeequay</li>
+	  <li>SWGCWSpecificApparelItem_WeequayCombatSuit</li>
+	  <li>SWCPSpecificApparelItem_TwoToneRusticClothing</li>
     </apparelTags>
 	<apparelRequired>
 	   <li>guy762_ScumWeequayArmor</li>
@@ -127,7 +130,9 @@
     <apparelMoney>750~2500</apparelMoney>
     <apparelAllowHeadgearChance>0.37</apparelAllowHeadgearChance>
     <apparelTags>
-	  <li>KotOREquipment_basic</li>
+		<li>KotOREquipment_basic</li>
+		<li>SWCPSpecificApparelItem_FlightVest</li>
+		<li>SWCPSpecificApparelItem_DyeableFatigues</li>
     </apparelTags>
 	<apparelRequired>
 	   <li>guy762_Bodysuit_Dyeable</li>
@@ -303,6 +308,8 @@
     <apparelTags>
 	  <li>KotOREquipment_basic</li>
 	  <li>SWWarlordsAccessory_scumtrooper</li>
+	  <li>SWGCWSpecificApparelItem_JKJAMercHelmet</li>
+	  <li>SWGCWSpecificApparelItem_JKJAMercArmor</li>
     </apparelTags>
 	<apparelRequired>
 	   <li>guy762_ScumMercHelmet</li>

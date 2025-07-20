@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	  
+	  
+	  
+	  
+	  <ThingDef ParentName="guy762_clothingbase">
+		<defName>guy762_RebelUniform_lowrank</defName>
+		<label>Rebel Alliance uniform, officer's</label>
+		<description>These are simple garments that protect little more than the modesty of the wearer.</description>
+		<graphicData>
+		  <texPath>Apparel/RebelOfficer/navylieutenant/Apparel</texPath>
+		  <graphicClass>Graphic_Single</graphicClass>
+		  <shaderType>CutoutComplex</shaderType>
+		  <colorTwo>(145,175,195)</colorTwo> <!-- sand blue -->
+		</graphicData>
+		<statBases>
+			<Mass>3</Mass>
+			<MarketValue>1000</MarketValue>
+			<MaxHitPoints>100</MaxHitPoints>
+			<ArmorRating_Sharp>0.01</ArmorRating_Sharp>
+			<ArmorRating_Blunt>0.01</ArmorRating_Blunt>
+			<ArmorRating_Heat>0.01</ArmorRating_Heat>
+			<Insulation_Cold>10</Insulation_Cold>
+			<Insulation_Heat>5</Insulation_Heat>
+			<EquipDelay>3</EquipDelay>
+			
+			<WorkToMake>4000</WorkToMake>
+		</statBases>
+		<equippedStatOffsets>
+		  <SocialImpact>0.1</SocialImpact>
+		</equippedStatOffsets>
+		
+		<recipeMaker>
+			<researchPrerequisite>guy762_ResearchKotOR_sith</researchPrerequisite>
+			<skillRequirements>
+				<Crafting>6</Crafting>
+			</skillRequirements>
+		</recipeMaker>
+		<costList>
+		  <Cloth>75</Cloth>
+		</costList>
+		
+		<apparel>
+		  <tags Inherit="False">
+			<li>RebelAlliance_lowrankofficer</li>
+			<li>SWGCWSpecificApparelItem_LowRankRebelOfficerUniform</li>
+		  </tags>
+		  <wornGraphicPath>Apparel/RebelOfficer/navylieutenant/Apparel</wornGraphicPath>
+		  <useWornGraphicMask>true</useWornGraphicMask>
+		  <defaultOutfitTags Inherit="False">
+			<li>Worker</li>
+		  </defaultOutfitTags>
+		</apparel>
+		
+		<randomStyleChance>1</randomStyleChance>
+		<randomStyle>
+		  <li>
+			<styleDef>guy762_RankStyleRebOfficer_navylt</styleDef>
+		  </li>
+		  <li>
+			<styleDef>guy762_RankStyleRebOfficer_navycap</styleDef>
+		  </li>
+		</randomStyle>
+		
+		<tradeTags>
+			<li>guy762TT_KotORArmor</li>
+		</tradeTags>
+		<colorGenerator Class="ColorGenerator_Options" Inherit="False">
+			<options>
+				<li>
+					<weight>15</weight>
+					<only>(170,135,100)</only> <!-- darker beige -->
+				</li>
+			</options>
+		</colorGenerator>
+	  </ThingDef>
+	  
+	  <ThingStyleDef>
+		<defName>guy762_RankStyleRebOfficer_navylt</defName>
+		<overrideLabel>Rebel Alliance uniform, navy lieutenant's</overrideLabel>
+		<wornGraphicPath>Apparel/RebelOfficer/navylieutenant/Apparel</wornGraphicPath>
+		<graphicData>
+		  <texPath>Apparel/RebelOfficer/navylieutenant/Apparel</texPath>
+		  <graphicClass>Graphic_Single</graphicClass>
+		  <shaderType>CutoutComplex</shaderType>
+		</graphicData>
+	  </ThingStyleDef>
+	  
+	  <ThingStyleDef>
+		<defName>guy762_RankStyleRebOfficer_navycap</defName>
+		<overrideLabel>Rebel Alliance uniform, navy captain's</overrideLabel>
+		<wornGraphicPath>Apparel/RebelOfficer/navycaptain/Apparel</wornGraphicPath>
+		<graphicData>
+		  <texPath>Apparel/RebelOfficer/navycaptain/Apparel</texPath>
+		  <graphicClass>Graphic_Single</graphicClass>
+		  <shaderType>CutoutComplex</shaderType>
+		</graphicData>
+	  </ThingStyleDef>
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	<ThingDef ParentName="KotORArmorModdable_soft">
+		<defName>guy762_RebelOfficerDuster</defName>
+		<label>rebel overcoat, officer's</label>
+		<description>This long overcoat is typically worn by ranking officers of the Rebel Alliance and New Republic.</description>
+		<graphicData>
+		  <texPath>Apparel/RebelArmyDuster/general/Apparel</texPath>
+		  <graphicClass>Graphic_Single</graphicClass>
+		  <shaderType>CutoutComplex</shaderType>
+		  <colorTwo>(175,120,55)</colorTwo> <!-- burnt orange -->
+		</graphicData>
+		<statBases>
+			<Mass>6</Mass>
+			<MarketValue>2500</MarketValue>
+			<MaxHitPoints>250</MaxHitPoints>
+			<ArmorRating_Sharp>0.1</ArmorRating_Sharp>
+			<ArmorRating_Blunt>0.15</ArmorRating_Blunt>
+			<ArmorRating_Heat>0.2</ArmorRating_Heat>
+			<Insulation_Cold>10</Insulation_Cold>
+			<Insulation_Heat>15</Insulation_Heat>
+			<EquipDelay>3</EquipDelay>
+		</statBases>
+		<equippedStatOffsets>
+		  <SocialImpact>0.8</SocialImpact>
+		</equippedStatOffsets>
+		<apparel>
+			<drawData>
+			  <dataNorth>
+				<!-- <layer>65</layer> FOR USE WITH SHELL LAYER ONLY!!! -->
+			  </dataNorth>
+			</drawData>
+			<layers>
+				<li>Middle</li>
+				<!-- <li>Shell</li> -->
+			</layers>
+			<bodyPartGroups>
+				<li>Torso</li>
+				<li>Neck</li>
+				<li>Shoulders</li>
+				<li>Arms</li>
+				<li>Legs</li>
+			</bodyPartGroups>
+			<tags Inherit="False">
+				<li>NewRepublic_ArmyOfficer</li>
+				<li>SWGCWSpecificApparelItem_HighRankRebelArmyOfficerDuster</li>
+			</tags>
+			<wornGraphicPath>Apparel/RebelArmyDuster/general/Apparel</wornGraphicPath>
+			<useWornGraphicMask>true</useWornGraphicMask>
+		</apparel>
+		
+		<randomStyleChance>1</randomStyleChance>
+		<randomStyle>
+		  <li>
+			<styleDef>guy762_RankStyleRebOvercoat_armygen</styleDef>
+		  </li>
+		</randomStyle>
+		
+		<tradeTags>
+			<li>guy762TT_KotORClothes</li>
+		</tradeTags>
+		
+		<comps>
+            <li Class="FCP.Core.CompProperties_LabelColored">
+                <rarity>Rare</rarity>
+            </li>
+        </comps>
+
+		<colorGenerator Class="ColorGenerator_Options" Inherit="False">
+			<options>
+				<li>
+					<weight>15</weight>
+					<only>(175,150,120)</only>       <!-- bespin beige -->
+				</li>
+			</options>
+		</colorGenerator>
+		
+		<!-- <comps> -->
+		  <!-- <li Class="ModularWeapons.CompProperties_ModularParts"> -->
+			<!-- <compClass>ModularWeapons.CompModularParts</compClass> -->
+			<!-- <partKinds> -->
+			  <!-- <li>guy762_slot_underlay</li> -->
+			<!-- </partKinds> -->
+			<!-- <randomizeParts>true</randomizeParts> -->
+		  <!-- </li> -->
+		<!-- </comps> -->
+	</ThingDef>
+	  
+	<ThingStyleDef>
+		<defName>guy762_RankStyleRebOvercoat_armygen</defName>
+		<overrideLabel>rebel overcoat, general's</overrideLabel>
+		<wornGraphicPath>Apparel/RebelArmyDuster/general/Apparel</wornGraphicPath>
+		<graphicData>
+		  <texPath>Apparel/RebelArmyDuster/general/Apparel</texPath>
+		  <graphicClass>Graphic_Single</graphicClass>
+		  <shaderType>CutoutComplex</shaderType>
+		</graphicData>
+	  </ThingStyleDef>
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	
+	  
+
+</Defs>

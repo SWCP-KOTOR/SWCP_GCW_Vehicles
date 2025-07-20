@@ -229,8 +229,7 @@
 	
 	
 	
-	
-	<!-- NEEDS LearningTreeNodeDef FORBIDDEN GENE LIMITER!!! -->
+
 	
 	<GeneDef MayRequire="guy762.Lee.KotORPotF">
 		<defName>SWWE_Gene_HalcyonJedi</defName>

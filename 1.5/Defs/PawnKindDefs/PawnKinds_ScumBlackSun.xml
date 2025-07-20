@@ -63,6 +63,8 @@
 		<apparelTags>
 		  <li>KotORHeadband_tech</li>
 		  <li>SaV_ExchangeGadget</li>
+		  <li>SWCPSpecificApparelItem_SmugglerClothing</li>
+		  <li>SWCPSpecificApparelItem_ScoutVest</li>
 		</apparelTags>
 		<apparelRequired>
 		   <li>guy762_Jacket_scout</li>
@@ -170,6 +172,7 @@
 		  <li>KotOREquipment_basic</li>
 		  <li>KotORUtility_weakgrenade</li>
 		  <li>BlackSun_FalleenSoldier</li>
+		  <li>SWGCWSpecificApparelItem_BlackSunSoldierArmor</li>
 		</apparelTags>
 		<apparelRequired>
 		   <!-- <li>guy762_BlackSunSoldierHelmet</li> -->
@@ -261,6 +264,8 @@
 		<apparelTags>
 		  <li>KotOREquipment_basic</li>
 		  <li>BlackSun_FalleenSoldier</li>
+		  <li>SWGCWSpecificApparelItem_BlackSunSoldierHelmet</li>
+		  <li>SWGCWSpecificApparelItem_BlackSunSoldierArmor</li>
 		</apparelTags>
 		<apparelRequired>
 		   <li>guy762_BlackSunSoldierHelmet</li>

@@ -28,10 +28,14 @@
 		<IncomingDamageFactor>-0.05</IncomingDamageFactor>
 		<VacuumSpeedMultiplier MayRequire="kentington.saveourship2">2</VacuumSpeedMultiplier>
 		<DecompressionResistance MayRequire="kentington.saveourship2">0.125</DecompressionResistance>
+		
+		<PilotingAbility MayRequire="Ludeon.RimWorld.Odyssey">0.2</PilotingAbility>
 	</equippedStatOffsets>
+	
 	<apparel>
 	  <tags Inherit="False">
 		<li>RemnantEmpire_TIEpilot</li>
+		<li>SWGCWSpecificApparelItem_ImperialTIEPilotArmor</li>
 	  </tags>
 	  <wornGraphicPath>Apparel/TIEPilot/Apparel</wornGraphicPath>
 	  <useWornGraphicMask>true</useWornGraphicMask>
@@ -97,6 +101,7 @@
 		  <tags Inherit="False">
 			<li>RemnantEmpire_navytrooper</li>
 			<li>RemnantEmpire_lgtcombatarmor</li>
+			<li>SWGCWSpecificApparelItem_ImperialLightCombatArmor</li>
 		  </tags>
 		  <wornGraphicPath>Apparel/ImperialNavyTrooper/Apparel</wornGraphicPath>
 		  <layers Inherit="False">
@@ -151,6 +156,7 @@
 			<li>IndependentWarlord_armytrooper</li>
 			<li>IndependentWarlord_lgtcombatarmor</li>
 			<li>NewRepublic_rebeltrooper</li>
+			<li>SWGCWSpecificApparelItem_RustyImperialLightCombatArmor</li>
 		  </tags>
 		  <wornGraphicPath>Apparel/ImperialNavyTrooper/Apparel</wornGraphicPath>
 		  <useWornGraphicMask>true</useWornGraphicMask>
@@ -211,6 +217,7 @@
 		<apparel Inherit="False">
 			<tags>
 				<li>RemnantEmpire_navytrooper</li>
+				<li>SWGCWSpecificApparelItem_ImperialNavyTrooperHelmet</li>
 			</tags>
 			<wornGraphicPath>Apparel/ImperialNavyTrooper/helmet</wornGraphicPath>
 			<useWornGraphicMask>true</useWornGraphicMask>
@@ -286,11 +293,13 @@
 			<ToxicEnvironmentResistance>1</ToxicEnvironmentResistance>
 			<HypoxiaResistance MayRequire="kentington.saveourship2">1</HypoxiaResistance>
 			<DecompressionResistance MayRequire="kentington.saveourship2">0.25</DecompressionResistance>
+			<VacuumResistance MayRequire="Ludeon.RimWorld.Odyssey">0.69</VacuumResistance>
 		</equippedStatOffsets>
 		
 		<apparel Inherit="False">
 			<tags>
 				<li>GreaterMaldrood_navycommando</li>
+				<li>SWGCWSpecificApparelItem_ImperialNavyCommandoHelmet</li>
 			</tags>
 			<wornGraphicPath>Apparel/ImpNavyCommando/helmet</wornGraphicPath>
 			<useWornGraphicMask>true</useWornGraphicMask>
@@ -358,6 +367,7 @@
 		<apparel>
 		  <tags Inherit="False">
 			<li>GreaterMaldrood_navycommando</li>
+			<li>SWGCWSpecificApparelItem_ImperialNavyCommandoArmor</li>
 		  </tags>
 		  <wornGraphicPath>Apparel/ImpNavyCommando/Apparel</wornGraphicPath>
 		  <useWornGraphicMask>true</useWornGraphicMask>
@@ -470,11 +480,15 @@
 			<ToxicEnvironmentResistance>1</ToxicEnvironmentResistance>
 			<HypoxiaResistance MayRequire="kentington.saveourship2">1</HypoxiaResistance>
 			<DecompressionResistance MayRequire="kentington.saveourship2">0.25</DecompressionResistance>
+			<VacuumResistance MayRequire="Ludeon.RimWorld.Odyssey">0.69</VacuumResistance>
+			
+			<PilotingAbility MayRequire="Ludeon.RimWorld.Odyssey">0.5</PilotingAbility>
 		</equippedStatOffsets>
 		
 		<apparel Inherit="False">
 			<tags>
 				<li>RemnantEmpire_TIEpilot</li>
+				<li>SWGCWSpecificApparelItem_ImperialTIEPilotHelmet</li>
 			</tags>
 			<wornGraphicPath>Apparel/TIEPilot/helmet</wornGraphicPath>
 			<useWornGraphicMask>true</useWornGraphicMask>
@@ -536,11 +550,15 @@
 			<ToxicEnvironmentResistance>1</ToxicEnvironmentResistance>
 			<HypoxiaResistance MayRequire="kentington.saveourship2">1</HypoxiaResistance>
 			<DecompressionResistance MayRequire="kentington.saveourship2">0.25</DecompressionResistance>
+			<VacuumResistance MayRequire="Ludeon.RimWorld.Odyssey">0.69</VacuumResistance>
+			
+			<PilotingAbility MayRequire="Ludeon.RimWorld.Odyssey">0.5</PilotingAbility>
 		</equippedStatOffsets>
 		
 		<apparel Inherit="False">
 			<tags>
 				<li>PentastarAlignment_TIEpilot</li>
+				<li>SWGCWSpecificApparelItem_PentastarTIEPilotHelmet</li>
 			</tags>
 			<wornGraphicPath>Apparel/TIEPilot/PentastarHelmet/helmet</wornGraphicPath>
 			<useWornGraphicMask>true</useWornGraphicMask>
@@ -603,6 +621,7 @@
 		<apparel>
 		  <tags Inherit="False">
 			<li>RemnantEmpire_TIEpilot</li>
+			<li>SWGCWSpecificApparelItem_ImperialTIEPilotBodysuit</li>
 		  </tags>
 		  <wornGraphicPath>Apparel/ImperialCrew/Apparel</wornGraphicPath>
 		  <useWornGraphicMask>true</useWornGraphicMask>
@@ -677,7 +696,11 @@
 			<ToxicEnvironmentResistance>1</ToxicEnvironmentResistance>
 			<HypoxiaResistance MayRequire="kentington.saveourship2">1</HypoxiaResistance>
 			<DecompressionResistance MayRequire="kentington.saveourship2">0.25</DecompressionResistance>
+			<VacuumResistance MayRequire="Ludeon.RimWorld.Odyssey">0.69</VacuumResistance>
+			
 			<SocialImpact>0.5</SocialImpact>
+
+			<PilotingAbility MayRequire="Ludeon.RimWorld.Odyssey">0.5</PilotingAbility>
 		</equippedStatOffsets>
 		
 		<randomStyleChance>1</randomStyleChance>
@@ -699,6 +722,7 @@
 		<apparel Inherit="False">
 			<tags>
 				<li>RemnantEmpire_TIEpilotAce</li>
+				<li>SWGCWSpecificApparelItem_AceImperialTIEPilotHelmet</li>
 			</tags>
 			<wornGraphicPath>Apparel/TIEPilot/AceHelmet/helmet</wornGraphicPath>
 			<useWornGraphicMask>true</useWornGraphicMask>
@@ -815,6 +839,7 @@
 		<apparel>
 		  <tags Inherit="False">
 			<li>RemnantEmpire_TIEpilotAce</li>
+			<li>SWGCWSpecificApparelItem_AceImperialTIEPilotBodysuit</li>
 		  </tags>
 		  <wornGraphicPath>Apparel/ImperialEngineer/Apparel</wornGraphicPath>
 		  <useWornGraphicMask>true</useWornGraphicMask>

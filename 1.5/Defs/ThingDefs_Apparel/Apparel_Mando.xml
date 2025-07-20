@@ -33,6 +33,7 @@
 			<ToxicEnvironmentResistance>0.5</ToxicEnvironmentResistance>
 			<HypoxiaResistance MayRequire="kentington.saveourship2">1</HypoxiaResistance>
 			<DecompressionResistance MayRequire="kentington.saveourship2">0.25</DecompressionResistance>
+			<VacuumResistance MayRequire="Ludeon.RimWorld.Odyssey">0.69</VacuumResistance>
 		</equippedStatOffsets>
 		
 		<recipeMaker>
@@ -58,10 +59,7 @@
 			<countsAsClothingForNudity>false</countsAsClothingForNudity>
 			<!--immuneToToxGasExposure>true</immuneToToxGasExposure-->
 			<tags>
-				<li>MNC_outfit_supercom</li>
-				<li>MNC_outfit_mandalore</li>
-				<li>MNC_helmet_hood</li>
-				<!--li>EVA</li-->
+				<li>SWGCWSpecificApparelItem_NoRangefinderMandoHelmet</li>
 			</tags>
 			<wornGraphicPath>Apparel/Mandalorian/helmet_norangefinder/helmet</wornGraphicPath>
 			<useWornGraphicMask>true</useWornGraphicMask>
@@ -165,6 +163,7 @@
 			<ToxicEnvironmentResistance>0.5</ToxicEnvironmentResistance>
 			<HypoxiaResistance MayRequire="kentington.saveourship2">1</HypoxiaResistance>
 			<DecompressionResistance MayRequire="kentington.saveourship2">0.25</DecompressionResistance>
+			<VacuumResistance MayRequire="Ludeon.RimWorld.Odyssey">0.69</VacuumResistance>
 		</equippedStatOffsets>
 		
 		<recipeMaker>
@@ -190,10 +189,7 @@
 			<countsAsClothingForNudity>false</countsAsClothingForNudity>
 			<!--immuneToToxGasExposure>true</immuneToToxGasExposure-->
 			<tags>
-				<li>MNC_outfit_supercom</li>
-				<li>MNC_outfit_mandalore</li>
-				<li>MNC_helmet_hood</li>
-				<!--li>EVA</li-->
+				<li>SWGCWSpecificApparelItem_RangefinderMandoHelmet</li>
 			</tags>
 			<wornGraphicPath>Apparel/Mandalorian/helmet/helmet</wornGraphicPath>
 			<useWornGraphicMask>true</useWornGraphicMask>
@@ -332,10 +328,8 @@
 		</thingSetMakerTags>
 		<apparel Inherit="False">
 			<tags>
-				<li>SaV_outfit_elite</li>
-				<li>MNC_outfit_mid</li>
-				<li>MNCFactionArmor</li>
-				<li>KotORRoyaltyTag_AnyMandoArmor</li>
+				<li>SWGCWSpecificApparelItem_MandoArmor</li>
+				<!-- <li>KotORRoyaltyTag_AnyMandoArmor</li> -->
 			</tags>
 			<wornGraphicPath>Apparel/Mandalorian/Apparel</wornGraphicPath>
 			<useWornGraphicMask>true</useWornGraphicMask>
@@ -463,7 +457,7 @@
 		</descriptionHyperlinks>
 		<apparel>
 		  <tags>
-			<li>MNC_jetpack_mid</li>
+			<li>SWGCWSpecificGadgetItem_Z6Jetpack</li>
 		  </tags>
 		  <wornGraphicPath>Apparel/Mandalorian/Z6jetpack/Z6jetpack</wornGraphicPath>
 		  <useWornGraphicMask>true</useWornGraphicMask>

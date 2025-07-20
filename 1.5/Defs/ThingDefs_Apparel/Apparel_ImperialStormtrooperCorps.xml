@@ -52,6 +52,7 @@
 		<apparel Inherit="False">
 			<tags>
 				<li>RemnantEmpire_stormiearmor</li>
+				<li>SWGCWSpecificApparelItem_ImperialStormtrooperArmor</li>
 			</tags>
 			<wornGraphicPath>Apparel/Stormtrooper/Apparel</wornGraphicPath>
 			<useWornGraphicMask>false</useWornGraphicMask>
@@ -159,11 +160,13 @@
 			<ToxicEnvironmentResistance>1</ToxicEnvironmentResistance>
 			<HypoxiaResistance MayRequire="kentington.saveourship2">1</HypoxiaResistance>
 			<DecompressionResistance MayRequire="kentington.saveourship2">0.25</DecompressionResistance>
+			<VacuumResistance MayRequire="Ludeon.RimWorld.Odyssey">0.69</VacuumResistance>
 		</equippedStatOffsets>
 		
 		<apparel Inherit="False">
 			<tags>
 				<li>RemnantEmpire_stormiearmor</li>
+				<li>SWGCWSpecificApparelItem_ImperialStormtrooperHelmet</li>
 			</tags>
 			<wornGraphicPath>Apparel/Stormtrooper/helmet</wornGraphicPath>
 			<useWornGraphicMask>true</useWornGraphicMask>
@@ -239,6 +242,7 @@
 			</bodyPartGroups>
 			<tags Inherit="False">
 				<li>RemnantEmpire_stormieofficer</li>
+				<li>SWGCWSpecificApparelItem_ImperialStormtrooperPauldron</li>
 			</tags>
 			<wornGraphicPath>Apparel/pauldron/Apparel</wornGraphicPath>
 			<useWornGraphicMask>true</useWornGraphicMask>
@@ -315,6 +319,7 @@
 			</bodyPartGroups>
 			<tags Inherit="False">
 				<li>ThrawnEmpire_stormieofficer</li>
+				<li>SWGCWSpecificApparelItem_ThrawnImperialStormtrooperPauldron</li>
 			</tags>
 			<wornGraphicPath>Apparel/pauldron/7thFleet/Apparel</wornGraphicPath>
 			<useWornGraphicMask>true</useWornGraphicMask>
@@ -404,6 +409,7 @@
 		<apparel Inherit="False">
 			<tags>
 				<li>RemnantEmpire_shadowtrooper</li>
+				<li>SWGCWSpecificApparelItem_ShadowImperialStormtrooperArmor</li>
 			</tags>
 			<wornGraphicPath>Apparel/Stormtrooper/shadowstormie/Apparel</wornGraphicPath>
 			<useWornGraphicMask>true</useWornGraphicMask>
@@ -517,11 +523,13 @@
 			<ToxicEnvironmentResistance>1</ToxicEnvironmentResistance>
 			<HypoxiaResistance MayRequire="kentington.saveourship2">1</HypoxiaResistance>
 			<DecompressionResistance MayRequire="kentington.saveourship2">0.25</DecompressionResistance>
+			<VacuumResistance MayRequire="Ludeon.RimWorld.Odyssey">0.69</VacuumResistance>
 		</equippedStatOffsets>
 		
 		<apparel Inherit="False">
 			<tags>
 				<li>RemnantEmpire_shadowtrooper</li>
+				<li>SWGCWSpecificApparelItem_ShadowImperialStormtrooperHelmet</li>
 			</tags>
 			<wornGraphicPath>Apparel/Stormtrooper/shadowstormie/helmet</wornGraphicPath>
 			<useWornGraphicMask>true</useWornGraphicMask>
@@ -638,6 +646,7 @@
 		<apparel Inherit="False">
 			<tags>
 				<li>RemnantEmpire_scouttrooper</li>
+				<li>SWGCWSpecificApparelItem_ImperialScoutTrooperHelmet</li>
 			</tags>
 			<wornGraphicPath>Apparel_Zaahir/ScoutTrooper/helmet</wornGraphicPath>
 			<useWornGraphicMask>true</useWornGraphicMask>
@@ -708,6 +717,7 @@
 		<apparel Inherit="False">
 			<tags>
 				<li>RemnantEmpire_scouttrooper</li>
+				<li>SWGCWSpecificApparelItem_ImperialScoutTrooperArmor</li>
 			</tags>
 			<wornGraphicPath>Apparel/ScoutTrooper/Apparel</wornGraphicPath>
 			<useWornGraphicMask>true</useWornGraphicMask>
@@ -824,11 +834,13 @@
 			<ToxicEnvironmentResistance>1</ToxicEnvironmentResistance>
 			<HypoxiaResistance MayRequire="kentington.saveourship2">1</HypoxiaResistance>
 			<DecompressionResistance MayRequire="kentington.saveourship2">0.25</DecompressionResistance>
+			<VacuumResistance MayRequire="Ludeon.RimWorld.Odyssey">0.69</VacuumResistance>
 		</equippedStatOffsets>
 		
 		<apparel Inherit="False">
 			<tags>
 				<li>RemnantEmpire_stormcommando</li>
+				<li>SWGCWSpecificApparelItem_ImperialStormCommandoHelmet</li>
 			</tags>
 			<wornGraphicPath>Apparel_Zaahir/ScoutTrooper/helmet</wornGraphicPath>
 			<useWornGraphicMask>true</useWornGraphicMask>
@@ -933,6 +945,7 @@
 		<apparel Inherit="False">
 			<tags>
 				<li>RemnantEmpire_stormcommando</li>
+				<li>SWGCWSpecificApparelItem_ImperialStormCommandoArmor</li>
 			</tags>
 			<wornGraphicPath>Apparel/ScoutTrooper/Apparel</wornGraphicPath>
 			<useWornGraphicMask>true</useWornGraphicMask>

@@ -73,6 +73,9 @@
 		  <li>KotOREquipment_basic</li>
 		  <li>KotORUtility_weakgrenade</li>
 		  <li>ZannConsortium_DisruptorMerc</li>
+		  <li>SWGCWSpecificApparelItem_ZannConsortiumMercHelmet</li>
+		  <li>SWGCWSpecificApparelItem_ZannConsortiumMercArmor</li>
+		  <li>SWCPSpecificApparelItem_RusticClothing</li>
 		</apparelTags>
 		<apparelRequired>
 		   <li>guy762_ZannBattleHelmet</li>
@@ -200,6 +203,9 @@
 		  <li>KotORStealthBelt_adv</li>
 		  <li>KotORUtility_stronggrenade</li>
 		  <li>ZannConsortium_defiler</li>
+		  <li>SWGCWSpecificApparelItem_ZannConsortiumDefilerHelmet</li>
+		  <li>SWGCWSpecificApparelItem_ZannConsortiumDefilerArmor</li>
+		  <li>SWCPSpecificApparelItem_DoubleBandolier</li>
 		</apparelTags>
 		<apparelRequired>
 		   <li>guy762_Accessory_bandolierA</li>

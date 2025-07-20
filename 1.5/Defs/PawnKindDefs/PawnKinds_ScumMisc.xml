@@ -20,6 +20,9 @@
 		<apparelAllowHeadgearChance>1</apparelAllowHeadgearChance>
 		<apparelTags>
 			<li>ScumAndVillainy_pilot</li>
+			<li>SWCPSpecificApparelItem_RebelFlightSuitBox</li>
+			<li>SWCPSpecificApparelItem_FlightVest</li>
+			<li>SWCPSpecificApparelItem_DyeableFatigues</li>
 		</apparelTags>
 		<apparelRequired>
 			<li>guy762_RebelPilot_suitbox</li>
@@ -123,6 +126,9 @@
 			<li>KotORUtility_weakgrenade</li>
 			<li>KotORUtility_utilitygrenade</li>
 			<li>SWWarlordsAccessory_scumtrooper_poncho</li>
+			<li>SWGCWSpecificApparelItem_NoRangefinderMandoHelmet</li>
+			<li>SWGCWSpecificApparelItem_MandoArmor</li>
+			<li>SWCPSpecificApparelItem_DyeableFatigues</li>
 		</apparelTags>
 		<apparelRequired Inherit="False">
 			<li>guy762_MandoGCWHelmet</li>
@@ -237,6 +243,10 @@
 		<apparelTags>
 			<li>KotORUtility_utilitygrenade</li>
 			<li>KotORWristgun</li>
+			<li>SWGCWSpecificGadgetItem_Z6Jetpack</li>
+			<li>SWGCWSpecificApparelItem_RangefinderMandoHelmet</li>
+			<li>SWGCWSpecificApparelItem_MandoArmor</li>
+			<li>SWCPSpecificApparelItem_DyeableFatigues</li>
 		</apparelTags>
 		<apparelRequired Inherit="False">
 			<li>guy762_Jetpack_Z6launcher</li>
@@ -397,6 +407,7 @@
 			<li>IndependentWarlord_armytrooper</li>
 			<li>KotORHeadband_bandana</li>
 			<li>KotORAccessory_trooper_strapsonly</li>
+			<li>SWCPSpecificApparelItem_GenericUniform</li>
 		</apparelTags>
 		<apparelRequired>
 			<li>guy762_GenericUniform_fatigues</li>

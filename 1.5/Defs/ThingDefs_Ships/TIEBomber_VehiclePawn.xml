@@ -89,6 +89,11 @@
 						<li>TIEBomberKey_gun_2</li>
 					</turretIds>
 				</li>
+				<li>
+					<key>copilot</key>
+					<label>Copilot</label>
+					<slots>1</slots>
+				</li>
 			</roles>
 		</properties>
 		

@@ -23,6 +23,7 @@
 		<apparelMoney>49999</apparelMoney>
 		<apparelTags>
 		  <li>KotORHeroAccessories_visas</li>
+		  <li>SWCPSpecificGadgetItem_CortosisArmband</li>
 		</apparelTags>
 		<apparelRequired>
 		   <li>Apparel_Cape</li>

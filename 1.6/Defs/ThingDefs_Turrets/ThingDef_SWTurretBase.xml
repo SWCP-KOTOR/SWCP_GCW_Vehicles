@@ -1,0 +1,278 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<ThingDef Name="guy762_TurretBase" ParentName="BuildingBase" Abstract="True">
+		<thingClass>Building_TurretGun</thingClass>
+		<drawerType>MapMeshAndRealTime</drawerType>
+		
+		<minifiedDef>MinifiedThing</minifiedDef>
+		<altitudeLayer>Building</altitudeLayer>
+		
+		<stealable>false</stealable>
+		<size>(2,2)</size>
+		<passability>PassThroughOnly</passability>
+		<pathCost>50</pathCost>
+		<thingCategories>
+		  <li>BuildingsSecurity</li>
+		</thingCategories>
+		<tickerType>Normal</tickerType>
+		<terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+		
+		<soundInteract>kotorsound_select_shipgun</soundInteract>
+		
+		
+		<comps>
+		  <li Class="CompProperties_Forbiddable"/>
+		  <li Class="CompProperties_Stunnable">
+			<affectedDamageDefs>
+			  <li>EMP</li>
+			</affectedDamageDefs>
+		  </li>
+		</comps>
+		<statBases>
+		  <MaxHitPoints>180</MaxHitPoints>
+		  <Flammability>0.7</Flammability>
+		  <WorkToBuild>2000</WorkToBuild>
+		  <Mass>30</Mass>
+		  <Beauty>-20</Beauty>
+		</statBases>
+		<building>
+		  <turretBurstWarmupTime>4.0</turretBurstWarmupTime>
+		  <turretBurstCooldownTime>28.0</turretBurstCooldownTime>
+		  
+		  <ai_combatDangerous>true</ai_combatDangerous>
+		  <turretTopDrawSize>2.7</turretTopDrawSize>
+		  <turretTopOffset>(0, 0.05)</turretTopOffset>
+		</building>
+		<placeWorkers>
+		  <li>PlaceWorker_NotUnderRoof</li>
+		  <li>PlaceWorker_TurretTop</li>
+		  <li>PlaceWorker_PreventInteractionSpotOverlap</li>
+		</placeWorkers>
+		
+		<designationCategory>KOTOR_BuildTab</designationCategory>
+		<constructionSkillPrerequisite>5</constructionSkillPrerequisite>
+		<researchPrerequisites>
+		  <li>Mortars</li>
+		</researchPrerequisites>
+		
+		
+		
+		<damageMultipliers>
+			<li>
+				<damageDef>guy762_RangedDamage_ion</damageDef>
+				<multiplier>2</multiplier>
+			</li>
+			<li>
+				<damageDef>guy762_ExplosiveDamage_ion</damageDef>
+				<multiplier>2</multiplier>
+			</li>
+			<li>
+				<damageDef>guy762_GrenadeDamage_ion</damageDef>
+				<multiplier>2</multiplier>
+			</li>
+			<li>
+				<damageDef>guy762_MeleeDamage_ion</damageDef>
+				<multiplier>2</multiplier>
+			</li>
+			
+			
+			
+			
+			<li>
+				<damageDef>Bomb</damageDef>
+				<multiplier>0.1</multiplier>
+			</li>
+			<li>
+				<damageDef>guy762_GrenadeDamage_frag</damageDef>
+				<multiplier>0.1</multiplier>
+			</li>
+			<li>
+				<damageDef>guy762_ExplosiveDamage_conc</damageDef>
+				<multiplier>0.1</multiplier>
+			</li>
+			<li>
+				<damageDef>guy762_GrenadeDamage_thermaldet</damageDef>
+				<multiplier>4</multiplier>
+			</li>
+			
+			
+			
+			
+			<li>
+				<damageDef>guy762_RangedDamage_AntiVehicleEnergy</damageDef>
+				<multiplier>1</multiplier>
+			</li>
+			<li>
+				<damageDef>guy762_ExplosiveDamage_AntiVehicleEnergy</damageDef>
+				<multiplier>1</multiplier>
+			</li>
+			
+			
+			<li>
+				<damageDef>guy762_RangedDamage_energy</damageDef>
+				<multiplier>0.01</multiplier>
+			</li>
+			<li>
+				<damageDef>guy762_BeamDamage_energy</damageDef>
+				<multiplier>0.01</multiplier>
+			</li>
+			<li>
+				<damageDef>guy762_ExplosiveDamage_energy</damageDef>
+				<multiplier>0.1</multiplier>
+			</li>
+			
+			
+			
+			<li>
+				<damageDef>guy762_RangedDamage_electrical</damageDef>
+				<multiplier>0.01</multiplier>
+			</li>
+			<li>
+				<damageDef>guy762_MeleeDamage_electrical</damageDef>
+				<multiplier>0.01</multiplier>
+			</li>
+			<li>
+				<damageDef>guy762_BeamDamage_electrical</damageDef>
+				<multiplier>0.01</multiplier>
+			</li>
+			
+			
+			
+			
+			<li>
+				<damageDef>guy762_RangedDamage_sonic</damageDef>
+				<multiplier>0.01</multiplier>
+			</li>
+			<li>
+				<damageDef>guy762_MeleeDamage_sonic</damageDef>
+				<multiplier>0.01</multiplier>
+			</li>
+			<li>
+				<damageDef>guy762_GrenadeDamage_sonic</damageDef>
+				<multiplier>0.01</multiplier>
+			</li>
+			<li>
+				<damageDef>Thump</damageDef>
+				<multiplier>0.01</multiplier>
+			</li>
+			
+			
+			
+			
+			<li>
+				<damageDef>Flame</damageDef>
+				<multiplier>0.01</multiplier>
+			</li>
+			<li>
+				<damageDef>Burn</damageDef>
+				<multiplier>0.01</multiplier>
+			</li>
+			<!-- <li> -->
+				<!-- <damageDef>guy762_GrenadeDamage_plasma</damageDef> -->
+				<!-- <multiplier>0.01</multiplier> -->
+			<!-- </li> -->
+			<li>
+				<damageDef>guy762_BeamDamage_radiation</damageDef>
+				<multiplier>0.01</multiplier>
+			</li>
+			<li>
+				<damageDef>Frostbite</damageDef>
+				<multiplier>0.01</multiplier>
+			</li>
+			
+			
+			
+			<li>
+				<damageDef>Cut</damageDef>
+				<multiplier>0.01</multiplier>
+			</li>
+			<li>
+				<damageDef>Crush</damageDef>
+				<multiplier>0.01</multiplier>
+			</li>
+			<li>
+				<damageDef>Blunt</damageDef>
+				<multiplier>0.01</multiplier>
+			</li>
+			<li MayRequire="lee.theforce.lightsaber">
+				<damageDef>Force_BluntLightsaber</damageDef>
+				<multiplier>0.01</multiplier>
+			</li>
+			<li>
+				<damageDef>Poke</damageDef>
+				<multiplier>0.01</multiplier>
+			</li>
+			<li>
+				<damageDef>Stab</damageDef>
+				<multiplier>0.01</multiplier>
+			</li>
+			<li>
+				<damageDef>Scratch</damageDef>
+				<multiplier>0.01</multiplier>
+			</li>
+			<li>
+				<damageDef>ScratchToxic</damageDef>
+				<multiplier>0.01</multiplier>
+			</li>
+			<li>
+				<damageDef>Bite</damageDef>
+				<multiplier>0.01</multiplier>
+			</li>
+			<li>
+				<damageDef>ToxicBite</damageDef>
+				<multiplier>0.01</multiplier>
+			</li>
+			<li>
+				<damageDef>RangedStab</damageDef>
+				<multiplier>0.01</multiplier>
+			</li>
+			<li>
+				<damageDef>Bullet</damageDef>
+				<multiplier>0.01</multiplier>
+			</li>
+			<li>
+				<damageDef>Arrow</damageDef>
+				<multiplier>0.01</multiplier>
+			</li>
+			
+			
+			
+			<li>
+				<damageDef>ArrowHighVelocity</damageDef>
+				<multiplier>0.1</multiplier>
+			</li>
+			<li>
+				<damageDef>TornadoScratch</damageDef>
+				<multiplier>0.1</multiplier>
+			</li>
+			
+			
+			
+			
+			
+			
+			  <li>
+				<damageDef>guy762_RangedDamage_KOstun</damageDef>
+				<multiplier>0</multiplier>
+			  </li>
+			  <li>
+				<damageDef>guy762_GrenadeDamage_stun</damageDef>
+				<multiplier>0</multiplier>
+			  </li>
+			  <li>
+				<damageDef>guy762_PoisonDamage_saber</damageDef>
+				<multiplier>0</multiplier>
+			  </li>
+			  <li>
+				<damageDef>guy762_RangedDamage_kolto</damageDef>
+				<multiplier>0</multiplier>
+			  </li>
+		</damageMultipliers>
+	  
+	  
+	</ThingDef>
+
+
+
+</Defs>

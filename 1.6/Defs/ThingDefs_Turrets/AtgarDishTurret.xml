@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+
+  
+
+  <!--=============== Atgar P-Tower anti-vehicle turret ===============-->
+
+  <ThingDef ParentName="guy762_TurretBase">
+    <defName>guy762_SWTurret_AtgarDish</defName>
+    <label>Atgar P-Tower anti-vehicle turret</label>
+    <description>.</description>
+	<graphicData>
+      <graphicClass>Graphic_Single</graphicClass>
+      <texPath>Turrets/DishTurret_base</texPath>
+      <drawSize>(2,2)</drawSize>
+      <damageData>
+        <rect>(0.38,0.2,0.56375,0.8)</rect>
+        <cornerTL>Damage/Corner</cornerTL>
+      </damageData>
+      <shadowData>
+        <offset>(-0.13,-0.87,-0.1)</offset>
+        <volume>(0.5,0.4,1.05)</volume>
+      </shadowData>
+    </graphicData>
+    <uiIconPath>Turrets/DishTurret</uiIconPath>
+
+	
+    <statBases>
+      <MaxHitPoints>250</MaxHitPoints>
+	  
+	  <ShootingAccuracyTurret>0.98</ShootingAccuracyTurret> <!-- like level 14 human shooter -->
+    </statBases>
+	
+	
+	
+    <costList>
+      <Steel>300</Steel>
+      <Plasteel>30</Plasteel>
+      <Uranium>60</Uranium>
+      <ComponentIndustrial>6</ComponentIndustrial>
+    </costList>
+	
+	<fillPercent>0.8</fillPercent>
+	<hasInteractionCell>True</hasInteractionCell>
+	<interactionCellOffset>(1,0,2)</interactionCellOffset>
+	
+	<soundInteract>kotorsound_select_shipgun</soundInteract>
+    <comps>
+      <li Class="CompProperties_Mannable">
+        <manWorkType>Violent</manWorkType>
+      </li>
+	  
+	  <li Class="CompProperties_Explosive">
+        <wickTicks>240</wickTicks>
+        <explosiveRadius>3</explosiveRadius>
+        <explosiveDamageType>Bomb</explosiveDamageType>
+        <chanceNeverExplodeFromDamage>0.5</chanceNeverExplodeFromDamage>
+      </li>
+      <li Class="CompProperties_Forbiddable"/>
+      <li Class="CompProperties_Power">
+        <compClass>CompPowerTrader</compClass>
+        <basePowerConsumption>150</basePowerConsumption>
+      </li>
+      <li Class="CompProperties_Flickable"/>
+      <li Class="CompProperties_Breakdownable"/>
+      <!-- <li Class="CompProperties_Refuelable"> -->
+        <!-- <fuelLabel>Shots until rearm</fuelLabel> -->
+        <!-- <fuelGizmoLabel>Uranium slugs</fuelGizmoLabel> -->
+        <!-- <outOfFuelMessage>No slugs</outOfFuelMessage> -->
+        <!-- <fuelFilter><thingDefs><li>Uranium</li></thingDefs></fuelFilter> -->
+        <!-- <fuelCapacity>30</fuelCapacity>       20 bursts -->
+        <!-- <fuelMultiplier>0.5</fuelMultiplier> 2 uranium per shot, 60 per full rearm -->
+        <!-- <initialFuelPercent>1</initialFuelPercent> -->
+        <!-- <autoRefuelPercent>0.5</autoRefuelPercent> -->
+        <!-- <showFuelGizmo>true</showFuelGizmo> -->
+        <!-- <minimumFueledThreshold>1</minimumFueledThreshold> -->
+        <!-- <factorByDifficulty>true</factorByDifficulty> -->
+        <!-- <consumeFuelOnlyWhenUsed>true</consumeFuelOnlyWhenUsed> -->
+        <!-- <fuelIconPath>UI/Overlays/Barrel</fuelIconPath> -->
+      <!-- </li> -->
+    </comps>
+    <building>
+      <turretGunDef>guy762_SWTurretGun_AtgarDish</turretGunDef>
+      <turretBurstCooldownTime>2.5</turretBurstCooldownTime>
+    </building>
+    <researchPrerequisites>
+      <li>SniperTurret</li>
+    </researchPrerequisites>
+  </ThingDef>
+
+
+
+
+
+
+
+
+  <ThingDef ParentName="BaseWeaponTurret">
+    <defName>guy762_SWTurretGun_AtgarDish</defName>
+    <label>Atgar P-Tower anti-vehicle turret</label>
+    <description>.</description>
+    <graphicData>
+      <texPath>Turrets/DishTurret</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+	  <drawSize>(2,2)</drawSize>
+    </graphicData>
+    <statBases>
+      <AccuracyTouch>0.30</AccuracyTouch>
+      <AccuracyShort>0.40</AccuracyShort>
+      <AccuracyMedium>0.80</AccuracyMedium>
+      <AccuracyLong>0.90</AccuracyLong>
+      <RangedWeapon_Cooldown>2.5</RangedWeapon_Cooldown>
+      <DeteriorationRate>0</DeteriorationRate>
+      <Mass>200</Mass>
+      <Flammability>0</Flammability>
+    </statBases>
+    <verbs>
+      <li>
+        <verbClass>Verb_Shoot</verbClass>
+        <defaultProjectile>SWFixedTurretBullet_AVred</defaultProjectile>
+        <warmupTime>2.5</warmupTime>
+        <minRange>5</minRange>
+        <range>60</range>
+        <burstShotCount>1</burstShotCount>
+        <soundCast>kotorsound_RebelBlaster_heavy_louder</soundCast>
+        <soundCastTail>GunTail_Heavy</soundCastTail>
+        <muzzleFlashScale>18</muzzleFlashScale>
+        <!-- <consumeFuelPerShot>1</consumeFuelPerShot> -->
+		<forcedMissRadius>0</forcedMissRadius>
+		<ai_AvoidFriendlyFireRadius>3</ai_AvoidFriendlyFireRadius>
+		<targetParams>
+			<canTargetLocations>true</canTargetLocations>
+		</targetParams>
+      </li>
+    </verbs>
+	<modExtensions>
+	  <li Class="IgnoreConfigErrors.Ignore_ForcedMissRadius" />
+	</modExtensions>
+  </ThingDef>
+
+ 
+
+</Defs>

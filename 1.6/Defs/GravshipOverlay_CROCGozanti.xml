@@ -2,14 +2,19 @@
 <Defs>
 	
 	
-	<ThingDef ParentName="BuildingBase" Abstract="True" Name="CEC_ShipPartBase">
+	<ThingDef ParentName="GravshipComponentBase" Abstract="True" Name="CEC_ShipPartBase">
 		<thingClass>Building</thingClass>
 		<description>.</description>
+		
+		
 		<graphicData>
 		  <damageData>
 			<enabled>false</enabled>
 		  </damageData>
 		</graphicData>
+		<drawerType>RealtimeOnly</drawerType>
+		
+		
 		<altitudeLayer>Filth</altitudeLayer>
 		<rotatable>true</rotatable>
 		<destroyable>true</destroyable>
@@ -53,7 +58,17 @@
 		<tradeTags>
 		  <li>CEC_OrbitalTrader_Tag</li>
 		</tradeTags>
+		
+		<comps>
+            <li Class="SWCP.Core.ThingComps.CompProperties_HideShipRoof">
+				<layer>225</layer> <!-- subtractive from the below terrain layer -->
+				<!-- cutoff is somewhere between 500 and 425? this is somehow tied to camera zoom distance, so depending on what distance you're scrolled in at the ship will either appear or disappear according to what layer it's set at, 500-425 is at close Camera+ zoom range -->
+			</li>
+        </comps>
 	</ThingDef>
+	
+	
+
   
 
   
@@ -64,8 +79,14 @@
 		  <texPath>Gravships/CROCGozanti/CROCGozanti</texPath>
 		  <graphicClass>Graphic_Single</graphicClass>
 		  <drawSize>(77,77)</drawSize>
+		  
+		  <shaderType>CutoutComplex</shaderType>
+		  <color>(160,35,35)</color> <!-- deeper red -->
+		  <colorTwo>(170,160,135)</colorTwo> <!-- stanky beige -->
 		</graphicData>
-		<size>(25,75)</size>
+		<size>(1,1)</size>
+		<!-- <size>(25,75)</size> -->
+		<uiIconScale>0.025</uiIconScale>
 		<costList>
 		  <KOTOR_AlloyDurasteel>56</KOTOR_AlloyDurasteel>
 		  <ComponentSpacer>1</ComponentSpacer>
@@ -76,7 +97,47 @@
 		</statBases>
 		
 		<!-- <altitudeLayer>WorldClipper</altitudeLayer> -->
-		<altitudeLayer>BelowTerrain</altitudeLayer>
+		<altitudeLayer>VisEffects</altitudeLayer>
+		<!-- <altitudeLayer>BelowTerrain</altitudeLayer> -->
+		
+		<researchPrerequisites>
+		  <!-- <li>CEC_KDY_Victory_Parts</li> -->
+		</researchPrerequisites>
+	</ThingDef>
+	
+	
+	
+	
+	
+	<ThingDef ParentName="CEC_ShipPartBase">
+		<defName>guy762_SWGravship_YT1300freighter</defName>
+		<label>YT-1300 light freighter</label>
+		<graphicData>
+		  <texPath>Gravships/YT1300/YT1300</texPath>
+		  <graphicClass>Graphic_Single</graphicClass>
+		  <drawSize>(38,38)</drawSize>
+		  
+		  <drawOffset>(0.25,0,-0.12)</drawOffset>
+		  
+		  <shaderType>CutoutComplex</shaderType>
+		  <color>(45,65,125)</color> <!-- lando's blue -->
+		  <colorTwo>(225,225,225)</colorTwo> <!-- lesser white -->
+		</graphicData>
+		<size>(1,1)</size>
+		<!-- <size>(25,37)</size> -->
+		<uiIconScale>0.04</uiIconScale>
+		<costList>
+		  <KOTOR_AlloyDurasteel>56</KOTOR_AlloyDurasteel>
+		  <ComponentSpacer>1</ComponentSpacer>
+		</costList>
+		<statBases>
+		  <MaxHitPoints>11200</MaxHitPoints>
+		  <WorkToBuild>44800</WorkToBuild>
+		</statBases>
+		
+		<!-- <altitudeLayer>WorldClipper</altitudeLayer> -->
+		<altitudeLayer>VisEffects</altitudeLayer>
+		<!-- <altitudeLayer>BelowTerrain</altitudeLayer> -->
 		
 		<researchPrerequisites>
 		  <!-- <li>CEC_KDY_Victory_Parts</li> -->

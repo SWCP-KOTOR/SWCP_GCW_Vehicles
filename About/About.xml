@@ -1,12 +1,13 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ModMetaData>
   <name>Star Wars: X-Wing</name>
-  <modIconPath IgnoreIfNoMatchingField="True">UI/ModIcon_guy762_SWWarlordEmpire</modIconPath>
+  <modIconPath IgnoreIfNoMatchingField="True">UI/ModIcon_guy762_SWGCWVehicles</modIconPath>
   <author>guy762, NelsonArts, MajesticMadman</author>
   <supportedVersions>
     <li>1.5</li>
+    <!-- <li>1.6</li> -->
   </supportedVersions>
-  <packageId>guy762.NA.MM.SWVehicles</packageId>
+  <packageId>SWCP.GCWVehicles</packageId>
   <description>Adds speeders and starfighters from Star Wars.</description>
   
   <modDependencies>
@@ -47,8 +48,8 @@
 		<li>guy762.KotORWeapons</li>
 		<li>guy762.KotORDroids</li>
 	</loadAfter>
-	<!--loadBefore>
-		<li>guy762.KotORFactions</li>
-	</loadBefore-->
+	<loadBefore>
+		<li>SWCP.guy762.RR.WarlordEmpire</li>
+	</loadBefore>
 </ModMetaData>
 

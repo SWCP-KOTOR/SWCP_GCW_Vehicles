@@ -3,7 +3,7 @@
   
 	<ThingDef ParentName="guy762_SWGravshipOverlayBASE">
 		<defName>guy762_SWGravshipOverlay_CROCGozanti</defName>
-		<label>C-ROC Gozanti-class light cruiser</label>
+		<label>C-ROC Gozanti-class cruiser</label>
 		<graphicData>
 		  <texPath>Gravships/CROCGozanti/CROCGozanti</texPath>
 		  <graphicClass>Graphic_Single</graphicClass>

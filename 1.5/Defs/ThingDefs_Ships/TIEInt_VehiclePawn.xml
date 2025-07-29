@@ -102,7 +102,7 @@
 						<li>Movement</li>
 						<li>Turret</li>
 					</handlingTypes>
-					<comfort>-0.5</comfort>
+					<!-- <comfort>-0.5</comfort> -->
 					
 					<turretIds>
 						<li>TIEIntKey_gun_1</li>
@@ -110,6 +110,12 @@
 						<li>TIEIntKey_gun_3</li>
 						<li>TIEIntKey_gun_4</li>
 					</turretIds>
+				</li>
+				<li>
+					<key>copilot</key>
+					<label>Copilot</label>
+					<slots>1</slots>
+					<!-- <comfort>-0.5</comfort> -->
 				</li>
 			</roles>
 		</properties>

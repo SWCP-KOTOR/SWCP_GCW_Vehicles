@@ -49,7 +49,7 @@
 		<li>guy762.KotORDroids</li>
 	</loadAfter>
 	<loadBefore>
-		<li>SWCP.guy762.RR.WarlordEmpire</li>
+		<li>SWCP.guy762.WarlordEmpire</li>
 	</loadBefore>
 </ModMetaData>
 

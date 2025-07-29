@@ -101,6 +101,12 @@
 						<li>KimogilaKey_gun_7</li>
 					</turretIds>
 				</li>
+				<li>
+					<key>passenger</key>
+					<label>Cargo Hold Passenger</label>
+					<slots>2</slots>
+					<comfort>-0.75</comfort>
+				</li>
 			</roles>
 		</properties>
 		

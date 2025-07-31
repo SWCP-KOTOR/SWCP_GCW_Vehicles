@@ -1,0 +1,266 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<Defs>	
+	
+	<Vehicles.PatternDef>
+		<defName>guy762_SWVehiclePattern_FlareS</defName>
+		<label>Flare-S Swoop</label>
+		<path>LandVehicles/FlareS/FlareS_pattern</path>
+	</Vehicles.PatternDef>
+	
+	<Vehicles.VehicleDef ParentName="guy762_SpeederBikeOrUnarmoredVehicle_base">
+		<defName>guy762_SWVehicle_FlareS</defName>
+		<label>Mobquet Flare-S Swoop Bike</label>
+		<description>. \n\n&lt;color=#bb8f04&gt;Crew:&lt;/color&gt; Driver x1</description>
+		
+		<graphicData>
+			<texPath>LandVehicles/FlareS/FlareS_L1</texPath>
+			<graphicClass>Vehicles.Graphic_Vehicle</graphicClass>
+			<shaderType>CutoutComplexPattern</shaderType>
+			<drawSize>(3,3)</drawSize>
+			<pattern>guy762_SWVehiclePattern_FlareS</pattern>
+			<color>(215,20,35)</color>
+			<colorTwo>(250,180,0)</colorTwo>
+		</graphicData>
+		
+		<fillPercent>0.4</fillPercent>
+		
+		<nameable>false</nameable>
+		<buildDef>guy762_SWVehicleBP_FlareS</buildDef>
+		
+		<size>(2,2)</size>
+		<uiIconScale>1</uiIconScale>
+		
+		
+		<vehicleCategory>Transport</vehicleCategory>
+		<techLevel>Spacer</techLevel>
+		<vehicleType>Land</vehicleType>
+				
+		<statBases>
+			<ArmorRating_Sharp>0.55</ArmorRating_Sharp> <!-- all speeder bikes should use this same stat block -->
+			<ArmorRating_Blunt>0.4</ArmorRating_Blunt>
+			<ArmorRating_Heat>0.65</ArmorRating_Heat>
+			<MaxHitPoints>500</MaxHitPoints>
+			<Flammability>0.5</Flammability>
+			<MarketValue>5800</MarketValue>
+		</statBases>
+		
+		<soundSustainersOnEvent>
+			<!--li>
+				<start>MoveStop</start>
+				<stop>MoveStart</stop>
+				<value>kotorsound_speederbike_idle</value>
+			</li-->
+			<li>
+				<start>MoveStart</start>
+				<stop>MoveStop</stop>
+				<value>kotorsound_speederbike_moving</value>
+			</li>
+		</soundSustainersOnEvent>
+		
+		<soundOneShotsOnEvent>
+			<li>
+				<key>IgnitionOn</key>
+				<value>kotorsound_speederbike_activate</value>
+			</li>
+			<li>
+				<key>IgnitionOff</key>
+				<value>kotorsound_speederbike_deactivate</value>
+			</li>
+			<!-- <li> -->
+				<!-- <key>DamageTaken</key> -->
+				<!-- <value>kotorsound_speederbike_damaged</value> -->
+			<!-- </li> -->
+			<!-- <li> -->
+				<!-- <key>CargoAdded</key> -->
+				<!-- <value>kotorsound_bag_open</value> -->
+			<!-- </li> -->
+			<!-- <li> -->
+				<!-- <key>CargoRemoved</key> -->
+				<!-- <value>kotorsound_bag_close</value> -->
+			<!-- </li> -->
+		</soundOneShotsOnEvent>
+		
+		<race>
+			<baseBodySize>1</baseBodySize>
+		</race>
+		
+		<drawProperties>
+			<graphicOverlays>
+				<li>
+					<graphicData>
+						<texPath>LandVehicles/FlareS/FlareS_L2</texPath>
+						<graphicClass>Vehicles.Graphic_Vehicle</graphicClass> <!-- Graphic_RGB if not using the pattern system -->
+						<shaderType>CutoutComplexPattern</shaderType>
+						<drawSize>(3,3)</drawSize>
+						<layer>5</layer>
+						<pattern>guy762_SWVehiclePattern_FlareS</pattern>
+						<color>(215,20,35)</color>
+						<colorTwo>(250,180,0)</colorTwo>
+					</graphicData>
+				</li>
+			</graphicOverlays>
+		</drawProperties>
+		
+		<vehicleStats>
+			<Mass>100</Mass>
+			<MoveSpeed>50</MoveSpeed>
+			<CargoCapacity>10</CargoCapacity>
+			<RepairRate>0.75</RepairRate>
+			<!--AccelerationRate>0.08</AccelerationRate-->
+		</vehicleStats>
+		
+		<properties>
+			<diagonalRotation>false</diagonalRotation>
+			<manhunterTargetsVehicle>true</manhunterTargetsVehicle>
+			
+			<worldSpeedMultiplier>0.5</worldSpeedMultiplier> <!-- higher number = faster travel -->
+			<winterSpeedMultiplier>1.5</winterSpeedMultiplier> <!-- lower number = faster winter travel -->
+			<offRoadMultiplier>1</offRoadMultiplier> <!-- lower number = faster travel -->
+			
+			<customRoadCosts AssignDefaults = "0.4" /> <!-- vanilla default is 0.5, lower number = faster -->
+			<!-- <customTerrainCosts AllowTerrainWithTag="Water" PathCost="1"/> -->
+			<track Class = "Vehicles.VehicleTrack_Wake">
+				<speed>2</speed>
+			</track>
+			
+			<riverCost>1</riverCost> <!-- higher = slower, <1 = very fast on world map -->
+			
+			<!-- <customHillinessCosts> -->
+				<!-- <SmallHills>0.25</SmallHills> -->
+				<!-- <LargeHills>0.75</LargeHills> -->
+				<!-- <Mountainous>1.5</Mountainous> -->
+				<!-- <Impassable>1.5</Impassable> -->
+			<!-- </customHillinessCosts> -->
+			
+			<!--customWeatherCosts>
+				<Dusting>4</Dusting>
+				<Thin>8</Thin>
+				<Medium>16</Medium>
+				<Thick>24</Thick>
+			</customWeatherCosts-->
+			
+			<roles>
+				<li>
+					<key>rider</key>
+					<label>Rider</label>
+					<slots>1</slots>
+					<slotsToOperate>1</slotsToOperate>
+					<exposed>true</exposed>
+					
+					<hitbox>
+						<side>Body</side>
+					</hitbox>
+					
+					<handlingTypes>
+						<li>Movement</li>
+					</handlingTypes>
+				
+					<pawnRenderer>
+						<layer>0</layer>
+						<layerNorth>0</layerNorth>
+						<layerSouth>0</layerSouth>
+						<angleNorth>0</angleNorth>
+						<angleEast>0</angleEast>
+						<angleNorthEast>0</angleNorthEast>
+						<angleSouthEast>0</angleSouthEast>
+						<drawOffsetNorth>(0,0,0.5)</drawOffsetNorth>
+						<drawOffsetSouth>(0,0,0.9)</drawOffsetSouth>
+						<drawOffsetEast>(-0.45,0,0.325)</drawOffsetEast>
+					</pawnRenderer>
+				</li>
+			</roles>
+		</properties>
+		
+		<components>
+			<li>
+				<key>FlareSKey_hull</key>
+				<label>Hull</label>
+				<depth>External</depth>
+				
+				<armor> <!-- all speeder bikes should use this same stat block -->
+					<ArmorRating_Sharp>0.55</ArmorRating_Sharp>
+					<ArmorRating_Blunt>0.4</ArmorRating_Blunt>
+					<ArmorRating_Heat>0.65</ArmorRating_Heat>
+					<IncomingDamageFactor>-0.05</IncomingDamageFactor>
+				</armor>
+				<health>100</health>
+				
+				<hitbox>
+					<side>Body</side>
+				</hitbox>
+			</li>
+			<li>
+				<key>FlareSKey_engine</key>
+				<label>Engine</label>
+				<health>1</health>
+				<priorityStatEfficiency>true</priorityStatEfficiency>
+				<depth>Internal</depth>
+				
+				<reactors>
+					<li Class = "Vehicles.Reactor_Explosive">
+						<indicator>VF_Explosive</indicator>
+						<chance>0.25</chance>
+						<maxHealth>0.2</maxHealth>
+						<radius>3</radius>
+						<damageDef>guy762_ExplosiveDamage_energy</damageDef>
+					</li>
+				</reactors>
+				
+				<categories>
+					<li>MoveSpeed</li>
+				</categories>
+			</li>
+			<li>
+				<key>FlareSKey_repulsor</key>
+				<label>Repulsorlift Generator</label>
+				<health>1</health>
+				<depth>Internal</depth>
+				
+				<categories>
+					<li>MoveSpeed</li>
+				</categories>
+			</li>
+			<li>
+				<key>FlareSKey_thrust</key>
+				<label>Thrust Repulsor</label>
+				<health>1</health>
+				<depth>Internal</depth>
+				
+				<tags>
+					<li>Wheel</li>
+				</tags>
+				
+				<categories>
+					<li>MoveSpeed</li>
+				</categories>
+			</li>
+		</components>
+
+		<!--modExtensions>
+			<li Class="VanillaVehiclesExpanded.StatExtension">
+				<statToAdd>
+					<li>VVE_VehicleTier</li>
+				</statToAdd>
+				<statValues>
+					<li>VVE_Tier1</li>
+				</statValues>
+				<statDescriptions>
+					<li>VVE_Tier1Desc</li>
+				</statDescriptions>
+			</li>
+		</modExtensions-->
+		
+		<comps>
+			<li Class="Vehicles.CompProperties_FueledTravel">
+				<electricPowered>true</electricPowered>
+				<fuelConsumptionRate>10</fuelConsumptionRate>
+				<fuelCapacity>30</fuelCapacity>
+				<fuelConsumptionWorldMultiplier>15</fuelConsumptionWorldMultiplier>
+				
+				<targetFuelLevelConfigurable>true</targetFuelLevelConfigurable>
+				<ambientHeat>1.0</ambientHeat>
+			</li>
+		</comps>
+	</Vehicles.VehicleDef>
+</Defs>

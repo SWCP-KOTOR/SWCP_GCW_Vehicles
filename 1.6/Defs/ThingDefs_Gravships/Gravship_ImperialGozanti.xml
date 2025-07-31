@@ -1,0 +1,413 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  
+	<ThingDef ParentName="guy762_SWGravshipOverlayBASE">
+		<defName>guy762_SWGravshipOverlay_ImpGozanti</defName>
+		<label>Gozanti-class assault carrier</label>
+		<graphicData>
+		  <texPath>Gravships/ImpGozanti/ImpGozanti</texPath>
+		  <graphicClass>Graphic_Single</graphicClass>
+		  <drawSize>(77,77)</drawSize>
+		  
+		  <drawOffset>(0,0,-0.125)</drawOffset>
+		  
+		  <shaderType>CutoutComplex</shaderType>
+		  <color>(185,185,185)</color> <!-- lighter grey -->
+		</graphicData>
+		<size>(1,1)</size>
+		<!-- <size>(25,65)</size> -->
+		<uiIconScale>0.025</uiIconScale>
+		<costList>
+		  <KOTOR_AlloyDurasteel>56</KOTOR_AlloyDurasteel>
+		  <ComponentSpacer>1</ComponentSpacer>
+		</costList>
+		<statBases>
+		  <MaxHitPoints>11200</MaxHitPoints>
+		  <WorkToBuild>44800</WorkToBuild>
+		</statBases>
+		
+		<!-- <altitudeLayer>WorldClipper</altitudeLayer> -->
+		<altitudeLayer>VisEffects</altitudeLayer>
+		<!-- <altitudeLayer>BelowTerrain</altitudeLayer> -->
+		
+		<researchPrerequisites>
+		  <!-- <li>CEC_KDY_Victory_Parts</li> -->
+		</researchPrerequisites>
+	</ThingDef>
+	
+	<!-- guy762_GravshipPrefab_ -->
+	
+	
+<PrefabDef>
+  <defName>guy762_GravshipPrefab_ImpGozanti</defName>
+  <size>(63,27)</size>
+  <things>
+    <GravshipShieldGenerator>
+      <position>(40, 0, 13)</position>
+    </GravshipShieldGenerator>
+    <guy762_decor_TowerTerminalA>
+      <rects>
+        <li>(15,14,15,14)</li>
+        <li>(53,15,54,15)</li>
+      </rects>
+      <relativeRotation>Opposite</relativeRotation>
+    </guy762_decor_TowerTerminalA>
+    <Battery>
+      <positions>
+        <li>(14, 0, 10)</li>
+        <li>(14, 0, 16)</li>
+      </positions>
+      <relativeRotation>Counterclockwise</relativeRotation>
+    </Battery>
+    <Table1x2c>
+      <position>(42, 0, 8)</position>
+      <relativeRotation>Counterclockwise</relativeRotation>
+      <stuff>Steel</stuff>
+      <quality>Normal</quality>
+    </Table1x2c>
+    <CommsConsole>
+      <position>(56, 0, 15)</position>
+      <relativeRotation>Opposite</relativeRotation>
+    </CommsConsole>
+    <VitalsMonitor>
+      <position>(44, 0, 18)</position>
+      <relativeRotation>Counterclockwise</relativeRotation>
+    </VitalsMonitor>
+    <VitalsMonitor>
+      <position>(41, 0, 19)</position>
+      <relativeRotation>Clockwise</relativeRotation>
+    </VitalsMonitor>
+    <Vent>
+      <rects>
+        <li>(45,10,45,10)</li>
+        <li>(45,16,45,16)</li>
+      </rects>
+      <relativeRotation>Counterclockwise</relativeRotation>
+    </Vent>
+    <Vent>
+      <position>(46, 0, 15)</position>
+    </Vent>
+    <Stool>
+      <rects>
+        <li>(41,7,42,7)</li>
+        <li>(41,9,42,9)</li>
+      </rects>
+      <stuff>Steel</stuff>
+      <quality>Normal</quality>
+    </Stool>
+    <Heater>
+      <rects>
+        <li>(51,10,51,10)</li>
+        <li>(58,14,58,14)</li>
+        <li>(51,16,51,16)</li>
+      </rects>
+    </Heater>
+    <Turret_Sniper>
+      <positions>
+        <li>(41, 0, 3)</li>
+        <li>(41, 0, 22)</li>
+      </positions>
+    </Turret_Sniper>
+    <Autodoor>
+      <rects>
+        <li>(20,0,20,0)</li>
+        <li>(17,11,17,11)</li>
+        <li>(49,11,49,11)</li>
+        <li>(43,12,43,12)</li>
+        <li>(43,14,43,14)</li>
+        <li>(17,15,17,15)</li>
+        <li>(49,15,49,15)</li>
+        <li>(20,26,20,26)</li>
+      </rects>
+      <stuff>KOTOR_AlloyDurasteel</stuff>
+    </Autodoor>
+    <Autodoor>
+      <rects>
+        <li>(40,10,40,10)</li>
+        <li>(18,13,18,13)</li>
+        <li>(35,13,35,13)</li>
+        <li>(42,13,42,13)</li>
+        <li>(52,13,52,13)</li>
+        <li>(40,16,40,16)</li>
+      </rects>
+      <relativeRotation>Clockwise</relativeRotation>
+      <stuff>KOTOR_AlloyDurasteel</stuff>
+    </Autodoor>
+    <GravshipHull>
+      <rects>
+        <li>(18,0,19,0)</li>
+        <li>(21,0,21,0)</li>
+        <li>(18,1,18,12)</li>
+        <li>(22,1,24,1)</li>
+        <li>(25,2,27,2)</li>
+        <li>(28,3,40,3)</li>
+        <li>(40,4,40,9)</li>
+        <li>(41,5,42,5)</li>
+        <li>(12,6,17,6)</li>
+        <li>(43,6,44,6)</li>
+        <li>(12,7,12,11)</li>
+        <li>(45,7,48,7)</li>
+        <li>(49,8,51,8)</li>
+        <li>(51,9,51,9)</li>
+        <li>(52,10,57,10)</li>
+        <li>(13,11,16,11)</li>
+        <li>(35,11,42,11)</li>
+        <li>(52,11,52,12)</li>
+        <li>(58,11,61,11)</li>
+        <li>(14,12,14,15)</li>
+        <li>(35,12,35,12)</li>
+        <li>(42,12,42,12)</li>
+        <li>(62,12,62,14)</li>
+        <li>(18,14,18,26)</li>
+        <li>(35,14,35,15)</li>
+        <li>(42,14,42,15)</li>
+        <li>(52,14,52,16)</li>
+        <li>(12,15,13,15)</li>
+        <li>(15,15,16,15)</li>
+        <li>(36,15,41,15)</li>
+        <li>(58,15,61,15)</li>
+        <li>(12,16,12,20)</li>
+        <li>(53,16,57,16)</li>
+        <li>(40,17,40,23)</li>
+        <li>(51,17,51,18)</li>
+        <li>(49,18,50,18)</li>
+        <li>(45,19,48,19)</li>
+        <li>(13,20,17,20)</li>
+        <li>(43,20,44,20)</li>
+        <li>(41,21,42,21)</li>
+        <li>(28,23,39,23)</li>
+        <li>(25,24,27,24)</li>
+        <li>(22,25,24,25)</li>
+        <li>(19,26,19,26)</li>
+        <li>(21,26,21,26)</li>
+      </rects>
+      <stuff>KOTOR_AlloyDurasteel</stuff>
+    </GravshipHull>
+    <guy762_decor_BigRebelScreen>
+      <position>(54, 0, 12)</position>
+      <relativeRotation>Opposite</relativeRotation>
+    </guy762_decor_BigRebelScreen>
+    <DiningChair>
+      <rects>
+        <li>(59,12,59,14)</li>
+      </rects>
+      <relativeRotation>Clockwise</relativeRotation>
+      <stuff>Steel</stuff>
+      <quality>Normal</quality>
+    </DiningChair>
+    <DiningChair>
+      <position>(15, 0, 13)</position>
+      <relativeRotation>Counterclockwise</relativeRotation>
+      <stuff>Steel</stuff>
+      <quality>Normal</quality>
+    </DiningChair>
+    <guy762_SWGravshipOverlay_ImpGozanti>
+      <position>(31, 0, 13)</position>
+      <relativeRotation>Clockwise</relativeRotation>
+    </guy762_SWGravshipOverlay_ImpGozanti>
+    <KOTOR_ReactorRhydonium_medium>
+      <positions>
+        <li>(14, 0, 8)</li>
+        <li>(14, 0, 18)</li>
+      </positions>
+    </KOTOR_ReactorRhydonium_medium>
+    <HiddenConduit>
+      <rects>
+        <li>(18,0,21,0)</li>
+        <li>(18,1,18,26)</li>
+        <li>(21,1,24,1)</li>
+        <li>(24,2,27,2)</li>
+        <li>(27,3,40,3)</li>
+        <li>(40,4,40,11)</li>
+        <li>(41,5,42,5)</li>
+        <li>(12,6,17,6)</li>
+        <li>(42,6,44,6)</li>
+        <li>(12,7,12,11)</li>
+        <li>(44,7,48,7)</li>
+        <li>(48,8,51,8)</li>
+        <li>(51,9,51,10)</li>
+        <li>(52,10,57,10)</li>
+        <li>(13,11,17,11)</li>
+        <li>(35,11,39,11)</li>
+        <li>(41,11,42,11)</li>
+        <li>(52,11,52,16)</li>
+        <li>(57,11,61,11)</li>
+        <li>(14,12,14,15)</li>
+        <li>(35,12,35,15)</li>
+        <li>(42,12,42,15)</li>
+        <li>(61,12,62,12)</li>
+        <li>(62,13,62,14)</li>
+        <li>(61,14,61,15)</li>
+        <li>(12,15,13,15)</li>
+        <li>(15,15,17,15)</li>
+        <li>(36,15,41,15)</li>
+        <li>(58,15,60,15)</li>
+        <li>(12,16,12,20)</li>
+        <li>(40,16,40,23)</li>
+        <li>(51,16,51,18)</li>
+        <li>(53,16,57,16)</li>
+        <li>(48,18,50,18)</li>
+        <li>(44,19,48,19)</li>
+        <li>(13,20,17,20)</li>
+        <li>(42,20,44,20)</li>
+        <li>(41,21,42,21)</li>
+        <li>(27,23,39,23)</li>
+        <li>(24,24,27,24)</li>
+        <li>(21,25,24,25)</li>
+        <li>(19,26,21,26)</li>
+      </rects>
+    </HiddenConduit>
+    <Bed>
+      <positions>
+        <li>(46, 0, 8)</li>
+        <li>(48, 0, 8)</li>
+      </positions>
+      <stuff>KOTOR_Plastoid</stuff>
+      <quality>Normal</quality>
+    </Bed>
+    <Bed>
+      <positions>
+        <li>(50, 0, 9)</li>
+        <li>(50, 0, 17)</li>
+      </positions>
+      <relativeRotation>Counterclockwise</relativeRotation>
+      <stuff>KOTOR_Plastoid</stuff>
+      <quality>Normal</quality>
+    </Bed>
+    <Bed>
+      <positions>
+        <li>(46, 0, 18)</li>
+        <li>(48, 0, 18)</li>
+      </positions>
+      <relativeRotation>Opposite</relativeRotation>
+      <stuff>KOTOR_Plastoid</stuff>
+      <quality>Normal</quality>
+    </Bed>
+    <GravEngine>
+      <position>(37, 0, 13)</position>
+    </GravEngine>
+    <WallLamp>
+      <rects>
+        <li>(41,7,41,7)</li>
+        <li>(41,19,41,19)</li>
+      </rects>
+      <relativeRotation>Counterclockwise</relativeRotation>
+    </WallLamp>
+    <WallLamp>
+      <rects>
+        <li>(44,9,44,9)</li>
+        <li>(44,17,44,17)</li>
+      </rects>
+      <relativeRotation>Clockwise</relativeRotation>
+    </WallLamp>
+    <WallLamp>
+      <rects>
+        <li>(47,10,47,10)</li>
+        <li>(48,14,48,14)</li>
+        <li>(56,15,56,15)</li>
+      </rects>
+    </WallLamp>
+    <WallLamp>
+      <rects>
+        <li>(56,11,56,11)</li>
+        <li>(48,12,48,12)</li>
+        <li>(47,16,47,16)</li>
+      </rects>
+      <relativeRotation>Opposite</relativeRotation>
+    </WallLamp>
+    <guy762_SWGravshipTurret_9x9YWingDualLaser>
+      <position>(12, 0, 13)</position>
+    </guy762_SWGravshipTurret_9x9YWingDualLaser>
+    <ShelfSmall>
+      <position>(47, 0, 8)</position>
+      <stuff>KOTOR_Plastoid</stuff>
+    </ShelfSmall>
+    <ShelfSmall>
+      <rects>
+        <li>(46,10,46,10)</li>
+        <li>(46,16,46,16)</li>
+      </rects>
+      <relativeRotation>Clockwise</relativeRotation>
+      <stuff>KOTOR_Plastoid</stuff>
+    </ShelfSmall>
+    <ShelfSmall>
+      <position>(47, 0, 18)</position>
+      <relativeRotation>Opposite</relativeRotation>
+      <stuff>KOTOR_Plastoid</stuff>
+    </ShelfSmall>
+    <HospitalBed>
+      <position>(41, 0, 18)</position>
+      <relativeRotation>Opposite</relativeRotation>
+      <stuff>Steel</stuff>
+      <quality>Normal</quality>
+    </HospitalBed>
+    <HospitalBed>
+      <positions>
+        <li>(44, 0, 17)</li>
+        <li>(44, 0, 19)</li>
+      </positions>
+      <relativeRotation>Counterclockwise</relativeRotation>
+      <stuff>Steel</stuff>
+      <quality>Normal</quality>
+    </HospitalBed>
+    <HospitalBed>
+      <position>(41, 0, 20)</position>
+      <relativeRotation>Clockwise</relativeRotation>
+      <stuff>Steel</stuff>
+      <quality>Normal</quality>
+    </HospitalBed>
+    <PilotConsole>
+      <position>(60, 0, 13)</position>
+      <relativeRotation>Clockwise</relativeRotation>
+    </PilotConsole>
+    <ElectricStove>
+      <position>(44, 0, 8)</position>
+      <relativeRotation>Clockwise</relativeRotation>
+    </ElectricStove>
+    <Wall>
+      <rects>
+        <li>(45,8,45,9)</li>
+        <li>(45,11,48,11)</li>
+        <li>(50,11,51,11)</li>
+        <li>(44,12,45,12)</li>
+        <li>(44,14,45,14)</li>
+        <li>(45,15,45,15)</li>
+        <li>(47,15,48,15)</li>
+        <li>(50,15,51,15)</li>
+        <li>(45,17,45,18)</li>
+      </rects>
+      <stuff>Steel</stuff>
+    </Wall>
+    <OxygenPump>
+      <position>(50, 0, 10)</position>
+    </OxygenPump>
+    <OxygenPump>
+      <rects>
+        <li>(58,12,58,12)</li>
+        <li>(50,16,50,16)</li>
+      </rects>
+      <relativeRotation>Opposite</relativeRotation>
+    </OxygenPump>
+    <Shelf>
+      <positions>
+        <li>(41, 0, 6)</li>
+        <li>(56, 0, 11)</li>
+      </positions>
+      <stuff>KOTOR_Plastoid</stuff>
+    </Shelf>
+    <Shelf>
+      <positions>
+        <li>(44, 0, 10)</li>
+        <li>(44, 0, 15)</li>
+      </positions>
+      <relativeRotation>Counterclockwise</relativeRotation>
+      <stuff>KOTOR_Plastoid</stuff>
+    </Shelf>
+  </things>
+</PrefabDef>
+
+
+	
+
+	
+</Defs>

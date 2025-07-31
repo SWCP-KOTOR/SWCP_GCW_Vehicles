@@ -1,0 +1,444 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<Defs>	
+
+	<Vehicles.PatternDef>
+		<defName>guy762_SWVehiclePattern_AAC1Tank</defName>
+		<label>AAC-1 Speeder Tank (stock)</label>
+		<path>LandVehicles/AAC1/AAC1_pattern</path>
+	</Vehicles.PatternDef>
+	
+	
+	<Vehicles.VehicleDef ParentName="guy762_GroundVehiclePawn_base">
+		<defName>guy762_SWVehicle_AAC1Tank</defName>
+		<label>AAC-1 Speeder Tank</label>
+		<description>. \n\n&lt;color=#bb8f04&gt;Crew:&lt;/color&gt; Driver x1</description>
+		
+		<graphicData>
+			<texPath>LandVehicles/AAC1/AAC1</texPath>
+			<graphicClass>Vehicles.Graphic_Vehicle</graphicClass>
+			<drawSize>(7,7)</drawSize>
+			<shaderType>CutoutComplexPattern</shaderType>
+			<pattern>guy762_SWVehiclePattern_AAC1Tank</pattern>
+			<color>(185,180,175)</color> <!-- warm grey -->
+			<colorTwo>(140,60,60)</colorTwo>
+		</graphicData>
+		
+		<fillPercent>1</fillPercent>
+		
+		<nameable>true</nameable>
+		<buildDef>guy762_SWVehicleBP_AAC1Tank</buildDef>
+		
+		<size>(4,6)</size>
+		<uiIconScale>1</uiIconScale>
+		
+		
+		<vehicleCategory>Combat</vehicleCategory>
+		<techLevel>Spacer</techLevel>
+		<vehicleType>Land</vehicleType>
+				
+		<statBases> <!-- blanket applies to all parts without specified armor ratings -->
+			<ArmorRating_Sharp>0.35</ArmorRating_Sharp>
+			<ArmorRating_Blunt>0.2</ArmorRating_Blunt> <!-- # of estimated XWMG hull points * 0.1, apply to hard armor curve -->
+			<ArmorRating_Heat>0.45</ArmorRating_Heat>
+			<MaxHitPoints>300</MaxHitPoints> <!-- # of estimated XWMG hull points * 100 -->
+			
+			<Flammability>0.5</Flammability>
+			<MarketValue>5800</MarketValue>
+		</statBases>
+		
+		<soundSustainersOnEvent>
+			<li>
+				<start>IgnitionOn</start>
+				<stop>MoveStart</stop>
+				<value>kotorsound_hovercar_idle</value>
+			</li>
+			<li>
+				<start>MoveStart</start>
+				<stop>MoveStop</stop>
+				<value>kotorsound_hovercar_moving</value>
+			</li>
+			<li>
+				<start>MoveStop</start>
+				<stop>MoveStart</stop>
+				<value>kotorsound_hovercar_idle</value>
+			</li>
+			<li>
+				<start>MoveStop</start>
+				<stop>IgnitionOff</stop>
+				<value>kotorsound_hovercar_idle</value>
+			</li>
+		</soundSustainersOnEvent>
+		
+		<soundOneShotsOnEvent>
+			<li>
+				<key>IgnitionOn</key>
+				<value>kotorsound_speederbike_activate</value>
+			</li>
+			<li>
+				<key>IgnitionOff</key>
+				<value>kotorsound_speederbike_deactivate</value>
+			</li>
+		</soundOneShotsOnEvent>
+		
+		<race>
+			<baseBodySize>1</baseBodySize>
+		</race>
+		
+		<vehicleStats>
+			<Mass>650</Mass>
+			<MoveSpeed>30</MoveSpeed>
+			<CargoCapacity>100</CargoCapacity>
+			<RepairRate>1</RepairRate>
+			<!--AccelerationRate>0.08</AccelerationRate-->
+		</vehicleStats>
+		
+		<properties>
+			<diagonalRotation>false</diagonalRotation>
+			<manhunterTargetsVehicle>false</manhunterTargetsVehicle>
+			
+			<worldSpeedMultiplier>0.5</worldSpeedMultiplier> <!-- higher number = faster travel -->
+			<winterSpeedMultiplier>1</winterSpeedMultiplier> <!-- lower number = faster winter travel -->
+			<offRoadMultiplier>1</offRoadMultiplier> <!-- lower number = faster travel -->
+			
+			<customRoadCosts AssignDefaults = "0.5" /> <!-- vanilla default is 0.5, lower number = faster -->
+			<!-- <customTerrainCosts AllowTerrainWithTag="Water" PathCost="1"/> -->
+			<track Class = "Vehicles.VehicleTrack_Wake">
+				<speed>1</speed>
+			</track>
+			
+			<riverCost>2</riverCost> <!-- higher = slower, <1 = very fast on world map -->
+			
+			<!-- <customHillinessCosts> -->
+				<!-- <SmallHills>0.25</SmallHills> -->
+				<!-- <LargeHills>0.75</LargeHills> -->
+				<!-- <Mountainous>1.5</Mountainous> -->
+			<!-- </customHillinessCosts> -->
+			
+			<vehicleJobLimitations>
+				<li>(RepairVehicle, 4)</li> <!-- how many pawns can repair this vehicle at a time -->
+			</vehicleJobLimitations> <!-- guy762 RULES: repair job count should be twice the amount of pawns to fully operate the vehicle -->
+			
+			<!--customWeatherCosts>
+				<Dusting>4</Dusting>
+				<Thin>8</Thin>
+				<Medium>16</Medium>
+				<Thick>24</Thick>
+			</customWeatherCosts-->
+			
+			<roles>
+				<li>
+					<key>driver</key>
+					<label>Driver</label>
+					<slots>1</slots>
+					<slotsToOperate>1</slotsToOperate>
+					<handlingTypes>
+						<li>Movement</li>
+						<li>Turret</li>
+					</handlingTypes>
+					
+					<turretIds>
+						<li>AAC1Key_gun_1</li>
+						<li>AAC1Key_gun_2</li>
+					</turretIds>
+				</li>
+				<li>
+					<key>gunner</key>
+					<label>Gunner</label>
+					<slots>1</slots>
+					<slotsToOperate>1</slotsToOperate>
+					
+					<handlingTypes>Turret</handlingTypes>
+					
+					<turretIds>
+						<li>AAC1Key_gun_3</li>
+					</turretIds>
+				</li>
+			</roles>
+		</properties>
+		
+		<components>
+			<li>
+				<key>AAC1Key_hull</key>
+				<label>Hull</label>
+				<depth>External</depth>
+				
+				<armor> <!-- EaWX health/50 = hull points, round up -->
+					<ArmorRating_Sharp>1.35</ArmorRating_Sharp>
+					<ArmorRating_Blunt>1.2</ArmorRating_Blunt> <!-- # of estimated XWMG hull points * 0.1, apply to hard armor curve -->
+					<ArmorRating_Heat>1.45</ArmorRating_Heat>
+					<IncomingDamageFactor>-0.15</IncomingDamageFactor> <!-- unarmored: 0.05 | light vehicles: 0.15 | medium vehicles: 0.25 | heavy vehicles: 0.35 -->
+				</armor>
+				<health>300</health> <!-- # of estimated XWMG hull points * 100 -->
+				
+				<hitbox>
+					<side>Body</side>
+				</hitbox>
+			</li>
+			
+			
+			<!-- <li> -->
+				<!-- <key>AA5TruckKey_cabin</key> -->
+				<!-- <label>Cabin</label> -->
+				<!-- <health>100</health> -->
+				<!-- <depth>Internal</depth> -->
+			<!-- </li> -->
+			<li>
+				<key>AAC1Key_engine</key>
+				<label>Engine</label>
+				<health>5</health>
+				<priorityStatEfficiency>true</priorityStatEfficiency>
+				<depth>Internal</depth>
+				
+				<reactors>
+					<li Class = "Vehicles.Reactor_Explosive">
+						<indicator>VF_Explosive</indicator>
+						<chance>0.25</chance>
+						<maxHealth>0.2</maxHealth>
+						<radius>3</radius>
+						<damageDef>guy762_ExplosiveDamage_energy</damageDef>
+					</li>
+				</reactors>
+				
+				<categories>
+					<li>MoveSpeed</li>
+				</categories>
+			</li>
+			<li>
+				<key>AAC1Key_repulsor</key>
+				<label>Repulsorlift Generator</label>
+				<health>5</health>
+				<depth>Internal</depth>
+				
+				<categories>
+					<li>MoveSpeed</li>
+				</categories>
+			</li>
+			<li>
+				<key>AAC1Key_thrust</key>
+				<label>Thrust Repulsor</label>
+				<health>5</health>
+				<depth>Internal</depth>
+				
+				<tags>
+					<li>Wheel</li>
+				</tags>
+				
+				<categories>
+					<li>MoveSpeed</li>
+				</categories>
+			</li>
+		</components>
+
+		<!--modExtensions>
+			<li Class="VanillaVehiclesExpanded.StatExtension">
+				<statToAdd>
+					<li>VVE_VehicleTier</li>
+				</statToAdd>
+				<statValues>
+					<li>VVE_Tier1</li>
+				</statValues>
+				<statDescriptions>
+					<li>VVE_Tier1Desc</li>
+				</statDescriptions>
+			</li>
+		</modExtensions-->
+		
+		<comps>
+			<li Class="Vehicles.CompProperties_FueledTravel">
+				<electricPowered>true</electricPowered>
+				<fuelConsumptionRate>12.5</fuelConsumptionRate>
+				<fuelCapacity>100</fuelCapacity>
+				<fuelConsumptionWorldMultiplier>10</fuelConsumptionWorldMultiplier>
+				
+				<targetFuelLevelConfigurable>true</targetFuelLevelConfigurable>
+				<ambientHeat>1.0</ambientHeat>
+			</li>
+			<li Class="Vehicles.CompProperties_VehicleTurrets">
+				<turrets>
+					<li>
+						<turretDef>guy762_VehicleTurret_AAC1_main</turretDef>
+						
+						<renderProperties>
+							<north>(-0.95, 2.75)</north>
+							<south>(0.95, -2.25)</south>
+							<east>(2.9, 1.2)</east>
+							<west>(-2.9, -0.2)</west>
+						</renderProperties>
+						<defaultAngleRotated>0</defaultAngleRotated>
+						<angleRestricted>(315,45)</angleRestricted>
+						<gizmoLabel>light AV gun</gizmoLabel>
+						
+						<aimPieOffset>(0, 2.55)</aimPieOffset>
+						
+						<autoTargetingActive>True</autoTargetingActive>
+						
+						<key>AAC1Key_gun_1</key>
+					</li>
+					<li>
+						<turretDef>guy762_VehicleTurret_AAC1_main</turretDef>
+						
+						<renderProperties>
+							<north>(0.95, 2.75)</north>
+							<south>(-0.95, -2.25)</south>
+							<east>(2.9, -0.2)</east>
+							<west>(-2.9, 1.2)</west>
+						</renderProperties>
+						<defaultAngleRotated>0</defaultAngleRotated>
+						<angleRestricted>(315,45)</angleRestricted>
+						<gizmoLabel>light AV gun</gizmoLabel>
+						
+						<aimPieOffset>(0, 2.55)</aimPieOffset>
+						
+						<autoTargetingActive>True</autoTargetingActive>
+						
+						<key>AAC1Key_gun_2</key>
+					</li>
+					<li>
+						<turretDef>guy762_VehicleTurret_AAC1_missilepod</turretDef>
+						
+						<renderProperties>
+							<north>(0, -1.425)</north>
+							<south>(0, 1.9)</south>
+							<east>(-1.75, 0.5)</east>
+							<west>(1.75, 0.5)</west>
+						</renderProperties>
+						<defaultAngleRotated>0</defaultAngleRotated>
+						<!-- <angleRestricted>(315,45)</angleRestricted> -->
+						<gizmoLabel>dorsal missile pods</gizmoLabel>
+						
+						<drawLayer>15</drawLayer>
+						<aimPieOffset>(0, 2.55)</aimPieOffset>
+						
+						<key>AAC1Key_gun_3</key>
+					</li>
+				</turrets>
+			</li>
+		</comps>
+	</Vehicles.VehicleDef>
+	
+	
+	
+	<Vehicles.VehicleTurretDef ParentName="guy762_VehicleTurretBASE">
+		<defName>guy762_VehicleTurret_AAC1_missilepod</defName>
+		<label>AAC-1 missile pods</label>
+		<description>The rotating dorsal turret of an AAC-1 Speeder Tank.</description>
+		
+		<turretType>Rotatable</turretType>
+		<shotSound>kotorsound_TankMissileLauncher</shotSound>
+		<reloadSound>kotorsound_reloadlauncher</reloadSound>
+		
+		<projectile>SWVehicleBullet_AIAAconcMissile</projectile>
+		<reloadTimer>3.5</reloadTimer>
+		<warmUpTimer>1.5</warmUpTimer> <!-- all dorsal turrets = 1 minimum -->
+		
+		<magazineCapacity>20</magazineCapacity>
+		<genericAmmo>true</genericAmmo>
+		<ammunition>
+			<thingDefs>
+				<li>guy762_RocketItem_conc</li>
+			</thingDefs>
+		</ammunition>
+		
+		
+		
+		<autoSnapTargeting>true</autoSnapTargeting>
+		<rotationSpeed>5</rotationSpeed>
+		
+		<!-- <projectileOffset>2.1</projectileOffset> -->
+		
+		<minRange>5</minRange>
+		<maxRange>60</maxRange> <!-- ~30 for infantry, 60 for ground vehicles, 90 for starfighters -->
+
+		<fireModes>
+			<li>
+				<shotsPerBurst>1</shotsPerBurst>
+				<ticksBetweenShots>20</ticksBetweenShots>
+				<ticksBetweenBursts>100</ticksBetweenBursts>
+				<label>Single</label>
+				<texPath>Items/Rockets/rocket_conc/rocket_conc_a</texPath>
+			</li>
+			<li>
+				<shotsPerBurst>3</shotsPerBurst>
+				<ticksBetweenShots>20</ticksBetweenShots>
+				<ticksBetweenBursts>300</ticksBetweenBursts>
+				<label>3 Burst</label>
+				<texPath>Items/Rockets/rocket_conc/rocket_conc_b</texPath>
+			</li>
+			<li>
+				<shotsPerBurst>5</shotsPerBurst>
+				<ticksBetweenShots>20</ticksBetweenShots>
+				<ticksBetweenBursts>500</ticksBetweenBursts>
+				<label>5 Burst</label>
+				<texPath>Items/Rockets/rocket_conc/rocket_conc_c</texPath>
+			</li>
+			<li>
+				<shotsPerBurst>20</shotsPerBurst>
+				<ticksBetweenShots>20</ticksBetweenShots>
+				<ticksBetweenBursts>2000</ticksBetweenBursts>
+				<label>Fire All</label>
+				<texPath>Items/Rockets/rocket_conc/rocket_conc_c</texPath>
+			</li>
+		</fireModes>
+
+		<graphicData>
+			<texPath>LandVehicles/AAC1/AAC1_gun</texPath>
+			<graphicClass>Vehicles.Graphic_Turret</graphicClass>
+			<shaderType>CutoutComplex</shaderType>
+			<drawSize>(4.5,4.5)</drawSize>
+			<!-- <drawSize>(5,5)</drawSize> -->
+			<color>(185,180,175)</color> <!-- warm grey -->
+			<colorTwo>(140,60,60)</colorTwo>
+		</graphicData>
+		
+		<gizmoIconTexPath>LandVehicles/AAC1/AAC1_gun</gizmoIconTexPath>
+		
+	</Vehicles.VehicleTurretDef>
+	
+	
+	
+	<Vehicles.VehicleTurretDef ParentName="guy762_VehicleTurretBASE">
+		<defName>guy762_VehicleTurret_AAC1_main</defName>
+		<label>AAC-1 light anti-vehicle gun</label>
+		<description>The main gun of an AAC-1 speeder tank.</description>
+		
+		<turretType>Rotatable</turretType>
+		<shotSound>kotorsound_TankAntiVehicleGun</shotSound>
+		
+		<projectile>SWVehicleBullet_AVred_light</projectile>
+		<reloadTimer>3.5</reloadTimer>
+		<warmUpTimer>0.4</warmUpTimer>
+		
+		<magazineCapacity>999</magazineCapacity>
+		
+		
+		
+		<autoSnapTargeting>true</autoSnapTargeting>
+		<rotationSpeed>5</rotationSpeed>
+		
+		<!-- <projectileOffset>2.1</projectileOffset> -->
+		
+		<minRange>5</minRange>
+		<maxRange>60</maxRange> <!-- ~30 for infantry, 60 for ground vehicles, 90 for starfighters -->
+
+		<fireModes>
+			<li>
+				<shotsPerBurst>1</shotsPerBurst>
+				<ticksBetweenShots>10</ticksBetweenShots>
+				<ticksBetweenBursts>80</ticksBetweenBursts>
+				<label>Single</label>
+				<texPath>UI/Sniper_Shot</texPath>
+			</li>
+		</fireModes>
+
+		<graphicData>
+			<texPath>NullTex</texPath>
+			<graphicClass>Vehicles.Graphic_Turret</graphicClass>
+		</graphicData>
+		
+		<gizmoIconTexPath>Items/bigcannon_blank</gizmoIconTexPath>
+		
+	</Vehicles.VehicleTurretDef>
+	
+	
+</Defs>

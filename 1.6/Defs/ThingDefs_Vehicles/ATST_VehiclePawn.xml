@@ -1,0 +1,500 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<Defs>	
+
+	
+	<Vehicles.VehicleDef ParentName="guy762_GroundVehiclePawn_base">
+		<defName>guy762_SWVehicle_ATST</defName>
+		<label>AT-ST Scout Walker</label>
+		<description>. \n\n&lt;color=#bb8f04&gt;Crew:&lt;/color&gt; Driver x1</description>
+		
+		<graphicData>
+			<texPath>LandVehicles/ATST/ATST</texPath>
+			<graphicClass>Vehicles.Graphic_Vehicle</graphicClass>
+			<shaderType>CutoutComplexPattern</shaderType>
+			<drawSize>(10,10)</drawSize>
+			<drawOffset>(0,0,2)</drawOffset>
+			<!-- <drawOffsetEast>(0,2,0)</drawOffsetEast> -->
+			<!-- <drawOffsetNorth>(0,2,0)</drawOffsetNorth> -->
+			<!-- <drawOffsetSouth>(0,2,0)</drawOffsetSouth> -->
+			<!-- <drawOffsetWest>(0,2,0)</drawOffsetWest> -->
+			<color>(185,185,185)</color> <!-- lighter grey -->
+		</graphicData>
+		<!-- <drawProperties> -->
+			<!-- <displayOffsetEast>(0,5)</displayOffsetEast> -->
+			<!-- <displayOffsetNorth>(0,5)</displayOffsetNorth> -->
+			<!-- <displayOffsetSouth>(0,5)</displayOffsetSouth> -->
+			<!-- <displayOffsetWest>(0,5)</displayOffsetWest> -->
+		<!-- </drawProperties> -->
+		
+		<fillPercent>1</fillPercent>
+		
+		<nameable>true</nameable>
+		<buildDef>guy762_SWVehicleBP_ATST</buildDef>
+		
+		<size>(5,5)</size>
+		<uiIconScale>1</uiIconScale>
+		
+		
+		<vehicleCategory>Combat</vehicleCategory>
+		<techLevel>Spacer</techLevel>
+		<vehicleType>Land</vehicleType>
+		
+		<killedLeavings>
+		  <guy762_ShipChunk_ATST>1</guy762_ShipChunk_ATST>
+		</killedLeavings>
+				
+		<statBases> <!-- blanket applies to all parts without specified armor ratings -->
+			<!--ArmorRating_Sharp>+0.05</ArmorRating_Sharp>
+			<ArmorRating_Blunt>-0.1</ArmorRating_Blunt>        BASE CURVE FOR HARD ARMOR
+			<ArmorRating_Heat>+0.15</ArmorRating_Heat-->
+			<ArmorRating_Sharp>0.35</ArmorRating_Sharp>
+			<ArmorRating_Blunt>0.2</ArmorRating_Blunt> <!-- # of estimated XWMG hull points * 0.1, apply to hard armor curve -->
+			<ArmorRating_Heat>0.45</ArmorRating_Heat>
+			<MaxHitPoints>300</MaxHitPoints> <!-- # of estimated XWMG hull points * 100 -->
+			
+			<Flammability>0.5</Flammability>
+			<MarketValue>5800</MarketValue>
+		</statBases>
+		
+		<soundSustainersOnEvent>
+			<li>
+				<start>IgnitionOn</start>
+				<stop>MoveStart</stop>
+				<value>kotorsound_speederbike_idle</value>
+			</li>
+			<li>
+				<start>MoveStart</start>
+				<stop>MoveStop</stop>
+				<value>kotorsound_ATSTsteppy</value>
+			</li>
+			<li>
+				<start>MoveStop</start>
+				<stop>MoveStart</stop>
+				<value>kotorsound_speederbike_idle</value>
+			</li>
+			<li>
+				<start>MoveStop</start>
+				<stop>IgnitionOff</stop>
+				<value>kotorsound_speederbike_idle</value>
+			</li>
+		</soundSustainersOnEvent>
+		
+		<soundOneShotsOnEvent>
+			<li>
+				<key>IgnitionOn</key>
+				<value>kotorsound_speederbike_activate</value>
+			</li>
+			<li>
+				<key>IgnitionOff</key>
+				<value>kotorsound_speederbike_deactivate</value>
+			</li>
+		</soundOneShotsOnEvent>
+		
+		<race>
+			<baseBodySize>1</baseBodySize>
+		</race>
+		
+		<vehicleStats>
+			<Mass>500</Mass>
+			<MoveSpeed>10</MoveSpeed>
+			<CargoCapacity>100</CargoCapacity>
+			<RepairRate>1</RepairRate>
+			<!--AccelerationRate>0.08</AccelerationRate-->
+		</vehicleStats>
+		
+		<properties>
+			<diagonalRotation>false</diagonalRotation>
+			<manhunterTargetsVehicle>false</manhunterTargetsVehicle>
+			
+			<worldSpeedMultiplier>0.5</worldSpeedMultiplier> <!-- higher number = faster travel -->
+			<winterSpeedMultiplier>3.25</winterSpeedMultiplier> <!-- lower number = faster winter travel -->
+			<offRoadMultiplier>1</offRoadMultiplier> <!-- lower number = faster travel -->
+			
+			<customRoadCosts AssignDefaults = "0.5" /> <!-- vanilla default is 0.5, lower number = faster -->
+			<!-- <customTerrainCosts AllowTerrainWithTag="Water" PathCost="1"/>         "All Terrain" walker but can't traverse deep water -->
+			<track Class = "Vehicles.VehicleTrack_Wake">
+				<speed>1</speed>
+			</track>
+			
+			<riverCost>5</riverCost> <!-- higher = slower, <1 = very fast on world map -->
+			
+			<vehicleJobLimitations>
+				<li>(RepairVehicle, 4)</li> <!-- how many pawns can repair this vehicle at a time -->
+			</vehicleJobLimitations> <!-- guy762 RULES: repair job count should be twice the amount of pawns to fully operate the vehicle -->
+			
+			<customHillinessCosts>
+				<SmallHills>0.25</SmallHills>
+				<LargeHills>0.75</LargeHills>
+				<Mountainous>1.5</Mountainous>
+			</customHillinessCosts>
+			
+			<customWeatherCosts>
+				<Dusting>4</Dusting>
+				<Thin>8</Thin>
+				<Medium>16</Medium>
+				<Thick>24</Thick>
+			</customWeatherCosts>
+			
+			<roles>
+				<li>
+					<key>driver</key>
+					<label>Driver</label>
+					<slots>1</slots>
+					<slotsToOperate>1</slotsToOperate>
+					<handlingTypes>
+						<li>Movement</li>
+						<li>Turret</li>
+					</handlingTypes>
+					<comfort>-0.25</comfort>
+					
+					<turretIds>
+						<li>ATSTKey_gun_1</li>
+					</turretIds>
+				</li>
+				<li>
+					<key>gunner</key>
+					<label>Gunner</label>
+					<slots>1</slots>
+					<slotsToOperate>1</slotsToOperate>
+					<handlingTypes>
+						<li>Turret</li>
+					</handlingTypes>
+					<comfort>-0.25</comfort>
+					
+					<turretIds>
+						<li>ATSTKey_gun_2</li>
+						<li>ATSTKey_gun_3</li>
+					</turretIds>
+				</li>
+				<li>
+					<key>passenger</key>
+					<label>Spotter</label>
+					<slots>1</slots>
+					<comfort>-0.75</comfort>
+				</li>
+			</roles>
+		</properties>
+		
+		<components>
+			<li>
+				<key>ATSTKey_hull</key>
+				<label>Hull</label>
+				<depth>External</depth>
+				
+				<armor> <!-- EaWX health/50 = hull points, round up -->
+					<ArmorRating_Sharp>1.35</ArmorRating_Sharp>
+					<ArmorRating_Blunt>1.2</ArmorRating_Blunt> <!-- # of estimated XWMG hull points * 0.1, apply to hard armor curve -->
+					<ArmorRating_Heat>1.45</ArmorRating_Heat>
+					<IncomingDamageFactor>-0.15</IncomingDamageFactor> <!-- unarmored: 0.05 | light vehicles: 0.15 | medium vehicles: 0.25 | heavy vehicles: 0.35 -->
+				</armor>
+				<health>300</health> <!-- # of estimated XWMG hull points * 100 -->
+				
+				<hitbox>
+					<side>Body</side>
+				</hitbox>
+			</li>
+			
+			
+			<!-- <li> -->
+				<!-- <key>ATSTKey_cockpit</key> -->
+				<!-- <label>Cockpit</label> -->
+				<!-- <health>100</health> -->
+				<!-- <depth>Internal</depth> -->
+			<!-- </li> -->
+			<li>
+				<key>ATSTKey_engine</key>
+				<label>Engine</label>
+				<health>5</health>
+				<priorityStatEfficiency>true</priorityStatEfficiency>
+				<depth>Internal</depth>
+				
+				<reactors>
+					<li Class = "Vehicles.Reactor_Explosive">
+						<indicator>VF_Explosive</indicator>
+						<chance>0.5</chance>
+						<maxHealth>0.2</maxHealth>
+						<radius>3</radius>
+						<damageDef>guy762_ExplosiveDamage_energy</damageDef>
+					</li>
+				</reactors>
+				
+				<categories>
+					<li>MoveSpeed</li>
+				</categories>
+			</li>
+			<li>
+				<key>ATSTKey_leftleg</key>
+				<label>Left Leg</label>
+				<health>10</health>
+				<depth>Internal</depth>
+				
+				<categories>
+					<li>MoveSpeed</li>
+				</categories>
+			</li>
+			<li>
+				<key>ATSTKey_rightleg</key>
+				<label>Right Leg</label>
+				<health>10</health>
+				<depth>Internal</depth>
+				
+				<categories>
+					<li>MoveSpeed</li>
+				</categories>
+			</li>
+			<li>
+				<key>ATSTKey_leftfoot</key>
+				<label>Left Foot</label>
+				<health>10</health>
+				<depth>Internal</depth>
+				
+				<tags>
+					<li>Wheel</li>
+				</tags>
+				
+				<categories>
+					<li>MoveSpeed</li>
+				</categories>
+			</li>
+			<li>
+				<key>ATSTKey_rightfoot</key>
+				<label>Right Foot</label>
+				<health>10</health>
+				<depth>Internal</depth>
+				
+				<tags>
+					<li>Wheel</li>
+				</tags>
+				
+				<categories>
+					<li>MoveSpeed</li>
+				</categories>
+			</li>
+		</components>
+
+		<!--modExtensions>
+			<li Class="VanillaVehiclesExpanded.StatExtension">
+				<statToAdd>
+					<li>VVE_VehicleTier</li>
+				</statToAdd>
+				<statValues>
+					<li>VVE_Tier1</li>
+				</statValues>
+				<statDescriptions>
+					<li>VVE_Tier1Desc</li>
+				</statDescriptions>
+			</li>
+		</modExtensions-->
+		
+		<comps>
+			<li Class="Vehicles.CompProperties_FueledTravel">
+				<electricPowered>true</electricPowered>
+				<fuelConsumptionRate>7.5</fuelConsumptionRate>
+				<fuelCapacity>100</fuelCapacity>
+				<fuelConsumptionWorldMultiplier>15</fuelConsumptionWorldMultiplier>
+				
+				<targetFuelLevelConfigurable>true</targetFuelLevelConfigurable>
+			</li>
+			<li Class="Vehicles.CompProperties_VehicleTurrets">
+				<turrets>
+					<li>
+						<turretDef>guy762_VehicleTurret_ATST_main</turretDef>
+						
+						<renderProperties>
+							<north>(0, 5.5)</north>
+							<south>(0, 0.25)</south>
+							<east>(2, 3.3)</east>
+							<west>(-2, 3.3)</west>
+						</renderProperties>
+						<defaultAngleRotated>0</defaultAngleRotated>
+						<angleRestricted>(315,45)</angleRestricted>
+						<gizmoLabel>heavy AI gun</gizmoLabel>
+						
+						<aimPieOffset>(0, 2.55)</aimPieOffset>
+						
+						<key>ATSTKey_gun_1</key>
+					</li>
+					<li>
+						<turretDef>guy762_VehicleTurret_ATST_repeater</turretDef>
+						
+						<renderProperties>
+							<north>(-1.625, 4.675)</north>
+							<south>(1.625, 2)</south>
+							<east>(1.05, 4.75)</east>
+							<west>(-1.05, 3)</west>
+						</renderProperties>
+						<defaultAngleRotated>0</defaultAngleRotated>
+						<angleRestricted>(315,45)</angleRestricted>
+						<gizmoLabel>light AI repeater</gizmoLabel>
+						
+						<autoTargetingActive>True</autoTargetingActive>
+						
+						<aimPieOffset>(0, 2.55)</aimPieOffset>
+						
+						<key>ATSTKey_gun_2</key>
+					</li>
+					<li>
+						<turretDef>guy762_VehicleTurret_ATST_conc</turretDef>
+						
+						<renderProperties>
+							<north>(1.625, 4.675)</north>
+							<south>(-1.625, 2)</south>
+							<east>(1.05, 3)</east>
+							<west>(-1.05, 4.75)</west>
+						</renderProperties>
+						<defaultAngleRotated>0</defaultAngleRotated>
+						<angleRestricted>(315,45)</angleRestricted>
+						<gizmoLabel>concussion launcher</gizmoLabel>
+						
+						<aimPieOffset>(0, 2.55)</aimPieOffset>
+						
+						<key>ATSTKey_gun_3</key>
+					</li>
+				</turrets>
+			</li>
+		</comps>
+	</Vehicles.VehicleDef>
+	
+	
+	
+	<Vehicles.VehicleTurretDef ParentName="guy762_VehicleTurretBASE">
+		<defName>guy762_VehicleTurret_ATST_main</defName>
+		<label>AT-ST heavy anti-infantry gun</label>
+		<description>The main gun of an AT-ST walker.</description>
+		
+		<turretType>Rotatable</turretType>
+		<shotSound>kotorsound_speedergun</shotSound>
+		
+		<projectile>SWVehicleBullet_AIdoublegreen_heavy</projectile>
+		<reloadTimer>3.5</reloadTimer>
+		<warmUpTimer>0.4</warmUpTimer>
+		
+		<magazineCapacity>999</magazineCapacity>
+		
+		
+		
+		<autoSnapTargeting>true</autoSnapTargeting>
+		<rotationSpeed>5</rotationSpeed>
+		
+		<!-- <projectileOffset>2.1</projectileOffset> -->
+		
+		<minRange>5</minRange>
+		<maxRange>60</maxRange>
+
+		<fireModes>
+			<li>
+				<shotsPerBurst>2</shotsPerBurst>
+				<ticksBetweenShots>9</ticksBetweenShots>
+				<ticksBetweenBursts>200</ticksBetweenBursts>
+				<label>Burst</label>
+				<texPath>UI/Rapid_Shot</texPath>
+			</li>
+		</fireModes>
+
+		<graphicData>
+			<texPath>NullTex</texPath>
+			<graphicClass>Vehicles.Graphic_Turret</graphicClass>
+		</graphicData>
+		
+		<gizmoIconTexPath>Items/cannon_blank</gizmoIconTexPath>
+		
+	</Vehicles.VehicleTurretDef>
+	
+	<Vehicles.VehicleTurretDef ParentName="guy762_VehicleTurretBASE">
+		<defName>guy762_VehicleTurret_ATST_repeater</defName>
+		<label>AT-ST antipersonnel repeater</label>
+		<description>The antipersonnel repeater of an AT-ST walker.</description>
+		
+		<turretType>Rotatable</turretType>
+		<shotSound>kotorsound_SWGLrepeater</shotSound>
+		
+		<projectile>KotORBlasterBolt_default</projectile>
+		<reloadTimer>3.5</reloadTimer>
+		<warmUpTimer>2.5</warmUpTimer>
+		
+		<magazineCapacity>999</magazineCapacity>
+		
+		
+		
+		<autoSnapTargeting>true</autoSnapTargeting>
+		<rotationSpeed>5</rotationSpeed>
+		
+		<!-- <projectileOffset>2.1</projectileOffset> -->
+		
+		<minRange>2</minRange>
+		<maxRange>30</maxRange>
+
+		<fireModes>
+			<li>
+				<shotsPerBurst>12</shotsPerBurst>
+				<ticksBetweenShots>6</ticksBetweenShots>
+				<ticksBetweenBursts>200</ticksBetweenBursts>
+				<label>Burst</label>
+				<texPath>UI/Improved_Rapid_Shot</texPath>
+			</li>
+		</fireModes>
+
+		<graphicData>
+			<texPath>NullTex</texPath>
+			<graphicClass>Vehicles.Graphic_Turret</graphicClass>
+		</graphicData>
+		
+		<gizmoIconTexPath>Items/cannon_blank</gizmoIconTexPath>
+		<modExtensions>
+			<li MayRequire="SmashPhil.VehicleFramework" Class = "Vehicles.VehicleDamageMultiplierDefModExtension">
+			  <multiplier>0.01</multiplier>
+			</li>
+		</modExtensions>
+	</Vehicles.VehicleTurretDef>
+	
+	
+	<Vehicles.VehicleTurretDef ParentName="guy762_VehicleTurretBASE">
+		<defName>guy762_VehicleTurret_ATST_conc</defName>
+		<label>AT-ST concussion launcher</label>
+		<description>The concussion launcher of an AT-ST walker.</description>
+		
+		<turretType>Rotatable</turretType>
+		<shotSound>kotorsound_JKrepeater_AltFire</shotSound>
+		
+		<projectile>SWProj_TL50conc</projectile>
+		<reloadTimer>3.5</reloadTimer>
+		<warmUpTimer>2.5</warmUpTimer>
+		
+		<magazineCapacity>999</magazineCapacity>
+		
+		
+		
+		<autoSnapTargeting>true</autoSnapTargeting>
+		<rotationSpeed>5</rotationSpeed>
+		
+		<!-- <projectileOffset>2.1</projectileOffset> -->
+		
+		<minRange>2</minRange>
+		<maxRange>30</maxRange>
+
+		<fireModes>
+			<li>
+				<shotsPerBurst>1</shotsPerBurst>
+				<ticksBetweenShots>10</ticksBetweenShots>
+				<ticksBetweenBursts>200</ticksBetweenBursts>
+				<label>Single</label>
+				<texPath>Weapons/Projectiles/energybomb_purple</texPath>
+			</li>
+		</fireModes>
+
+		<graphicData>
+			<texPath>NullTex</texPath>
+			<graphicClass>Vehicles.Graphic_Turret</graphicClass>
+		</graphicData>
+		
+		<gizmoIconTexPath>Items/bigcannon_blank</gizmoIconTexPath>
+		<modExtensions>
+			<li MayRequire="SmashPhil.VehicleFramework" Class = "Vehicles.VehicleDamageMultiplierDefModExtension">
+			  <multiplier>0</multiplier>
+			</li>
+		</modExtensions>
+	</Vehicles.VehicleTurretDef>
+	
+	
+</Defs>

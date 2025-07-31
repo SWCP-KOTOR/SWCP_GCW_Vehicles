@@ -1,0 +1,557 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<Defs>	
+
+	<Vehicles.PatternDef>
+		<defName>guy762_SWVehiclePattern_TX130A</defName>
+		<label>TX-130 Fighter Tank (Imperial)</label>
+		<path>LandVehicles/TX130/TX130_Pattern_Empire</path>
+	</Vehicles.PatternDef>
+	
+	<Vehicles.PatternDef>
+		<defName>guy762_SWVehiclePattern_TX130B</defName>
+		<label>TX-130 Fighter Tank (Zsinj's Dominion)</label>
+		<path>LandVehicles/TX130/TX130_Pattern_Zsinj</path>
+	</Vehicles.PatternDef>
+	
+	<Vehicles.PatternDef>
+		<defName>guy762_SWVehiclePattern_TX130C</defName>
+		<label>TX-130 Fighter Tank (Republic)</label>
+		<path>LandVehicles/TX130/TX130_Pattern_Republic</path>
+	</Vehicles.PatternDef>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<Vehicles.VehicleDef ParentName="guy762_GroundVehiclePawn_base">
+		<defName>guy762_SWVehicle_TX130FighterTank</defName>
+		<label>TX-130 Fighter Tank</label>
+		<description>. \n\n&lt;color=#bb8f04&gt;Crew:&lt;/color&gt; Driver x1</description>
+		
+		<graphicData>
+			<texPath>LandVehicles/TX130/TX130_L1</texPath>
+			<graphicClass>Vehicles.Graphic_Vehicle</graphicClass>
+			<drawSize>(7,7)</drawSize>
+			<!-- <layer>5</layer> -->
+			<shaderType>CutoutComplexPattern</shaderType>
+			
+			<pattern>guy762_SWVehiclePattern_TX130B</pattern>
+			<color>(50,50,50)</color> <!-- black -->
+			<colorTwo>(165,155,80)</colorTwo> <!-- zsinj's dominion mustard -->
+			<colorThree>(185,185,185)</colorThree> <!-- lighter grey -->
+			
+			<!-- <color>(60,75,105)</color> imperial reserve blue -->
+		</graphicData>
+		
+		<fillPercent>1</fillPercent>
+		
+		<nameable>true</nameable>
+		<buildDef>guy762_SWVehicleBP_TX130FighterTank</buildDef>
+		
+		<size>(5,6)</size>
+		<uiIconScale>1</uiIconScale>
+		
+		
+		<vehicleCategory>Combat</vehicleCategory>
+		<techLevel>Spacer</techLevel>
+		<vehicleType>Land</vehicleType>
+		<navigationCategory>Automatic</navigationCategory>
+				
+		<statBases>
+			<!--ArmorRating_Sharp>+0.05</ArmorRating_Sharp>
+			<ArmorRating_Blunt>-0.1</ArmorRating_Blunt>        BASE CURVE FOR HARD ARMOR
+			<ArmorRating_Heat>+0.15</ArmorRating_Heat-->
+			<ArmorRating_Sharp>0.35</ArmorRating_Sharp>
+			<ArmorRating_Blunt>0.2</ArmorRating_Blunt> <!-- # of estimated XWMG hull points * 0.1, apply to hard armor curve -->
+			<ArmorRating_Heat>0.45</ArmorRating_Heat>
+			<MaxHitPoints>300</MaxHitPoints> <!-- # of estimated XWMG hull points * 100 -->
+			
+			<Flammability>0.5</Flammability>
+			<MarketValue>5800</MarketValue>
+		</statBases>
+		
+		<soundSustainersOnEvent>
+			<li>
+				<start>IgnitionOn</start>
+				<stop>MoveStart</stop>
+				<value>kotorsound_hovertank_idle</value>
+			</li>
+			<li>
+				<start>MoveStart</start>
+				<stop>MoveStop</stop>
+				<value>kotorsound_hovertank_moving</value>
+			</li>
+			<li>
+				<start>MoveStop</start>
+				<stop>MoveStart</stop>
+				<value>kotorsound_hovertank_idle</value>
+			</li>
+			<li>
+				<start>MoveStop</start>
+				<stop>IgnitionOff</stop>
+				<value>kotorsound_hovertank_idle</value>
+			</li>
+		</soundSustainersOnEvent>
+		
+		<soundOneShotsOnEvent>
+			<li>
+				<key>IgnitionOn</key>
+				<value>kotorsound_speederbike_activate</value>
+			</li>
+			<li>
+				<key>IgnitionOff</key>
+				<value>kotorsound_speederbike_deactivate</value>
+			</li>
+		</soundOneShotsOnEvent>
+		
+		<race>
+			<baseBodySize>1</baseBodySize>
+		</race>
+		
+		<drawProperties>
+			<graphicOverlays>
+				<li>
+					<graphicData>
+						<texPath>LandVehicles/TX130/TX130_L2</texPath>
+						<graphicClass>Vehicles.Graphic_Vehicle</graphicClass>
+						<drawSize>(7,7)</drawSize>
+						<!-- <layer>7</layer> -->
+						<layer>5</layer>
+						<shaderType>CutoutComplexPattern</shaderType>
+						<pattern>guy762_SWVehiclePattern_TX130B</pattern>
+						<color>(50,50,50)</color> <!-- black -->
+						<colorTwo>(165,155,80)</colorTwo> <!-- zsinj's dominion mustard -->
+						<colorThree>(185,185,185)</colorThree> <!-- lighter grey -->
+					</graphicData>
+				</li>
+			</graphicOverlays>
+		</drawProperties>
+		
+		<vehicleStats>
+			<Mass>850</Mass>
+			<MoveSpeed>35</MoveSpeed>
+			<CargoCapacity>350</CargoCapacity>
+			<RepairRate>0.5</RepairRate>
+			<!--AccelerationRate>0.08</AccelerationRate-->
+		</vehicleStats>
+		
+		<properties>
+			<diagonalRotation>false</diagonalRotation>
+			<manhunterTargetsVehicle>true</manhunterTargetsVehicle>
+			
+			<worldSpeedMultiplier>1</worldSpeedMultiplier> <!-- higher number = faster travel -->
+			<winterSpeedMultiplier>1</winterSpeedMultiplier> <!-- lower number = faster winter travel -->
+			<offRoadMultiplier>1</offRoadMultiplier> <!-- lower number = faster travel -->
+			
+			<customRoadCosts AssignDefaults = "0.5" /> <!-- vanilla default is 0.5, lower number = faster -->
+			<!-- <customTerrainCosts AllowTerrainWithTag="Water" PathCost="1"/> -->
+			<track Class = "Vehicles.VehicleTrack_Wake">
+				<speed>1</speed>
+			</track>
+			
+			<riverCost>2</riverCost> <!-- higher = slower, <1 = very fast on world map -->
+			
+			<vehicleJobLimitations>
+				<li>(RepairVehicle, 4)</li> <!-- how many pawns can repair this vehicle at a time -->
+			</vehicleJobLimitations> <!-- guy762 RULES: repair job count should be twice the amount of pawns to fully operate the vehicle -->
+			
+			<!-- <customHillinessCosts> -->
+				<!-- <SmallHills>0.25</SmallHills> -->
+				<!-- <LargeHills>0.75</LargeHills> -->
+				<!-- <Mountainous>1.5</Mountainous> -->
+			<!-- </customHillinessCosts> -->
+			
+			<!--customWeatherCosts>
+				<Dusting>4</Dusting>
+				<Thin>8</Thin>
+				<Medium>16</Medium>
+				<Thick>24</Thick>
+			</customWeatherCosts-->
+			
+			<roles>
+				<li>
+					<key>driver</key>
+					<label>Driver</label>
+					<slots>1</slots>
+					<slotsToOperate>1</slotsToOperate>
+					<handlingTypes>
+						<li>Movement</li>
+						<li>Turret</li>
+					</handlingTypes>
+					
+					<turretIds>
+						<li>TX130Key_gun_1</li>
+						<li>TX130Key_gun_2</li>
+					</turretIds>
+				</li>
+				<li>
+					<key>gunner</key>
+					<label>Gunner</label>
+					<slots>1</slots>
+					<slotsToOperate>1</slotsToOperate>
+					
+					<handlingTypes>Turret</handlingTypes>
+					
+					<turretIds>
+						<li>TX130Key_gun_3</li>
+					</turretIds>
+					
+					<pawnRenderer>
+						<layer>5</layer>
+						<layerNorth>2</layerNorth>
+						<layerSouth>0</layerSouth>
+						
+						<angleNorth>0</angleNorth>
+						<angleEast>0</angleEast>
+						<angleNorthEast>0</angleNorthEast>
+						<angleSouthEast>0</angleSouthEast>
+						
+						<drawOffsetNorth>(0,0,-0.125)</drawOffsetNorth>
+						
+						<drawOffsetSouth>(0,0,2.45)</drawOffsetSouth>
+						
+						<drawOffsetEast>(-1.95,0,1.15)</drawOffsetEast>
+					</pawnRenderer>
+				</li>
+				<li>
+					<key>navigator</key>
+					<label>Navigator</label>
+					<slots>1</slots>
+				</li>
+			</roles>
+		</properties>
+		
+		<components>
+			<li>
+				<key>TX130Key_hull</key>
+				<label>Hull</label>
+				<depth>External</depth>
+				
+				<armor> <!-- EaWX health/50 = hull points, round up -->
+					<ArmorRating_Sharp>1.35</ArmorRating_Sharp>
+					<ArmorRating_Blunt>1.2</ArmorRating_Blunt> <!-- # of estimated XWMG hull points * 0.1, apply to hard armor curve -->
+					<ArmorRating_Heat>1.45</ArmorRating_Heat>
+					<IncomingDamageFactor>-0.15</IncomingDamageFactor> <!-- unarmored: 0.05 | light vehicles: 0.15 | medium vehicles: 0.25 | heavy vehicles: 0.35 -->
+				</armor>
+				<health>300</health> <!-- # of estimated XWMG hull points * 100 -->
+				
+				<hitbox>
+					<side>Body</side>
+				</hitbox>
+			</li>
+			
+			
+			<!-- <li> -->
+				<!-- <key>ImpTroopTransportKey_cabin</key> -->
+				<!-- <label>Cabin</label> -->
+				<!-- <health>100</health> -->
+				<!-- <depth>Internal</depth> -->
+			<!-- </li> -->
+			<li>
+				<key>TX130Key_engine</key>
+				<label>Engine</label>
+				<health>5</health>
+				<priorityStatEfficiency>true</priorityStatEfficiency>
+				<depth>Internal</depth>
+				
+				<reactors>
+					<li Class = "Vehicles.Reactor_Explosive">
+						<indicator>VF_Explosive</indicator>
+						<chance>0.25</chance>
+						<maxHealth>0.2</maxHealth>
+						<radius>3</radius>
+						<damageDef>guy762_ExplosiveDamage_energy</damageDef>
+					</li>
+				</reactors>
+				
+				<categories>
+					<li>MoveSpeed</li>
+				</categories>
+			</li>
+			<li>
+				<key>TX130Key_repulsor</key>
+				<label>Repulsorlift Generator</label>
+				<health>5</health>
+				<depth>Internal</depth>
+				
+				<categories>
+					<li>MoveSpeed</li>
+				</categories>
+			</li>
+			<li>
+				<key>TX130Key_thrust</key>
+				<label>Thrust Repulsor</label>
+				<health>5</health>
+				<depth>Internal</depth>
+				
+				<tags>
+					<li>Wheel</li>
+				</tags>
+				
+				<categories>
+					<li>MoveSpeed</li>
+				</categories>
+			</li>
+		</components>
+
+		<!--modExtensions>
+			<li Class="VanillaVehiclesExpanded.StatExtension">
+				<statToAdd>
+					<li>VVE_VehicleTier</li>
+				</statToAdd>
+				<statValues>
+					<li>VVE_Tier1</li>
+				</statValues>
+				<statDescriptions>
+					<li>VVE_Tier1Desc</li>
+				</statDescriptions>
+			</li>
+		</modExtensions-->
+		
+		<comps>
+			<li Class="Vehicles.CompProperties_FueledTravel">
+				<electricPowered>true</electricPowered>
+				<fuelConsumptionRate>15</fuelConsumptionRate>
+				<fuelCapacity>200</fuelCapacity>
+				<fuelConsumptionWorldMultiplier>25</fuelConsumptionWorldMultiplier>
+				
+				<targetFuelLevelConfigurable>true</targetFuelLevelConfigurable>
+				<ambientHeat>1.0</ambientHeat>
+			</li>
+			<li Class="Vehicles.CompProperties_VehicleTurrets">
+				<turrets>
+					<li>
+						<turretDef>guy762_VehicleTurret_TX130_main</turretDef>
+						
+						<renderProperties>
+							<north>(-1.55, 2)</north>
+							<south>(1.45, -0.85)</south>
+							<east>(1.25, 1.555)</east>
+							<west>(-1.25, -0.435)</west>
+						</renderProperties>
+						<defaultAngleRotated>0</defaultAngleRotated>
+						<angleRestricted>(315,45)</angleRestricted>
+						<gizmoLabel>light AV gun</gizmoLabel>
+						
+						<aimPieOffset>(0, 2.55)</aimPieOffset>
+						
+						<autoTargetingActive>True</autoTargetingActive>
+						
+						<key>TX130Key_gun_1</key>
+					</li>
+					<li>
+						<turretDef>guy762_VehicleTurret_TX130_main</turretDef>
+						
+						<renderProperties>
+							<north>(1.55, 2)</north>
+							<south>(-1.45, -0.85)</south>
+							<east>(1.25, -0.435)</east>
+							<west>(-1.25, 1.555)</west>
+						</renderProperties>
+						<defaultAngleRotated>0</defaultAngleRotated>
+						<angleRestricted>(315,45)</angleRestricted>
+						<gizmoLabel>light AV gun</gizmoLabel>
+						
+						<aimPieOffset>(0, 2.55)</aimPieOffset>
+						
+						<autoTargetingActive>True</autoTargetingActive>
+						
+						<key>TX130Key_gun_2</key>
+					</li>
+					<li>
+						<turretDef>guy762_VehicleTurret_TX130_beam</turretDef>
+						
+						<renderProperties>
+							<north>(0, -0.1)</north>
+							<south>(0, 2.25)</south>
+							<east>(-1.925,1)</east>
+							<west>(1.925,1)</west>
+						</renderProperties>
+						<defaultAngleRotated>0</defaultAngleRotated>
+						<gizmoLabel>dorsal AI beam</gizmoLabel>
+						
+						<drawLayer>6</drawLayer>
+						<aimPieOffset>(0, 2.55)</aimPieOffset>
+						
+						<key>TX130Key_gun_3</key>
+					</li>
+				</turrets>
+			</li>
+		</comps>
+	</Vehicles.VehicleDef>
+	
+	
+	
+
+	
+	
+	<Vehicles.VehicleTurretDef ParentName="guy762_VehicleTurretBASE">
+		<defName>guy762_VehicleTurret_TX130_main</defName>
+		<label>TX-130 light anti-vehicle gun</label>
+		<description>The main gun of a TX-130 fighter tank.</description>
+		
+		<turretType>Rotatable</turretType>
+		<shotSound>kotorsound_TankAntiVehicleGun</shotSound>
+		
+		<projectile>SWVehicleBullet_AVred_light</projectile>
+		<reloadTimer>3.5</reloadTimer>
+		<warmUpTimer>0.4</warmUpTimer>
+		
+		<magazineCapacity>999</magazineCapacity>
+		
+		
+		
+		<autoSnapTargeting>true</autoSnapTargeting>
+		<rotationSpeed>5</rotationSpeed>
+		
+		<!-- <projectileOffset>2.1</projectileOffset> -->
+		
+		<minRange>5</minRange>
+		<maxRange>60</maxRange> <!-- ~30 for infantry, 60 for ground vehicles, 90 for starfighters -->
+
+		<fireModes>
+			<li>
+				<shotsPerBurst>3</shotsPerBurst>
+				<ticksBetweenShots>15</ticksBetweenShots>
+				<ticksBetweenBursts>200</ticksBetweenBursts>
+				<label>Burst</label>
+				<texPath>UI/Rapid_Shot</texPath>
+			</li>
+		</fireModes>
+
+		<graphicData>
+			<texPath>NullTex</texPath>
+			<graphicClass>Vehicles.Graphic_Turret</graphicClass>
+		</graphicData>
+		
+		<gizmoIconTexPath>Items/bigcannon_blank</gizmoIconTexPath>
+		
+	</Vehicles.VehicleTurretDef>
+	
+	
+	
+	
+	<Vehicles.VehicleTurretDef ParentName="guy762_VehicleTurretBASE">
+		<defName>guy762_VehicleTurret_TX130_beam</defName>
+		<label>TX-130 dorsal beam turret</label>
+		<description>The rotating dorsal beam turret of a TX-130 fighter tank.</description>
+		
+		<turretType>Rotatable</turretType>
+		<shotSound>kotorsound_beamturret_fire</shotSound>
+		
+		<projectile>SWVehicleBullet_beam_AI</projectile>
+		<reloadTimer>3.5</reloadTimer>
+		<warmUpTimer>1</warmUpTimer> <!-- all dorsal turrets = 1 minimum -->
+		
+		<magazineCapacity>999</magazineCapacity>
+		
+		
+		
+		<autoSnapTargeting>true</autoSnapTargeting>
+		<rotationSpeed>5</rotationSpeed>
+		
+		<!-- <projectileOffset>2.1</projectileOffset> -->
+		
+		<minRange>5</minRange>
+		<maxRange>30</maxRange> <!-- ~30 for infantry, 60 for ground vehicles, 90 for starfighters -->
+
+		<fireModes>
+			<li>
+				<shotsPerBurst>1</shotsPerBurst>
+				<ticksBetweenShots>10</ticksBetweenShots>
+				<ticksBetweenBursts>400</ticksBetweenBursts>
+				<label>Beam</label>
+				<texPath>UI/Red_Beam</texPath>
+				
+				<forcedMissRadius>2</forcedMissRadius>
+			</li>
+		</fireModes>
+
+		<graphicData>
+			<texPath>LandVehicles/TX130/TX130_turret</texPath>
+			<graphicClass>Vehicles.Graphic_Turret</graphicClass>
+			<shaderType>CutoutComplex</shaderType>
+			<drawSize>(3.5,3.5)</drawSize>
+			<color>(60,75,105)</color> <!-- imperial reserve blue -->
+			<colorTwo>(60,75,105)</colorTwo> <!-- imperial reserve blue -->
+			<colorThree>(185,185,185)</colorThree> <!-- lighter grey -->
+		</graphicData>
+		
+		<gizmoIconTexPath>LandVehicles/TX130/TX130_turret</gizmoIconTexPath>
+		
+	</Vehicles.VehicleTurretDef>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<ThingDef ParentName="BaseBullet">
+		<defName>SWVehicleBullet_beam_AI</defName>
+		<label>anti-infantry beam</label>
+		<description>.</description>
+		<thingClass>taranchuk_lasers.LaserProjectile</thingClass>
+		<drawOffscreen>true</drawOffscreen>
+		<seeThroughFog>true</seeThroughFog>
+		<graphicData>
+			<graphicClass>Graphic_Single</graphicClass>
+			<texPath>Weapons/Projectiles/continuousbeam_red</texPath>
+			<shaderType>TransparentPostLight</shaderType>
+			<drawSize>1.5</drawSize>
+		</graphicData>
+		<projectile>
+			<damageDef>guy762_BeamDamage_energy</damageDef>
+			<damageAmountBase>5</damageAmountBase>
+			<!-- <armorPenetrationBase>1</armorPenetrationBase> -->
+			<stoppingPower>5</stoppingPower>
+			<speed>10000</speed>
+			<!-- <soundAmbient>kotorsound_beam_midair</soundAmbient> -->
+		</projectile>
+		<modExtensions>
+			<li Class="taranchuk_lasers.LaserProperties">
+				<damageTickRate>7</damageTickRate>
+				<lifetimeTicks>100</lifetimeTicks>
+				<beamWidth>0.5</beamWidth>
+				<beamWidthDrawScale>3</beamWidthDrawScale>
+				<sweepRatePerTick>0.25</sweepRatePerTick>
+				<maxSweepAngle>4</maxSweepAngle>
+				<damageThingsAcrossBeamLine>false</damageThingsAcrossBeamLine>
+				<debugCells>false</debugCells>
+				<groundFleckDef>Fleck_BeamBurn</groundFleckDef>
+				<endEffecterDef>GraserBeam_End</endEffecterDef>
+				<fleckChancePerTick>0.32</fleckChancePerTick>
+				<textureScrollOffsetPerTick>(0, -0.1)</textureScrollOffsetPerTick>
+				<lockOnTarget>true</lockOnTarget>
+				
+				<sustainerSoundDef>kotorsound_beam_midair</sustainerSoundDef>
+				<sustainerTickPeriod>100</sustainerTickPeriod>
+				<trailSoundDef>GunTail_Medium</trailSoundDef>
+			</li>
+		</modExtensions>
+	</ThingDef>
+
+	
+	
+</Defs>

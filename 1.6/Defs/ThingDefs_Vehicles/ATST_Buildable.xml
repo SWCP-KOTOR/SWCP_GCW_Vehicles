@@ -11,7 +11,7 @@
 			<texPath>LandVehicles/ATST/ATST</texPath>
 			<graphicClass>Graphic_Multi</graphicClass>
 			<drawSize>(10,10)</drawSize>
-			<!-- <drawOffset>(0, 0, 1)</drawOffset> -->
+			<drawOffset>(0,0,2)</drawOffset>
 		</graphicData>
 		
 		<statBases>

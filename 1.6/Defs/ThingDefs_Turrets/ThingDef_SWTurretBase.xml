@@ -9,7 +9,6 @@
 		<altitudeLayer>Building</altitudeLayer>
 		
 		<stealable>false</stealable>
-		<size>(2,2)</size>
 		<passability>PassThroughOnly</passability>
 		<pathCost>50</pathCost>
 		<thingCategories>
@@ -41,8 +40,6 @@
 		  <turretBurstCooldownTime>28.0</turretBurstCooldownTime>
 		  
 		  <ai_combatDangerous>true</ai_combatDangerous>
-		  <turretTopDrawSize>2.7</turretTopDrawSize>
-		  <turretTopOffset>(0, 0.05)</turretTopOffset>
 		</building>
 		<placeWorkers>
 		  <li>PlaceWorker_NotUnderRoof</li>

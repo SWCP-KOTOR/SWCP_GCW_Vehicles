@@ -41,6 +41,7 @@
       <ComponentIndustrial>6</ComponentIndustrial>
     </costList>
 	
+	<size>(2,2)</size>
 	<fillPercent>0.8</fillPercent>
 	<hasInteractionCell>True</hasInteractionCell>
 	<interactionCellOffset>(1,0,2)</interactionCellOffset>
@@ -82,6 +83,9 @@
     </comps>
     <building>
       <turretGunDef>guy762_SWTurretGun_AtgarDish</turretGunDef>
+	  <turretTopDrawSize>2.7</turretTopDrawSize>
+	  <turretTopOffset>(0, 0.05)</turretTopOffset>
+	  
       <turretBurstCooldownTime>2.5</turretBurstCooldownTime>
     </building>
     <researchPrerequisites>

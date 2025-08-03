@@ -203,9 +203,9 @@
 					</turretIds>
 					
 					<pawnRenderer>
-						<layer>5</layer>
+						<layer>2</layer>
 						<layerNorth>2</layerNorth>
-						<layerSouth>0</layerSouth>
+						<layerSouth>2</layerSouth>
 						
 						<angleNorth>0</angleNorth>
 						<angleEast>0</angleEast>
@@ -376,7 +376,7 @@
 						<defaultAngleRotated>0</defaultAngleRotated>
 						<gizmoLabel>dorsal AI beam</gizmoLabel>
 						
-						<drawLayer>6</drawLayer>
+						<drawLayer>8</drawLayer>
 						<aimPieOffset>(0, 2.55)</aimPieOffset>
 						
 						<key>TX130Key_gun_3</key>

@@ -4,16 +4,16 @@
 
   
 
-  <!--=============== Atgar P-Tower anti-vehicle turret ===============-->
+  <!--=============== hardpoint AA point-defense ===============-->
 
-  <ThingDef ParentName="guy762_TurretBase">
-    <defName>guy762_SWTurret_AtgarDish</defName>
-    <label>Atgar P-Tower anti-vehicle turret</label>
+  <ThingDef ParentName="guy762_GravshipTurretBase">
+    <defName>guy762_SWTurret_HardpointAAPointDefense</defName>
+    <label>hardpoint anti-air turret</label>
     <description>.</description>
 	<graphicData>
       <graphicClass>Graphic_Single</graphicClass>
-      <texPath>Turrets/DishTurret_base</texPath>
-      <drawSize>(2,2)</drawSize>
+      <texPath>Turrets/HardpointBase</texPath>
+      <drawSize>(3,3)</drawSize>
 	  <drawRotated>false</drawRotated>
 	  
       <damageData>
@@ -25,7 +25,8 @@
         <volume>(0.5,0.4,1.05)</volume>
       </shadowData>
     </graphicData>
-    <uiIconPath>Turrets/DishTurret</uiIconPath>
+    <uiIconPath>Turrets/PointDefense_icon</uiIconPath>
+	<!-- <rotatable>false</rotatable> -->
 
 	
     <statBases>
@@ -34,6 +35,9 @@
 	  <ShootingAccuracyTurret>0.98</ShootingAccuracyTurret> <!-- like level 14 human shooter -->
     </statBases>
 	
+	<placeWorkers>
+	  <li>PlaceWorker_NotUnderRoof</li>
+	</placeWorkers>
 	
 	
     <costList>
@@ -46,7 +50,7 @@
 	<size>(2,2)</size>
 	<fillPercent>0.8</fillPercent>
 	<hasInteractionCell>True</hasInteractionCell>
-	<interactionCellOffset>(1,0,2)</interactionCellOffset>
+	<interactionCellOffset>(1,0,3)</interactionCellOffset>
 	
 	<soundInteract>kotorsound_select_shipgun</soundInteract>
     <comps>
@@ -83,12 +87,14 @@
         <!-- <fuelIconPath>UI/Overlays/Barrel</fuelIconPath> -->
       <!-- </li> -->
     </comps>
+	
+	<terrainAffordanceNeeded>Substructure</terrainAffordanceNeeded>
     <building>
-		<turretGunDef>guy762_SWTurretGun_AtgarDish</turretGunDef>
-		<turretTopDrawSize>2.7</turretTopDrawSize>
-		<turretTopOffset>(0, 0.05)</turretTopOffset>
+		<turretGunDef>guy762_SWTurretGun_HardpointAAPointDefense</turretGunDef>
+		<turretTopDrawSize>3</turretTopDrawSize>
+		<!-- <turretTopOffset>(-0.05, 0.05)</turretTopOffset> -->
 	  
-		<turretBurstWarmupTime>2.5</turretBurstWarmupTime>
+		<turretBurstWarmupTime>0.125</turretBurstWarmupTime>
 		<turretBurstCooldownTime>2.5</turretBurstCooldownTime>
     </building>
     <researchPrerequisites>
@@ -104,11 +110,11 @@
 
 
   <ThingDef ParentName="BaseWeaponTurret">
-    <defName>guy762_SWTurretGun_AtgarDish</defName>
-    <label>Atgar P-Tower anti-vehicle turret</label>
+    <defName>guy762_SWTurretGun_HardpointAAPointDefense</defName>
+    <label>anti-air turret</label>
     <description>.</description>
     <graphicData>
-      <texPath>Turrets/DishTurret</texPath>
+      <texPath>Turrets/PointDefense_gun</texPath>
       <graphicClass>Graphic_Single</graphicClass>
 	  <drawSize>(2,2)</drawSize>
     </graphicData>
@@ -125,17 +131,20 @@
     <verbs>
       <li>
         <verbClass>Verb_Shoot</verbClass>
-        <defaultProjectile>SWFixedTurretBullet_AVred</defaultProjectile>
-        <warmupTime>2.5</warmupTime>
-        <minRange>5</minRange>
-        <range>60</range>
-        <burstShotCount>1</burstShotCount>
-        <soundCast>kotorsound_RebelBlaster_heavy_louder</soundCast>
+        <defaultProjectile>SWFixedTurretBullet_AAdoublered</defaultProjectile>
+        <warmupTime>0.125</warmupTime>
+        <range>90</range>
+		
+        <burstShotCount>6</burstShotCount>
+		<ticksBetweenBurstShots>6</ticksBetweenBurstShots>
+        
+		<soundCast>kotorsound_EaWturret_AA</soundCast>
         <soundCastTail>GunTail_Heavy</soundCastTail>
         <muzzleFlashScale>18</muzzleFlashScale>
-        <!-- <consumeFuelPerShot>1</consumeFuelPerShot> -->
 		<forcedMissRadius>0</forcedMissRadius>
 		<ai_AvoidFriendlyFireRadius>3</ai_AvoidFriendlyFireRadius>
+		
+		<!-- <onlyManualCast>true</onlyManualCast> -->
 		<targetParams>
 			<canTargetLocations>true</canTargetLocations>
 		</targetParams>

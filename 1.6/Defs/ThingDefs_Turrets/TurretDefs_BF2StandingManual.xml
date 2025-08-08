@@ -81,11 +81,12 @@
       <!-- </li> -->
     </comps>
     <building>
-      <turretGunDef>guy762_SWTurretGun_BF2StandingBlaster</turretGunDef>
-	  <turretTopDrawSize>2</turretTopDrawSize>
-	  <turretTopOffset>(0, 0.5)</turretTopOffset>
+		<turretGunDef>guy762_SWTurretGun_BF2StandingBlaster</turretGunDef>
+		<turretTopDrawSize>2</turretTopDrawSize>
+		<turretTopOffset>(0, 0.5)</turretTopOffset>
 	  
-      <turretBurstCooldownTime>2.5</turretBurstCooldownTime>
+		<turretBurstWarmupTime>2.5</turretBurstWarmupTime>
+		<turretBurstCooldownTime>2.5</turretBurstCooldownTime>
     </building>
     <researchPrerequisites>
       <li>SniperTurret</li>

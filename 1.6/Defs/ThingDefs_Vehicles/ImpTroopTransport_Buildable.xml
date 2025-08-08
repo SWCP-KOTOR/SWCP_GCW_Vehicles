@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 
 <Defs>
-	<Vehicles.VehicleBuildDef ParentName="VehicleBaseBuildable">
+	<Vehicles.VehicleBuildDef ParentName="guy762_VehicleBaseBuildable_GroundVehicle">
 		<defName>guy762_SWVehicleBP_ImpTroopTransport</defName>
 		<label>K79-S80 troop transport</label>
 		<description>.</description>

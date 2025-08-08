@@ -29,6 +29,8 @@
 		<canOverlapZones>false</canOverlapZones>
 		<fillPercent>0.5</fillPercent>
 		<castEdgeShadows>false</castEdgeShadows>
+		
+		<uiOrder>100</uiOrder>
 		<designationCategory>MM_StarWarsShipBuildTab</designationCategory>
 		
 		<!-- <terrainAffordanceNeeded>Heavy</terrainAffordanceNeeded> -->

@@ -133,7 +133,8 @@
         <verbClass>Verb_Shoot</verbClass>
         <defaultProjectile>SWFixedTurretBullet_AAdoublered</defaultProjectile>
         <warmupTime>0.125</warmupTime>
-        <range>90</range>
+        <!-- <range>90</range> normal ground defense range -->
+        <range>250</range> <!-- ship defense range -->
 		
         <burstShotCount>6</burstShotCount>
 		<ticksBetweenBurstShots>6</ticksBetweenBurstShots>

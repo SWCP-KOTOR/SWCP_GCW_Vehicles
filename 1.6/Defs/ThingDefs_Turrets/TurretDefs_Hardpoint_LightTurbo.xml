@@ -130,7 +130,7 @@
         <defaultProjectile>SWFixedTurretBullet_AVheavydoublegreen</defaultProjectile>
         <warmupTime>2.5</warmupTime>
         <minRange>5</minRange>
-        <range>90</range>
+        <range>500</range>
         <burstShotCount>1</burstShotCount>
         <soundCast>kotorsound_turbolaser</soundCast>
         <soundCastTail>GunTail_Heavy</soundCastTail>

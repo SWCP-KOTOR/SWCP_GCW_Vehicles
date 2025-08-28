@@ -1,0 +1,359 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+	
+	<BackstoryDef>
+		<defName>guy762_Backstory_R2AstDrd</defName>
+		<title>R2-series astromech droid</title>
+		<titleShort>R2 unit</titleShort>
+		<description>This is an advanced utility droid, capable of many tasks.</description>
+		<slot>Childhood</slot>
+		<spawnCategories>
+			<li>guy762BSC_Droid_R2AstDrd</li>
+			<li>guy762BSC_Droid_all</li>
+		</spawnCategories>
+		<workDisables>
+			<li>Animals</li>
+			<li>Hunting</li>
+            <li>Caring</li>
+            <li>Artistic</li>
+            <li>Cooking</li>
+			<li>PlantWork</li>
+			<li>Mining</li>
+			<li>Social</li>
+			<li>Cleaning</li>
+		</workDisables>
+		<requiredWorkTags>
+			<li>Violent</li>
+			<li>Hauling</li>
+			<li>Crafting</li>
+			<li>Constructing</li>
+			<li>Intellectual</li>
+			<li>Firefighting</li>
+		</requiredWorkTags>
+		<forcedTraits>
+		  <TooSmart>0</TooSmart>
+		  <Asexual>0</Asexual>
+		</forcedTraits>
+	</BackstoryDef>
+	
+
+	
+	
+	
+	<AlienRace.ThingDef_AlienRace Name="SWCP_DroidRace_R2series" ParentName="guy762_KotORDroidBase">
+		<defName>SWCP_DroidRace_R2series</defName>
+		<label>R2-series astromech droid</label>
+		<description>.\n\nBy default, this droid is capable of the following work types:\n\n-Combat\n-Hauling\n-Crafting\n-Constructing\n-Intellectual\n-Firefighting</description>
+		<alienRace>
+			<graphicPaths>
+                <body>
+                    <path>Droid/R2Astromech/R2</path>
+                </body>
+				<bodyMasks>
+				  <path>Droid/R2Astromech/R2_mask</path>
+				</bodyMasks>
+				<head>
+                    <path>512blank</path>
+                </head>
+                <skinShader>Cutout</skinShader>
+            </graphicPaths>
+			<raceRestriction>
+				
+				<onlyUseRaceRestrictedWeapons>true</onlyUseRaceRestrictedWeapons>
+				<weaponList />
+				
+				<apparelList>
+				  <li>guy762_DroidArmorLte</li>
+				  <li>guy762_DroidArmorLte_czerka</li>
+				  <li>guy762_DroidArmorLte_env</li>
+				  <li>guy762_DroidArmorLte_desh</li>
+				  <li>guy762_DroidArmorLte_impact</li>
+				  <li>guy762_DroidArmorLte_composite</li>
+				  <li>guy762_DroidArmorLte_agrinium</li>
+				  
+				  <li>guy762_DroidSoftware_computer</li>
+				  <li>guy762_DroidSoftware_security</li>
+				  <li>guy762_DroidSoftware_lockout</li>
+				  <li>guy762_DroidSoftware_repair</li>
+				  <li>guy762_DroidSoftware_demo</li>
+				  <li>guy762_DroidSoftware_anatomy</li>
+				  
+				  <li>guy762_DroidHardware_agility</li>
+				  <li>guy762_DroidHardware_motivator</li>
+				  <li>guy762_DroidHardware_durability</li>
+				  <li>guy762_DroidHardware_parabolic</li>
+				  <li>guy762_DroidHardware_systems</li>
+				  <li>guy762_DroidHardware_remote</li>
+				  
+				  <li>guy762_DroidSensor_motion</li>
+				  <li>guy762_DroidSensor_surveillance</li>
+				  <li>guy762_DroidSensor_fighting</li>
+				  <li>guy762_DroidSensor_repair</li>
+				  <li>guy762_DroidSensor_memory</li>
+				  <li>guy762_DroidSensor_EMPresist</li>
+				  <li>guy762_DroidSensor_battle</li>
+				  <li>guy762_DroidSensor_microoptics</li>
+				  <li>guy762_DroidSensor_perception</li>
+				  
+				  <li>guy762_DroidGadget_laser</li>
+				  <li>guy762_DroidGadget_shock</li>
+				  <li>guy762_DroidGadget_firefoam</li>
+				  <li>guy762_DroidGadget_kolto</li>
+				  
+				  <!-- <li>guy762_DroidWeapon_holdout</li> -->
+				  <!-- <li>guy762_DroidWeapon_trishot</li> -->
+				  <!-- <li>guy762_DroidWeapon_pulse</li> -->
+				  <!-- <li>guy762_DroidWeapon_sonic</li> -->
+				  <!-- <li>guy762_DroidWeapon_plasma</li> -->
+				  <!-- <li>guy762_DroidWeapon_railgun</li> -->
+				  
+				  <!-- <li>guy762_DroidWeapon_flamethrower</li> -->
+				  <!-- <li>guy762_DroidWeapon_ion</li> -->
+				  <!-- <li>guy762_DroidWeapon_seekerrocket</li> -->
+				  <!-- <li>guy762_DroidWeapon_microrocket</li> -->
+				  <!-- <li>guy762_DroidWeapon_stunbeam</li> -->
+				  <!-- <li>guy762_DroidWeapon_toxbeam</li> -->
+				  
+				  <li>guy762_DroidHardware_scav</li>
+				  <li>guy762_DroidSensor_warfare</li>
+				</apparelList>
+				
+				<whiteTraitList>
+					<li>TooSmart</li>
+				</whiteTraitList>
+			</raceRestriction>
+            <generalSettings>
+                <alienPartGenerator>
+					<colorChannels Inherit="False">
+						<li>
+							<name>skin</name>
+							<first Class="ColorGenerator_Options">
+								<options>
+									<li> <!-- artoo's blue -->
+										<weight>10</weight>
+										<only>RGBA(60,50,150,255)</only>
+									</li>
+									<li> <!-- cherry -->
+										<weight>10</weight>
+										<only>RGBA(150,50,70,255)</only>
+									</li>
+									<li> <!-- average green -->
+										<weight>10</weight>
+										<only>RGBA(60,150,50,255)</only>
+									</li>
+									<li> <!-- barf green -->
+										<weight>10</weight>
+										<only>RGBA(145,150,50,255)</only>
+									</li>
+									<li> <!-- rust -->
+										<weight>10</weight>
+										<only>RGBA(150,95,50,255)</only>
+									</li>
+								</options>
+							</first>
+							<second Class="ColorGenerator_Options">
+								<options>
+									<li> <!-- grey -->
+										<weight>10</weight>
+										<only>RGBA(150,150,150,255)</only>
+									</li>
+									<li> <!--white-->
+										<weight>1</weight>
+										<only>RGBA(250,250,250,255)</only>
+									</li>
+								</options>
+							</second>
+						</li>
+					</colorChannels>
+					<headTypes>
+                        <li>guy762_DroidHeadType_null</li>
+                    </headTypes>
+					<customDrawSize>(0.9)</customDrawSize>
+                </alienPartGenerator>
+				<forcedRaceTraitEntries>
+				  <li>
+					<defName>Asexual</defName>
+				  </li>
+				  <li>
+					<defName>TooSmart</defName>
+				  </li>
+				</forcedRaceTraitEntries>
+            </generalSettings>
+		</alienRace>
+        <uiIconPath>UI/DroidIcons/Icon_R2</uiIconPath>
+		<statBases>
+			<MarketValue>12000</MarketValue>
+			<MoveSpeed>3</MoveSpeed>
+			<VacuumSpeedMultiplier MayRequire="kentington.saveourship2">2</VacuumSpeedMultiplier>
+			<ComfyTemperatureMin>-125</ComfyTemperatureMin>
+			<ComfyTemperatureMax>125</ComfyTemperatureMax>
+			
+			<GlobalLearningFactor>1.5</GlobalLearningFactor>
+			<WorkSpeedGlobal>1.2</WorkSpeedGlobal>
+			
+			<ArmorRating_Sharp>0.2</ArmorRating_Sharp>
+			<ArmorRating_Blunt>0.1</ArmorRating_Blunt>
+            <ArmorRating_Heat>0.3</ArmorRating_Heat>
+            <InjuryHealingFactor>1.75</InjuryHealingFactor>
+            <IncomingDamageFactor>0.95</IncomingDamageFactor>
+			
+            <StaggerDurationFactor MayRequire="Ludeon.RimWorld.Biotech">0.8</StaggerDurationFactor>
+            <EMPResistance MayRequire="Ludeon.RimWorld.Biotech">0.9</EMPResistance>
+			
+            <ABF_Stat_Synstruct_CoherenceRetention>1.5</ABF_Stat_Synstruct_CoherenceRetention>
+			
+            <!-- <ABF_Stat_Synstruct_NutritionalIntakeEfficiency>1.15</ABF_Stat_Synstruct_NutritionalIntakeEfficiency> -->
+            <!-- <ABF_Stat_Synstruct_ChargingSpeed>1.15</ABF_Stat_Synstruct_ChargingSpeed> -->
+			<ABF_Stat_Synstruct_MaxEnergy>500</ABF_Stat_Synstruct_MaxEnergy>
+            <ABF_Stat_Synstruct_EnergyConsumption>100</ABF_Stat_Synstruct_EnergyConsumption>
+			
+			<ABF_Stat_Artificial_ComplexityLimit>30</ABF_Stat_Artificial_ComplexityLimit>
+            <ABF_Stat_Artificial_SkillLimit>20</ABF_Stat_Artificial_SkillLimit>
+			
+			<Mass>35</Mass>
+		</statBases>
+		<race>
+			<body>ATR_KotORDroidBody_T3UD</body>
+			<hasGenders>false</hasGenders>
+			<lifeExpectancy>1000</lifeExpectancy>
+			<baseHealthScale>1.5</baseHealthScale>
+			<baseHungerRate>0.65</baseHungerRate>
+			<baseBodySize>0.65</baseBodySize>
+			<lifeStageAges Inherit="False">
+				<li>
+					<def>ABF_LifeStage_Artificial_Complete</def>
+					<minAge>0.0</minAge>
+					<!-- <soundAmbience>kotorsound_TsUD_ambient</soundAmbience> -->
+					<!-- <soundAngry>kotorsound_TsUD_angry</soundAngry> -->
+					<!-- <soundCall>kotorsound_TsUD_call</soundCall> -->
+					<!-- <soundWounded>kotorsound_TsUD_wounded</soundWounded> -->
+					<!-- <soundDeath>kotorsound_TsUD_death</soundDeath> -->
+				</li>
+			</lifeStageAges>
+		</race>
+		<modExtensions>
+			<li Class="ArtificialBeings.ABF_ArtificialPawnExtension">
+                <canBeSapient>false</canBeSapient>
+				<!--droneSkillLevel>16</droneSkillLevel-->
+				<droneSkillLevel>0</droneSkillLevel>
+				<maxDirectives>6</maxDirectives>
+				<inherentSkills>
+                    <li><key>Shooting</key><value>10</value></li>
+                    <li><key>Construction</key><value>14</value></li>
+                    <li><key>Crafting</key><value>14</value></li>
+                    <li><key>Intellectual</key><value>14</value></li>
+                </inherentSkills>
+				
+                <dronesCanHaveTraits>true</dronesCanHaveTraits>
+				
+				<!--ATTENTION: T3 namemakers now *have* to be in the pawnkinddefs so I don't have to make a new RaceDef just for T3 units with the specific name T3-M4-->
+				
+                <blacklistedNeeds>
+                    <li>DrugDesire</li>
+                    <li MayRequire="Dubwise.DubsBadHygiene">Hygiene</li>
+                    <li MayRequire="Dubwise.DubsBadHygiene">Bladder</li>
+                    <li MayRequire="Dubwise.DubsBadHygiene">DBHThirst</li>
+					<li MayRequire="rim.job.world">Sex</li>
+					<li>RoomSize</li>
+                    <li>Joy</li>
+                    <li>Beauty</li>
+                    <li>Comfort</li>
+                    <li>Outdoors</li>
+                    <li>Indoors</li>
+					<li>Mood</li>
+                </blacklistedNeeds>
+				<artificialNeeds>
+					<li>
+                        <key>ABF_Need_Synstruct_Components</key>
+                        <value>
+                            <maximumCapacity>1</maximumCapacity>
+                            <fallRatePerDay>0.01112</fallRatePerDay>
+                            <fallRateIsPercentage>false</fallRateIsPercentage>
+                            <displayFallRateAsPerYear>true</displayFallRateAsPerYear>
+                        </value>
+                    </li>
+                    <li><key>ABF_Need_Synstruct_Energy</key><value></value></li>
+                </artificialNeeds>
+				<medicineList>
+                    <li>ABF_Thing_Synstruct_RepairStimMinor</li>
+                    <li>ABF_Thing_Synstruct_RepairStim</li>
+                    <li>ABF_Thing_Synstruct_RepairStimUltra</li>
+                </medicineList>
+                <onlyUseRaceRestrictedMedicine>true</onlyUseRaceRestrictedMedicine>
+
+				<inherentWorkTypes>
+					<li>Hunting</li>
+					<li>Hauling</li>
+					<li>Smithing</li>
+					<li>Construction</li>
+					<li>Research</li>
+					<li>Firefighter</li>
+					<li>BasicWorker</li>
+					<li>ABF_WorkType_Artificial_Artificer</li>
+				</inherentWorkTypes>
+				<forbiddenWorkTypes>
+					<li>Art</li>
+					<li>Cleaning</li>
+					<li>Warden</li>
+					<li MayRequire="Orion.Hospitality">Diplomat</li>
+					<li MayRequire="Adamas.Storefront">Storefront_Selling</li>
+					<li MayRequire="Orion.Gastronomy">Gastronomy_Waiting</li>
+				</forbiddenWorkTypes>
+            </li>
+			<li Class="ArtificialBeings.ABF_SynstructExtension">
+                <playerReprogrammableDronePawnKindDef>SWCPDroidColonist_R2AstDrd</playerReprogrammableDronePawnKindDef>
+            </li>
+		</modExtensions>
+		<tools>
+			<li>
+				<label>head</label>
+				<capacities>
+					<li>Blunt</li>
+				</capacities>
+				<power>3</power>
+				<cooldownTime>2</cooldownTime>
+				<linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
+                <ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
+				<chanceFactor>0.2</chanceFactor>
+			</li>
+		</tools>
+		<recipes>
+            <li>ABF_Recipe_Synstruct_SupplyComponents</li>
+            <li>ABF_Recipe_Synstruct_InjectChemfuel</li>
+        </recipes>
+		<butcherProducts>
+            <KOTOR_AlloyDurasteel>20</KOTOR_AlloyDurasteel>
+			<Plasteel>20</Plasteel>
+			<ComponentIndustrial>8</ComponentIndustrial>
+			<ComponentSpacer>2</ComponentSpacer>
+			<TechprofSubpersonaCore>1</TechprofSubpersonaCore>
+		</butcherProducts>
+		<tradeTags>
+            <li>guy762TT_KotORDroids_techrare</li>
+		</tradeTags>
+	</AlienRace.ThingDef_AlienRace>
+	
+	
+	
+	<PawnKindDef Name="SWCPDroidColonist_R2AstDrd" ParentName="guy762_DroidPawnKindBase">
+		<defName>SWCPDroidColonist_R2AstDrd</defName>
+		<label>astromech</label>
+		<race>SWCP_DroidRace_R2series</race>
+		<nameMaker>SWCP_DroidNamer_R2AD</nameMaker>  <!-- ATTENTION: REQUIRED FOR ALL R2 PAWNS-->
+        <combatPower>50</combatPower>
+		<forcedTraits>
+			<TooSmart>0</TooSmart>
+			<Asexual>0</Asexual>
+		</forcedTraits>
+		<backstoryFiltersOverride>
+		  <li>
+			<categories>
+			  <li>guy762BSC_Droid_R2AstDrd</li>
+			</categories>
+		  </li>
+		</backstoryFiltersOverride>
+	</PawnKindDef>
+	
+
+</Defs>

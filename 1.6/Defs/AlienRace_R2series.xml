@@ -48,10 +48,10 @@
 		<alienRace>
 			<graphicPaths>
                 <body>
-                    <path>Droid/R2Astromech/R2</path>
+                    <path>Droid/R4Astromech/R4</path>
                 </body>
 				<bodyMasks>
-				  <path>Droid/R2Astromech/R2_mask</path>
+				  <path>Droid/R4Astromech/R4_mask</path>
 				</bodyMasks>
 				<head>
                     <path>512blank</path>

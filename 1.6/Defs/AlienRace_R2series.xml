@@ -48,10 +48,10 @@
 		<alienRace>
 			<graphicPaths>
                 <body>
-                    <path>Droid/R4Astromech/R4</path>
+                    <path>Droid/R2Astromech/R2</path>
                 </body>
 				<bodyMasks>
-				  <path>Droid/R4Astromech/R4_mask</path>
+				  <path>Droid/R2Astromech/R2_mask</path>
 				</bodyMasks>
 				<head>
                     <path>512blank</path>
@@ -130,9 +130,9 @@
 							<name>skin</name>
 							<first Class="ColorGenerator_Options">
 								<options>
-									<li> <!-- artoo's blue -->
+									<li> <!-- pool blue -->
 										<weight>10</weight>
-										<only>RGBA(60,50,150,255)</only>
+										<only>RGBA(0,125,170,255)</only>
 									</li>
 									<li> <!-- cherry -->
 										<weight>10</weight>
@@ -140,15 +140,31 @@
 									</li>
 									<li> <!-- average green -->
 										<weight>10</weight>
-										<only>RGBA(60,150,50,255)</only>
+										<only>RGBA(20,130,35,255)</only>
 									</li>
-									<li> <!-- barf green -->
+									<li> <!-- lime green -->
 										<weight>10</weight>
-										<only>RGBA(145,150,50,255)</only>
+										<only>RGBA(200,225,0,255)</only>
 									</li>
 									<li> <!-- rust -->
 										<weight>10</weight>
 										<only>RGBA(150,95,50,255)</only>
+									</li>
+									<li> <!-- yellow -->
+										<weight>10</weight>
+										<only>RGBA(255,220,0,255)</only>
+									</li>
+									<li> <!-- violet -->
+										<weight>10</weight>
+										<only>RGBA(115,50,145,255)</only>
+									</li>
+									<li> <!-- pink -->
+										<weight>10</weight>
+										<only>RGBA(220,85,160,255)</only>
+									</li>
+									<li> <!-- artoo's blue -->
+										<weight>0.000001</weight>
+										<only>RGBA(60,50,150,255)</only>
 									</li>
 								</options>
 							</first>

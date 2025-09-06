@@ -1,0 +1,477 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+	
+	<BackstoryDef>
+		<defName>guy762_Backstory_R2AstDrd</defName>
+		<title>R2-series astromech droid</title>
+		<titleShort>R2 unit</titleShort>
+		<description>This is an advanced utility droid, capable of many tasks.</description>
+		<slot>Childhood</slot>
+		<spawnCategories>
+			<li>guy762BSC_Droid_R2AstDrd</li>
+			<li>guy762BSC_Droid_all</li>
+		</spawnCategories>
+		<workDisables>
+			<li>Animals</li>
+			<li>Hunting</li>
+            <li>Caring</li>
+            <li>Artistic</li>
+            <li>Cooking</li>
+			<li>PlantWork</li>
+			<li>Mining</li>
+			<li>Social</li>
+			<li>Cleaning</li>
+		</workDisables>
+		<requiredWorkTags>
+			<li>Violent</li>
+			<li>Hauling</li>
+			<li>Crafting</li>
+			<li>Constructing</li>
+			<li>Intellectual</li>
+			<li>Firefighting</li>
+		</requiredWorkTags>
+		<forcedTraits>
+		  <TooSmart>0</TooSmart>
+		  <Asexual>0</Asexual>
+		</forcedTraits>
+	</BackstoryDef>
+	
+
+	
+	
+	
+	<ThingDef Name="SWCP_BnSDroidRace_R2series" ParentName="SWCP_BnSDroidRace_BASE">
+		<defName>SWCP_BnSDroidRace_R2series</defName>
+		<label>R2-series astromech droid</label>
+		<description>.\n\nBy default, this droid is capable of the following work types:\n\n-Combat\n-Hauling\n-Crafting\n-Constructing\n-Intellectual\n-Firefighting</description>
+
+		<statBases>
+			<MarketValue>12000</MarketValue>
+			<MoveSpeed>3</MoveSpeed>
+			<VacuumSpeedMultiplier MayRequire="kentington.saveourship2">2</VacuumSpeedMultiplier>
+			<ComfyTemperatureMin>-125</ComfyTemperatureMin>
+			<ComfyTemperatureMax>125</ComfyTemperatureMax>
+			
+			<GlobalLearningFactor>1.5</GlobalLearningFactor>
+			<WorkSpeedGlobal>1.2</WorkSpeedGlobal>
+			
+			<ArmorRating_Sharp>0.2</ArmorRating_Sharp>
+			<ArmorRating_Blunt>0.1</ArmorRating_Blunt>
+            <ArmorRating_Heat>0.3</ArmorRating_Heat>
+            <InjuryHealingFactor>1.75</InjuryHealingFactor>
+            <IncomingDamageFactor>0.95</IncomingDamageFactor>
+			
+            <StaggerDurationFactor MayRequire="Ludeon.RimWorld.Biotech">0.8</StaggerDurationFactor>
+            <EMPResistance MayRequire="Ludeon.RimWorld.Biotech">0.9</EMPResistance>
+			
+			<Mass>35</Mass>
+		</statBases>
+		
+		
+		
+		<race>
+			<body>SWCP_BnSDroidBody_GenericAstromech</body>
+
+			<soundCallIntervalRange>1000~2000</soundCallIntervalRange>
+			<lifeStageAges Inherit="False">
+				<!-- We're not using custom defs because some Rimworld stuff is hardcoded to look for certain defs.
+				 Better from a compatibility standpoint to simply make the stages exist but not be active. -->
+				<li>
+				  <def>HumanlikeBaby</def>
+				  <minAge>0</minAge>
+				  <soundWounded>Pawn_Mech_Scyther_Wounded</soundWounded>
+				  <soundDeath>Pawn_Mech_Scyther_Death</soundDeath>
+				  <soundCall>Pawn_Mech_Scyther_Call</soundCall>
+				</li>
+				<li>
+				  <def>HumanlikeChild</def>
+				  <minAge>3</minAge>
+				  <soundWounded>Pawn_Mech_Scyther_Wounded</soundWounded>
+				  <soundDeath>Pawn_Mech_Scyther_Death</soundDeath>
+				  <soundCall>Pawn_Mech_Scyther_Call</soundCall>
+				</li>
+				<li MayRequire="Ludeon.RimWorld.Biotech">
+				  <def>HumanlikePreTeenager</def>
+				  <minAge>9</minAge>
+				  <soundWounded>Pawn_Mech_Scyther_Wounded</soundWounded>
+				  <soundDeath>Pawn_Mech_Scyther_Death</soundDeath>
+				  <soundCall>Pawn_Mech_Scyther_Call</soundCall>
+				</li>
+				<li>
+				  <def>HumanlikeTeenager</def>
+				  <minAge>13</minAge>
+				  <soundWounded>Pawn_Mech_Scyther_Wounded</soundWounded>
+				  <soundDeath>Pawn_Mech_Scyther_Death</soundDeath>
+				  <soundCall>Pawn_Mech_Scyther_Call</soundCall>
+				</li>
+				<li>
+				  <def>HumanlikeAdult</def>
+				  <minAge>18</minAge>
+				  <soundWounded>Pawn_Mech_Scyther_Wounded</soundWounded>
+				  <soundDeath>Pawn_Mech_Scyther_Death</soundDeath>
+				  <soundCall>Pawn_Mech_Scyther_Call</soundCall>
+				  
+				  <!-- <soundAmbience>kotorsound_TsUD_ambient</soundAmbience> -->
+				  <!-- <soundAngry>kotorsound_TsUD_angry</soundAngry> -->
+				</li>
+			</lifeStageAges>
+
+		</race>
+
+		<modExtensions>
+		  <li Class="BigAndSmall.RaceExtension">
+			<raceHediff>SWCP_DroidHediff_R2Astromech</raceHediff>
+		  </li>
+		</modExtensions>
+		
+		<tools Inherit="False">
+			<li>
+				<label>head</label>
+				<capacities>
+					<li>Blunt</li>
+				</capacities>
+				<power>3</power>
+				<cooldownTime>2</cooldownTime>
+				<linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
+                <ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
+				<chanceFactor>0.2</chanceFactor>
+			</li>
+		</tools>
+		<butcherProducts>
+            <KOTOR_AlloyDurasteel>20</KOTOR_AlloyDurasteel>
+			<Plasteel>20</Plasteel>
+			<ComponentIndustrial>8</ComponentIndustrial>
+			<ComponentSpacer>2</ComponentSpacer>
+			<TechprofSubpersonaCore>1</TechprofSubpersonaCore>
+		</butcherProducts>
+		<tradeTags>
+            <li>guy762TT_KotORDroids_techrare</li>
+		</tradeTags>
+	</ThingDef>
+	
+	
+	
+	
+	
+	
+	
+	<!-- <HediffDef ParentName="SWCP_DroidHediff_BASE"> -->
+	<HediffDef>
+		<defName>SWCP_DroidHediff_R2Astromech</defName>
+		<label>R2-series Astromech</label>
+		<description>.</description>
+		
+		<hediffClass>BigAndSmall.RaceTracker</hediffClass>
+		
+		<abilities></abilities>
+		
+		<comps Inherit="False">
+		  <li Class="BigAndSmall.CompProperties_Race">
+			<!-- Cosmetic -->
+			<bodyDefOverride>Female</bodyDefOverride>
+			<bodyDefOverride_Female>Female</bodyDefOverride_Female>
+			<disableHair>true</disableHair>
+			<disableBeards>true</disableBeards>
+			<canSwapAwayFrom>false</canSwapAwayFrom>
+		  </li>
+		</comps>
+		<stages>
+			<li>
+				<disabledWorkTags>
+					<li>Animals</li>
+					<!-- <li>Hunting</li> -->
+					<li>Caring</li>
+					<li>Artistic</li>
+					<li>Cooking</li>
+					<li>PlantWork</li>
+					<li>Mining</li>
+					<li>Social</li>
+					<li>Cleaning</li>
+				</disabledWorkTags>
+			</li>
+		</stages>
+
+		<modExtensions>
+		  <li Class="BigAndSmall.PawnExtension">
+			
+			<aptitudes>
+				<Shooting>10</Shooting>
+				<Melee>0</Melee>
+				<Construction>14</Construction>
+				<Mining>0</Mining>
+				<Cooking>0</Cooking>
+				<Plants>0</Plants>
+				<Animals>0</Animals>
+				<Crafting>14</Crafting>
+				<Artistic>-20</Artistic>
+				<Medicine>0</Medicine>
+				<Social>0</Social>
+				<Intellectual>14</Intellectual>
+			</aptitudes>
+			<forcedHediffs><li>SWCP_DroidHediff_NonSapientDroid</li></forcedHediffs>
+			
+			<traitFilters>
+			  <whitelist>
+				<li>Asexual</li>
+				<li>TooSmart</li>
+			  </whitelist>
+			</traitFilters>
+			
+			
+			
+			<apparelRestrictions>
+				<absolutelyNothing>True</absolutelyNothing>
+				<tags>
+					<allowlist>
+						<li>SWCPDroidApparelRestrictionTag_LightArmor</li>
+
+						<li>SWCPDroidApparelRestrictionTag_SoftwareTechSlot</li>
+						<li>SWCPDroidApparelRestrictionTag_HardwareTechSlot</li>
+						<li>SWCPDroidApparelRestrictionTag_SensorTechSlot</li>
+						
+						<li>SWCPDroidApparelRestrictionTag_GadgetWeaponSlot</li>
+
+						<li>SWCPDroidApparelRestrictionTag_DroidScavUpgrade</li>
+					</allowlist>
+				</tags>
+			</apparelRestrictions>
+			
+			
+			
+			
+			<bodyPaths>
+			  <Body_Female>Droid/R2Astromech/R2</Body_Female>
+			  <Body_Male>Droid/R2Astromech/R2</Body_Male>
+			</bodyPaths>
+			<forceFemaleBody>true</forceFemaleBody>
+			
+			<bodyMaterial>
+			  <shader>BS_CutoutThreeColor</shader>
+			  <overrideDesiccated>true</overrideDesiccated>
+			  
+			  <colorA>
+				<hairColor>true</hairColor>
+				<altDefs><li>BS_CustomGlobalA</li></altDefs>
+				<!-- <altsLate> -->
+				  <!-- <li> -->
+					<!-- <triggers><li>HasForcedSkinColorGene</li></triggers> -->
+					<!-- <skinColor>true</skinColor> -->
+				  <!-- </li> -->
+				<!-- </altsLate> -->
+			  </colorA>
+			  <colorB>
+				<color>150,150,150</color>
+				<altDefs><li>BS_CustomGlobalB</li></altDefs>
+				<!-- <altsLate> -->
+				  <!-- <li> -->
+					<!-- <triggers><li>HasForcedSkinColorGene</li></triggers> -->
+					<!-- <hairColor>true</hairColor> -->
+				  <!-- </li> -->
+				<!-- </altsLate> -->
+			  </colorB>
+			  <colorC>
+				<!-- <color>250,250,250</color> -->
+				<skinColor>true</skinColor>
+				<altDefs><li>BS_CustomGlobalC</li></altDefs>
+				<!-- <altsLate> -->
+				  <!-- <li> -->
+					<!-- <triggers><li>HasForcedSkinColorGene</li></triggers> -->
+					<!-- <hairColor>true</hairColor> -->
+				  <!-- </li> -->
+				<!-- </altsLate> -->
+			  </colorC>
+			  
+			</bodyMaterial>
+			
+			
+			<headPaths>
+			  <Female>512blank</Female>
+			  <Male>512blank</Male>
+			</headPaths>
+			<headMaterial>
+			  <shader>BS_CutoutThreeColor</shader>
+			  <overrideDesiccated>true</overrideDesiccated>
+			  <colorA>
+				<hairColor>true</hairColor>
+				<altDefs><li>BS_CustomGlobalA</li></altDefs>
+			  </colorA>
+			  <colorB>
+				<color>150,150,150</color>
+				<altDefs><li>BS_CustomGlobalB</li></altDefs>
+			  </colorB>
+			  <colorC>
+				<skinColor>true</skinColor>
+				<altDefs><li>BS_CustomGlobalC</li></altDefs>
+			  </colorC>
+			</headMaterial>
+			
+			<forcedEndogenes>
+				<li MayRequire="Ludeon.Rimworld.Biotech">Body_Standard</li>
+				<li MayRequire="Ludeon.Rimworld.Biotech">guy762_DebugHead_nullForDroids</li>
+			</forcedEndogenes>
+			
+			<randomHairGenes>
+				<li>Hair_LightBlue</li>
+				<li>Hair_DarkBlack</li>
+				<li>Hair_Pink</li>
+				<li>Hair_LightPurple</li>
+				<li>Hair_LightBlue</li>
+				<li>Hair_LightTeal</li>
+				<li>Hair_LightGreen</li>
+				<li>Hair_LightOrange</li>
+				<li>Hair_BrightRed</li>
+			</randomHairGenes>
+			
+		  </li>
+		</modExtensions>
+	</HediffDef>
+	
+	
+	
+	
+	
+	
+	<GeneDef ParentName="BS_MechanicalTagged">
+		<defName>SWCPDroidBodyGene_R2Series</defName>
+		<label>R2-series Astromech Chassis</label>
+		<description>Carriers of this gene have the apperance a mechanical body. Only compatible with standard body.</description>
+		<iconPath>UI/DroidIcons/Icon_R2</iconPath>
+		<selectionWeight>0</selectionWeight>
+		<biostatMet>0</biostatMet>
+		<!-- <skinIsHairColor>true</skinIsHairColor> -->
+		<tattoosVisible>false</tattoosVisible>
+		<exclusionTags>
+		  <li>AG_Bodies</li>
+		  <li>Bodies</li>
+		  <li>Body</li>
+		  <li>BS_Body</li>
+		  <li>Fur</li>
+		</exclusionTags>
+		<bodyType>Standard</bodyType>
+		<modExtensions>
+		  <li Class="BigAndSmall.PawnExtension">
+			<bodyPaths>
+			  <Body_Female>Droid/R2Astromech/R2</Body_Female>
+			  <Body_Male>Droid/R2Astromech/R2</Body_Male>
+			</bodyPaths>
+			<headPaths>
+			  <Female>512blank</Female>
+			  <Male>512blank</Male>
+			</headPaths>
+
+			<bodyMaterial>
+			  <shader>BS_CutoutThreeColor</shader>
+			  <overrideDesiccated>true</overrideDesiccated>
+			  
+			  <colorA>
+				<hairColor>true</hairColor>
+				<altDefs><li>BS_CustomGlobalA</li></altDefs>
+				<!-- <altsLate> -->
+				  <!-- <li> -->
+					<!-- <triggers><li>HasForcedSkinColorGene</li></triggers> -->
+					<!-- <skinColor>true</skinColor> -->
+				  <!-- </li> -->
+				<!-- </altsLate> -->
+			  </colorA>
+			  <colorB>
+				<color>150,150,150</color>
+				<altDefs><li>BS_CustomGlobalB</li></altDefs>
+				<!-- <altsLate> -->
+				  <!-- <li> -->
+					<!-- <triggers><li>HasForcedSkinColorGene</li></triggers> -->
+					<!-- <hairColor>true</hairColor> -->
+				  <!-- </li> -->
+				<!-- </altsLate> -->
+			  </colorB>
+			  <colorC>
+				<altDefs>
+				  <li>BS_CustomGlobalC</li>
+				</altDefs>
+				<colourRange>
+				  <li>220, 255, 255</li>
+				  <li>190, 190, 190</li>
+				  <li>255, 255, 255</li>
+				  <li>255, 255, 255</li>
+				  <li>245, 255, 255</li>
+				  <li>255, 230, 220</li>
+				  <li>242, 237, 224</li>
+				  <li>255, 239, 213</li>
+				</colourRange>
+			  </colorC>
+			  
+			</bodyMaterial>
+		  </li>
+		</modExtensions>
+	</GeneDef>
+	
+	<XenotypeDef>
+		<defName>SWCPDroidXenotype_R2Series</defName>
+		<label>R2-series Astromech</label>
+		<description>.</description>
+		<iconPath>UI/DroidIcons/Icon_R2</iconPath>
+		<!-- <combatPowerFactor>1</combatPowerFactor> -->
+		<inheritable>true</inheritable>
+		<factionlessGenerationWeight>0</factionlessGenerationWeight>
+		<genes>
+		  <li>SWCPDroidBodyGene_R2Series</li>
+		  <li>Beard_NoBeardOnly</li>
+		  <li>Hair_BaldOnly</li>
+		  <li>guy762_DebugHead_nullForDroids</li>
+		  <li MayRequire="RedMattis.BigSmall.Core">BS_AcidResistanceMid</li>
+		</genes>
+		<modExtensions>
+		  <li Class="BigAndSmall.XenotypeExtension">
+			<setRace>SWCP_BnSDroidRace_R2series</setRace>
+			<forceRace>true</forceRace>
+		  </li>
+		</modExtensions>
+	</XenotypeDef>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+
+	
+	
+	
+	
+	
+	
+	
+	
+	<PawnKindDef Name="SWCPDroidColonistBnS_R2AstDrd" ParentName="guy762_DroidPawnKindBase">
+		<defName>SWCPDroidColonistBnS_R2AstDrd</defName>
+		<label>astromech</label>
+		<nameMaker>SWCP_DroidNamer_R2AD</nameMaker>
+		
+		<race>SWCP_BnSDroidRace_R2series</race>
+		<useFactionXenotypes>false</useFactionXenotypes>
+		<xenotypeSet Inherit="False">
+		  <xenotypeChances>
+			<SWCPDroidXenotype_R2Series MayRequire="Ludeon.Rimworld.Biotech">999</SWCPDroidXenotype_R2Series>
+		  </xenotypeChances>
+		</xenotypeSet>
+		
+        <combatPower>50</combatPower>
+		<forcedTraits>
+			<TooSmart>0</TooSmart>
+			<Asexual>0</Asexual>
+		</forcedTraits>
+		<backstoryFiltersOverride>
+		  <li>
+			<categories>
+			  <li>guy762BSC_Droid_R2AstDrd</li>
+			</categories>
+		  </li>
+		</backstoryFiltersOverride>
+	</PawnKindDef>
+	
+
+</Defs>

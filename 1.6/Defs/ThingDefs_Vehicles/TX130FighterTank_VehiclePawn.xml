@@ -185,6 +185,8 @@
 						<li>Turret</li>
 					</handlingTypes>
 					
+					<comfort>-0.125</comfort>
+					
 					<turretIds>
 						<li>TX130Key_gun_1</li>
 						<li>TX130Key_gun_2</li>

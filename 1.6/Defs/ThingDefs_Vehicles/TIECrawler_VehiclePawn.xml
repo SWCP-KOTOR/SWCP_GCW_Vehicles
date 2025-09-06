@@ -125,7 +125,6 @@
 						<li>Movement</li>
 						<li>Turret</li>
 					</handlingTypes>
-					<comfort>-0.25</comfort>
 					
 					<turretIds>
 						<li>TIECrawlerKey_gun_1</li>

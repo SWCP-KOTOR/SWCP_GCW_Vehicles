@@ -1,0 +1,639 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<Defs>
+	
+	<Vehicles.VehicleDef Name="guy762_SWVehicle_BanthaIISkiff" ParentName="guy762_GroundVehiclePawn_base">
+		<defName>guy762_SWVehicle_BanthaIISkiff</defName>
+		<label>Bantha-II Cargo Skiff</label>
+		<description>. \n\n&lt;color=#bb8f04&gt;Crew:&lt;/color&gt; Driver x1</description>
+		
+		<graphicData>
+			<texPath>LandVehicles/BanthaIISkiff/BanthaIISkiff_L1</texPath>
+			<graphicClass>Vehicles.Graphic_Vehicle</graphicClass>
+			<shaderType>CutoutComplexPattern</shaderType>
+			<drawSize>(9,9)</drawSize>
+			
+			<color>(120,95,60)</color> <!-- skiff brown -->
+		</graphicData>
+		
+		<fillPercent>0.7</fillPercent>
+		
+		<nameable>false</nameable>
+		<buildDef>guy762_SWVehicleBP_BanthaIISkiff</buildDef>
+		
+		<size>(4,8)</size>
+		<uiIconScale>1</uiIconScale>
+		
+		
+		<vehicleCategory>Transport</vehicleCategory>
+		<techLevel>Spacer</techLevel>
+		<vehicleType>Land</vehicleType>
+				
+		<statBases>
+			<!--ArmorRating_Sharp>+0.05</ArmorRating_Sharp>
+			<ArmorRating_Blunt>-0.1</ArmorRating_Blunt>        BASE CURVE FOR HARD ARMOR
+			<ArmorRating_Heat>+0.15</ArmorRating_Heat-->
+			<ArmorRating_Sharp>0.35</ArmorRating_Sharp>
+			<ArmorRating_Blunt>0.2</ArmorRating_Blunt> <!-- # of estimated XWMG hull points * 0.1, apply to hard armor curve -->
+			<ArmorRating_Heat>0.45</ArmorRating_Heat>
+			<MaxHitPoints>300</MaxHitPoints> <!-- # of estimated XWMG hull points * 100 -->
+			
+			<Flammability>0.5</Flammability>
+			<MarketValue>8000</MarketValue>
+		</statBases>
+		
+		<soundSustainersOnEvent>
+			<!--li>
+				<start>MoveStop</start>
+				<stop>MoveStart</stop>
+				<value>kotorsound_speederbike_idle</value>
+			</li-->
+			<li>
+				<start>MoveStart</start>
+				<stop>MoveStop</stop>
+				<value>kotorsound_speederbike_moving</value>
+			</li>
+		</soundSustainersOnEvent>
+		
+		<soundOneShotsOnEvent>
+			<li>
+				<key>IgnitionOn</key>
+				<value>kotorsound_speederbike_activate</value>
+			</li>
+			<li>
+				<key>IgnitionOff</key>
+				<value>kotorsound_speederbike_deactivate</value>
+			</li>
+			<!-- <li> -->
+				<!-- <key>DamageTaken</key> -->
+				<!-- <value>kotorsound_speederbike_damaged</value> -->
+			<!-- </li> -->
+			<!-- <li> -->
+				<!-- <key>CargoAdded</key> -->
+				<!-- <value>kotorsound_bag_open</value> -->
+			<!-- </li> -->
+			<!-- <li> -->
+				<!-- <key>CargoRemoved</key> -->
+				<!-- <value>kotorsound_bag_close</value> -->
+			<!-- </li> -->
+		</soundOneShotsOnEvent>
+		
+		<race>
+			<baseBodySize>1</baseBodySize>
+		</race>
+		
+		<drawProperties>
+			<graphicOverlays>
+				<li>
+					<identifier>Console</identifier>
+					<graphicData>
+						<texPath>LandVehicles/BanthaIISkiff/SkiffConsole</texPath>
+						<graphicClass>Vehicles.Graphic_Vehicle</graphicClass> <!-- Graphic_RGB if not using the pattern system -->
+						<shaderType>CutoutComplexPattern</shaderType>
+						<drawSize>(1,1)</drawSize>
+						<layer>27</layer>
+						<!-- <layerNorth>1</layerNorth> -->
+						
+						<color>(120,105,90)</color> <!-- grey brown -->
+						
+						<drawOffsetEast>(-2.125,0,0.4)</drawOffsetEast>
+						<drawOffsetNorth>(0,0,-1.5)</drawOffsetNorth>
+						<drawOffsetSouth>(0,0,1.5)</drawOffsetSouth>
+						<drawOffsetWest>(2.125,0,0.4)</drawOffsetWest>
+					</graphicData>
+				</li>
+				<li>
+					<identifier>GuardRails</identifier>
+					<graphicData>
+						<texPath>LandVehicles/BanthaIISkiff/BanthaIISkiff_L2</texPath>
+						<graphicClass>Vehicles.Graphic_Vehicle</graphicClass> <!-- Graphic_RGB if not using the pattern system -->
+						<shaderType>CutoutComplexPattern</shaderType>
+						<drawSize>(9,9)</drawSize>
+						<layer>28</layer>
+						
+						<color>(120,95,60)</color> <!-- skiff brown -->
+					</graphicData>
+				</li>
+				<li>
+					<identifier>GuardRailsII</identifier>
+					<graphicData>
+						<texPath>LandVehicles/BanthaIISkiff/BanthaIISkiff_L3</texPath>
+						<graphicClass>Vehicles.Graphic_Vehicle</graphicClass> <!-- Graphic_RGB if not using the pattern system -->
+						<shaderType>CutoutComplexPattern</shaderType>
+						<drawSize>(9,9)</drawSize>
+						<layer>30</layer>
+						
+						<color>(120,95,60)</color> <!-- skiff brown -->
+					</graphicData>
+				</li>
+			</graphicOverlays>
+		</drawProperties>
+		
+		<vehicleStats>
+			<Mass>600</Mass>
+			<MoveSpeed>20</MoveSpeed>
+			<CargoCapacity>250</CargoCapacity>
+			<RepairRate>1</RepairRate>
+			<!--AccelerationRate>0.08</AccelerationRate-->
+		</vehicleStats>
+		
+		<properties>
+			<diagonalRotation>false</diagonalRotation>
+			<manhunterTargetsVehicle>true</manhunterTargetsVehicle>
+			
+			<worldSpeedMultiplier>0.5</worldSpeedMultiplier> <!-- higher number = faster travel -->
+			<winterSpeedMultiplier>1.5</winterSpeedMultiplier> <!-- lower number = faster winter travel -->
+			<offRoadMultiplier>1</offRoadMultiplier> <!-- lower number = faster travel -->
+			
+			<customRoadCosts AssignDefaults = "0.4" /> <!-- vanilla default is 0.5, lower number = faster -->
+			<!-- <customTerrainCosts AllowTerrainWithTag="Water" PathCost="1"/> -->
+			<track Class = "Vehicles.VehicleTrack_Wake">
+				<speed>2</speed>
+			</track>
+			
+			<riverCost>1</riverCost> <!-- higher = slower, <1 = very fast on world map -->
+			
+			<!-- <customHillinessCosts> -->
+				<!-- <SmallHills>0.25</SmallHills> -->
+				<!-- <LargeHills>0.75</LargeHills> -->
+				<!-- <Mountainous>1.5</Mountainous> -->
+				<!-- <Impassable>1.5</Impassable> -->
+			<!-- </customHillinessCosts> -->
+			
+			<!--customWeatherCosts>
+				<Dusting>4</Dusting>
+				<Thin>8</Thin>
+				<Medium>16</Medium>
+				<Thick>24</Thick>
+			</customWeatherCosts-->
+			
+			<roles>
+				<li>
+					<key>driver</key>
+					<label>Driver</label>
+					<slots>1</slots>
+					<slotsToOperate>1</slotsToOperate>
+					<exposed>true</exposed>
+					
+					<hitbox>
+						<side>Body</side>
+					</hitbox>
+					
+					<handlingTypes>
+						<li>Movement</li>
+					</handlingTypes>
+					
+					<comfort>-0.125</comfort>
+				
+					<pawnRenderer>
+						<layerEast>26</layerEast>
+						<layerWest>26</layerWest>
+						
+						<layer>0</layer>
+						<layerNorth>26</layerNorth>
+						<layerSouth>24</layerSouth>
+						
+						<drawOffsetNorth>(0,0,-2)</drawOffsetNorth>
+						
+						<drawOffsetSouth>(0,0,2)</drawOffsetSouth>
+						
+						<drawOffsetEast>(-3,0,0.4)</drawOffsetEast>
+						
+						<drawOffsetWest>(3,0,0.4)</drawOffsetWest>
+					</pawnRenderer>
+				</li>
+			</roles>
+		</properties>
+		
+		<components>
+			<li>
+				<key>BanthaIISkiffKey_hull</key>
+				<label>Hull</label>
+				<depth>External</depth>
+				
+				<armor> <!-- EaWX health/50 = hull points, round up -->
+					<ArmorRating_Sharp>1.35</ArmorRating_Sharp>
+					<ArmorRating_Blunt>1.2</ArmorRating_Blunt> <!-- # of estimated XWMG hull points * 0.1, apply to hard armor curve -->
+					<ArmorRating_Heat>1.45</ArmorRating_Heat>
+					<IncomingDamageFactor>-0.05</IncomingDamageFactor> <!-- unarmored: 0.05 | light vehicles: 0.15 | medium vehicles: 0.25 | heavy vehicles: 0.35 -->
+				</armor>
+				<health>300</health> <!-- # of estimated XWMG hull points * 100 -->
+				
+				<hitbox>
+					<side>Body</side>
+				</hitbox>
+			</li>
+			<li>
+				<key>BanthaIISkiffKey_engine</key>
+				<label>Engine</label>
+				<health>1</health>
+				<priorityStatEfficiency>true</priorityStatEfficiency>
+				<depth>Internal</depth>
+				
+				<reactors>
+					<li Class = "Vehicles.Reactor_Explosive">
+						<indicator>VF_Explosive</indicator>
+						<chance>0.25</chance>
+						<maxHealth>0.2</maxHealth>
+						<radius>3</radius>
+						<damageDef>guy762_ExplosiveDamage_energy</damageDef>
+					</li>
+				</reactors>
+				
+				<categories>
+					<li>MoveSpeed</li>
+				</categories>
+			</li>
+			<li>
+				<key>BanthaIISkiffKey_repulsor</key>
+				<label>Repulsorlift Generator</label>
+				<health>1</health>
+				<depth>Internal</depth>
+				
+				<categories>
+					<li>MoveSpeed</li>
+				</categories>
+			</li>
+			<li>
+				<key>BanthaIISkiffKey_thrust_one</key>
+				<label>Port Repulsor Vane</label>
+				<health>1</health>
+				<depth>Internal</depth>
+				
+				<tags>
+					<li>Wheel</li>
+				</tags>
+				
+				<categories>
+					<li>MoveSpeed</li>
+				</categories>
+			</li>
+			<li>
+				<key>BanthaIISkiffKey_thrust_two</key>
+				<label>Starboard Repulsor Vane</label>
+				<health>1</health>
+				<depth>Internal</depth>
+				
+				<tags>
+					<li>Wheel</li>
+				</tags>
+				
+				<categories>
+					<li>MoveSpeed</li>
+				</categories>
+			</li>
+		</components>
+
+		<!--modExtensions>
+			<li Class="VanillaVehiclesExpanded.StatExtension">
+				<statToAdd>
+					<li>VVE_VehicleTier</li>
+				</statToAdd>
+				<statValues>
+					<li>VVE_Tier1</li>
+				</statValues>
+				<statDescriptions>
+					<li>VVE_Tier1Desc</li>
+				</statDescriptions>
+			</li>
+		</modExtensions-->
+		
+		<comps>
+			<li Class="Vehicles.CompProperties_FueledTravel">
+				<electricPowered>true</electricPowered>
+				<fuelConsumptionRate>10</fuelConsumptionRate>
+				<fuelCapacity>175</fuelCapacity>
+				<fuelConsumptionWorldMultiplier>15</fuelConsumptionWorldMultiplier>
+				
+				<targetFuelLevelConfigurable>true</targetFuelLevelConfigurable>
+				<ambientHeat>1.0</ambientHeat>
+			</li>
+		</comps>
+		
+		<thingClass>VehicleMapFramework.VehiclePawnWithMap_Hover</thingClass>
+		<enabled>Player</enabled>
+		<modExtensions>
+			<li Class="VehicleMapFramework.VehicleMapProps">
+				<size>(2,4)</size>
+				<offsetNorth>(0,0,0)</offsetNorth>
+				
+				<offsetSouth>(0,0,-0.5)</offsetSouth>
+				
+				<offsetEast>(0,0,0)</offsetEast>
+			</li>
+		</modExtensions>
+	</Vehicles.VehicleDef>
+	
+	
+	
+	<Vehicles.VehicleTurretDef ParentName="guy762_VehicleTurretBASE">
+		<defName>guy762_VehicleTurret_SkiffAV</defName>
+		<label>Skiff AV pontoon gun</label>
+		<description>The anti-vehicle blaster of a Bantha-II Skiff.</description>
+		
+		<turretType>Rotatable</turretType>
+		<shotSound>kotorsound_AATgun</shotSound>
+		
+		<projectile>SWVehicleBullet_AVred_light</projectile>
+		<reloadTimer>3.5</reloadTimer>
+		<warmUpTimer>0.5</warmUpTimer>
+		
+		<magazineCapacity>999</magazineCapacity>
+		
+		<autoSnapTargeting>true</autoSnapTargeting>
+		<rotationSpeed>5</rotationSpeed>
+		
+		<projectileOffset>2.1</projectileOffset>
+		
+		<minRange>5</minRange>
+		<maxRange>60</maxRange> <!-- ~30 for infantry, 60 for ground vehicles, 90 for starfighters -->
+
+		<fireModes>
+			<li>
+				<shotsPerBurst>1</shotsPerBurst>
+				<ticksBetweenShots>10</ticksBetweenShots>
+				<ticksBetweenBursts>80</ticksBetweenBursts>
+				<label>Single</label>
+				<texPath>UI/Sniper_Shot</texPath>
+			</li>
+		</fireModes>
+
+		<graphicData>
+			<texPath>LandVehicles/BanthaIISkiff/BanthaIISkiff_gun</texPath>
+			<graphicClass>Vehicles.Graphic_Turret</graphicClass>
+			<drawSize>(2,2)</drawSize>
+			
+			<color>(120,105,90)</color> <!-- grey brown -->
+		</graphicData>
+		
+		<gizmoIconTexPath>LandVehicles/BanthaIISkiff/BanthaIISkiff_gun</gizmoIconTexPath>
+		<!-- <modExtensions> -->
+			<!-- <li MayRequire="SmashPhil.VehicleFramework" Class = "Vehicles.VehicleDamageMultiplierDefModExtension"> -->
+			  <!-- <multiplier>0.01</multiplier> -->
+			<!-- </li> -->
+		<!-- </modExtensions> -->
+	</Vehicles.VehicleTurretDef>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<Vehicles.VehicleDef ParentName="guy762_SWVehicle_BanthaIISkiff">
+		<defName>guy762_SWVehicle_BanthaIISkiff_armed</defName>
+		<label>Bantha-II Armed Skiff</label>
+		<description>. \n\n&lt;color=#bb8f04&gt;Crew:&lt;/color&gt; Driver x1</description>
+
+		<buildDef>guy762_SWVehicleBP_BanthaIISkiff_armed</buildDef>
+				
+		<statBases>
+			<MarketValue>9250</MarketValue>
+		</statBases>
+
+		<properties>
+			
+			<roles>
+				<li>
+					<key>gunner_1</key>
+					<label>Forward Gunner</label>
+					<slots>1</slots>
+					<slotsToOperate>1</slotsToOperate>
+					<exposed>true</exposed>
+					
+					<hitbox>
+						<side>Body</side>
+					</hitbox>
+					
+					<handlingTypes>
+						<li>Turret</li>
+					</handlingTypes>
+					<turretIds>
+						<li>BanthaIISkiffKey_gun_1</li>
+					</turretIds>
+				
+					<pawnRenderer>
+						<layerEast>26</layerEast>
+						<layerWest>25</layerWest>
+						
+						<layer>0</layer>
+						<layerNorth>26</layerNorth>
+						<layerSouth>26</layerSouth>
+						
+						<drawOffsetNorth>(0,0,2.325)</drawOffsetNorth>
+						
+						<drawOffsetSouth>(0,0,-2.125)</drawOffsetSouth>
+						
+						<drawOffsetEast>(2.1,0,0.45)</drawOffsetEast>
+						
+						<drawOffsetWest>(-2.1,0,0.45)</drawOffsetWest>
+					</pawnRenderer>
+				</li>
+				<li>
+					<key>gunner_2</key>
+					<label>Port Gunner</label>
+					<slots>1</slots>
+					<slotsToOperate>1</slotsToOperate>
+					<exposed>true</exposed>
+					
+					<hitbox>
+						<side>Body</side>
+					</hitbox>
+					
+					<handlingTypes>
+						<li>Turret</li>
+					</handlingTypes>
+					<turretIds>
+						<li>BanthaIISkiffKey_gun_2</li>
+					</turretIds>
+				
+					<pawnRenderer>
+						<layerEast>27</layerEast>
+						<layerWest>26</layerWest>
+						
+						<layer>0</layer>
+						<layerNorth>26</layerNorth>
+						<layerSouth>26</layerSouth>
+						
+						<drawOffsetNorth>(-0.825,0,0.5)</drawOffsetNorth>
+						
+						<drawOffsetSouth>(0.825,0,-0.6)</drawOffsetSouth>
+						
+						<drawOffsetEast>(0.135,0,1)</drawOffsetEast>
+						
+						<drawOffsetWest>(-0.135,0,0)</drawOffsetWest>
+						
+						<north>West</north>
+						<south>East</south>
+						<east>North</east>
+						<west>South</west>
+					</pawnRenderer>
+				</li>
+				<li>
+					<key>gunner_3</key>
+					<label>Starboard Gunner</label>
+					<slots>1</slots>
+					<slotsToOperate>1</slotsToOperate>
+					<exposed>true</exposed>
+					
+					<hitbox>
+						<side>Body</side>
+					</hitbox>
+					
+					<handlingTypes>
+						<li>Turret</li>
+					</handlingTypes>
+					<turretIds>
+						<li>BanthaIISkiffKey_gun_3</li>
+					</turretIds>
+				
+					<pawnRenderer>
+						<layerEast>26</layerEast>
+						<layerWest>27</layerWest>
+						
+						<layer>0</layer>
+						<layerNorth>26</layerNorth>
+						<layerSouth>26</layerSouth>
+						
+						<drawOffsetNorth>(0.825,0,0.5)</drawOffsetNorth>
+						
+						<drawOffsetSouth>(-0.825,0,-0.6)</drawOffsetSouth>
+						
+						<drawOffsetEast>(0.135,0,0)</drawOffsetEast>
+						
+						<drawOffsetWest>(-0.135,0,1)</drawOffsetWest>
+						
+						<north>East</north>
+						<south>West</south>
+						<east>South</east>
+						<west>North</west>
+					</pawnRenderer>
+				</li>
+			</roles>
+		</properties>
+		
+		
+		<comps>
+			
+			<li Class="Vehicles.CompProperties_VehicleTurrets">
+				<turrets>
+					<li>
+						<turretDef>guy762_VehicleTurret_SkiffAV</turretDef>
+						
+						<renderProperties>
+							<north>(0, 3.125)</north>
+							<south>(0, -2.95)</south>
+							
+							<east>(3.025, 0.4)</east>
+							<west>(-3.025, 0.4)</west>
+						</renderProperties>
+						<defaultAngleRotated>0</defaultAngleRotated>
+						<angleRestricted>(315,45)</angleRestricted>
+						<gizmoLabel>light AV gun</gizmoLabel>
+						
+						<drawLayer>32</drawLayer>
+						
+						<aimPieOffset>(0, 2.55)</aimPieOffset>
+						
+						<autoTargetingActive>True</autoTargetingActive>
+						
+						<key>BanthaIISkiffKey_gun_1</key>
+					</li>
+					<li>
+						<turretDef>guy762_VehicleTurret_SkiffAV</turretDef>
+						
+						<renderProperties>
+							<north>(-1.655, 0.525)</north>
+							<south>(1.585, -0.625)</south>
+							
+							<east>(0.135, 1.752)</east>
+							<west>(-0.135, -0.52)</west>
+						</renderProperties>
+						<defaultAngleRotated>270</defaultAngleRotated>
+						<angleRestricted>(225,315)</angleRestricted>
+						<gizmoLabel>light AV gun</gizmoLabel>
+						
+						<drawLayer>32</drawLayer>
+						
+						<aimPieOffset>(0, 2.55)</aimPieOffset>
+						
+						<autoTargetingActive>True</autoTargetingActive>
+						
+						<key>BanthaIISkiffKey_gun_2</key>
+					</li>
+					<li>
+						<turretDef>guy762_VehicleTurret_SkiffAV</turretDef>
+						
+						<renderProperties>
+							<north>(1.655, 0.525)</north>
+							<south>(-1.585, -0.625)</south>
+							
+							<east>(0.135, -0.52)</east>
+							<west>(-0.135, 1.752)</west>
+						</renderProperties>
+						<defaultAngleRotated>90</defaultAngleRotated>
+						<angleRestricted>(45,135)</angleRestricted>
+						<gizmoLabel>light AV gun</gizmoLabel>
+						
+						<drawLayer>32</drawLayer>
+						
+						<aimPieOffset>(0, 2.55)</aimPieOffset>
+						
+						<autoTargetingActive>True</autoTargetingActive>
+						
+						<key>BanthaIISkiffKey_gun_3</key>
+					</li>
+				</turrets>
+			</li>
+		</comps>
+
+		<modExtensions Inherit="False">
+			<li Class="VehicleMapFramework.VehicleMapProps">
+				<size>(1,3)</size>
+				<offsetNorth>(0,0,0.5)</offsetNorth>
+				
+				<offsetSouth>(0,0,-0.5)</offsetSouth>
+				
+				<offsetEast>(0,0,0)</offsetEast>
+			</li>
+		</modExtensions>
+	</Vehicles.VehicleDef>
+	
+	
+	
+</Defs>

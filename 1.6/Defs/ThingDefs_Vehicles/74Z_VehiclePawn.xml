@@ -143,6 +143,8 @@
 						<side>Body</side>
 					</hitbox>
 					
+					<comfort>-0.25</comfort>
+					
 					<handlingTypes>
 						<li>Movement</li>
 						<li>Turret</li>

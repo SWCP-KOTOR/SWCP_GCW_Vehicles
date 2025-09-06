@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<Defs>
+	
+	<DesignatorDropdownGroupDef>
+		<defName>guy762_SWVehicleBPDropdown_BanthaIISkiff</defName>
+	</DesignatorDropdownGroupDef>
+	
+	<Vehicles.VehicleBuildDef Name="guy762_SWVehicleBP_BanthaIISkiff" ParentName="guy762_VehicleBaseBuildable_GroundVehicle">
+		<defName>guy762_SWVehicleBP_BanthaIISkiff</defName>
+		<label>Bantha-II Cargo Skiff</label>
+		<description>.</description>
+		<designationCategory>MM_StarWarsShipBuildTab</designationCategory>
+		
+		<designatorDropdown>guy762_SWVehicleBPDropdown_BanthaIISkiff</designatorDropdown>
+		
+		<graphicData>
+			<texPath>LandVehicles/BanthaIISkiff/BanthaIISkiff_L1</texPath>
+			<graphicClass>Graphic_Multi</graphicClass>
+			<drawSize>(9,9)</drawSize>
+			<!-- <drawOffset>(0, 0, 1)</drawOffset> -->
+		</graphicData>
+		
+		<statBases>
+			<MaxHitPoints>100</MaxHitPoints>
+			<WorkToBuild>3500</WorkToBuild>
+			<Flammability>0.05</Flammability>
+		</statBases>
+		
+		<size>(4,8)</size>
+		
+		<!--researchPrerequisites>
+			<li>VVE_BasicVehicles</li>
+		</researchPrerequisites-->
+		
+		<costList>
+			<!--VVE_EngineBlock>1</VVE_EngineBlock>
+			<VVE_CarAlternator>1</VVE_CarAlternator>
+			<VVE_CarExhaust>1</VVE_CarExhaust>
+			<VVE_CarSuspension>2</VVE_CarSuspension>
+			<VVE_CarWheel>2</VVE_CarWheel-->
+			<Steel>40</Steel>
+		</costList>
+		
+		<soundImpactDefault>BulletImpact_Metal</soundImpactDefault>
+		<thingToSpawn>guy762_SWVehicle_BanthaIISkiff</thingToSpawn>
+		
+		<constructionSkillPrerequisite>6</constructionSkillPrerequisite>
+	</Vehicles.VehicleBuildDef>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<Vehicles.VehicleBuildDef ParentName="guy762_VehicleBaseBuildable_GroundVehicle">
+		<defName>guy762_SWVehicleBP_BanthaIISkiff_armed</defName>
+		<label>Bantha-II Armed Skiff</label>
+		<description>.</description>
+		<designationCategory>MM_StarWarsShipBuildTab</designationCategory>
+		
+		<designatorDropdown>guy762_SWVehicleBPDropdown_BanthaIISkiff</designatorDropdown>
+		
+		<graphicData>
+			<texPath>LandVehicles/BanthaIISkiff/BanthaIISkiff_L1</texPath>
+			<graphicClass>Graphic_Multi</graphicClass>
+			<drawSize>(9,9)</drawSize>
+			<!-- <drawOffset>(0, 0, 1)</drawOffset> -->
+		</graphicData>
+		
+		<statBases>
+			<MaxHitPoints>100</MaxHitPoints>
+			<WorkToBuild>3500</WorkToBuild>
+			<Flammability>0.05</Flammability>
+		</statBases>
+		
+		<size>(4,8)</size>
+		
+		<!--researchPrerequisites>
+			<li>VVE_BasicVehicles</li>
+		</researchPrerequisites-->
+		
+		<costList>
+			<!--VVE_EngineBlock>1</VVE_EngineBlock>
+			<VVE_CarAlternator>1</VVE_CarAlternator>
+			<VVE_CarExhaust>1</VVE_CarExhaust>
+			<VVE_CarSuspension>2</VVE_CarSuspension>
+			<VVE_CarWheel>2</VVE_CarWheel-->
+			<Steel>40</Steel>
+		</costList>
+		
+		<soundImpactDefault>BulletImpact_Metal</soundImpactDefault>
+		<thingToSpawn>guy762_SWVehicle_BanthaIISkiff_armed</thingToSpawn>
+		
+		<constructionSkillPrerequisite>6</constructionSkillPrerequisite>
+	</Vehicles.VehicleBuildDef>
+	
+	
+	
+	
+</Defs>

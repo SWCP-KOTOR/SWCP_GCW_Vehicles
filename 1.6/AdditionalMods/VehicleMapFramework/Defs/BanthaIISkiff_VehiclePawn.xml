@@ -345,8 +345,8 @@
 		
 		<projectileOffset>2.1</projectileOffset>
 		
-		<minRange>5</minRange>
-		<maxRange>60</maxRange> <!-- ~30 for infantry, 60 for ground vehicles, 90 for starfighters -->
+		<minRange>2</minRange>
+		<maxRange>30</maxRange> <!-- short-range guns -->
 
 		<fireModes>
 			<li>
@@ -452,7 +452,7 @@
 						<layerWest>25</layerWest>
 						
 						<layer>0</layer>
-						<layerNorth>26</layerNorth>
+						<layerNorth>27</layerNorth>
 						<layerSouth>26</layerSouth>
 						
 						<drawOffsetNorth>(0,0,2.325)</drawOffsetNorth>
@@ -563,7 +563,8 @@
 							<west>(-3.025, 0.4)</west>
 						</renderProperties>
 						<defaultAngleRotated>0</defaultAngleRotated>
-						<angleRestricted>(315,45)</angleRestricted>
+						<!-- <angleRestricted>(315,45)</angleRestricted> -->
+						<angleRestricted>(300,60)</angleRestricted>
 						<gizmoLabel>light AV gun</gizmoLabel>
 						
 						<drawLayer>32</drawLayer>
@@ -585,7 +586,8 @@
 							<west>(-0.135, -0.52)</west>
 						</renderProperties>
 						<defaultAngleRotated>270</defaultAngleRotated>
-						<angleRestricted>(225,315)</angleRestricted>
+						<!-- <angleRestricted>(225,315)</angleRestricted> -->
+						<angleRestricted>(210,330)</angleRestricted>
 						<gizmoLabel>light AV gun</gizmoLabel>
 						
 						<drawLayer>32</drawLayer>
@@ -607,7 +609,8 @@
 							<west>(-0.135, 1.752)</west>
 						</renderProperties>
 						<defaultAngleRotated>90</defaultAngleRotated>
-						<angleRestricted>(45,135)</angleRestricted>
+						<!-- <angleRestricted>(45,135)</angleRestricted> -->
+						<angleRestricted>(30,150)</angleRestricted>
 						<gizmoLabel>light AV gun</gizmoLabel>
 						
 						<drawLayer>32</drawLayer>

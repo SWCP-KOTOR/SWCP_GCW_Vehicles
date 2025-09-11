@@ -3,13 +3,13 @@
 
 	
 	<BackstoryDef>
-		<defName>guy762_Backstory_R2AstDrd</defName>
-		<title>R2-series astromech droid</title>
-		<titleShort>R2 unit</titleShort>
-		<description>This is an advanced utility droid, capable of many tasks.</description>
+		<defName>guy762_Backstory_PitDroid</defName>
+		<title>DUM-series pit droid</title>
+		<titleShort>pit droid</titleShort>
+		<description>This is a simple utility droid, capable of basic tasks.</description>
 		<slot>Childhood</slot>
 		<spawnCategories>
-			<li>guy762BSC_Droid_R2AstDrd</li>
+			<li>guy762BSC_Droid_PitDroid</li>
 			<li>guy762BSC_Droid_all</li>
 		</spawnCategories>
 		<workDisables>
@@ -21,18 +21,18 @@
 			<li>PlantWork</li>
 			<li>Mining</li>
 			<li>Social</li>
-			<li>Cleaning</li>
+			<!-- <li>Cleaning</li> -->
+			<li>Intellectual</li>
 		</workDisables>
 		<requiredWorkTags>
 			<li>Violent</li>
 			<li>Hauling</li>
-			<li>Crafting</li>
+			<!-- <li>Crafting</li> -->
 			<li>Constructing</li>
-			<li>Intellectual</li>
 			<li>Firefighting</li>
+			<li>Cleaning</li>
 		</requiredWorkTags>
 		<forcedTraits>
-		  <TooSmart>0</TooSmart>
 		  <Asexual>0</Asexual>
 		</forcedTraits>
 	</BackstoryDef>
@@ -41,37 +41,37 @@
 	
 	
 	
-	<ThingDef Name="SWCP_BnSDroidRace_R2series" ParentName="SWCP_BnSDroidRace_BASE">
-		<defName>SWCP_BnSDroidRace_R2series</defName>
-		<label>R2-series astromech droid</label>
-		<description>.\n\nBy default, this droid is capable of the following work types:\n\n-Combat\n-Hauling\n-Crafting\n-Constructing\n-Intellectual\n-Firefighting</description>
+	<ThingDef Name="SWCP_BnSDroidRace_PitDroid" ParentName="SWCP_BnSDroidRace_BASE">
+		<defName>SWCP_BnSDroidRace_PitDroid</defName>
+		<label>DUM-series pit droid</label>
+		<description>.\n\nBy default, this droid is capable of the following work types:\n\n-Combat\n-Hauling\n-Constructing\n-Firefighting\n-Cleaning</description>
 
 		<statBases>
-			<MarketValue>4525</MarketValue>
-			<MoveSpeed>3</MoveSpeed>
-			<VacuumSpeedMultiplier MayRequire="kentington.saveourship2">2</VacuumSpeedMultiplier>
+			<MarketValue>450</MarketValue>
+			<MoveSpeed>5</MoveSpeed>
+			<VacuumSpeedMultiplier MayRequire="kentington.saveourship2">1</VacuumSpeedMultiplier>
 			<ComfyTemperatureMin>-125</ComfyTemperatureMin>
 			<ComfyTemperatureMax>125</ComfyTemperatureMax>
 			
-			<GlobalLearningFactor>1.5</GlobalLearningFactor>
-			<WorkSpeedGlobal>1.2</WorkSpeedGlobal>
+			<GlobalLearningFactor>0.5</GlobalLearningFactor>
+			<WorkSpeedGlobal>2</WorkSpeedGlobal>
 			
-			<ArmorRating_Sharp>0.25</ArmorRating_Sharp>
-			<ArmorRating_Blunt>0.1</ArmorRating_Blunt>
-            <ArmorRating_Heat>0.35</ArmorRating_Heat>
-            <InjuryHealingFactor>1.75</InjuryHealingFactor>
-            <IncomingDamageFactor>0.95</IncomingDamageFactor>
+			<ArmorRating_Sharp>0.15</ArmorRating_Sharp>
+			<ArmorRating_Blunt>0</ArmorRating_Blunt>
+            <ArmorRating_Heat>0.25</ArmorRating_Heat>
+            <InjuryHealingFactor>2</InjuryHealingFactor>
+            <IncomingDamageFactor>1.25</IncomingDamageFactor>
 			
             <!-- <StaggerDurationFactor MayRequire="Ludeon.RimWorld.Biotech">0.8</StaggerDurationFactor> -->
             <!-- <EMPResistance MayRequire="Ludeon.RimWorld.Biotech">0.9</EMPResistance> -->
 			
-			<Mass>64</Mass>
+			<Mass>35</Mass>
 		</statBases>
 		
 		
 		
 		<race>
-			<body>SWCP_BnSDroidBody_GenericAstromech</body>
+			<body>SWCP_BnSDroidBody_CyclopsThreeDigitedBiped_NoSlots</body>
 
 			<soundCallIntervalRange>1000~2000</soundCallIntervalRange>
 			<lifeStageAges Inherit="False">
@@ -121,7 +121,7 @@
 
 		<modExtensions>
 		  <li Class="BigAndSmall.RaceExtension">
-			<raceHediff>SWCP_DroidHediff_R2Astromech</raceHediff>
+			<raceHediff>SWCP_DroidHediff_PitDroid</raceHediff>
 		  </li>
 		</modExtensions>
 		
@@ -137,7 +137,46 @@
                 <ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
 				<chanceFactor>0.2</chanceFactor>
 			</li>
+			<li>
+				<label>left fist</label>
+				<labelNoLocation>fist</labelNoLocation>
+				<capacities>
+				  <li>Blunt</li>
+				</capacities>
+				<!-- <power>8.2</power> -->
+				<power>5</power>
+				<cooldownTime>2</cooldownTime>
+				<linkedBodyPartsGroup>LeftHand</linkedBodyPartsGroup>
+				<!-- <surpriseAttack> -->
+				  <!-- <extraMeleeDamages> -->
+					<!-- <li> -->
+					  <!-- <def>Stun</def> -->
+					  <!-- <amount>14</amount> -->
+					<!-- </li> -->
+				  <!-- </extraMeleeDamages> -->
+				<!-- </surpriseAttack> -->
+			  </li>
+			  <li>
+				<label>right fist</label>
+				<labelNoLocation>fist</labelNoLocation>
+				<capacities>
+				  <li>Blunt</li>
+				</capacities>
+				<!-- <power>8.2</power> -->
+				<power>5</power>
+				<cooldownTime>2</cooldownTime>
+				<linkedBodyPartsGroup>RightHand</linkedBodyPartsGroup>
+				<!-- <surpriseAttack> -->
+				  <!-- <extraMeleeDamages> -->
+					<!-- <li> -->
+					  <!-- <def>Stun</def> -->
+					  <!-- <amount>14</amount> -->
+					<!-- </li> -->
+				  <!-- </extraMeleeDamages> -->
+				<!-- </surpriseAttack> -->
+			</li>
 		</tools>
+		
 		<butcherProducts>
             <KOTOR_AlloyDurasteel>20</KOTOR_AlloyDurasteel>
 			<Plasteel>20</Plasteel>
@@ -146,7 +185,7 @@
 			<TechprofSubpersonaCore>1</TechprofSubpersonaCore>
 		</butcherProducts>
 		<tradeTags>
-            <li>guy762TT_KotORDroids_techrare</li>
+            <li>guy762TT_KotORDroids_utilitycommon</li>
 		</tradeTags>
 	</ThingDef>
 	
@@ -158,8 +197,8 @@
 	
 	<!-- <HediffDef ParentName="SWCP_DroidHediff_BASE"> -->
 	<HediffDef>
-		<defName>SWCP_DroidHediff_R2Astromech</defName>
-		<label>R2-series Astromech</label>
+		<defName>SWCP_DroidHediff_PitDroid</defName>
+		<label>DUM-series pit droid</label>
 		<description>.</description>
 		
 		<hediffClass>BigAndSmall.RaceTracker</hediffClass>
@@ -178,6 +217,10 @@
 		</comps>
 		<stages>
 			<li>
+				<statOffsets>
+				  <SM_Cosmetic_BodySizeOffset>-0.3</SM_Cosmetic_BodySizeOffset>
+				</statOffsets>
+				
 				<disabledWorkTags>
 					<li>Animals</li>
 					<!-- <li>Hunting</li> -->
@@ -187,7 +230,8 @@
 					<li>PlantWork</li>
 					<li>Mining</li>
 					<li>Social</li>
-					<li>Cleaning</li>
+					<!-- <li>Cleaning</li> -->
+					<li>Intellectual</li>
 				</disabledWorkTags>
 			</li>
 		</stages>
@@ -196,25 +240,36 @@
 		  <li Class="BigAndSmall.PawnExtension">
 			
 			<aptitudes>
-				<Shooting>5</Shooting>
+				<Shooting>0</Shooting>
+				
 				<Melee>0</Melee>
-				<Construction>10</Construction>
+				
+				<Construction>5</Construction>
+				
 				<Mining>0</Mining>
+				
 				<Cooking>0</Cooking>
+				
 				<Plants>0</Plants>
+				
 				<Animals>0</Animals>
-				<Crafting>10</Crafting>
+				
+				<Crafting>0</Crafting>
+				
 				<Artistic>-20</Artistic>
+				
 				<Medicine>0</Medicine>
+				
 				<Social>0</Social>
-				<Intellectual>10</Intellectual>
+				
+				<Intellectual>0</Intellectual>
 			</aptitudes>
 			<forcedHediffs><li>SWCP_DroidHediff_NonSapientDroid</li></forcedHediffs>
 			
 			<traitFilters>
 			  <whitelist>
 				<li>Asexual</li>
-				<li>TooSmart</li>
+				<!-- <li>TooSmart</li> -->
 			  </whitelist>
 			</traitFilters>
 			
@@ -226,14 +281,6 @@
 				<tags>
 					<allowlist>
 						<li>SWCPDroidApparelRestrictionTag_LightArmor</li>
-
-						<li>SWCPDroidApparelRestrictionTag_SoftwareTechSlot</li>
-						<li>SWCPDroidApparelRestrictionTag_HardwareTechSlot</li>
-						<li>SWCPDroidApparelRestrictionTag_SensorTechSlot</li>
-						
-						<li>SWCPDroidApparelRestrictionTag_GadgetWeaponSlot</li>
-
-						<li>SWCPDroidApparelRestrictionTag_DroidScavUpgrade</li>
 					</allowlist>
 				</tags>
 			</apparelRestrictions>
@@ -242,8 +289,8 @@
 			
 			
 			<bodyPaths>
-			  <Body_Female>Droid/R2Astromech/R2</Body_Female>
-			  <Body_Male>Droid/R2Astromech/R2</Body_Male>
+			  <Body_Female>Droid/PitDroid/PitDroid</Body_Female>
+			  <Body_Male>Droid/PitDroid/PitDroid</Body_Male>
 			</bodyPaths>
 			<forceFemaleBody>true</forceFemaleBody>
 			
@@ -251,17 +298,17 @@
 			  <shader>BS_CutoutThreeColor</shader>
 			  <overrideDesiccated>true</overrideDesiccated>
 			  <colorA>
-				<favoriteColor>true</favoriteColor>
+				<color>125,90,45</color> <!-- typical brown -->
 				<altDefs><li>BS_CustomGlobalA</li></altDefs>
 			  </colorA>
 			  <colorB>
-				<color>150,150,150</color>
+				<color>160,115,60</color> <!-- brown that is slightly more orange than the previously used typical brown -->
 				<altDefs><li>BS_CustomGlobalB</li></altDefs>
 			  </colorB>
-			  <colorC>
-				<color>250,250,250</color>
-				<altDefs><li>BS_CustomGlobalC</li></altDefs>
-			  </colorC>
+			  <!-- <colorC> -->
+				<!-- <color>250,250,250</color> -->
+				<!-- <altDefs><li>BS_CustomGlobalC</li></altDefs> -->
+			  <!-- </colorC> -->
 			</bodyMaterial>
 			
 			
@@ -277,13 +324,13 @@
 				<altDefs><li>BS_CustomGlobalA</li></altDefs>
 			  </colorA>
 			  <colorB>
-				<color>150,150,150</color>
+				<color>250,250,250</color>
 				<altDefs><li>BS_CustomGlobalB</li></altDefs>
 			  </colorB>
-			  <colorC>
-				<color>250,250,250</color>
-				<altDefs><li>BS_CustomGlobalC</li></altDefs>
-			  </colorC>
+			  <!-- <colorC> -->
+				<!-- <color>250,250,250</color> -->
+				<!-- <altDefs><li>BS_CustomGlobalC</li></altDefs> -->
+			  <!-- </colorC> -->
 			</headMaterial>
 			
 			<forcedEndogenes>
@@ -302,15 +349,15 @@
 	
 	
 	<GeneDef ParentName="SWCPDroidBodyGene_chassisBASE">
-		<defName>SWCPDroidBodyGene_R2Series</defName>
-		<label>R2-series Astromech Chassis</label>
+		<defName>SWCPDroidBodyGene_PitDroid</defName>
+		<label>DUM-series pit droid</label>
 		
-		<iconPath>UI/DroidIcons/Icon_R2</iconPath>
+		<iconPath>UI/DroidIcons/Icon_PitDroid</iconPath>
 		<modExtensions>
 		  <li Class="BigAndSmall.PawnExtension">
 			<bodyPaths>
-			  <Body_Female>Droid/R2Astromech/R2</Body_Female>
-			  <Body_Male>Droid/R2Astromech/R2</Body_Male>
+			  <Body_Female>Droid/PitDroid/PitDroid</Body_Female>
+			  <Body_Male>Droid/PitDroid/PitDroid</Body_Male>
 			</bodyPaths>
 			<headPaths>
 			  <Female>512blank</Female>
@@ -323,40 +370,17 @@
 			  <overrideDesiccated>true</overrideDesiccated>
 			  
 			  <colorA>
-				<favoriteColor>true</favoriteColor>
+				<color>125,90,45</color> <!-- typical brown -->
 				<altDefs><li>BS_CustomGlobalA</li></altDefs>
-				<!-- <altsLate> -->
-				  <!-- <li> -->
-					<!-- <triggers><li>HasForcedSkinColorGene</li></triggers> -->
-					<!-- <skinColor>true</skinColor> -->
-				  <!-- </li> -->
-				<!-- </altsLate> -->
 			  </colorA>
 			  <colorB>
-				<color>150,150,150</color>
+				<color>160,115,60</color> <!-- brown that is slightly more orange than the previously used typical brown -->
 				<altDefs><li>BS_CustomGlobalB</li></altDefs>
-				<!-- <altsLate> -->
-				  <!-- <li> -->
-					<!-- <triggers><li>HasForcedSkinColorGene</li></triggers> -->
-					<!-- <hairColor>true</hairColor> -->
-				  <!-- </li> -->
-				<!-- </altsLate> -->
 			  </colorB>
-			  <colorC>
-				<color>250,250,250</color>
-				<!-- <skinColor>true</skinColor> -->
-				<altDefs><li>BS_CustomGlobalC</li></altDefs>
-				<!-- <colourRange> -->
-				  <!-- <li>220, 255, 255</li> -->
-				  <!-- <li>190, 190, 190</li> -->
-				  <!-- <li>255, 255, 255</li> -->
-				  <!-- <li>255, 255, 255</li> -->
-				  <!-- <li>245, 255, 255</li> -->
-				  <!-- <li>255, 230, 220</li> -->
-				  <!-- <li>242, 237, 224</li> -->
-				  <!-- <li>255, 239, 213</li> -->
-				<!-- </colourRange> -->
-			  </colorC>
+			  <!-- <colorC> -->
+				<!-- <color>250,250,250</color> -->
+				<!-- <altDefs><li>BS_CustomGlobalC</li></altDefs> -->
+			  <!-- </colorC> -->
 			  
 			</bodyMaterial>
 		  </li>
@@ -364,15 +388,15 @@
 	</GeneDef>
 	
 	<XenotypeDef>
-		<defName>SWCPDroidXenotype_R2Series</defName>
-		<label>R2-series Astromech</label>
+		<defName>SWCPDroidXenotype_PitDroid</defName>
+		<label>DUM-series pit droid</label>
 		<description>.</description>
-		<iconPath>UI/DroidIcons/Icon_R2</iconPath>
+		<iconPath>UI/DroidIcons/Icon_PitDroid</iconPath>
 		<!-- <combatPowerFactor>1</combatPowerFactor> -->
 		<inheritable>true</inheritable>
 		<factionlessGenerationWeight>0</factionlessGenerationWeight>
 		<genes>
-		  <li>SWCPDroidBodyGene_R2Series</li>
+		  <li>SWCPDroidBodyGene_PitDroid</li>
 		  <li>Beard_NoBeardOnly</li>
 		  <li>Hair_BaldOnly</li>
 		  <li>guy762_DebugHead_nullForDroids</li>
@@ -380,7 +404,7 @@
 		</genes>
 		<modExtensions>
 		  <li Class="BigAndSmall.XenotypeExtension">
-			<setRace>SWCP_BnSDroidRace_R2series</setRace>
+			<setRace>SWCP_BnSDroidRace_PitDroid</setRace>
 			<forceRace>true</forceRace>
 		  </li>
 		</modExtensions>
@@ -404,28 +428,28 @@
 	
 	
 	
-	<PawnKindDef Name="SWCPDroidColonistBnS_R2AstDrd" ParentName="guy762_BnSDroidPawnKindBase">
-		<defName>SWCPDroidColonistBnS_R2AstDrd</defName>
-		<label>astromech</label>
-		<nameMaker>SWCP_DroidNamer_R2AD</nameMaker>
+	<PawnKindDef Name="SWCPDroidColonistBnS_PitDroid" ParentName="guy762_BnSDroidPawnKindBase">
+		<defName>SWCPDroidColonistBnS_PitDroid</defName>
+		<label>pit droid</label>
+		<nameMaker>SWCP_DroidNamer_DUMpitdroid</nameMaker>
 		
-		<race>SWCP_BnSDroidRace_R2series</race>
+		<race>SWCP_BnSDroidRace_PitDroid</race>
 		<useFactionXenotypes>false</useFactionXenotypes>
 		<xenotypeSet Inherit="False">
 		  <xenotypeChances>
-			<SWCPDroidXenotype_R2Series MayRequire="Ludeon.Rimworld.Biotech">999</SWCPDroidXenotype_R2Series>
+			<SWCPDroidXenotype_PitDroid MayRequire="Ludeon.Rimworld.Biotech">999</SWCPDroidXenotype_PitDroid>
 		  </xenotypeChances>
 		</xenotypeSet>
 		
-        <combatPower>50</combatPower>
+        <combatPower>30</combatPower>
 		<forcedTraits>
-			<TooSmart>0</TooSmart>
 			<Asexual>0</Asexual>
+			<!-- <TooSmart>0</TooSmart> -->
 		</forcedTraits>
 		<backstoryFiltersOverride>
 		  <li>
 			<categories>
-			  <li>guy762BSC_Droid_R2AstDrd</li>
+			  <li>guy762BSC_Droid_PitDroid</li>
 			</categories>
 		  </li>
 		</backstoryFiltersOverride>

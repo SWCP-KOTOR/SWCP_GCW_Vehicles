@@ -62,10 +62,10 @@
             <InjuryHealingFactor>1.5</InjuryHealingFactor>
             <IncomingDamageFactor>0.95</IncomingDamageFactor>
 			
-            <StaggerDurationFactor MayRequire="Ludeon.RimWorld.Biotech">0.8</StaggerDurationFactor>
-            <EMPResistance MayRequire="Ludeon.RimWorld.Biotech">0.9</EMPResistance>
+            <!-- <StaggerDurationFactor MayRequire="Ludeon.RimWorld.Biotech">0.8</StaggerDurationFactor> -->
+            <!-- <EMPResistance MayRequire="Ludeon.RimWorld.Biotech">0.9</EMPResistance> -->
 			
-			<Mass>35</Mass>
+			<Mass>64</Mass>
 		</statBases>
 		
 		

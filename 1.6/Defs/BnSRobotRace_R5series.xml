@@ -304,6 +304,8 @@
 		<defName>SWCPDroidBodyGene_R5Series</defName>
 		<label>R5-series Astromech Chassis</label>
 		
+		<skinColorOverride>(250, 250, 250)</skinColorOverride>
+		
 		<iconPath>UI/DroidIcons/Icon_R5</iconPath>
 		<modExtensions>
 		  <li Class="BigAndSmall.PawnExtension">

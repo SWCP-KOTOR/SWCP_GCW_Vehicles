@@ -306,6 +306,8 @@
 		<label>R2-series Astromech Chassis</label>
 		
 		<iconPath>UI/DroidIcons/Icon_R2</iconPath>
+		<!-- <skinColorOverride>(250, 250, 250)</skinColorOverride> -->
+		<skinColorBase>(250, 250, 250)</skinColorBase>
 		<modExtensions>
 		  <li Class="BigAndSmall.PawnExtension">
 			<bodyPaths>

@@ -218,7 +218,7 @@
 		<stages>
 			<li>
 				<statOffsets>
-				  <SM_Cosmetic_BodySizeOffset>-0.3</SM_Cosmetic_BodySizeOffset>
+					<SM_Cosmetic_BodySizeOffset>-0.3</SM_Cosmetic_BodySizeOffset>
 				</statOffsets>
 				
 				<disabledWorkTags>
@@ -253,6 +253,21 @@
 				<!-- <Social>0</Social> -->
 				<!-- <Intellectual>0</Intellectual> -->
 			<!-- </aptitudes> -->
+			<clampedSkills>
+				<li><skill>Shooting</skill><range>0</range></li>
+				<li><skill>Melee</skill><range>0</range></li>
+				<li><skill>Construction</skill><range>5</range></li>
+				<li><skill>Mining</skill><range>0</range></li>
+				<li><skill>Cooking</skill><range>0</range></li>
+				<li><skill>Plants</skill><range>0</range></li>
+				<li><skill>Animals</skill><range>0</range></li>
+				<li><skill>Crafting</skill><range>0</range></li>
+				<li><skill>Artistic</skill><range>0</range></li>
+				<li><skill>Medicine</skill><range>0</range></li>
+				<li><skill>Social</skill><range>0</range></li>
+				<li><skill>Intellectual</skill><range>0</range></li>
+			</clampedSkills>
+			<canHavePassions>false</canHavePassions>
 			
 			<forcedHediffs><li>SWCP_DroidHediff_NonSapientDroid</li></forcedHediffs>
 			
@@ -274,7 +289,7 @@
 					</allowlist>
 				</tags>
 			</apparelRestrictions>
-			
+			<!-- <unarmedOnly>false</unarmedOnly> -->
 			
 			
 			
@@ -435,20 +450,20 @@
 		
         <combatPower>30</combatPower>
 		
-		<skills>
-			<li><skill>Shooting</skill><range>0</range></li>
-			<li><skill>Melee</skill><range>0</range></li>
-			<li><skill>Construction</skill><range>5</range></li>
-			<li><skill>Mining</skill><range>0</range></li>
-			<li><skill>Cooking</skill><range>0</range></li>
-			<li><skill>Plants</skill><range>0</range></li>
-			<li><skill>Animals</skill><range>0</range></li>
-			<li><skill>Crafting</skill><range>0</range></li>
-			<li><skill>Artistic</skill><range>0</range></li>
-			<li><skill>Medicine</skill><range>0</range></li>
-			<li><skill>Social</skill><range>0</range></li>
-			<li><skill>Intellectual</skill><range>0</range></li>
-		</skills>
+		<!-- <skills> -->
+			<!-- <li><skill>Shooting</skill><range>0</range></li> -->
+			<!-- <li><skill>Melee</skill><range>0</range></li> -->
+			<!-- <li><skill>Construction</skill><range>5</range></li> -->
+			<!-- <li><skill>Mining</skill><range>0</range></li> -->
+			<!-- <li><skill>Cooking</skill><range>0</range></li> -->
+			<!-- <li><skill>Plants</skill><range>0</range></li> -->
+			<!-- <li><skill>Animals</skill><range>0</range></li> -->
+			<!-- <li><skill>Crafting</skill><range>0</range></li> -->
+			<!-- <li><skill>Artistic</skill><range>0</range></li> -->
+			<!-- <li><skill>Medicine</skill><range>0</range></li> -->
+			<!-- <li><skill>Social</skill><range>0</range></li> -->
+			<!-- <li><skill>Intellectual</skill><range>0</range></li> -->
+		<!-- </skills> -->
 		
 		<forcedTraits>
 			<Asexual>0</Asexual>

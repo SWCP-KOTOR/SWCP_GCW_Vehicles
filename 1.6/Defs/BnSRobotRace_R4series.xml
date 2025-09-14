@@ -234,7 +234,9 @@
 					</allowlist>
 				</tags>
 			</apparelRestrictions>
-			
+			<unarmedOnly>true</unarmedOnly>
+			<forceUnarmed>true</forceUnarmed>
+			<canWieldThings>false</canWieldThings>
 			
 			
 			

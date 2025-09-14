@@ -236,7 +236,9 @@
 					</allowlist>
 				</tags>
 			</apparelRestrictions>
-			
+			<unarmedOnly>true</unarmedOnly>
+			<forceUnarmed>true</forceUnarmed>
+			<canWieldThings>false</canWieldThings>
 			
 			
 			
@@ -396,6 +398,22 @@
 		</xenotypeSet>
 		
         <combatPower>50</combatPower>
+		
+		<!-- <skills> -->
+			<!-- <li><skill>Shooting</skill><range>4</range></li> -->
+			<!-- <li><skill>Melee</skill><range>0</range></li> -->
+			<!-- <li><skill>Construction</skill><range>8</range></li> -->
+			<!-- <li><skill>Mining</skill><range>0</range></li> -->
+			<!-- <li><skill>Cooking</skill><range>0</range></li> -->
+			<!-- <li><skill>Plants</skill><range>0</range></li> -->
+			<!-- <li><skill>Animals</skill><range>0</range></li> -->
+			<!-- <li><skill>Crafting</skill><range>4</range></li> -->
+			<!-- <li><skill>Artistic</skill><range>0</range></li> -->
+			<!-- <li><skill>Medicine</skill><range>0</range></li> -->
+			<!-- <li><skill>Social</skill><range>0</range></li> -->
+			<!-- <li><skill>Intellectual</skill><range>4</range></li> -->
+		<!-- </skills> -->
+		
 		<forcedTraits>
 			<Asexual>0</Asexual>
 		</forcedTraits>

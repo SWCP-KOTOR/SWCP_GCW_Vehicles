@@ -1,0 +1,77 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  
+	<ThingDef ParentName="guy762_DroidTech">
+		<defName>SWCP_DroidSoftwareUprage_mining</defName>
+		<label>droid mining software</label>
+		<description>.</description>
+		<descriptionHyperlinks>
+			<HediffDef>SWCP_SoftwareHediff_mining</HediffDef>
+		</descriptionHyperlinks>
+		<graphicData>
+		  <texPath>Items/droidtech/droidsoftware_L</texPath>
+		  <graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<statBases>
+		  <Mass>2</Mass>
+		  <MarketValue>1100</MarketValue>
+		</statBases>
+		<equippedStatOffsets>
+			<!-- <IncomingDamageFactor>-0.2</IncomingDamageFactor> -->
+		</equippedStatOffsets>
+		<apparel>
+		  <tags>
+			<li>SWCPSpecificDroidTech_</li>
+			<li>SWCPDroidApparelRestrictionTag_SoftwareTechSlot</li>
+		  </tags>
+		  <bodyPartGroups>
+			<li>guy762BG_Droid_Tech_software</li>
+		  </bodyPartGroups>
+		</apparel>
+		<tradeTags>
+		  <li>guy762TT_DroidEquipment</li>
+		  <li>guy762TT_DroidUpgrades</li>
+		</tradeTags>
+		<comps>
+		  <li Class="CompProperties_CauseHediff_Apparel">
+			<hediff>SWCP_SoftwareHediff_mining</hediff>
+		  </li>
+		</comps>
+	</ThingDef>
+	
+	<HediffDef>
+		<defName>SWCP_SoftwareHediff_mining</defName>
+		<label>droid mining software</label>
+		<description>.</description>
+		<hediffClass>HediffWithComps</hediffClass>
+		<stages>
+			<li><makeImmuneTo><li>SWCPWorkTypeDisablerHediff_Mining</li></makeImmuneTo></li>
+		</stages>
+		<comps>
+			<li Class="EBSGFramework.HediffCompProperties_TemporarySkillChange">
+				<skillChanges>
+					<li>
+						<skill>Mining</skill>
+						<skillChange>6</skillChange>
+					</li>
+				</skillChanges>
+			</li>
+			<li Class="HediffCompProperties_RemoveIfApparelDropped" />
+		</comps>
+		<isBad>false</isBad>
+		
+		<modExtensions>
+			<li Class="BigAndSmall.PawnExtension">
+				<priority>0</priority>
+				<exclusionTags>
+					<li>SWCPDroidRaceHediffExclusionTag_MiningDisabled</li>
+				</exclusionTags>
+				
+				<disabledWorkTypes />
+				<forcedHediffs />
+			</li>
+		</modExtensions>		
+	</HediffDef>
+  
+  
+</Defs>

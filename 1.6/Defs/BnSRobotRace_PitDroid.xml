@@ -12,26 +12,24 @@
 			<li>guy762BSC_Droid_PitDroid</li>
 			<li>guy762BSC_Droid_all</li>
 		</spawnCategories>
-		<workDisables>
-			<li>Animals</li>
-			<li>Hunting</li>
-            <li>Caring</li>
-            <li>Artistic</li>
-            <li>Cooking</li>
-			<li>PlantWork</li>
-			<li>Mining</li>
-			<li>Social</li>
+		<!-- <workDisables> -->
+			<!-- <li>Animals</li> -->
+			<!-- <li>Hunting</li> -->
+            <!-- <li>Caring</li> -->
+            <!-- <li>Artistic</li> -->
+            <!-- <li>Cooking</li> -->
+			<!-- <li>PlantWork</li> -->
+			<!-- <li>Mining</li> -->
+			<!-- <li>Social</li> -->
+			<!-- <li>Intellectual</li> -->
+		<!-- </workDisables> -->
+		<!-- <requiredWorkTags> -->
+			<!-- <li>Violent</li> -->
+			<!-- <li>Hauling</li> -->
+			<!-- <li>Constructing</li> -->
+			<!-- <li>Firefighting</li> -->
 			<!-- <li>Cleaning</li> -->
-			<li>Intellectual</li>
-		</workDisables>
-		<requiredWorkTags>
-			<li>Violent</li>
-			<li>Hauling</li>
-			<!-- <li>Crafting</li> -->
-			<li>Constructing</li>
-			<li>Firefighting</li>
-			<li>Cleaning</li>
-		</requiredWorkTags>
+		<!-- </requiredWorkTags> -->
 		<forcedTraits>
 		  <Asexual>0</Asexual>
 		</forcedTraits>
@@ -53,7 +51,7 @@
 			<ComfyTemperatureMin>-125</ComfyTemperatureMin>
 			<ComfyTemperatureMax>125</ComfyTemperatureMax>
 			
-			<GlobalLearningFactor>0.5</GlobalLearningFactor>
+			<!-- <GlobalLearningFactor>0.5</GlobalLearningFactor> -->
 			<WorkSpeedGlobal>2</WorkSpeedGlobal>
 			
 			<ArmorRating_Sharp>0.15</ArmorRating_Sharp>
@@ -221,38 +219,22 @@
 					<SM_Cosmetic_BodySizeOffset>-0.3</SM_Cosmetic_BodySizeOffset>
 				</statOffsets>
 				
-				<disabledWorkTags>
-					<li>Animals</li>
-					<!-- <li>Hunting</li> -->
-					<li>Caring</li>
-					<li>Artistic</li>
-					<li>Cooking</li>
-					<li>PlantWork</li>
-					<li>Mining</li>
-					<li>Social</li>
-					<!-- <li>Cleaning</li> -->
-					<li>Intellectual</li>
-				</disabledWorkTags>
+				<!-- <disabledWorkTags> -->
+					<!-- <li>Animals</li> -->
+					<!-- <li>Caring</li> -->
+					<!-- <li>Artistic</li> -->
+					<!-- <li>Cooking</li> -->
+					<!-- <li>PlantWork</li> -->
+					<!-- <li>Mining</li> -->
+					<!-- <li>Social</li> -->
+					<!-- <li>Intellectual</li> -->
+				<!-- </disabledWorkTags> -->
 			</li>
 		</stages>
 
 		<modExtensions>
 		  <li Class="BigAndSmall.PawnExtension">
 			
-			<!-- <aptitudes> -->
-				<!-- <Shooting>0</Shooting> -->
-				<!-- <Melee>0</Melee> -->
-				<!-- <Construction>5</Construction> -->
-				<!-- <Mining>0</Mining> -->
-				<!-- <Cooking>0</Cooking> -->
-				<!-- <Plants>0</Plants> -->
-				<!-- <Animals>0</Animals> -->
-				<!-- <Crafting>0</Crafting> -->
-				<!-- <Artistic>-20</Artistic> -->
-				<!-- <Medicine>0</Medicine> -->
-				<!-- <Social>0</Social> -->
-				<!-- <Intellectual>0</Intellectual> -->
-			<!-- </aptitudes> -->
 			<clampedSkills>
 				<li><skill>Shooting</skill><range>0</range></li>
 				<li><skill>Melee</skill><range>0</range></li>
@@ -269,13 +251,25 @@
 			</clampedSkills>
 			<canHavePassions>false</canHavePassions>
 			
-			<forcedHediffs><li>SWCP_DroidHediff_NonSapientDroid</li></forcedHediffs>
+			<forcedHediffs> <!-- will force anything on this list and replace them immediately if something tries to remove them -->
+				<li>SWCP_DroidHediff_NonSapientDroid</li>
+				<li>SWCPWorkTypeDisablerHediff_Artistic</li>
+				
+				<li>SWCPWorkTypeDisablerHediff_Shooting</li>
+				<li>SWCPWorkTypeDisablerHediff_Hunting</li>
+				<li>SWCPWorkTypeDisablerHediff_Animals</li>
+				<li>SWCPWorkTypeDisablerHediff_Caring</li>
+				<li>SWCPWorkTypeDisablerHediff_Cooking</li>
+				<li>SWCPWorkTypeDisablerHediff_PlantWork</li>
+				<li>SWCPWorkTypeDisablerHediff_Mining</li>
+				<li>SWCPWorkTypeDisablerHediff_Social</li>
+				<li>SWCPWorkTypeDisablerHediff_Intellectual</li>
+			</forcedHediffs>
 			
 			<traitFilters>
-			  <whitelist>
-				<li>Asexual</li>
-				<!-- <li>TooSmart</li> -->
-			  </whitelist>
+				<whitelist>
+					<li>Asexual</li>
+				</whitelist>
 			</traitFilters>
 			
 			<babyStartAge>20</babyStartAge>
@@ -449,21 +443,6 @@
 		</xenotypeSet>
 		
         <combatPower>30</combatPower>
-		
-		<!-- <skills> -->
-			<!-- <li><skill>Shooting</skill><range>0</range></li> -->
-			<!-- <li><skill>Melee</skill><range>0</range></li> -->
-			<!-- <li><skill>Construction</skill><range>5</range></li> -->
-			<!-- <li><skill>Mining</skill><range>0</range></li> -->
-			<!-- <li><skill>Cooking</skill><range>0</range></li> -->
-			<!-- <li><skill>Plants</skill><range>0</range></li> -->
-			<!-- <li><skill>Animals</skill><range>0</range></li> -->
-			<!-- <li><skill>Crafting</skill><range>0</range></li> -->
-			<!-- <li><skill>Artistic</skill><range>0</range></li> -->
-			<!-- <li><skill>Medicine</skill><range>0</range></li> -->
-			<!-- <li><skill>Social</skill><range>0</range></li> -->
-			<!-- <li><skill>Intellectual</skill><range>0</range></li> -->
-		<!-- </skills> -->
 		
 		<forcedTraits>
 			<Asexual>0</Asexual>

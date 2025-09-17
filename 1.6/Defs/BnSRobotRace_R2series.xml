@@ -12,25 +12,25 @@
 			<li>guy762BSC_Droid_R2AstDrd</li>
 			<li>guy762BSC_Droid_all</li>
 		</spawnCategories>
-		<workDisables>
-			<li>Animals</li>
-			<li>Hunting</li>
-            <li>Caring</li>
-            <li>Artistic</li>
-            <li>Cooking</li>
-			<li>PlantWork</li>
-			<li>Mining</li>
-			<li>Social</li>
-			<li>Cleaning</li>
-		</workDisables>
-		<requiredWorkTags>
-			<li>Violent</li>
-			<li>Hauling</li>
-			<li>Crafting</li>
-			<li>Constructing</li>
-			<li>Intellectual</li>
-			<li>Firefighting</li>
-		</requiredWorkTags>
+		<!-- <workDisables> -->
+			<!-- <li>Animals</li> -->
+			<!-- <li>Hunting</li> -->
+            <!-- <li>Caring</li> -->
+            <!-- <li>Artistic</li> -->
+            <!-- <li>Cooking</li> -->
+			<!-- <li>PlantWork</li> -->
+			<!-- <li>Mining</li> -->
+			<!-- <li>Social</li> -->
+			<!-- <li>Cleaning</li> -->
+		<!-- </workDisables> -->
+		<!-- <requiredWorkTags> -->
+			<!-- <li>Violent</li> -->
+			<!-- <li>Hauling</li> -->
+			<!-- <li>Crafting</li> -->
+			<!-- <li>Constructing</li> -->
+			<!-- <li>Intellectual</li> -->
+			<!-- <li>Firefighting</li> -->
+		<!-- </requiredWorkTags> -->
 		<forcedTraits>
 		  <TooSmart>0</TooSmart>
 		  <Asexual>0</Asexual>
@@ -53,7 +53,7 @@
 			<ComfyTemperatureMin>-125</ComfyTemperatureMin>
 			<ComfyTemperatureMax>125</ComfyTemperatureMax>
 			
-			<GlobalLearningFactor>1.5</GlobalLearningFactor>
+			<!-- <GlobalLearningFactor>1.5</GlobalLearningFactor> -->
 			<WorkSpeedGlobal>1.2</WorkSpeedGlobal>
 			
 			<ArmorRating_Sharp>0.25</ArmorRating_Sharp>
@@ -176,125 +176,248 @@
 			<canSwapAwayFrom>false</canSwapAwayFrom>
 		  </li>
 		</comps>
-		<stages>
-			<li>
-				<disabledWorkTags>
-					<li>Animals</li>
-					<!-- <li>Hunting</li> -->
-					<li>Caring</li>
-					<li>Artistic</li>
-					<li>Cooking</li>
-					<li>PlantWork</li>
-					<li>Mining</li>
-					<li>Social</li>
-					<li>Cleaning</li>
-				</disabledWorkTags>
-			</li>
-		</stages>
+		<!-- <stages> -->
+			<!-- <li> -->
+				<!-- <disabledWorkTags> -->
+					<!-- <li>Animals</li> -->
+					<!-- <li>Caring</li> -->
+					<!-- <li>Artistic</li> -->
+					<!-- <li>Cooking</li> -->
+					<!-- <li>PlantWork</li> -->
+					<!-- <li>Mining</li> -->
+					<!-- <li>Social</li> -->
+					<!-- <li>Cleaning</li> -->
+				<!-- </disabledWorkTags> -->
+			<!-- </li> -->
+		<!-- </stages> -->
 
 		<modExtensions>
-		  <li Class="BigAndSmall.PawnExtension">
+			<!-- <li Class="BigAndSmall.PawnExtension"> -->
+				<!-- <priority>-100000</priority> -->
+				<!-- <exclusionTags> -->
+					<!-- <li>SWCPDroidRaceHediffExclusionTag_R2WorkTypeSettings</li> -->
+				<!-- </exclusionTags> -->
+				
+				<!-- NOTE: all greened-out types are ENABLED -->
+				
+				<!-- <disabledWorkTypes> -->
+					<!-- <li>PatientBedRest</li> -->
+					<!-- <li>Patient</li> -->
+					<!-- <li>BasicWorker</li> -->
+					
+					<!-- <li>Firefighter</li> -->
+					<!-- <li>Hauling</li> -->
+					<!-- <li>Cleaning</li> -->
+					
+					<!-- <li>Hunting</li> -->
+					<!-- <li MayRequire="Ludeon.RimWorld.Odyssey">Fishing</li> -->
+					<!-- <li>Construction</li> -->
+					<!-- <li>Mining</li> -->
+					<!-- <li MayRequire="Ogliss.TheWhiteCrayon.Quarry">QuarryMining</li> -->
+					<!-- <li>Growing</li> -->
+					<!-- <li>PlantCutting</li> -->
+					<!-- <li>Cooking</li> -->
+					<!-- <li>Handling</li> -->
+					<!-- <li>Smithing</li> -->
+					<!-- <li>Tailoring</li> -->
+					<!-- <li>Crafting</li> -->
+					<!-- <li>Art</li> -->
+					<!-- <li>Doctor</li> -->
+					<!-- <li>Warden</li> -->
+					<!-- <li MayRequire="Ludeon.RimWorld.Biotech">Childcare</li> -->
+					<!-- <li MayRequire="Orion.Hospitality">Diplomat</li> -->
+					<!-- <li MayRequire="Adamas.Storefront">Storefront_Selling</li> -->
+					<!-- <li MayRequire="Orion.Gastronomy">Gastronomy_Waiting</li> -->
+					<!-- <li>Research</li> -->
+				<!-- </disabledWorkTypes> -->
+			<!-- </li> -->
 			
-			<aptitudes>
-				<Shooting>5</Shooting>
-				<Melee>0</Melee>
-				<Construction>10</Construction>
-				<Mining>0</Mining>
-				<Cooking>0</Cooking>
-				<Plants>0</Plants>
-				<Animals>0</Animals>
-				<Crafting>10</Crafting>
-				<Artistic>-20</Artistic>
-				<Medicine>0</Medicine>
-				<Social>0</Social>
-				<Intellectual>10</Intellectual>
-			</aptitudes>
-			<forcedHediffs><li>SWCP_DroidHediff_NonSapientDroid</li></forcedHediffs>
 			
-			<traitFilters>
-			  <whitelist>
-				<li>Asexual</li>
-				<li>TooSmart</li>
-			  </whitelist>
-			</traitFilters>
-			
-			<babyStartAge>20</babyStartAge>
-			<pawnDiet>SWCP_DroidDiet</pawnDiet>
-			
-			<apparelRestrictions>
-				<absolutelyNothing>True</absolutelyNothing>
-				<tags>
-					<allowlist>
-						<li>SWCPDroidApparelRestrictionTag_LightArmor</li>
+			<li Class="BigAndSmall.PawnExtension">
+				<priority>-100000</priority>
+				<exclusionTags>
+					<li>SWCPDroidRaceHediffExclusionTag_CleaningDisabled</li>		
+				</exclusionTags>
 
-						<li>SWCPDroidApparelRestrictionTag_SoftwareTechSlot</li>
-						<li>SWCPDroidApparelRestrictionTag_HardwareTechSlot</li>
-						<li>SWCPDroidApparelRestrictionTag_SensorTechSlot</li>
-						
-						<li>SWCPDroidApparelRestrictionTag_GadgetWeaponSlot</li>
+				<forcedHediffs>
+					<li>SWCPWorkTypeDisablerHediff_Cleaning</li>
+				</forcedHediffs>
+			</li>
+			
+			<li Class="BigAndSmall.PawnExtension">
+				<priority>-100000</priority>
+				<exclusionTags>
+					<li>SWCPDroidRaceHediffExclusionTag_MiningDisabled</li>		
+				</exclusionTags>
 
-						<li>SWCPDroidApparelRestrictionTag_DroidScavUpgrade</li>
-					</allowlist>
-				</tags>
-			</apparelRestrictions>
-			<unarmedOnly>true</unarmedOnly>
-			<forceUnarmed>true</forceUnarmed>
-			<canWieldThings>false</canWieldThings>
+				<!-- <forcedHediffs> -->
+					<!-- <li>SWCPWorkTypeDisablerHediff_Mining</li> -->
+				<!-- </forcedHediffs> -->
+				<disabledWorkTypes>
+					<li>Mining</li>
+					<li MayRequire="Ogliss.TheWhiteCrayon.Quarry">QuarryMining</li>
+				</disabledWorkTypes>
+			</li>
+			<li Class="BigAndSmall.PawnExtension">
+				<priority>-100000</priority>
+				<exclusionTags>
+					<li>SWCPDroidRaceHediffExclusionTag_PlantWorkDisabled</li>		
+				</exclusionTags>
+
+				<forcedHediffs>
+					<li>SWCPWorkTypeDisablerHediff_PlantWork</li>
+				</forcedHediffs>
+			</li>
+			<li Class="BigAndSmall.PawnExtension">
+				<priority>-100000</priority>
+				<exclusionTags>
+					<li>SWCPDroidRaceHediffExclusionTag_CookingDisabled</li>		
+				</exclusionTags>
+
+				<forcedHediffs>
+					<li>SWCPWorkTypeDisablerHediff_Cooking</li>
+				</forcedHediffs>
+			</li>
+			<li Class="BigAndSmall.PawnExtension">
+				<priority>-100000</priority>
+				<exclusionTags>
+					<li>SWCPDroidRaceHediffExclusionTag_HandlingDisabled</li>		
+				</exclusionTags>
+
+				<disabledWorkTypes>
+					<li>Handling</li>
+				</disabledWorkTypes>
+			</li>
+			<li Class="BigAndSmall.PawnExtension">
+				<priority>-100000</priority>
+				<exclusionTags>
+					<li>SWCPDroidRaceHediffExclusionTag_CaringDisabled</li>		
+				</exclusionTags>
+
+				<forcedHediffs>
+					<li>SWCPWorkTypeDisablerHediff_Caring</li>
+				</forcedHediffs>
+			</li>
 			
 			
 			
-			<bodyPaths>
-			  <Body_Female>Droid/R2Astromech/R2</Body_Female>
-			  <Body_Male>Droid/R2Astromech/R2</Body_Male>
-			</bodyPaths>
-			<forceFemaleBody>true</forceFemaleBody>
 			
-			<bodyMaterial>
-			  <shader>BS_CutoutThreeColor</shader>
-			  <overrideDesiccated>true</overrideDesiccated>
-			  <colorA>
-				<favoriteColor>true</favoriteColor>
-				<altDefs><li>BS_CustomGlobalA</li></altDefs>
-			  </colorA>
-			  <colorB>
-				<color>150,150,150</color>
-				<altDefs><li>BS_CustomGlobalB</li></altDefs>
-			  </colorB>
-			  <colorC>
-				<color>250,250,250</color>
-				<altDefs><li>BS_CustomGlobalC</li></altDefs>
-			  </colorC>
-			</bodyMaterial>
-			
-			
-			<headPaths>
-			  <Female>512blank</Female>
-			  <Male>512blank</Male>
-			</headPaths>
-			<headMaterial>
-			  <shader>BS_CutoutThreeColor</shader>
-			  <overrideDesiccated>true</overrideDesiccated>
-			  <colorA>
-				<favoriteColor>true</favoriteColor>
-				<altDefs><li>BS_CustomGlobalA</li></altDefs>
-			  </colorA>
-			  <colorB>
-				<color>150,150,150</color>
-				<altDefs><li>BS_CustomGlobalB</li></altDefs>
-			  </colorB>
-			  <colorC>
-				<color>250,250,250</color>
-				<altDefs><li>BS_CustomGlobalC</li></altDefs>
-			  </colorC>
-			</headMaterial>
-			
-			<forcedEndogenes>
-				<li MayRequire="Ludeon.Rimworld.Biotech">Body_Standard</li>
-				<li MayRequire="Ludeon.Rimworld.Biotech">guy762_DebugHead_nullForDroids</li>
-			</forcedEndogenes>
-			
-			
-		  </li>
+			<li Class="BigAndSmall.PawnExtension">
+
+				<clampedSkills>
+					<li><skill>Shooting</skill><range>5</range></li>
+					<li><skill>Melee</skill><range>0</range></li>
+					<li><skill>Construction</skill><range>10</range></li>
+					<li><skill>Mining</skill><range>0</range></li>
+					<li><skill>Cooking</skill><range>0</range></li>
+					<li><skill>Plants</skill><range>0</range></li>
+					<li><skill>Animals</skill><range>0</range></li>
+					<li><skill>Crafting</skill><range>10</range></li>
+					<li><skill>Artistic</skill><range>0</range></li>
+					<li><skill>Medicine</skill><range>0</range></li>
+					<li><skill>Social</skill><range>0</range></li>
+					<li><skill>Intellectual</skill><range>10</range></li>
+				</clampedSkills>
+				<canHavePassions>false</canHavePassions>
+				
+				<!-- will force anything on this list and replace them immediately if something tries to remove them -->
+				<forcedHediffs>
+					<li>SWCP_DroidHediff_NonSapientDroid</li>
+					<li>SWCPWorkTypeDisablerHediff_Artistic</li>
+					<li>SWCPWorkTypeDisablerHediff_Social</li>
+					
+					<!-- <li>SWCPWorkTypeDisablerHediff_Animals</li> -->
+					<!-- <li>SWCPWorkTypeDisablerHediff_Caring</li> -->
+					<!-- <li>SWCPWorkTypeDisablerHediff_Cooking</li> -->
+					<!-- <li>SWCPWorkTypeDisablerHediff_PlantWork</li> -->
+					<!-- <li>SWCPWorkTypeDisablerHediff_Mining</li> -->
+					<!-- <li>SWCPWorkTypeDisablerHediff_Cleaning</li> -->
+				</forcedHediffs>
+				
+				<traitFilters>
+				  <whitelist>
+					<li>Asexual</li>
+					<li>TooSmart</li>
+				  </whitelist>
+				</traitFilters>
+				
+				<babyStartAge>20</babyStartAge>
+				<pawnDiet>SWCP_DroidDiet</pawnDiet>
+				
+				<apparelRestrictions>
+					<absolutelyNothing>True</absolutelyNothing>
+					<tags>
+						<allowlist>
+							<li>SWCPDroidApparelRestrictionTag_LightArmor</li>
+
+							<li>SWCPDroidApparelRestrictionTag_SoftwareTechSlot</li>
+							<li>SWCPDroidApparelRestrictionTag_HardwareTechSlot</li>
+							<li>SWCPDroidApparelRestrictionTag_SensorTechSlot</li>
+							
+							<li>SWCPDroidApparelRestrictionTag_GadgetWeaponSlot</li>
+
+							<li>SWCPDroidApparelRestrictionTag_DroidScavUpgrade</li>
+						</allowlist>
+					</tags>
+				</apparelRestrictions>
+				<unarmedOnly>true</unarmedOnly>
+				<forceUnarmed>true</forceUnarmed>
+				<canWieldThings>false</canWieldThings>
+				
+				
+				
+				<bodyPaths>
+				  <Body_Female>Droid/R2Astromech/R2</Body_Female>
+				  <Body_Male>Droid/R2Astromech/R2</Body_Male>
+				</bodyPaths>
+				<forceFemaleBody>true</forceFemaleBody>
+				
+				<bodyMaterial>
+				  <shader>BS_CutoutThreeColor</shader>
+				  <overrideDesiccated>true</overrideDesiccated>
+				  <colorA>
+					<favoriteColor>true</favoriteColor>
+					<altDefs><li>BS_CustomGlobalA</li></altDefs>
+				  </colorA>
+				  <colorB>
+					<color>150,150,150</color>
+					<altDefs><li>BS_CustomGlobalB</li></altDefs>
+				  </colorB>
+				  <colorC>
+					<color>250,250,250</color>
+					<altDefs><li>BS_CustomGlobalC</li></altDefs>
+				  </colorC>
+				</bodyMaterial>
+				
+				
+				<headPaths>
+				  <Female>512blank</Female>
+				  <Male>512blank</Male>
+				</headPaths>
+				<headMaterial>
+				  <shader>BS_CutoutThreeColor</shader>
+				  <overrideDesiccated>true</overrideDesiccated>
+				  <colorA>
+					<favoriteColor>true</favoriteColor>
+					<altDefs><li>BS_CustomGlobalA</li></altDefs>
+				  </colorA>
+				  <colorB>
+					<color>150,150,150</color>
+					<altDefs><li>BS_CustomGlobalB</li></altDefs>
+				  </colorB>
+				  <colorC>
+					<color>250,250,250</color>
+					<altDefs><li>BS_CustomGlobalC</li></altDefs>
+				  </colorC>
+				</headMaterial>
+				
+				<forcedEndogenes>
+					<li MayRequire="Ludeon.Rimworld.Biotech">Body_Standard</li>
+					<li MayRequire="Ludeon.Rimworld.Biotech">guy762_DebugHead_nullForDroids</li>
+				</forcedEndogenes>
+				
+				
+			</li>
 		</modExtensions>
 	</HediffDef>
 	

@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ModMetaData>
-  <name>Star Wars: X-Wing</name>
+  <name>Star Wars: Armored Alliance</name>
   <modIconPath IgnoreIfNoMatchingField="True">UI/ModIcon_guy762_SWGCWVehicles</modIconPath>
   <author>guy762, NelsonArts, MajesticMadman</author>
   <supportedVersions>
@@ -26,7 +26,7 @@
 		<packageId>guy762.MM.KotORCore</packageId>
 		<displayName>Star Wars KotOR Resources and Materials</displayName>
 		<steamWorkshopUrl>steam://url/CommunityFilePage/3254370945</steamWorkshopUrl>
-			<downloadUrl>https://github.com/guy1762/guy762-MM-KotORCore</downloadUrl>
+		<downloadUrl>https://github.com/guy1762/guy762-MM-KotORCore</downloadUrl>
 	</li>
   </modDependencies>
   

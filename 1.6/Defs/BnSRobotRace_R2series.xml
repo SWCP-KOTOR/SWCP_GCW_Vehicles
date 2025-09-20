@@ -44,15 +44,19 @@
 	<ThingDef Name="SWCP_BnSDroidRace_R2series" ParentName="SWCP_BnSDroidRace_BASE">
 		<defName>SWCP_BnSDroidRace_R2series</defName>
 		<label>R2-series astromech droid</label>
-		<description>.\n\nBy default, this droid is capable of the following work types:\n\n-Combat\n-Hauling\n-Crafting\n-Constructing\n-Intellectual\n-Firefighting</description>
+		<description>.\n\nBy default, this droid is capable of the following work types:\n\n-Combat\n-Hauling\n-Constructing\n-Intellectual\n-Firefighting</description>
 
 		<statBases>
 			<MarketValue>4525</MarketValue>
+			<RoyalFavorValue>2</RoyalFavorValue>
+			
 			<MoveSpeed>3</MoveSpeed>
 			<VacuumSpeedMultiplier MayRequire="kentington.saveourship2">2</VacuumSpeedMultiplier>
 			<ComfyTemperatureMin>-125</ComfyTemperatureMin>
 			<ComfyTemperatureMax>125</ComfyTemperatureMax>
 			
+			<CarryingCapacity>35</CarryingCapacity>
+			<VEF_MassCarryCapacity MayRequire="OskarPotocki.VanillaFactionsExpanded.Core">35</VEF_MassCarryCapacity>
 			<!-- <GlobalLearningFactor>1.5</GlobalLearningFactor> -->
 			<WorkSpeedGlobal>1.2</WorkSpeedGlobal>
 			
@@ -60,7 +64,7 @@
 			<ArmorRating_Blunt>0.1</ArmorRating_Blunt>
             <ArmorRating_Heat>0.35</ArmorRating_Heat>
             <InjuryHealingFactor>1.75</InjuryHealingFactor>
-            <IncomingDamageFactor>0.95</IncomingDamageFactor>
+            <IncomingDamageFactor>0.75</IncomingDamageFactor>
 			
             <!-- <StaggerDurationFactor MayRequire="Ludeon.RimWorld.Biotech">0.8</StaggerDurationFactor> -->
             <!-- <EMPResistance MayRequire="Ludeon.RimWorld.Biotech">0.9</EMPResistance> -->
@@ -146,7 +150,7 @@
 			<TechprofSubpersonaCore>1</TechprofSubpersonaCore>
 		</butcherProducts>
 		<tradeTags>
-            <li>guy762TT_KotORDroids_techrare</li>
+            <li>SWCPTT_AnyEraDroids_techrare</li>
 		</tradeTags>
 	</ThingDef>
 	
@@ -192,111 +196,40 @@
 		<!-- </stages> -->
 
 		<modExtensions>
-			<!-- <li Class="BigAndSmall.PawnExtension"> -->
-				<!-- <priority>-100000</priority> -->
-				<!-- <exclusionTags> -->
-					<!-- <li>SWCPDroidRaceHediffExclusionTag_R2WorkTypeSettings</li> -->
-				<!-- </exclusionTags> -->
-				
-				<!-- NOTE: all greened-out types are ENABLED -->
-				
-				<!-- <disabledWorkTypes> -->
-					<!-- <li>PatientBedRest</li> -->
-					<!-- <li>Patient</li> -->
-					<!-- <li>BasicWorker</li> -->
-					
-					<!-- <li>Firefighter</li> -->
-					<!-- <li>Hauling</li> -->
-					<!-- <li>Cleaning</li> -->
-					
-					<!-- <li>Hunting</li> -->
-					<!-- <li MayRequire="Ludeon.RimWorld.Odyssey">Fishing</li> -->
-					<!-- <li>Construction</li> -->
-					<!-- <li>Mining</li> -->
-					<!-- <li MayRequire="Ogliss.TheWhiteCrayon.Quarry">QuarryMining</li> -->
-					<!-- <li>Growing</li> -->
-					<!-- <li>PlantCutting</li> -->
-					<!-- <li>Cooking</li> -->
-					<!-- <li>Handling</li> -->
-					<!-- <li>Smithing</li> -->
-					<!-- <li>Tailoring</li> -->
-					<!-- <li>Crafting</li> -->
-					<!-- <li>Art</li> -->
-					<!-- <li>Doctor</li> -->
-					<!-- <li>Warden</li> -->
-					<!-- <li MayRequire="Ludeon.RimWorld.Biotech">Childcare</li> -->
-					<!-- <li MayRequire="Orion.Hospitality">Diplomat</li> -->
-					<!-- <li MayRequire="Adamas.Storefront">Storefront_Selling</li> -->
-					<!-- <li MayRequire="Orion.Gastronomy">Gastronomy_Waiting</li> -->
-					<!-- <li>Research</li> -->
-				<!-- </disabledWorkTypes> -->
-			<!-- </li> -->
+			
+			
+			<li Class="BigAndSmall.PawnExtension">
+				<priority>-100001</priority>
+				<exclusionTags><li>SWCPDroidRaceHediffExclusionTag_NoPassion</li></exclusionTags>
+				<canHavePassions>false</canHavePassions>
+			</li>
+			
 			
 			
 			<li Class="BigAndSmall.PawnExtension">
 				<priority>-100000</priority>
-				<exclusionTags>
-					<li>SWCPDroidRaceHediffExclusionTag_CleaningDisabled</li>		
-				</exclusionTags>
-
-				<forcedHediffs>
-					<li>SWCPWorkTypeDisablerHediff_Cleaning</li>
-				</forcedHediffs>
-			</li>
-			
-			<li Class="BigAndSmall.PawnExtension">
-				<priority>-100000</priority>
-				<exclusionTags>
-					<li>SWCPDroidRaceHediffExclusionTag_MiningDisabled</li>		
-				</exclusionTags>
-
-				<!-- <forcedHediffs> -->
-					<!-- <li>SWCPWorkTypeDisablerHediff_Mining</li> -->
-				<!-- </forcedHediffs> -->
-				<disabledWorkTypes>
-					<li>Mining</li>
-					<li MayRequire="Ogliss.TheWhiteCrayon.Quarry">QuarryMining</li>
-				</disabledWorkTypes>
+				<exclusionTags><li>SWCPDroidRaceHediffExclusionTag_CleaningDisabled</li></exclusionTags>
+				<disabledWorkTypes><li>Cleaning</li></disabledWorkTypes>
 			</li>
 			<li Class="BigAndSmall.PawnExtension">
 				<priority>-100000</priority>
-				<exclusionTags>
-					<li>SWCPDroidRaceHediffExclusionTag_PlantWorkDisabled</li>		
-				</exclusionTags>
-
-				<forcedHediffs>
-					<li>SWCPWorkTypeDisablerHediff_PlantWork</li>
-				</forcedHediffs>
+				<exclusionTags><li>SWCPDroidRaceHediffExclusionTag_HandlingDisabled</li></exclusionTags>
+				<disabledWorkTypes><li>Handling</li></disabledWorkTypes>
 			</li>
 			<li Class="BigAndSmall.PawnExtension">
 				<priority>-100000</priority>
-				<exclusionTags>
-					<li>SWCPDroidRaceHediffExclusionTag_CookingDisabled</li>		
-				</exclusionTags>
-
-				<forcedHediffs>
-					<li>SWCPWorkTypeDisablerHediff_Cooking</li>
-				</forcedHediffs>
+				<exclusionTags><li>SWCPDroidRaceHediffExclusionTag_CookingDisabled</li></exclusionTags>
+				<disabledWorkTypes><li>Cooking</li></disabledWorkTypes>
 			</li>
 			<li Class="BigAndSmall.PawnExtension">
 				<priority>-100000</priority>
-				<exclusionTags>
-					<li>SWCPDroidRaceHediffExclusionTag_HandlingDisabled</li>		
-				</exclusionTags>
-
-				<disabledWorkTypes>
-					<li>Handling</li>
-				</disabledWorkTypes>
+				<exclusionTags><li>SWCPDroidRaceHediffExclusionTag_DoctorDisabled</li></exclusionTags>
+				<disabledWorkTypes><li>Doctor</li></disabledWorkTypes>
 			</li>
 			<li Class="BigAndSmall.PawnExtension">
 				<priority>-100000</priority>
-				<exclusionTags>
-					<li>SWCPDroidRaceHediffExclusionTag_CaringDisabled</li>		
-				</exclusionTags>
-
-				<forcedHediffs>
-					<li>SWCPWorkTypeDisablerHediff_Caring</li>
-				</forcedHediffs>
+				<exclusionTags><li>SWCPDroidRaceHediffExclusionTag_SmithingDisabled</li></exclusionTags>
+				<disabledWorkTypes><li>Smithing</li></disabledWorkTypes>
 			</li>
 			
 			
@@ -312,27 +245,27 @@
 					<li><skill>Cooking</skill><range>0</range></li>
 					<li><skill>Plants</skill><range>0</range></li>
 					<li><skill>Animals</skill><range>0</range></li>
-					<li><skill>Crafting</skill><range>10</range></li>
+					<li><skill>Crafting</skill><range>0</range></li>
 					<li><skill>Artistic</skill><range>0</range></li>
 					<li><skill>Medicine</skill><range>0</range></li>
 					<li><skill>Social</skill><range>0</range></li>
 					<li><skill>Intellectual</skill><range>10</range></li>
 				</clampedSkills>
-				<canHavePassions>false</canHavePassions>
 				
-				<!-- will force anything on this list and replace them immediately if something tries to remove them -->
+				<!-- will force anything on this list and replace them immediately if something tries to remove them - good for things that should be perma-disabled -->
 				<forcedHediffs>
 					<li>SWCP_DroidHediff_NonSapientDroid</li>
+					
+					<li>SWCPWorkTypeDisablerHediff_Hunting</li>
+					<li>SWCPWorkTypeDisablerHediff_Mining</li>
+					<li>SWCPWorkTypeDisablerHediff_PlantWork</li>
 					<li>SWCPWorkTypeDisablerHediff_Artistic</li>
 					<li>SWCPWorkTypeDisablerHediff_Social</li>
-					
-					<!-- <li>SWCPWorkTypeDisablerHediff_Animals</li> -->
-					<!-- <li>SWCPWorkTypeDisablerHediff_Caring</li> -->
-					<!-- <li>SWCPWorkTypeDisablerHediff_Cooking</li> -->
-					<!-- <li>SWCPWorkTypeDisablerHediff_PlantWork</li> -->
-					<!-- <li>SWCPWorkTypeDisablerHediff_Mining</li> -->
-					<!-- <li>SWCPWorkTypeDisablerHediff_Cleaning</li> -->
 				</forcedHediffs>
+				<disabledWorkTypes>
+					<li>Tailoring</li>
+					<li>Crafting</li>
+				</disabledWorkTypes>
 				
 				<traitFilters>
 				  <whitelist>

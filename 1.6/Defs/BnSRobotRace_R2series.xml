@@ -66,6 +66,9 @@
             <InjuryHealingFactor>1.75</InjuryHealingFactor>
             <IncomingDamageFactor>0.75</IncomingDamageFactor>
 			
+			<BS_BatteryCharging>0.25</BS_BatteryCharging>
+			<MaxNutrition>1.35</MaxNutrition>
+			
             <!-- <StaggerDurationFactor MayRequire="Ludeon.RimWorld.Biotech">0.8</StaggerDurationFactor> -->
             <!-- <EMPResistance MayRequire="Ludeon.RimWorld.Biotech">0.9</EMPResistance> -->
 			

@@ -59,6 +59,7 @@
 			<VEF_MassCarryCapacity MayRequire="OskarPotocki.VanillaFactionsExpanded.Core">35</VEF_MassCarryCapacity>
 			<!-- <GlobalLearningFactor>1.5</GlobalLearningFactor> -->
 			<WorkSpeedGlobal>1.2</WorkSpeedGlobal>
+			<SM_FlirtChance>0</SM_FlirtChance>
 			
 			<ArmorRating_Sharp>0.25</ArmorRating_Sharp>
 			<ArmorRating_Blunt>0.1</ArmorRating_Blunt>
@@ -183,8 +184,9 @@
 			<canSwapAwayFrom>false</canSwapAwayFrom>
 		  </li>
 		</comps>
-		<!-- <stages> -->
-			<!-- <li> -->
+		<stages>
+			<li>
+				<statFactors><SM_FlirtChance>0</SM_FlirtChance></statFactors>
 				<!-- <disabledWorkTags> -->
 					<!-- <li>Animals</li> -->
 					<!-- <li>Caring</li> -->
@@ -195,8 +197,8 @@
 					<!-- <li>Social</li> -->
 					<!-- <li>Cleaning</li> -->
 				<!-- </disabledWorkTags> -->
-			<!-- </li> -->
-		<!-- </stages> -->
+			</li>
+		</stages>
 
 		<modExtensions>
 			
@@ -239,7 +241,9 @@
 			
 			
 			<li Class="BigAndSmall.PawnExtension">
-
+				<romanceTags/> <!-- No tags at all by default. -->
+				<noFamilyRelations>true</noFamilyRelations>
+				
 				<clampedSkills>
 					<li><skill>Shooting</skill><range>5</range></li>
 					<li><skill>Melee</skill><range>0</range></li>
@@ -313,6 +317,32 @@
 				  <overrideDesiccated>true</overrideDesiccated>
 				  <colorA>
 					<favoriteColor>true</favoriteColor>
+					<!-- <colorOptions> -->
+						<!-- Jedi Sentinel Blue -->
+						<!-- <li>(70,90,125)</li> -->
+						<!-- Old Republic Yellow -->
+						<!-- <li>(230,185,45)</li> -->
+						<!-- Galactic Marine Burgundy -->
+						<!-- <li>(120,55,75)</li> -->
+						<!-- Imperial Remnant Green -->
+						<!-- <li>(25,110,30)</li> -->
+						<!-- Zsinj's Mustard -->
+						<!-- <li>(165,155,80)</li> -->
+						<!-- Pentastar Blue -->
+						<!-- <li>(65,70,190)</li> -->
+						<!-- Maldrood Crimson -->
+						<!-- <li>(205,15,40)</li> -->
+						<!-- New Republic Orange -->
+						<!-- <li>(205,125,20)</li> -->
+						<!-- New Republic Azure -->
+						<!-- <li>(70,135,190)</li> -->
+						<!-- Rebel Red -->
+						<!-- <li>(125,50,50)</li> -->
+						<!-- Mandalorian Protector Green -->
+						<!-- <li>(90,120,85)</li> -->
+						<!-- Black Sun Violet -->
+						<!-- <li>(85,65,150)</li> -->
+					<!-- </colorOptions> -->
 					<altDefs><li>BS_CustomGlobalA</li></altDefs>
 				  </colorA>
 				  <colorB>

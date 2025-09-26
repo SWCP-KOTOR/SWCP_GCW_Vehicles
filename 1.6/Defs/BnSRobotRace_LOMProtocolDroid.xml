@@ -353,12 +353,11 @@
 				<!-- <unarmedOnly>false</unarmedOnly> -->
 				
 				
-				
+				<forceFemaleBody>false</forceFemaleBody>
 				<bodyPaths>
 				  <Body_Female>Droid/LOMProtocolDroid/LOMProtocolDroid_body</Body_Female>
 				  <Body_Male>Droid/LOMProtocolDroid/LOMProtocolDroid_body</Body_Male>
 				</bodyPaths>
-				<forceFemaleBody>false</forceFemaleBody>
 				
 				<bodyMaterial>
 				  <shader>BS_CutoutThreeColor</shader>
@@ -368,12 +367,10 @@
 					<altDefs><li>BS_CustomGlobalA</li></altDefs>
 				  </colorA>
 				  <colorB>
-					 <!-- silver -->
 					<color>200,200,200</color>
 					<altDefs><li>BS_CustomGlobalB</li></altDefs>
 				  </colorB>
 				  <colorC>
-					 <!-- bright mint green -->
 					<color>0,255,180</color>
 					<altDefs><li>BS_CustomGlobalC</li></altDefs>
 				  </colorC>
@@ -392,12 +389,10 @@
 					<altDefs><li>BS_CustomGlobalA</li></altDefs>
 				  </colorA>
 				  <colorB>
-					<!-- silver -->
 					<color>200,200,200</color>
 					<altDefs><li>BS_CustomGlobalB</li></altDefs>
 				  </colorB>
 				  <colorC>
-					<!-- bright mint green -->
 					<color>0,255,180</color>
 					<altDefs><li>BS_CustomGlobalC</li></altDefs>
 				  </colorC>
@@ -409,98 +404,6 @@
 				</forcedEndogenes>	
 			</li>
 		</modExtensions>
-		
-		
-		
-	</HediffDef>
-	
-	
-	
-	<BigAndSmall.GraphicSetDef>
-		<defName>guy762_LOMProtocolDroidCustomization_defaultHead</defName>
-		<conditionalGraphics>
-			<triggerFlags><whitelist><guy762AltTag_LOMProtocolDroidDefault/></whitelist></triggerFlags>
-			<maskPaths>
-				<li>Droid/LOMProtocolDroid/LOMProtocolDroid_head</li>
-			</maskPaths>
-		</conditionalGraphics>
-	</BigAndSmall.GraphicSetDef>
-	
-	<BigAndSmall.GraphicSetDef>
-		<defName>guy762_LOMProtocolDroidCustomization_4LOMHead</defName>
-		<conditionalGraphics>
-			<triggerFlags><whitelist><guy762AltTag_4LOM/></whitelist></triggerFlags>
-			<maskPaths>
-				<li>Droid/LOMProtocolDroid/4LOM_head</li>
-			</maskPaths>
-			<colorA>
-				<color>(95,90,90)</color> <!-- 4-LOM's steel -->
-				<altDefs><li>BS_CustomGlobalA</li></altDefs>
-			</colorA>
-			<colorB>
-				<color>(180,15,45)</color> <!-- wax seal red -->
-				<altDefs><li>BS_CustomGlobalB</li></altDefs>
-			</colorB>
-			<colorC>
-				<color>(0,255,180)</color> <!-- bright mint green -->
-				<altDefs><li>BS_CustomGlobalC</li></altDefs>
-			</colorC>
-		</conditionalGraphics>
-	</BigAndSmall.GraphicSetDef>
-	
-	
-	
-	
-	
-	
-	<BigAndSmall.GraphicSetDef>
-		<defName>guy762_LOMProtocolDroidCustomization_defaultBody</defName>
-		<conditionalGraphics>
-			<triggerFlags><whitelist><guy762AltTag_LOMProtocolDroidDefault/></whitelist></triggerFlags>
-			<maskPaths>
-				<li>Droid/LOMProtocolDroid/LOMProtocolDroid_body</li>
-			</maskPaths>
-		</conditionalGraphics>
-	</BigAndSmall.GraphicSetDef>
-	
-	<BigAndSmall.GraphicSetDef>
-		<defName>guy762_LOMProtocolDroidCustomization_4LOMBody</defName>
-		<conditionalGraphics>
-			<triggerFlags><whitelist><guy762AltTag_4LOM/></whitelist></triggerFlags>
-			<maskPaths>
-				<li>Droid/LOMProtocolDroid/4LOM_body</li>
-			</maskPaths>
-			<colorA>
-				<color>(95,90,90)</color> <!-- 4-LOM's steel -->
-				<altDefs><li>BS_CustomGlobalA</li></altDefs>
-			</colorA>
-			<colorB>
-				<color>(180,15,45)</color> <!-- wax seal red -->
-				<altDefs><li>BS_CustomGlobalB</li></altDefs>
-			</colorB>
-			<colorC>
-				<color>(0,255,180)</color> <!-- bright mint green -->
-				<altDefs><li>BS_CustomGlobalC</li></altDefs>
-			</colorC>
-		</conditionalGraphics>
-	</BigAndSmall.GraphicSetDef>
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	<GeneDef ParentName="SWCPDroidBodyGene_chassisBASE">
-		<defName>SWCPDroidBodyGene_LOMProtocolDroid</defName>
-		<label>LOM-series protocol droid</label>
-		
-		<!-- <skinColorOverride>(125,90,45)</skinColorOverride> -->
-		
-		<iconPath>UI/DroidIcons/Icon_LOMProtocolDroid</iconPath>
 		
 		<renderNodeProperties>
 			<li Class="BigAndSmall.PawnRenderingProps_Ultimate">
@@ -549,6 +452,98 @@
 			</li>
 		</renderNodeProperties>
 		
+	</HediffDef>
+	
+	
+	
+	<BigAndSmall.GraphicSetDef>
+		<defName>guy762_LOMProtocolDroidCustomization_defaultHead</defName>
+		<conditionalGraphics>
+			<triggerFlags><whitelist><guy762AltTag_LOMProtocolDroidDefault/></whitelist></triggerFlags>
+			<texturePaths>
+				<li>Droid/LOMProtocolDroid/LOMProtocolDroid_head</li>
+			</texturePaths>
+		</conditionalGraphics>
+	</BigAndSmall.GraphicSetDef>
+	
+	<BigAndSmall.GraphicSetDef>
+		<defName>guy762_LOMProtocolDroidCustomization_4LOMHead</defName>
+		<conditionalGraphics>
+			<triggerFlags><whitelist><guy762AltTag_4LOM/></whitelist></triggerFlags>
+			<texturePaths>
+				<li>Droid/LOMProtocolDroid/4LOM_head</li>
+			</texturePaths>
+			<colorA>
+				<color>(95,90,90)</color> <!-- 4-LOM's steel -->
+				<altDefs><li>BS_CustomGlobalA</li></altDefs>
+			</colorA>
+			<colorB>
+				<color>(180,15,45)</color> <!-- wax seal red -->
+				<altDefs><li>BS_CustomGlobalB</li></altDefs>
+			</colorB>
+			<colorC>
+				<color>(0,255,180)</color> <!-- bright mint green -->
+				<altDefs><li>BS_CustomGlobalC</li></altDefs>
+			</colorC>
+		</conditionalGraphics>
+	</BigAndSmall.GraphicSetDef>
+	
+	
+	
+	
+	
+	
+	<BigAndSmall.GraphicSetDef>
+		<defName>guy762_LOMProtocolDroidCustomization_defaultBody</defName>
+		<conditionalGraphics>
+			<triggerFlags><whitelist><guy762AltTag_LOMProtocolDroidDefault/></whitelist></triggerFlags>
+			<texturePaths>
+				<li>Droid/LOMProtocolDroid/LOMProtocolDroid_body</li>
+			</texturePaths>
+		</conditionalGraphics>
+	</BigAndSmall.GraphicSetDef>
+	
+	<BigAndSmall.GraphicSetDef>
+		<defName>guy762_LOMProtocolDroidCustomization_4LOMBody</defName>
+		<conditionalGraphics>
+			<triggerFlags><whitelist><guy762AltTag_4LOM/></whitelist></triggerFlags>
+			<texturePaths>
+				<li>Droid/LOMProtocolDroid/4LOM_body</li>
+			</texturePaths>
+			<colorA>
+				<color>(95,90,90)</color> <!-- 4-LOM's steel -->
+				<altDefs><li>BS_CustomGlobalA</li></altDefs>
+			</colorA>
+			<colorB>
+				<color>(180,15,45)</color> <!-- wax seal red -->
+				<altDefs><li>BS_CustomGlobalB</li></altDefs>
+			</colorB>
+			<colorC>
+				<color>(0,255,180)</color> <!-- bright mint green -->
+				<altDefs><li>BS_CustomGlobalC</li></altDefs>
+			</colorC>
+		</conditionalGraphics>
+	</BigAndSmall.GraphicSetDef>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<GeneDef ParentName="SWCPDroidBodyGene_chassisBASE">
+		<defName>SWCPDroidBodyGene_LOMProtocolDroid</defName>
+		<label>LOM-series protocol droid</label>
+		
+		<!-- <skinColorOverride>(125,90,45)</skinColorOverride> -->
+		
+		<iconPath>UI/DroidIcons/Icon_LOMProtocolDroid</iconPath>
+		
+		
+		
 		<!-- <modExtensions> -->
 		  <!-- <li Class="BigAndSmall.PawnExtension"> -->
 			<!-- <bodyPaths> -->
@@ -568,12 +563,10 @@
 				<!-- <altDefs><li>BS_CustomGlobalA</li></altDefs> -->
 			  <!-- </colorA> -->
 			  <!-- <colorB> -->
-				 <!-- silver -->
 				<!-- <color>200,200,200</color> -->
 				<!-- <altDefs><li>BS_CustomGlobalB</li></altDefs> -->
 			  <!-- </colorB> -->
 			  <!-- <colorC> -->
-				 <!-- bright mint green -->
 				<!-- <color>0,255,180</color> -->
 				<!-- <altDefs><li>BS_CustomGlobalC</li></altDefs> -->
 			  <!-- </colorC> -->
@@ -587,12 +580,10 @@
 				<!-- <altDefs><li>BS_CustomGlobalA</li></altDefs> -->
 			  <!-- </colorA> -->
 			  <!-- <colorB> -->
-				 <!-- silver -->
 				<!-- <color>200,200,200</color> -->
 				<!-- <altDefs><li>BS_CustomGlobalB</li></altDefs> -->
 			  <!-- </colorB> -->
 			  <!-- <colorC> -->
-				 <!-- bright mint green -->
 				<!-- <color>0,255,180</color> -->
 				<!-- <altDefs><li>BS_CustomGlobalC</li></altDefs> -->
 			  <!-- </colorC> -->

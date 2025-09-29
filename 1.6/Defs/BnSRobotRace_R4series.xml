@@ -221,6 +221,7 @@
 			
 			
 			<li Class="BigAndSmall.PawnExtension">
+				<frequentUpdate>false</frequentUpdate>
 				<romanceTags/> <!-- No tags at all by default. -->
 				<noFamilyRelations>true</noFamilyRelations>
 			  
@@ -284,61 +285,103 @@
 				<forceUnarmed>true</forceUnarmed>
 				<canWieldThings>false</canWieldThings>
 				
-				
-				
-				<bodyPaths>
-				  <Body_Female>Droid/R4Astromech/R4</Body_Female>
-				  <Body_Male>Droid/R4Astromech/R4</Body_Male>
-				</bodyPaths>
-				<forceFemaleBody>true</forceFemaleBody>
-				
-				<bodyMaterial>
-				  <shader>BS_CutoutThreeColor</shader>
-				  <overrideDesiccated>true</overrideDesiccated>
-				  <colorA>
-					<favoriteColor>true</favoriteColor>
-					<altDefs><li>BS_CustomGlobalA</li></altDefs>
-				  </colorA>
-				  <colorB>
-					<color>250,250,250</color>
-					<altDefs><li>BS_CustomGlobalB</li></altDefs>
-				  </colorB>
-				  <colorC>
-					<color>250,250,250</color>
-					<altDefs><li>BS_CustomGlobalC</li></altDefs>
-				  </colorC>
-				</bodyMaterial>
-				
-				
-				<headPaths>
-				  <Female>512blank</Female>
-				  <Male>512blank</Male>
-				</headPaths>
-				<headMaterial>
-				  <shader>BS_CutoutThreeColor</shader>
-				  <overrideDesiccated>true</overrideDesiccated>
-				  <colorA>
-					<favoriteColor>true</favoriteColor>
-					<altDefs><li>BS_CustomGlobalA</li></altDefs>
-				  </colorA>
-				  <colorB>
-					<color>250,250,250</color>
-					<altDefs><li>BS_CustomGlobalB</li></altDefs>
-				  </colorB>
-				  <colorC>
-					<color>250,250,250</color>
-					<altDefs><li>BS_CustomGlobalC</li></altDefs>
-				  </colorC>
-				</headMaterial>
-				
 				<forcedEndogenes>
 					<li MayRequire="Ludeon.Rimworld.Biotech">Body_Standard</li>
 					<li MayRequire="Ludeon.Rimworld.Biotech">guy762_DebugHead_nullForDroids</li>
 				</forcedEndogenes>
 				
-				
-			  </li>
+				<forceFemaleBody>true</forceFemaleBody>
+				<!-- this block prevents the base human textures from being used -->
+				<bodyPaths>
+				  <Female>512blank</Female>
+				  <Male>512blank</Male>
+				</bodyPaths>
+				<bodyMaterial>
+					<shader>BS_CutoutThreeColor</shader>
+					<overrideDesiccated>true</overrideDesiccated>
+					<colorA><altDefs><li>BS_CustomGlobalA</li></altDefs></colorA>
+					<colorB><altDefs><li>BS_CustomGlobalB</li></altDefs></colorB>
+					<colorC><altDefs><li>BS_CustomGlobalC</li></altDefs></colorC>
+				</bodyMaterial>
+				<headPaths>
+					<Female>512blank</Female>
+					<Male>512blank</Male>
+				</headPaths>
+				<headMaterial>
+					<shader>BS_CutoutThreeColor</shader>
+					<overrideDesiccated>true</overrideDesiccated>
+					<colorA><altDefs><li>BS_CustomGlobalA</li></altDefs></colorA>
+					<colorB><altDefs><li>BS_CustomGlobalB</li></altDefs></colorB>
+					<colorC><altDefs><li>BS_CustomGlobalC</li></altDefs></colorC>
+				</headMaterial>
+				<!-- this block prevents the base human textures from being used -->
+			</li>
 		</modExtensions>
+		
+		<renderNodeProperties>
+			<li Class="BigAndSmall.PawnRenderingProps_Ultimate">
+				<nodeClass>BigAndSmall.PawnRenderNode_Ultimate</nodeClass>
+				<workerClass>BigAndSmall.UltimateRenderNodeWorker</workerClass>
+				<parentTagDef>Head</parentTagDef>
+				<shader>BS_CutoutThreeColor</shader>
+				<baseLayer>70</baseLayer>
+				<conditionalGraphics>
+					<texturePaths><li>512blank</li></texturePaths>
+					<colorA><altDefs><li>BS_CustomGlobalA</li></altDefs></colorA>
+					<colorB><altDefs><li>BS_CustomGlobalB</li></altDefs></colorB>
+					<colorC><altDefs><li>BS_CustomGlobalC</li></altDefs></colorC>
+					<!-- <altDefs><li>guy762_LOMProtocolDroidCustomization_defaultHead</li><li>guy762_LOMProtocolDroidCustomization_4LOMHead</li></altDefs> -->
+				</conditionalGraphics>
+			</li>
+			<li Class="BigAndSmall.PawnRenderingProps_Ultimate">
+				<nodeClass>BigAndSmall.PawnRenderNode_Ultimate</nodeClass>
+				<workerClass>BigAndSmall.UltimateRenderNodeWorker</workerClass>
+				<parentTagDef>Body</parentTagDef>
+				<shader>BS_CutoutThreeColor</shader>
+				<baseLayer>20</baseLayer>
+				<conditionalGraphics>
+					<texturePaths><li>Droid/R4Astromech/R4</li></texturePaths>
+					<colorA>
+						<!-- <favoriteColor>true</favoriteColor> -->
+						<colorOptions>
+							<!-- Jedi Sentinel Blue -->
+							<li>(70,90,125)</li>
+							<!-- Old Republic Yellow -->
+							<li>(230,185,45)</li>
+							<!-- Galactic Marine Burgundy -->
+							<li>(120,55,75)</li>
+							<!-- Imperial Remnant Green -->
+							<li>(25,110,30)</li>
+							<!-- Pentastar Blue -->
+							<li>(65,70,190)</li>
+							<!-- Maldrood Crimson -->
+							<li>(205,15,40)</li>
+							<!-- New Republic Orange -->
+							<li>(205,125,20)</li>
+							<!-- New Republic Azure -->
+							<li>(70,135,190)</li>
+							<!-- Rebel Red -->
+							<li>(125,50,50)</li>
+							<!-- Mandalorian Protector Green -->
+							<li>(90,120,85)</li>
+							<!-- Black Sun Violet -->
+							<li>(85,65,150)</li>
+						</colorOptions>
+						<altDefs><li>BS_CustomGlobalA</li></altDefs>
+					</colorA>
+					<colorB>
+						<color>250,250,250</color>
+						<altDefs><li>BS_CustomGlobalB</li></altDefs>
+					</colorB>
+					<colorC>
+						<color>250,250,250</color>
+						<altDefs><li>BS_CustomGlobalC</li></altDefs>
+					</colorC>
+					<!-- <altDefs><li>guy762_LOMProtocolDroidCustomization_defaultBody</li><li>guy762_LOMProtocolDroidCustomization_4LOMBody</li></altDefs> -->
+				</conditionalGraphics>
+			</li>
+		</renderNodeProperties>
+		
 	</HediffDef>
 	
 	
@@ -353,38 +396,6 @@
 		<skinColorOverride>(250, 250, 250)</skinColorOverride>
 		
 		<iconPath>UI/DroidIcons/Icon_R4</iconPath>
-		<modExtensions>
-		  <li Class="BigAndSmall.PawnExtension">
-			<bodyPaths>
-			  <Body_Female>Droid/R4Astromech/R4</Body_Female>
-			  <Body_Male>Droid/R4Astromech/R4</Body_Male>
-			</bodyPaths>
-			<headPaths>
-			  <Female>512blank</Female>
-			  <Male>512blank</Male>
-			</headPaths>
-			<!-- <bodyDrawData> <defaultData> <layer>71</layer> </defaultData> </bodyDrawData> -->
-			
-			<bodyMaterial>
-			  <shader>BS_CutoutThreeColor</shader>
-			  <overrideDesiccated>true</overrideDesiccated>
-			  
-			  <colorA>
-				<favoriteColor>true</favoriteColor>
-				<altDefs><li>BS_CustomGlobalA</li></altDefs>
-			  </colorA>
-			  <colorB>
-				<color>250,250,250</color>
-				<altDefs><li>BS_CustomGlobalB</li></altDefs>
-			  </colorB>
-			  <colorC>
-				<color>250,250,250</color>
-				<altDefs><li>BS_CustomGlobalC</li></altDefs>
-			  </colorC>
-			  
-			</bodyMaterial>
-		  </li>
-		</modExtensions>
 	</GeneDef>
 	
 	<XenotypeDef>

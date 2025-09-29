@@ -294,6 +294,7 @@
 			
 			
 			<li Class="BigAndSmall.PawnExtension">
+				<frequentUpdate>false</frequentUpdate>
 				
 				<clampedSkills>
 					<li><skill>Shooting</skill><range>0</range></li>
@@ -332,7 +333,7 @@
 				<pawnDiet>SWCP_DroidDiet</pawnDiet>
 				
 				<apparelRestrictions>
-					<absolutelyNothing>True</absolutelyNothing>
+					<absolutelyNothing>false</absolutelyNothing>
 					<tags>
 						<allowlist>
 							<li>SWCPDroidApparelRestrictionTag_TorsoAccessory</li>
@@ -352,56 +353,43 @@
 				</apparelRestrictions>
 				<!-- <unarmedOnly>false</unarmedOnly> -->
 				
+				<forcedEndogenes>
+					<li MayRequire="Ludeon.Rimworld.Biotech">Body_Standard</li>
+					<!-- <li MayRequire="Ludeon.Rimworld.Biotech">guy762_DebugHead_nullForDroids</li> -->
+				</forcedEndogenes>
+				
 				
 				<forceFemaleBody>false</forceFemaleBody>
+				
+				<!-- this block prevents the base human textures from being used -->
 				<bodyPaths>
-				  <Body_Female>Droid/LOMProtocolDroid/LOMProtocolDroid_body</Body_Female>
-				  <Body_Male>Droid/LOMProtocolDroid/LOMProtocolDroid_body</Body_Male>
+				  <!-- <Body_Female>Droid/LOMProtocolDroid/LOMProtocolDroid_body</Body_Female> -->
+				  <!-- <Body_Male>Droid/LOMProtocolDroid/LOMProtocolDroid_body</Body_Male> -->
+				  <Female>512blank</Female>
+				  <Male>512blank</Male>
 				</bodyPaths>
 				
 				<bodyMaterial>
 				  <shader>BS_CutoutThreeColor</shader>
 				  <overrideDesiccated>true</overrideDesiccated>
-				  <colorA>
-					<favoriteColor>true</favoriteColor>
-					<altDefs><li>BS_CustomGlobalA</li></altDefs>
-				  </colorA>
-				  <colorB>
-					<color>200,200,200</color>
-					<altDefs><li>BS_CustomGlobalB</li></altDefs>
-				  </colorB>
-				  <colorC>
-					<color>0,255,180</color>
-					<altDefs><li>BS_CustomGlobalC</li></altDefs>
-				  </colorC>
+				  <colorA><altDefs><li>BS_CustomGlobalA</li></altDefs></colorA>
+				  <colorB><altDefs><li>BS_CustomGlobalB</li></altDefs></colorB>
+				  <colorC><altDefs><li>BS_CustomGlobalC</li></altDefs></colorC>
 				</bodyMaterial>
-				
-				
 				<headPaths>
-				  <Female>Droid/LOMProtocolDroid/LOMProtocolDroid_head</Female>
-				  <Male>Droid/LOMProtocolDroid/LOMProtocolDroid_head</Male>
+				  <!-- <Female>Droid/LOMProtocolDroid/LOMProtocolDroid_head</Female> -->
+				  <!-- <Male>Droid/LOMProtocolDroid/LOMProtocolDroid_head</Male> -->
+				  <Female>512blank</Female>
+				  <Male>512blank</Male>
 				</headPaths>
 				<headMaterial>
 				  <shader>BS_CutoutThreeColor</shader>
 				  <overrideDesiccated>true</overrideDesiccated>
-				  <colorA>
-					<favoriteColor>true</favoriteColor>
-					<altDefs><li>BS_CustomGlobalA</li></altDefs>
-				  </colorA>
-				  <colorB>
-					<color>200,200,200</color>
-					<altDefs><li>BS_CustomGlobalB</li></altDefs>
-				  </colorB>
-				  <colorC>
-					<color>0,255,180</color>
-					<altDefs><li>BS_CustomGlobalC</li></altDefs>
-				  </colorC>
+				  <colorA><altDefs><li>BS_CustomGlobalA</li></altDefs></colorA>
+				  <colorB><altDefs><li>BS_CustomGlobalB</li></altDefs></colorB>
+				  <colorC><altDefs><li>BS_CustomGlobalC</li></altDefs></colorC>
 				</headMaterial>
-				
-				<forcedEndogenes>
-					<li MayRequire="Ludeon.Rimworld.Biotech">Body_Standard</li>
-					<!-- <li MayRequire="Ludeon.Rimworld.Biotech">guy762_DebugHead_nullForDroids</li> -->
-				</forcedEndogenes>	
+				<!-- this block prevents the base human textures from being used -->				
 			</li>
 		</modExtensions>
 		
@@ -411,18 +399,16 @@
 				<workerClass>BigAndSmall.UltimateRenderNodeWorker</workerClass>
 				<parentTagDef>Head</parentTagDef>
 				<shader>BS_CutoutThreeColor</shader>
+				<baseLayer>70</baseLayer>
 				<conditionalGraphics>
 					<texturePaths><li>Droid/LOMProtocolDroid/LOMProtocolDroid_head</li></texturePaths>
 					<colorA>
-						<favoriteColor>true</favoriteColor>
 						<altDefs><li>BS_CustomGlobalA</li></altDefs>
 					</colorA>
 					<colorB>
-						<color>200,200,200</color> <!-- silver -->
 						<altDefs><li>BS_CustomGlobalB</li></altDefs>
 					</colorB>
-						<colorC>
-						<color>0,255,180</color> <!-- bright mint green -->
+					<colorC>
 						<altDefs><li>BS_CustomGlobalC</li></altDefs>
 					</colorC>
 					<altDefs><li>guy762_LOMProtocolDroidCustomization_defaultHead</li><li>guy762_LOMProtocolDroidCustomization_4LOMHead</li></altDefs>
@@ -433,18 +419,16 @@
 				<workerClass>BigAndSmall.UltimateRenderNodeWorker</workerClass>
 				<parentTagDef>Body</parentTagDef>
 				<shader>BS_CutoutThreeColor</shader>
+				<baseLayer>20</baseLayer>
 				<conditionalGraphics>
 					<texturePaths><li>Droid/LOMProtocolDroid/LOMProtocolDroid_body</li></texturePaths>
 					<colorA>
-						<favoriteColor>true</favoriteColor>
 						<altDefs><li>BS_CustomGlobalA</li></altDefs>
 					</colorA>
 					<colorB>
-						<color>200,200,200</color> <!-- silver -->
 						<altDefs><li>BS_CustomGlobalB</li></altDefs>
 					</colorB>
-						<colorC>
-						<color>0,255,180</color> <!-- bright mint green -->
+					<colorC>
 						<altDefs><li>BS_CustomGlobalC</li></altDefs>
 					</colorC>
 					<altDefs><li>guy762_LOMProtocolDroidCustomization_defaultBody</li><li>guy762_LOMProtocolDroidCustomization_4LOMBody</li></altDefs>
@@ -462,15 +446,15 @@
 			<triggerFlags><whitelist><guy762AltTag_LOMProtocolDroidDefault/></whitelist></triggerFlags>
 			<texturePaths><li>Droid/LOMProtocolDroid/LOMProtocolDroid_head</li></texturePaths>
 			<colorA>
-				<favoriteColor>true</favoriteColor>
+				<!-- <favoriteColor>true</favoriteColor> -->
 				<altDefs><li>BS_CustomGlobalA</li></altDefs>
 			</colorA>
 			<colorB>
 				<color>200,200,200</color> <!-- silver -->
 				<altDefs><li>BS_CustomGlobalB</li></altDefs>
 			</colorB>
-				<colorC>
-				<color>0,255,180</color> <!-- bright mint green -->
+			<colorC>
+				<favoriteColor>true</favoriteColor>
 				<altDefs><li>BS_CustomGlobalC</li></altDefs>
 			</colorC>
 		</conditionalGraphics>
@@ -509,15 +493,28 @@
 			<triggerFlags><whitelist><guy762AltTag_LOMProtocolDroidDefault/></whitelist></triggerFlags>
 			<texturePaths><li>Droid/LOMProtocolDroid/LOMProtocolDroid_body</li></texturePaths>
 			<colorA>
-				<favoriteColor>true</favoriteColor>
+				<colorOptions>
+					<!-- Jedi Sentinel Blue -->
+					<li>(70,90,125)</li>
+					<!-- Zsinj's Mustard -->
+					<li>(165,155,80)</li>
+					<!-- Rebel Red -->
+					<li>(125,50,50)</li>
+					<!-- Czerka Green -->
+					<li>(75,115,90)</li>
+					<!-- lesser white -->
+					<li>(225,225,225)</li>
+					<!-- Cinnagar Iron -->
+					<li>(90,70,50)</li>
+				</colorOptions>
 				<altDefs><li>BS_CustomGlobalA</li></altDefs>
 			</colorA>
 			<colorB>
-				<color>200,200,200</color> <!-- silver -->
+				<!-- <color>200,200,200</color> -->
 				<altDefs><li>BS_CustomGlobalB</li></altDefs>
 			</colorB>
-				<colorC>
-				<color>0,255,180</color> <!-- bright mint green -->
+			<colorC>
+				<!-- <color>0,255,180</color> -->
 				<altDefs><li>BS_CustomGlobalC</li></altDefs>
 			</colorC>
 		</conditionalGraphics>

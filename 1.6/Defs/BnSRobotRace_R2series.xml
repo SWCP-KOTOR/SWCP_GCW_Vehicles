@@ -419,12 +419,96 @@
 							<!-- <li>255, 239, 213</li> -->
 						<!-- </colourRange> -->
 					</colorC>
-					<!-- <altDefs><li>guy762_LOMProtocolDroidCustomization_defaultBody</li><li>guy762_LOMProtocolDroidCustomization_4LOMBody</li></altDefs> -->
+					<altDefs><li>guy762_R2AstromechDroidCustomization_default</li><li>guy762_R2AstromechDroidCustomization_Artoo</li></altDefs>
 				</conditionalGraphics>
 			</li>
 		</renderNodeProperties>
 		
 	</HediffDef>
+	
+	
+	
+	<BigAndSmall.GraphicSetDef>
+		<defName>guy762_R2AstromechDroidCustomization_default</defName>
+		<conditionalGraphics>
+			<triggerFlags><whitelist><guy762AltTag_R2AstromechDroidDefault/></whitelist></triggerFlags>
+			<texturePaths><li>Droid/R2Astromech/R2</li></texturePaths>
+			<colorA>
+				<colorOptions>
+					<!-- Jedi Sentinel Blue -->
+					<li>(70,90,125)</li>
+					<!-- Old Republic Yellow -->
+					<li>(230,185,45)</li>
+					<!-- Galactic Marine Burgundy -->
+					<li>(120,55,75)</li>
+					<!-- Imperial Remnant Green -->
+					<li>(25,110,30)</li>
+					<!-- Pentastar Blue -->
+					<li>(65,70,190)</li>
+					<!-- Maldrood Crimson -->
+					<li>(205,15,40)</li>
+					<!-- New Republic Orange -->
+					<li>(205,125,20)</li>
+					<!-- New Republic Azure -->
+					<li>(70,135,190)</li>
+					<!-- Rebel Red -->
+					<li>(125,50,50)</li>
+					<!-- Mandalorian Protector Green -->
+					<li>(90,120,85)</li>
+					<!-- Black Sun Violet -->
+					<li>(85,65,150)</li>
+				</colorOptions>
+				<altDefs><li>BS_CustomGlobalA</li></altDefs>
+			</colorA>
+			<colorB>
+				<colorOptions>
+					<!-- grey -->
+					<li>(150,150,150)</li>
+					<!-- white -->
+					<li>(250,250,250)</li>
+				</colorOptions>
+				<altDefs><li>BS_CustomGlobalB</li></altDefs>
+			</colorB>
+			<colorC>
+				<color>250,250,250</color>
+				<altDefs><li>BS_CustomGlobalC</li></altDefs>
+			</colorC>
+		</conditionalGraphics>
+	</BigAndSmall.GraphicSetDef>
+	
+	<BigAndSmall.GraphicSetDef>
+		<defName>guy762_R2AstromechDroidCustomization_Artoo</defName>
+		<conditionalGraphics>
+			<triggerFlags><whitelist><guy762AltTag_Artoo/></whitelist></triggerFlags>
+			<texturePaths><li>Droid/R2Astromech/R2</li></texturePaths>
+			<colorA>
+				<color>(50,40,165)</color> <!-- Artoo's Blue -->
+				<altDefs><li>BS_CustomGlobalA</li></altDefs>
+			</colorA>
+			<colorB>
+				<color>(150,150,150)</color> <!-- grey -->
+				<altDefs><li>BS_CustomGlobalB</li></altDefs>
+			</colorB>
+			<colorC>
+				<color>250,250,250</color>
+				<altDefs><li>BS_CustomGlobalC</li></altDefs>
+			</colorC>
+		</conditionalGraphics>
+	</BigAndSmall.GraphicSetDef>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 	
 	
 	

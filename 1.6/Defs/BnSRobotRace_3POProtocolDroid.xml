@@ -1,0 +1,627 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+	
+	<BackstoryDef>
+		<defName>guy762_Backstory_3POProtocolDroid</defName>
+		<title>3PO-series protocol droid</title>
+		<titleShort>protocol droid</titleShort>
+		<description>This is an standard protocol droid, capable of many social tasks.</description>
+		<slot>Childhood</slot>
+		<spawnCategories>
+			<li>guy762BSC_Droid_3POProtocolDroid</li>
+			<li>guy762BSC_Droid_all</li>
+		</spawnCategories>
+		<forcedTraits>
+		  <Asexual>0</Asexual>
+		  <Wimp>0</Wimp>
+		</forcedTraits>
+	</BackstoryDef>
+	
+
+	
+	
+	
+	<ThingDef Name="SWCP_BnSDroidRace_3POProtocolDroid" ParentName="SWCP_BnSDroidRace_BASE">
+		<defName>SWCP_BnSDroidRace_3POProtocolDroid</defName>
+		<label>3PO-series protocol droid</label>
+		<description>.\n\nBy default, this droid is capable of the following work types:\n\n-Social\n-Cooking\n-Research\n-Hauling\n-Cleaning</description>
+
+		<statBases>
+			<MarketValue>2500</MarketValue>
+			<RoyalFavorValue>2</RoyalFavorValue>
+			
+			<MoveSpeed>2</MoveSpeed>
+			<VacuumSpeedMultiplier MayRequire="kentington.saveourship2">1</VacuumSpeedMultiplier>
+			<ComfyTemperatureMin>-125</ComfyTemperatureMin>
+			<ComfyTemperatureMax>125</ComfyTemperatureMax>
+			
+			<CarryingCapacity>50</CarryingCapacity>
+			<VEF_MassCarryCapacity MayRequire="OskarPotocki.VanillaFactionsExpanded.Core">50</VEF_MassCarryCapacity>
+			<!-- <GlobalLearningFactor>0.5</GlobalLearningFactor> -->
+			<WorkSpeedGlobal>1</WorkSpeedGlobal>
+			
+			<ArmorRating_Sharp>0.15</ArmorRating_Sharp>
+			<ArmorRating_Blunt>0</ArmorRating_Blunt>
+            <ArmorRating_Heat>0.25</ArmorRating_Heat>
+            <InjuryHealingFactor>1</InjuryHealingFactor>
+            <IncomingDamageFactor>0.85</IncomingDamageFactor>
+			
+            <BS_BatteryCharging>0.25</BS_BatteryCharging>
+			<MaxNutrition>1.35</MaxNutrition>
+			
+            <StaggerDurationFactor MayRequire="Ludeon.RimWorld.Biotech">0.8</StaggerDurationFactor>
+            <!-- <EMPResistance MayRequire="Ludeon.RimWorld.Biotech">0.9</EMPResistance> -->
+			
+			<Mass>135</Mass>
+		</statBases>
+		
+		
+		
+		<race>
+			<body>SWCP_BnSDroidBody_Protocol_AllTechSlots</body>
+
+			<soundCallIntervalRange>1000~2000</soundCallIntervalRange>
+			<lifeStageAges Inherit="False">
+				<!-- We're not using custom defs because some Rimworld stuff is hardcoded to look for certain defs.
+				 Better from a compatibility standpoint to simply make the stages exist but not be active. -->
+				<li>
+				  <def>HumanlikeBaby</def>
+				  <minAge>0</minAge>
+				  <soundWounded>Pawn_Mech_Scyther_Wounded</soundWounded>
+				  <soundDeath>Pawn_Mech_Scyther_Death</soundDeath>
+				  <soundCall>Pawn_Mech_Scyther_Call</soundCall>
+				</li>
+				<li>
+				  <def>HumanlikeChild</def>
+				  <minAge>3</minAge>
+				  <soundWounded>Pawn_Mech_Scyther_Wounded</soundWounded>
+				  <soundDeath>Pawn_Mech_Scyther_Death</soundDeath>
+				  <soundCall>Pawn_Mech_Scyther_Call</soundCall>
+				</li>
+				<li MayRequire="Ludeon.RimWorld.Biotech">
+				  <def>HumanlikePreTeenager</def>
+				  <minAge>9</minAge>
+				  <soundWounded>Pawn_Mech_Scyther_Wounded</soundWounded>
+				  <soundDeath>Pawn_Mech_Scyther_Death</soundDeath>
+				  <soundCall>Pawn_Mech_Scyther_Call</soundCall>
+				</li>
+				<li>
+				  <def>HumanlikeTeenager</def>
+				  <minAge>13</minAge>
+				  <soundWounded>Pawn_Mech_Scyther_Wounded</soundWounded>
+				  <soundDeath>Pawn_Mech_Scyther_Death</soundDeath>
+				  <soundCall>Pawn_Mech_Scyther_Call</soundCall>
+				</li>
+				<li>
+				  <def>HumanlikeAdult</def>
+				  <minAge>18</minAge>
+				  <soundWounded>Pawn_Mech_Scyther_Wounded</soundWounded>
+				  <soundDeath>Pawn_Mech_Scyther_Death</soundDeath>
+				  <soundCall>Pawn_Mech_Scyther_Call</soundCall>
+				  
+				  <!-- <soundAmbience>kotorsound_TsUD_ambient</soundAmbience> -->
+				  <!-- <soundAngry>kotorsound_TsUD_angry</soundAngry> -->
+				</li>
+			</lifeStageAges>
+
+		</race>
+
+		<modExtensions>
+		  <li Class="BigAndSmall.RaceExtension">
+			<raceHediff>SWCP_DroidHediff_3POProtocolDroid</raceHediff>
+		  </li>
+		</modExtensions>
+		
+		<tools Inherit="False">
+			<li>
+				<label>head</label>
+				<capacities>
+					<li>Blunt</li>
+				</capacities>
+				<power>3</power>
+				<cooldownTime>2</cooldownTime>
+				<linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
+                <ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
+				<chanceFactor>0.2</chanceFactor>
+			</li>
+			<li>
+				<label>left fist</label>
+				<labelNoLocation>fist</labelNoLocation>
+				<capacities>
+				  <li>Blunt</li>
+				</capacities>
+				<power>8.2</power>
+				<cooldownTime>2</cooldownTime>
+				<linkedBodyPartsGroup>LeftHand</linkedBodyPartsGroup>
+				<surpriseAttack>
+				  <extraMeleeDamages>
+					<li>
+					  <def>Stun</def>
+					  <amount>7</amount>
+					</li>
+				  </extraMeleeDamages>
+				</surpriseAttack>
+			  </li>
+			  <li>
+				<label>right fist</label>
+				<labelNoLocation>fist</labelNoLocation>
+				<capacities>
+				  <li>Blunt</li>
+				</capacities>
+				<power>8.2</power>
+				<cooldownTime>2</cooldownTime>
+				<linkedBodyPartsGroup>RightHand</linkedBodyPartsGroup>
+				<surpriseAttack>
+				  <extraMeleeDamages>
+					<li>
+					  <def>Stun</def>
+					  <amount>7</amount>
+					</li>
+				  </extraMeleeDamages>
+				</surpriseAttack>
+			</li>
+		</tools>
+		
+		<butcherProducts>
+            <KOTOR_AlloyDurasteel>20</KOTOR_AlloyDurasteel>
+			<Plasteel>20</Plasteel>
+			<ComponentIndustrial>8</ComponentIndustrial>
+			<ComponentSpacer>2</ComponentSpacer>
+			<TechprofSubpersonaCore>1</TechprofSubpersonaCore>
+		</butcherProducts>
+		<tradeTags>
+            <li>SWCPTT_GCWDroids_protocol</li>
+		</tradeTags>
+	</ThingDef>
+	
+	
+	
+	
+	
+	
+	
+	<!-- <HediffDef ParentName="SWCP_DroidHediff_BASE"> -->
+	<HediffDef>
+		<defName>SWCP_DroidHediff_3POProtocolDroid</defName>
+		<label>3PO-series protocol droid</label>
+		<description>.</description>
+		
+		<hediffClass>BigAndSmall.RaceTracker</hediffClass>
+		
+		<abilities>
+			<!-- <li MayRequire="Ludeon.RimWorld.Ideology">ImmunityDrive</li> -->
+		</abilities>
+		
+		<comps Inherit="False">
+		  <li Class="BigAndSmall.CompProperties_Race">
+			<!-- Cosmetic -->
+			<bodyDefOverride>Male</bodyDefOverride>
+			<bodyDefOverride_Female>Male</bodyDefOverride_Female>
+			<disableHair>true</disableHair>
+			<disableBeards>true</disableBeards>
+			<canSwapAwayFrom>false</canSwapAwayFrom>
+		  </li>
+		</comps>
+
+		<modExtensions>
+			<li Class="BigAndSmall.PawnExtension">
+				<priority>-100001</priority>
+				<exclusionTags><li>SWCPDroidRaceHediffExclusionTag_NoPassion</li></exclusionTags>
+				<canHavePassions>false</canHavePassions>
+			</li>
+			<li Class="BigAndSmall.PawnExtension">
+				<priority>-100001</priority>
+				<exclusionTags><li>SWCPDroidRaceHediffExclusionTag_Asexual</li></exclusionTags>
+				<traitFilters>
+					<whitelist>
+						<li>Asexual</li>
+					</whitelist>
+				</traitFilters>
+				
+				<romanceTags/> <!-- No tags at all by default. -->
+				<noFamilyRelations>true</noFamilyRelations>
+				
+				<!-- <romanceTags> -->
+					<!-- <Android>0</Android> -->
+					<!-- <Robot>0</Robot> -->
+					<!-- <Humanlike>0</Humanlike> -->
+					<!-- <Mechanoid>0</Mechanoid> -->
+				<!-- </romanceTags> -->
+			</li>
+			
+			
+			
+			<li Class="BigAndSmall.PawnExtension">
+				<priority>-100000</priority>
+				<exclusionTags><li>SWCPDroidRaceHediffExclusionTag_FirefighterDisabled</li></exclusionTags>
+				<disabledWorkTypes><li>Firefighter</li></disabledWorkTypes>
+			</li>
+			
+			<li Class="BigAndSmall.PawnExtension">
+				<priority>-100000</priority>
+				<exclusionTags><li>SWCPDroidRaceHediffExclusionTag_ConstructionDisabled</li></exclusionTags>
+				<disabledWorkTypes><li>Construction</li></disabledWorkTypes>
+			</li>
+			
+			
+			<li Class="BigAndSmall.PawnExtension">
+				<priority>-100000</priority>
+				<exclusionTags><li>SWCPDroidRaceHediffExclusionTag_HuntingDisabled</li></exclusionTags>
+				<disabledWorkTypes><li>Hunting</li></disabledWorkTypes>
+			</li>
+			<li Class="BigAndSmall.PawnExtension">
+				<priority>-100000</priority>
+				<exclusionTags><li>SWCPDroidRaceHediffExclusionTag_FishingDisabled</li></exclusionTags>
+				<disabledWorkTypes><li MayRequire="Ludeon.RimWorld.Odyssey">Fishing</li></disabledWorkTypes>
+			</li>
+			
+			<li Class="BigAndSmall.PawnExtension">
+				<priority>-100000</priority>
+				<exclusionTags><li>SWCPDroidRaceHediffExclusionTag_SmithingDisabled</li></exclusionTags>
+				<disabledWorkTypes><li>Smithing</li></disabledWorkTypes>
+			</li>
+			<li Class="BigAndSmall.PawnExtension">
+				<priority>-100000</priority>
+				<exclusionTags><li>SWCPDroidRaceHediffExclusionTag_TailoringDisabled</li></exclusionTags>
+				<disabledWorkTypes><li>Tailoring</li></disabledWorkTypes>
+			</li>
+			<li Class="BigAndSmall.PawnExtension">
+				<priority>-100000</priority>
+				<exclusionTags><li>SWCPDroidRaceHediffExclusionTag_CraftingDisabled</li></exclusionTags>
+				<disabledWorkTypes><li>Crafting</li></disabledWorkTypes>
+			</li>
+			
+			<li Class="BigAndSmall.PawnExtension">
+				<priority>-100000</priority>
+				<exclusionTags><li>SWCPDroidRaceHediffExclusionTag_DoctorDisabled</li></exclusionTags>
+				<disabledWorkTypes><li>Doctor</li></disabledWorkTypes>
+			</li>
+			
+			
+			
+			
+			<li Class="BigAndSmall.PawnExtension">
+				<frequentUpdate>false</frequentUpdate>
+				
+				<clampedSkills>
+					<li><skill>Shooting</skill><range>0</range></li>
+					<li><skill>Melee</skill><range>0</range></li>
+					<li><skill>Construction</skill><range>0</range></li>
+					<li><skill>Mining</skill><range>0</range></li>
+					<li><skill>Cooking</skill><range>5</range></li>
+					<li><skill>Plants</skill><range>0</range></li>
+					<li><skill>Animals</skill><range>0</range></li>
+					<li><skill>Crafting</skill><range>0</range></li>
+					<li><skill>Artistic</skill><range>0</range></li>
+					<li><skill>Medicine</skill><range>0</range></li>
+					<li><skill>Social</skill><range>10</range></li>
+					<li><skill>Intellectual</skill><range>5</range></li>
+				</clampedSkills>
+				
+				<forcedHediffs> <!-- will force anything on this list and replace them immediately if something tries to remove them -->
+					<li>SWCP_DroidHediff_NonSapientDroid</li>
+					
+					<li>SWCPWorkTypeDisablerHediff_Mining</li>
+					<li>SWCPWorkTypeDisablerHediff_PlantWork</li>
+					<li>SWCPWorkTypeDisablerHediff_Animals</li>
+					<li>SWCPWorkTypeDisablerHediff_Artistic</li>
+				</forcedHediffs>
+				<disabledWorkTypes>
+				</disabledWorkTypes>
+				
+				<traitFilters>
+					<whitelist>
+						<li>Wimp</li>
+					</whitelist>
+				</traitFilters>
+				
+				<babyStartAge>20</babyStartAge>
+				<pawnDiet>SWCP_DroidDiet</pawnDiet>
+				
+				<apparelRestrictions>
+					<absolutelyNothing>false</absolutelyNothing>
+					<tags>
+						<allowlist>
+							<li>SWCPDroidApparelRestrictionTag_TorsoAccessory</li>
+							<li>SWCPDroidApparelRestrictionTag_Backpacks</li>
+							<li>SWCPDroidApparelRestrictionTag_GrenadeDetpackBelts</li>
+							
+							<li>SWCPDroidApparelRestrictionTag_MediumArmor</li>
+							<li>SWCPDroidApparelRestrictionTag_ShieldSlot</li>
+							
+							<li>SWCPDroidApparelRestrictionTag_SoftwareTechSlot</li>
+							<li>SWCPDroidApparelRestrictionTag_HardwareTechSlot</li>
+							<li>SWCPDroidApparelRestrictionTag_SensorTechSlot</li>
+						</allowlist>
+					</tags>
+				</apparelRestrictions>
+				<!-- <unarmedOnly>false</unarmedOnly> -->
+				
+				<forcedEndogenes>
+					<li MayRequire="Ludeon.Rimworld.Biotech">Body_Standard</li>
+					<!-- <li MayRequire="Ludeon.Rimworld.Biotech">guy762_DebugHead_nullForDroids</li> -->
+				</forcedEndogenes>
+				
+				
+				<forceFemaleBody>false</forceFemaleBody>
+				
+				<!-- this block prevents the base human textures from being used -->
+				<bodyPaths>
+				  <!-- <Body_Female>Droid/3POProtocolDroid/3POProtocolDroid_body</Body_Female> -->
+				  <!-- <Body_Male>Droid/3POProtocolDroid/3POProtocolDroid_body</Body_Male> -->
+				  <Female>512blank</Female>
+				  <Male>512blank</Male>
+				</bodyPaths>
+				
+				<bodyMaterial>
+				  <shader>BS_CutoutThreeColor</shader>
+				  <overrideDesiccated>true</overrideDesiccated>
+				  <colorA><altDefs><li>BS_CustomGlobalA</li></altDefs></colorA>
+				  <colorB><altDefs><li>BS_CustomGlobalB</li></altDefs></colorB>
+				  <!-- <colorC><altDefs><li>BS_CustomGlobalC</li></altDefs></colorC> -->
+				</bodyMaterial>
+				<headPaths>
+				  <!-- <Female>Droid/3POProtocolDroid/3POProtocolDroid_head</Female> -->
+				  <!-- <Male>Droid/3POProtocolDroid/3POProtocolDroid_head</Male> -->
+				  <Female>512blank</Female>
+				  <Male>512blank</Male>
+				</headPaths>
+				<headMaterial>
+				  <shader>BS_CutoutThreeColor</shader>
+				  <overrideDesiccated>true</overrideDesiccated>
+				  <colorA><altDefs><li>BS_CustomGlobalA</li></altDefs></colorA>
+				  <colorB><altDefs><li>BS_CustomGlobalB</li></altDefs></colorB>
+				  <!-- <colorC><altDefs><li>BS_CustomGlobalC</li></altDefs></colorC> -->
+				</headMaterial>
+				<!-- this block prevents the base human textures from being used -->				
+			</li>
+		</modExtensions>
+		
+		<renderNodeProperties>
+			<li Class="BigAndSmall.PawnRenderingProps_Ultimate">
+				<nodeClass>BigAndSmall.PawnRenderNode_Ultimate</nodeClass>
+				<workerClass>BigAndSmall.UltimateRenderNodeWorker</workerClass>
+				<parentTagDef>Head</parentTagDef>
+				<shader>BS_CutoutThreeColor</shader>
+				<baseLayer>70</baseLayer>
+				<conditionalGraphics>
+					<texturePaths><li>Droid/3POProtocolDroid/3POProtocolDroid_head</li></texturePaths>
+					<colorA><altDefs><li>BS_CustomGlobalA</li></altDefs></colorA>
+					<colorB><altDefs><li>BS_CustomGlobalB</li></altDefs></colorB>
+					<!-- <colorC><altDefs><li>BS_CustomGlobalC</li></altDefs></colorC> -->
+					<altDefs><li>guy762_3POProtocolDroidCustomization_defaultHead</li><li>guy762_3POProtocolDroidCustomization_ThreepioHead</li></altDefs>
+				</conditionalGraphics>
+			</li>
+			<li Class="BigAndSmall.PawnRenderingProps_Ultimate">
+				<nodeClass>BigAndSmall.PawnRenderNode_Ultimate</nodeClass>
+				<workerClass>BigAndSmall.UltimateRenderNodeWorker</workerClass>
+				<parentTagDef>Body</parentTagDef>
+				<shader>BS_CutoutThreeColor</shader>
+				<baseLayer>20</baseLayer>
+				<conditionalGraphics>
+					<texturePaths><li>Droid/3POProtocolDroid/3POProtocolDroid_body</li></texturePaths>
+					<colorA><altDefs><li>BS_CustomGlobalA</li></altDefs></colorA>
+					<colorB><altDefs><li>BS_CustomGlobalB</li></altDefs></colorB>
+					<!-- <colorC><altDefs><li>BS_CustomGlobalC</li></altDefs></colorC> -->
+					<altDefs><li>guy762_3POProtocolDroidCustomization_defaultBody</li><li>guy762_3POProtocolDroidCustomization_ThreepioBody</li></altDefs>
+				</conditionalGraphics>
+			</li>
+		</renderNodeProperties>
+		
+	</HediffDef>
+	
+	
+	
+	<BigAndSmall.GraphicSetDef>
+		<defName>guy762_3POProtocolDroidCustomization_defaultHead</defName>
+		<conditionalGraphics>
+			<triggerFlags><whitelist><guy762AltTag_3POProtocolDroidDefault/></whitelist></triggerFlags>
+			<texturePaths><li>Droid/3POProtocolDroid/3POProtocolDroid_head</li></texturePaths>
+			<colorA>
+				<colorOptions>
+					<!-- T3-M4's Silver -->
+					<li>(235,255,255)</li>
+					<!-- maldrood army grey -->
+					<li>(110,105,100)</li>
+					<!-- Jedi Sentinel Blue -->
+					<li>(70,90,125)</li>
+					<!-- Rebel Red -->
+					<li>(125,50,50)</li>
+					<!-- lesser white -->
+					<li>(225,225,225)</li>
+					<!-- New Republic Orange -->
+					<li>(205,125,20)</li>
+					<!-- Sith Uniform Slate -->
+					<li>(170,170,190)</li>
+					<!-- Zal Alloy Purple -->
+					<li>(135,100,140)</li>
+					<!-- Militia Mint Green -->
+					<li>(165,190,160)</li>
+					<!-- Echani Gold -->
+					<li>(190,170,100)</li>
+					<!-- Bes'kar Silver -->
+					<li>(190,200,210)</li>
+					<!-- Mandalorian Protector Green -->
+					<li>(90,120,85)</li>
+					<!-- Neo-Crusader Blue -->
+					<li>(125,155,195)</li>
+					<!-- Rally Master Red -->
+					<li>(180,85,85)</li>
+				</colorOptions>
+				<altDefs><li>BS_CustomGlobalA</li></altDefs>
+			</colorA>
+			<colorB>
+				<color>(255,255,7)</color> <!-- star wars yellow -->
+				<altDefs><li>BS_CustomGlobalB</li></altDefs>
+			</colorB>
+		</conditionalGraphics>
+	</BigAndSmall.GraphicSetDef>
+	
+	<BigAndSmall.GraphicSetDef>
+		<defName>guy762_3POProtocolDroidCustomization_ThreepioHead</defName>
+		<conditionalGraphics>
+			<triggerFlags><whitelist><guy762AltTag_Threepio/></whitelist></triggerFlags>
+			<texturePaths><li>Droid/3POProtocolDroid/3POProtocolDroid_head</li></texturePaths>
+			<colorA>
+				<color>(220,175,80)</color> <!-- Bronzium -->
+				<altDefs><li>BS_CustomGlobalA</li></altDefs>
+			</colorA>
+			<colorB>
+				<color>(255,255,7)</color> <!-- star wars yellow -->
+				<altDefs><li>BS_CustomGlobalB</li></altDefs>
+			</colorB>
+		</conditionalGraphics>
+	</BigAndSmall.GraphicSetDef>
+	
+	
+	
+	
+	
+	
+	<BigAndSmall.GraphicSetDef>
+		<defName>guy762_3POProtocolDroidCustomization_defaultBody</defName>
+		<conditionalGraphics>
+			<triggerFlags><whitelist><guy762AltTag_3POProtocolDroidDefault/></whitelist></triggerFlags>
+			<texturePaths><li>Droid/3POProtocolDroid/3POProtocolDroid_body</li></texturePaths>
+			<colorA>
+				<colorOptions>
+					<!-- T3-M4's Silver -->
+					<li>(235,255,255)</li>
+					<!-- maldrood army grey -->
+					<li>(110,105,100)</li>
+					<!-- Jedi Sentinel Blue -->
+					<li>(70,90,125)</li>
+					<!-- Rebel Red -->
+					<li>(125,50,50)</li>
+					<!-- lesser white -->
+					<li>(225,225,225)</li>
+					<!-- New Republic Orange -->
+					<li>(205,125,20)</li>
+					<!-- Sith Uniform Slate -->
+					<li>(170,170,190)</li>
+					<!-- Zal Alloy Purple -->
+					<li>(135,100,140)</li>
+					<!-- Militia Mint Green -->
+					<li>(165,190,160)</li>
+					<!-- Echani Gold -->
+					<li>(190,170,100)</li>
+					<!-- Bes'kar Silver -->
+					<li>(190,200,210)</li>
+					<!-- Mandalorian Protector Green -->
+					<li>(90,120,85)</li>
+					<!-- Neo-Crusader Blue -->
+					<li>(125,155,195)</li>
+					<!-- Rally Master Red -->
+					<li>(180,85,85)</li>
+				</colorOptions>
+				<altDefs><li>BS_CustomGlobalA</li></altDefs>
+			</colorA>
+			<colorB>
+				<color>(255,255,7)</color> <!-- star wars yellow -->
+				<altDefs><li>BS_CustomGlobalB</li></altDefs>
+			</colorB>
+		</conditionalGraphics>
+	</BigAndSmall.GraphicSetDef>
+	
+	<BigAndSmall.GraphicSetDef>
+		<defName>guy762_3POProtocolDroidCustomization_ThreepioBody</defName>
+		<conditionalGraphics>
+			<triggerFlags><whitelist><guy762AltTag_Threepio/></whitelist></triggerFlags>
+			<texturePaths><li>Droid/3POProtocolDroid/3POProtocolDroid_body</li></texturePaths>
+			<colorA>
+				<color>(220,175,80)</color> <!-- Bronzium -->
+				<altDefs><li>BS_CustomGlobalA</li></altDefs>
+			</colorA>
+			<colorB>
+				<color>(255,255,7)</color> <!-- star wars yellow -->
+				<altDefs><li>BS_CustomGlobalB</li></altDefs>
+			</colorB>
+		</conditionalGraphics>
+	</BigAndSmall.GraphicSetDef>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<GeneDef ParentName="SWCPDroidBodyGene_chassisBASE">
+		<defName>SWCPDroidBodyGene_3POProtocolDroid</defName>
+		<label>3PO-series protocol droid</label>
+		
+		<!-- <skinColorOverride>(125,90,45)</skinColorOverride> -->
+		
+		<iconPath>UI/DroidIcons/Icon_3POProtocolDroid</iconPath>
+	</GeneDef>
+	
+	<XenotypeDef>
+		<defName>SWCPDroidXenotype_3POProtocolDroid</defName>
+		<label>3PO-series protocol droid</label>
+		<description>.</description>
+		<iconPath>UI/DroidIcons/Icon_3POProtocolDroid</iconPath>
+		<!-- <combatPowerFactor>1</combatPowerFactor> -->
+		<inheritable>true</inheritable>
+		<factionlessGenerationWeight>0</factionlessGenerationWeight>
+		<genes>
+		  <li>SWCPDroidBodyGene_3POProtocolDroid</li>
+		  <li>Beard_NoBeardOnly</li>
+		  <li>Hair_BaldOnly</li>
+		  <!-- <li>guy762_DebugHead_nullForDroids</li> -->
+		  <li MayRequire="RedMattis.BigSmall.Core">BS_AcidResistanceMid</li>
+		</genes>
+		<modExtensions>
+		  <li Class="BigAndSmall.XenotypeExtension">
+			<setRace>SWCP_BnSDroidRace_3POProtocolDroid</setRace>
+			<forceRace>true</forceRace>
+		  </li>
+		</modExtensions>
+	</XenotypeDef>
+	
+	
+	
+	
+	
+	
+
+	
+	
+	
+	
+	
+	
+	
+	
+	<PawnKindDef Name="SWCPDroidColonistBnS_3POProtocolDroid" ParentName="guy762_BnSDroidPawnKindBase">
+		<defName>SWCPDroidColonistBnS_3POProtocolDroid</defName>
+		<label>protocol droid</label>
+		<nameMaker>SWCP_DroidNamer_3POProtocolDroid</nameMaker>
+		
+		<race>SWCP_BnSDroidRace_3POProtocolDroid</race>
+		<useFactionXenotypes>false</useFactionXenotypes>
+		<xenotypeSet Inherit="False">
+		  <xenotypeChances>
+			<SWCPDroidXenotype_3POProtocolDroid MayRequire="Ludeon.Rimworld.Biotech">999</SWCPDroidXenotype_3POProtocolDroid>
+		  </xenotypeChances>
+		</xenotypeSet>
+		
+        <combatPower>30</combatPower>
+		
+		<forcedTraits>
+			<Asexual>0</Asexual>
+			<Wimp>0</Wimp>
+		</forcedTraits>
+		<backstoryFiltersOverride>
+		  <li>
+			<categories>
+			  <li>guy762BSC_Droid_3POProtocolDroid</li>
+			</categories>
+		  </li>
+		</backstoryFiltersOverride>
+	</PawnKindDef>
+	
+
+</Defs>

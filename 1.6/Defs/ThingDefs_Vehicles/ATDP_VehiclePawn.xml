@@ -1,0 +1,367 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<Defs>	
+
+	
+	<Vehicles.VehicleDef ParentName="guy762_GroundVehiclePawn_base">
+		<defName>guy762_SWVehicle_ATDP</defName>
+		<label>AT-DP Defense Walker</label>
+		<description>. \n\n&lt;color=#bb8f04&gt;Crew:&lt;/color&gt; Driver x1</description>
+		
+		<graphicData>
+			<texPath>LandVehicles/ATDP/ATDP</texPath>
+			<graphicClass>Vehicles.Graphic_Vehicle</graphicClass>
+			<shaderType>CutoutComplexPattern</shaderType>
+			<drawSize>(11,11)</drawSize>
+			<layer>1</layer>
+			<drawOffset>(0,0,3)</drawOffset>
+			<drawOffsetEast>(1.5,0,3)</drawOffsetEast>
+			<drawOffsetWest>(-1.5,0,3)</drawOffsetWest>
+			<color>(185,185,185)</color> <!-- lighter grey -->
+		</graphicData>
+		<!-- <drawProperties> -->
+			<!-- <displayOffsetEast>(0,5)</displayOffsetEast> -->
+			<!-- <displayOffsetNorth>(0,5)</displayOffsetNorth> -->
+			<!-- <displayOffsetSouth>(0,5)</displayOffsetSouth> -->
+			<!-- <displayOffsetWest>(0,5)</displayOffsetWest> -->
+		<!-- </drawProperties> -->
+		
+		<fillPercent>1</fillPercent>
+		
+		<nameable>true</nameable>
+		<buildDef>guy762_SWVehicleBP_ATDP</buildDef>
+		
+		<size>(5,5)</size>
+		<uiIconScale>1</uiIconScale>
+		
+		
+		<vehicleCategory>Combat</vehicleCategory>
+		<techLevel>Spacer</techLevel>
+		<vehicleType>Land</vehicleType>
+		
+		<!-- <killedLeavings> -->
+		  <!-- <guy762_ShipChunk_ATDP>1</guy762_ShipChunk_ATDP> -->
+		<!-- </killedLeavings> -->
+				
+		<statBases> <!-- blanket applies to all parts without specified armor ratings -->
+			<!--ArmorRating_Sharp>+0.05</ArmorRating_Sharp>
+			<ArmorRating_Blunt>-0.1</ArmorRating_Blunt>        BASE CURVE FOR HARD ARMOR
+			<ArmorRating_Heat>+0.15</ArmorRating_Heat-->
+			<ArmorRating_Sharp>0.45</ArmorRating_Sharp>
+			<ArmorRating_Blunt>0.3</ArmorRating_Blunt> <!-- # of estimated XWMG hull points * 0.1, apply to hard armor curve -->
+			<ArmorRating_Heat>0.55</ArmorRating_Heat>
+			<MaxHitPoints>400</MaxHitPoints> <!-- # of estimated XWMG hull points * 100 -->
+			
+			<Flammability>0.5</Flammability>
+			<MarketValue>50000</MarketValue>
+		</statBases>
+		
+		<soundSustainersOnEvent>
+			<li>
+				<start>IgnitionOn</start>
+				<stop>MoveStart</stop>
+				<value>kotorsound_speederbike_idle</value>
+			</li>
+			<li>
+				<start>MoveStart</start>
+				<stop>MoveStop</stop>
+				<value>kotorsound_ATSTsteppy</value>
+			</li>
+			<li>
+				<start>MoveStop</start>
+				<stop>MoveStart</stop>
+				<value>kotorsound_speederbike_idle</value>
+			</li>
+			<li>
+				<start>MoveStop</start>
+				<stop>IgnitionOff</stop>
+				<value>kotorsound_speederbike_idle</value>
+			</li>
+		</soundSustainersOnEvent>
+		
+		<soundOneShotsOnEvent>
+			<li>
+				<key>IgnitionOn</key>
+				<value>kotorsound_speederbike_activate</value>
+			</li>
+			<li>
+				<key>IgnitionOff</key>
+				<value>kotorsound_speederbike_deactivate</value>
+			</li>
+		</soundOneShotsOnEvent>
+		
+		<race>
+			<baseBodySize>1</baseBodySize>
+		</race>
+		
+		<vehicleStats>
+			<Mass>750</Mass>
+			<MoveSpeed>7.5</MoveSpeed>
+			<CargoCapacity>200</CargoCapacity>
+			<RepairRate>1</RepairRate>
+			<!--AccelerationRate>0.08</AccelerationRate-->
+		</vehicleStats>
+		
+		<properties>
+			<diagonalRotation>false</diagonalRotation>
+			<manhunterTargetsVehicle>false</manhunterTargetsVehicle>
+			
+			<worldSpeedMultiplier>0.5</worldSpeedMultiplier> <!-- higher number = faster travel -->
+			<winterSpeedMultiplier>3.25</winterSpeedMultiplier> <!-- lower number = faster winter travel -->
+			<offRoadMultiplier>1</offRoadMultiplier> <!-- lower number = faster travel -->
+			
+			<customRoadCosts AssignDefaults = "0.5" /> <!-- vanilla default is 0.5, lower number = faster -->
+			<!-- <customTerrainCosts AllowTerrainWithTag="Water" PathCost="1"/>         "All Terrain" walker but can't traverse deep water -->
+			<track Class = "Vehicles.VehicleTrack_Wake">
+				<speed>1</speed>
+			</track>
+			
+			<riverCost>5</riverCost> <!-- higher = slower, <1 = very fast on world map -->
+			
+			<vehicleJobLimitations>
+				<li>(RepairVehicle, 4)</li> <!-- how many pawns can repair this vehicle at a time -->
+			</vehicleJobLimitations> <!-- guy762 RULES: repair job count should be twice the amount of pawns to fully operate the vehicle -->
+			
+			<customHillinessCosts>
+				<SmallHills>0.25</SmallHills>
+				<LargeHills>0.75</LargeHills>
+				<Mountainous>1.5</Mountainous>
+			</customHillinessCosts>
+			
+			<customWeatherCosts>
+				<Dusting>4</Dusting>
+				<Thin>8</Thin>
+				<Medium>16</Medium>
+				<Thick>24</Thick>
+			</customWeatherCosts>
+			
+			<roles>
+				<li>
+					<key>driver</key>
+					<label>Driver</label>
+					<slots>1</slots>
+					<slotsToOperate>1</slotsToOperate>
+					<handlingTypes>
+						<li>Movement</li>
+					</handlingTypes>
+					<!-- <comfort>-0.25</comfort> -->
+				</li>
+				<li>
+					<key>gunner</key>
+					<label>Gunner</label>
+					<slots>1</slots>
+					<slotsToOperate>1</slotsToOperate>
+					<handlingTypes>
+						<li>Turret</li>
+					</handlingTypes>
+					<!-- <comfort>-0.25</comfort> -->
+					
+					<turretIds>
+						<li>ATDPKey_gun_1</li>
+					</turretIds>
+				</li>
+				<li>
+					<key>passenger</key>
+					<label>Spotter</label>
+					<slots>2</slots>
+					<comfort>-0.75</comfort>
+				</li>
+			</roles>
+		</properties>
+		
+		<components>
+			<li>
+				<key>ATDPKey_hull</key>
+				<label>Hull</label>
+				<depth>External</depth>
+				
+				<armor> <!-- EaWX health/50 = hull points, round up -->
+					<ArmorRating_Sharp>1.45</ArmorRating_Sharp>
+					<ArmorRating_Blunt>1.3</ArmorRating_Blunt> <!-- # of estimated XWMG hull points * 0.1, apply to hard armor curve -->
+					<ArmorRating_Heat>1.55</ArmorRating_Heat>
+					<IncomingDamageFactor>-0.15</IncomingDamageFactor> <!-- unarmored: 0.05 | light vehicles: 0.15 | medium vehicles: 0.25 | heavy vehicles: 0.35 -->
+				</armor>
+				<health>400</health> <!-- # of estimated XWMG hull points * 100 -->
+				
+				<hitbox>
+					<side>Body</side>
+				</hitbox>
+			</li>
+			
+			
+			<!-- <li> -->
+				<!-- <key>ATDPKey_cockpit</key> -->
+				<!-- <label>Cockpit</label> -->
+				<!-- <health>100</health> -->
+				<!-- <depth>Internal</depth> -->
+			<!-- </li> -->
+			<li>
+				<key>ATDPKey_engine</key>
+				<label>Engine</label>
+				<health>5</health>
+				<priorityStatEfficiency>true</priorityStatEfficiency>
+				<depth>Internal</depth>
+				
+				<reactors>
+					<li Class = "Vehicles.Reactor_Explosive">
+						<indicator>VF_Explosive</indicator>
+						<chance>0.5</chance>
+						<maxHealth>0.2</maxHealth>
+						<radius>3</radius>
+						<damageDef>guy762_ExplosiveDamage_energy</damageDef>
+					</li>
+				</reactors>
+				
+				<categories>
+					<li>MoveSpeed</li>
+				</categories>
+			</li>
+			<li>
+				<key>ATDPKey_leftleg</key>
+				<label>Left Leg</label>
+				<health>10</health>
+				<depth>Internal</depth>
+				
+				<categories>
+					<li>MoveSpeed</li>
+				</categories>
+			</li>
+			<li>
+				<key>ATDPKey_rightleg</key>
+				<label>Right Leg</label>
+				<health>10</health>
+				<depth>Internal</depth>
+				
+				<categories>
+					<li>MoveSpeed</li>
+				</categories>
+			</li>
+			<li>
+				<key>ATDPKey_leftfoot</key>
+				<label>Left Foot</label>
+				<health>10</health>
+				<depth>Internal</depth>
+				
+				<tags>
+					<li>Wheel</li>
+				</tags>
+				
+				<categories>
+					<li>MoveSpeed</li>
+				</categories>
+			</li>
+			<li>
+				<key>ATDPKey_rightfoot</key>
+				<label>Right Foot</label>
+				<health>10</health>
+				<depth>Internal</depth>
+				
+				<tags>
+					<li>Wheel</li>
+				</tags>
+				
+				<categories>
+					<li>MoveSpeed</li>
+				</categories>
+			</li>
+		</components>
+
+		<!--modExtensions>
+			<li Class="VanillaVehiclesExpanded.StatExtension">
+				<statToAdd>
+					<li>VVE_VehicleTier</li>
+				</statToAdd>
+				<statValues>
+					<li>VVE_Tier1</li>
+				</statValues>
+				<statDescriptions>
+					<li>VVE_Tier1Desc</li>
+				</statDescriptions>
+			</li>
+		</modExtensions-->
+		
+		<comps>
+			<li Class="Vehicles.CompProperties_FueledTravel">
+				<electricPowered>true</electricPowered>
+				<fuelConsumptionRate>7.5</fuelConsumptionRate>
+				<fuelCapacity>200</fuelCapacity>
+				<fuelConsumptionWorldMultiplier>15</fuelConsumptionWorldMultiplier>
+				
+				<targetFuelLevelConfigurable>true</targetFuelLevelConfigurable>
+			</li>
+			<li Class="Vehicles.CompProperties_VehicleTurrets">
+				<turrets>
+					<li>
+						<turretDef>guy762_VehicleTurret_ATDP_main</turretDef>
+						
+						<renderProperties>
+							<north>(0, 4.5)</north>
+							<south>(0, 1)</south>
+							<east>(3.5, 4)</east>
+							<west>(-3.5, 4)</west>
+						</renderProperties>
+						<defaultAngleRotated>0</defaultAngleRotated>
+						<angleRestricted>(270,90)</angleRestricted>
+						<gizmoLabel>AV gun</gizmoLabel>
+						
+						<aimPieOffset>(0, 2.55)</aimPieOffset>
+						
+						<drawLayer>0</drawLayer>
+						
+						<key>ATDPKey_gun_1</key>
+					</li>
+				</turrets>
+			</li>
+		</comps>
+	</Vehicles.VehicleDef>
+	
+	
+	
+	<Vehicles.VehicleTurretDef ParentName="guy762_VehicleTurretBASE">
+		<defName>guy762_VehicleTurret_ATDP_main</defName>
+		<label>AT-DP anti-vehicle gun</label>
+		<description>The main gun of an AT-DP walker.</description>
+		
+		<turretType>Rotatable</turretType>
+		<shotSound>kotorsound_speedergun</shotSound>
+		
+		<projectile>SWVehicleBullet_AVred</projectile>
+		<reloadTimer>3.5</reloadTimer>
+		<warmUpTimer>0.4</warmUpTimer>
+		
+		<magazineCapacity>999</magazineCapacity>
+		
+		
+		
+		<autoSnapTargeting>true</autoSnapTargeting>
+		<rotationSpeed>5</rotationSpeed>
+		
+		<!-- <projectileOffset>2.1</projectileOffset> -->
+		
+		<minRange>5</minRange>
+		<maxRange>60</maxRange>
+
+		<fireModes>
+			<li>
+				<shotsPerBurst>1</shotsPerBurst>
+				<ticksBetweenShots>10</ticksBetweenShots>
+				<ticksBetweenBursts>150</ticksBetweenBursts>
+				<label>Single</label>
+				<texPath>UI/Sniper_Shot</texPath>
+			</li>
+		</fireModes>
+
+		<graphicData>
+			<texPath>LandVehicles/ATDP/ATDP_gun</texPath>
+			<graphicClass>Vehicles.Graphic_Turret</graphicClass>
+			<drawSize>(6,6)</drawSize>
+		</graphicData>
+		
+		<gizmoIconTexPath>LandVehicles/ATDP/ATDP_gun</gizmoIconTexPath>
+		
+	</Vehicles.VehicleTurretDef>
+	
+	
+	
+	
+</Defs>

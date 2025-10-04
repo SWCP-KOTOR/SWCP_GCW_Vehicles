@@ -315,7 +315,7 @@
 				  <Male>512blank</Male>
 				</bodyPaths>
 				<bodyMaterial>
-					<shader>BS_CutoutThreeColor</shader>
+					<shader>BS_TransparentThreeColor</shader>
 					<overrideDesiccated>true</overrideDesiccated>
 					<colorA><altDefs><li>BS_CustomGlobalA</li></altDefs></colorA>
 					<colorB><altDefs><li>BS_CustomGlobalB</li></altDefs></colorB>
@@ -325,7 +325,7 @@
 					<Male>512blank</Male>
 				</headPaths>
 				<headMaterial>
-					<shader>BS_CutoutThreeColor</shader>
+					<shader>BS_TransparentThreeColor</shader>
 					<overrideDesiccated>true</overrideDesiccated>
 					<colorA><altDefs><li>BS_CustomGlobalA</li></altDefs></colorA>
 					<colorB><altDefs><li>BS_CustomGlobalB</li></altDefs></colorB>
@@ -339,7 +339,7 @@
 				<nodeClass>BigAndSmall.PawnRenderNode_Ultimate</nodeClass>
 				<workerClass>BigAndSmall.UltimateRenderNodeWorker</workerClass>
 				<parentTagDef>Head</parentTagDef>
-				<shader>BS_CutoutThreeColor</shader>
+				<shader>BS_TransparentThreeColor</shader>
 				<baseLayer>70</baseLayer>
 				<conditionalGraphics>
 					<texturePaths><li>Droid/21BMedDroid/21BMedDroid_head</li></texturePaths>
@@ -370,7 +370,7 @@
 				<nodeClass>BigAndSmall.PawnRenderNode_Ultimate</nodeClass>
 				<workerClass>BigAndSmall.UltimateRenderNodeWorker</workerClass>
 				<parentTagDef>Body</parentTagDef>
-				<shader>BS_CutoutThreeColor</shader>
+				<shader>BS_TransparentThreeColor</shader>
 				<baseLayer>20</baseLayer>
 				<conditionalGraphics>
 					<texturePaths><li>Droid/21BMedDroid/21BMedDroid_body</li></texturePaths>

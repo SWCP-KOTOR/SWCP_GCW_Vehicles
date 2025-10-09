@@ -1,17 +1,20 @@
 <?xml version="1.0" encoding="utf-8" ?>
 
 <Defs>
-	<Vehicles.VehicleBuildDef ParentName="guy762_VehicleBaseBuildable_GroundVehicle">
-		<defName>guy762_SWVehicleBP_X34Landspeeder</defName>
-		<label>X-34 Landspeeder</label>
+	
+	<Vehicles.VehicleBuildDef Name="guy762_SWVehicleBP_TX225Occupier" ParentName="guy762_VehicleBaseBuildable_GroundVehicle">
+		<defName>guy762_SWVehicleBP_TX225Occupier</defName>
+		<label>TX-225 GAVw "Occupier" Assault Tank</label>
 		<description>.</description>
 		<designationCategory>MM_StarWarsShipBuildTab</designationCategory>
 		
 		<graphicData>
-			<texPath>LandVehicles/X34Landspeeder/X34Landspeeder_L1</texPath>
-			<graphicClass>Graphic_Multi</graphicClass>
-			<drawSize>(6,6)</drawSize>
-			<!-- <drawOffset>(0, 0, 1)</drawOffset> -->
+			<texPath>LandVehicles/TX225/TX225_L1</texPath>
+			<graphicClass>Vehicles.Graphic_Vehicle</graphicClass>
+			<shaderType>CutoutComplexPattern</shaderType>
+			<drawSize>(9,9)</drawSize>
+			
+			<color>(185,185,185)</color> <!-- lighter grey -->
 		</graphicData>
 		
 		<statBases>
@@ -20,7 +23,7 @@
 			<Flammability>0.05</Flammability>
 		</statBases>
 		
-		<size>(3,4)</size>
+		<size>(4,7)</size>
 		
 		<!--researchPrerequisites>
 			<li>VVE_BasicVehicles</li>
@@ -36,8 +39,10 @@
 		</costList>
 		
 		<soundImpactDefault>BulletImpact_Metal</soundImpactDefault>
-		<thingToSpawn>guy762_SWVehicle_X34Landspeeder</thingToSpawn>
+		<thingToSpawn>guy762_SWVehicle_TX225Occupier</thingToSpawn>
 		
 		<constructionSkillPrerequisite>6</constructionSkillPrerequisite>
 	</Vehicles.VehicleBuildDef>
+
+	
 </Defs>

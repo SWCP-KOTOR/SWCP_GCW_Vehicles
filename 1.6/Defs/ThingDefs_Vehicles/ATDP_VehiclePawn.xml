@@ -1,7 +1,15 @@
 <?xml version="1.0" encoding="utf-8" ?>
 
-<Defs>	
-
+<Defs>
+	
+	
+	<Vehicles.PatternDef>
+		<defName>guy762_SWVehiclePattern_ATDPA</defName>
+		<label>AT-DP Defense Walker (stock)</label>
+		<path>LandVehicles/ATDP/ATDP_pattern</path>
+	</Vehicles.PatternDef>
+	
+	
 	
 	<Vehicles.VehicleDef ParentName="guy762_GroundVehiclePawn_base">
 		<defName>guy762_SWVehicle_ATDP</defName>
@@ -9,7 +17,7 @@
 		<description>. \n\n&lt;color=#bb8f04&gt;Crew:&lt;/color&gt; Driver x1</description>
 		
 		<graphicData>
-			<texPath>LandVehicles/ATDP/ATDP</texPath>
+			<texPath>LandVehicles/ATDP/ATDP_L1</texPath>
 			<graphicClass>Vehicles.Graphic_Vehicle</graphicClass>
 			<shaderType>CutoutComplexPattern</shaderType>
 			<drawSize>(11,11)</drawSize>
@@ -17,7 +25,10 @@
 			<drawOffset>(0,0,3)</drawOffset>
 			<drawOffsetEast>(1.5,0,3)</drawOffsetEast>
 			<drawOffsetWest>(-1.5,0,3)</drawOffsetWest>
+			
+			<pattern>guy762_SWVehiclePattern_ATDPA</pattern>
 			<color>(185,185,185)</color> <!-- lighter grey -->
+			<colorTwo>(140,90,60)</colorTwo> <!-- soft brown -->
 		</graphicData>
 		<!-- <drawProperties> -->
 			<!-- <displayOffsetEast>(0,5)</displayOffsetEast> -->
@@ -94,10 +105,31 @@
 			<baseBodySize>1</baseBodySize>
 		</race>
 		
+		<drawProperties>
+			<graphicOverlays>
+				<li>
+					<graphicData>
+						<texPath>LandVehicles/ATDP/ATDP_L2</texPath>
+						<graphicClass>Vehicles.Graphic_Vehicle</graphicClass>
+						<shaderType>CutoutComplexPattern</shaderType>
+						<drawSize>(11,11)</drawSize>
+						<layer>5</layer>
+						<drawOffset>(0,0,3)</drawOffset>
+						<drawOffsetEast>(1.5,0,3)</drawOffsetEast>
+						<drawOffsetWest>(-1.5,0,3)</drawOffsetWest>
+						
+						<pattern>guy762_SWVehiclePattern_ATDPA</pattern>
+						<color>(185,185,185)</color> <!-- lighter grey -->
+						<colorTwo>(140,90,60)</colorTwo> <!-- soft brown -->
+					</graphicData>
+				</li>
+			</graphicOverlays>
+		</drawProperties>
+		
 		<vehicleStats>
 			<Mass>750</Mass>
-			<MoveSpeed>7.5</MoveSpeed>
-			<CargoCapacity>200</CargoCapacity>
+			<MoveSpeed>6</MoveSpeed>
+			<CargoCapacity>400</CargoCapacity>
 			<RepairRate>1</RepairRate>
 			<!--AccelerationRate>0.08</AccelerationRate-->
 		</vehicleStats>
@@ -306,7 +338,7 @@
 						
 						<aimPieOffset>(0, 2.55)</aimPieOffset>
 						
-						<drawLayer>0</drawLayer>
+						<drawLayer>3</drawLayer>
 						
 						<key>ATDPKey_gun_1</key>
 					</li>
@@ -323,7 +355,7 @@
 		<description>The main gun of an AT-DP walker.</description>
 		
 		<turretType>Rotatable</turretType>
-		<shotSound>kotorsound_speedergun</shotSound>
+		<shotSound>kotorsound_ATSTgun</shotSound>
 		
 		<projectile>SWVehicleBullet_AVred</projectile>
 		<reloadTimer>3.5</reloadTimer>

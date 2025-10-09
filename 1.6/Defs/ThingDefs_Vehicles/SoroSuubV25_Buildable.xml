@@ -2,15 +2,15 @@
 
 <Defs>
 	<Vehicles.VehicleBuildDef ParentName="guy762_VehicleBaseBuildable_GroundVehicle">
-		<defName>guy762_SWVehicleBP_X34Landspeeder</defName>
-		<label>X-34 Landspeeder</label>
+		<defName>guy762_SWVehicleBP_SoroSuubV25CombatSpeeder</defName>
+		<label>SoroSuub V-25 Combat Speeder</label>
 		<description>.</description>
 		<designationCategory>MM_StarWarsShipBuildTab</designationCategory>
 		
 		<graphicData>
-			<texPath>LandVehicles/X34Landspeeder/X34Landspeeder_L1</texPath>
+			<texPath>LandVehicles/SoroSuubV25/SoroSuubV25</texPath>
 			<graphicClass>Graphic_Multi</graphicClass>
-			<drawSize>(6,6)</drawSize>
+			<drawSize>(7,7)</drawSize>
 			<!-- <drawOffset>(0, 0, 1)</drawOffset> -->
 		</graphicData>
 		
@@ -20,7 +20,7 @@
 			<Flammability>0.05</Flammability>
 		</statBases>
 		
-		<size>(3,4)</size>
+		<size>(3,7)</size>
 		
 		<!--researchPrerequisites>
 			<li>VVE_BasicVehicles</li>
@@ -36,7 +36,7 @@
 		</costList>
 		
 		<soundImpactDefault>BulletImpact_Metal</soundImpactDefault>
-		<thingToSpawn>guy762_SWVehicle_X34Landspeeder</thingToSpawn>
+		<thingToSpawn>guy762_SWVehicle_SoroSuubV25CombatSpeeder</thingToSpawn>
 		
 		<constructionSkillPrerequisite>6</constructionSkillPrerequisite>
 	</Vehicles.VehicleBuildDef>

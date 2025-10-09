@@ -2,16 +2,18 @@
 
 <Defs>
 	<Vehicles.VehicleBuildDef ParentName="guy762_VehicleBaseBuildable_GroundVehicle">
-		<defName>guy762_SWVehicleBP_X34Landspeeder</defName>
-		<label>X-34 Landspeeder</label>
+		<defName>guy762_SWVehicleBP_ATPT</defName>
+		<label>AT-PT Force Multiplier Walker</label>
 		<description>.</description>
 		<designationCategory>MM_StarWarsShipBuildTab</designationCategory>
 		
 		<graphicData>
-			<texPath>LandVehicles/X34Landspeeder/X34Landspeeder_L1</texPath>
+			<texPath>LandVehicles/ATPT/ATPT</texPath>
 			<graphicClass>Graphic_Multi</graphicClass>
-			<drawSize>(6,6)</drawSize>
-			<!-- <drawOffset>(0, 0, 1)</drawOffset> -->
+			<drawSize>(4,4)</drawSize>
+			<drawOffset>(0,0,0.75)</drawOffset>
+			<drawOffsetEast>(0.5,0,0.75)</drawOffsetEast>
+			<drawOffsetWest>(-0.5,0,0.75)</drawOffsetWest>
 		</graphicData>
 		
 		<statBases>
@@ -20,7 +22,7 @@
 			<Flammability>0.05</Flammability>
 		</statBases>
 		
-		<size>(3,4)</size>
+		<size>(2,2)</size>
 		
 		<!--researchPrerequisites>
 			<li>VVE_BasicVehicles</li>
@@ -36,7 +38,7 @@
 		</costList>
 		
 		<soundImpactDefault>BulletImpact_Metal</soundImpactDefault>
-		<thingToSpawn>guy762_SWVehicle_X34Landspeeder</thingToSpawn>
+		<thingToSpawn>guy762_SWVehicle_ATPT</thingToSpawn>
 		
 		<constructionSkillPrerequisite>6</constructionSkillPrerequisite>
 	</Vehicles.VehicleBuildDef>

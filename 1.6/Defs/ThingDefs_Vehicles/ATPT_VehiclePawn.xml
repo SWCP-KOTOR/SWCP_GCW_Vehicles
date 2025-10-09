@@ -4,35 +4,28 @@
 
 	
 	<Vehicles.VehicleDef ParentName="guy762_GroundVehiclePawn_base">
-		<defName>guy762_SWVehicle_ATST</defName>
-		<label>AT-ST Scout Walker</label>
+		<defName>guy762_SWVehicle_ATPT</defName>
+		<label>AT-PT Force Multiplier Walker</label>
 		<description>. \n\n&lt;color=#bb8f04&gt;Crew:&lt;/color&gt; Driver x1</description>
 		
 		<graphicData>
-			<texPath>LandVehicles/ATST/ATST</texPath>
+			<texPath>LandVehicles/ATPT/ATPT</texPath>
 			<graphicClass>Vehicles.Graphic_Vehicle</graphicClass>
 			<shaderType>CutoutComplexPattern</shaderType>
-			<drawSize>(10,10)</drawSize>
-			<drawOffset>(0,0,2)</drawOffset>
-			<!-- <drawOffsetEast>(0,2,0)</drawOffsetEast> -->
-			<!-- <drawOffsetNorth>(0,2,0)</drawOffsetNorth> -->
-			<!-- <drawOffsetSouth>(0,2,0)</drawOffsetSouth> -->
-			<!-- <drawOffsetWest>(0,2,0)</drawOffsetWest> -->
+			<drawSize>(4,4)</drawSize>
+			<layer>1</layer>
+			<drawOffset>(0,0,0.75)</drawOffset>
+			<drawOffsetEast>(0.5,0,0.75)</drawOffsetEast>
+			<drawOffsetWest>(-0.5,0,0.75)</drawOffsetWest>
 			<color>(185,185,185)</color> <!-- lighter grey -->
 		</graphicData>
-		<!-- <drawProperties> -->
-			<!-- <displayOffsetEast>(0,5)</displayOffsetEast> -->
-			<!-- <displayOffsetNorth>(0,5)</displayOffsetNorth> -->
-			<!-- <displayOffsetSouth>(0,5)</displayOffsetSouth> -->
-			<!-- <displayOffsetWest>(0,5)</displayOffsetWest> -->
-		<!-- </drawProperties> -->
 		
 		<fillPercent>1</fillPercent>
 		
 		<nameable>true</nameable>
-		<buildDef>guy762_SWVehicleBP_ATST</buildDef>
+		<buildDef>guy762_SWVehicleBP_ATPT</buildDef>
 		
-		<size>(5,5)</size>
+		<size>(2,2)</size>
 		<uiIconScale>1</uiIconScale>
 		
 		
@@ -40,21 +33,21 @@
 		<techLevel>Spacer</techLevel>
 		<vehicleType>Land</vehicleType>
 		
-		<killedLeavings>
-		  <guy762_ShipChunk_ATST>1</guy762_ShipChunk_ATST>
-		</killedLeavings>
+		<!-- <killedLeavings> -->
+		  <!-- <guy762_ShipChunk_ATPT>1</guy762_ShipChunk_ATPT> -->
+		<!-- </killedLeavings> -->
 				
 		<statBases> <!-- blanket applies to all parts without specified armor ratings -->
 			<!--ArmorRating_Sharp>+0.05</ArmorRating_Sharp>
 			<ArmorRating_Blunt>-0.1</ArmorRating_Blunt>        BASE CURVE FOR HARD ARMOR
 			<ArmorRating_Heat>+0.15</ArmorRating_Heat-->
-			<ArmorRating_Sharp>0.35</ArmorRating_Sharp>
-			<ArmorRating_Blunt>0.2</ArmorRating_Blunt> <!-- # of estimated XWMG hull points * 0.1, apply to hard armor curve -->
-			<ArmorRating_Heat>0.45</ArmorRating_Heat>
-			<MaxHitPoints>300</MaxHitPoints> <!-- # of estimated XWMG hull points * 100 -->
+			<ArmorRating_Sharp>0.25</ArmorRating_Sharp>
+			<ArmorRating_Blunt>0.1</ArmorRating_Blunt> <!-- # of estimated XWMG hull points * 0.1, apply to hard armor curve -->
+			<ArmorRating_Heat>0.35</ArmorRating_Heat>
+			<MaxHitPoints>200</MaxHitPoints> <!-- # of estimated XWMG hull points * 100 -->
 			
 			<Flammability>0.5</Flammability>
-			<MarketValue>5800</MarketValue>
+			<MarketValue>36000</MarketValue>
 		</statBases>
 		
 		<soundSustainersOnEvent>
@@ -66,7 +59,7 @@
 			<li>
 				<start>MoveStart</start>
 				<stop>MoveStop</stop>
-				<value>kotorsound_ATSTsteppy</value>
+				<value>kotorsound_ATPTsteppy</value>
 			</li>
 			<li>
 				<start>MoveStop</start>
@@ -96,10 +89,10 @@
 		</race>
 		
 		<vehicleStats>
-			<Mass>12100</Mass>
-			<MoveSpeed>10</MoveSpeed>
-			<CargoCapacity>200</CargoCapacity>
-			<RepairRate>1</RepairRate>
+			<Mass>1000</Mass>
+			<MoveSpeed>12.5</MoveSpeed>
+			<CargoCapacity>150</CargoCapacity>
+			<RepairRate>2</RepairRate>
 			<!--AccelerationRate>0.08</AccelerationRate-->
 		</vehicleStats>
 		
@@ -120,7 +113,7 @@
 			<riverCost>5</riverCost> <!-- higher = slower, <1 = very fast on world map -->
 			
 			<vehicleJobLimitations>
-				<li>(RepairVehicle, 4)</li> <!-- how many pawns can repair this vehicle at a time -->
+				<li>(RepairVehicle, 2)</li> <!-- how many pawns can repair this vehicle at a time -->
 			</vehicleJobLimitations> <!-- guy762 RULES: repair job count should be twice the amount of pawns to fully operate the vehicle -->
 			
 			<customHillinessCosts>
@@ -146,30 +139,15 @@
 						<li>Movement</li>
 						<li>Turret</li>
 					</handlingTypes>
-					<comfort>-0.25</comfort>
-					
+					<!-- <comfort>-0.25</comfort> -->
 					<turretIds>
-						<li>ATSTKey_gun_1</li>
-					</turretIds>
-				</li>
-				<li>
-					<key>gunner</key>
-					<label>Gunner</label>
-					<slots>1</slots>
-					<slotsToOperate>1</slotsToOperate>
-					<handlingTypes>
-						<li>Turret</li>
-					</handlingTypes>
-					<comfort>-0.25</comfort>
-					
-					<turretIds>
-						<li>ATSTKey_gun_2</li>
-						<li>ATSTKey_gun_3</li>
+						<li>ATPTKey_gun_1</li>
+						<li>ATPTKey_gun_2</li>
 					</turretIds>
 				</li>
 				<li>
 					<key>passenger</key>
-					<label>Spotter</label>
+					<label>Passenger</label>
 					<slots>1</slots>
 					<comfort>-0.75</comfort>
 				</li>
@@ -178,17 +156,17 @@
 		
 		<components>
 			<li>
-				<key>ATSTKey_hull</key>
+				<key>ATPTKey_hull</key>
 				<label>Hull</label>
 				<depth>External</depth>
 				
 				<armor> <!-- EaWX health/50 = hull points, round up -->
-					<ArmorRating_Sharp>1.35</ArmorRating_Sharp>
-					<ArmorRating_Blunt>1.2</ArmorRating_Blunt> <!-- # of estimated XWMG hull points * 0.1, apply to hard armor curve -->
-					<ArmorRating_Heat>1.45</ArmorRating_Heat>
+					<ArmorRating_Sharp>1.25</ArmorRating_Sharp>
+					<ArmorRating_Blunt>1.1</ArmorRating_Blunt> <!-- # of estimated XWMG hull points * 0.1, apply to hard armor curve -->
+					<ArmorRating_Heat>1.35</ArmorRating_Heat>
 					<IncomingDamageFactor>-0.15</IncomingDamageFactor> <!-- unarmored: 0.05 | light vehicles: 0.15 | medium vehicles: 0.25 | heavy vehicles: 0.35 -->
 				</armor>
-				<health>300</health> <!-- # of estimated XWMG hull points * 100 -->
+				<health>200</health> <!-- # of estimated XWMG hull points * 100 -->
 				
 				<hitbox>
 					<side>Body</side>
@@ -197,13 +175,13 @@
 			
 			
 			<!-- <li> -->
-				<!-- <key>ATSTKey_cockpit</key> -->
+				<!-- <key>ATPTKey_cockpit</key> -->
 				<!-- <label>Cockpit</label> -->
 				<!-- <health>100</health> -->
 				<!-- <depth>Internal</depth> -->
 			<!-- </li> -->
 			<li>
-				<key>ATSTKey_engine</key>
+				<key>ATPTKey_engine</key>
 				<label>Engine</label>
 				<health>5</health>
 				<priorityStatEfficiency>true</priorityStatEfficiency>
@@ -224,7 +202,7 @@
 				</categories>
 			</li>
 			<li>
-				<key>ATSTKey_leftleg</key>
+				<key>ATPTKey_leftleg</key>
 				<label>Left Leg</label>
 				<health>10</health>
 				<depth>Internal</depth>
@@ -234,7 +212,7 @@
 				</categories>
 			</li>
 			<li>
-				<key>ATSTKey_rightleg</key>
+				<key>ATPTKey_rightleg</key>
 				<label>Right Leg</label>
 				<health>10</health>
 				<depth>Internal</depth>
@@ -244,7 +222,7 @@
 				</categories>
 			</li>
 			<li>
-				<key>ATSTKey_leftfoot</key>
+				<key>ATPTKey_leftfoot</key>
 				<label>Left Foot</label>
 				<health>10</health>
 				<depth>Internal</depth>
@@ -258,7 +236,7 @@
 				</categories>
 			</li>
 			<li>
-				<key>ATSTKey_rightfoot</key>
+				<key>ATPTKey_rightfoot</key>
 				<label>Right Foot</label>
 				<health>10</health>
 				<depth>Internal</depth>
@@ -291,7 +269,7 @@
 			<li Class="Vehicles.CompProperties_FueledTravel">
 				<electricPowered>true</electricPowered>
 				<fuelConsumptionRate>7.5</fuelConsumptionRate>
-				<fuelCapacity>100</fuelCapacity>
+				<fuelCapacity>75</fuelCapacity>
 				<fuelConsumptionWorldMultiplier>15</fuelConsumptionWorldMultiplier>
 				
 				<targetFuelLevelConfigurable>true</targetFuelLevelConfigurable>
@@ -299,49 +277,33 @@
 			<li Class="Vehicles.CompProperties_VehicleTurrets">
 				<turrets>
 					<li>
-						<turretDef>guy762_VehicleTurret_ATST_main</turretDef>
+						<turretDef>guy762_VehicleTurret_ATPT_main</turretDef>
 						
 						<renderProperties>
-							<north>(0, 5.5)</north>
-							<south>(0, 0.25)</south>
-							<east>(2, 3.3)</east>
-							<west>(-2, 3.3)</west>
+							<north>(0, 2.5)</north>
+							<south>(0, -1)</south>
+							<east>(2.25, 1.25)</east>
+							<west>(-2.25, 1.25)</west>
 						</renderProperties>
 						<defaultAngleRotated>0</defaultAngleRotated>
 						<angleRestricted>(315,45)</angleRestricted>
-						<gizmoLabel>heavy AI gun</gizmoLabel>
+						<gizmoLabel>dual AI gun</gizmoLabel>
 						
 						<aimPieOffset>(0, 2.55)</aimPieOffset>
 						
-						<key>ATSTKey_gun_1</key>
+						<drawLayer>0</drawLayer>
+						
+						<key>ATPTKey_gun_1</key>
 					</li>
-					<li>
-						<turretDef>guy762_VehicleTurret_ATST_repeater</turretDef>
-						
-						<renderProperties>
-							<north>(-1.625, 4.675)</north>
-							<south>(1.625, 2)</south>
-							<east>(1.05, 4.75)</east>
-							<west>(-1.05, 3)</west>
-						</renderProperties>
-						<defaultAngleRotated>0</defaultAngleRotated>
-						<angleRestricted>(315,45)</angleRestricted>
-						<gizmoLabel>light AI repeater</gizmoLabel>
-						
-						<autoTargetingActive>True</autoTargetingActive>
-						
-						<aimPieOffset>(0, 2.55)</aimPieOffset>
-						
-						<key>ATSTKey_gun_2</key>
-					</li>
+					
 					<li>
 						<turretDef>guy762_VehicleTurret_ATST_conc</turretDef>
 						
 						<renderProperties>
-							<north>(1.625, 4.675)</north>
-							<south>(-1.625, 2)</south>
-							<east>(1.05, 3)</east>
-							<west>(-1.05, 4.75)</west>
+							<north>(0, 2)</north>
+							<south>(0, -0.9)</south>
+							<east>(2.05, 0.925)</east>
+							<west>(-2.05, 0.925)</west>
 						</renderProperties>
 						<defaultAngleRotated>0</defaultAngleRotated>
 						<angleRestricted>(315,45)</angleRestricted>
@@ -349,7 +311,7 @@
 						
 						<aimPieOffset>(0, 2.55)</aimPieOffset>
 						
-						<key>ATSTKey_gun_3</key>
+						<key>ATPTKey_gun_2</key>
 					</li>
 				</turrets>
 			</li>
@@ -359,14 +321,14 @@
 	
 	
 	<Vehicles.VehicleTurretDef ParentName="guy762_VehicleTurretBASE">
-		<defName>guy762_VehicleTurret_ATST_main</defName>
-		<label>AT-ST heavy anti-infantry gun</label>
-		<description>The main gun of an AT-ST walker.</description>
+		<defName>guy762_VehicleTurret_ATPT_main</defName>
+		<label>AT-PT dual anti-infantry gun</label>
+		<description>The main guns of an AT-PT walker.</description>
 		
 		<turretType>Rotatable</turretType>
-		<shotSound>kotorsound_ATSTgun</shotSound>
+		<shotSound>kotorsound_ATPTgun</shotSound>
 		
-		<projectile>SWVehicleBullet_AIdoublegreen_heavy</projectile>
+		<projectile>SWVehicleBullet_AIdoublered</projectile>
 		<reloadTimer>3.5</reloadTimer>
 		<warmUpTimer>0.4</warmUpTimer>
 		
@@ -380,106 +342,15 @@
 		<!-- <projectileOffset>2.1</projectileOffset> -->
 		
 		<minRange>5</minRange>
-		<maxRange>60</maxRange>
-
-		<fireModes>
-			<li>
-				<shotsPerBurst>2</shotsPerBurst>
-				<ticksBetweenShots>9</ticksBetweenShots>
-				<ticksBetweenBursts>200</ticksBetweenBursts>
-				<label>Burst</label>
-				<texPath>UI/Rapid_Shot</texPath>
-			</li>
-		</fireModes>
-
-		<graphicData>
-			<texPath>NullTex</texPath>
-			<graphicClass>Vehicles.Graphic_Turret</graphicClass>
-		</graphicData>
-		
-		<gizmoIconTexPath>Items/cannon_blank</gizmoIconTexPath>
-		
-	</Vehicles.VehicleTurretDef>
-	
-	<Vehicles.VehicleTurretDef ParentName="guy762_VehicleTurretBASE">
-		<defName>guy762_VehicleTurret_ATST_repeater</defName>
-		<label>AT-ST antipersonnel repeater</label>
-		<description>The antipersonnel repeater of an AT-ST walker.</description>
-		
-		<turretType>Rotatable</turretType>
-		<shotSound>kotorsound_SWGLrepeater</shotSound>
-		
-		<projectile>KotORBlasterBolt_default</projectile>
-		<reloadTimer>3.5</reloadTimer>
-		<warmUpTimer>2.5</warmUpTimer>
-		
-		<magazineCapacity>999</magazineCapacity>
-		
-		
-		
-		<autoSnapTargeting>true</autoSnapTargeting>
-		<rotationSpeed>5</rotationSpeed>
-		
-		<!-- <projectileOffset>2.1</projectileOffset> -->
-		
-		<minRange>2</minRange>
-		<maxRange>30</maxRange>
-
-		<fireModes>
-			<li>
-				<shotsPerBurst>12</shotsPerBurst>
-				<ticksBetweenShots>6</ticksBetweenShots>
-				<ticksBetweenBursts>200</ticksBetweenBursts>
-				<label>Burst</label>
-				<texPath>UI/Improved_Rapid_Shot</texPath>
-			</li>
-		</fireModes>
-
-		<graphicData>
-			<texPath>NullTex</texPath>
-			<graphicClass>Vehicles.Graphic_Turret</graphicClass>
-		</graphicData>
-		
-		<gizmoIconTexPath>Items/cannon_blank</gizmoIconTexPath>
-		<modExtensions>
-			<li MayRequire="SmashPhil.VehicleFramework" Class = "Vehicles.VehicleDamageMultiplierDefModExtension">
-			  <multiplier>0.01</multiplier>
-			</li>
-		</modExtensions>
-	</Vehicles.VehicleTurretDef>
-	
-	
-	<Vehicles.VehicleTurretDef ParentName="guy762_VehicleTurretBASE">
-		<defName>guy762_VehicleTurret_ATST_conc</defName>
-		<label>AT-ST concussion launcher</label>
-		<description>The concussion launcher of an AT-ST walker.</description>
-		
-		<turretType>Rotatable</turretType>
-		<shotSound>kotorsound_JKrepeater_AltFire</shotSound>
-		
-		<projectile>SWProj_TL50conc</projectile>
-		<reloadTimer>3.5</reloadTimer>
-		<warmUpTimer>2.5</warmUpTimer>
-		
-		<magazineCapacity>999</magazineCapacity>
-		
-		
-		
-		<autoSnapTargeting>true</autoSnapTargeting>
-		<rotationSpeed>5</rotationSpeed>
-		
-		<!-- <projectileOffset>2.1</projectileOffset> -->
-		
-		<minRange>2</minRange>
-		<maxRange>30</maxRange>
+		<maxRange>30</maxRange> <!-- ~30 for infantry, 60 for ground vehicles, 90 for starfighters -->
 
 		<fireModes>
 			<li>
 				<shotsPerBurst>1</shotsPerBurst>
 				<ticksBetweenShots>10</ticksBetweenShots>
-				<ticksBetweenBursts>200</ticksBetweenBursts>
+				<ticksBetweenBursts>80</ticksBetweenBursts>
 				<label>Single</label>
-				<texPath>Weapons/Projectiles/energybomb_purple</texPath>
+				<texPath>UI/Sniper_Shot</texPath>
 			</li>
 		</fireModes>
 
@@ -488,13 +359,11 @@
 			<graphicClass>Vehicles.Graphic_Turret</graphicClass>
 		</graphicData>
 		
-		<gizmoIconTexPath>Items/bigcannon_blank</gizmoIconTexPath>
-		<modExtensions>
-			<li MayRequire="SmashPhil.VehicleFramework" Class = "Vehicles.VehicleDamageMultiplierDefModExtension">
-			  <multiplier>0</multiplier>
-			</li>
-		</modExtensions>
+		<gizmoIconTexPath>Items/cannon_blank</gizmoIconTexPath>
+		
 	</Vehicles.VehicleTurretDef>
+	
+	
 	
 	
 </Defs>

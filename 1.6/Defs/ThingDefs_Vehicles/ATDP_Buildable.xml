@@ -8,7 +8,7 @@
 		<designationCategory>MM_StarWarsShipBuildTab</designationCategory>
 		
 		<graphicData>
-			<texPath>LandVehicles/ATDP/ATDP</texPath>
+			<texPath>LandVehicles/ATDP/ATDP_L1</texPath>
 			<graphicClass>Graphic_Multi</graphicClass>
 			<drawSize>(11,11)</drawSize>
 			<drawOffset>(0,0,3)</drawOffset>

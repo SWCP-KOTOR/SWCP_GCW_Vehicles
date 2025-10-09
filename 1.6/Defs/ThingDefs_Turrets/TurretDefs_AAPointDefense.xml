@@ -6,14 +6,14 @@
 
   <!--=============== hardpoint AA point-defense ===============-->
 
-  <ThingDef ParentName="guy762_GravshipTurretBase">
-    <defName>guy762_SWTurret_HardpointAAPointDefense</defName>
-    <label>hardpoint anti-air turret</label>
+  <ThingDef ParentName="guy762_TurretBase">
+    <defName>guy762_SWTurret_AAPointDefense</defName>
+    <label>anti-air autoturret</label>
     <description>.</description>
 	<graphicData>
       <graphicClass>Graphic_Single</graphicClass>
       <texPath>Turrets/HardpointBase</texPath>
-      <drawSize>(3,3)</drawSize>
+      <drawSize>(4,4)</drawSize>
 	  <drawRotated>false</drawRotated>
 	  
       <damageData>
@@ -47,16 +47,16 @@
       <ComponentIndustrial>6</ComponentIndustrial>
     </costList>
 	
-	<size>(2,2)</size>
-	<fillPercent>0.8</fillPercent>
-	<hasInteractionCell>True</hasInteractionCell>
-	<interactionCellOffset>(1,0,3)</interactionCellOffset>
+	<size>(3,3)</size>
+	<fillPercent>0.9</fillPercent>
+	<!-- <hasInteractionCell>True</hasInteractionCell> -->
+	<!-- <interactionCellOffset>(1,0,3)</interactionCellOffset> -->
 	
 	<soundInteract>kotorsound_select_shipgun</soundInteract>
     <comps>
-      <li Class="CompProperties_Mannable">
-        <manWorkType>Violent</manWorkType>
-      </li>
+      <!-- <li Class="CompProperties_Mannable"> -->
+        <!-- <manWorkType>Violent</manWorkType> -->
+      <!-- </li> -->
 	  
 	  <li Class="CompProperties_Explosive">
         <wickTicks>240</wickTicks>
@@ -67,7 +67,8 @@
       <li Class="CompProperties_Forbiddable"/>
       <li Class="CompProperties_Power">
         <compClass>CompPowerTrader</compClass>
-        <basePowerConsumption>150</basePowerConsumption>
+        <!-- <basePowerConsumption>150</basePowerConsumption> -->
+        <basePowerConsumption>0</basePowerConsumption>
       </li>
       <li Class="CompProperties_Flickable"/>
       <li Class="CompProperties_Breakdownable"/>
@@ -88,11 +89,11 @@
       <!-- </li> -->
     </comps>
 	
-	<!-- <terrainAffordanceNeeded>Heavy</terrainAffordanceNeeded> -->
-	<terrainAffordanceNeeded>Substructure</terrainAffordanceNeeded>
+	<terrainAffordanceNeeded>Heavy</terrainAffordanceNeeded>
+	<!-- <terrainAffordanceNeeded>Substructure</terrainAffordanceNeeded> -->
     <building>
 		<turretGunDef>guy762_SWTurretGun_HardpointAAPointDefense</turretGunDef>
-		<turretTopDrawSize>3</turretTopDrawSize>
+		<turretTopDrawSize>4</turretTopDrawSize>
 		<!-- <turretTopOffset>(-0.05, 0.05)</turretTopOffset> -->
 	  
 		<turretBurstWarmupTime>0.125</turretBurstWarmupTime>
@@ -101,60 +102,6 @@
     <researchPrerequisites>
       <li>SniperTurret</li>
     </researchPrerequisites>
-  </ThingDef>
-
-
-
-
-
-
-
-
-  <ThingDef ParentName="BaseWeaponTurret">
-    <defName>guy762_SWTurretGun_HardpointAAPointDefense</defName>
-    <label>anti-air turret</label>
-    <description>.</description>
-    <graphicData>
-      <texPath>Turrets/PointDefense_gun</texPath>
-      <graphicClass>Graphic_Single</graphicClass>
-	  <drawSize>(2,2)</drawSize>
-    </graphicData>
-    <statBases>
-      <AccuracyTouch>0.30</AccuracyTouch>
-      <AccuracyShort>0.40</AccuracyShort>
-      <AccuracyMedium>0.80</AccuracyMedium>
-      <AccuracyLong>0.90</AccuracyLong>
-      <RangedWeapon_Cooldown>2.5</RangedWeapon_Cooldown>
-      <DeteriorationRate>0</DeteriorationRate>
-      <Mass>200</Mass>
-      <Flammability>0</Flammability>
-    </statBases>
-    <verbs>
-      <li>
-        <verbClass>Verb_Shoot</verbClass>
-        <defaultProjectile>SWFixedTurretBullet_AAdoublered</defaultProjectile>
-        <warmupTime>0.125</warmupTime>
-        <!-- <range>90</range> normal ground defense range -->
-        <range>250</range> <!-- ship defense range -->
-		
-        <burstShotCount>6</burstShotCount>
-		<ticksBetweenBurstShots>6</ticksBetweenBurstShots>
-        
-		<soundCast>kotorsound_EaWturret_AA</soundCast>
-        <soundCastTail>GunTail_Heavy</soundCastTail>
-        <muzzleFlashScale>18</muzzleFlashScale>
-		<forcedMissRadius>0</forcedMissRadius>
-		<ai_AvoidFriendlyFireRadius>3</ai_AvoidFriendlyFireRadius>
-		
-		<!-- <onlyManualCast>true</onlyManualCast> -->
-		<targetParams>
-			<canTargetLocations>true</canTargetLocations>
-		</targetParams>
-      </li>
-    </verbs>
-	<modExtensions>
-	  <li Class="IgnoreConfigErrors.Ignore_ForcedMissRadius" />
-	</modExtensions>
   </ThingDef>
 
  

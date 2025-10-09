@@ -1,0 +1,451 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<Defs>
+	
+	<Vehicles.VehicleDef Name="guy762_SWVehicle_TX225Occupier" ParentName="guy762_GroundVehiclePawn_base">
+		<defName>guy762_SWVehicle_TX225Occupier</defName>
+		<label>TX-225 GAVw "Occupier" Assault Tank</label>
+		<description>. \n\n&lt;color=#bb8f04&gt;Crew:&lt;/color&gt; Driver x1</description>
+		
+		<graphicData>
+			<texPath>LandVehicles/TX225/TX225_L1</texPath>
+			<graphicClass>Vehicles.Graphic_Vehicle</graphicClass>
+			<shaderType>CutoutComplexPattern</shaderType>
+			<drawSize>(9,9)</drawSize>
+			
+			<color>(185,185,185)</color> <!-- lighter grey -->
+		</graphicData>
+		
+		<fillPercent>0.7</fillPercent>
+		
+		<nameable>false</nameable>
+		<buildDef>guy762_SWVehicleBP_TX225Occupier</buildDef>
+		
+		<size>(4,7)</size>
+		<uiIconScale>1</uiIconScale>
+		
+		
+		<vehicleCategory>Transport</vehicleCategory>
+		<techLevel>Spacer</techLevel>
+		<vehicleType>Land</vehicleType>
+				
+		<statBases>
+			<!--ArmorRating_Sharp>+0.05</ArmorRating_Sharp>
+			<ArmorRating_Blunt>-0.1</ArmorRating_Blunt>        BASE CURVE FOR HARD ARMOR
+			<ArmorRating_Heat>+0.15</ArmorRating_Heat-->
+			<ArmorRating_Sharp>0.65</ArmorRating_Sharp>
+			<ArmorRating_Blunt>0.5</ArmorRating_Blunt> <!-- # of estimated XWMG hull points * 0.1, apply to hard armor curve -->
+			<ArmorRating_Heat>0.75</ArmorRating_Heat>
+			<MaxHitPoints>600</MaxHitPoints> <!-- # of estimated XWMG hull points * 100 -->
+			
+			<Flammability>0.5</Flammability>
+			<MarketValue>45000</MarketValue>
+		</statBases>
+		
+		<soundSustainersOnEvent>
+			<li>
+				<start>IgnitionOn</start>
+				<stop>MoveStart</stop>
+				<value>kotorsound_trackedvehicle_idle</value>
+			</li>
+			<li>
+				<start>MoveStart</start>
+				<stop>MoveStop</stop>
+				<value>kotorsound_trackedvehicle_moving</value>
+			</li>
+			<li>
+				<start>MoveStop</start>
+				<stop>MoveStart</stop>
+				<value>kotorsound_trackedvehicle_idle</value>
+			</li>
+			<li>
+				<start>MoveStop</start>
+				<stop>IgnitionOff</stop>
+				<value>kotorsound_trackedvehicle_idle</value>
+			</li>
+		</soundSustainersOnEvent>
+		
+		<soundOneShotsOnEvent>
+			<li>
+				<key>IgnitionOn</key>
+				<value>kotorsound_speederbike_activate</value>
+			</li>
+			<li>
+				<key>IgnitionOff</key>
+				<value>kotorsound_speederbike_deactivate</value>
+			</li>
+		</soundOneShotsOnEvent>
+		
+		<race>
+			<baseBodySize>1</baseBodySize>
+		</race>
+		
+		<drawProperties>
+			<graphicOverlays>
+				<li>
+					<graphicData>
+						<texPath>LandVehicles/TX225/TX225_L2</texPath>
+						<graphicClass>Vehicles.Graphic_Vehicle</graphicClass> <!-- Graphic_RGB if not using the pattern system -->
+						<shaderType>CutoutComplexPattern</shaderType>
+						<drawSize>(9,9)</drawSize>
+						<layer>100</layer>
+						
+						<color>(185,185,185)</color> <!-- lighter grey -->
+					</graphicData>
+				</li>
+			</graphicOverlays>
+		</drawProperties>
+		
+		<vehicleStats>
+			<Mass>16000</Mass>
+			<MoveSpeed>8</MoveSpeed>
+			<CargoCapacity>250</CargoCapacity>
+			<RepairRate>1</RepairRate>
+			<!--AccelerationRate>0.08</AccelerationRate-->
+		</vehicleStats>
+		
+		<properties>
+			<diagonalRotation>false</diagonalRotation>
+			<manhunterTargetsVehicle>true</manhunterTargetsVehicle>
+			
+			<worldSpeedMultiplier>0.5</worldSpeedMultiplier> <!-- higher number = faster travel -->
+			<winterSpeedMultiplier>1.5</winterSpeedMultiplier> <!-- lower number = faster winter travel -->
+			<offRoadMultiplier>1</offRoadMultiplier> <!-- lower number = faster travel -->
+			
+			<customRoadCosts AssignDefaults = "0.4" /> <!-- vanilla default is 0.5, lower number = faster -->
+			<!-- <customTerrainCosts AllowTerrainWithTag="Water" PathCost="1"/> -->
+			<track Class = "Vehicles.VehicleTrack_Wake">
+				<speed>2</speed>
+			</track>
+			
+			<riverCost>1</riverCost> <!-- higher = slower, <1 = very fast on world map -->
+			
+			<!-- <customHillinessCosts> -->
+				<!-- <SmallHills>0.25</SmallHills> -->
+				<!-- <LargeHills>0.75</LargeHills> -->
+				<!-- <Mountainous>1.5</Mountainous> -->
+				<!-- <Impassable>1.5</Impassable> -->
+			<!-- </customHillinessCosts> -->
+			
+			<!--customWeatherCosts>
+				<Dusting>4</Dusting>
+				<Thin>8</Thin>
+				<Medium>16</Medium>
+				<Thick>24</Thick>
+			</customWeatherCosts-->
+			
+			<roles>
+				<li>
+					<key>driver</key>
+					<label>Driver</label>
+					<slots>1</slots>
+					<slotsToOperate>1</slotsToOperate>
+					<handlingTypes>
+						<li>Movement</li>
+						<li>Turret</li>
+					</handlingTypes>
+					<comfort>-0.125</comfort>
+					
+					<turretIds>
+						<li>TX225Key_gun_1</li>
+						<li>TX225Key_gun_2</li>
+					</turretIds>
+				</li>
+				<li>
+					<key>gunner</key>
+					<label>Gunner</label>
+					<slots>1</slots>
+					<slotsToOperate>1</slotsToOperate>
+					<handlingTypes>
+						<li>Turret</li>
+					</handlingTypes>
+					<comfort>-0.25</comfort>
+					
+					<turretIds>
+						<li>TX225Key_gun_3</li>
+					</turretIds>
+				</li>
+				<li>
+					<key>passenger</key>
+					<label>Spotter</label>
+					<slots>1</slots>
+					<comfort>-0.75</comfort>
+				</li>
+			</roles>
+		</properties>
+		
+		<components>
+			<li>
+				<key>TX225Key_hull</key>
+				<label>Hull</label>
+				<depth>External</depth>
+				
+				<armor> <!-- EaWX health/50 = hull points, round up -->
+					<ArmorRating_Sharp>1.65</ArmorRating_Sharp>
+					<ArmorRating_Blunt>1.5</ArmorRating_Blunt> <!-- # of estimated XWMG hull points * 0.1, apply to hard armor curve -->
+					<ArmorRating_Heat>1.75</ArmorRating_Heat>
+					<IncomingDamageFactor>-0.25</IncomingDamageFactor> <!-- unarmored: 0.05 | light vehicles: 0.15 | medium vehicles: 0.25 | heavy vehicles: 0.35 -->
+				</armor>
+				<health>600</health> <!-- # of estimated XWMG hull points * 100 -->
+				
+				<hitbox>
+					<side>Body</side>
+				</hitbox>
+			</li>
+			<li>
+				<key>TX225Key_engine</key>
+				<label>Engine</label>
+				<health>5</health>
+				<priorityStatEfficiency>true</priorityStatEfficiency>
+				<depth>Internal</depth>
+				
+				<reactors>
+					<li Class = "Vehicles.Reactor_Explosive">
+						<indicator>VF_Explosive</indicator>
+						<chance>0.5</chance>
+						<maxHealth>0.2</maxHealth>
+						<radius>3</radius>
+						<damageDef>guy762_ExplosiveDamage_energy</damageDef>
+					</li>
+				</reactors>
+				
+				<categories>
+					<li>MoveSpeed</li>
+				</categories>
+			</li>
+			<li>
+				<key>TX225Key_tread_left</key>
+				<label>Left Treads</label>
+				<health>5</health>
+				<depth>Internal</depth>
+				
+				<tags>
+					<li>Wheel</li>
+				</tags>
+				
+				<categories>
+					<li>MoveSpeed</li>
+				</categories>
+			</li>
+			<li>
+				<key>TX225Key_tread_right</key>
+				<label>Right Treads</label>
+				<health>5</health>
+				<depth>Internal</depth>
+				
+				<tags>
+					<li>Wheel</li>
+				</tags>
+				
+				<categories>
+					<li>MoveSpeed</li>
+				</categories>
+			</li>
+		</components>
+
+		<!--modExtensions>
+			<li Class="VanillaVehiclesExpanded.StatExtension">
+				<statToAdd>
+					<li>VVE_VehicleTier</li>
+				</statToAdd>
+				<statValues>
+					<li>VVE_Tier1</li>
+				</statValues>
+				<statDescriptions>
+					<li>VVE_Tier1Desc</li>
+				</statDescriptions>
+			</li>
+		</modExtensions-->
+		
+		<comps>
+			<li Class="Vehicles.CompProperties_FueledTravel">
+				<fuelType>KOTOR_Rhydonium</fuelType>
+				<leakDef>Filth_Fuel</leakDef>
+				<fuelConsumptionRate>12.5</fuelConsumptionRate>
+				<fuelCapacity>100</fuelCapacity>
+				<fuelConsumptionWorldMultiplier>10</fuelConsumptionWorldMultiplier>
+				
+				<targetFuelLevelConfigurable>true</targetFuelLevelConfigurable>
+				<ambientHeat>2.0</ambientHeat>
+			</li>
+			
+			<li Class="Vehicles.CompProperties_VehicleTurrets">
+				<turrets>
+					<li>
+						<turretDef>guy762_VehicleTurret_TX225AV</turretDef>
+						
+						<renderProperties>
+							<north>(-2.325, 3.1)</north>
+							<south>(2.325, -2.65)</south>
+							
+							<east>(3.75, 1.875)</east>
+							<west>(-3.75, -1.6)</west>
+						</renderProperties>
+						<defaultAngleRotated>0</defaultAngleRotated>
+						<angleRestricted>(315,45)</angleRestricted>
+						<gizmoLabel>dual AV gun</gizmoLabel>
+						
+						<aimPieOffset>(0, 2.55)</aimPieOffset>
+						
+						<autoTargetingActive>True</autoTargetingActive>
+						
+						<key>TX225Key_gun_1</key>
+					</li>
+					<li>
+						<turretDef>guy762_VehicleTurret_TX225AV</turretDef>
+						
+						<renderProperties>
+							<north>(2.325, 3.1)</north>
+							<south>(-2.325, -0.625)</south>
+							
+							<east>(3.75, -1.6)</east>
+							<west>(-3.75, 1.752)</west>
+						</renderProperties>
+						<defaultAngleRotated>0</defaultAngleRotated>
+						<angleRestricted>(315,45)</angleRestricted>
+						<gizmoLabel>dual AV gun</gizmoLabel>
+						
+						<aimPieOffset>(0, 2.55)</aimPieOffset>
+						
+						<autoTargetingActive>True</autoTargetingActive>
+						
+						<key>TX225Key_gun_2</key>
+					</li>
+					<li>
+						<turretDef>guy762_VehicleTurret_TX225AI</turretDef>
+						<!-- <turretDef>guy762_VehicleTurret_ATST_repeater</turretDef> -->
+						
+						<renderProperties>
+							<north>(0, 2.5)</north>
+							<south>(0, -2.875)</south>
+							
+							<east>(4, 0)</east>
+							<west>(-4, 0)</west>
+						</renderProperties>
+						<defaultAngleRotated>0</defaultAngleRotated>
+						<angleRestricted>(315,45)</angleRestricted>
+						<gizmoLabel>dual AI gun</gizmoLabel>
+						
+						<aimPieOffset>(0, 2.55)</aimPieOffset>
+						
+						<autoTargetingActive>True</autoTargetingActive>
+						
+						<key>TX225Key_gun_3</key>
+					</li>
+				</turrets>
+			</li>
+		</comps>
+		
+		<thingClass>VehicleMapFramework.VehiclePawnWithMap</thingClass>
+		<enabled>Player</enabled>
+		<modExtensions>
+			<li Class="VehicleMapFramework.VehicleMapProps">
+				<size>(3,3)</size>
+				<offsetNorth>(0,0,-1.25)</offsetNorth>
+				
+				<offsetSouth>(0,0,1.25)</offsetSouth>
+				
+				<offsetEast>(-1.775,0,0.25)</offsetEast>
+			</li>
+		</modExtensions>
+	</Vehicles.VehicleDef>
+	
+	
+	
+	<Vehicles.VehicleTurretDef ParentName="guy762_VehicleTurretBASE">
+		<defName>guy762_VehicleTurret_TX225AV</defName>
+		<label>TX-225 dual AV gun</label>
+		<description>The dual anti-vehicle cannons of a TX-225 assault tank.</description>
+		
+		<turretType>Rotatable</turretType>
+		<shotSound>kotorsound_TankAntiVehicleGun</shotSound>
+		
+		<projectile>SWVehicleBullet_AVdoublered</projectile>
+		<reloadTimer>3.5</reloadTimer>
+		<warmUpTimer>0.5</warmUpTimer>
+		
+		<magazineCapacity>999</magazineCapacity>
+		
+		<autoSnapTargeting>true</autoSnapTargeting>
+		<rotationSpeed>5</rotationSpeed>
+		
+		<projectileOffset>2.1</projectileOffset>
+		
+		<minRange>5</minRange>
+		<maxRange>60</maxRange> <!-- ~30 for infantry, 60 for ground vehicles, 90 for starfighters -->
+
+		<fireModes>
+			<li>
+				<shotsPerBurst>1</shotsPerBurst>
+				<ticksBetweenShots>10</ticksBetweenShots>
+				<ticksBetweenBursts>160</ticksBetweenBursts>
+				<label>Single</label>
+				<texPath>UI/Sniper_Shot</texPath>
+			</li>
+		</fireModes>
+
+		<graphicData>
+			<texPath>NullTex</texPath>
+			<graphicClass>Vehicles.Graphic_Turret</graphicClass>
+		</graphicData>
+		
+		<gizmoIconTexPath>Items/bigcannon_blank</gizmoIconTexPath>
+		
+		<!-- <modExtensions> -->
+			<!-- <li MayRequire="SmashPhil.VehicleFramework" Class = "Vehicles.VehicleDamageMultiplierDefModExtension"> -->
+			  <!-- <multiplier>0.01</multiplier> -->
+			<!-- </li> -->
+		<!-- </modExtensions> -->
+	</Vehicles.VehicleTurretDef>
+	
+	
+	<Vehicles.VehicleTurretDef ParentName="guy762_VehicleTurretBASE">
+		<defName>guy762_VehicleTurret_TX225AI</defName>
+		<label>TX-225 dual anti-infantry gun</label>
+		<description>The dual anti-infantry guns of a TX-225 assault tank.</description>
+		
+		<turretType>Rotatable</turretType>
+		<shotSound>kotorsound_TankAntiInfantryGun</shotSound>
+		
+		<projectile>SWVehicleBullet_AIdoublered</projectile>
+		<reloadTimer>3.5</reloadTimer>
+		<warmUpTimer>0.2</warmUpTimer>
+		
+		<magazineCapacity>999</magazineCapacity>
+		
+		
+		
+		<autoSnapTargeting>true</autoSnapTargeting>
+		<rotationSpeed>5</rotationSpeed>
+		
+		<!-- <projectileOffset>2.1</projectileOffset> -->
+		
+		<minRange>5</minRange>
+		<maxRange>30</maxRange> <!-- ~30 for infantry, 60 for ground vehicles, 90 for starfighters -->
+
+		<fireModes>
+			<li>
+				<shotsPerBurst>1</shotsPerBurst>
+				<ticksBetweenShots>10</ticksBetweenShots>
+				<ticksBetweenBursts>120</ticksBetweenBursts>
+				<label>Single</label>
+				<texPath>UI/Sniper_Shot</texPath>
+			</li>
+		</fireModes>
+
+		<graphicData>
+			<texPath>NullTex</texPath>
+			<graphicClass>Vehicles.Graphic_Turret</graphicClass>
+		</graphicData>
+		
+		<gizmoIconTexPath>Items/cannon_blank</gizmoIconTexPath>
+		
+	</Vehicles.VehicleTurretDef>
+	
+	
+	
+	
+	
+	
+	
+</Defs>

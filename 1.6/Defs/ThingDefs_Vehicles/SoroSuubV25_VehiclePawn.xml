@@ -422,7 +422,7 @@
 		
 		<!-- <projectileOffset>2.1</projectileOffset> -->
 		
-		<minRange>5</minRange>
+		<minRange>2</minRange>
 		<maxRange>30</maxRange> <!-- ~30 for infantry, 60 for ground vehicles, 90 for starfighters -->
 
 		<fireModes>

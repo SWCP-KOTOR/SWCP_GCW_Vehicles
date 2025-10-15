@@ -84,6 +84,8 @@
       <!-- </li> -->
     </comps>
 	
+	<recoilPower>3</recoilPower>
+	
 	<terrainAffordanceNeeded>Substructure</terrainAffordanceNeeded>
     <building>
 		<turretGunDef>guy762_SWTurretGun_HardpointLightTurbo</turretGunDef>
@@ -143,6 +145,7 @@
 		<targetParams>
 			<canTargetLocations>true</canTargetLocations>
 		</targetParams>
+		<isMortar>true</isMortar>
       </li>
     </verbs>
 	<modExtensions>

@@ -127,6 +127,9 @@
       <Mass>200</Mass>
       <Flammability>0</Flammability>
     </statBases>
+	
+	<recoilPower>5</recoilPower>
+	
     <verbs>
       <li>
         <verbClass>Verb_Shoot</verbClass>
@@ -144,6 +147,7 @@
 		<targetParams>
 			<canTargetLocations>true</canTargetLocations>
 		</targetParams>
+		<isMortar>true</isMortar>
       </li>
     </verbs>
 	<modExtensions>
@@ -170,6 +174,8 @@
 			<armorPenetrationBase>0.75</armorPenetrationBase>
 			<speed>200</speed>
 			<explosionRadius>4</explosionRadius>
+			
+			<flyOverhead>true</flyOverhead>
 		</projectile>
 		<thingClass>Projectile_Explosive</thingClass>
 	</ThingDef>

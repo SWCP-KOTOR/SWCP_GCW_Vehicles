@@ -9,10 +9,19 @@
 	</Vehicles.PatternDef>
 	
 	
-	<Vehicles.VehicleDef ParentName="guy762_GroundVehiclePawn_base">
+	<Vehicles.VehicleDef Name="guy762_SWVehicle_T2BTank" ParentName="guy762_GroundVehiclePawn_base">
 		<defName>guy762_SWVehicle_T2BTank</defName>
 		<label>T2-B Repulsor Tank</label>
 		<description>. \n\n&lt;color=#bb8f04&gt;Crew:&lt;/color&gt; Driver x1</description>
+		
+		<combatPower>450</combatPower>
+		<npcProperties>
+			<raidParams>SWCP_VehicleRaidParams_EdgeWalkInsOnly</raidParams>
+			<targetAcquireRadius>250</targetAcquireRadius>
+			<targetKeepRadius>30</targetKeepRadius>
+			<runDownTargets>false</runDownTargets>
+			<stopToShoot>true</stopToShoot>
+		</npcProperties>
 		
 		<graphicData>
 			<texPath>LandVehicles/T2B/T2B</texPath>
@@ -315,14 +324,6 @@
 	
 	
 	
-	
-	
-	
-	
-	
-	
-	
-	
 	<Vehicles.VehicleTurretDef ParentName="guy762_VehicleTurretBASE">
 		<defName>guy762_VehicleTurret_T2B_AIquad</defName>
 		<label>T2-B quad AI cannon</label>
@@ -370,6 +371,39 @@
 		<gizmoIconTexPath>LandVehicles/T2B/T2B_gun</gizmoIconTexPath>
 		
 	</Vehicles.VehicleTurretDef>
+	
+	
+	
+	
+	
+	
+	<Vehicles.VehicleDef Name="guy762_SWVehicle_T2BTank_bot" ParentName="guy762_SWVehicle_T2BTank">
+		<defName>guy762_SWVehicle_T2BTank_bot</defName>
+
+		<buildDef Inherit="False" />
+		
+		<!-- <vehicleMovementPermissions>NoDriverNeeded</vehicleMovementPermissions> -->
+		
+		<properties>
+			<roles Inherit="False">
+				<li>
+					<key>pilot</key>
+					<label>Bot Pilot</label>
+					<slots>1</slots>
+					<slotsToOperate>1</slotsToOperate>
+					<!-- <handlingTypes> -->
+						<!-- <li>Movement</li> -->
+						<!-- <li>Turret</li> -->
+					<!-- </handlingTypes> -->
+					
+					<turretIds>
+						<li>T2BKey_gun_1</li>
+					</turretIds>
+				</li>
+			</roles>
+		</properties>
+
+	</Vehicles.VehicleDef>
 	
 	
 	

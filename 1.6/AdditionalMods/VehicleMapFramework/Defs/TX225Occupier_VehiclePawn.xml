@@ -7,6 +7,16 @@
 		<label>TX-225 GAVw "Occupier" Assault Tank</label>
 		<description>. \n\n&lt;color=#bb8f04&gt;Crew:&lt;/color&gt; Driver x1</description>
 		
+		<combatPower>500</combatPower>
+		<npcProperties>
+			<raidParams>SWCP_VehicleRaidParams_EdgeWalkInsOnly</raidParams>
+			<targetAcquireRadius>250</targetAcquireRadius>
+			<targetKeepRadius>50</targetKeepRadius>
+			<runDownTargets>false</runDownTargets>
+			<stopToShoot>true</stopToShoot>
+		</npcProperties>
+		<!-- <navigationCategory></navigationCategory> -->
+		
 		<graphicData>
 			<texPath>LandVehicles/TX225/TX225_L1</texPath>
 			<graphicClass>Vehicles.Graphic_Vehicle</graphicClass>
@@ -18,14 +28,15 @@
 		
 		<fillPercent>0.7</fillPercent>
 		
-		<nameable>false</nameable>
+		<nameable>true</nameable>
 		<buildDef>guy762_SWVehicleBP_TX225Occupier</buildDef>
 		
 		<size>(4,7)</size>
 		<uiIconScale>1</uiIconScale>
 		
 		
-		<vehicleCategory>Transport</vehicleCategory>
+		<vehicleCategory>Combat</vehicleCategory>
+		<!-- <vehicleCategory>Transport</vehicleCategory> -->
 		<techLevel>Spacer</techLevel>
 		<vehicleType>Land</vehicleType>
 				
@@ -112,13 +123,17 @@
 			<winterSpeedMultiplier>1.5</winterSpeedMultiplier> <!-- lower number = faster winter travel -->
 			<offRoadMultiplier>1</offRoadMultiplier> <!-- lower number = faster travel -->
 			
-			<customRoadCosts AssignDefaults = "0.4" /> <!-- vanilla default is 0.5, lower number = faster -->
+			<customRoadCosts AssignDefaults = "0.5" /> <!-- vanilla default is 0.5, lower number = faster -->
 			<!-- <customTerrainCosts AllowTerrainWithTag="Water" PathCost="1"/> -->
 			<track Class = "Vehicles.VehicleTrack_Wake">
 				<speed>2</speed>
 			</track>
 			
 			<riverCost>1</riverCost> <!-- higher = slower, <1 = very fast on world map -->
+			
+			<vehicleJobLimitations>
+				<li>(RepairVehicle, 4)</li> <!-- how many pawns can repair this vehicle at a time -->
+			</vehicleJobLimitations> <!-- guy762 RULES: repair job count should be twice the amount of pawns to fully operate the vehicle -->
 			
 			<!-- <customHillinessCosts> -->
 				<!-- <SmallHills>0.25</SmallHills> -->
@@ -287,7 +302,7 @@
 						
 						<aimPieOffset>(0, 2.55)</aimPieOffset>
 						
-						<autoTargetingActive>True</autoTargetingActive>
+						<!-- <autoTargetingActive>True</autoTargetingActive> -->
 						
 						<key>TX225Key_gun_1</key>
 					</li>
@@ -307,7 +322,7 @@
 						
 						<aimPieOffset>(0, 2.55)</aimPieOffset>
 						
-						<autoTargetingActive>True</autoTargetingActive>
+						<!-- <autoTargetingActive>True</autoTargetingActive> -->
 						
 						<key>TX225Key_gun_2</key>
 					</li>
@@ -328,7 +343,7 @@
 						
 						<aimPieOffset>(0, 2.55)</aimPieOffset>
 						
-						<autoTargetingActive>True</autoTargetingActive>
+						<!-- <autoTargetingActive>True</autoTargetingActive> -->
 						
 						<key>TX225Key_gun_3</key>
 					</li>
@@ -441,6 +456,43 @@
 		<gizmoIconTexPath>Items/cannon_blank</gizmoIconTexPath>
 		
 	</Vehicles.VehicleTurretDef>
+	
+	
+	
+	
+	
+	
+	<Vehicles.VehicleDef Name="guy762_SWVehicle_TX225Occupier_bot" ParentName="guy762_SWVehicle_TX225Occupier">
+		<defName>guy762_SWVehicle_TX225Occupier_bot</defName>
+		
+		<!-- <size>(7,7)</size> -->
+		
+		<buildDef Inherit="False" />
+		
+		<!-- <vehicleMovementPermissions>NoDriverNeeded</vehicleMovementPermissions> -->
+		
+		<properties>
+			<roles Inherit="False">
+				<li>
+					<key>pilot</key>
+					<label>Bot Pilot</label>
+					<slots>1</slots>
+					<slotsToOperate>1</slotsToOperate>
+					<!-- <handlingTypes> -->
+						<!-- <li>Movement</li> -->
+						<!-- <li>Turret</li> -->
+					<!-- </handlingTypes> -->
+					
+					<turretIds>
+						<li>TX225Key_gun_1</li>
+						<li>TX225Key_gun_2</li>
+						<li>TX225Key_gun_3</li>
+					</turretIds>
+				</li>
+			</roles>
+		</properties>
+
+	</Vehicles.VehicleDef>
 	
 	
 	

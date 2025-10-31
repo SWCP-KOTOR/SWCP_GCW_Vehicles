@@ -18,7 +18,7 @@
 		
 		<fillPercent>0.7</fillPercent>
 		
-		<nameable>false</nameable>
+		<nameable>true</nameable>
 		<buildDef>guy762_SWVehicleBP_BanthaIISkiff</buildDef>
 		
 		<size>(4,8)</size>
@@ -152,6 +152,10 @@
 			</track>
 			
 			<riverCost>1</riverCost> <!-- higher = slower, <1 = very fast on world map -->
+			
+			<vehicleJobLimitations>
+				<li>(RepairVehicle, 2)</li> <!-- how many pawns can repair this vehicle at a time -->
+			</vehicleJobLimitations> <!-- guy762 RULES: repair job count should be twice the amount of pawns to fully operate the vehicle -->
 			
 			<!-- <customHillinessCosts> -->
 				<!-- <SmallHills>0.25</SmallHills> -->

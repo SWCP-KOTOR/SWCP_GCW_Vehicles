@@ -3,10 +3,19 @@
 <Defs>	
 
 	
-	<Vehicles.VehicleDef ParentName="guy762_GroundVehiclePawn_base">
+	<Vehicles.VehicleDef Name="guy762_SWVehicle_ATPT" ParentName="guy762_GroundVehiclePawn_base">
 		<defName>guy762_SWVehicle_ATPT</defName>
 		<label>AT-PT Force Multiplier Walker</label>
 		<description>. \n\n&lt;color=#bb8f04&gt;Crew:&lt;/color&gt; Driver x1</description>
+		
+		<combatPower>200</combatPower>
+		<npcProperties>
+			<raidParams>SWCP_VehicleRaidParams_EdgeWalkInsOnly</raidParams>
+			<targetAcquireRadius>250</targetAcquireRadius>
+			<targetKeepRadius>20</targetKeepRadius>
+			<runDownTargets>false</runDownTargets>
+			<stopToShoot>true</stopToShoot>
+		</npcProperties>
 		
 		<graphicData>
 			<texPath>LandVehicles/ATPT/ATPT</texPath>
@@ -41,10 +50,10 @@
 			<!--ArmorRating_Sharp>+0.05</ArmorRating_Sharp>
 			<ArmorRating_Blunt>-0.1</ArmorRating_Blunt>        BASE CURVE FOR HARD ARMOR
 			<ArmorRating_Heat>+0.15</ArmorRating_Heat-->
-			<ArmorRating_Sharp>0.25</ArmorRating_Sharp>
-			<ArmorRating_Blunt>0.1</ArmorRating_Blunt> <!-- # of estimated XWMG hull points * 0.1, apply to hard armor curve -->
-			<ArmorRating_Heat>0.35</ArmorRating_Heat>
-			<MaxHitPoints>200</MaxHitPoints> <!-- # of estimated XWMG hull points * 100 -->
+			<ArmorRating_Sharp>0.15</ArmorRating_Sharp>
+			<ArmorRating_Blunt>0</ArmorRating_Blunt> <!-- # of estimated XWMG hull points * 0.1, apply to hard armor curve -->
+			<ArmorRating_Heat>0.25</ArmorRating_Heat>
+			<MaxHitPoints>100</MaxHitPoints> <!-- # of estimated XWMG hull points * 100 -->
 			
 			<Flammability>0.5</Flammability>
 			<MarketValue>36000</MarketValue>
@@ -161,12 +170,12 @@
 				<depth>External</depth>
 				
 				<armor> <!-- EaWX health/50 = hull points, round up -->
-					<ArmorRating_Sharp>1.25</ArmorRating_Sharp>
-					<ArmorRating_Blunt>1.1</ArmorRating_Blunt> <!-- # of estimated XWMG hull points * 0.1, apply to hard armor curve -->
-					<ArmorRating_Heat>1.35</ArmorRating_Heat>
+					<ArmorRating_Sharp>1.15</ArmorRating_Sharp>
+					<ArmorRating_Blunt>1</ArmorRating_Blunt> <!-- # of estimated XWMG hull points * 0.1, apply to hard armor curve -->
+					<ArmorRating_Heat>1.25</ArmorRating_Heat>
 					<IncomingDamageFactor>-0.15</IncomingDamageFactor> <!-- unarmored: 0.05 | light vehicles: 0.15 | medium vehicles: 0.25 | heavy vehicles: 0.35 -->
 				</armor>
-				<health>200</health> <!-- # of estimated XWMG hull points * 100 -->
+				<health>100</health> <!-- # of estimated XWMG hull points * 100 -->
 				
 				<hitbox>
 					<side>Body</side>
@@ -364,6 +373,41 @@
 	</Vehicles.VehicleTurretDef>
 	
 	
+	
+	
+	
+	
+	
+	
+	
+	<Vehicles.VehicleDef Name="guy762_SWVehicle_ATPT_bot" ParentName="guy762_SWVehicle_ATPT">
+		<defName>guy762_SWVehicle_ATPT_bot</defName>
+		
+		<buildDef Inherit="False" />
+		
+		<!-- <vehicleMovementPermissions>NoDriverNeeded</vehicleMovementPermissions> -->
+		
+		<properties>
+			<roles Inherit="False">
+				<li>
+					<key>pilot</key>
+					<label>Bot Pilot</label>
+					<slots>1</slots>
+					<slotsToOperate>1</slotsToOperate>
+					<!-- <handlingTypes> -->
+						<!-- <li>Movement</li> -->
+						<!-- <li>Turret</li> -->
+					<!-- </handlingTypes> -->
+					
+					<turretIds>
+						<li>ATPTKey_gun_1</li>
+						<li>ATPTKey_gun_2</li>
+					</turretIds>
+				</li>
+			</roles>
+		</properties>
+
+	</Vehicles.VehicleDef>
 	
 	
 </Defs>

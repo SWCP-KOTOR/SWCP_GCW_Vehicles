@@ -29,7 +29,7 @@
 	
 	
 	
-	<Vehicles.VehicleDef ParentName="guy762_GroundVehiclePawn_base">
+	<Vehicles.VehicleDef Name="guy762_SWVehicle_TX130FighterTank" ParentName="guy762_GroundVehiclePawn_base">
 		<defName>guy762_SWVehicle_TX130FighterTank</defName>
 		<label>TX-130 Fighter Tank</label>
 		<description>. \n\n&lt;color=#bb8f04&gt;Crew:&lt;/color&gt; Driver x1</description>

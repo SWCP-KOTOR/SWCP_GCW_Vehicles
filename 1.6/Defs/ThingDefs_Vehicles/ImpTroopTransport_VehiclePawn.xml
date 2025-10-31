@@ -4,7 +4,7 @@
 
 	
 	
-	<Vehicles.VehicleDef ParentName="guy762_GroundVehiclePawn_base">
+	<Vehicles.VehicleDef Name="guy762_SWVehicle_ImpTroopTransport" ParentName="guy762_GroundVehiclePawn_base">
 		<defName>guy762_SWVehicle_ImpTroopTransport</defName>
 		<label>K79-S80 recon troop transport</label>
 		<description>. \n\n&lt;color=#bb8f04&gt;Crew:&lt;/color&gt; Driver x1</description>

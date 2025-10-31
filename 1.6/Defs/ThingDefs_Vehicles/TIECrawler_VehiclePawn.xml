@@ -3,10 +3,20 @@
 <Defs>	
 
 	
-	<Vehicles.VehicleDef ParentName="guy762_GroundVehiclePawn_base">
+	<Vehicles.VehicleDef Name="guy762_SWVehicle_TIECrawler" ParentName="guy762_GroundVehiclePawn_base">
 		<defName>guy762_SWVehicle_TIECrawler</defName>
 		<label>TIE/ct Crawler</label>
 		<description>. \n\n&lt;color=#bb8f04&gt;Crew:&lt;/color&gt; Driver x1</description>
+		
+		<combatPower>600</combatPower>
+		<npcProperties>
+			<raidParams>SWCP_VehicleRaidParams_EdgeWalkInsOnly</raidParams>
+			<targetAcquireRadius>250</targetAcquireRadius>
+			<targetKeepRadius>50</targetKeepRadius>
+			<runDownTargets>false</runDownTargets>
+			<stopToShoot>true</stopToShoot>
+		</npcProperties>
+		<!-- <navigationCategory></navigationCategory> -->
 		
 		<graphicData>
 			<texPath>LandVehicles/TIECrawler/TIECrawler</texPath>
@@ -81,7 +91,7 @@
 		</race>
 		
 		<vehicleStats>
-			<Mass>750</Mass>
+			<Mass>7500</Mass>
 			<MoveSpeed>16</MoveSpeed>
 			<CargoCapacity>50</CargoCapacity>
 			<RepairRate>2</RepairRate>
@@ -94,9 +104,12 @@
 			
 			<worldSpeedMultiplier>0.3</worldSpeedMultiplier> <!-- higher number = faster travel -->
 			<winterSpeedMultiplier>3.25</winterSpeedMultiplier> <!-- lower number = faster winter travel -->
-			<offRoadMultiplier>2</offRoadMultiplier> <!-- lower number = faster travel -->
+			<offRoadMultiplier>1</offRoadMultiplier> <!-- lower number = faster travel -->
 			
 			<customRoadCosts AssignDefaults = "0.5" /> <!-- vanilla default is 0.5, lower number = faster -->
+			<track Class = "Vehicles.VehicleTrack_Wake">
+				<speed>1</speed>
+			</track>
 			
 			<vehicleJobLimitations>
 				<li>(RepairVehicle, 2)</li> <!-- how many pawns can repair this vehicle at a time -->
@@ -275,10 +288,6 @@
 						
 						<key>TIECrawlerKey_gun_1</key>
 					</li>
-				</turrets>
-			</li>
-			<li Class="Vehicles.CompProperties_VehicleTurrets">
-				<turrets>
 					<li>
 						<turretDef>guy762_VehicleTurret_TIECrawler_AV</turretDef>
 						
@@ -292,7 +301,7 @@
 						<angleRestricted>(315,45)</angleRestricted>
 						<gizmoLabel>AV gun</gizmoLabel>
 						
-						<autoTargetingActive>True</autoTargetingActive>
+						<!-- <autoTargetingActive>True</autoTargetingActive> -->
 						
 						<aimPieOffset>(0, 2.55)</aimPieOffset>
 						
@@ -392,6 +401,38 @@
 		<gizmoIconTexPath>Items/bigcannon_blank</gizmoIconTexPath>
 		
 	</Vehicles.VehicleTurretDef>
+	
+	
+	<Vehicles.VehicleDef Name="guy762_SWVehicle_TIECrawler_bot" ParentName="guy762_SWVehicle_TIECrawler">
+		<defName>guy762_SWVehicle_TIECrawler_bot</defName>
+		
+		<!-- <size>(7,7)</size> -->
+		
+		<buildDef Inherit="False" />
+		
+		<!-- <vehicleMovementPermissions>NoDriverNeeded</vehicleMovementPermissions> -->
+		
+		<properties>
+			<roles Inherit="False">
+				<li>
+					<key>pilot</key>
+					<label>Bot Pilot</label>
+					<slots>1</slots>
+					<slotsToOperate>1</slotsToOperate>
+					<!-- <handlingTypes> -->
+						<!-- <li>Movement</li> -->
+						<!-- <li>Turret</li> -->
+					<!-- </handlingTypes> -->
+					
+					<turretIds>
+						<li>TIECrawlerKey_gun_1</li>
+						<li>TIECrawlerKey_gun_2</li>
+					</turretIds>
+				</li>
+			</roles>
+		</properties>
+
+	</Vehicles.VehicleDef>
 	
 	
 </Defs>

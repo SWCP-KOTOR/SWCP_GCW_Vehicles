@@ -3,7 +3,7 @@
 <Defs>	
 
 	
-	<Vehicles.VehicleDef ParentName="guy762_SpeederBikeOrUnarmoredVehicle_base">
+	<Vehicles.VehicleDef Name="guy762_SWVehicle_74ZSpeeder" ParentName="guy762_SpeederBikeOrUnarmoredVehicle_base">
 		<defName>guy762_SWVehicle_74ZSpeeder</defName>
 		<label>Aratech 74-Z Speeder Bike</label>
 		<description>. \n\n&lt;color=#bb8f04&gt;Crew:&lt;/color&gt; Driver x1</description>

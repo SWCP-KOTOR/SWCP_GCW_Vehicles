@@ -85,7 +85,8 @@
       <!-- </li> -->
     </comps>
 	
-	<terrainAffordanceNeeded>Substructure</terrainAffordanceNeeded>
+	<terrainAffordanceNeeded>Heavy</terrainAffordanceNeeded>
+	<!-- <terrainAffordanceNeeded>Substructure</terrainAffordanceNeeded> -->
     <building>
       <turretGunDef>guy762_SWGravshipTurretGun_9x9YWingDualLaser</turretGunDef>
 	  <turretTopDrawSize>9</turretTopDrawSize>

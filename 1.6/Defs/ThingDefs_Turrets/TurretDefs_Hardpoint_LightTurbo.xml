@@ -86,7 +86,8 @@
 	
 	<recoilPower>3</recoilPower>
 	
-	<terrainAffordanceNeeded>Substructure</terrainAffordanceNeeded>
+	<terrainAffordanceNeeded>Heavy</terrainAffordanceNeeded>
+	<!-- <terrainAffordanceNeeded>Substructure</terrainAffordanceNeeded> -->
     <building>
 		<turretGunDef>guy762_SWTurretGun_HardpointLightTurbo</turretGunDef>
 		<turretTopDrawSize>6</turretTopDrawSize>

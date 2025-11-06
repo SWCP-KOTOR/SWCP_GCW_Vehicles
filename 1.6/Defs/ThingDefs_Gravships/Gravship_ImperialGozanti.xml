@@ -9,7 +9,7 @@
 		  <graphicClass>Graphic_Single</graphicClass>
 		  <drawSize>(77,77)</drawSize>
 		  
-		  <drawOffset>(0,0,-0.125)</drawOffset>
+		  <!-- <drawOffset>(0,0,-0.125)</drawOffset> -->
 		  
 		  <shaderType>CutoutComplex</shaderType>
 		  <color>(185,185,185)</color> <!-- lighter grey -->
@@ -26,6 +26,12 @@
 		  <WorkToBuild>44800</WorkToBuild>
 		</statBases>
 		
+		<comps>
+			<li Class="CompProperties_Effecter">
+				<effecterDef>guy762_ShipAuraEffecter_ImpGozanti</effecterDef>
+			</li>
+		</comps>
+		
 		<!-- <altitudeLayer>WorldClipper</altitudeLayer> -->
 		<altitudeLayer>VisEffects</altitudeLayer>
 		<!-- <altitudeLayer>BelowTerrain</altitudeLayer> -->
@@ -35,8 +41,24 @@
 		</researchPrerequisites>
 	</ThingDef>
 	
-	<!-- guy762_GravshipPrefab_ -->
 	
+	<EffecterDef>
+		<defName>guy762_ShipAuraEffecter_ImpGozanti</defName>
+		<children>
+		  <li>
+			<subEffecterClass>SubEffecter_Sustainer</subEffecterClass>
+			<soundDef>kotorsound_ShipAmbience_ImpGozanti</soundDef>
+		  </li>
+		</children>
+	</EffecterDef>
+	
+	
+	
+	
+	
+	
+	
+	<!-- guy762_GravshipPrefab_ -->
 	
 <PrefabDef>
   <defName>guy762_GravshipPrefab_ImpGozanti</defName>

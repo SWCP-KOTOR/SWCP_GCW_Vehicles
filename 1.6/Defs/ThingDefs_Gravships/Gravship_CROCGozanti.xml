@@ -9,7 +9,7 @@
 		  <graphicClass>Graphic_Single</graphicClass>
 		  <drawSize>(77,77)</drawSize>
 		  
-		  <drawOffset>(0,0,-0.125)</drawOffset>
+		  <!-- <drawOffset>(0,0,-0.125)</drawOffset> -->
 		  
 		  <shaderType>CutoutComplex</shaderType>
 		  <color>(160,35,35)</color> <!-- deeper red -->
@@ -27,6 +27,13 @@
 		  <WorkToBuild>44800</WorkToBuild>
 		</statBases>
 		
+		<comps>
+			<li Class="CompProperties_Effecter">
+				<effecterDef>guy762_ShipAuraEffecter_CROCGozanti</effecterDef>
+			</li>
+		</comps>
+		
+		
 		<!-- <altitudeLayer>WorldClipper</altitudeLayer> -->
 		<altitudeLayer>VisEffects</altitudeLayer>
 		<!-- <altitudeLayer>BelowTerrain</altitudeLayer> -->
@@ -35,6 +42,28 @@
 		  <!-- <li>CEC_KDY_Victory_Parts</li> -->
 		</researchPrerequisites>
 	</ThingDef>
+	
+	
+	<EffecterDef>
+		<defName>guy762_ShipAuraEffecter_CROCGozanti</defName>
+		<children>
+		  <li>
+			<subEffecterClass>SubEffecter_Sustainer</subEffecterClass>
+			<soundDef>kotorsound_ShipAmbience_CROCGozanti</soundDef>
+		  </li>
+		  <li>
+			<subEffecterClass>SubEffecter_SoundIntermittent</subEffecterClass>
+			<soundDef>kotorsound_SubtleRepComMetalCreaking</soundDef>
+			<intermittentSoundInterval><min>2500</min><max>5000</max></intermittentSoundInterval>
+			<!-- <intermittentSoundInterval><min>100</min><max>250</max></intermittentSoundInterval> -->
+		  </li>
+		</children>
+	</EffecterDef>
+	
+	
+	
+	
+	
 	
 	<!-- guy762_GravshipPrefab_ -->
 	

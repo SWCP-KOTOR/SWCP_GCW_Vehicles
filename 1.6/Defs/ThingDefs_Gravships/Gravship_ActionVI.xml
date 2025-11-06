@@ -25,6 +25,11 @@
 		  <MaxHitPoints>11200</MaxHitPoints>
 		  <WorkToBuild>44800</WorkToBuild>
 		</statBases>
+		<comps>
+			<li Class="CompProperties_Effecter">
+				<effecterDef>guy762_ShipAuraEffecter_ActionVI</effecterDef>
+			</li>
+		</comps>
 		
 		<!-- <altitudeLayer>WorldClipper</altitudeLayer> -->
 		<altitudeLayer>VisEffects</altitudeLayer>
@@ -34,6 +39,22 @@
 		  <!-- <li>CEC_KDY_Victory_Parts</li> -->
 		</researchPrerequisites>
 	</ThingDef>
+	
+	<EffecterDef>
+		<defName>guy762_ShipAuraEffecter_ActionVI</defName>
+		<children>
+		  <li>
+			<subEffecterClass>SubEffecter_Sustainer</subEffecterClass>
+			<soundDef>kotorsound_ShipAmbience_ActionVI</soundDef>
+		  </li>
+		  <li>
+			<subEffecterClass>SubEffecter_SoundIntermittent</subEffecterClass>
+			<soundDef>kotorsound_SubtleRepComMetalCreaking</soundDef>
+			<intermittentSoundInterval><min>1000</min><max>2500</max></intermittentSoundInterval>
+			<!-- <intermittentSoundInterval><min>100</min><max>250</max></intermittentSoundInterval> -->
+		  </li>
+		</children>
+	</EffecterDef>
 	
 	<!-- guy762_GravshipPrefab_ -->
 	

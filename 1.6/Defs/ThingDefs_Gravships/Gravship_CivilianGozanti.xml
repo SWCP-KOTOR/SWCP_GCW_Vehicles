@@ -27,6 +27,12 @@
 		  <WorkToBuild>44800</WorkToBuild>
 		</statBases>
 		
+		<comps>
+			<li Class="CompProperties_Effecter">
+				<effecterDef>guy762_ShipAuraEffecter_CivGozanti</effecterDef>
+			</li>
+		</comps>
+		
 		<!-- <altitudeLayer>WorldClipper</altitudeLayer> -->
 		<altitudeLayer>VisEffects</altitudeLayer>
 		<!-- <altitudeLayer>BelowTerrain</altitudeLayer> -->
@@ -35,6 +41,31 @@
 		  <!-- <li>CEC_KDY_Victory_Parts</li> -->
 		</researchPrerequisites>
 	</ThingDef>
+	
+	<EffecterDef>
+		<defName>guy762_ShipAuraEffecter_CivGozanti</defName>
+		<children>
+		  <li>
+			<subEffecterClass>SubEffecter_Sustainer</subEffecterClass>
+			<soundDef>kotorsound_ShipAmbience_CivGozanti</soundDef>
+		  </li>
+		</children>
+	</EffecterDef>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 	
 	<!-- guy762_GravshipPrefab_ -->
 	

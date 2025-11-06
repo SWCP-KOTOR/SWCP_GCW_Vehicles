@@ -27,6 +27,11 @@
 		  <MaxHitPoints>11200</MaxHitPoints>
 		  <WorkToBuild>44800</WorkToBuild>
 		</statBases>
+		<comps>
+			<li Class="CompProperties_Effecter">
+				<effecterDef>guy762_ShipAuraEffecter_YT1300transport</effecterDef>
+			</li>
+		</comps>
 		
 		<!-- <altitudeLayer>WorldClipper</altitudeLayer> -->
 		<altitudeLayer>VisEffects</altitudeLayer>
@@ -36,6 +41,17 @@
 		  <!-- <li>CEC_KDY_Victory_Parts</li> -->
 		</researchPrerequisites>
 	</ThingDef>
+	
+	
+	<EffecterDef>
+		<defName>guy762_ShipAuraEffecter_YT1300transport</defName>
+		<children>
+		  <li>
+			<subEffecterClass>SubEffecter_Sustainer</subEffecterClass>
+			<soundDef>kotorsound_ShipAmbience_YT1300transport</soundDef>
+		  </li>
+		</children>
+	</EffecterDef>
 	
 	
 	<!-- guy762_GravshipPrefab_ -->

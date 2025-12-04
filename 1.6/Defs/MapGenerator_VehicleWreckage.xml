@@ -5,7 +5,7 @@
 		<order>1098</order>
 		<!-- <order>301</order> -->
 		<genStep Class="GenStep_ScatterGroup">
-			<count>1</count>
+			<!-- <count>1</count> -->
 			
 			<allowInWaterBiome>false</allowInWaterBiome>
 			<minSpacing>50</minSpacing>
@@ -42,6 +42,94 @@
 				  <filthChance>0.8</filthChance>
 				  <clusterRectRadius>12~16</clusterRectRadius>
 				</li>
+				<!-- <li> -->
+				  <!-- <things> -->
+					<!-- <guy762_ShipChunk_z95a>1</guy762_ShipChunk_z95a> -->
+				  <!-- </things> -->
+				  <!-- <indoorRuin>false</indoorRuin> -->
+				  <!-- <coveredCellsPer10Cells>1.25~2</coveredCellsPer10Cells> -->
+				  <!-- <filthDef>Filth_MachineBits</filthDef> -->
+				  <!-- <filthExpandBy>1</filthExpandBy> -->
+				  <!-- <filthChance>0.8</filthChance> -->
+				  <!-- <clusterRectRadius>14~18</clusterRectRadius> -->
+				<!-- </li> -->
+				<!-- <li> -->
+				  <!-- <things> -->
+					<!-- <guy762_ShipChunk_YWing>1</guy762_ShipChunk_YWing> -->
+				  <!-- </things> -->
+				  <!-- <indoorRuin>false</indoorRuin> -->
+				  <!-- <coveredCellsPer10Cells>1.25~2</coveredCellsPer10Cells> -->
+				  <!-- <filthDef>Filth_MachineBits</filthDef> -->
+				  <!-- <filthExpandBy>1</filthExpandBy> -->
+				  <!-- <filthChance>0.8</filthChance> -->
+				  <!-- <clusterRectRadius>16~24</clusterRectRadius> -->
+				<!-- </li> -->
+				<!-- <li> -->
+				  <!-- <things> -->
+					<!-- <guy762_ShipChunk_YT2400a>1</guy762_ShipChunk_YT2400a> -->
+				  <!-- </things> -->
+				  <!-- <indoorRuin>false</indoorRuin> -->
+				  <!-- <coveredCellsPer10Cells>1.25~2</coveredCellsPer10Cells> -->
+				  <!-- <filthDef>Filth_MachineBits</filthDef> -->
+				  <!-- <filthExpandBy>1</filthExpandBy> -->
+				  <!-- <filthChance>0.8</filthChance> -->
+				  <!-- <clusterRectRadius>24~28</clusterRectRadius> -->
+				<!-- </li> -->
+			</groups>
+		</genStep>
+	</GenStepDef>
+	
+	
+	
+	
+	
+	<GenStepDef>
+		<defName>SWVehicles_MoreShipWreckage</defName>
+		<order>1099</order>
+		
+		<!-- <preventsGenSteps> -->
+			<!-- <li>SWVehicles_ShipWreckage</li> -->
+		<!-- </preventsGenSteps> -->
+		<genStep Class="GenStep_ScatterGroup">
+			<!-- <count>1</count> -->
+			
+			<allowInWaterBiome>false</allowInWaterBiome>
+			<!-- <minSpacing>50</minSpacing> -->
+			<!-- <minSpacing>25</minSpacing> -->
+			<minSpacing>10</minSpacing>
+			<countPer10kCellsRange>0.2~0.5</countPer10kCellsRange>
+			<!-- <countPer10kCellsRange>15.0~30.0</countPer10kCellsRange> -->
+			<spotMustBeStandable>true</spotMustBeStandable>
+			<allowRoofed>false</allowRoofed>
+			<validators>
+				<li Class="ScattererValidator_Buildable">
+				<radius>5</radius>
+				<affordance>Light</affordance>
+				</li>
+			</validators>
+			<groups>
+				<!-- <li> -->
+				  <!-- <things> -->
+					<!-- <guy762_ShipChunk_ATST>1</guy762_ShipChunk_ATST> -->
+				  <!-- </things> -->
+				  <!-- <indoorRuin>false</indoorRuin> -->
+				  <!-- <coveredCellsPer10Cells>1.25~2</coveredCellsPer10Cells> -->
+				  <!-- <filthDef>Filth_MachineBits</filthDef> -->
+				  <!-- <filthExpandBy>1</filthExpandBy> -->
+				  <!-- <filthChance>0.8</filthChance> -->
+				  <!-- <clusterRectRadius>12~16</clusterRectRadius> -->
+				<!-- </li> -->
+				<!-- <li> -->
+				  <!-- <things> -->
+					<!-- <guy762_ShipChunk_TIEInterceptor>1</guy762_ShipChunk_TIEInterceptor> -->
+				  <!-- </things> -->
+				  <!-- <indoorRuin>false</indoorRuin> -->
+				  <!-- <coveredCellsPer10Cells>1.25~2</coveredCellsPer10Cells> -->
+				  <!-- <filthDef>Filth_MachineBits</filthDef> -->
+				  <!-- <filthExpandBy>1</filthExpandBy> -->
+				  <!-- <filthChance>0.8</filthChance> -->
+				  <!-- <clusterRectRadius>12~16</clusterRectRadius> -->
+				<!-- </li> -->
 				<li>
 				  <things>
 					<guy762_ShipChunk_z95a>1</guy762_ShipChunk_z95a>
@@ -51,7 +139,7 @@
 				  <filthDef>Filth_MachineBits</filthDef>
 				  <filthExpandBy>1</filthExpandBy>
 				  <filthChance>0.8</filthChance>
-				  <clusterRectRadius>12~16</clusterRectRadius>
+				  <clusterRectRadius>14~18</clusterRectRadius>
 				</li>
 				<li>
 				  <things>
@@ -62,8 +150,93 @@
 				  <filthDef>Filth_MachineBits</filthDef>
 				  <filthExpandBy>1</filthExpandBy>
 				  <filthChance>0.8</filthChance>
-				  <clusterRectRadius>12~16</clusterRectRadius>
+				  <clusterRectRadius>16~24</clusterRectRadius>
 				</li>
+				<!-- <li> -->
+				  <!-- <things> -->
+					<!-- <guy762_ShipChunk_YT2400a>1</guy762_ShipChunk_YT2400a> -->
+				  <!-- </things> -->
+				  <!-- <indoorRuin>false</indoorRuin> -->
+				  <!-- <coveredCellsPer10Cells>1.25~2</coveredCellsPer10Cells> -->
+				  <!-- <filthDef>Filth_MachineBits</filthDef> -->
+				  <!-- <filthExpandBy>1</filthExpandBy> -->
+				  <!-- <filthChance>0.8</filthChance> -->
+				  <!-- <clusterRectRadius>24~28</clusterRectRadius> -->
+				<!-- </li> -->
+			</groups>
+		</genStep>
+	</GenStepDef>
+	
+	
+	
+	
+	<GenStepDef>
+		<defName>SWVehicles_EvenMoreShipWreckage</defName>
+		<order>1099</order>
+		
+		<!-- <preventsGenSteps> -->
+			<!-- <li>SWVehicles_ShipWreckage</li> -->
+		<!-- </preventsGenSteps> -->
+		<genStep Class="GenStep_ScatterGroup">
+			<count>1</count>
+			
+			<allowInWaterBiome>false</allowInWaterBiome>
+			<minSpacing>50</minSpacing>
+			<countPer10kCellsRange>0.2~0.5</countPer10kCellsRange>
+			<!-- <countPer10kCellsRange>15.0~30.0</countPer10kCellsRange> -->
+			<spotMustBeStandable>true</spotMustBeStandable>
+			<allowRoofed>false</allowRoofed>
+			<validators>
+				<li Class="ScattererValidator_Buildable">
+				<radius>5</radius>
+				<affordance>Light</affordance>
+				</li>
+			</validators>
+			<groups>
+				<!-- <li> -->
+				  <!-- <things> -->
+					<!-- <guy762_ShipChunk_ATST>1</guy762_ShipChunk_ATST> -->
+				  <!-- </things> -->
+				  <!-- <indoorRuin>false</indoorRuin> -->
+				  <!-- <coveredCellsPer10Cells>1.25~2</coveredCellsPer10Cells> -->
+				  <!-- <filthDef>Filth_MachineBits</filthDef> -->
+				  <!-- <filthExpandBy>1</filthExpandBy> -->
+				  <!-- <filthChance>0.8</filthChance> -->
+				  <!-- <clusterRectRadius>12~16</clusterRectRadius> -->
+				<!-- </li> -->
+				<!-- <li> -->
+				  <!-- <things> -->
+					<!-- <guy762_ShipChunk_TIEInterceptor>1</guy762_ShipChunk_TIEInterceptor> -->
+				  <!-- </things> -->
+				  <!-- <indoorRuin>false</indoorRuin> -->
+				  <!-- <coveredCellsPer10Cells>1.25~2</coveredCellsPer10Cells> -->
+				  <!-- <filthDef>Filth_MachineBits</filthDef> -->
+				  <!-- <filthExpandBy>1</filthExpandBy> -->
+				  <!-- <filthChance>0.8</filthChance> -->
+				  <!-- <clusterRectRadius>12~16</clusterRectRadius> -->
+				<!-- </li> -->
+				<!-- <li> -->
+				  <!-- <things> -->
+					<!-- <guy762_ShipChunk_z95a>1</guy762_ShipChunk_z95a> -->
+				  <!-- </things> -->
+				  <!-- <indoorRuin>false</indoorRuin> -->
+				  <!-- <coveredCellsPer10Cells>1.25~2</coveredCellsPer10Cells> -->
+				  <!-- <filthDef>Filth_MachineBits</filthDef> -->
+				  <!-- <filthExpandBy>1</filthExpandBy> -->
+				  <!-- <filthChance>0.8</filthChance> -->
+				  <!-- <clusterRectRadius>14~18</clusterRectRadius> -->
+				<!-- </li> -->
+				<!-- <li> -->
+				  <!-- <things> -->
+					<!-- <guy762_ShipChunk_YWing>1</guy762_ShipChunk_YWing> -->
+				  <!-- </things> -->
+				  <!-- <indoorRuin>false</indoorRuin> -->
+				  <!-- <coveredCellsPer10Cells>1.25~2</coveredCellsPer10Cells> -->
+				  <!-- <filthDef>Filth_MachineBits</filthDef> -->
+				  <!-- <filthExpandBy>1</filthExpandBy> -->
+				  <!-- <filthChance>0.8</filthChance> -->
+				  <!-- <clusterRectRadius>16~24</clusterRectRadius> -->
+				<!-- </li> -->
 				<li>
 				  <things>
 					<guy762_ShipChunk_YT2400a>1</guy762_ShipChunk_YT2400a>
@@ -73,11 +246,11 @@
 				  <filthDef>Filth_MachineBits</filthDef>
 				  <filthExpandBy>1</filthExpandBy>
 				  <filthChance>0.8</filthChance>
-				  <clusterRectRadius>12~16</clusterRectRadius>
+				  <clusterRectRadius>24~28</clusterRectRadius>
 				</li>
 			</groups>
 		</genStep>
-	  </GenStepDef>
+	</GenStepDef>
 	  
 
 </Defs>

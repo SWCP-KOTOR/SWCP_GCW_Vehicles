@@ -1,8 +1,13 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
 	
-	  
-	  
+	
+	
+	<ThingDef Name="guy762_ShipChunkBase" ParentName="BuildingBase" Abstract="True">
+		<terrainAffordanceNeeded>Bridgeable</terrainAffordanceNeeded> <!-- so it can be submerged in water -->
+	</ThingDef>
+	
+	
 	  <!-- <ThingDef ParentName="BuildingBase"> -->
 		<!-- <defName>guy762_ShipChunk_EbonHawkport</defName> -->
 		<!-- <label>ship chunk</label> -->
@@ -125,10 +130,10 @@
 	  <!-- </ThingDef> -->
 	  
 	  
+	
 	  
 	  
-	  
-	  <ThingDef ParentName="BuildingBase">
+	  <ThingDef ParentName="guy762_ShipChunkBase">
 		<defName>guy762_ShipChunk_ATST</defName>
 		<label>walker wreckage</label>
 		<description>A chunk of a military walker. It seems to have been disabled by some kind of weapon.\n\nHaving been downed not long ago, it still contains useful resources which you can acquire by deconstructing it.</description>
@@ -210,7 +215,7 @@
 	  
 	  
 	  
-	  <ThingDef ParentName="BuildingBase">
+	  <ThingDef ParentName="guy762_ShipChunkBase">
 		<defName>guy762_ShipChunk_TIEInterceptor</defName>
 		<label>starfighter wreckage</label>
 		<description>A chunk of a military spacecraft. It seems to have been torn off either by uncontrolled re-entry forces or some kind of weapon.\n\nHaving landed not long ago, it still contains useful resources which you can acquire by deconstructing it.</description>
@@ -271,7 +276,7 @@
 	  
 	  
 	  
-	  <ThingDef ParentName="BuildingBase">
+	  <ThingDef ParentName="guy762_ShipChunkBase">
 		<defName>guy762_ShipChunk_z95a</defName>
 		<label>starfighter wreckage</label>
 		<description>A chunk of a military spacecraft. It seems to have been torn off either by uncontrolled re-entry forces or some kind of weapon.\n\nHaving landed not long ago, it still contains useful resources which you can acquire by deconstructing it.</description>
@@ -332,7 +337,7 @@
 	  
 	  
 	  
-	  <ThingDef ParentName="BuildingBase">
+	  <ThingDef ParentName="guy762_ShipChunkBase">
 		<defName>guy762_ShipChunk_YWing</defName>
 		<label>starfighter wreckage</label>
 		<description>A chunk of a military spacecraft. It seems to have been torn off either by uncontrolled re-entry forces or some kind of weapon.\n\nHaving landed not long ago, it still contains useful resources which you can acquire by deconstructing it.</description>
@@ -401,7 +406,7 @@
 	  
 	  
 	  
-	  <ThingDef ParentName="BuildingBase">
+	  <ThingDef ParentName="guy762_ShipChunkBase">
 		<defName>guy762_ShipChunk_YT2400a</defName>
 		<label>ship wreckage</label>
 		<description>A chunk of a military spacecraft. It seems to have been torn off either by uncontrolled re-entry forces or some kind of weapon.\n\nUnlike other chunks in the area, this seems to contain a barely-functional power plant capable of producing a minor amount of electricity.</description>

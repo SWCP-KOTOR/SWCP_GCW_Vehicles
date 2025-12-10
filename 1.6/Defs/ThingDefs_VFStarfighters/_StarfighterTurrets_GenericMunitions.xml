@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<Defs>	
+
+	
+	<Vehicles.VehicleTurretDef ParentName="VehicleTurretBase">
+		<defName>guy762_VehicleTurret_ProTorp</defName>
+		<label>proton torpedo launcher</label>
+		<description>A proton torpedo launcher.</description>
+		
+		<turretType>Rotatable</turretType>
+		<shotSound>kotorsound_protorp2</shotSound>
+		<reloadSound>kotorsound_reloadlauncher</reloadSound>
+		
+		<projectile>SWVehicleBullet_SFprotorp</projectile>
+		<reloadTimer>3.5</reloadTimer>
+		<warmUpTimer>0.4</warmUpTimer>
+		
+		<!-- <reloadTimerMultiplierPerCrewCount> USE FOR HUGE TRANSPORT WEAPONS -->
+            <!-- <points> -->
+                <!-- <li>(1, 1)</li> -->
+                <!-- <li>(2, 0.75)</li> -->
+            <!-- </points> -->
+        <!-- </reloadTimerMultiplierPerCrewCount> -->
+		
+		<magazineCapacity>1</magazineCapacity>
+		<genericAmmo>true</genericAmmo>
+		
+		<empDisables>true</empDisables>
+		
+		<autoSnapTargeting>false</autoSnapTargeting>
+		<rotationSpeed>5</rotationSpeed>
+		
+		<projectileOffset>2.1</projectileOffset>
+		
+		<minRange>30</minRange>
+		<maxRange>120</maxRange>
+
+		<fireModes>
+			<li>
+				<shotsPerBurst>1</shotsPerBurst>
+				<ticksBetweenShots>20</ticksBetweenShots>
+				<ticksBetweenBursts>100</ticksBetweenBursts>
+				<label>Single</label>
+				<texPath>Items/Rockets/rocket_buster/rocket_buster_a</texPath>
+			</li>
+		</fireModes>
+
+		<graphicData>
+			<texPath>NullTex</texPath>
+			<graphicClass>Vehicles.Graphic_Turret</graphicClass>
+		</graphicData>
+		
+		<gizmoIconTexPath>Items/bigcannon_blank</gizmoIconTexPath>
+		
+		<ammunition>
+			<thingDefs>
+				<li>guy762_RocketItem_buster</li>
+			</thingDefs>
+		</ammunition>
+	</Vehicles.VehicleTurretDef>
+	
+	
+	<Vehicles.VehicleTurretDef ParentName="VehicleTurretBase">
+		<defName>guy762_VehicleTurret_ConcMissile</defName>
+		<label>concussion missile launcher</label>
+		<description>A concussion missile launcher.</description>
+		
+		<turretType>Rotatable</turretType>
+		<shotSound>kotorsound_SFmissile</shotSound>
+		<reloadSound>kotorsound_reloadlauncher</reloadSound>
+		
+		<projectile>SWVehicleBullet_SFconcMissile</projectile>
+		<reloadTimer>3.5</reloadTimer>
+		<warmUpTimer>0.2</warmUpTimer>
+		
+		<magazineCapacity>3</magazineCapacity>
+		<genericAmmo>true</genericAmmo>
+		
+		<empDisables>true</empDisables>
+		
+		<autoSnapTargeting>false</autoSnapTargeting>
+		<rotationSpeed>5</rotationSpeed>
+		
+		<projectileOffset>2.1</projectileOffset>
+		
+		<minRange>30</minRange>
+		<maxRange>90</maxRange>
+
+		<fireModes>
+			<li>
+				<shotsPerBurst>3</shotsPerBurst>
+				<ticksBetweenShots>10</ticksBetweenShots>
+				<ticksBetweenBursts>100</ticksBetweenBursts>
+				<label>Burst</label>
+				<texPath>Items/Rockets/rocket_conc/rocket_conc_c</texPath>
+			</li>
+		</fireModes>
+
+		<graphicData>
+			<texPath>NullTex</texPath>
+			<graphicClass>Vehicles.Graphic_Turret</graphicClass>
+		</graphicData>
+		
+		<gizmoIconTexPath>Items/bigcannon_blank</gizmoIconTexPath>
+		
+		<ammunition>
+			<thingDefs>
+				<li>guy762_RocketItem_conc</li>
+			</thingDefs>
+		</ammunition>
+	</Vehicles.VehicleTurretDef>
+	
+	
+	
+	
+	
+	
+	
+	<Vehicles.VehicleTurretDef ParentName="VehicleTurretBase">
+		<defName>guy762_VehicleTurret_IonMissile</defName>
+		<label>ion missile launcher</label>
+		<description>An ion missile launcher.</description>
+		
+		<turretType>Rotatable</turretType>
+		<shotSound>kotorsound_SFmissile</shotSound>
+		<reloadSound>kotorsound_reloadlauncher</reloadSound>
+		
+		<projectile>KotORSFBullet_missileion</projectile>
+		<reloadTimer>3.5</reloadTimer>
+		<warmUpTimer>0.2</warmUpTimer>
+		
+		<magazineCapacity>3</magazineCapacity>
+		<genericAmmo>true</genericAmmo>
+		
+		<empDisables>true</empDisables>
+		
+		<autoSnapTargeting>false</autoSnapTargeting>
+		<rotationSpeed>5</rotationSpeed>
+		
+		<projectileOffset>2.1</projectileOffset>
+		
+		<minRange>30</minRange>
+		<maxRange>90</maxRange>
+
+		<fireModes>
+			<li>
+				<shotsPerBurst>3</shotsPerBurst>
+				<ticksBetweenShots>10</ticksBetweenShots>
+				<ticksBetweenBursts>100</ticksBetweenBursts>
+				<label>Single</label>
+				<texPath>Items/Rockets/rocket_ion/rocket_ion_a</texPath>
+			</li>
+		</fireModes>
+
+		<graphicData>
+			<texPath>NullTex</texPath>
+			<graphicClass>Vehicles.Graphic_Turret</graphicClass>
+		</graphicData>
+		
+		<gizmoIconTexPath>Items/bigcannon_blank</gizmoIconTexPath>
+		
+		<ammunition>
+			<thingDefs>
+				<li>guy762_RocketItem_ion</li>
+			</thingDefs>
+		</ammunition>
+	</Vehicles.VehicleTurretDef>
+	
+	
+	
+	
+	
+	
+	<Vehicles.VehicleTurretDef ParentName="VehicleTurretBase">
+		<defName>guy762_VehicleTurret_ProtonBombs</defName>
+		<label>Proton Bomb Bay</label>
+		<description>Drops proton bombs.</description>
+		
+		<turretType>Rotatable</turretType>
+		<shotSound>kotorsound_bombdrop</shotSound>
+		
+		<projectile>SWVehicleBullet_protonbomb</projectile>
+		<reloadTimer>3.5</reloadTimer>
+		<warmUpTimer>0.2</warmUpTimer>
+		
+		<!-- <reloadTimerMultiplierPerCrewCount> USE FOR HUGE TRANSPORT WEAPONS -->
+            <!-- <points> -->
+                <!-- <li>(1, 1)</li> -->
+                <!-- <li>(2, 0.75)</li> -->
+            <!-- </points> -->
+        <!-- </reloadTimerMultiplierPerCrewCount> -->
+		
+		<magazineCapacity>999</magazineCapacity>
+		
+		<empDisables>true</empDisables>
+		
+		<autoSnapTargeting>true</autoSnapTargeting>
+		<rotationSpeed>5</rotationSpeed>
+		
+		<projectileOffset>2.1</projectileOffset> <!-- keep this on starfighters-->
+		
+		<minRange>0</minRange>
+		<maxRange>60</maxRange>
+
+		<fireModes>
+			<li>
+				<shotsPerBurst>1</shotsPerBurst>
+				<ticksBetweenShots>30</ticksBetweenShots>
+				<ticksBetweenBursts>100</ticksBetweenBursts>
+				<label>Single</label>
+				<texPath>Items/Rockets/rocket_ex/rocket_ex_a</texPath>
+			</li>
+			<li>
+				<shotsPerBurst>3</shotsPerBurst>
+				<ticksBetweenShots>30</ticksBetweenShots>
+				<ticksBetweenBursts>300</ticksBetweenBursts>
+				<label>Burst</label>
+				<texPath>Items/Rockets/rocket_ex/rocket_ex_c</texPath>
+			</li>
+		</fireModes>
+
+		<graphicData>
+			<texPath>NullTex</texPath>
+			<graphicClass>Vehicles.Graphic_Turret</graphicClass>
+		</graphicData>
+		
+		<gizmoIconTexPath>Weapons/Projectiles/energybomb</gizmoIconTexPath>
+		
+	</Vehicles.VehicleTurretDef>
+	
+	
+	
+	
+</Defs>

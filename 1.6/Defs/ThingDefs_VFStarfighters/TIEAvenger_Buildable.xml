@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<Defs>
+	
+	<DesignatorDropdownGroupDef>
+		<defName>guy762_SWVehicleBPDropdown_TIEAvg</defName>
+	</DesignatorDropdownGroupDef>
+	
+	<Vehicles.VehicleBuildDef Name="guy762_SWVehicleBP_TIEAvg" ParentName="VehicleBaseBuildable">
+		<defName>guy762_SWVehicleBP_TIEAvg</defName>
+		<label>TIE/ad Avenger</label>
+		<description>.</description>
+		<designationCategory>MM_StarWarsShipBuildTab</designationCategory>
+		
+		<designatorDropdown>guy762_SWVehicleBPDropdown_TIEAvg</designatorDropdown>
+		
+		<graphicData>
+			<texPath>Starfighters/TIEAvenger/TIEAvenger</texPath>
+			<graphicClass>Graphic_Multi</graphicClass>
+			<drawSize>(12,12)</drawSize>
+			<!-- <drawOffset>(0, 0, 1)</drawOffset> -->
+		</graphicData>
+		
+		<statBases>
+			<MaxHitPoints>100</MaxHitPoints>
+			<WorkToBuild>3500</WorkToBuild>
+			<Flammability>0.05</Flammability>
+		</statBases>
+		
+		<size>(6,11)</size>
+		
+		<!--researchPrerequisites>
+			<li>VVE_BasicVehicles</li>
+		</researchPrerequisites-->
+		
+		<costList>
+			<!--VVE_EngineBlock>1</VVE_EngineBlock>
+			<VVE_CarAlternator>1</VVE_CarAlternator>
+			<VVE_CarExhaust>1</VVE_CarExhaust>
+			<VVE_CarSuspension>2</VVE_CarSuspension>
+			<VVE_CarWheel>2</VVE_CarWheel-->
+			<Steel>40</Steel>
+		</costList>
+		
+		<soundImpactDefault>BulletImpact_Metal</soundImpactDefault>
+		<thingToSpawn>guy762_SWVehicle_TIEAvenger</thingToSpawn>
+		
+		<constructionSkillPrerequisite>6</constructionSkillPrerequisite>
+	</Vehicles.VehicleBuildDef>
+	
+	
+	
+	
+	
+	
+	
+	<Vehicles.VehicleBuildDef Name="guy762_SWVehicleBP_TIEAvg_prototype" ParentName="guy762_SWVehicleBP_TIEAvg">
+		<defName>guy762_SWVehicleBP_TIEAvg_prototype</defName>
+		<label>TIE/ad Avenger (prototype)</label>
+		<description>.</description>
+		
+		<graphicData>
+			<texPath>Starfighters/TIEAvenger/TIEAvenger_Proto</texPath>
+		</graphicData>
+
+		<thingToSpawn>guy762_SWVehicle_TIEAvenger_prototype</thingToSpawn>
+
+	</Vehicles.VehicleBuildDef>
+	
+	
+	
+	
+	
+	<Vehicles.VehicleBuildDef Name="guy762_SWVehicleBP_TIEAvg_RoyalGuard" ParentName="guy762_SWVehicleBP_TIEAvg">
+		<defName>guy762_SWVehicleBP_TIEAvg_RoyalGuard</defName>
+		<label>TIE/ad Avenger (Royal Guard)</label>
+		<description>.</description>
+		
+		<graphicData>
+			<texPath>Starfighters/TIEAvenger/TIEAvenger_RoyalGuard</texPath>
+		</graphicData>
+
+		<thingToSpawn>guy762_SWVehicle_TIEAvenger_RoyalGuard</thingToSpawn>
+
+	</Vehicles.VehicleBuildDef>
+	
+	
+</Defs>

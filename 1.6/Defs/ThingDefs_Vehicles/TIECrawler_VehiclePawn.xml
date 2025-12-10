@@ -403,36 +403,7 @@
 	</Vehicles.VehicleTurretDef>
 	
 	
-	<Vehicles.VehicleDef Name="guy762_SWVehicle_TIECrawler_bot" ParentName="guy762_SWVehicle_TIECrawler">
-		<defName>guy762_SWVehicle_TIECrawler_bot</defName>
-		
-		<!-- <size>(7,7)</size> -->
-		
-		<buildDef Inherit="False" />
-		
-		<!-- <vehicleMovementPermissions>NoDriverNeeded</vehicleMovementPermissions> -->
-		
-		<properties>
-			<roles Inherit="False">
-				<li>
-					<key>pilot</key>
-					<label>Bot Pilot</label>
-					<slots>1</slots>
-					<slotsToOperate>1</slotsToOperate>
-					<!-- <handlingTypes> -->
-						<!-- <li>Movement</li> -->
-						<!-- <li>Turret</li> -->
-					<!-- </handlingTypes> -->
-					
-					<turretIds>
-						<li>TIECrawlerKey_gun_1</li>
-						<li>TIECrawlerKey_gun_2</li>
-					</turretIds>
-				</li>
-			</roles>
-		</properties>
-
-	</Vehicles.VehicleDef>
+	
 	
 	
 </Defs>

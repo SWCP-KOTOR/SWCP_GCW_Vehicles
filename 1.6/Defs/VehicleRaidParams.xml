@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<Defs>
+	<Vehicles.VehicleRaidParamsDef Name = "SWCP_VehicleRaidParams_EdgeWalkInsOnly">
+		<defName>SWCP_VehicleRaidParams_EdgeWalkInsOnly</defName>
+		<factions>
+			<li>guy762_SWWarlordsFaction_NewRepublic</li>
+			<li>guy762_SWWarlordsFaction_RebelCell</li>
+			<li>guy762_SWWarlordsFaction_PartisanCell</li>
+			
+			<li>guy762_SWWarlordsFaction_ImpRemnant</li>
+			<li>guy762_SWWarlordsFaction_ZsinjDominion</li>
+			<li>guy762_SWWarlordsFaction_Pentastar</li>
+			
+			<li>guy762_SWWarlordsFaction_GreaterMaldrood</li>
+			<!-- <li>guy762_SWWarlordsFaction_EriaduAuthority</li> -->
+			<!-- <li>guy762_SWWarlordsFaction_ImpMandalore</li> -->
+		</factions>
+		
+		<arrivalModes>
+			<li>EdgeWalkIn</li>
+			<!-- <li>EdgeWalkInGroups</li> -->
+			<!-- <li>EdgeWalkInDistributed</li> -->
+		</arrivalModes>
+		
+		<inventory>
+			<li>
+				<thingDef>Steel</thingDef>
+				<countRange>150~250</countRange>
+			</li>
+		</inventory>
+	</Vehicles.VehicleRaidParamsDef>
+	
+</Defs>

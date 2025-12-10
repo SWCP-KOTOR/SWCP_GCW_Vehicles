@@ -418,7 +418,7 @@
 		<turretType>Rotatable</turretType>
 		<shotSound>kotorsound_beamturret_fire</shotSound>
 		
-		<projectile>SWVehicleBullet_beam_AI</projectile>
+		<projectile>SWVehicleBullet_beam_AIred</projectile>
 		<reloadTimer>3.5</reloadTimer>
 		<warmUpTimer>1</warmUpTimer> <!-- all dorsal turrets = 1 minimum -->
 		
@@ -460,35 +460,7 @@
 	
 	
 	
-	<Vehicles.VehicleDef Name="guy762_SWVehicle_SoroSuubV25CombatSpeeder_bot" ParentName="guy762_SWVehicle_SoroSuubV25CombatSpeeder">
-		<defName>guy762_SWVehicle_SoroSuubV25CombatSpeeder_bot</defName>
-
-		<buildDef Inherit="False" />
-		
-		<!-- <vehicleMovementPermissions>NoDriverNeeded</vehicleMovementPermissions> -->
-		
-		<properties>
-			<roles Inherit="False">
-				<li>
-					<key>pilot</key>
-					<label>Bot Pilot</label>
-					<slots>1</slots>
-					<slotsToOperate>1</slotsToOperate>
-					<!-- <handlingTypes> -->
-						<!-- <li>Movement</li> -->
-						<!-- <li>Turret</li> -->
-					<!-- </handlingTypes> -->
-					
-					<turretIds>
-						<li>SoroSuubV25Key_gun_1</li>
-						<li>SoroSuubV25Key_gun_2</li>
-						<li>SoroSuubV25Key_gun_3</li>
-					</turretIds>
-				</li>
-			</roles>
-		</properties>
-
-	</Vehicles.VehicleDef>
+	
 	
 
 

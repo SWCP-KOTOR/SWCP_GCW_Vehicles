@@ -16,6 +16,7 @@
 		<graphicData>
 			<texPath>Starfighters/R41Starchaser/R41</texPath>
 			<graphicClass>Vehicles.Graphic_Vehicle</graphicClass>
+			<drawRotated>true</drawRotated>
 			<drawSize>(12,12)</drawSize>
 			<shaderType>CutoutComplexPattern</shaderType>
 			<pattern>guy762_SWVehiclePattern_R41SCA</pattern>
@@ -179,12 +180,14 @@
 				
 				
 				<runwayTerrainRequirements>
+					<li>Light</li>
 					<li>Medium</li>
 					<li>Heavy</li>
 				</runwayTerrainRequirements>
 				<flightGraphicData>
 					<texPath>Starfighters/R41Starchaser/R41</texPath>
 					<graphicClass>Vehicles.Graphic_Vehicle</graphicClass>
+					<drawRotated>true</drawRotated>
 					<drawSize>(12,12)</drawSize>
 					<shaderType>CutoutComplexPattern</shaderType>
 					<pattern>guy762_SWVehiclePattern_R41SCA</pattern>

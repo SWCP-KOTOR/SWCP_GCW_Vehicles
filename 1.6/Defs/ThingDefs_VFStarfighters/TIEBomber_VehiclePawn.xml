@@ -16,6 +16,7 @@
 		<graphicData>
 			<texPath>Starfighters/TIEBomber/TIEBomber</texPath>
 			<graphicClass>Vehicles.Graphic_Vehicle</graphicClass>
+			<drawRotated>true</drawRotated>
 			<drawSize>(11,11)</drawSize>
 			<shaderType>CutoutComplexPattern</shaderType>
 			<color>(165,165,190)</color>
@@ -154,12 +155,14 @@
 				
 				
 				<runwayTerrainRequirements>
+					<li>Light</li>
 					<li>Medium</li>
 					<li>Heavy</li>
 				</runwayTerrainRequirements>
 				<flightGraphicData>
 					<texPath>Starfighters/TIEBomber/TIEBomber</texPath>
 					<graphicClass>Vehicles.Graphic_Vehicle</graphicClass>
+					<drawRotated>true</drawRotated>
 					<drawSize>(11,11)</drawSize>
 					<shaderType>CutoutComplexPattern</shaderType>
 					<color>(165,165,190)</color>

@@ -42,39 +42,39 @@
 				  <filthChance>0.8</filthChance>
 				  <clusterRectRadius>12~16</clusterRectRadius>
 				</li>
-				<!-- <li> -->
-				  <!-- <things> -->
-					<!-- <guy762_ShipChunk_z95a>1</guy762_ShipChunk_z95a> -->
-				  <!-- </things> -->
-				  <!-- <indoorRuin>false</indoorRuin> -->
-				  <!-- <coveredCellsPer10Cells>1.25~2</coveredCellsPer10Cells> -->
-				  <!-- <filthDef>Filth_MachineBits</filthDef> -->
-				  <!-- <filthExpandBy>1</filthExpandBy> -->
-				  <!-- <filthChance>0.8</filthChance> -->
-				  <!-- <clusterRectRadius>14~18</clusterRectRadius> -->
-				<!-- </li> -->
-				<!-- <li> -->
-				  <!-- <things> -->
-					<!-- <guy762_ShipChunk_YWing>1</guy762_ShipChunk_YWing> -->
-				  <!-- </things> -->
-				  <!-- <indoorRuin>false</indoorRuin> -->
-				  <!-- <coveredCellsPer10Cells>1.25~2</coveredCellsPer10Cells> -->
-				  <!-- <filthDef>Filth_MachineBits</filthDef> -->
-				  <!-- <filthExpandBy>1</filthExpandBy> -->
-				  <!-- <filthChance>0.8</filthChance> -->
-				  <!-- <clusterRectRadius>16~24</clusterRectRadius> -->
-				<!-- </li> -->
-				<!-- <li> -->
-				  <!-- <things> -->
-					<!-- <guy762_ShipChunk_YT2400a>1</guy762_ShipChunk_YT2400a> -->
-				  <!-- </things> -->
-				  <!-- <indoorRuin>false</indoorRuin> -->
-				  <!-- <coveredCellsPer10Cells>1.25~2</coveredCellsPer10Cells> -->
-				  <!-- <filthDef>Filth_MachineBits</filthDef> -->
-				  <!-- <filthExpandBy>1</filthExpandBy> -->
-				  <!-- <filthChance>0.8</filthChance> -->
-				  <!-- <clusterRectRadius>24~28</clusterRectRadius> -->
-				<!-- </li> -->
+				<li>
+				  <things>
+					<guy762_ShipChunk_z95a>1</guy762_ShipChunk_z95a>
+				  </things>
+				  <indoorRuin>false</indoorRuin>
+				  <coveredCellsPer10Cells>1.25~2</coveredCellsPer10Cells>
+				  <filthDef>Filth_MachineBits</filthDef>
+				  <filthExpandBy>1</filthExpandBy>
+				  <filthChance>0.8</filthChance>
+				  <clusterRectRadius>14~18</clusterRectRadius>
+				</li>
+				<li>
+				  <things>
+					<guy762_ShipChunk_YWing>1</guy762_ShipChunk_YWing>
+				  </things>
+				  <indoorRuin>false</indoorRuin>
+				  <coveredCellsPer10Cells>1.25~2</coveredCellsPer10Cells>
+				  <filthDef>Filth_MachineBits</filthDef>
+				  <filthExpandBy>1</filthExpandBy>
+				  <filthChance>0.8</filthChance>
+				  <clusterRectRadius>16~24</clusterRectRadius>
+				</li>
+				<li>
+				  <things>
+					<guy762_ShipChunk_YT2400a>1</guy762_ShipChunk_YT2400a>
+				  </things>
+				  <indoorRuin>false</indoorRuin>
+				  <coveredCellsPer10Cells>1.25~2</coveredCellsPer10Cells>
+				  <filthDef>Filth_MachineBits</filthDef>
+				  <filthExpandBy>1</filthExpandBy>
+				  <filthChance>0.8</filthChance>
+				  <clusterRectRadius>24~28</clusterRectRadius>
+				</li>
 			</groups>
 		</genStep>
 	</GenStepDef>

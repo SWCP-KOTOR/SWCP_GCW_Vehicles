@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  
+	<ThingDef ParentName="BuildingBase" Abstract="True" Name="guy762_SWHugeStaticObjectBASE">
+		<thingClass>Building</thingClass>
+		<description>.</description>
+		
+		
+		<graphicData>
+		  <damageData>
+			<enabled>false</enabled>
+		  </damageData>
+		</graphicData>
+		<drawerType>RealtimeOnly</drawerType>
+		
+		
+		<altitudeLayer>Building</altitudeLayer>
+		<passability>Impassable</passability>
+		
+		<rotatable>true</rotatable>
+		<destroyable>true</destroyable>
+		<useHitPoints>true</useHitPoints>
+		<tickerType>Normal</tickerType>
+		<selectable>true</selectable>
+		<neverOverlapFloors>true</neverOverlapFloors>
+		<blockPlants>true</blockPlants>
+		<!-- <tradeability>Buyable</tradeability> -->
+		<blockWind>true</blockWind>
+		<blockLight>false</blockLight>
+		<canOverlapZones>false</canOverlapZones>
+		<fillPercent>1</fillPercent>
+		<castEdgeShadows>false</castEdgeShadows>
+		
+		<uiOrder>10000</uiOrder>
+		<designationCategory>MM_StarWarsShipBuildTab</designationCategory>
+
+		<holdsRoof>false</holdsRoof>
+		<statBases>
+		  <Flammability>0</Flammability>
+		</statBases>
+		<soundImpactDefault>BulletImpact_Metal</soundImpactDefault>
+	</ThingDef>
+	
+	
+	
+	
+	
+	<ThingDef ParentName="guy762_SWHugeStaticObjectBASE">
+		<defName>guy762_SWHugeStaticObject_Sandcrawler</defName>
+		<label>Sandcrawler</label>
+		<graphicData>
+			<texPath>LandVehicles/Sandcrawler/Sandcrawler_east</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>(43,43)</drawSize>
+			<drawOffset>(-2,0,5)</drawOffset>
+			<color>(120,80,60)</color> <!-- sandcrawler rust -->
+		  
+			<shadowData>
+				<volume>(30, 20, 8)</volume>
+				<offset>(-2, 0, -7)</offset>
+			</shadowData>
+		</graphicData>
+		<size>(38,12)</size>
+		<uiIconScale>1</uiIconScale>
+		<statBases>
+		  <MaxHitPoints>50000</MaxHitPoints>
+		  <Mass>100000</Mass>
+		</statBases>
+		
+		<altitudeLayer>WorldClipper</altitudeLayer>
+		<thingClass>AncientHatch</thingClass>
+		<rotatable>false</rotatable>
+		<terrainAffordanceNeeded>Heavy</terrainAffordanceNeeded>
+		<canOverlapZones>false</canOverlapZones>
+		
+		<building>
+		  <isEdifice>true</isEdifice>
+		  <deconstructible>false</deconstructible>
+		  <!-- <isTargetable>false</isTargetable> -->
+		  <isInert>true</isInert>
+		  <claimable>false</claimable>
+		  <expandHomeArea>false</expandHomeArea>
+		</building>
+		<portal>
+		  <pocketMapGenerator>AncientStockpile</pocketMapGenerator>
+		  <exitDef>AncientHatchExit</exitDef>
+		  <pocketMapSize>75</pocketMapSize>
+		</portal>
+		<comps>
+			<li Class="CompProperties_Sealable">
+				<sealTexPath>UI/Commands/SealHatch</sealTexPath>
+				<sealCommandLabel>Seal entrance</sealCommandLabel>
+				<sealCommandDesc>Choose a colonist to permanently seal the entrance. Anything or anyone left below will be lost forever.</sealCommandDesc>
+				<cannotSealLabel>Cannot seal</cannotSealLabel>
+				<confirmSealText>Sealing the ancient stockpile entrance is permanent. Anything or anyone left below will be lost forever.{0}\n\nAre you sure you want to continue?</confirmSealText>
+				<sealedInspectString>Permanently sealed.</sealedInspectString>
+				<cannotEnterLabel>Sealed</cannotEnterLabel>
+			</li>
+			<!-- <li Class="CompProperties_Effecter"> -->
+				<!-- <effecterDef>guy762_ShipAuraEffecter_Sandcrawler</effecterDef> -->
+			<!-- </li> -->
+		</comps>
+		<inspectorTabs>
+			<li>ITab_ContentsMapPortal</li>
+		</inspectorTabs>
+	</ThingDef>
+	
+	
+	<EffecterDef>
+		<defName>guy762_ShipAuraEffecter_Sandcrawler</defName>
+		<children>
+		  <li>
+			<subEffecterClass>SubEffecter_Sustainer</subEffecterClass>
+			<soundDef>kotorsound_ShipAmbience_CROCGozanti</soundDef>
+		  </li>
+		  <li>
+			<subEffecterClass>SubEffecter_SoundIntermittent</subEffecterClass>
+			<soundDef>kotorsound_SubtleRepComMetalCreaking</soundDef>
+			<intermittentSoundInterval><min>2500</min><max>5000</max></intermittentSoundInterval>
+			<!-- <intermittentSoundInterval><min>100</min><max>250</max></intermittentSoundInterval> -->
+		  </li>
+		</children>
+	</EffecterDef>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<!-- <ThingDef ParentName="BuildingBase"> -->
+		<!-- <defName>AncientHatch</defName> -->
+		<!-- <label>ancient stockpile entrance</label> -->
+		<!-- <description>The entrance to a long-abandoned subterranean facility. Hack it to open the hatch.</description> -->
+		<!-- <size>(3,3)</size> -->
+		<!-- <useHitPoints>false</useHitPoints> -->
+		<!-- <thingClass>AncientHatch</thingClass> -->
+		<!-- <rotatable>false</rotatable> -->
+		<!-- <terrainAffordanceNeeded>Heavy</terrainAffordanceNeeded> -->
+		<!-- <canOverlapZones>false</canOverlapZones> -->
+		<!-- <tickerType>Normal</tickerType> -->
+		<!-- <graphicData> -->
+		  <!-- <graphicClass>Graphic_Single</graphicClass> -->
+		  <!-- <texPath>Things/Building/AncientHatch/AncientHatch_Closed</texPath> -->
+		  <!-- <drawSize>(3, 3)</drawSize> -->
+		<!-- </graphicData> -->
+		<!-- <altitudeLayer>FloorEmplacement</altitudeLayer> -->
+		<!-- <fillPercent>0</fillPercent> -->
+		<!-- <passability>Impassable</passability> -->
+		<!-- <holdsRoof>true</holdsRoof> -->
+		<!-- <destroyable>false</destroyable> -->
+		<!-- <building> -->
+		  <!-- <isEdifice>true</isEdifice> -->
+		  <!-- <deconstructible>false</deconstructible> -->
+		  <!-- <isTargetable>false</isTargetable> -->
+		  <!-- <isInert>true</isInert> -->
+		  <!-- <claimable>false</claimable> -->
+		  <!-- <expandHomeArea>false</expandHomeArea> -->
+		<!-- </building> -->
+		<!-- <portal> -->
+		  <!-- <pocketMapGenerator>AncientStockpile</pocketMapGenerator> -->
+		  <!-- <exitDef>AncientHatchExit</exitDef> -->
+		  <!-- <pocketMapSize>75</pocketMapSize> -->
+		<!-- </portal> -->
+		<!-- <statBases> -->
+		  <!-- <Flammability>0</Flammability> -->
+		<!-- </statBases> -->
+		<!-- <comps> -->
+		  <!-- <li Class="CompProperties_Hackable"> -->
+			<!-- <defence>39000</defence> -->
+			<!-- <effectHacking>HackingTerminal</effectHacking> -->
+			<!-- <lockoutDurationHoursRange>6~18</lockoutDurationHoursRange> -->
+			<!-- <showProgressAfterHackCompletion>false</showProgressAfterHackCompletion> -->
+			<!-- <notHackedInspectString>Hack to open.</notHackedInspectString> -->
+			<!-- <intellectualSkillPrerequisite>4</intellectualSkillPrerequisite> -->
+			<!-- <hackingCompletedSound>AncientHatchOpened</hackingCompletedSound> -->
+			<!-- <hackedMessage>{HACKER_labelShort} has finished hacking {SUBJECT_labelNoParenthesisDef}.</hackedMessage> -->
+		  <!-- </li> -->
+		  <!-- <li Class="CompProperties_Sealable"> -->
+			<!-- <sealTexPath>UI/Commands/SealHatch</sealTexPath> -->
+			<!-- <sealCommandLabel>Seal entrance</sealCommandLabel> -->
+			<!-- <sealCommandDesc>Choose a colonist to permanently seal the entrance. Anything or anyone left below will be lost forever.</sealCommandDesc> -->
+			<!-- <cannotSealLabel>Cannot seal</cannotSealLabel> -->
+			<!-- <confirmSealText>Sealing the ancient stockpile entrance is permanent. Anything or anyone left below will be lost forever.{0}\n\nAre you sure you want to continue?</confirmSealText> -->
+			<!-- <sealedInspectString>Permanently sealed.</sealedInspectString> -->
+			<!-- <cannotEnterLabel>Sealed</cannotEnterLabel> -->
+		  <!-- </li> -->
+		  <!-- <li Class="CompProperties_Glower"> -->
+			<!-- <glowRadius>3</glowRadius> -->
+			<!-- <glowColor>(239,133,50,0)</glowColor> -->
+		  <!-- </li> -->
+		<!-- </comps> -->
+		<!-- <inspectorTabs> -->
+		  <!-- <li>ITab_ContentsMapPortal</li> -->
+		<!-- </inspectorTabs> -->
+	  <!-- </ThingDef> -->
+	
+	
+</Defs>

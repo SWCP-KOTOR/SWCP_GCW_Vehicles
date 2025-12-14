@@ -29,6 +29,7 @@
 		<graphicData>
 			<texPath>Starfighters/TIEAvenger/TIEAvenger</texPath>
 			<graphicClass>Vehicles.Graphic_Vehicle</graphicClass>
+			<drawRotated>true</drawRotated>
 			<drawSize>(12,12)</drawSize>
 			<shaderType>CutoutComplexPattern</shaderType>
 			<pattern>guy762_SWVehiclePattern_TIEAvgA</pattern>
@@ -194,12 +195,14 @@
 				
 				
 				<runwayTerrainRequirements>
+					<li>Light</li>
 					<li>Medium</li>
 					<li>Heavy</li>
 				</runwayTerrainRequirements>
 				<flightGraphicData>
 					<texPath>Starfighters/TIEAvenger/TIEAvenger</texPath>
 					<graphicClass>Vehicles.Graphic_Vehicle</graphicClass>
+					<drawRotated>true</drawRotated>
 					<drawSize>(12,12)</drawSize>
 					<shaderType>CutoutComplexPattern</shaderType>
 					<pattern>guy762_SWVehiclePattern_TIEAvgA</pattern>
@@ -622,12 +625,14 @@
 				
 				
 				<runwayTerrainRequirements>
+					<li>Light</li>
 					<li>Medium</li>
 					<li>Heavy</li>
 				</runwayTerrainRequirements>
 				<flightGraphicData>
 					<texPath>Starfighters/TIEAvenger/TIEAvenger_Proto</texPath>
 					<graphicClass>Vehicles.Graphic_Vehicle</graphicClass>
+					<drawRotated>true</drawRotated>
 					<drawSize>(12,12)</drawSize>
 					<shaderType>CutoutComplexPattern</shaderType>
 					<color>(190,190,190)</color>
@@ -1026,12 +1031,14 @@
 				
 				
 				<runwayTerrainRequirements>
+					<li>Light</li>
 					<li>Medium</li>
 					<li>Heavy</li>
 				</runwayTerrainRequirements>
 				<flightGraphicData>
 					<texPath>Starfighters/TIEAvenger/TIEAvenger_RoyalGuard</texPath>
 					<graphicClass>Vehicles.Graphic_Vehicle</graphicClass>
+					<drawRotated>true</drawRotated>
 					<drawSize>(12,12)</drawSize>
 					<shaderType>CutoutComplexPattern</shaderType>
 					<pattern>guy762_SWVehiclePattern_TIEAvgC</pattern>

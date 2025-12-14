@@ -22,6 +22,7 @@
 		<graphicData>
 			<texPath>Starfighters/BTLA4YWing/YWing</texPath>
 			<graphicClass>Vehicles.Graphic_Vehicle</graphicClass>
+			<drawRotated>true</drawRotated>
 			<drawSize>(19,19)</drawSize>
 			<shaderType>CutoutComplexPattern</shaderType>
 			<pattern>guy762_SWVehiclePattern_YWingA</pattern>
@@ -190,12 +191,14 @@
 				
 				
 				<runwayTerrainRequirements>
+					<li>Light</li>
 					<li>Medium</li>
 					<li>Heavy</li>
 				</runwayTerrainRequirements>
 				<flightGraphicData>
 					<texPath>Starfighters/BTLA4YWing/YWing</texPath>
 					<graphicClass>Vehicles.Graphic_Vehicle</graphicClass>
+					<drawRotated>true</drawRotated>
 					<drawSize>(19,19)</drawSize>
 					<shaderType>CutoutComplexPattern</shaderType>
 					<pattern>guy762_SWVehiclePattern_YWingA</pattern>

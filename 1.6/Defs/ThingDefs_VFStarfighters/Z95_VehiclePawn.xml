@@ -39,7 +39,7 @@
 		<description>. \n\n&lt;color=#bb8f04&gt;Crew:&lt;/color&gt; Pilot x1</description>
 		<graphicData>
 			<texPath>Starfighters/Z95Headhunter/Z95</texPath>
-			<graphicClass>Vehicles.Graphic_Vehicle</graphicClass>
+			<graphicClass>Vehicles.Graphic_Vehicle</graphicClass><drawRotated>true</drawRotated>
 			<drawSize>(12,12)</drawSize>
 			<shaderType>CutoutComplexPattern</shaderType>
 			<pattern>guy762_SWVehiclePattern_Z95A</pattern>
@@ -205,12 +205,13 @@
 				
 				
 				<runwayTerrainRequirements>
+					<li>Light</li>
 					<li>Medium</li>
 					<li>Heavy</li>
 				</runwayTerrainRequirements>
 				<flightGraphicData>
 					<texPath>Starfighters/Z95Headhunter/Z95</texPath>
-					<graphicClass>Vehicles.Graphic_Vehicle</graphicClass>
+					<graphicClass>Vehicles.Graphic_Vehicle</graphicClass><drawRotated>true</drawRotated>
 					<drawSize>(12,12)</drawSize>
 					<shaderType>CutoutComplexPattern</shaderType>
 					<pattern>guy762_SWVehiclePattern_Z95A</pattern>

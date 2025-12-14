@@ -21,7 +21,7 @@
 		<description>. \n\n&lt;color=#bb8f04&gt;Crew:&lt;/color&gt; Pilot x1</description>
 		<graphicData>
 			<texPath>Starfighters/LAATi/LAATi</texPath>
-			<graphicClass>Vehicles.Graphic_Vehicle</graphicClass>
+			<graphicClass>Vehicles.Graphic_Vehicle</graphicClass><drawRotated>true</drawRotated>
 			<drawSize>(24,24)</drawSize>
 			<shaderType>CutoutComplexPattern</shaderType>
 			<pattern>guy762_SWVehiclePattern_LAATiA</pattern>
@@ -232,12 +232,13 @@
 				
 				
 				<runwayTerrainRequirements>
+					<li>Light</li>
 					<li>Medium</li>
 					<li>Heavy</li>
 				</runwayTerrainRequirements>
 				<flightGraphicData>
 					<texPath>Starfighters/LAATi/LAATi</texPath>
-					<graphicClass>Vehicles.Graphic_Vehicle</graphicClass>
+					<graphicClass>Vehicles.Graphic_Vehicle</graphicClass><drawRotated>true</drawRotated>
 					<drawSize>(24,24)</drawSize>
 					<shaderType>CutoutComplexPattern</shaderType>
 					<pattern>guy762_SWVehiclePattern_LAATiA</pattern>
@@ -591,7 +592,7 @@
 		
 		<projectile>SWVehicleBullet_AIgreen_light</projectile>
 		<reloadTimer>3.5</reloadTimer>
-		<warmUpTimer>0.5</warmUpTimer>
+		<warmUpTimer>0</warmUpTimer>
 		
 		<magazineCapacity>999</magazineCapacity>
 		

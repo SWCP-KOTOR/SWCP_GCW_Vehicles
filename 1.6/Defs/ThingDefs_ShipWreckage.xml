@@ -4,7 +4,7 @@
 	
 	
 	<ThingDef Name="guy762_ShipChunkBase" ParentName="BuildingBase" Abstract="True">
-		<terrainAffordanceNeeded>Bridgeable</terrainAffordanceNeeded> <!-- so it can be submerged in water -->
+		<terrainAffordanceNeeded IsNull="True" /> <!-- so it can be submerged in water -->
 	</ThingDef>
 	
 	

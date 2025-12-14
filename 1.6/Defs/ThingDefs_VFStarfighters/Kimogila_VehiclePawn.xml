@@ -16,6 +16,7 @@
 		<graphicData>
 			<texPath>Starfighters/Kimogila/Kimogila</texPath>
 			<graphicClass>Vehicles.Graphic_Vehicle</graphicClass>
+			<drawRotated>true</drawRotated>
 			<drawSize>(20,20)</drawSize>
 			<shaderType>CutoutComplexPattern</shaderType>
 			<pattern>guy762_SWVehiclePattern_KimogilaA</pattern>
@@ -188,12 +189,14 @@
 				
 				
 				<runwayTerrainRequirements>
+					<li>Light</li>
 					<li>Medium</li>
 					<li>Heavy</li>
 				</runwayTerrainRequirements>
 				<flightGraphicData>
 					<texPath>Starfighters/Kimogila/Kimogila</texPath>
 					<graphicClass>Vehicles.Graphic_Vehicle</graphicClass>
+					<drawRotated>true</drawRotated>
 					<drawSize>(20,20)</drawSize>
 					<shaderType>CutoutComplexPattern</shaderType>
 					<pattern>guy762_SWVehiclePattern_KimogilaA</pattern>

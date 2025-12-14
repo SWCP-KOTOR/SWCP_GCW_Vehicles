@@ -9,7 +9,7 @@
 		<description>. \n\n&lt;color=#bb8f04&gt;Crew:&lt;/color&gt; Pilot x1</description>
 		<graphicData>
 			<texPath>Starfighters/TIEFighter/TIE</texPath>
-			<graphicClass>Vehicles.Graphic_Vehicle</graphicClass>
+			<graphicClass>Vehicles.Graphic_Vehicle</graphicClass><drawRotated>true</drawRotated>
 			<drawSize>(9,9)</drawSize>
 			<shaderType>CutoutComplexPattern</shaderType>
 			<color>(165,165,190)</color>
@@ -145,12 +145,14 @@
 				
 				
 				<runwayTerrainRequirements>
+					<li>Light</li>
 					<li>Medium</li>
 					<li>Heavy</li>
 				</runwayTerrainRequirements>
 				<flightGraphicData>
 					<texPath>Starfighters/TIEFighter/TIE</texPath>
 					<graphicClass>Vehicles.Graphic_Vehicle</graphicClass>
+					<drawRotated>true</drawRotated>
 					<drawSize>(9,9)</drawSize>
 					<shaderType>CutoutComplexPattern</shaderType>
 					<color>(165,165,190)</color>

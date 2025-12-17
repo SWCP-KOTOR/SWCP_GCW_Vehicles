@@ -156,6 +156,7 @@
 					</chaseTarget>
 				</flightCommands>
 				
+				<canFlyInSpace>false</canFlyInSpace>
 				<fuelConsumptionPerTick>0.0001</fuelConsumptionPerTick>
 				
 				<flightSpeedPerTick>0.6</flightSpeedPerTick> <!-- MAXIMUM XWMG speed: speed5 = 1, speed1 = 0.2 | + 0.1 for blue 5, -0.1 for red highest -->

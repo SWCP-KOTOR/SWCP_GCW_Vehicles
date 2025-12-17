@@ -178,7 +178,7 @@
 					</chaseTarget>
 				</flightCommands>
 				
-				<fuelConsumptionPerTick>0.0001</fuelConsumptionPerTick>
+				<fuelConsumptionPerTick>0.0001</fuelConsumptionPerTick><canFlyInSpace>true</canFlyInSpace>
 				
 				<flightSpeedPerTick>1</flightSpeedPerTick> <!-- MAXIMUM XWMG speed: speed5 = 1, speed1 = 0.2 | + 0.1 for blue 5, -0.1 for red highest -->
 				<flightSpeedTurningPerTick>0.6</flightSpeedTurningPerTick> <!-- highest speed in which all 5 standard maneuvers are available | +0.1 for a full row of blues, -0.1 for any red turns -->
@@ -533,8 +533,8 @@
 			
 			<MarketValue>750000</MarketValue>
 			
-			<EnergyShieldRechargeRate>0.5</EnergyShieldRechargeRate>
-			<EnergyShieldEnergyMax>3</EnergyShieldEnergyMax>
+			<!-- <EnergyShieldRechargeRate>0.5</EnergyShieldRechargeRate> -->
+			<!-- <EnergyShieldEnergyMax>3</EnergyShieldEnergyMax> -->
 		</statBases>
 		
 		<properties>
@@ -608,7 +608,7 @@
 					</chaseTarget>
 				</flightCommands>
 				
-				<fuelConsumptionPerTick>0.0001</fuelConsumptionPerTick>
+				<fuelConsumptionPerTick>0.0001</fuelConsumptionPerTick><canFlyInSpace>true</canFlyInSpace>
 				
 				<flightSpeedPerTick>1</flightSpeedPerTick> <!-- MAXIMUM XWMG speed: speed5 = 1, speed1 = 0.2 | + 0.1 for blue 5, -0.1 for red highest -->
 				<flightSpeedTurningPerTick>0.6</flightSpeedTurningPerTick> <!-- highest speed in which all 5 standard maneuvers are available | +0.1 for a full row of blues, -0.1 for any red turns -->
@@ -952,6 +952,9 @@
 
 		<statBases>
 			<MarketValue>500000</MarketValue>
+			
+			<EnergyShieldRechargeRate>0.5</EnergyShieldRechargeRate>
+			<EnergyShieldEnergyMax>4</EnergyShieldEnergyMax>
 		</statBases>
 
 		<comps Inherit="False">
@@ -961,6 +964,15 @@
 				<fuelCapacity>300</fuelCapacity>
 				<fuelConsumptionWorldMultiplier>0.5</fuelConsumptionWorldMultiplier>
 			</li>
+			
+			<!-- <li Class="Haloshields.CompProperties_HaloShield">  -->
+				<!-- <startingTicksToReset>3200</startingTicksToReset> -->
+				<!-- <energyLossPerDamage>0.033</energyLossPerDamage> -->
+				<!-- <energyOnReset>0.2</energyOnReset> -->
+				<!-- <blocksRangedWeapons>true</blocksRangedWeapons> -->
+				<!-- <moteDef>Mote_MechCharging</moteDef> -->
+			<!-- </li> -->
+
 			
 			<li Class="CompProperties_ProjectileInterceptor">
 				<radius>7</radius>
@@ -974,9 +986,9 @@
 				<activeSound>BulletShield_Ambience</activeSound>
 				<hitPointsRestoreInstantlyAfterCharge>true</hitPointsRestoreInstantlyAfterCharge>
 				
-				<hitPoints>400</hitPoints> <!-- XWMG shield value * 100 -->
+				<hitPoints>400</hitPoints>
 				
-				<chargeDurationTicks>1800</chargeDurationTicks><!-- 30s -->
+				<chargeDurationTicks>1800</chargeDurationTicks>
 				<rechargeHitPointsIntervalTicks>120</rechargeHitPointsIntervalTicks>
 				<minIdleAlpha>0.2</minIdleAlpha>
 				<drawWithNoSelection>True</drawWithNoSelection>
@@ -1014,7 +1026,7 @@
 					</chaseTarget>
 				</flightCommands>
 				
-				<fuelConsumptionPerTick>0.0001</fuelConsumptionPerTick>
+				<fuelConsumptionPerTick>0.0001</fuelConsumptionPerTick><canFlyInSpace>true</canFlyInSpace>
 				
 				<flightSpeedPerTick>1</flightSpeedPerTick> <!-- MAXIMUM XWMG speed: speed5 = 1, speed1 = 0.2 | + 0.1 for blue 5, -0.1 for red highest -->
 				<flightSpeedTurningPerTick>0.6</flightSpeedTurningPerTick> <!-- highest speed in which all 5 standard maneuvers are available | +0.1 for a full row of blues, -0.1 for any red turns -->

@@ -11,7 +11,7 @@
 	
 	<Vehicles.VehicleDef ParentName="MM-VF-Vehicle_Pawn">
 		<defName>guy762_SWVehicle_YT2400_</defName>
-		<label>CEC YT-2400 light freighter</label>
+		<label>YT-2400 light freighter</label>
 		<description>. \n\n&lt;color=#bb8f04&gt;Crew:&lt;/color&gt; Pilot x1</description>
 		<graphicData>
 			<texPath>Starfighters/YT2400/YT2400</texPath>
@@ -154,6 +154,28 @@
 				<fuelCapacity>500</fuelCapacity>
 				<fuelConsumptionWorldMultiplier>0.5</fuelConsumptionWorldMultiplier>
 			</li>
+			
+			<!-- <li Class="CompProperties_Shuttle"> -->
+				<!-- <shipDef>guy762_SWVehicleTransportShip_YT2400a</shipDef> -->
+			<!-- </li> -->
+			<!-- <li Class="CompProperties_Launchable"> -->
+				<!-- <fuelPerTile>3</fuelPerTile> -->
+				<!-- <minFuelCost>50</minFuelCost> -->
+				<!-- <skyfallerLeaving>guy762_SWVehicleSkyfallerLeaving_YT2400a</skyfallerLeaving> -->
+				<!-- <worldObjectDef>guy762_SWVehicleWorldObject_YT2400a</worldObjectDef> -->
+				 <!-- 1.5 hours -->
+				<!-- <cooldownTicks>3750</cooldownTicks> -->
+				<!-- <fixedLaunchDistanceMax>999</fixedLaunchDistanceMax> -->
+				<!-- <cooldownEndedMessage>{0} is ready to launch again.</cooldownEndedMessage> -->
+			<!-- </li> -->
+			<!-- <li Class="CompProperties_Transporter"> -->
+				<!-- <massCapacity>25000</massCapacity> -->
+				<!-- <max1PerGroup>true</max1PerGroup> -->
+				<!-- <canChangeAssignedThingsAfterStarting>true</canChangeAssignedThingsAfterStarting> -->
+				<!-- <pawnLoadedSound>Shuttle_PawnLoaded</pawnLoadedSound> -->
+				<!-- <pawnExitSound>Shuttle_PawnExit</pawnExitSound> -->
+				<!-- <showMassInInspectString>true</showMassInInspectString> -->
+			<!-- </li> -->
 			
 			<li Class="CompProperties_ProjectileInterceptor">
 				<radius>15</radius>
@@ -541,6 +563,87 @@
 		<description>The rotating ventral turret of a YT-2400 freighter.</description>
 		<warmUpTimer>0.2</warmUpTimer>
 	</Vehicles.VehicleTurretDef>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<TransportShipDef>
+		<defName>guy762_SWVehicleTransportShip_YT2400a</defName>
+		<label>YT-2400 light freighter</label>
+		<shipThing>guy762_SWVehicle_YT2400_</shipThing>
+		<!-- <shipThing>guy762_SWVehicleBP_YT2400_</shipThing> -->
+		
+		<arrivingSkyfaller>guy762_SWVehicleSkyfallerIncoming_YT2400a</arrivingSkyfaller>
+		<leavingSkyfaller>guy762_SWVehicleSkyfallerLeaving_YT2400a</leavingSkyfaller>
+		<worldObject>guy762_SWVehicleWorldObject_YT2400a</worldObject>
+		
+		<playerShuttle>true</playerShuttle>
+	</TransportShipDef>
+	
+	
+	<WorldObjectDef ParentName="ShuttleWorldObjectBase">
+		<defName>guy762_SWVehicleWorldObject_YT2400a</defName>
+		<label>YT-2400 light freighter</label>
+		<description>A YT-2400 light freighter in flight.</description>
+		<expandingIconTexture>Starfighters/YT2400/WorldObject_YT2400</expandingIconTexture>
+		<expandingIconDrawSize>1</expandingIconDrawSize>
+	</WorldObjectDef>
+	
+	
+	<ThingDef ParentName="guy762_SWVehicleSkyfallerIncomingBASE">
+		<defName>guy762_SWVehicleSkyfallerIncoming_YT2400a</defName>
+		<label>YT-2400 light freighter (incoming)</label>
+		<graphicData>
+			<texPath>Starfighters/YT2400/YT2400</texPath>
+			<graphicClass>Vehicles.Graphic_Vehicle</graphicClass><drawRotated>true</drawRotated>
+			<drawSize>(30,30)</drawSize>
+			<shaderType>CutoutComplex</shaderType>
+			<!-- <shaderType>CutoutComplexPattern</shaderType> -->
+			<!-- <pattern>guy762_SWVehiclePattern_YT2400A</pattern> -->
+			<color>(140,60,60)</color>
+			<colorTwo>(230,185,45)</colorTwo>
+			<!-- <colorThree>(177,177,177)</colorThree> -->
+		</graphicData>
+		<size>(29,19)</size>
+		<skyfaller>
+			<anticipationSound>Shuttle_Landing</anticipationSound>
+			<anticipationSoundTicks>250</anticipationSoundTicks>
+			<ticksToImpactRange>200~250</ticksToImpactRange>
+			<shadowSize>(29.5,19.5)</shadowSize>
+		</skyfaller>
+	</ThingDef>
+
+	<ThingDef ParentName="guy762_SWVehicleSkyfallerLeavingBASE">
+		<defName>guy762_SWVehicleSkyfallerLeaving_YT2400a</defName>
+		<label>passenger shuttle (leaving)</label>
+		<graphicData>
+			<texPath>Starfighters/YT2400/YT2400</texPath>
+			<graphicClass>Vehicles.Graphic_Vehicle</graphicClass><drawRotated>true</drawRotated>
+			<drawSize>(30,30)</drawSize>
+			<shaderType>CutoutComplex</shaderType>
+			<!-- <shaderType>CutoutComplexPattern</shaderType> -->
+			<!-- <pattern>guy762_SWVehiclePattern_YT2400A</pattern> -->
+			<color>(140,60,60)</color>
+			<colorTwo>(230,185,45)</colorTwo>
+			<!-- <colorThree>(177,177,177)</colorThree> -->
+		</graphicData>
+		<size>(29,19)</size>
+		<skyfaller>
+			<anticipationSound>Shuttle_Leaving</anticipationSound>
+			<anticipationSoundTicks>-10</anticipationSoundTicks>
+			<ticksToImpactRange>-40~-15</ticksToImpactRange>
+
+			<shadowSize>(29.5,19.5)</shadowSize>
+		</skyfaller>
+	</ThingDef>
 	
 	
 	

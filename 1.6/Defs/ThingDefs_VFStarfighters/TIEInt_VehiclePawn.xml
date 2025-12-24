@@ -14,6 +14,12 @@
 		<path>Starfighters/TIEInterceptor/TIEInt_pattern_181st</path>
 	</Vehicles.PatternDef>
 	
+	<Vehicles.PatternDef>
+		<defName>guy762_SWVehiclePattern_TIEIntC</defName>
+		<label>TIE Interceptor (Royal Guard)</label>
+		<path>Starfighters/TIEInterceptor/TIEInt_pattern_RoyalGuard</path>
+	</Vehicles.PatternDef>
+	
 	<!-- <Vehicles.SkinDef> -->
 		<!-- <defName>guy762_SWVehicleSkin_TIEInt181st</defName> -->
 		<!-- <label>TIE Interceptor (181st)</label> -->
@@ -21,20 +27,7 @@
 	<!-- </Vehicles.SkinDef> -->
 	
 	
-	<Vehicles.VehicleDef Name="guy762_SWVehicle_TIEInterceptor" ParentName="MM-VF-Vehicle_Pawn">
-		<defName>guy762_SWVehicle_TIEInterceptor</defName>
-		<label>TIE/in Interceptor</label>
-		<description>. \n\n&lt;color=#bb8f04&gt;Crew:&lt;/color&gt; Pilot x1</description>
-		<graphicData>
-			<texPath>Starfighters/TIEInterceptor/TIEInt</texPath>
-			<graphicClass>Vehicles.Graphic_Vehicle</graphicClass><drawRotated>true</drawRotated>
-			<drawSize>(9,9)</drawSize>
-			<shaderType>CutoutComplexPattern</shaderType>
-			<pattern>guy762_SWVehiclePattern_TIEIntA</pattern>
-			<color>(165,165,190)</color>
-			<colorTwo>(0,0,0)</colorTwo>
-			<colorThree>(170,60,60)</colorThree>
-		</graphicData>
+	<Vehicles.VehicleDef Name="guy762_SWVehicle_TIEInterceptorBASE" ParentName="MM-VF-Vehicle_Pawn" Abstract="True">
 		<uiIconScale>1</uiIconScale>
 		<seeThroughFog>true</seeThroughFog>
 		<drawOffscreen>true</drawOffscreen>
@@ -42,13 +35,7 @@
 		
 		<fillPercent>1</fillPercent>
 		<nameable>true</nameable>
-		<buildDef>guy762_SWVehicleBP_TIEInt</buildDef>
 		<size>(6,8)</size>
-		
-		
-		<killedLeavings>
-		  <guy762_ShipChunk_TIEInterceptor>1</guy762_ShipChunk_TIEInterceptor>
-		</killedLeavings>
 		
 		<canCaravan>false</canCaravan>
 		<vehicleCategory>Combat</vehicleCategory>
@@ -64,7 +51,6 @@
 			<ArmorRating_Heat>0.45</ArmorRating_Heat>
 			<MaxHitPoints>3000</MaxHitPoints> <!-- # of estimated XWMG hull points * 1000 -->
 			
-			<MarketValue>36000</MarketValue>
 			<Flammability>0</Flammability>
 		</statBases>
 		<vehicleStats>
@@ -111,14 +97,169 @@
 						<li>TIEIntKey_gun_4</li>
 					</turretIds>
 				</li>
-				<li>
-					<key>copilot</key>
-					<label>Copilot</label>
-					<slots>1</slots>
+				<!-- <li> -->
+					<!-- <key>copilot</key> -->
+					<!-- <label>Copilot</label> -->
+					<!-- <slots>1</slots> -->
 					<!-- <comfort>-0.5</comfort> -->
-				</li>
+				<!-- </li> -->
 			</roles>
 		</properties>
+
+		<components>
+			<li>
+				<key>Hull</key>
+				<label>Hull</label>
+				<depth>External</depth>
+				
+				<armor>
+					<ArmorRating_Sharp>1.35</ArmorRating_Sharp>
+					<ArmorRating_Blunt>1.2</ArmorRating_Blunt> <!-- # of estimated XWMG hull points * 0.1, apply to hard armor curve -->
+					<ArmorRating_Heat>1.45</ArmorRating_Heat>
+					<IncomingDamageFactor>-0.15</IncomingDamageFactor> <!-- # of estimated XWMG hull points * -0.05 -->
+				</armor>
+				<health>300</health> <!-- # of estimated XWMG hull points * 100 -->
+				
+				<hitbox>
+					<side>Body</side>
+				</hitbox>
+			</li>
+			
+			<li>
+				<key>FirstThruster</key>
+				<label>Port Thruster</label>
+				<health>120</health>
+				<depth>Internal</depth>
+				
+				<reactors>
+					<li Class = "Vehicles.Reactor_Explosive">
+						<indicator>VF_Explosive</indicator>
+						<chance>0.25</chance>
+						<maxHealth>0.2</maxHealth>
+						<radius>5</radius>
+						<damageDef>Flame</damageDef>
+					</li>
+				</reactors>
+				
+				<hitbox>
+					<side>Body</side>
+				</hitbox>
+				
+				<categories>
+					<li>FlightSpeed</li>
+				</categories>
+			</li>
+			<li>
+				<key>SecondThruster</key>
+				<label>Starboard Thruster</label>
+				<health>120</health>
+				<depth>Internal</depth>
+				
+				<reactors>
+					<li Class = "Vehicles.Reactor_Explosive">
+						<indicator>VF_Explosive</indicator>
+						<chance>0.25</chance>
+						<maxHealth>0.2</maxHealth>
+						<radius>5</radius>
+						<damageDef>Flame</damageDef>
+					</li>
+				</reactors>
+				
+				<hitbox>
+					<side>Body</side>
+				</hitbox>
+				
+				<categories>
+					<li>FlightSpeed</li>
+					<li>FlightControl</li>
+				</categories>
+			</li>
+			<li>
+				<key>Reactor</key>
+				<label>Reactor</label>
+				<health>200</health>
+				<depth>Internal</depth>
+				
+				<reactors>
+					<li Class = "Vehicles.Reactor_Explosive">
+						<indicator>VF_Explosive</indicator>
+						<chance>0.25</chance>
+						<maxHealth>0.2</maxHealth>
+						<radius>18</radius>
+						<damageDef>Bomb</damageDef>
+					</li>
+				</reactors>
+			</li>
+			<li>
+				<key>Cockpit</key>
+				<label>Cockpit</label>
+				<health>160</health>
+				<depth>Internal</depth>
+				
+				<categories>
+					<li>FlightControl</li>
+				</categories>
+			</li>
+		</components>
+		
+		<soundSustainersOnEvent>
+			<li>
+				<start>IgnitionOn</start>
+				<stop>IgnitionOff</stop>
+				<value>kotorsound_enginehum_TIE</value>
+			</li>
+		</soundSustainersOnEvent>
+		
+		<soundOneShotsOnEvent>
+		</soundOneShotsOnEvent>
+		
+	</Vehicles.VehicleDef>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<Vehicles.VehicleDef Name="guy762_SWVehicle_TIEInterceptor" ParentName="guy762_SWVehicle_TIEInterceptorBASE">
+		<defName>guy762_SWVehicle_TIEInterceptor</defName>
+		<label>TIE/in Interceptor</label>
+		<description>. \n\n&lt;color=#bb8f04&gt;Crew:&lt;/color&gt; Pilot x1</description>
+		<graphicData>
+			<texPath>Starfighters/TIEInterceptor/TIEInt</texPath>
+			<graphicClass>Vehicles.Graphic_Vehicle</graphicClass><drawRotated>true</drawRotated>
+			<drawSize>(9,9)</drawSize>
+			<shaderType>CutoutComplexPattern</shaderType>
+			<pattern>guy762_SWVehiclePattern_TIEIntA</pattern>
+			<color>(165,165,190)</color>
+			<colorTwo>(0,0,0)</colorTwo>
+			<colorThree>(170,60,60)</colorThree>
+		</graphicData>
+
+		<buildDef>guy762_SWVehicleBP_TIEInt</buildDef>
+		
+		<statBases>
+			<MarketValue>36000</MarketValue>
+		</statBases>
 		
 		<comps>
 			<li Class="Vehicles.CompProperties_FueledTravel">
@@ -312,114 +453,271 @@
 				</turrets>
 			</li>
 		</comps>
-		<components>
-			<li>
-				<key>Hull</key>
-				<label>Hull</label>
-				<depth>External</depth>
-				
-				<armor>
-					<ArmorRating_Sharp>1.35</ArmorRating_Sharp>
-					<ArmorRating_Blunt>1.2</ArmorRating_Blunt> <!-- # of estimated XWMG hull points * 0.1, apply to hard armor curve -->
-					<ArmorRating_Heat>1.45</ArmorRating_Heat>
-					<IncomingDamageFactor>-0.15</IncomingDamageFactor> <!-- # of estimated XWMG hull points * -0.05 -->
-				</armor>
-				<health>300</health> <!-- # of estimated XWMG hull points * 100 -->
-				
-				<hitbox>
-					<side>Body</side>
-				</hitbox>
-			</li>
-			
-			<li>
-				<key>FirstThruster</key>
-				<label>Port Thruster</label>
-				<health>120</health>
-				<depth>Internal</depth>
-				
-				<reactors>
-					<li Class = "Vehicles.Reactor_Explosive">
-						<indicator>VF_Explosive</indicator>
-						<chance>0.25</chance>
-						<maxHealth>0.2</maxHealth>
-						<radius>5</radius>
-						<damageDef>Flame</damageDef>
-					</li>
-				</reactors>
-				
-				<hitbox>
-					<side>Body</side>
-				</hitbox>
-				
-				<categories>
-					<li>FlightSpeed</li>
-				</categories>
-			</li>
-			<li>
-				<key>SecondThruster</key>
-				<label>Starboard Thruster</label>
-				<health>120</health>
-				<depth>Internal</depth>
-				
-				<reactors>
-					<li Class = "Vehicles.Reactor_Explosive">
-						<indicator>VF_Explosive</indicator>
-						<chance>0.25</chance>
-						<maxHealth>0.2</maxHealth>
-						<radius>5</radius>
-						<damageDef>Flame</damageDef>
-					</li>
-				</reactors>
-				
-				<hitbox>
-					<side>Body</side>
-				</hitbox>
-				
-				<categories>
-					<li>FlightSpeed</li>
-					<li>FlightControl</li>
-				</categories>
-			</li>
-			<li>
-				<key>Reactor</key>
-				<label>Reactor</label>
-				<health>200</health>
-				<depth>Internal</depth>
-				
-				<reactors>
-					<li Class = "Vehicles.Reactor_Explosive">
-						<indicator>VF_Explosive</indicator>
-						<chance>0.25</chance>
-						<maxHealth>0.2</maxHealth>
-						<radius>18</radius>
-						<damageDef>Bomb</damageDef>
-					</li>
-				</reactors>
-			</li>
-			<li>
-				<key>Cockpit</key>
-				<label>Cockpit</label>
-				<health>160</health>
-				<depth>Internal</depth>
-				
-				<categories>
-					<li>FlightControl</li>
-				</categories>
-			</li>
-		</components>
-		
-		<soundSustainersOnEvent>
-			<li>
-				<start>IgnitionOn</start>
-				<stop>IgnitionOff</stop>
-				<value>kotorsound_enginehum_TIE</value>
-			</li>
-		</soundSustainersOnEvent>
-		
-		<soundOneShotsOnEvent>
-		</soundOneShotsOnEvent>
 		
 	</Vehicles.VehicleDef>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<Vehicles.VehicleDef Name="guy762_SWVehicle_TIEInterceptor_RoyalGuard" ParentName="guy762_SWVehicle_TIEInterceptorBASE">
+		<defName>guy762_SWVehicle_TIEInterceptor_RoyalGuard</defName>
+		<label>TIE/in Interceptor (Royal Guard Type)</label>
+		<description>. \n\n&lt;color=#bb8f04&gt;Crew:&lt;/color&gt; Pilot x1</description>
+		<graphicData>
+			<texPath>Starfighters/TIEInterceptor/TIEInt_RoyalGuard</texPath>
+			<graphicClass>Vehicles.Graphic_Vehicle</graphicClass><drawRotated>true</drawRotated>
+			<drawSize>(9,9)</drawSize>
+			<shaderType>CutoutComplexPattern</shaderType>
+			<pattern>guy762_SWVehiclePattern_TIEIntC</pattern>
+			<color>(205,65,65)</color>
+			<colorTwo>(0,0,0)</colorTwo>
+			<colorThree>(170,60,60)</colorThree>
+		</graphicData>
+
+		<buildDef>guy762_SWVehicleBP_TIEInt_RoyalGuard</buildDef>
+		
+		<statBases>
+			<MarketValue>64000</MarketValue>
+			
+			<EnergyShieldRechargeRate>0.5</EnergyShieldRechargeRate>
+			<EnergyShieldEnergyMax>1</EnergyShieldEnergyMax>
+		</statBases>
+		
+		<comps>
+			<li Class="Vehicles.CompProperties_FueledTravel">
+				<electricPowered>true</electricPowered>
+				<fuelConsumptionRate>2</fuelConsumptionRate>
+				<fuelCapacity>150</fuelCapacity>
+				<fuelConsumptionWorldMultiplier>0.5</fuelConsumptionWorldMultiplier>
+			</li>
+			
+			<li Class="CompProperties_ProjectileInterceptor">
+				<radius>5</radius>
+				<color>(0.4, 0.4, 0.4)</color>
+				
+				<interceptGroundProjectiles>true</interceptGroundProjectiles>
+				<interceptAirProjectiles>true</interceptAirProjectiles>
+				<interceptNonHostileProjectiles>true</interceptNonHostileProjectiles>
+				
+				<reactivateEffect>BulletShieldGenerator_Reactivate</reactivateEffect>
+				<activeSound>BulletShield_Ambience</activeSound>
+				<hitPointsRestoreInstantlyAfterCharge>true</hitPointsRestoreInstantlyAfterCharge>
+				
+				<hitPoints>100</hitPoints>
+				
+				<chargeDurationTicks>1800</chargeDurationTicks>
+				<rechargeHitPointsIntervalTicks>120</rechargeHitPointsIntervalTicks>
+				<minIdleAlpha>0.2</minIdleAlpha>
+				<drawWithNoSelection>True</drawWithNoSelection>
+				<disarmedByEmpForTicks>1500</disarmedByEmpForTicks>
+				
+				<gizmoTipKey>ProjectileInterceptorTip</gizmoTipKey>
+			</li>
+			
+			
+			<li Class="taranchuk_flightcombat.CompProperties_FlightMode">
+				<flightCommands>
+					<flightMode>
+						<label>Flight mode</label>
+						<description>Toggle flight mode.</description>
+						<texPath>Gizmo/TakeOff_Icon</texPath>
+					</flightMode>
+					<hoverMode>
+						<label>Hover mode</label>
+						<description>Toggle hover mode.</description>
+						<texPath>Gizmo/Liftoff_Icon</texPath>
+					</hoverMode>
+					<faceTarget>
+						<label>Face target (hover)</label>
+						<description>Face target while hovering.</description>
+						<texPath>Gizmo/FaceTarget_Icon</texPath>
+					</faceTarget>
+					<cancelFaceTarget>
+						<label>Cancel face target</label>
+						<description>Cancel face target.</description>
+						<texPath>Gizmo/FaceTargetStop_Icon</texPath>
+					</cancelFaceTarget>
+					<chaseTarget>
+						<label>Chase target (flight)</label>
+						<description>Chase target while flying.</description>
+						<texPath>Gizmo/ChaseTarger_Icon</texPath>
+					</chaseTarget>
+				</flightCommands>
+				
+				<fuelConsumptionPerTick>0.0001</fuelConsumptionPerTick><canFlyInSpace>true</canFlyInSpace>
+				
+				<flightSpeedPerTick>1</flightSpeedPerTick> <!-- MAXIMUM XWMG speed: speed5 = 1, speed1 = 0.2 | + 0.1 for blue 5, -0.1 for red highest -->
+				<flightSpeedTurningPerTick>0.7</flightSpeedTurningPerTick> <!-- highest speed in which all 5 standard maneuvers are available | +0.1 for a full row of blues, -0.1 for any red turns -->
+				<turnAnglePerTick>4</turnAnglePerTick> <!-- USE SLOWEST POSSIBLE TURN: speed1 turn = 4, speed2 turn = 2, speed3 turn = 1 | banks = 0.75, 0.5, 0.25 | -1 for red slowest -->
+				<turnAngleCirclingPerTick>1</turnAngleCirclingPerTick> <!-- use fastest possible turn | -0.5 for red fastest -->
+				
+				<distanceFromTargetToStartTurningChaseMode>20</distanceFromTargetToStartTurningChaseMode>
+				<distanceFromTargetToStartTurningCircleMode>10</distanceFromTargetToStartTurningCircleMode>
+				
+				<takeoffTicks>120</takeoffTicks>
+				<landingTicks>120</landingTicks>
+				<moveWhileTakingOff>false</moveWhileTakingOff>
+				
+				
+				
+				<runwayTerrainRequirements>
+					<li>Light</li>
+					<li>Medium</li>
+					<li>Heavy</li>
+				</runwayTerrainRequirements>
+				<flightGraphicData>
+					<texPath>Starfighters/TIEInterceptor/TIEInt_RoyalGuard</texPath>
+					<graphicClass>Vehicles.Graphic_Vehicle</graphicClass><drawRotated>true</drawRotated>
+					<drawSize>(9,9)</drawSize>
+					<shaderType>CutoutComplexPattern</shaderType>
+					<pattern>guy762_SWVehiclePattern_TIEIntC</pattern>
+					<color>(205,65,65)</color>
+					<colorTwo>(0,0,0)</colorTwo>
+					<colorThree>(170,60,60)</colorThree>
+				</flightGraphicData>
+				
+				<AISettings>
+					<gunshipSettings>
+						<npcStock>
+							<!-- <CVNAmmoBluestandard>300</CVNAmmoBluestandard> -->
+							<!-- <CVNAmmoRedstandard>300</CVNAmmoRedstandard> -->
+						</npcStock>
+						<gunshipMode>Chasing</gunshipMode>
+						<distanceFromTarget>30</distanceFromTarget>
+					</gunshipSettings>
+				</AISettings>
+				
+				<flightFlecks>
+					<li>
+						<fleck>CVN_RocketExhaust</fleck>
+						<solidTime>0.20</solidTime>
+						<velocitySpeed>0</velocitySpeed>
+						<position>(-3, 0, 0)</position>
+						<angleOffset>0</angleOffset>
+						<spawnTickRate>1</spawnTickRate>
+						<scale>2</scale>
+					</li>
+				</flightFlecks>
+				<hoverFlecks>
+					<!-- can be filled with the same data as the flight flecks if necessary -->
+				</hoverFlecks>
+				<takeoffFlecks>
+					<li>
+						<fleck>CVN_RocketExhaust</fleck>
+						<solidTime>0.20</solidTime>
+						<solidTimeScaleByTakeoffInverse>true</solidTimeScaleByTakeoffInverse>
+						<velocitySpeed>0</velocitySpeed>
+						<position>(-3, 0, 0)</position>
+						<angleOffset>0</angleOffset>
+						<spawnTickRate>1</spawnTickRate>
+						<scale>2</scale>
+					</li>
+				</takeoffFlecks>
+				<landingFlecks>
+					<li>
+						<fleck>CVN_RocketExhaust</fleck>
+						<solidTime>0.20</solidTime>
+						<solidTimeScaleByTakeoff>true</solidTimeScaleByTakeoff>
+						<velocitySpeed>0</velocitySpeed>
+						<position>(-3, 0, 0)</position>
+						<angleOffset>0</angleOffset>
+						<spawnTickRate>1</spawnTickRate>
+						<scale>2</scale>
+					</li>
+				</landingFlecks>
+				<waypointFleck>guy762_SWStarfighter_waypoint</waypointFleck>
+			</li>
+			
+			
+			<li Class="Vehicles.CompProperties_VehicleTurrets">
+				<turrets>
+					<li>
+						<turretDef>guy762_VehicleTurret_TIEInterceptor_main</turretDef>
+						
+						<renderProperties>
+							<north>(-2.5, 3.5)</north>
+						</renderProperties>
+						<defaultAngleRotated>0</defaultAngleRotated>
+						<angleRestricted>(315,45)</angleRestricted>
+						<gizmoLabel>main gun</gizmoLabel>
+						
+						<aimPieOffset>(0, 2.55)</aimPieOffset>
+						
+						<autoTargetingActive>True</autoTargetingActive>
+						
+						<key>TIEIntKey_gun_1</key>
+					</li>
+					<li>
+						<turretDef>guy762_VehicleTurret_TIEInterceptor_two</turretDef>
+						
+						<renderProperties>
+							<north>(2.5, 3.5)</north>
+						</renderProperties>
+						<defaultAngleRotated>0</defaultAngleRotated>
+						<angleRestricted>(315,45)</angleRestricted>
+						<gizmoLabel>main gun</gizmoLabel>
+						
+						<aimPieOffset>(0, 2.55)</aimPieOffset>
+						
+						<autoTargetingActive>True</autoTargetingActive>
+						
+						<key>TIEIntKey_gun_2</key>
+					</li>
+					<li>
+						<turretDef>guy762_VehicleTurret_TIEInterceptor_three</turretDef>
+						
+						<renderProperties>
+							<north>(-2.5, 3.5)</north>
+						</renderProperties>
+						<defaultAngleRotated>0</defaultAngleRotated>
+						<angleRestricted>(315,45)</angleRestricted>
+						<gizmoLabel>main gun</gizmoLabel>
+						
+						<aimPieOffset>(0, 2.55)</aimPieOffset>
+						
+						<autoTargetingActive>True</autoTargetingActive>
+						
+						<key>TIEIntKey_gun_3</key>
+					</li>
+					<li>
+						<turretDef>guy762_VehicleTurret_TIEInterceptor_four</turretDef>
+						
+						<renderProperties>
+							<north>(2.5, 3.5)</north>
+						</renderProperties>
+						<defaultAngleRotated>0</defaultAngleRotated>
+						<angleRestricted>(315,45)</angleRestricted>
+						<gizmoLabel>main gun</gizmoLabel>
+						
+						<aimPieOffset>(0, 2.55)</aimPieOffset>
+						
+						<autoTargetingActive>True</autoTargetingActive>
+						
+						<key>TIEIntKey_gun_4</key>
+					</li>
+				</turrets>
+			</li>
+		</comps>
+		
+	</Vehicles.VehicleDef>
+	
+	
 	
 	
 	

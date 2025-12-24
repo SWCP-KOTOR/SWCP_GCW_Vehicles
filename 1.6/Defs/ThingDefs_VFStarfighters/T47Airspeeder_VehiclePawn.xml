@@ -9,7 +9,7 @@
 	</Vehicles.PatternDef>
 	
 	
-	<Vehicles.VehicleDef Name="guy762_SWVehicle_T47Airspeeder" ParentName="MM-VF-Vehicle_Pawn">
+	<Vehicles.VehicleDef Name="guy762_SWVehicle_T47Airspeeder" ParentName="guy762_VehiclePawnNonSpaceAircraftBASE">
 		<defName>guy762_SWVehicle_T47Airspeeder</defName>
 		<label>T-47 Airspeeder</label>
 		<description>. \n\n&lt;color=#bb8f04&gt;Crew:&lt;/color&gt; Pilot x1</description>

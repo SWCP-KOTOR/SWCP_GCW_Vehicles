@@ -22,21 +22,8 @@
 	
 	
 	
-	<Vehicles.VehicleDef Name="guy762_SWVehicle_TIEAvenger" ParentName="MM-VF-Vehicle_Pawn">
-		<defName>guy762_SWVehicle_TIEAvenger</defName>
-		<label>TIE/ad Avenger</label>
-		<description>. \n\n&lt;color=#bb8f04&gt;Crew:&lt;/color&gt; Pilot x1</description>
-		<graphicData>
-			<texPath>Starfighters/TIEAvenger/TIEAvenger</texPath>
-			<graphicClass>Vehicles.Graphic_Vehicle</graphicClass>
-			<drawRotated>true</drawRotated>
-			<drawSize>(12,12)</drawSize>
-			<shaderType>CutoutComplexPattern</shaderType>
-			<pattern>guy762_SWVehiclePattern_TIEAvgA</pattern>
-			<color>(165,165,190)</color>
-			<colorTwo>(0,0,0)</colorTwo>
-			<colorThree>(170,60,60)</colorThree>
-		</graphicData>
+	<Vehicles.VehicleDef Name="guy762_SWVehicle_TIEAvengerBASE" ParentName="MM-VF-Vehicle_Pawn" Abstract="True">
+
 		<uiIconScale>1</uiIconScale>
 		<seeThroughFog>true</seeThroughFog>
 		<drawOffscreen>true</drawOffscreen>
@@ -44,7 +31,6 @@
 		
 		<fillPercent>1</fillPercent>
 		<nameable>true</nameable>
-		<buildDef>guy762_SWVehicleBP_TIEAvg</buildDef>
 		<size>(6,11)</size>
 		
 		
@@ -62,14 +48,10 @@
 			<ArmorRating_Heat>0.55</ArmorRating_Heat>
 			<MaxHitPoints>4000</MaxHitPoints> <!-- # of estimated XWMG hull points * 1000 -->
 			
-			<MarketValue>400000</MarketValue>
 			<Flammability>0</Flammability>
-			
-			<EnergyShieldRechargeRate>0.5</EnergyShieldRechargeRate>
-			<EnergyShieldEnergyMax>3</EnergyShieldEnergyMax>
 		</statBases>
 		<vehicleStats>
-			<Mass>1050</Mass>
+			<Mass>10500</Mass>
 			
 			<FlightSpeed>12</FlightSpeed> <!-- this is for world map flight, NOT in-tile flight-->
 			<CargoCapacity>125</CargoCapacity>
@@ -117,7 +99,156 @@
 				</li>
 			</roles>
 		</properties>
+
+		<components>
+			<li>
+				<key>Hull</key>
+				<label>Hull</label>
+				<depth>External</depth>
+				
+				<armor>
+					<ArmorRating_Sharp>1.45</ArmorRating_Sharp>
+					<ArmorRating_Blunt>1.3</ArmorRating_Blunt> <!-- # of estimated XWMG hull points * 0.1, apply to hard armor curve -->
+					<ArmorRating_Heat>1.55</ArmorRating_Heat>
+					<IncomingDamageFactor>-0.20</IncomingDamageFactor> <!-- # of estimated XWMG hull points * -0.05 -->
+				</armor>
+				<health>400</health> <!-- # of estimated XWMG hull points * 100 -->
+				
+				<hitbox>
+					<side>Body</side>
+				</hitbox>
+			</li>
+			
+			<li>
+				<key>FirstThruster</key>
+				<label>Port Thruster</label>
+				<health>120</health>
+				<depth>Internal</depth>
+				
+				<reactors>
+					<li Class = "Vehicles.Reactor_Explosive">
+						<indicator>VF_Explosive</indicator>
+						<chance>0.25</chance>
+						<maxHealth>0.2</maxHealth>
+						<radius>5</radius>
+						<damageDef>Flame</damageDef>
+					</li>
+				</reactors>
+				
+				<hitbox>
+					<side>Body</side>
+				</hitbox>
+				
+				<categories>
+					<li>FlightSpeed</li>
+				</categories>
+			</li>
+			<li>
+				<key>SecondThruster</key>
+				<label>Starboard Thruster</label>
+				<health>120</health>
+				<depth>Internal</depth>
+				
+				<reactors>
+					<li Class = "Vehicles.Reactor_Explosive">
+						<indicator>VF_Explosive</indicator>
+						<chance>0.25</chance>
+						<maxHealth>0.2</maxHealth>
+						<radius>5</radius>
+						<damageDef>Flame</damageDef>
+					</li>
+				</reactors>
+				
+				<hitbox>
+					<side>Body</side>
+				</hitbox>
+				
+				<categories>
+					<li>FlightSpeed</li>
+					<li>FlightControl</li>
+				</categories>
+			</li>
+			<li>
+				<key>Reactor</key>
+				<label>Reactor</label>
+				<health>200</health>
+				<depth>Internal</depth>
+				
+				<reactors>
+					<li Class = "Vehicles.Reactor_Explosive">
+						<indicator>VF_Explosive</indicator>
+						<chance>0.25</chance>
+						<maxHealth>0.2</maxHealth>
+						<radius>18</radius>
+						<damageDef>Bomb</damageDef>
+					</li>
+				</reactors>
+			</li>
+			<li>
+				<key>Cockpit</key>
+				<label>Cockpit</label>
+				<health>160</health>
+				<depth>Internal</depth>
+				
+				<categories>
+					<li>FlightControl</li>
+				</categories>
+			</li>
+		</components>
 		
+		<soundSustainersOnEvent>
+			<li>
+				<start>IgnitionOn</start>
+				<stop>IgnitionOff</stop>
+				<value>kotorsound_enginehum_TIE</value>
+			</li>
+		</soundSustainersOnEvent>
+		
+		<soundOneShotsOnEvent>
+		</soundOneShotsOnEvent>
+		
+	</Vehicles.VehicleDef>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<Vehicles.VehicleDef Name="guy762_SWVehicle_TIEAvenger" ParentName="guy762_SWVehicle_TIEAvengerBASE">
+		<defName>guy762_SWVehicle_TIEAvenger</defName>
+		<label>TIE/ad Avenger</label>
+		<description>. \n\n&lt;color=#bb8f04&gt;Crew:&lt;/color&gt; Pilot x1</description>
+		<graphicData>
+			<texPath>Starfighters/TIEAvenger/TIEAvenger</texPath>
+			<graphicClass>Vehicles.Graphic_Vehicle</graphicClass>
+			<drawRotated>true</drawRotated>
+			<drawSize>(12,12)</drawSize>
+			<shaderType>CutoutComplexPattern</shaderType>
+			<pattern>guy762_SWVehiclePattern_TIEAvgA</pattern>
+			<color>(165,165,190)</color>
+			<colorTwo>(0,0,0)</colorTwo>
+			<colorThree>(170,60,60)</colorThree>
+		</graphicData>
+	
+		<buildDef>guy762_SWVehicleBP_TIEAvg</buildDef>
+
+		<statBases>
+			<MarketValue>400000</MarketValue>
+			
+			<EnergyShieldRechargeRate>0.5</EnergyShieldRechargeRate>
+			<EnergyShieldEnergyMax>3</EnergyShieldEnergyMax>
+		</statBases>
+
 		<comps>
 			<li Class="Vehicles.CompProperties_FueledTravel">
 				<electricPowered>true</electricPowered>
@@ -364,113 +495,7 @@
 				</turrets>
 			</li>
 		</comps>
-		<components>
-			<li>
-				<key>Hull</key>
-				<label>Hull</label>
-				<depth>External</depth>
-				
-				<armor>
-					<ArmorRating_Sharp>1.45</ArmorRating_Sharp>
-					<ArmorRating_Blunt>1.3</ArmorRating_Blunt> <!-- # of estimated XWMG hull points * 0.1, apply to hard armor curve -->
-					<ArmorRating_Heat>1.55</ArmorRating_Heat>
-					<IncomingDamageFactor>-0.20</IncomingDamageFactor> <!-- # of estimated XWMG hull points * -0.05 -->
-				</armor>
-				<health>400</health> <!-- # of estimated XWMG hull points * 100 -->
-				
-				<hitbox>
-					<side>Body</side>
-				</hitbox>
-			</li>
-			
-			<li>
-				<key>FirstThruster</key>
-				<label>Port Thruster</label>
-				<health>120</health>
-				<depth>Internal</depth>
-				
-				<reactors>
-					<li Class = "Vehicles.Reactor_Explosive">
-						<indicator>VF_Explosive</indicator>
-						<chance>0.25</chance>
-						<maxHealth>0.2</maxHealth>
-						<radius>5</radius>
-						<damageDef>Flame</damageDef>
-					</li>
-				</reactors>
-				
-				<hitbox>
-					<side>Body</side>
-				</hitbox>
-				
-				<categories>
-					<li>FlightSpeed</li>
-				</categories>
-			</li>
-			<li>
-				<key>SecondThruster</key>
-				<label>Starboard Thruster</label>
-				<health>120</health>
-				<depth>Internal</depth>
-				
-				<reactors>
-					<li Class = "Vehicles.Reactor_Explosive">
-						<indicator>VF_Explosive</indicator>
-						<chance>0.25</chance>
-						<maxHealth>0.2</maxHealth>
-						<radius>5</radius>
-						<damageDef>Flame</damageDef>
-					</li>
-				</reactors>
-				
-				<hitbox>
-					<side>Body</side>
-				</hitbox>
-				
-				<categories>
-					<li>FlightSpeed</li>
-					<li>FlightControl</li>
-				</categories>
-			</li>
-			<li>
-				<key>Reactor</key>
-				<label>Reactor</label>
-				<health>200</health>
-				<depth>Internal</depth>
-				
-				<reactors>
-					<li Class = "Vehicles.Reactor_Explosive">
-						<indicator>VF_Explosive</indicator>
-						<chance>0.25</chance>
-						<maxHealth>0.2</maxHealth>
-						<radius>18</radius>
-						<damageDef>Bomb</damageDef>
-					</li>
-				</reactors>
-			</li>
-			<li>
-				<key>Cockpit</key>
-				<label>Cockpit</label>
-				<health>160</health>
-				<depth>Internal</depth>
-				
-				<categories>
-					<li>FlightControl</li>
-				</categories>
-			</li>
-		</components>
-		
-		<soundSustainersOnEvent>
-			<li>
-				<start>IgnitionOn</start>
-				<stop>IgnitionOff</stop>
-				<value>kotorsound_enginehum_TIE</value>
-			</li>
-		</soundSustainersOnEvent>
-		
-		<soundOneShotsOnEvent>
-		</soundOneShotsOnEvent>
-		
+	
 	</Vehicles.VehicleDef>
 	
 	
@@ -511,13 +536,16 @@
 	
 	
 	
-	<Vehicles.VehicleDef Name="guy762_SWVehicle_TIEAvenger_prototype" ParentName="guy762_SWVehicle_TIEAvenger">
+	<Vehicles.VehicleDef Name="guy762_SWVehicle_TIEAvenger_prototype" ParentName="guy762_SWVehicle_TIEAvengerBASE">
 		<defName>guy762_SWVehicle_TIEAvenger_prototype</defName>
 		<label>TIE/ad Avenger (Experimental Weapons Testbed)</label>
 		<description>. \n\n&lt;color=#bb8f04&gt;Crew:&lt;/color&gt; Pilot x1</description>
 		<graphicData>
 			<texPath>Starfighters/TIEAvenger/TIEAvenger_Proto</texPath>
-			<pattern Inherit="False" />
+			<graphicClass>Vehicles.Graphic_Vehicle</graphicClass>
+			<drawRotated>true</drawRotated>
+			<drawSize>(12,12)</drawSize>
+			<shaderType>CutoutComplexPattern</shaderType>
 			<color>(190,190,190)</color>
 			<colorTwo>(165,165,190)</colorTwo>
 			<colorThree>(205,65,65)</colorThree>
@@ -532,9 +560,6 @@
 			<MaxHitPoints>5000</MaxHitPoints> <!-- # of estimated XWMG hull points * 1000 -->
 			
 			<MarketValue>750000</MarketValue>
-			
-			<!-- <EnergyShieldRechargeRate>0.5</EnergyShieldRechargeRate> -->
-			<!-- <EnergyShieldEnergyMax>3</EnergyShieldEnergyMax> -->
 		</statBases>
 		
 		<properties>
@@ -571,7 +596,7 @@
 			</roles>
 		</properties>
 
-		<comps Inherit="False">
+		<comps>
 			<li Class="Vehicles.CompProperties_FueledTravel">
 				<electricPowered>true</electricPowered>
 				<fuelConsumptionRate>2</fuelConsumptionRate>
@@ -936,12 +961,16 @@
 	
 	
 	
-	<Vehicles.VehicleDef Name="guy762_SWVehicle_TIEAvenger_RoyalGuard" ParentName="guy762_SWVehicle_TIEAvenger">
+	<Vehicles.VehicleDef Name="guy762_SWVehicle_TIEAvenger_RoyalGuard" ParentName="guy762_SWVehicle_TIEAvengerBASE">
 		<defName>guy762_SWVehicle_TIEAvenger_RoyalGuard</defName>
 		<label>TIE/ad Avenger (Royal Guard Type)</label>
 		<description>. \n\n&lt;color=#bb8f04&gt;Crew:&lt;/color&gt; Pilot x1</description>
 		<graphicData>
 			<texPath>Starfighters/TIEAvenger/TIEAvenger_RoyalGuard</texPath>
+			<graphicClass>Vehicles.Graphic_Vehicle</graphicClass>
+			<drawRotated>true</drawRotated>
+			<drawSize>(12,12)</drawSize>
+			<shaderType>CutoutComplexPattern</shaderType>
 			<pattern>guy762_SWVehiclePattern_TIEAvgC</pattern>
 			<color>(205,65,65)</color>
 			<colorTwo>(0,0,0)</colorTwo>
@@ -957,7 +986,7 @@
 			<EnergyShieldEnergyMax>4</EnergyShieldEnergyMax>
 		</statBases>
 
-		<comps Inherit="False">
+		<comps>
 			<li Class="Vehicles.CompProperties_FueledTravel">
 				<electricPowered>true</electricPowered>
 				<fuelConsumptionRate>2</fuelConsumptionRate>

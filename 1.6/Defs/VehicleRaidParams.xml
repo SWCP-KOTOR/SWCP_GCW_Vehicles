@@ -31,4 +31,139 @@
 		</inventory>
 	</Vehicles.VehicleRaidParamsDef>
 	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<RaidStrategyDef Name="SWCPRaidStrategy_AirRaid">
+		<defName>SWCPRaidStrategy_AirRaid</defName>
+		<workerClass>taranchuk_flightcombat.RaidStrategyWorker_FlightCombatAttack</workerClass>
+		<selectionWeightPerPointsCurve>
+		  <points>
+			<li>(0, 1)</li>
+		  </points>
+		</selectionWeightPerPointsCurve>
+		<!-- <selectionWeightCurvesPerFaction> -->
+		  <!-- <li> -->
+			<!-- <faction>Mechanoid</faction> -->
+			<!-- <selectionWeightPerPointsCurve> -->
+			  <!-- <points> -->
+				<!-- <li>(0, 0)</li> -->
+			  <!-- </points> -->
+			<!-- </selectionWeightPerPointsCurve> -->
+		  <!-- </li> -->
+		<!-- </selectionWeightCurvesPerFaction> -->
+		<pointsFactorCurve>
+		  <points>
+			<li>0, 1</li>
+		  </points>
+		</pointsFactorCurve>
+		
+		<arriveModes>
+		  <li>SWCPArrivalMode_AircraftEdgeFlyIn</li>
+		  <li>SWCPArrivalMode_AircraftEdgeFlyInGroups</li>
+		</arriveModes>
+		
+		<letterLabelEnemy>Raid</letterLabelEnemy>
+		<arrivalTextEnemy>They are attacking immediately.</arrivalTextEnemy>
+		<letterLabelFriendly>Friendlies</letterLabelFriendly>
+		<arrivalTextFriendly>They are moving in to help you immediately.</arrivalTextFriendly>
+	</RaidStrategyDef>
+	
+	<RaidStrategyDef ParentName="SWCPRaidStrategy_AirRaid">
+		<defName>SWCPRaidStrategy_FriendlyAirRaid</defName>
+		<workerClass>RaidStrategyWorker_ImmediateAttackFriendly</workerClass>
+		<!-- <pawnsCanBringFood>True</pawnsCanBringFood> -->
+	</RaidStrategyDef>
+  
+  
+  
+	
+	
+	<PawnsArrivalModeDef>
+		<defName>SWCPArrivalMode_AircraftEdgeFlyIn</defName>
+		<workerClass>PawnsArrivalModeWorker_EdgeWalkIn</workerClass>
+		<selectionWeightCurve>
+		  <points>
+			<li>(300, 1.0)</li>
+			<li>(700, 0.4)</li>
+		  </points>
+		</selectionWeightCurve>
+		<textEnemy>A group of {0} from {1} have arrived nearby.</textEnemy>
+		<textFriendly>A group of friendly {0} from {1} have arrived nearby.</textFriendly>
+		<textWillArrive>{0_pawnsPluralDef} will arrive in starfighters.</textWillArrive>
+		<walkIn>true</walkIn>
+		
+		<layerWhitelist>
+			<li>Surface</li>
+			<li MayRequire="Ludeon.RimWorld.Odyssey">Orbit</li>
+			<li MayRequire="MrHydralisk.LayeredAtmosphereOrbit">LAO_Surface_Luna</li>
+			
+			<li MayRequire="MrHydralisk.LayeredAtmosphereOrbit">SWCPPlanetLayer_Tatooine</li>
+			<li MayRequire="MrHydralisk.LayeredAtmosphereOrbit">SWCPPlanetLayer_TatooineOrbit</li>
+			<li MayRequire="MrHydralisk.LayeredAtmosphereOrbit">SWCPPlanetLayer_OrdMantell</li>
+			<li MayRequire="MrHydralisk.LayeredAtmosphereOrbit">SWCPPlanetLayer_OrdMantellOrbit</li>
+			
+			<li MayRequire="MrHydralisk.LayeredAtmosphereOrbit">SWCPPlanetLayer_RhenVar</li>
+			<li MayRequire="MrHydralisk.LayeredAtmosphereOrbit">SWCPPlanetLayer_RhenVarOrbit</li>
+			<li MayRequire="MrHydralisk.LayeredAtmosphereOrbit">SWCPPlanetLayer_Nevarro</li>
+			<li MayRequire="MrHydralisk.LayeredAtmosphereOrbit">SWCPPlanetLayer_NevarroOrbit</li>
+			
+			<!-- <li MayRequire="MrHydralisk.LayeredAtmosphereOrbit">SWCPPlanetLayer_Baroonda</li> -->
+			<!-- <li MayRequire="MrHydralisk.LayeredAtmosphereOrbit">SWCPPlanetLayer_BaroondaOrbit</li> -->
+			<!-- <li MayRequire="MrHydralisk.LayeredAtmosphereOrbit">SWCPPlanetLayer_Taloraan</li> -->
+			<!-- <li MayRequire="MrHydralisk.LayeredAtmosphereOrbit">SWCPPlanetLayer_TaloraanOrbit</li> -->
+		</layerWhitelist>
+		
+	</PawnsArrivalModeDef>
+
+	<PawnsArrivalModeDef>
+		<defName>SWCPArrivalMode_AircraftEdgeFlyInGroups</defName>
+		<workerClass>PawnsArrivalModeWorker_EdgeWalkInGroups</workerClass>
+		<selectionWeightCurve>
+		  <points>
+			<li>(100, 0)</li>
+			<li>(300, 0.3)</li>
+			<li>(700, 0.5)</li>
+		  </points>
+		</selectionWeightCurve>
+		<pointsFactorCurve>
+		  <points>
+			<li>0, 0.9</li>
+		  </points>
+		</pointsFactorCurve>
+		<textEnemy>{0} from {1} have arrived nearby, approaching from multiple angles.</textEnemy>
+		<textFriendly>Friendly {0} from {1} have arrived nearby, approaching from multiple angles.</textFriendly>
+		<textWillArrive>{0_pawnsPluralDef} will arrive in starfighters, approaching from several angles at once.</textWillArrive>
+		<walkIn>true</walkIn>
+		
+		<layerWhitelist>
+			<li>Surface</li>
+			<li MayRequire="Ludeon.RimWorld.Odyssey">Orbit</li>
+			<li MayRequire="MrHydralisk.LayeredAtmosphereOrbit">LAO_Surface_Luna</li>
+			
+			<li MayRequire="MrHydralisk.LayeredAtmosphereOrbit">SWCPPlanetLayer_Tatooine</li>
+			<li MayRequire="MrHydralisk.LayeredAtmosphereOrbit">SWCPPlanetLayer_TatooineOrbit</li>
+			<li MayRequire="MrHydralisk.LayeredAtmosphereOrbit">SWCPPlanetLayer_OrdMantell</li>
+			<li MayRequire="MrHydralisk.LayeredAtmosphereOrbit">SWCPPlanetLayer_OrdMantellOrbit</li>
+			
+			<li MayRequire="MrHydralisk.LayeredAtmosphereOrbit">SWCPPlanetLayer_RhenVar</li>
+			<li MayRequire="MrHydralisk.LayeredAtmosphereOrbit">SWCPPlanetLayer_RhenVarOrbit</li>
+			<li MayRequire="MrHydralisk.LayeredAtmosphereOrbit">SWCPPlanetLayer_Nevarro</li>
+			<li MayRequire="MrHydralisk.LayeredAtmosphereOrbit">SWCPPlanetLayer_NevarroOrbit</li>
+			
+			<!-- <li MayRequire="MrHydralisk.LayeredAtmosphereOrbit">SWCPPlanetLayer_Baroonda</li> -->
+			<!-- <li MayRequire="MrHydralisk.LayeredAtmosphereOrbit">SWCPPlanetLayer_BaroondaOrbit</li> -->
+			<!-- <li MayRequire="MrHydralisk.LayeredAtmosphereOrbit">SWCPPlanetLayer_Taloraan</li> -->
+			<!-- <li MayRequire="MrHydralisk.LayeredAtmosphereOrbit">SWCPPlanetLayer_TaloraanOrbit</li> -->
+		</layerWhitelist>
+		
+	</PawnsArrivalModeDef>
+	
 </Defs>

@@ -15,7 +15,7 @@
 	<!-- </Vehicles.PatternDef> -->
 	
 	
-	<Vehicles.VehicleDef Name="guy762_SWVehicle_LAATi" ParentName="MM-VF-Vehicle_Pawn">
+	<Vehicles.VehicleDef Name="guy762_SWVehicle_LAATi" ParentName="guy762_VehiclePawnNonSpaceAircraftBASE">
 		<defName>guy762_SWVehicle_LAATi</defName>
 		<label>Low Altitude Assault Transport/infantry</label>
 		<description>. \n\n&lt;color=#bb8f04&gt;Crew:&lt;/color&gt; Pilot x1</description>

@@ -241,20 +241,6 @@
 			</li>
 		</components>
 
-		<!--modExtensions>
-			<li Class="VanillaVehiclesExpanded.StatExtension">
-				<statToAdd>
-					<li>VVE_VehicleTier</li>
-				</statToAdd>
-				<statValues>
-					<li>VVE_Tier1</li>
-				</statValues>
-				<statDescriptions>
-					<li>VVE_Tier1Desc</li>
-				</statDescriptions>
-			</li>
-		</modExtensions-->
-		
 		<comps>
 			<li Class="Vehicles.CompProperties_FueledTravel">
 				<fuelType>KOTOR_Rhydonium</fuelType>
@@ -313,6 +299,13 @@
 				</turrets>
 			</li>
 		</comps>
+		
+		<modExtensions>
+            <li Class="SWCP_GCW_Vehicles.VehicleTemperatureProtection">
+                <protectFromHeat>true</protectFromHeat>
+                <protectFromCold>true</protectFromCold>
+            </li>
+        </modExtensions>
 	</Vehicles.VehicleDef>
 	
 	

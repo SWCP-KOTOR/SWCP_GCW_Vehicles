@@ -4,105 +4,96 @@
 
   
 
-  <!--=============== hardpoint AA point-defense ===============-->
+	<!--=============== hardpoint AA point-defense ===============-->
 
-  <ThingDef ParentName="guy762_TurretBase">
-    <defName>guy762_SWTurret_AAPointDefense</defName>
-    <label>anti-air autoturret</label>
-    <description>.</description>
-	<graphicData>
-      <graphicClass>Graphic_Single</graphicClass>
-      <texPath>Turrets/HardpointBase</texPath>
-      <drawSize>(4,4)</drawSize>
-	  <drawRotated>false</drawRotated>
-	  
-      <damageData>
-        <rect>(0.38,0.2,0.56375,0.8)</rect>
-        <cornerTL>Damage/Corner</cornerTL>
-      </damageData>
-      <shadowData>
-        <offset>(-0.13,-0.87,-0.1)</offset>
-        <volume>(0.5,0.4,1.05)</volume>
-      </shadowData>
-    </graphicData>
-    <uiIconPath>Turrets/PointDefense_icon</uiIconPath>
-	<!-- <rotatable>false</rotatable> -->
+	<ThingDef ParentName="guy762_TurretBase">
+		<defName>guy762_SWTurret_FPC67AntiAir</defName>
+		<label>FPC 6.7 anti-air autoturret</label>
+		<description>.</description>
+		<graphicData>
+		  <graphicClass>Graphic_Single</graphicClass>
+		  <texPath>Turrets/HardpointBase</texPath>
+		  <drawSize>(7,7)</drawSize>
+		  <drawRotated>false</drawRotated>
+		  
+		  <damageData>
+			<rect>(0.38,0.2,0.56375,0.8)</rect>
+			<cornerTL>Damage/Corner</cornerTL>
+		  </damageData>
+		  <shadowData>
+			<offset>(-0.13,-0.87,-0.1)</offset>
+			<volume>(0.5,0.4,1.05)</volume>
+		  </shadowData>
+		</graphicData>
+		<uiIconPath>Turrets/PointDefense_icon</uiIconPath>
+		<!-- <rotatable>false</rotatable> -->
 
+		
+		<statBases>
+		  <MaxHitPoints>750</MaxHitPoints>
+		  
+		  <ShootingAccuracyTurret>0.99</ShootingAccuracyTurret>
+		</statBases>
+		<minifiedDef Inherit="False"/><thingCategories Inherit="False"/>
+		<terrainAffordanceNeeded>Heavy</terrainAffordanceNeeded>
+		
+		<placeWorkers Inherit="False">
+		  <li>PlaceWorker_NotUnderRoof</li>
+		  <li>PlaceWorker_TurretTop</li>
+		</placeWorkers>
 	
-    <statBases>
-      <MaxHitPoints>250</MaxHitPoints>
-	  
-	  <ShootingAccuracyTurret>0.98</ShootingAccuracyTurret> <!-- like level 14 human shooter -->
-    </statBases>
+		
+		<costList>
+		  <Steel>300</Steel>
+		  <Plasteel>30</Plasteel>
+		  <Uranium>60</Uranium>
+		  <ComponentIndustrial>6</ComponentIndustrial>
+		</costList>
+		
+		<size>(4,4)</size>
+		
+		<soundInteract>kotorsound_select_shipgun</soundInteract>
+		<comps>
+			<li Class="CompProperties_Explosive">
+				<wickTicks>80</wickTicks>
+				<startWickHitPointsPercent>0.05</startWickHitPointsPercent>
+				<explosiveRadius>3</explosiveRadius>
+				<explosiveDamageType>guy762_ExplosiveDamage_energy</explosiveDamageType>
+				<chanceNeverExplodeFromDamage>0.5</chanceNeverExplodeFromDamage>
+			</li>
+			<li Class="CompProperties_Flickable"/>
+			<li Class="CompProperties_Power">
+				<compClass>CompPowerTransmitter</compClass>
+				<transmitsPower>true</transmitsPower>
+			</li>
+		</comps>
+		
+		<terrainAffordanceNeeded>Heavy</terrainAffordanceNeeded>
+		<!-- <terrainAffordanceNeeded>Substructure</terrainAffordanceNeeded> -->
+		<building>
+			<turretGunDef>guy762_SWTurretGun_HardpointAAPointDefense</turretGunDef>
+			<turretTopDrawSize>6.5</turretTopDrawSize>
+			<!-- <turretTopOffset>(-0.05, 0.05)</turretTopOffset> -->
+		  
+			<turretBurstWarmupTime>0.125</turretBurstWarmupTime>
+			<turretBurstCooldownTime>2.5</turretBurstCooldownTime>
+		</building>
+		<researchPrerequisites>
+		  <li>SniperTurret</li>
+		</researchPrerequisites>
+	</ThingDef>
 	
-	<placeWorkers>
-	  <li>PlaceWorker_NotUnderRoof</li>
-	</placeWorkers>
 	
 	
-    <costList>
-      <Steel>300</Steel>
-      <Plasteel>30</Plasteel>
-      <Uranium>60</Uranium>
-      <ComponentIndustrial>6</ComponentIndustrial>
-    </costList>
-	
-	<size>(3,3)</size>
-	<fillPercent>0.9</fillPercent>
-	<!-- <hasInteractionCell>True</hasInteractionCell> -->
-	<!-- <interactionCellOffset>(1,0,3)</interactionCellOffset> -->
-	
-	<soundInteract>kotorsound_select_shipgun</soundInteract>
-    <comps>
-      <!-- <li Class="CompProperties_Mannable"> -->
-        <!-- <manWorkType>Violent</manWorkType> -->
-      <!-- </li> -->
-	  
-	  <li Class="CompProperties_Explosive">
-        <wickTicks>240</wickTicks>
-        <explosiveRadius>3</explosiveRadius>
-        <explosiveDamageType>Bomb</explosiveDamageType>
-        <chanceNeverExplodeFromDamage>0.5</chanceNeverExplodeFromDamage>
-      </li>
-      <li Class="CompProperties_Forbiddable"/>
-      <li Class="CompProperties_Power">
-        <compClass>CompPowerTrader</compClass>
-        <!-- <basePowerConsumption>150</basePowerConsumption> -->
-        <basePowerConsumption>0</basePowerConsumption>
-      </li>
-      <li Class="CompProperties_Flickable"/>
-      <li Class="CompProperties_Breakdownable"/>
-      <!-- <li Class="CompProperties_Refuelable"> -->
-        <!-- <fuelLabel>Shots until rearm</fuelLabel> -->
-        <!-- <fuelGizmoLabel>Uranium slugs</fuelGizmoLabel> -->
-        <!-- <outOfFuelMessage>No slugs</outOfFuelMessage> -->
-        <!-- <fuelFilter><thingDefs><li>Uranium</li></thingDefs></fuelFilter> -->
-        <!-- <fuelCapacity>30</fuelCapacity>       20 bursts -->
-        <!-- <fuelMultiplier>0.5</fuelMultiplier> 2 uranium per shot, 60 per full rearm -->
-        <!-- <initialFuelPercent>1</initialFuelPercent> -->
-        <!-- <autoRefuelPercent>0.5</autoRefuelPercent> -->
-        <!-- <showFuelGizmo>true</showFuelGizmo> -->
-        <!-- <minimumFueledThreshold>1</minimumFueledThreshold> -->
-        <!-- <factorByDifficulty>true</factorByDifficulty> -->
-        <!-- <consumeFuelOnlyWhenUsed>true</consumeFuelOnlyWhenUsed> -->
-        <!-- <fuelIconPath>UI/Overlays/Barrel</fuelIconPath> -->
-      <!-- </li> -->
-    </comps>
-	
-	<terrainAffordanceNeeded>Heavy</terrainAffordanceNeeded>
-	<!-- <terrainAffordanceNeeded>Substructure</terrainAffordanceNeeded> -->
-    <building>
-		<turretGunDef>guy762_SWTurretGun_HardpointAAPointDefense</turretGunDef>
-		<turretTopDrawSize>4</turretTopDrawSize>
-		<!-- <turretTopOffset>(-0.05, 0.05)</turretTopOffset> -->
-	  
-		<turretBurstWarmupTime>0.125</turretBurstWarmupTime>
-		<turretBurstCooldownTime>2.5</turretBurstCooldownTime>
-    </building>
-    <researchPrerequisites>
-      <li>SniperTurret</li>
-    </researchPrerequisites>
-  </ThingDef>
+	<PrefabDef>
+	  <defName>SWCPTurretPrefab_FPC67AntiAir</defName>
+	  <size>(4,4)</size>
+	  <things>
+		<guy762_SWTurret_FPC67AntiAir>
+		  <position>(1, 0, 1)</position>
+		</guy762_SWTurret_FPC67AntiAir>
+	  </things>
+	</PrefabDef>
 
  
 

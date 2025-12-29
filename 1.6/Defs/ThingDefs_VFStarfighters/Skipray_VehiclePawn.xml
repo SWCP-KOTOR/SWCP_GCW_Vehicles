@@ -597,7 +597,7 @@
 			<li>
 				<shotsPerBurst>1</shotsPerBurst>
 				<ticksBetweenShots>10</ticksBetweenShots>
-				<ticksBetweenBursts>50</ticksBetweenBursts>
+				<ticksBetweenBursts>60</ticksBetweenBursts>
 				<label>Single</label>
 				<texPath>UI/Power_Blast</texPath>
 			</li>
@@ -647,7 +647,7 @@
 			<li>
 				<shotsPerBurst>1</shotsPerBurst>
 				<ticksBetweenShots>10</ticksBetweenShots>
-				<ticksBetweenBursts>100</ticksBetweenBursts>
+				<ticksBetweenBursts>120</ticksBetweenBursts>
 				<label>Single</label>
 				<texPath>UI/Ion_Master_Power_Blast</texPath>
 			</li>

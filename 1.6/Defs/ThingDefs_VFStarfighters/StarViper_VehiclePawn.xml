@@ -4,27 +4,29 @@
 
 	<Vehicles.PatternDef>
 		<defName>guy762_SWVehiclePattern_StarViperA_closed</defName>
-		<label>StarViper (stock - CLOSED)</label>
+		<!-- <label>StarViper (stock - CLOSED)</label> -->
+		<label>StarViper (stock)</label>
 		<path>Starfighters/StarViper/StarViper_Closed_pattern</path>
 	</Vehicles.PatternDef>
 	
-	<Vehicles.PatternDef>
-		<defName>guy762_SWVehiclePattern_StarViperA_open</defName>
-		<label>StarViper (stock - OPEN)</label>
-		<path>Starfighters/StarViper/StarViper_Open_pattern</path>
-	</Vehicles.PatternDef>
+	<!-- <Vehicles.PatternDef> -->
+		<!-- <defName>guy762_SWVehiclePattern_StarViperA_open</defName> -->
+		<!-- <label>StarViper (stock - OPEN)</label> -->
+		<!-- <path>Starfighters/StarViper/StarViper_Open_pattern</path> -->
+	<!-- </Vehicles.PatternDef> -->
 	
 	<Vehicles.PatternDef>
 		<defName>guy762_SWVehiclePattern_StarViperB_closed</defName>
-		<label>StarViper (Black Sun - CLOSED)</label>
+		<!-- <label>StarViper (Black Sun - CLOSED)</label> -->
+		<label>StarViper (Black Sun)</label>
 		<path>Starfighters/StarViper/StarViper_BlackSun_Closed_pattern</path>
 	</Vehicles.PatternDef>
 	
-	<Vehicles.PatternDef>
-		<defName>guy762_SWVehiclePattern_StarViperB_open</defName>
-		<label>StarViper (Black Sun - OPEN)</label>
-		<path>Starfighters/StarViper/StarViper_BlackSun_Open_pattern</path>
-	</Vehicles.PatternDef>
+	<!-- <Vehicles.PatternDef> -->
+		<!-- <defName>guy762_SWVehiclePattern_StarViperB_open</defName> -->
+		<!-- <label>StarViper (Black Sun - OPEN)</label> -->
+		<!-- <path>Starfighters/StarViper/StarViper_BlackSun_Open_pattern</path> -->
+	<!-- </Vehicles.PatternDef> -->
 	
 	
 	<Vehicles.VehicleDef Name="guy762_SWVehicle_StarViper" ParentName="MM-VF-Vehicle_Pawn">
@@ -204,12 +206,12 @@
 					<li>Heavy</li>
 				</runwayTerrainRequirements>
 				<flightGraphicData>
-					<texPath>Starfighters/StarViper/StarViper_Open</texPath>
+					<texPath>Starfighters/StarViper/StarViper_Closed</texPath>
 					<graphicClass>Vehicles.Graphic_Vehicle</graphicClass>
 					<drawRotated>true</drawRotated>
 					<drawSize>(14,14)</drawSize>
 					<shaderType>CutoutComplexPattern</shaderType>
-					<pattern>guy762_SWVehiclePattern_StarViperA_open</pattern>
+					<pattern>guy762_SWVehiclePattern_StarViperA_closed</pattern>
 					<color>(225,225,225)</color>
 					<colorTwo>(50,50,50)</colorTwo>
 					<colorThree>(200,200,200)</colorThree>

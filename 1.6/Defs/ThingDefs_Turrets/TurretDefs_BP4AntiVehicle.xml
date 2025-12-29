@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+
+  
+
+	<!--=============== (Imperial) BP-4 anti-vehicle turret ===============-->
+
+	<ThingDef ParentName="guy762_TurretBase">
+		<defName>guy762_SWTurret_BP4AntiVehicle</defName>
+		<label>BP-4 anti-vehicle autoturret</label>
+		<description>.</description>
+		<graphicData>
+			<texPath>Turrets/BP4AntiVehicle_base</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<shaderType>CutoutComplex</shaderType>
+			<color>(25,110,30)</color> <!-- greenpire -->
+			<colorTwo>(185,185,185)</colorTwo> <!-- lighter grey -->
+			
+			<drawSize>(7,7)</drawSize>
+			<drawRotated>false</drawRotated>
+		  
+			<damageData>
+				<rect>(0.38,0.2,0.56375,0.8)</rect>
+				<cornerTL>Damage/Corner</cornerTL>
+			</damageData>
+			<shadowData>
+				<offset>(-0.13,-0.87,-0.1)</offset>
+				<volume>(0.5,0.4,1.05)</volume>
+			</shadowData>
+		</graphicData>
+		<uiIconPath>Turrets/BP4AntiVehicle_icon</uiIconPath>
+
+		
+		<statBases>
+			<MaxHitPoints>750</MaxHitPoints>
+			<ShootingAccuracyTurret>0.97</ShootingAccuracyTurret> <!-- like level 11 human shooter -->
+		</statBases>
+		<minifiedDef Inherit="False"/><thingCategories Inherit="False"/>
+		<terrainAffordanceNeeded>Heavy</terrainAffordanceNeeded>
+		
+		<costList>
+		  <Steel>300</Steel>
+		  <Plasteel>30</Plasteel>
+		  <Uranium>60</Uranium>
+		  <ComponentIndustrial>6</ComponentIndustrial>
+		</costList>
+		
+		<size>(4,4)</size>
+		<!-- <fillPercent>1</fillPercent> breaks AI targeting, idk why -->
+
+		<comps>
+			<li Class="CompProperties_Explosive">
+				<wickTicks>80</wickTicks>
+				<startWickHitPointsPercent>0.05</startWickHitPointsPercent>
+				<explosiveRadius>3</explosiveRadius>
+				<explosiveDamageType>guy762_ExplosiveDamage_energy</explosiveDamageType>
+				<chanceNeverExplodeFromDamage>0.5</chanceNeverExplodeFromDamage>
+			</li>
+			<li Class="CompProperties_Power">
+				<compClass>CompPowerTransmitter</compClass>
+				<transmitsPower>true</transmitsPower>
+			</li>
+			<li Class="CompProperties_Flickable"/>
+			<!-- <li Class="CompProperties_Breakdownable"/> -->
+
+		</comps>
+		<building>
+			<turretGunDef>guy762_SWTurretGun_BP4AntiVehicle</turretGunDef>
+			<combatPower>100</combatPower>
+			<turretTopDrawSize>6.5</turretTopDrawSize>
+			<turretBurstWarmupTime>1.5</turretBurstWarmupTime>
+			<turretBurstCooldownTime>2</turretBurstCooldownTime>
+		</building>
+		
+		<placeWorkers Inherit="False">
+		  <li>PlaceWorker_NotUnderRoof</li>
+		  <li>PlaceWorker_TurretTop</li>
+		</placeWorkers>
+		
+		<researchPrerequisites>
+		  <li>SniperTurret</li>
+		</researchPrerequisites>
+	</ThingDef>
+
+
+
+
+
+
+
+
+	
+	<ThingDef ParentName="BaseWeaponTurret">
+		<defName>guy762_SWTurretGun_BP4AntiVehicle</defName>
+		<label>BP-4 anti-vehicle autoturret</label>
+		<description>.</description>
+		<graphicData>
+			<texPath>Turrets/BP4AntiVehicle_gun</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<shaderType>CutoutComplex</shaderType>
+			<color>(25,110,30)</color> <!-- greenpire -->
+			<colorTwo>(185,185,185)</colorTwo> <!-- lighter grey -->
+
+			<drawSize>(7,7)</drawSize>
+		</graphicData>
+		<statBases>
+			<AccuracyTouch>0.30</AccuracyTouch>
+			<AccuracyShort>0.40</AccuracyShort>
+			<AccuracyMedium>0.80</AccuracyMedium>
+			<AccuracyLong>0.90</AccuracyLong>
+			<RangedWeapon_Cooldown>2</RangedWeapon_Cooldown>
+			
+			<!-- <ArmorRating_Sharp>0.55</ArmorRating_Sharp> -->
+			<!-- <ArmorRating_Blunt>0.4</ArmorRating_Blunt> -->
+            <!-- <ArmorRating_Heat>0.65</ArmorRating_Heat> -->
+            <!-- <IncomingDamageFactor>0.75</IncomingDamageFactor> -->
+			
+			<DeteriorationRate>0</DeteriorationRate>
+			<Mass>2000</Mass>
+			<Flammability>0</Flammability>
+		</statBases>
+		<verbs>
+			<!-- <li Class="VerbShootVehicle.VerbPropertiesAntiVehicle"> -->
+				<!-- <defaultProjectile>SWFixedTurretBullet_heavyAVred</defaultProjectile> -->
+				<!-- <warmupTime>1.5</warmupTime> -->
+				<!-- <range>60</range> -->
+				<!-- <burstShotCount>1</burstShotCount> -->
+				<!-- <soundCast>kotorsound_EaWturret</soundCast> -->
+				<!-- <soundCastTail>GunTail_Heavy</soundCastTail> -->
+				<!-- <muzzleFlashScale>18</muzzleFlashScale> -->
+				
+				<!-- <verbClass>VerbShootVehicle.Verb_ShootAntiVehicle</verbClass> -->
+				<!-- <onlyTargetVehicle>True</onlyTargetVehicle> -->
+                <!-- <onlyTargetFleshType>False</onlyTargetFleshType> -->
+			<!-- </li> -->
+			<li>
+				<verbClass>Verb_Shoot</verbClass>
+				<defaultProjectile>SWFixedTurretBullet_heavyAVred</defaultProjectile>
+				<warmupTime>1.5</warmupTime>
+				<range>60</range>
+				<burstShotCount>1</burstShotCount>
+				<soundCast>kotorsound_EaWturret</soundCast>
+				<soundCastTail>GunTail_Heavy</soundCastTail>
+				<muzzleFlashScale>18</muzzleFlashScale>
+				<!-- <forcedMissRadius>2</forcedMissRadius> -->
+				<!-- <ai_AvoidFriendlyFireRadius>3</ai_AvoidFriendlyFireRadius> -->
+			</li>
+		</verbs>
+		<modExtensions>
+			<li Class="IgnoreConfigErrors.Ignore_ForcedMissRadius" />
+		</modExtensions>
+	</ThingDef>
+	
+	
+	
+	
+	<PrefabDef>
+	  <defName>SWCPTurretPrefab_BP4AntiVehicle</defName>
+	  <size>(4,4)</size>
+	  <things>
+		<guy762_SWTurret_BP4AntiVehicle>
+		  <position>(1, 0, 1)</position>
+		</guy762_SWTurret_BP4AntiVehicle>
+	  </things>
+	</PrefabDef>
+
+	
+
+
+</Defs>

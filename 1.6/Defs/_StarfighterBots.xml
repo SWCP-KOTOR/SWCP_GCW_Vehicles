@@ -485,8 +485,8 @@
 		<defName>guy762_SWVehicle_StarViperBlackSun_bot</defName>
 		
 		<graphicData>
-			<texPath>Starfighters/StarViper/StarViper_Open</texPath>
-			<pattern>guy762_SWVehiclePattern_StarViperB_open</pattern>
+			<texPath>Starfighters/StarViper/StarViper_Closed</texPath>
+			<pattern>guy762_SWVehiclePattern_StarViperB_closed</pattern>
 			<color>(50,50,50)</color>
 			<colorTwo>(225,225,225)</colorTwo>
 			<colorThree>(200,200,200)</colorThree>
@@ -529,8 +529,8 @@
 		<defName>guy762_SWVehicle_StarViperZannCon_bot</defName>
 		
 		<graphicData>
-			<texPath>Starfighters/StarViper/StarViper_Open</texPath>
-			<pattern>guy762_SWVehiclePattern_StarViperA_open</pattern>
+			<texPath>Starfighters/StarViper/StarViper_Closed</texPath>
+			<pattern>guy762_SWVehiclePattern_StarViperA_closed</pattern>
 			<color>(225,225,225)</color>
 			<colorTwo>(50,50,50)</colorTwo>
 			<colorThree>(200,200,200)</colorThree>

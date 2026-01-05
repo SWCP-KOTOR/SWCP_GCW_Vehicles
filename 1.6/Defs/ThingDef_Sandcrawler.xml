@@ -55,7 +55,7 @@
 			<drawOffset>(-2,0,5)</drawOffset>
 			<color>(120,80,60)</color> <!-- sandcrawler rust -->
 		  
-			<shadowData>
+			<shadowData><!-- X, tail, Y -->
 				<volume>(30, 20, 8)</volume>
 				<offset>(-2, 0, -7)</offset>
 			</shadowData>

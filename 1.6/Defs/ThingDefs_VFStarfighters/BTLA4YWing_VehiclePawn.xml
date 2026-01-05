@@ -17,7 +17,7 @@
 	
 	<Vehicles.VehicleDef Name="guy762_SWVehicle_BTLA4YWing" ParentName="MM-VF-Vehicle_Pawn">
 		<defName>guy762_SWVehicle_BTLA4YWing</defName>
-		<label>BTL-A4 Y-Wing Starfighter</label>
+		<label>BTL-A4 Y-Wing starfighter</label>
 		<description>. \n\n&lt;color=#bb8f04&gt;Crew:&lt;/color&gt; Pilot x1</description>
 		<graphicData>
 			<texPath>Starfighters/BTLA4YWing/YWing</texPath>

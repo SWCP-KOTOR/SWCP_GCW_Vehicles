@@ -87,7 +87,7 @@
 				<li>
 					<key>pilot</key>
 					<label>Pilot</label>
-					<slots>1</slots>
+					<slots>2</slots>
 					<slotsToOperate>1</slotsToOperate>
 					<handlingTypes>
 						<li>Movement</li>
@@ -97,11 +97,6 @@
 						<li>YT2400Key_gun_3</li>
 						<li>YT2400Key_gun_4</li>
 					</turretIds>
-				</li>
-				<li>
-					<key>copilot</key>
-					<label>Copilot</label>
-					<slots>1</slots>
 				</li>
 				<li>
 					<key>navigator</key>
@@ -485,7 +480,7 @@
 			<li>
 				<start>IgnitionOn</start>
 				<stop>IgnitionOff</stop>
-				<value>kotorsound_enginehum_n1naboo</value>
+				<value>kotorsound_enginehum_YTfreighter</value>
 			</li>
 		</soundSustainersOnEvent>
 		

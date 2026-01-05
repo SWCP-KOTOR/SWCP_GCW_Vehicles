@@ -397,7 +397,7 @@
 			<li>
 				<start>IgnitionOn</start>
 				<stop>IgnitionOff</stop>
-				<value>kotorsound_enginehum_TIEBomber</value>
+				<value>kotorsound_enginehum_TIEAggressor</value>
 			</li>
 		</soundSustainersOnEvent>
 		

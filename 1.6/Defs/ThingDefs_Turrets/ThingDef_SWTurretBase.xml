@@ -11,7 +11,7 @@
 		<drawHighlight>true</drawHighlight>
 		<drawHighlightOnlyForHostile>true</drawHighlightOnlyForHostile>
 		<stealable>false</stealable>
-		<rotatable>false</rotatable>
+		<!-- <rotatable>false</rotatable> -->
 		<passability>PassThroughOnly</passability>
 		<pathCost>50</pathCost>
 		<thingCategories>

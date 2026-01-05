@@ -78,7 +78,7 @@
 				<li>
 					<key>pilot</key>
 					<label>Pilot</label>
-					<slots>1</slots>
+					<slots>2</slots>
 					<slotsToOperate>1</slotsToOperate>
 					<handlingTypes>
 						<li>Movement</li>
@@ -90,11 +90,11 @@
 						<li>TIEBomberKey_gun_2</li>
 					</turretIds>
 				</li>
-				<li>
-					<key>copilot</key>
-					<label>Copilot</label>
-					<slots>1</slots>
-				</li>
+				<!-- <li> -->
+					<!-- <key>copilot</key> -->
+					<!-- <label>Copilot</label> -->
+					<!-- <slots>1</slots> -->
+				<!-- </li> -->
 			</roles>
 		</properties>
 		

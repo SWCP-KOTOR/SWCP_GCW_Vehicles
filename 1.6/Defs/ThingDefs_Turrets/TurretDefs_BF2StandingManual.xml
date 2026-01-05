@@ -82,8 +82,8 @@
     </comps>
     <building>
 		<turretGunDef>guy762_SWTurretGun_BF2StandingBlaster</turretGunDef>
-		<turretTopDrawSize>2</turretTopDrawSize>
-		<turretTopOffset>(0, 0.5)</turretTopOffset>
+		<turretTopDrawSize>3</turretTopDrawSize>
+		<!-- <turretTopOffset>(0, 0.5)</turretTopOffset> -->
 	  
 		<turretBurstWarmupTime>2.5</turretBurstWarmupTime>
 		<turretBurstCooldownTime>2.5</turretBurstCooldownTime>
@@ -107,7 +107,7 @@
     <graphicData>
       <texPath>Turrets/BF2StandingTurret_gun</texPath>
       <graphicClass>Graphic_Single</graphicClass>
-	  <drawSize>(1,1)</drawSize>
+	  <!-- <drawSize>(1,1)</drawSize> -->
 	  
 	  <!-- <drawOffset>(0,0,-0.25)</drawOffset> -->
     </graphicData>

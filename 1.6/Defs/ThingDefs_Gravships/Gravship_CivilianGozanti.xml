@@ -12,7 +12,10 @@
 		  <drawOffset>(0.25,0,-0.125)</drawOffset>
 		  
 		  <shaderType>CutoutComplex</shaderType>
-		  <color>(180,105,75)</color> <!-- soft rust -->
+		  <!-- orange -->
+		  <!-- <color>(180,105,75)</color> -->
+		  
+		  <color>(140,60,60)</color> <!-- red -->
 		  <colorTwo>(185,180,175)</colorTwo> <!-- warm grey -->
 		</graphicData>
 		<size>(1,1)</size>

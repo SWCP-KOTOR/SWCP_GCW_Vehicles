@@ -2,13 +2,13 @@
 
 <Defs>
 	<Vehicles.VehicleBuildDef ParentName="VehicleBaseBuildable">
-		<defName>guy762_SWVehicleBP_AWing</defName>
-		<label>RZ-1 A-Wing interceptor</label>
+		<defName>guy762_SWVehicleBP_NimbusVWing</defName>
+		<label>Alpha-3 "Nimbus" V-Wing starfighter</label>
 		<description>.</description>
 		<designationCategory>MM_StarWarsShipBuildTab</designationCategory>
 		
 		<graphicData>
-			<texPath>Starfighters/AWing/AWing</texPath>
+			<texPath>Starfighters/NimbusVWing/NimbusVWing</texPath>
 			<graphicClass>Graphic_Multi</graphicClass>
 			<drawSize>(10,10)</drawSize>
 			<!-- <drawOffset>(0, 0, 1)</drawOffset> -->
@@ -20,7 +20,7 @@
 			<Flammability>0.05</Flammability>
 		</statBases>
 		
-		<size>(5,8)</size>
+		<size>(5,10)</size>
 		
 		<!--researchPrerequisites>
 			<li>VVE_BasicVehicles</li>
@@ -36,7 +36,7 @@
 		</costList>
 		
 		<soundImpactDefault>BulletImpact_Metal</soundImpactDefault>
-		<thingToSpawn>guy762_SWVehicle_AWing</thingToSpawn>
+		<thingToSpawn>guy762_SWVehicle_NimbusVWing</thingToSpawn>
 		
 		<constructionSkillPrerequisite>6</constructionSkillPrerequisite>
 	</Vehicles.VehicleBuildDef>

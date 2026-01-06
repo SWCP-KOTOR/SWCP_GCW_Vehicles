@@ -296,7 +296,8 @@
 						<turretDef>guy762_VehicleTurret_ConcMissile</turretDef>
 						
 						<renderProperties>
-							<north>(-0.85, 1.125)</north>
+							<!-- <north>(-0.85, 1.125)</north> closer to the cockpit -->
+							<north>(-2.29, -0.55)</north> <!-- the wing tube things -->
 						</renderProperties>
 						<defaultAngleRotated>0</defaultAngleRotated>
 						<angleRestricted>(315,45)</angleRestricted>
@@ -310,7 +311,8 @@
 						<turretDef>guy762_VehicleTurret_ConcMissile</turretDef>
 						
 						<renderProperties>
-							<north>(0.85, 1.125)</north>
+							<!-- <north>(0.85, 1.125)</north> closer to the cockpit -->
+							<north>(2.29, -0.55)</north> <!-- the wing tube things -->
 						</renderProperties>
 						<defaultAngleRotated>0</defaultAngleRotated>
 						<angleRestricted>(315,45)</angleRestricted>

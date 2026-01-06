@@ -3,32 +3,32 @@
 <Defs>	
 
 	<Vehicles.PatternDef>
-		<defName>guy762_SWVehiclePattern_YWingA</defName>
-		<label>Y-Wing (stock)</label>
-		<path>Starfighters/BTLA4YWing/YWing_Pattern_Rebel</path>
+		<defName>guy762_SWVehiclePattern_SupaFighterA</defName>
+		<label>Supa Fighter (stock)</label>
+		<path>Starfighters/SupaFighter/SupaFighter_Pattern_stock</path>
 	</Vehicles.PatternDef>
 	
-	<!-- <Vehicles.PatternDef> -->
-		<!-- <defName>guy762_SWVehiclePattern_YWingB</defName> -->
-		<!-- <label>Y-Wing (New Republic)</label> -->
-		<!-- <path>Starfighters/T65XWing/YWing_Pattern_NewRepublic</path> -->
-	<!-- </Vehicles.PatternDef> -->
+	<Vehicles.PatternDef>
+		<defName>guy762_SWVehiclePattern_SupaFighterB</defName>
+		<label>Supa Fighter (Black Sun)</label>
+		<path>Starfighters/SupaFighter/SupaFighter_Pattern_BlackSun</path>
+	</Vehicles.PatternDef>
 	
 	
-	<Vehicles.VehicleDef Name="guy762_SWVehicle_BTLA4YWing" ParentName="MM-VF-Vehicle_Pawn">
-		<defName>guy762_SWVehicle_BTLA4YWing</defName>
-		<label>BTL-A4 Y-Wing starfighter</label>
+	<Vehicles.VehicleDef Name="guy762_SWVehicle_SupaFighter" ParentName="MM-VF-Vehicle_Pawn">
+		<defName>guy762_SWVehicle_SupaFighter</defName>
+		<label>Supa Fighter</label>
 		<description>. \n\n&lt;color=#bb8f04&gt;Crew:&lt;/color&gt; Pilot x1</description>
 		<graphicData>
-			<texPath>Starfighters/BTLA4YWing/YWing</texPath>
+			<texPath>Starfighters/SupaFighter/SupaFighter</texPath>
 			<graphicClass>Vehicles.Graphic_Vehicle</graphicClass>
 			<drawRotated>true</drawRotated>
-			<drawSize>(19,19)</drawSize>
+			<drawSize>(20,20)</drawSize>
 			<shaderType>CutoutComplexPattern</shaderType>
-			<pattern>guy762_SWVehiclePattern_YWingA</pattern>
-			<color>(230,185,45)</color> <!-- republic yellow -->
-			<colorTwo>(100,120,140)</colorTwo> <!-- new republic blue -->
-			<colorThree>(177,177,177)</colorThree> <!-- alliance grey -->
+			<pattern>guy762_SWVehiclePattern_SupaFighterA</pattern>
+			<color>(125,50,55)</color> <!-- scurrg red -->
+			<colorTwo>(60,60,140)</colorTwo> <!-- Z-95 blue -->
+			<colorThree>(105,105,120)</colorThree> <!-- dark sienar blue -->
 		</graphicData>
 		<uiIconScale>1</uiIconScale>
 		<seeThroughFog>true</seeThroughFog>
@@ -37,13 +37,9 @@
 		
 		<fillPercent>1</fillPercent>
 		<nameable>true</nameable>
-		<buildDef>guy762_SWVehicleBP_BTLA4YWing</buildDef>
-		<size>(10,18)</size>
+		<buildDef>guy762_SWVehicleBP_SupaFighter</buildDef>
+		<size>(17,19)</size>
 		
-		
-		<killedLeavings>
-		  <guy762_ShipChunk_YWing>1</guy762_ShipChunk_YWing>
-		</killedLeavings>
 		
 		<canCaravan>false</canCaravan>
 		<vehicleCategory>Combat</vehicleCategory>
@@ -54,23 +50,23 @@
 			<!--ArmorRating_Sharp>+0.05</ArmorRating_Sharp>
 			<ArmorRating_Blunt>-0.1</ArmorRating_Blunt>        BASE CURVE FOR HARD ARMOR
 			<ArmorRating_Heat>+0.15</ArmorRating_Heat-->
-			<ArmorRating_Sharp>0.55</ArmorRating_Sharp>
-			<ArmorRating_Blunt>0.4</ArmorRating_Blunt> <!-- # of estimated XWMG hull points * 0.1, apply to hard armor curve -->
-			<ArmorRating_Heat>0.65</ArmorRating_Heat>
-			<MaxHitPoints>5000</MaxHitPoints> <!-- # of estimated XWMG hull points * 1000 -->
+			<ArmorRating_Sharp>0.65</ArmorRating_Sharp>
+			<ArmorRating_Blunt>0.5</ArmorRating_Blunt> <!-- # of estimated XWMG hull points * 0.1, apply to hard armor curve -->
+			<ArmorRating_Heat>0.75</ArmorRating_Heat>
+			<MaxHitPoints>6000</MaxHitPoints> <!-- # of estimated XWMG hull points * 1000 -->
 			
-			<MarketValue>45000</MarketValue>
+			<MarketValue>70000</MarketValue>
 			<Flammability>0</Flammability>
 			
-			<EnergyShieldRechargeRate>0.5</EnergyShieldRechargeRate> <!-- SPECIAL NOTE: shield and hull values have been swapped for the BTL-B republic Y-wing since it really doesn't make sense that the up-armored model would have 1 less hull value than the model with 70% of the plating removed -->
+			<EnergyShieldRechargeRate>0.5</EnergyShieldRechargeRate>
 			<EnergyShieldEnergyMax>2</EnergyShieldEnergyMax>
 		</statBases>
 		<vehicleStats>
-			<Mass>1050</Mass>
+			<Mass>75000</Mass>
 			
 			<FlightSpeed>12</FlightSpeed> <!-- this is for world map flight, NOT in-tile flight-->
-			<CargoCapacity>110</CargoCapacity>
-			<SoS2CombatDodgeChance MayRequire="kentington.saveourship2">13.75</SoS2CombatDodgeChance> <!-- 3/8 chance to dodge on XWMG green dice = 0.375 | 0.375*10 + 10 = 13.75 | 13.75 * X = SoS2DC | X = estimated # of XWMG green dice -->
+			<CargoCapacity>80</CargoCapacity>
+			<SoS2CombatDodgeChance MayRequire="kentington.saveourship2">27.5</SoS2CombatDodgeChance> <!-- 3/8 chance to dodge on XWMG green dice = 0.375 | 0.375*10 + 10 = 13.75 | 13.75 * X = SoS2DC | X = estimated # of XWMG green dice -->
 		</vehicleStats>
 		
 		<race>
@@ -87,8 +83,8 @@
 			<manhunterTargetsVehicle>false</manhunterTargetsVehicle>
 			
 			<vehicleJobLimitations>
-				<li>(RepairVehicle, 2)</li> <!-- how many pawns can repair this vehicle at a time -->
-			</vehicleJobLimitations>
+				<li>(RepairVehicle, 4)</li> <!-- how many pawns can repair this vehicle at a time -->
+			</vehicleJobLimitations> <!-- guy762 RULES: repair job count should be twice the amount of pawns to fully operate the vehicle -->
 			
 			<roles>
 				<li>
@@ -100,14 +96,28 @@
 						<li>Movement</li>
 						<li>Turret</li>
 					</handlingTypes>
-					<!-- <comfort>-0.25</comfort> -->
+					<comfort>1.25</comfort>
 					
 					<turretIds>
-						<li>YWingKey_gun_1</li>
-						<li>YWingKey_gun_2</li>
-						<li>YWingKey_gun_3</li>
-						<li>YWingKey_gun_4</li>
-						<li>YWingKey_gun_5</li>
+						<li>SupaFighterKey_gun_1</li>
+						<li>SupaFighterKey_gun_2</li>
+						
+						<li>SupaFighterKey_gun_4</li>
+						<li>SupaFighterKey_gun_5</li>
+					</turretIds>
+				</li>
+				<li>
+					<key>gunner</key>
+					<label>Gunner</label>
+					<slots>1</slots>
+					<slotsToOperate>1</slotsToOperate>
+					<handlingTypes>
+						<li>Turret</li>
+					</handlingTypes>
+					<comfort>-0.75</comfort>
+					
+					<turretIds>
+						<li>SupaFighterKey_gun_3</li>
 					</turretIds>
 				</li>
 			</roles>
@@ -118,7 +128,7 @@
 				<fuelType>KOTOR_Rhydonium</fuelType>				<!-- Must Include -->
 				<leakDef>Filth_Fuel</leakDef><targetFuelLevelConfigurable>true</targetFuelLevelConfigurable><ambientHeat>3.0</ambientHeat>
 				<fuelConsumptionRate>2</fuelConsumptionRate>
-				<fuelCapacity>80</fuelCapacity>
+				<fuelCapacity>150</fuelCapacity>
 				<fuelConsumptionWorldMultiplier>0.5</fuelConsumptionWorldMultiplier>
 			</li>
 			
@@ -174,12 +184,12 @@
 					</chaseTarget>
 				</flightCommands>
 				
-				<fuelConsumptionPerTick>0.0001</fuelConsumptionPerTick><canFlyInSpace>true</canFlyInSpace>
+				<fuelConsumptionPerTick>0.001</fuelConsumptionPerTick><canFlyInSpace>true</canFlyInSpace>
 				
-				<flightSpeedPerTick>0.7</flightSpeedPerTick> <!-- MAXIMUM XWMG speed: speed5 = 1, speed1 = 0.2 | + 0.1 for blue 5, -0.1 for red highest -->
-				<flightSpeedTurningPerTick>0.5</flightSpeedTurningPerTick> <!-- highest speed in which all 5 standard maneuvers are available | +0.1 for a full row of blues, -0.1 for any red turns -->
-				<turnAnglePerTick>2</turnAnglePerTick> <!-- USE SLOWEST POSSIBLE TURN: speed1 turn = 4, speed2 turn = 2, speed3 turn = 1 | banks = 0.75, 0.5, 0.25 | -1 for red slowest -->
-				<turnAngleCirclingPerTick>0.5</turnAngleCirclingPerTick> <!-- use fastest possible turn | -0.5 for red fastest -->
+				<flightSpeedPerTick>0.6</flightSpeedPerTick> <!-- MAXIMUM XWMG speed: speed5 = 1, speed1 = 0.2 | + 0.1 for blue 5, -0.1 for red highest -->
+				<flightSpeedTurningPerTick>0.6</flightSpeedTurningPerTick> <!-- highest speed in which all 5 standard maneuvers are available | +0.1 for a full row of blues, -0.1 for any red turns -->
+				<turnAnglePerTick>3</turnAnglePerTick> <!-- USE SLOWEST POSSIBLE TURN: speed1 turn = 4, speed2 turn = 2, speed3 turn = 1 | banks = 0.75, 0.5, 0.25 | -1 for red slowest -->
+				<turnAngleCirclingPerTick>1</turnAngleCirclingPerTick> <!-- use fastest possible turn | -0.5 for red fastest -->
 				
 				<distanceFromTargetToStartTurningChaseMode>20</distanceFromTargetToStartTurningChaseMode>
 				<distanceFromTargetToStartTurningCircleMode>10</distanceFromTargetToStartTurningCircleMode>
@@ -196,38 +206,18 @@
 					<li>Heavy</li>
 				</runwayTerrainRequirements>
 				<flightGraphicData>
-					<texPath>Starfighters/BTLA4YWing/YWing</texPath>
+					<texPath>Starfighters/SupaFighter/SupaFighter</texPath>
 					<graphicClass>Vehicles.Graphic_Vehicle</graphicClass>
 					<drawRotated>true</drawRotated>
-					<drawSize>(19,19)</drawSize>
+					<drawSize>(20,20)</drawSize>
 					<shaderType>CutoutComplexPattern</shaderType>
-					<pattern>guy762_SWVehiclePattern_YWingA</pattern>
-					<color>(230,185,45)</color> <!-- republic yellow -->
-					<colorTwo>(100,120,140)</colorTwo> <!-- new republic blue -->
-					<colorThree>(177,177,177)</colorThree> <!-- alliance grey -->
+					<pattern>guy762_SWVehiclePattern_SupaFighterA</pattern>
+					<color>(125,50,55)</color> <!-- scurrg red -->
+					<colorTwo>(60,60,140)</colorTwo> <!-- Z-95 blue -->
+					<colorThree>(165,165,190)</colorThree> <!-- sienar blue -->
 				</flightGraphicData>
 				
-				<bombOptions>
-					<li>
-						<label>proton bomb</label>
-						<texPath>Weapons/Projectiles/energybomb</texPath>
-						<costList>
-							<Steel>10</Steel>
-						</costList>
-						<projectile>SWVehicleBullet_protonbomb</projectile>
-						<cooldownTicks>60</cooldownTicks>
-					</li>
-				</bombOptions>
 				<AISettings>
-					<!-- <bomberSettings> -->
-						<!-- <npcStock> -->
-							<!-- <Steel>100</Steel> -->
-						<!-- </npcStock> -->
-						<!-- <maxBombRun>5</maxBombRun> -->
-						<!-- <blacklistedBombs> -->
-						<!-- </blacklistedBombs> -->
-						<!-- <distanceFromTarget>20</distanceFromTarget> -->
-					<!-- </bomberSettings> -->
 					<gunshipSettings>
 						<npcStock>
 							<!-- <CVNAmmoBluestandard>300</CVNAmmoBluestandard> -->
@@ -283,10 +273,10 @@
 			<li Class="Vehicles.CompProperties_VehicleTurrets">
 				<turrets>
 					<li>
-						<turretDef>guy762_VehicleTurret_YWing_Main</turretDef>
+						<turretDef>guy762_VehicleTurret_SupaFighter_main</turretDef>
 						
 						<renderProperties>
-							<north>(0, 8.5)</north>
+							<north>(-8.325, 6.55)</north>
 						</renderProperties>
 						<defaultAngleRotated>0</defaultAngleRotated>
 						<angleRestricted>(315,45)</angleRestricted>
@@ -296,73 +286,77 @@
 						
 						<autoTargetingActive>True</autoTargetingActive>
 						
-						<key>YWingKey_gun_1</key>
+						<key>SupaFighterKey_gun_1</key>
 					</li>
 					<li>
-						<turretDef>guy762_VehicleTurret_YWing_Dorsal</turretDef>
+						<turretDef>guy762_VehicleTurret_SupaFighter_main</turretDef>
 						
 						<renderProperties>
-							<north>(0, 4.25)</north>
+							<north>(8.325, 6.55)</north>
 						</renderProperties>
 						<defaultAngleRotated>0</defaultAngleRotated>
-						<!-- <angleRestricted>(315,45)</angleRestricted> -->
-						<gizmoLabel>dorsal ion turret</gizmoLabel>
+						<angleRestricted>(315,45)</angleRestricted>
+						<gizmoLabel>main gun</gizmoLabel>
 						
 						<aimPieOffset>(0, 2.55)</aimPieOffset>
 						
 						<autoTargetingActive>True</autoTargetingActive>
 						
-						<key>YWingKey_gun_2</key>
-					</li>
-
-					<!--/////////////////////////-->
-					
-					<li>
-						<turretDef>guy762_VehicleTurret_ProtonBombs</turretDef>
-						
-						<renderProperties>
-							<north>(0, -1.75)</north>
-						</renderProperties>
-						<defaultAngleRotated>180</defaultAngleRotated>
-						<angleRestricted>(165,195)</angleRestricted>
-						<gizmoLabel>bomb bay</gizmoLabel>
-						
-						<aimPieOffset>(0, 2.55)</aimPieOffset>
-						
-						<key>YWingKey_gun_3</key>
+						<key>SupaFighterKey_gun_2</key>
 					</li>
 					
 					<!--/////////////////////////-->
 					
 					<li>
-						<turretDef>guy762_VehicleTurret_ProTorp</turretDef>
+						<turretDef>guy762_VehicleTurret_SupaFighter_Dorsal</turretDef>
 						
 						<renderProperties>
-							<north>(-1.35, 5.75)</north>
+							<north>(3.85, 2.5)</north>
 						</renderProperties>
 						<defaultAngleRotated>0</defaultAngleRotated>
-						<angleRestricted>(315,45)</angleRestricted>
-						<gizmoLabel>proton torpedo launcher</gizmoLabel>
+						<!-- <angleRestricted>(355,5)</angleRestricted> -->
+						<gizmoLabel>dorsal mass driver</gizmoLabel>
 						
 						<aimPieOffset>(0, 2.55)</aimPieOffset>
 						
-						<key>YWingKey_gun_4</key>
-					</li>
-					<li>
-						<turretDef>guy762_VehicleTurret_ProTorp</turretDef>
+						<autoTargetingActive>True</autoTargetingActive>
 						
-						<renderProperties>
-							<north>(1.35, 5.75)</north>
-						</renderProperties>
-						<defaultAngleRotated>0</defaultAngleRotated>
-						<angleRestricted>(315,45)</angleRestricted>
-						<gizmoLabel>proton torpedo launcher</gizmoLabel>
-						
-						<aimPieOffset>(0, 2.55)</aimPieOffset>
-						
-						<key>YWingKey_gun_5</key>
+						<key>SupaFighterKey_gun_3</key>
 					</li>
 					
+					<!--/////////////////////////-->
+					
+					<li>
+						<turretDef>guy762_VehicleTurret_IonTorp</turretDef>
+						
+						<renderProperties>
+							<north>(0, 3.75)</north>
+						</renderProperties>
+						<defaultAngleRotated>0</defaultAngleRotated>
+						<angleRestricted>(315,45)</angleRestricted>
+						<gizmoLabel>torpedo launcher</gizmoLabel>
+						
+						<aimPieOffset>(0, 2.55)</aimPieOffset>
+						
+						<key>SupaFighterKey_gun_4</key>
+					</li>
+					
+					<!--/////////////////////////-->
+					
+					<li>
+						<turretDef>guy762_VehicleTurret_ConcMissile</turretDef>
+						
+						<renderProperties>
+							<north>(3.825, 4.5)</north>
+						</renderProperties>
+						<defaultAngleRotated>0</defaultAngleRotated>
+						<angleRestricted>(315,45)</angleRestricted>
+						<gizmoLabel>missile launcher</gizmoLabel>
+						
+						<aimPieOffset>(0, 2.55)</aimPieOffset>
+						
+						<key>SupaFighterKey_gun_5</key>
+					</li>
 				</turrets>
 			</li>
 		</comps>
@@ -373,12 +367,12 @@
 				<depth>External</depth>
 				
 				<armor>
-					<ArmorRating_Sharp>1.55</ArmorRating_Sharp>
-					<ArmorRating_Blunt>1.4</ArmorRating_Blunt> <!-- # of estimated XWMG hull points * 0.1, apply to hard armor curve -->
-					<ArmorRating_Heat>1.65</ArmorRating_Heat>
-					<IncomingDamageFactor>-0.25</IncomingDamageFactor> <!-- # of estimated XWMG hull points * -0.05 -->
+					<ArmorRating_Sharp>1.65</ArmorRating_Sharp>
+					<ArmorRating_Blunt>1.5</ArmorRating_Blunt> <!-- # of estimated XWMG hull points * 0.1, apply to hard armor curve -->
+					<ArmorRating_Heat>1.75</ArmorRating_Heat>
+					<IncomingDamageFactor>-0.30</IncomingDamageFactor> <!-- # of estimated XWMG hull points * -0.05 -->
 				</armor>
-				<health>500</health> <!-- # of estimated XWMG hull points * 100 -->
+				<health>600</health> <!-- # of estimated XWMG hull points * 100 -->
 				
 				<hitbox>
 					<side>Body</side>
@@ -387,8 +381,8 @@
 			
 			<li>
 				<key>FirstThruster</key>
-				<label>Port Thruster</label>
-				<health>120</health>
+				<label>Main Thruster</label>
+				<health>240</health>
 				<depth>Internal</depth>
 				
 				<reactors>
@@ -396,12 +390,16 @@
 						<indicator>VF_Explosive</indicator>
 						<chance>0.25</chance>
 						<maxHealth>0.2</maxHealth>
-						<radius>5</radius>
+						<radius>10</radius>
 						<damageDef>Flame</damageDef>
 					</li>
 				</reactors>
 				
 				<hitbox>
+					<!--cells>
+						<li>(-3, 0)</li>
+						<li>(-3, -1)</li>
+					</cells-->
 					<side>Body</side>
 				</hitbox>
 				
@@ -409,31 +407,6 @@
 					<li>FlightSpeed</li>
 				</categories>
 			</li>
-			<li>
-				<key>SecondThruster</key>
-				<label>Starboard Thruster</label>
-				<health>120</health>
-				<depth>Internal</depth>
-				
-				<reactors>
-					<li Class = "Vehicles.Reactor_Explosive">
-						<indicator>VF_Explosive</indicator>
-						<chance>0.25</chance>
-						<maxHealth>0.2</maxHealth>
-						<radius>5</radius>
-						<damageDef>Flame</damageDef>
-					</li>
-				</reactors>
-				
-				<hitbox>
-					<side>Body</side>
-				</hitbox>
-				
-				<categories>
-					<li>FlightSpeed</li>
-				</categories>
-			</li>
-			
 			<li>
 				<key>Reactor</key>
 				<label>Reactor</label>
@@ -460,13 +433,19 @@
 					<li>FlightControl</li>
 				</categories>
 			</li>
+			<li>
+				<key>shieldGenerator</key>
+				<label>Heatsink Compartment</label>
+				<health>1</health>
+				<depth>Internal</depth>
+			</li>
 		</components>
 		
 		<soundSustainersOnEvent>
 			<li>
 				<start>IgnitionOn</start>
 				<stop>IgnitionOff</stop>
-				<value>kotorsound_enginehum_YWing</value>
+				<value>kotorsound_enginehum_freefall</value>
 			</li>
 		</soundSustainersOnEvent>
 		
@@ -483,18 +462,16 @@
 	
 	
 	
-	
-	
-	
 	<Vehicles.VehicleTurretDef ParentName="VehicleTurretBase">
-		<defName>guy762_VehicleTurret_YWing_Main</defName>
-		<label>Y-Wing main gun</label>
-		<description>The main gun of a BTL-A4 Y-Wing Starfighter.</description>
+		<defName>guy762_VehicleTurret_SupaFighter_main</defName>
+		<label>Supa Fighter main gun</label>
+		<description>The main gun of a Supa Fighter.</description>
 		
 		<turretType>Rotatable</turretType>
-		<shotSound>kotorsound_ywinggun</shotSound>
+		<!-- <shotSound>kotorsound_ebonhawk</shotSound> -->
+		<shotSound>kotorsound_sabaothgun</shotSound>
 		
-		<projectile>SWVehicleBullet_SFdoublered</projectile>
+		<projectile>SWVehicleBullet_SFheavyred</projectile>
 		<reloadTimer>3.5</reloadTimer>
 		<warmUpTimer>0</warmUpTimer>
 		
@@ -505,7 +482,7 @@
 		<autoSnapTargeting>true</autoSnapTargeting>
 		<rotationSpeed>5</rotationSpeed>
 		
-		<projectileOffset>2.1</projectileOffset>
+		<projectileOffset>2.1</projectileOffset> <!-- keep this on starfighters-->
 		
 		<minRange>5</minRange>
 		<maxRange>90</maxRange>
@@ -514,7 +491,7 @@
 			<li>
 				<shotsPerBurst>1</shotsPerBurst>
 				<ticksBetweenShots>10</ticksBetweenShots>
-				<ticksBetweenBursts>40</ticksBetweenBursts>
+				<ticksBetweenBursts>50</ticksBetweenBursts>
 				<label>Single</label>
 				<texPath>UI/Sniper_Shot</texPath>
 			</li>
@@ -526,19 +503,21 @@
 		</graphicData>
 		
 		<gizmoIconTexPath>Items/cannon_blank</gizmoIconTexPath>
-
+		
 	</Vehicles.VehicleTurretDef>
 	
 	
+	
+	
 	<Vehicles.VehicleTurretDef ParentName="VehicleTurretBase">
-		<defName>guy762_VehicleTurret_YWing_Dorsal</defName>
-		<label>Y-Wing dorsal ion turret</label>
-		<description>The rotating dorsal turret of a BTL-A4 Y-Wing Starfighter.</description>
+		<defName>guy762_VehicleTurret_SupaFighter_Dorsal</defName>
+		<label>Supa Fighter dorsal mass driver</label>
+		<description>The rotating dorsal mass driver turret of a Supa Fighter.</description>
 		
 		<turretType>Rotatable</turretType>
-		<shotSound>kotorsound_ioncannon_small_louder</shotSound>
+		<shotSound>kotorsound_SFmassdriver</shotSound>
 		
-		<projectile>SWVehicleBullet_SFdoubleion</projectile>
+		<projectile>SWVehicleBullet_MassDriver</projectile>
 		<reloadTimer>3.5</reloadTimer>
 		<warmUpTimer>0.5</warmUpTimer>
 		
@@ -552,27 +531,31 @@
 		<projectileOffset>2.1</projectileOffset> <!-- keep this on starfighters-->
 		
 		<minRange>5</minRange>
-		<maxRange>90</maxRange> <!-- ~30 for infantry, 60 for ground vehicles, 90 for starfighters -->
+		<maxRange>60</maxRange> <!-- ~30 for infantry, 60 for ground vehicles, 90 for starfighters -->
 
 		<fireModes>
 			<li>
-				<shotsPerBurst>1</shotsPerBurst>
-				<ticksBetweenShots>10</ticksBetweenShots>
-				<ticksBetweenBursts>150</ticksBetweenBursts>
-				<label>Single</label>
-				<texPath>UI/Ion_Power_Blast</texPath>
+				<shotsPerBurst>21</shotsPerBurst>
+				<ticksBetweenShots>6</ticksBetweenShots>
+				<ticksBetweenBursts>100</ticksBetweenBursts>
+				<spreadRadius>3</spreadRadius>
+				<label>burst fire</label>
+				<texPath>UI/Master_Rapid_Shot</texPath>
 			</li>
 		</fireModes>
 
 		<graphicData>
-			<texPath>Starfighters/BTLA4YWing/YWing_gun</texPath>
+			<texPath>Starfighters/SupaFighter/SupaFighter_gun</texPath>
 			<graphicClass>Vehicles.Graphic_Turret</graphicClass>
-			<drawSize>(3,3)</drawSize>
+			<drawSize>(10,10)</drawSize>
 		</graphicData>
 		
-		<gizmoIconTexPath>Starfighters/BTLA4YWing/YWing_gun</gizmoIconTexPath>
+		<gizmoIconTexPath>Starfighters/SupaFighter/SupaFighter_gun</gizmoIconTexPath>
 		
 	</Vehicles.VehicleTurretDef>
+	
+	
+	
 	
 	
 	

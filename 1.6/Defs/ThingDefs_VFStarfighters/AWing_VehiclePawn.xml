@@ -5,22 +5,22 @@
 	<Vehicles.PatternDef>
 		<defName>guy762_SWVehiclePattern_AWingA</defName>
 		<label>A-Wing (stock)</label>
-		<path>Starfighters/A-Wing/AWing_pattern_stock</path>
+		<path>Starfighters/AWing/AWing_pattern_stock</path>
 	</Vehicles.PatternDef>
 	
 	<Vehicles.PatternDef>
 		<defName>guy762_SWVehiclePattern_AWingB</defName>
 		<label>A-Wing (New Republic)</label>
-		<path>Starfighters/A-Wing/AWing_pattern_newrepublic</path>
+		<path>Starfighters/AWing/AWing_pattern_newrepublic</path>
 	</Vehicles.PatternDef>
 	
 	
 	<Vehicles.VehicleDef Name="guy762_SWVehicle_AWing" ParentName="MM-VF-Vehicle_Pawn">
 		<defName>guy762_SWVehicle_AWing</defName>
-		<label>RZ-1 A-Wing Interceptor</label>
+		<label>RZ-1 A-Wing interceptor</label>
 		<description>. \n\n&lt;color=#bb8f04&gt;Crew:&lt;/color&gt; Pilot x1</description>
 		<graphicData>
-			<texPath>Starfighters/A-Wing/AWing</texPath>
+			<texPath>Starfighters/AWing/AWing</texPath>
 			<graphicClass>Vehicles.Graphic_Vehicle</graphicClass>
 			<drawRotated>true</drawRotated>
 			<drawSize>(10,10)</drawSize>
@@ -59,7 +59,7 @@
 			<Flammability>0</Flammability>
 			
 			<EnergyShieldRechargeRate>0.5</EnergyShieldRechargeRate>
-			<EnergyShieldEnergyMax>3</EnergyShieldEnergyMax>
+			<EnergyShieldEnergyMax>2</EnergyShieldEnergyMax>
 		</statBases>
 		<vehicleStats>
 			<Mass>350</Mass>
@@ -191,7 +191,7 @@
 					<li>Heavy</li>
 				</runwayTerrainRequirements>
 				<flightGraphicData>
-					<texPath>Starfighters/A-Wing/AWing</texPath>
+					<texPath>Starfighters/AWing/AWing</texPath>
 					<graphicClass>Vehicles.Graphic_Vehicle</graphicClass>
 					<drawRotated>true</drawRotated>
 					<drawSize>(10,10)</drawSize>

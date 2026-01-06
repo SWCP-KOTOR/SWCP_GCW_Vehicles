@@ -2,15 +2,15 @@
 
 <Defs>
 	<Vehicles.VehicleBuildDef ParentName="VehicleBaseBuildable">
-		<defName>guy762_SWVehicleBP_AWing</defName>
-		<label>RZ-1 A-Wing interceptor</label>
+		<defName>guy762_SWVehicleBP_SupaFighter</defName>
+		<label>Supa Fighter</label>
 		<description>.</description>
 		<designationCategory>MM_StarWarsShipBuildTab</designationCategory>
 		
 		<graphicData>
-			<texPath>Starfighters/AWing/AWing</texPath>
+			<texPath>Starfighters/SupaFighter/SupaFighter</texPath>
 			<graphicClass>Graphic_Multi</graphicClass>
-			<drawSize>(10,10)</drawSize>
+			<drawSize>(20,20)</drawSize>
 			<!-- <drawOffset>(0, 0, 1)</drawOffset> -->
 		</graphicData>
 		
@@ -20,7 +20,7 @@
 			<Flammability>0.05</Flammability>
 		</statBases>
 		
-		<size>(5,8)</size>
+		<size>(17,19)</size>
 		
 		<!--researchPrerequisites>
 			<li>VVE_BasicVehicles</li>
@@ -36,7 +36,7 @@
 		</costList>
 		
 		<soundImpactDefault>BulletImpact_Metal</soundImpactDefault>
-		<thingToSpawn>guy762_SWVehicle_AWing</thingToSpawn>
+		<thingToSpawn>guy762_SWVehicle_SupaFighter</thingToSpawn>
 		
 		<constructionSkillPrerequisite>6</constructionSkillPrerequisite>
 	</Vehicles.VehicleBuildDef>

@@ -25,7 +25,7 @@
 			<drawSize>(24,24)</drawSize>
 			<shaderType>CutoutComplexPattern</shaderType>
 			<pattern>guy762_SWVehiclePattern_LAATiA</pattern>
-			<color>(150,40,40)</color> <!-- republic red -->
+			<color>(125,50,60)</color> <!-- republic red -->
 			<colorTwo>(130,150,40)</colorTwo> <!-- republic olive -->
 			<colorThree>(230,230,230)</colorThree> <!-- republic white -->
 		</graphicData>
@@ -244,7 +244,7 @@
 					<drawSize>(24,24)</drawSize>
 					<shaderType>CutoutComplexPattern</shaderType>
 					<pattern>guy762_SWVehiclePattern_LAATiA</pattern>
-					<color>(150,40,40)</color> <!-- republic red -->
+					<color>(125,50,60)</color> <!-- republic red -->
 					<colorTwo>(130,150,40)</colorTwo> <!-- republic olive -->
 					<colorThree>(230,230,230)</colorThree> <!-- republic white -->
 				</flightGraphicData>

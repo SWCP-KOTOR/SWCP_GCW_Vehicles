@@ -266,7 +266,7 @@
 						</renderProperties>
 						<defaultAngleRotated>0</defaultAngleRotated>
 						<angleRestricted>(315,45)</angleRestricted>
-						<gizmoLabel>main gun</gizmoLabel>
+						<gizmoLabel>medium AA gun</gizmoLabel>
 						
 						<aimPieOffset>(0, 2.55)</aimPieOffset>
 						
@@ -282,7 +282,7 @@
 						</renderProperties>
 						<defaultAngleRotated>0</defaultAngleRotated>
 						<angleRestricted>(315,45)</angleRestricted>
-						<gizmoLabel>main gun</gizmoLabel>
+						<gizmoLabel>medium AA gun</gizmoLabel>
 						
 						<aimPieOffset>(0, 2.55)</aimPieOffset>
 						
@@ -294,14 +294,14 @@
 					
 					
 					<li>
-						<turretDef>guy762_VehicleTurret_TIEFighter_main</turretDef>
+						<turretDef>guy762_VehicleTurret_TIEStriker_main</turretDef>
 						
 						<renderProperties>
 							<north>(0, -1)</north>
 						</renderProperties>
 						<defaultAngleRotated>0</defaultAngleRotated>
 						<angleRestricted>(315,45)</angleRestricted>
-						<gizmoLabel>dual gun</gizmoLabel>
+						<gizmoLabel>dual medium strike gun</gizmoLabel>
 						
 						<aimPieOffset>(0, 2.55)</aimPieOffset>
 						
@@ -458,7 +458,55 @@
 	
 	
 	
+	<Vehicles.VehicleTurretDef ParentName="VehicleTurretBase">
+		<defName>guy762_VehicleTurret_TIEStriker_main</defName>
+		<label>TIE/sk main gun</label>
+		<description>The main gun of a TIE Striker.</description>
+		
+		<turretType>Rotatable</turretType>
+		<shotSound>kotorsound_TIEgun</shotSound>
+		
+		<projectile>SWCPStarfighterBullet_StrikeAIAVAAmedium_dualgreen</projectile>
+		<reloadTimer>3.5</reloadTimer>
+		<warmUpTimer>0</warmUpTimer>
+		
+		<magazineCapacity>999</magazineCapacity>
+		
+		<empDisables>true</empDisables>
+		
+		<autoSnapTargeting>true</autoSnapTargeting>
+		<rotationSpeed>5</rotationSpeed>
+		
+		<projectileOffset>2.1</projectileOffset> <!-- keep this on starfighters-->
+		
+		<minRange>5</minRange>
+		<maxRange>90</maxRange>
 
+		<fireModes>
+			<li>
+				<shotsPerBurst>1</shotsPerBurst>
+				<ticksBetweenShots>12</ticksBetweenShots>
+				<ticksBetweenBursts>40</ticksBetweenBursts>
+				<label>Single</label>
+				<texPath>UI/Sniper_Shot</texPath>
+			</li>
+			<!-- <li> -->
+				<!-- <shotsPerBurst>3</shotsPerBurst> -->
+				<!-- <ticksBetweenShots>12</ticksBetweenShots> -->
+				<!-- <ticksBetweenBursts>150</ticksBetweenBursts> -->
+				<!-- <label>Burst</label> -->
+				<!-- <texPath>UI/Rapid_Shot</texPath> -->
+			<!-- </li> -->
+		</fireModes>
+
+		<graphicData>
+			<texPath>NullTex</texPath>
+			<graphicClass>Vehicles.Graphic_Turret</graphicClass>
+		</graphicData>
+		
+		<gizmoIconTexPath>Items/cannon_blank</gizmoIconTexPath>
+		
+	</Vehicles.VehicleTurretDef>
 	
 	
 </Defs>

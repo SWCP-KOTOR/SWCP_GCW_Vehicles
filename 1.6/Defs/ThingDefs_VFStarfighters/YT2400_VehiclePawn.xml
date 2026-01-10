@@ -321,7 +321,7 @@
 							<north>(-3.25, -0.065)</north>
 						</renderProperties>
 						<defaultAngleRotated>0</defaultAngleRotated>
-						<gizmoLabel>dorsal gun</gizmoLabel>
+						<gizmoLabel>dual heavy AV/AA turret</gizmoLabel>
 						
 						<aimPieOffset>(0, 2.55)</aimPieOffset>
 						
@@ -336,7 +336,7 @@
 							<north>(-3.25, -0.065)</north>
 						</renderProperties>
 						<defaultAngleRotated>0</defaultAngleRotated>
-						<gizmoLabel>ventral gun</gizmoLabel>
+						<gizmoLabel>dual heavy AV/AA turret</gizmoLabel>
 						
 						<aimPieOffset>(0, 2.55)</aimPieOffset>
 						
@@ -508,7 +508,7 @@
 		<turretType>Rotatable</turretType>
 		<shotSound>kotorsound_milleniumfalcongun</shotSound>
 		
-		<projectile>SWVehicleBullet_SFbigdoublered</projectile>
+		<projectile>SWCPStarfighterBullet_CannonAVAAheavy_dualred</projectile>
 		<reloadTimer>3.5</reloadTimer>
 		<warmUpTimer>0.1</warmUpTimer>
 		
@@ -537,7 +537,7 @@
 		<graphicData>
 			<texPath>Starfighters/YT2400/YT2400_gun</texPath>
 			<graphicClass>Vehicles.Graphic_Turret</graphicClass>
-			<drawSize>(14,14)</drawSize>
+			<drawSize>(15,15)</drawSize>
 		</graphicData>
 		
 		<gizmoIconTexPath>Starfighters/YT2400/YT2400_gun</gizmoIconTexPath>

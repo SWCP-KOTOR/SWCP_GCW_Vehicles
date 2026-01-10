@@ -253,7 +253,7 @@
 						</renderProperties>
 						<defaultAngleRotated>0</defaultAngleRotated>
 						<angleRestricted>(315,45)</angleRestricted>
-						<gizmoLabel>AV gun</gizmoLabel>
+						<gizmoLabel>light strike gun</gizmoLabel>
 						
 						<aimPieOffset>(0, 2.55)</aimPieOffset>
 						
@@ -269,7 +269,7 @@
 						</renderProperties>
 						<defaultAngleRotated>0</defaultAngleRotated>
 						<angleRestricted>(315,45)</angleRestricted>
-						<gizmoLabel>AV gun</gizmoLabel>
+						<gizmoLabel>light strike gun</gizmoLabel>
 						
 						<aimPieOffset>(0, 2.55)</aimPieOffset>
 						
@@ -417,13 +417,13 @@
 	
 	<Vehicles.VehicleTurretDef ParentName="VehicleTurretBase">
 		<defName>guy762_VehicleTurret_T47_AntiVehicleMain</defName>
-		<label>T-47 Airspeeder main AV gun</label>
+		<label>T-47 Airspeeder main gun</label>
 		<description>The main anti-vehicle gun of a T-47 Airspeeder.</description>
 		
 		<turretType>Rotatable</turretType>
 		<shotSound>kotorsound_snowspeedergun</shotSound>
 		
-		<projectile>SWVehicleBullet_AVAAred</projectile>
+		<projectile>SWCPStarfighterBullet_StrikeAIAVAAlight_red</projectile>
 		<reloadTimer>3.5</reloadTimer>
 		<warmUpTimer>0</warmUpTimer>
 		

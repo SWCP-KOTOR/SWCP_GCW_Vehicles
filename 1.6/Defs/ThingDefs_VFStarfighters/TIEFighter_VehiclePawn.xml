@@ -228,7 +228,7 @@
 						</renderProperties>
 						<defaultAngleRotated>0</defaultAngleRotated>
 						<angleRestricted>(315,45)</angleRestricted>
-						<gizmoLabel>dual gun</gizmoLabel>
+						<gizmoLabel>dual light strike gun</gizmoLabel>
 						
 						<aimPieOffset>(0, 2.55)</aimPieOffset>
 						
@@ -270,7 +270,7 @@
 						<chance>0.25</chance>
 						<maxHealth>0.2</maxHealth>
 						<radius>5</radius>
-						<damageDef>Flame</damageDef>
+						<damageDef>guy762_ExplosiveDamage_energy</damageDef>
 					</li>
 				</reactors>
 				
@@ -294,7 +294,7 @@
 						<chance>0.25</chance>
 						<maxHealth>0.2</maxHealth>
 						<radius>5</radius>
-						<damageDef>Flame</damageDef>
+						<damageDef>guy762_ExplosiveDamage_energy</damageDef>
 					</li>
 				</reactors>
 				
@@ -316,10 +316,10 @@
 				<reactors>
 					<li Class = "Vehicles.Reactor_Explosive">
 						<indicator>VF_Explosive</indicator>
-						<chance>0.25</chance>
+						<chance>0.5</chance>
 						<maxHealth>0.2</maxHealth>
 						<radius>18</radius>
-						<damageDef>Bomb</damageDef>
+						<damageDef>guy762_ExplosiveDamage_energy</damageDef>
 					</li>
 				</reactors>
 			</li>
@@ -367,7 +367,7 @@
 		<turretType>Rotatable</turretType>
 		<shotSound>kotorsound_TIEgun</shotSound>
 		
-		<projectile>SWVehicleBullet_SFdoublegreen</projectile>
+		<projectile>SWCPStarfighterBullet_StrikeAIAVAAlight_dualgreen</projectile>
 		<reloadTimer>3.5</reloadTimer>
 		<warmUpTimer>0</warmUpTimer>
 		

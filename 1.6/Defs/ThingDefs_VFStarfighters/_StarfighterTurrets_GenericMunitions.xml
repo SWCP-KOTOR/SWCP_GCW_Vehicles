@@ -170,11 +170,7 @@
 		</ammunition>
 	</Vehicles.VehicleTurretDef>
 	
-	
-	
-	
-	
-	
+
 	
 	<Vehicles.VehicleTurretDef ParentName="VehicleTurretBase">
 		<defName>guy762_VehicleTurret_IonMissile</defName>
@@ -185,7 +181,7 @@
 		<shotSound>kotorsound_SFmissile</shotSound>
 		<reloadSound>kotorsound_reloadlauncher</reloadSound>
 		
-		<projectile>KotORSFBullet_missileion</projectile>
+		<projectile>SWVehicleBullet_SFionMissile</projectile>
 		<reloadTimer>3.5</reloadTimer>
 		<warmUpTimer>0.2</warmUpTimer>
 		
@@ -225,6 +221,73 @@
 			</thingDefs>
 		</ammunition>
 	</Vehicles.VehicleTurretDef>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<Vehicles.VehicleTurretDef ParentName="VehicleTurretBase">
+		<defName>guy762_VehicleTurret_RocketBarrage</defName>
+		<label>barrage rocket launcher</label>
+		<description>A rapid rocket launcher.</description>
+		
+		<turretType>Rotatable</turretType>
+		<shotSound>kotorsound_SFrocket</shotSound>
+		<reloadSound>kotorsound_reloadlauncher</reloadSound>
+		
+		<projectile>SWVehicleBullet_SFdumbRocket</projectile>
+		<reloadTimer>3.5</reloadTimer>
+		<warmUpTimer>0</warmUpTimer>
+		
+		<magazineCapacity>9</magazineCapacity>
+		<genericAmmo>true</genericAmmo>
+		
+		<empDisables>true</empDisables>
+		
+		<autoSnapTargeting>false</autoSnapTargeting>
+		<rotationSpeed>5</rotationSpeed>
+		
+		<projectileOffset>2.1</projectileOffset>
+		
+		<minRange>30</minRange>
+		<maxRange>90</maxRange>
+
+		<fireModes>
+			<li>
+				<shotsPerBurst>9</shotsPerBurst>
+				<ticksBetweenShots>5</ticksBetweenShots>
+				<ticksBetweenBursts>250</ticksBetweenBursts>
+				<label>Burst</label>
+				<spreadRadius>5</spreadRadius>
+				<texPath>Items/Rockets/rocket_ex/rocket_ex_c</texPath>
+			</li>
+		</fireModes>
+
+		<graphicData>
+			<texPath>NullTex</texPath>
+			<graphicClass>Vehicles.Graphic_Turret</graphicClass>
+		</graphicData>
+		
+		<gizmoIconTexPath>Items/bigcannon_blank</gizmoIconTexPath>
+		
+		<ammunition>
+			<thingDefs>
+				<li>guy762_RocketItem_highex</li>
+			</thingDefs>
+		</ammunition>
+	</Vehicles.VehicleTurretDef>
+	
+	
+	
+	
+	
 	
 	
 	

@@ -3,7 +3,7 @@
 <Defs>
 	<Vehicles.VehicleBuildDef ParentName="VehicleBaseBuildable">
 		<defName>guy762_SWVehicleBP_NimbusVWing</defName>
-		<label>Alpha-3 "Nimbus" V-Wing starfighter</label>
+		<label>Alpha-3 Nimbus V-Wing starfighter</label>
 		<description>.</description>
 		<designationCategory>MM_StarWarsShipBuildTab</designationCategory>
 		

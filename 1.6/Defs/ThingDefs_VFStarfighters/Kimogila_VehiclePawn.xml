@@ -49,17 +49,17 @@
 			<ArmorRating_Heat>0.85</ArmorRating_Heat>
 			<MaxHitPoints>7000</MaxHitPoints> <!-- # of estimated XWMG hull points * 1000 -->
 			
-			<MarketValue>55000</MarketValue>
+			<MarketValue>150000</MarketValue>
 			<Flammability>0</Flammability>
 			
 			<EnergyShieldRechargeRate>0.5</EnergyShieldRechargeRate>
-			<EnergyShieldEnergyMax>3</EnergyShieldEnergyMax>
+			<EnergyShieldEnergyMax>2</EnergyShieldEnergyMax>
 		</statBases>
 		<vehicleStats>
-			<Mass>75000</Mass>
+			<Mass>125000</Mass>
 			
 			<FlightSpeed>12</FlightSpeed> <!-- this is for world map flight, NOT in-tile flight-->
-			<CargoCapacity>110</CargoCapacity>
+			<CargoCapacity>150</CargoCapacity>
 			<SoS2CombatDodgeChance MayRequire="kentington.saveourship2">13.75</SoS2CombatDodgeChance> <!-- 3/8 chance to dodge on XWMG green dice = 0.375 | 0.375*10 + 10 = 13.75 | 13.75 * X = SoS2DC | X = estimated # of XWMG green dice -->
 		</vehicleStats>
 		
@@ -268,7 +268,7 @@
 						</renderProperties>
 						<defaultAngleRotated>0</defaultAngleRotated>
 						<angleRestricted>(355,5)</angleRestricted>
-						<gizmoLabel>chin gun</gizmoLabel>
+						<gizmoLabel>dual medium strike gun</gizmoLabel>
 						
 						<aimPieOffset>(0, 2.55)</aimPieOffset>
 						
@@ -287,7 +287,7 @@
 						</renderProperties>
 						<defaultAngleRotated>0</defaultAngleRotated>
 						<angleRestricted>(315,45)</angleRestricted>
-						<gizmoLabel>main gun</gizmoLabel>
+						<gizmoLabel>heavy AV/AA gun</gizmoLabel>
 						
 						<aimPieOffset>(0, 2.55)</aimPieOffset>
 						
@@ -303,7 +303,7 @@
 						</renderProperties>
 						<defaultAngleRotated>0</defaultAngleRotated>
 						<angleRestricted>(315,45)</angleRestricted>
-						<gizmoLabel>main gun</gizmoLabel>
+						<gizmoLabel>heavy AV/AA gun</gizmoLabel>
 						
 						<aimPieOffset>(0, 2.55)</aimPieOffset>
 						
@@ -540,7 +540,7 @@
 		<turretType>Rotatable</turretType>
 		<shotSound>kotorsound_ebonhawk</shotSound>
 		
-		<projectile>SWVehicleBullet_SFdoublered</projectile>
+		<projectile>SWCPStarfighterBullet_StrikeAIAVAAmedium_dualred</projectile>
 		<reloadTimer>3.5</reloadTimer>
 		<warmUpTimer>0</warmUpTimer>
 		
@@ -594,7 +594,7 @@
 		<turretType>Rotatable</turretType>
 		<shotSound>kotorsound_zoomergun</shotSound>
 		
-		<projectile>SWVehicleBullet_SFheavyred</projectile>
+		<projectile>SWCPStarfighterBullet_CannonAVAAheavy_red</projectile>
 		<reloadTimer>3.5</reloadTimer>
 		<warmUpTimer>0</warmUpTimer>
 		
@@ -614,7 +614,7 @@
 			<li>
 				<shotsPerBurst>1</shotsPerBurst>
 				<ticksBetweenShots>10</ticksBetweenShots>
-				<ticksBetweenBursts>40</ticksBetweenBursts>
+				<ticksBetweenBursts>50</ticksBetweenBursts>
 				<label>Single</label>
 				<texPath>UI/Sniper_Shot</texPath>
 			</li>

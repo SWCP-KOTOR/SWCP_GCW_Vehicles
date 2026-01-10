@@ -2,15 +2,15 @@
 
 <Defs>
 	<Vehicles.VehicleBuildDef ParentName="VehicleBaseBuildable">
-		<defName>guy762_SWVehicleBP_Kihraxz</defName>
-		<label>Kihraxz assault starfighter</label>
+		<defName>guy762_SWVehicleBP_Rihkxyrk</defName>
+		<label>Rihkxyrk heavy assault fighter</label>
 		<description>.</description>
 		<designationCategory>MM_StarWarsShipBuildTab</designationCategory>
 		
 		<graphicData>
-			<texPath>Starfighters/Kihraxz/Kihraxz</texPath>
+			<texPath>Starfighters/Rihkxyrk/Rihkxyrk</texPath>
 			<graphicClass>Graphic_Multi</graphicClass>
-			<drawSize>(12,12)</drawSize>
+			<drawSize>(17,17)</drawSize>
 			<!-- <drawOffset>(0, 0, 1)</drawOffset> -->
 		</graphicData>
 		
@@ -20,7 +20,7 @@
 			<Flammability>0.05</Flammability>
 		</statBases>
 		
-		<size>(7,11)</size>
+		<size>(8,17)</size>
 		
 		<!--researchPrerequisites>
 			<li>VVE_BasicVehicles</li>
@@ -36,7 +36,7 @@
 		</costList>
 		
 		<soundImpactDefault>BulletImpact_Metal</soundImpactDefault>
-		<thingToSpawn>guy762_SWVehicle_Kihraxz</thingToSpawn>
+		<thingToSpawn>guy762_SWVehicle_Rihkxyrk</thingToSpawn>
 		
 		<constructionSkillPrerequisite>6</constructionSkillPrerequisite>
 	</Vehicles.VehicleBuildDef>

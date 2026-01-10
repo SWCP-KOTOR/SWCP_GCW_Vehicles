@@ -259,7 +259,7 @@
 						</renderProperties>
 						<defaultAngleRotated>0</defaultAngleRotated>
 						<angleRestricted>(315,45)</angleRestricted>
-						<gizmoLabel>main gun</gizmoLabel>
+						<gizmoLabel>light AA gun</gizmoLabel>
 						
 						<aimPieOffset>(0, 2.55)</aimPieOffset>
 						
@@ -275,7 +275,7 @@
 						</renderProperties>
 						<defaultAngleRotated>0</defaultAngleRotated>
 						<angleRestricted>(315,45)</angleRestricted>
-						<gizmoLabel>main gun</gizmoLabel>
+						<gizmoLabel>light AA gun</gizmoLabel>
 						
 						<aimPieOffset>(0, 2.55)</aimPieOffset>
 						
@@ -513,7 +513,7 @@
 		<turretType>Rotatable</turretType>
 		<shotSound>kotorsound_xwinggun</shotSound>
 		
-		<projectile>SWVehicleBullet_SFred</projectile>
+		<projectile>SWCPStarfighterBullet_IntAAlight_red</projectile>
 		<reloadTimer>3.5</reloadTimer>
 		<warmUpTimer>0</warmUpTimer>
 		

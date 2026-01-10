@@ -297,7 +297,7 @@
 						</renderProperties>
 						<defaultAngleRotated>0</defaultAngleRotated>
 						<angleRestricted>(315,45)</angleRestricted>
-						<gizmoLabel>main gun</gizmoLabel>
+						<gizmoLabel>heavy AV/AA gun</gizmoLabel>
 						
 						<aimPieOffset>(0, 2.55)</aimPieOffset>
 						
@@ -313,7 +313,7 @@
 						</renderProperties>
 						<defaultAngleRotated>0</defaultAngleRotated>
 						<angleRestricted>(315,45)</angleRestricted>
-						<gizmoLabel>main gun</gizmoLabel>
+						<gizmoLabel>heavy AV/AA gun</gizmoLabel>
 						
 						<aimPieOffset>(0, 2.55)</aimPieOffset>
 						
@@ -332,7 +332,7 @@
 						</renderProperties>
 						<defaultAngleRotated>0</defaultAngleRotated>
 						<angleRestricted>(315,45)</angleRestricted>
-						<gizmoLabel>ion gun</gizmoLabel>
+						<gizmoLabel>heavy AV/AA ion gun</gizmoLabel>
 						
 						<aimPieOffset>(0, 2.55)</aimPieOffset>
 						
@@ -348,7 +348,7 @@
 						</renderProperties>
 						<defaultAngleRotated>0</defaultAngleRotated>
 						<angleRestricted>(315,45)</angleRestricted>
-						<gizmoLabel>ion gun</gizmoLabel>
+						<gizmoLabel>heavy AV/AA ion gun</gizmoLabel>
 						
 						<aimPieOffset>(0, 2.55)</aimPieOffset>
 						
@@ -398,7 +398,7 @@
 						</renderProperties>
 						<defaultAngleRotated>0</defaultAngleRotated>
 						<!-- <angleRestricted>(315,45)</angleRestricted> -->
-						<gizmoLabel>dorsal turret</gizmoLabel>
+						<gizmoLabel>medium AA turret</gizmoLabel>
 						
 						<aimPieOffset>(0, 2.55)</aimPieOffset>
 						
@@ -577,7 +577,7 @@
 		<turretType>Rotatable</turretType>
 		<shotSound>kotorsound_morningstargun</shotSound>
 		
-		<projectile>SWVehicleBullet_SFheavyred</projectile>
+		<projectile>SWCPStarfighterBullet_CannonAVAAheavy_red</projectile>
 		<reloadTimer>3.5</reloadTimer>
 		<warmUpTimer>0</warmUpTimer>
 		
@@ -626,8 +626,7 @@
 		<turretType>Rotatable</turretType>
 		<shotSound>kotorsound_ioncannon</shotSound>
 		
-		<!-- <projectile>SWVehicleBullet_SFheavyion</projectile> -->
-		<projectile>SWVehicleBullet_SFheavyion_xplosive</projectile>
+		<projectile>SWVehicleBullet_CannonAVAA_heavyion_xplosive</projectile>
 		<reloadTimer>3.5</reloadTimer>
 		<warmUpTimer>0</warmUpTimer>
 		
@@ -685,7 +684,7 @@
 		<turretType>Rotatable</turretType>
 		<shotSound>kotorsound_freefallhvygun</shotSound>
 		
-		<projectile>SWVehicleBullet_SFdoublegreen</projectile>
+		<projectile>SWCPStarfighterBullet_IntAAmedium_dualgreen</projectile>
 		<reloadTimer>3.5</reloadTimer>
 		<warmUpTimer>0.5</warmUpTimer>
 		

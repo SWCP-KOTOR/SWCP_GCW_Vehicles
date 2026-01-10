@@ -16,7 +16,7 @@
 	
 	<Vehicles.PatternDef>
 		<defName>guy762_SWVehiclePattern_Z95C</defName>
-		<label>Z-95 (Black Sun Pirate)</label>
+		<label>Z-95 (Black Sun Lieutenant)</label>
 		<path>Starfighters/Z95Headhunter/Z95_pattern_blacksunB</path>
 	</Vehicles.PatternDef>
 	
@@ -283,7 +283,7 @@
 						</renderProperties>
 						<defaultAngleRotated>0</defaultAngleRotated>
 						<angleRestricted>(315,45)</angleRestricted>
-						<gizmoLabel>main gun</gizmoLabel>
+						<gizmoLabel>light AA gun</gizmoLabel>
 						
 						<aimPieOffset>(0, 2.55)</aimPieOffset>
 						
@@ -299,7 +299,7 @@
 						</renderProperties>
 						<defaultAngleRotated>0</defaultAngleRotated>
 						<angleRestricted>(315,45)</angleRestricted>
-						<gizmoLabel>main gun</gizmoLabel>
+						<gizmoLabel>light AA gun</gizmoLabel>
 						
 						<aimPieOffset>(0, 2.55)</aimPieOffset>
 						
@@ -469,60 +469,7 @@
 		</soundOneShotsOnEvent>
 		
 	</Vehicles.VehicleDef>
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	<!-- <Vehicles.VehicleTurretDef ParentName="VehicleTurretBase"> -->
-		<!-- <defName>guy762_VehicleTurret_AWing_Main</defName> -->
-		<!-- <label>A-Wing main gun</label> -->
-		<!-- <description>The main gun of an RZ-1 A-Wing Starfighter.</description> -->
-		
-		<!-- <turretType>Rotatable</turretType> -->
-		<!-- <shotSound>kotorsound_xwinggun</shotSound> -->
-		
-		<!-- <projectile>SWVehicleBullet_SFred</projectile> -->
-		<!-- <reloadTimer>3.5</reloadTimer> -->
-		<!-- <warmUpTimer>0</warmUpTimer> -->
-		
-		<!-- <magazineCapacity>999</magazineCapacity> -->
-		
-		<!-- <empDisables>true</empDisables> -->
-		
-		<!-- <autoSnapTargeting>true</autoSnapTargeting> -->
-		<!-- <rotationSpeed>5</rotationSpeed> -->
-		
-		<!-- <projectileOffset>2.1</projectileOffset> -->
-		
-		<!-- <minRange>5</minRange> -->
-		<!-- <maxRange>90</maxRange> -->
 
-		<!-- <fireModes> -->
-			<!-- <li> -->
-				<!-- <shotsPerBurst>3</shotsPerBurst> -->
-				<!-- <ticksBetweenShots>10</ticksBetweenShots> -->
-				<!-- <ticksBetweenBursts>40</ticksBetweenBursts> -->
-				<!-- <label>Burst</label> -->
-				<!-- <texPath>UI/Rapid_Shot</texPath> -->
-			<!-- </li> -->
-		<!-- </fireModes> -->
-
-		<!-- <graphicData> -->
-			<!-- <texPath>NullTex</texPath> -->
-			<!-- <graphicClass>Vehicles.Graphic_Turret</graphicClass> -->
-		<!-- </graphicData> -->
-		
-		<!-- <gizmoIconTexPath>Items/cannon_blank</gizmoIconTexPath> -->
-
-	<!-- </Vehicles.VehicleTurretDef> -->
 	
 	
 	

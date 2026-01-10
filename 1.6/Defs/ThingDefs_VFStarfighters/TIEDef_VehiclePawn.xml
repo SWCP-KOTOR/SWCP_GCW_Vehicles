@@ -247,14 +247,14 @@
 			<li Class="Vehicles.CompProperties_VehicleTurrets">
 				<turrets>
 					<li>
-						<turretDef>guy762_VehicleTurret_TIEFighter_main</turretDef>
+						<turretDef>guy762_VehicleTurret_TIEDefender_main</turretDef>
 						
 						<renderProperties>
 							<north>(0, 3.4)</north>
 						</renderProperties>
 						<defaultAngleRotated>0</defaultAngleRotated>
 						<angleRestricted>(315,45)</angleRestricted>
-						<gizmoLabel>dual gun</gizmoLabel>
+						<gizmoLabel>dual light strike gun</gizmoLabel>
 						
 						<aimPieOffset>(0, 2.55)</aimPieOffset>
 						
@@ -263,14 +263,14 @@
 						<key>TIEDefKey_gun_1</key>
 					</li>
 					<li>
-						<turretDef>guy762_VehicleTurret_TIEFighter_main</turretDef>
+						<turretDef>guy762_VehicleTurret_TIEDefender_main</turretDef>
 						
 						<renderProperties>
 							<north>(-2.5, 3.4)</north>
 						</renderProperties>
 						<defaultAngleRotated>0</defaultAngleRotated>
 						<angleRestricted>(315,45)</angleRestricted>
-						<gizmoLabel>dual gun</gizmoLabel>
+						<gizmoLabel>dual light strike gun</gizmoLabel>
 						
 						<aimPieOffset>(0, 2.55)</aimPieOffset>
 						
@@ -279,14 +279,14 @@
 						<key>TIEDefKey_gun_2</key>
 					</li>
 					<li>
-						<turretDef>guy762_VehicleTurret_TIEFighter_main</turretDef>
+						<turretDef>guy762_VehicleTurret_TIEDefender_main</turretDef>
 						
 						<renderProperties>
 							<north>(2.5, 3.4)</north>
 						</renderProperties>
 						<defaultAngleRotated>0</defaultAngleRotated>
 						<angleRestricted>(315,45)</angleRestricted>
-						<gizmoLabel>dual gun</gizmoLabel>
+						<gizmoLabel>dual light strike gun</gizmoLabel>
 						
 						<aimPieOffset>(0, 2.55)</aimPieOffset>
 						
@@ -412,22 +412,17 @@
 	
 	
 	
-	
-	
-	
-	
-	
-	<!--Vehicles.VehicleTurretDef ParentName="VehicleTurretBase">
-		<defName>guy762_VehicleTurret_AurekMain</defName>
-		<label>Aurek main gun</label>
-		<description>The main gun of an Aurek-class Starfighter.</description>
+	<Vehicles.VehicleTurretDef ParentName="VehicleTurretBase">
+		<defName>guy762_VehicleTurret_TIEDefender_main</defName>
+		<label>TIE/d main gun</label>
+		<description>The main gun of a TIE Defender.</description>
 		
 		<turretType>Rotatable</turretType>
-		<shotSound>kotorsound_xwinggun</shotSound>
+		<shotSound>kotorsound_TIEgun</shotSound>
 		
-		<projectile>SWVehicleBullet_SFred</projectile>
+		<projectile>SWCPStarfighterBullet_StrikeAIAVAAlight_TIEDefenderWideDualGreen</projectile>
 		<reloadTimer>3.5</reloadTimer>
-		<warmUpTimer>0.2</warmUpTimer>
+		<warmUpTimer>0</warmUpTimer>
 		
 		<magazineCapacity>999</magazineCapacity>
 		
@@ -436,7 +431,7 @@
 		<autoSnapTargeting>true</autoSnapTargeting>
 		<rotationSpeed>5</rotationSpeed>
 		
-
+		<projectileOffset>2.1</projectileOffset> <!-- keep this on starfighters-->
 		
 		<minRange>5</minRange>
 		<maxRange>90</maxRange>
@@ -444,11 +439,18 @@
 		<fireModes>
 			<li>
 				<shotsPerBurst>1</shotsPerBurst>
-				<ticksBetweenShots>10</ticksBetweenShots>
-				<ticksBetweenBursts>20</ticksBetweenBursts>
+				<ticksBetweenShots>12</ticksBetweenShots>
+				<ticksBetweenBursts>40</ticksBetweenBursts>
 				<label>Single</label>
 				<texPath>UI/Sniper_Shot</texPath>
 			</li>
+			<!-- <li> -->
+				<!-- <shotsPerBurst>3</shotsPerBurst> -->
+				<!-- <ticksBetweenShots>12</ticksBetweenShots> -->
+				<!-- <ticksBetweenBursts>150</ticksBetweenBursts> -->
+				<!-- <label>Burst</label> -->
+				<!-- <texPath>UI/Rapid_Shot</texPath> -->
+			<!-- </li> -->
 		</fireModes>
 
 		<graphicData>
@@ -458,7 +460,9 @@
 		
 		<gizmoIconTexPath>Items/cannon_blank</gizmoIconTexPath>
 		
-	</Vehicles.VehicleTurretDef-->
+	</Vehicles.VehicleTurretDef>
+	
+	
 	
 	
 	

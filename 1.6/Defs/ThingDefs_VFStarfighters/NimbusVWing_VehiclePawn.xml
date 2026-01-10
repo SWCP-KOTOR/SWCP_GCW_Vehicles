@@ -23,7 +23,7 @@
 	
 	<Vehicles.VehicleDef Name="guy762_SWVehicle_NimbusVWing" ParentName="MM-VF-Vehicle_Pawn">
 		<defName>guy762_SWVehicle_NimbusVWing</defName>
-		<label>Alpha-3 "Nimbus" V-Wing starfighter</label>
+		<label>Alpha-3 Nimbus V-Wing starfighter</label>
 		<description>. \n\n&lt;color=#bb8f04&gt;Crew:&lt;/color&gt; Pilot x1</description>
 		<graphicData>
 			<texPath>Starfighters/NimbusVWing/NimbusVWing</texPath>
@@ -267,7 +267,7 @@
 						</renderProperties>
 						<defaultAngleRotated>0</defaultAngleRotated>
 						<angleRestricted>(315,45)</angleRestricted>
-						<gizmoLabel>main gun</gizmoLabel>
+						<gizmoLabel>dual light AA gun</gizmoLabel>
 						
 						<aimPieOffset>(0, 2.55)</aimPieOffset>
 						
@@ -283,7 +283,7 @@
 						</renderProperties>
 						<defaultAngleRotated>0</defaultAngleRotated>
 						<angleRestricted>(315,45)</angleRestricted>
-						<gizmoLabel>main gun</gizmoLabel>
+						<gizmoLabel>dual light AA gun</gizmoLabel>
 						
 						<aimPieOffset>(0, 2.55)</aimPieOffset>
 						
@@ -426,7 +426,7 @@
 		<turretType>Rotatable</turretType>
 		<shotSound>kotorsound_nantexgun</shotSound>
 		
-		<projectile>SWVehicleBullet_SFlightdoublegreen</projectile>
+		<projectile>SWCPStarfighterBullet_IntAAlight_dualgreen</projectile>
 		<reloadTimer>3.5</reloadTimer>
 		<warmUpTimer>0</warmUpTimer>
 		

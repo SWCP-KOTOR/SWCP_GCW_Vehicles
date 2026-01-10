@@ -10,7 +10,7 @@
 	
 	<Vehicles.PatternDef>
 		<defName>guy762_SWVehiclePattern_SupaFighterB</defName>
-		<label>Supa Fighter (Black Sun)</label>
+		<label>Supa Fighter (Black Sun Terrorist)</label>
 		<path>Starfighters/SupaFighter/SupaFighter_Pattern_BlackSun</path>
 	</Vehicles.PatternDef>
 	
@@ -280,7 +280,7 @@
 						</renderProperties>
 						<defaultAngleRotated>0</defaultAngleRotated>
 						<angleRestricted>(315,45)</angleRestricted>
-						<gizmoLabel>main gun</gizmoLabel>
+						<gizmoLabel>medium AV/AA gun</gizmoLabel>
 						
 						<aimPieOffset>(0, 2.55)</aimPieOffset>
 						
@@ -296,7 +296,7 @@
 						</renderProperties>
 						<defaultAngleRotated>0</defaultAngleRotated>
 						<angleRestricted>(315,45)</angleRestricted>
-						<gizmoLabel>main gun</gizmoLabel>
+						<gizmoLabel>medium AV/AA gun</gizmoLabel>
 						
 						<aimPieOffset>(0, 2.55)</aimPieOffset>
 						
@@ -471,7 +471,7 @@
 		<!-- <shotSound>kotorsound_ebonhawk</shotSound> -->
 		<shotSound>kotorsound_sabaothgun</shotSound>
 		
-		<projectile>SWVehicleBullet_SFheavyred</projectile>
+		<projectile>SWCPStarfighterBullet_CannonAVAAmedium_red</projectile>
 		<reloadTimer>3.5</reloadTimer>
 		<warmUpTimer>0</warmUpTimer>
 		
@@ -531,7 +531,7 @@
 		<projectileOffset>2.1</projectileOffset> <!-- keep this on starfighters-->
 		
 		<minRange>5</minRange>
-		<maxRange>60</maxRange> <!-- ~30 for infantry, 60 for ground vehicles, 90 for starfighters -->
+		<maxRange>90</maxRange> <!-- ~30 for infantry, 60 for ground vehicles, 90 for starfighters -->
 
 		<fireModes>
 			<li>

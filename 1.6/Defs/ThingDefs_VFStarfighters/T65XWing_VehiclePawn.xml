@@ -73,7 +73,7 @@
 			<Flammability>0</Flammability>
 			
 			<EnergyShieldRechargeRate>0.5</EnergyShieldRechargeRate>
-			<EnergyShieldEnergyMax>3</EnergyShieldEnergyMax>
+			<EnergyShieldEnergyMax>2</EnergyShieldEnergyMax>
 		</statBases>
 		<vehicleStats>
 			<Mass>650</Mass>
@@ -281,7 +281,7 @@
 						</renderProperties>
 						<defaultAngleRotated>0</defaultAngleRotated>
 						<angleRestricted>(315,45)</angleRestricted>
-						<gizmoLabel>main gun</gizmoLabel>
+						<gizmoLabel>medium strike gun</gizmoLabel>
 						
 						<aimPieOffset>(0, 2.55)</aimPieOffset>
 						
@@ -297,7 +297,7 @@
 						</renderProperties>
 						<defaultAngleRotated>0</defaultAngleRotated>
 						<angleRestricted>(315,45)</angleRestricted>
-						<gizmoLabel>main gun</gizmoLabel>
+						<gizmoLabel>medium strike gun</gizmoLabel>
 						
 						<aimPieOffset>(0, 2.55)</aimPieOffset>
 						
@@ -313,7 +313,7 @@
 						</renderProperties>
 						<defaultAngleRotated>0</defaultAngleRotated>
 						<angleRestricted>(315,45)</angleRestricted>
-						<gizmoLabel>main gun</gizmoLabel>
+						<gizmoLabel>medium strike gun</gizmoLabel>
 						
 						<aimPieOffset>(0, 2.55)</aimPieOffset>
 						
@@ -329,7 +329,7 @@
 						</renderProperties>
 						<defaultAngleRotated>0</defaultAngleRotated>
 						<angleRestricted>(315,45)</angleRestricted>
-						<gizmoLabel>main gun</gizmoLabel>
+						<gizmoLabel>medium strike gun</gizmoLabel>
 						
 						<aimPieOffset>(0, 2.55)</aimPieOffset>
 						
@@ -548,7 +548,7 @@
 		<turretType>Rotatable</turretType>
 		<shotSound>kotorsound_xwinggun</shotSound>
 		
-		<projectile>SWVehicleBullet_SFred</projectile>
+		<projectile>SWCPStarfighterBullet_StrikeAIAVAAmedium_red</projectile>
 		<reloadTimer>3.5</reloadTimer>
 		<warmUpTimer>0</warmUpTimer>
 		

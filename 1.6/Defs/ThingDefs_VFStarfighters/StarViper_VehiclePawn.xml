@@ -18,7 +18,7 @@
 	<Vehicles.PatternDef>
 		<defName>guy762_SWVehiclePattern_StarViperB_closed</defName>
 		<!-- <label>StarViper (Black Sun - CLOSED)</label> -->
-		<label>StarViper (Black Sun)</label>
+		<label>StarViper (Black Sun Ace)</label>
 		<path>Starfighters/StarViper/StarViper_BlackSun_Closed_pattern</path>
 	</Vehicles.PatternDef>
 	
@@ -280,7 +280,7 @@
 						</renderProperties>
 						<defaultAngleRotated>0</defaultAngleRotated>
 						<angleRestricted>(315,45)</angleRestricted>
-						<gizmoLabel>main gun</gizmoLabel>
+						<gizmoLabel>dual medium AA gun</gizmoLabel>
 						
 						<aimPieOffset>(0, 2.55)</aimPieOffset>
 						
@@ -296,7 +296,7 @@
 						</renderProperties>
 						<defaultAngleRotated>0</defaultAngleRotated>
 						<angleRestricted>(315,45)</angleRestricted>
-						<gizmoLabel>main gun</gizmoLabel>
+						<gizmoLabel>dual medium AA gun</gizmoLabel>
 						
 						<aimPieOffset>(0, 2.55)</aimPieOffset>
 						
@@ -546,7 +546,7 @@
 		<turretType>Rotatable</turretType>
 		<shotSound>kotorsound_starvipergun</shotSound>
 		
-		<projectile>SWVehicleBullet_SFdoublegreen</projectile>
+		<projectile>SWCPStarfighterBullet_IntAAmedium_dualgreen</projectile>
 		<reloadTimer>3.5</reloadTimer>
 		<warmUpTimer>0</warmUpTimer>
 		

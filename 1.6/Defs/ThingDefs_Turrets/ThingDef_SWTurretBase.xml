@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
 
-	<ThingDef Name="guy762_TurretBase" ParentName="BuildingBase" Abstract="True">
+	<ThingDef Name="guy762_TurretBase" ParentName="SWCPBuilding_TurretArmorProfileBASE" Abstract="True">
 		<thingClass>Building_TurretGun</thingClass>
 		<drawerType>MapMeshAndRealTime</drawerType>
 		
@@ -55,66 +55,8 @@
 		
 		
 		
-		<damageMultipliers>
-			<li><damageDef>guy762_RangedDamage_ion</damageDef><multiplier>2</multiplier></li>
-			<li><damageDef>guy762_ExplosiveDamage_ion</damageDef><multiplier>2</multiplier></li>
-			<li><damageDef>guy762_GrenadeDamage_ion</damageDef><multiplier>2</multiplier></li>
-			<li><damageDef>guy762_MeleeDamage_ion</damageDef><multiplier>2</multiplier></li>
-			
-			<li><damageDef>Bomb</damageDef><multiplier>0.1</multiplier></li>
-			<li><damageDef>guy762_GrenadeDamage_frag</damageDef><multiplier>0.1</multiplier></li>
-			<li><damageDef>guy762_ExplosiveDamage_conc</damageDef><multiplier>0.01</multiplier></li>
-			<li><damageDef>guy762_GrenadeDamage_thermaldet</damageDef><multiplier>4</multiplier></li>
-
-			<li><damageDef>guy762_RangedDamage_AntiVehicleEnergy</damageDef><multiplier>1</multiplier></li>
-			<li><damageDef>guy762_ExplosiveDamage_AntiVehicleEnergy</damageDef><multiplier>1</multiplier></li>
-
-			<li><damageDef>guy762_RangedDamage_energy</damageDef><multiplier>0.25</multiplier></li>
-			<li><damageDef>guy762_BeamDamage_energy</damageDef><multiplier>0.25</multiplier></li>
-			<li><damageDef>guy762_ExplosiveDamage_energy</damageDef><multiplier>0.1</multiplier></li>
-
-			<li><damageDef>guy762_RangedDamage_electrical</damageDef><multiplier>0.1</multiplier></li>
-			<li><damageDef>guy762_MeleeDamage_electrical</damageDef><multiplier>0.1</multiplier></li>
-			<li><damageDef>guy762_BeamDamage_electrical</damageDef><multiplier>0.1</multiplier></li>
-
-			<li><damageDef>guy762_RangedDamage_sonic</damageDef><multiplier>0.1</multiplier></li>
-			<li><damageDef>guy762_MeleeDamage_sonic</damageDef><multiplier>0.1</multiplier></li>
-			<li><damageDef>guy762_GrenadeDamage_sonic</damageDef><multiplier>0.1</multiplier></li>
-			<li><damageDef>Thump</damageDef><multiplier>0.1</multiplier></li>
-
-			<li><damageDef>Flame</damageDef><multiplier>0.01</multiplier></li>
-			<li><damageDef>Burn</damageDef><multiplier>0.01</multiplier></li>
-			<!-- <li><damageDef>guy762_GrenadeDamage_plasma</damageDef><multiplier>0.01</multiplier></li> -->
-			<li><damageDef>guy762_BeamDamage_radiation</damageDef><multiplier>0.01</multiplier></li>
-			<li><damageDef>Frostbite</damageDef><multiplier>0.01</multiplier></li>
-			
-			
-			
-			<li><damageDef>Cut</damageDef><multiplier>0.1</multiplier></li>
-			<li><damageDef>Crush</damageDef><multiplier>0.1</multiplier></li>
-			<li><damageDef>Blunt</damageDef><multiplier>0.1</multiplier></li>
-			<li MayRequire="lee.theforce.lightsaber"><damageDef>Force_BluntLightsaber</damageDef><multiplier>0.1</multiplier></li>
-			<li><damageDef>Poke</damageDef><multiplier>0.01</multiplier></li>
-			<li><damageDef>Stab</damageDef><multiplier>0.1</multiplier></li>
-			
-			<li><damageDef>Scratch</damageDef><multiplier>0.01</multiplier></li>
-			<li><damageDef>ScratchToxic</damageDef><multiplier>0.01</multiplier></li>
-			<li><damageDef>Bite</damageDef><multiplier>0.01</multiplier></li>
-			<li><damageDef>ToxicBite</damageDef><multiplier>0.01</multiplier></li>
-			
-			<li><damageDef>RangedStab</damageDef><multiplier>0.1</multiplier></li>
-			<li><damageDef>Bullet</damageDef><multiplier>0.25</multiplier></li>
-			<li><damageDef>Arrow</damageDef><multiplier>0.1</multiplier></li>
-			<li><damageDef>ArrowHighVelocity</damageDef><multiplier>0.25</multiplier></li>
-			<li><damageDef>TornadoScratch</damageDef><multiplier>0.25</multiplier></li>
-			
-			
-			
-			<li><damageDef>guy762_RangedDamage_KOstun</damageDef><multiplier>0</multiplier></li>
-			<li><damageDef>guy762_GrenadeDamage_stun</damageDef><multiplier>0</multiplier></li>
-			<li><damageDef>guy762_PoisonDamage_saber</damageDef><multiplier>0</multiplier></li>
-			<li><damageDef>guy762_RangedDamage_kolto</damageDef><multiplier>0</multiplier></li>
-		</damageMultipliers>
+		<!-- <damageMultipliers> MOVED to a file in KotOR Core DamageDefs folder !!!!!! -->
+		<!-- </damageMultipliers> -->
 	  
 	  
 	</ThingDef>

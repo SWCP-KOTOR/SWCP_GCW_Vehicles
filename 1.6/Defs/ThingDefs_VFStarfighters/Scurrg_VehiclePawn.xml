@@ -324,7 +324,7 @@
 						</renderProperties>
 						<defaultAngleRotated>0</defaultAngleRotated>
 						<angleRestricted>(315,45)</angleRestricted>
-						<gizmoLabel>main gun</gizmoLabel>
+						<gizmoLabel>medium AV/AA gun</gizmoLabel>
 						
 						<aimPieOffset>(0, 2.55)</aimPieOffset>
 						
@@ -340,7 +340,7 @@
 						</renderProperties>
 						<defaultAngleRotated>0</defaultAngleRotated>
 						<angleRestricted>(315,45)</angleRestricted>
-						<gizmoLabel>main gun</gizmoLabel>
+						<gizmoLabel>medium AV/AA gun</gizmoLabel>
 						
 						<aimPieOffset>(0, 2.55)</aimPieOffset>
 						
@@ -356,7 +356,7 @@
 						</renderProperties>
 						<defaultAngleRotated>0</defaultAngleRotated>
 						<!-- <angleRestricted>(315,45)</angleRestricted> -->
-						<gizmoLabel>dorsal turret</gizmoLabel>
+						<gizmoLabel>medium AA turret</gizmoLabel>
 						
 						<aimPieOffset>(0, 2.55)</aimPieOffset>
 						
@@ -544,7 +544,7 @@
 		<turretType>Rotatable</turretType>
 		<shotSound>kotorsound_havocgun</shotSound>
 		
-		<projectile>SWVehicleBullet_scurrg</projectile>
+		<projectile>SWCPStarfighterBullet_CannonAVAAmedium_scurrgOrangeBalls</projectile>
 		<reloadTimer>3.5</reloadTimer>
 		<warmUpTimer>0</warmUpTimer>
 		
@@ -598,7 +598,7 @@
 		<turretType>Rotatable</turretType>
 		<shotSound>kotorsound_havocturret</shotSound>
 		
-		<projectile>SWVehicleBullet_SFdoublered</projectile>
+		<projectile>SWCPStarfighterBullet_IntAAmedium_dualred</projectile>
 		<reloadTimer>3.5</reloadTimer>
 		<warmUpTimer>0</warmUpTimer>
 		

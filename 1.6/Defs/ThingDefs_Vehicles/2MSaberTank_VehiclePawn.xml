@@ -1,0 +1,531 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<Defs>	
+
+
+	<Vehicles.VehicleDef Name="guy762_SWVehicle_2MSaberTank" ParentName="guy762_GroundVehiclePawn_base">
+		<defName>guy762_SWVehicle_2MSaberTank</defName>
+		<label>2-M Saber-class Hovertank</label>
+		<description>. \n\n&lt;color=#bb8f04&gt;Crew:&lt;/color&gt; Driver x1</description>
+		
+		<graphicData>
+			<texPath>LandVehicles/2MSaberTank/2MSaberTank</texPath>
+			<graphicClass>Vehicles.Graphic_Vehicle</graphicClass>
+			<drawSize>(10,10)</drawSize>
+			<shaderType>CutoutComplexPattern</shaderType>
+			<color>(185,185,185)</color> <!-- lighter grey -->
+		</graphicData>
+		
+		<fillPercent>1</fillPercent>
+		
+		<nameable>true</nameable>
+		<buildDef>guy762_SWVehicleBP_2MSaberTank</buildDef>
+		
+		<size>(6,7)</size>
+		<uiIconScale>1</uiIconScale>
+		
+		
+		<vehicleCategory>Combat</vehicleCategory>
+		<techLevel>Spacer</techLevel>
+		<vehicleType>Land</vehicleType>
+		<navigationCategory>Automatic</navigationCategory>
+				
+		<statBases>
+			<!--ArmorRating_Sharp>+0.05</ArmorRating_Sharp>
+			<ArmorRating_Blunt>-0.1</ArmorRating_Blunt>        BASE CURVE FOR HARD ARMOR
+			<ArmorRating_Heat>+0.15</ArmorRating_Heat-->
+			<ArmorRating_Sharp>0.35</ArmorRating_Sharp>
+			<ArmorRating_Blunt>0.2</ArmorRating_Blunt> <!-- # of estimated XWMG hull points * 0.1, apply to hard armor curve -->
+			<ArmorRating_Heat>0.45</ArmorRating_Heat>
+			<MaxHitPoints>300</MaxHitPoints> <!-- # of estimated XWMG hull points * 100 -->
+			
+			<Flammability>0.5</Flammability>
+			<MarketValue>42000</MarketValue>
+			
+			<EnergyShieldRechargeRate>0.5</EnergyShieldRechargeRate>
+			<EnergyShieldEnergyMax>2</EnergyShieldEnergyMax>
+		</statBases>
+		
+		<soundSustainersOnEvent>
+			<li>
+				<start>IgnitionOn</start>
+				<stop>MoveStart</stop>
+				<value>kotorsound_hovertank_idle</value>
+			</li>
+			<li>
+				<start>MoveStart</start>
+				<stop>MoveStop</stop>
+				<value>kotorsound_hovertank_moving</value>
+			</li>
+			<li>
+				<start>MoveStop</start>
+				<stop>MoveStart</stop>
+				<value>kotorsound_hovertank_idle</value>
+			</li>
+			<li>
+				<start>MoveStop</start>
+				<stop>IgnitionOff</stop>
+				<value>kotorsound_hovertank_idle</value>
+			</li>
+		</soundSustainersOnEvent>
+		
+		<soundOneShotsOnEvent>
+			<li>
+				<key>IgnitionOn</key>
+				<value>kotorsound_speederbike_activate</value>
+			</li>
+			<li>
+				<key>IgnitionOff</key>
+				<value>kotorsound_speederbike_deactivate</value>
+			</li>
+		</soundOneShotsOnEvent>
+		
+		<race>
+			<baseBodySize>1</baseBodySize>
+		</race>
+		
+		<vehicleStats>
+			<Mass>10500</Mass>
+			<MoveSpeed>30</MoveSpeed>
+			<CargoCapacity>350</CargoCapacity>
+			<RepairRate>0.5</RepairRate>
+			<!--AccelerationRate>0.08</AccelerationRate-->
+		</vehicleStats>
+		
+		<properties>
+			<diagonalRotation>false</diagonalRotation>
+			<manhunterTargetsVehicle>true</manhunterTargetsVehicle>
+			
+			<worldSpeedMultiplier>1</worldSpeedMultiplier> <!-- higher number = faster travel -->
+			<winterSpeedMultiplier>1</winterSpeedMultiplier> <!-- lower number = faster winter travel -->
+			<offRoadMultiplier>1</offRoadMultiplier> <!-- lower number = faster travel -->
+			
+			<customRoadCosts AssignDefaults = "0.5" /> <!-- vanilla default is 0.5, lower number = faster -->
+			<!-- <customTerrainCosts AllowTerrainWithTag="Water" PathCost="1"/> -->
+			<track Class = "Vehicles.VehicleTrack_Wake">
+				<speed>1</speed>
+			</track>
+			
+			<riverCost>2</riverCost> <!-- higher = slower, <1 = very fast on world map -->
+			
+			<vehicleJobLimitations>
+				<li>(RepairVehicle, 4)</li> <!-- how many pawns can repair this vehicle at a time -->
+			</vehicleJobLimitations> <!-- guy762 RULES: repair job count should be twice the amount of pawns to fully operate the vehicle -->
+			
+			<!-- <customHillinessCosts> -->
+				<!-- <SmallHills>0.25</SmallHills> -->
+				<!-- <LargeHills>0.75</LargeHills> -->
+				<!-- <Mountainous>1.5</Mountainous> -->
+			<!-- </customHillinessCosts> -->
+			
+			<!--customWeatherCosts>
+				<Dusting>4</Dusting>
+				<Thin>8</Thin>
+				<Medium>16</Medium>
+				<Thick>24</Thick>
+			</customWeatherCosts-->
+			
+			<roles>
+				<li>
+					<key>driver</key>
+					<label>Driver</label>
+					<slots>1</slots>
+					<slotsToOperate>1</slotsToOperate>
+					<handlingTypes>
+						<li>Movement</li>
+						<li>Turret</li>
+					</handlingTypes>
+					
+					<comfort>-0.125</comfort>
+					
+					<turretIds>
+						<li>2MSaberTankKey_gun_1</li>
+						<li>2MSaberTankKey_gun_2</li>
+					</turretIds>
+				</li>
+				<li>
+					<key>gunner</key>
+					<label>Gunner</label>
+					<slots>1</slots>
+					<slotsToOperate>1</slotsToOperate>
+					
+					<handlingTypes>Turret</handlingTypes>
+					
+					<turretIds>
+						<li>2MSaberTankKey_gun_3</li>
+						<li>2MSaberTankKey_gun_4</li>
+					</turretIds>
+				</li>
+				<li>
+					<key>navigator</key>
+					<label>Navigator</label>
+					<slots>1</slots>
+				</li>
+			</roles>
+		</properties>
+		
+		<components>
+			<li>
+				<key>2MSaberTankKey_hull</key>
+				<label>Hull</label>
+				<depth>External</depth>
+				
+				<armor>
+					<ArmorRating_Sharp>1.35</ArmorRating_Sharp>
+					<ArmorRating_Blunt>1.2</ArmorRating_Blunt> <!-- # of estimated XWMG hull points * 0.1, apply to hard armor curve -->
+					<ArmorRating_Heat>1.45</ArmorRating_Heat>
+					<IncomingDamageFactor>-0.25</IncomingDamageFactor> <!-- unarmored: 0.05 | light vehicles: 0.15 | medium vehicles: 0.25 | heavy vehicles: 0.35 | superheavies: 0.45-->
+				</armor>
+				<health>300</health> <!-- # of estimated XWMG hull points * 100 -->
+				
+				<hitbox>
+					<side>Body</side>
+				</hitbox>
+			</li>
+			
+			
+			<!-- <li> -->
+				<!-- <key>ImpTroopTransportKey_cabin</key> -->
+				<!-- <label>Cabin</label> -->
+				<!-- <health>100</health> -->
+				<!-- <depth>Internal</depth> -->
+			<!-- </li> -->
+			<li>
+				<key>2MSaberTankKey_engine</key>
+				<label>Engine</label>
+				<health>5</health>
+				<priorityStatEfficiency>true</priorityStatEfficiency>
+				<depth>Internal</depth>
+				
+				<reactors>
+					<li Class = "Vehicles.Reactor_Explosive">
+						<indicator>VF_Explosive</indicator>
+						<chance>0.25</chance>
+						<maxHealth>0.2</maxHealth>
+						<radius>3</radius>
+						<damageDef>guy762_ExplosiveDamage_energy</damageDef>
+					</li>
+				</reactors>
+				
+				<categories>
+					<li>MoveSpeed</li>
+				</categories>
+			</li>
+			<li>
+				<key>2MSaberTankKey_repulsor</key>
+				<label>Repulsorlift Generator</label>
+				<health>5</health>
+				<depth>Internal</depth>
+				
+				<categories>
+					<li>MoveSpeed</li>
+				</categories>
+			</li>
+			<li>
+				<key>2MSaberTankKey_thrust</key>
+				<label>Thrust Repulsor</label>
+				<health>5</health>
+				<depth>Internal</depth>
+				
+				<tags>
+					<li>Wheel</li>
+				</tags>
+				
+				<categories>
+					<li>MoveSpeed</li>
+				</categories>
+			</li>
+		</components>
+		
+		<comps>
+			<li Class="Vehicles.CompProperties_FueledTravel">
+				<electricPowered>true</electricPowered>
+				<fuelConsumptionRate>15</fuelConsumptionRate>
+				<fuelCapacity>325</fuelCapacity>
+				<fuelConsumptionWorldMultiplier>25</fuelConsumptionWorldMultiplier>
+				
+				<targetFuelLevelConfigurable>true</targetFuelLevelConfigurable>
+				<ambientHeat>1.0</ambientHeat>
+			</li>
+			<li Class="CompProperties_ProjectileInterceptor">
+				<radius>5</radius>
+				<color>(0.4, 0.4, 0.4)</color>
+				
+				<interceptGroundProjectiles>true</interceptGroundProjectiles>
+				<interceptAirProjectiles>true</interceptAirProjectiles>
+				<interceptNonHostileProjectiles>true</interceptNonHostileProjectiles>
+				
+				<reactivateEffect>BulletShieldGenerator_Reactivate</reactivateEffect>
+				<activeSound>BulletShield_Ambience</activeSound>
+				<hitPointsRestoreInstantlyAfterCharge>true</hitPointsRestoreInstantlyAfterCharge>
+				
+				<hitPoints>200</hitPoints> <!-- XWMG shield value * 100 -->
+				
+				<chargeDurationTicks>1800</chargeDurationTicks><!-- 30s -->
+				<rechargeHitPointsIntervalTicks>120</rechargeHitPointsIntervalTicks>
+				<minIdleAlpha>0.2</minIdleAlpha>
+				<drawWithNoSelection>True</drawWithNoSelection>
+				<disarmedByEmpForTicks>1500</disarmedByEmpForTicks>
+				
+				<gizmoTipKey>ProjectileInterceptorTip</gizmoTipKey>
+			</li>
+			<li Class="Vehicles.CompProperties_VehicleTurrets">
+				<turrets>
+					<li>
+						<turretDef>guy762_VehicleTurret_protonmissiles</turretDef>
+						
+						<renderProperties>
+							<north>(-2.975, 3)</north>
+							<south>(2.92, -3.05)</south>
+							<east>(3.875, 1.825)</east>
+							<west>(-3.875, -2)</west>
+						</renderProperties>
+						<defaultAngleRotated>0</defaultAngleRotated>
+						<angleRestricted>(315,45)</angleRestricted>
+						<gizmoLabel>proton missile launcher</gizmoLabel>
+						
+						<aimPieOffset>(0, 2.55)</aimPieOffset>
+						
+						<autoTargetingActive>True</autoTargetingActive>
+						
+						<key>2MSaberTankKey_gun_1</key>
+					</li>
+					<li>
+						<turretDef>guy762_VehicleTurret_protonmissiles</turretDef>
+						
+						<renderProperties>
+							<north>(2.975, 3)</north>
+							<south>(-2.92,-3.05)</south>
+							<east>(3.875, -2)</east>
+							<west>(-3.875, 1.825)</west>
+						</renderProperties>
+						<defaultAngleRotated>0</defaultAngleRotated>
+						<angleRestricted>(315,45)</angleRestricted>
+						<gizmoLabel>proton missile launcher</gizmoLabel>
+						
+						<aimPieOffset>(0, 2.55)</aimPieOffset>
+						
+						<autoTargetingActive>True</autoTargetingActive>
+						
+						<key>2MSaberTankKey_gun_2</key>
+					</li>
+					<li>
+						<turretDef>guy762_VehicleTurret_2MSaberTank_AV</turretDef>
+						
+						<renderProperties>
+							<north>(0, -1)</north>
+							<south>(0, 2.75)</south>
+							<east>(-2.5,1)</east>
+							<west>(2.5,1)</west>
+						</renderProperties>
+						<defaultAngleRotated>0</defaultAngleRotated>
+						<gizmoLabel>dorsal AV gun</gizmoLabel>
+						
+						<drawLayer>2</drawLayer>
+						<aimPieOffset>(0, 2.55)</aimPieOffset>
+						
+						<key>2MSaberTankKey_gun_3</key>
+					</li>
+					<li>
+						<turretDef>guy762_VehicleTurret_2MSaberTank_AI</turretDef>
+						
+						<renderProperties>
+							<north>(0, -1)</north>
+							<south>(0, 2.75)</south>
+							<east>(-2.5,1)</east>
+							<west>(2.5,1)</west>
+						</renderProperties>
+						<defaultAngleRotated>0</defaultAngleRotated>
+						<gizmoLabel>dorsal AI repeater</gizmoLabel>
+						
+						<drawLayer>4</drawLayer>
+						<aimPieOffset>(0, 2.55)</aimPieOffset>
+						
+						<key>2MSaberTankKey_gun_4</key>
+					</li>
+				</turrets>
+			</li>
+		</comps>
+		
+		<modExtensions>
+            <li Class="SWCP_GCW_Vehicles.VehicleTemperatureProtection">
+                <protectFromHeat>true</protectFromHeat>
+                <protectFromCold>true</protectFromCold>
+            </li>
+        </modExtensions>
+	</Vehicles.VehicleDef>
+	
+	
+	
+
+	
+	<Vehicles.VehicleTurretDef ParentName="guy762_VehicleTurretBASE">
+		<defName>guy762_VehicleTurret_protonmissiles</defName>
+		<label>proton missile launcher</label>
+		<description>Proton missile launcher.</description>
+		
+		<turretType>Rotatable</turretType>
+		<!-- <shotSound>kotorsound_TankMissileLauncher</shotSound> -->
+		<shotSound>kotorsound_EaWTankMissile</shotSound>
+		<reloadSound>kotorsound_reloadlauncher</reloadSound>
+		
+		<projectile>SWVehicleBullet_AVprotonMissile</projectile>
+		<reloadTimer>3.5</reloadTimer>
+		<warmUpTimer>0.75</warmUpTimer>
+		
+		<magazineCapacity>6</magazineCapacity>
+		<genericAmmo>true</genericAmmo>
+		<ammunition>
+			<thingDefs>
+				<li>guy762_RocketItem_buster</li>
+			</thingDefs>
+		</ammunition>
+		
+		
+		
+		<autoSnapTargeting>true</autoSnapTargeting>
+		<rotationSpeed>5</rotationSpeed>
+		
+		<!-- <projectileOffset>2.1</projectileOffset> -->
+		
+		<minRange>5</minRange>
+		<maxRange>60</maxRange> <!-- ~30 for infantry, 60 for ground vehicles, 90 for starfighters -->
+
+		<fireModes>
+			<li>
+				<shotsPerBurst>1</shotsPerBurst>
+				<ticksBetweenShots>20</ticksBetweenShots>
+				<ticksBetweenBursts>200</ticksBetweenBursts>
+				<label>Single</label>
+				<texPath>Items/Rockets/rocket_buster/rocket_buster_a</texPath>
+			</li>
+			<li>
+				<shotsPerBurst>3</shotsPerBurst>
+				<ticksBetweenShots>20</ticksBetweenShots>
+				<ticksBetweenBursts>400</ticksBetweenBursts>
+				<label>3 Burst</label>
+				<texPath>Items/Rockets/rocket_buster/rocket_buster_b</texPath>
+			</li>
+			<li>
+				<shotsPerBurst>6</shotsPerBurst>
+				<ticksBetweenShots>20</ticksBetweenShots>
+				<ticksBetweenBursts>600</ticksBetweenBursts>
+				<label>Fire All</label>
+				<texPath>Items/Rockets/rocket_buster/rocket_buster_c</texPath>
+			</li>
+		</fireModes>
+
+		<graphicData>
+			<texPath>NullTex</texPath>
+			<graphicClass>Vehicles.Graphic_Turret</graphicClass>
+		</graphicData>
+		
+		<gizmoIconTexPath>Items/bigcannon_blank</gizmoIconTexPath>
+		
+	</Vehicles.VehicleTurretDef>
+	
+	
+	
+	
+	
+	
+	
+	
+	<Vehicles.VehicleTurretDef ParentName="guy762_VehicleTurretBASE">
+		<defName>guy762_VehicleTurret_2MSaberTank_AV</defName>
+		<label>2-M Saber tank dorsal AV turret</label>
+		<description>The rotating dorsal anti-vehicle turret of a 2-M Saber-class Hovertank.</description>
+		
+		<turretType>Rotatable</turretType>
+		<!-- <shotSound>kotorsound_TankAntiVehicleGun</shotSound> -->
+		<shotSound>kotorsound_SWJSFJediStarfighterGun</shotSound>
+		
+		<projectile>SWVehicleBullet_AVred</projectile>
+		<reloadTimer>3.5</reloadTimer>
+		<warmUpTimer>1</warmUpTimer> <!-- all dorsal turrets = 1 minimum -->
+		
+		<magazineCapacity>999</magazineCapacity>
+		
+		
+		
+		<autoSnapTargeting>true</autoSnapTargeting>
+		<rotationSpeed>5</rotationSpeed>
+		
+		<!-- <projectileOffset>2.1</projectileOffset> -->
+		
+		<minRange>5</minRange>
+		<maxRange>60</maxRange> <!-- ~30 for infantry, 60 for ground vehicles, 90 for starfighters -->
+
+		<fireModes>
+			<li>
+				<shotsPerBurst>3</shotsPerBurst>
+				<ticksBetweenShots>15</ticksBetweenShots>
+				<ticksBetweenBursts>200</ticksBetweenBursts>
+				<label>Burst</label>
+				<texPath>UI/Rapid_Shot</texPath>
+			</li>
+		</fireModes>
+
+		<graphicData>
+			<texPath>LandVehicles/2MSaberTank/2MSaberTank_maingun</texPath>
+			<graphicClass>Vehicles.Graphic_Turret</graphicClass>
+			<drawSize>(8,8)</drawSize>
+			<color>(185,185,185)</color> <!-- lighter grey -->
+		</graphicData>
+		
+		<gizmoIconTexPath>LandVehicles/2MSaberTank/2MSaberTank_maingun</gizmoIconTexPath>
+		
+	</Vehicles.VehicleTurretDef>
+	
+	
+	
+	<Vehicles.VehicleTurretDef ParentName="guy762_VehicleTurretBASE">
+		<defName>guy762_VehicleTurret_2MSaberTank_AI</defName>
+		<label>2-M Saber tank dorsal AI repeater</label>
+		<description>The rotating dorsal anti-infantry turret of a 2-M Saber-class Hovertank.</description>
+		
+		<turretType>Rotatable</turretType>
+		<shotSound>kotorsound_T21repeater</shotSound>
+		
+		<projectile>KotORBlasterBolt_default</projectile>
+		<reloadTimer>3.5</reloadTimer>
+		<warmUpTimer>1</warmUpTimer> <!-- all dorsal turrets = 1 minimum -->
+		
+		<magazineCapacity>999</magazineCapacity>
+		
+		
+		
+		<autoSnapTargeting>true</autoSnapTargeting>
+		<rotationSpeed>5</rotationSpeed>
+		
+		<!-- <projectileOffset>2.1</projectileOffset> -->
+		
+		<minRange>5</minRange>
+		<maxRange>30</maxRange> <!-- ~30 for infantry, 60 for ground vehicles, 90 for starfighters -->
+
+		<fireModes>
+			<li>
+				<shotsPerBurst>21</shotsPerBurst>
+				<ticksBetweenShots>6</ticksBetweenShots>
+				<ticksBetweenBursts>200</ticksBetweenBursts>
+				<label>Burst</label>
+				<texPath>UI/Master_Rapid_Shot</texPath>
+				
+				<forcedMissRadius>2.25</forcedMissRadius>
+			</li>
+		</fireModes>
+
+		<graphicData>
+			<texPath>LandVehicles/2MSaberTank/2MSaberTank_smallgun</texPath>
+			<graphicClass>Vehicles.Graphic_Turret</graphicClass>
+			<drawSize>(4,4)</drawSize>
+			<color>(185,185,185)</color> <!-- lighter grey -->
+		</graphicData>
+		
+		<gizmoIconTexPath>LandVehicles/2MSaberTank/2MSaberTank_smallgun</gizmoIconTexPath>
+		
+	</Vehicles.VehicleTurretDef>
+	
+	
+	
+</Defs>

@@ -3,7 +3,7 @@
 <Defs>
 	<Vehicles.VehicleBuildDef ParentName="guy762_VehicleBaseBuildable_GroundVehicle">
 		<defName>guy762_SWVehicleBP_AAC1Tank</defName>
-		<label>AAC-1 Speeder Tank</label>
+		<label>AAC-2 Speeder Tank</label>
 		<description>.</description>
 		<designationCategory>MM_StarWarsShipBuildTab</designationCategory>
 		

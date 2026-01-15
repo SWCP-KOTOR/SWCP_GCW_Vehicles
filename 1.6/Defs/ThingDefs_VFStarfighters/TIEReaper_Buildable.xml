@@ -20,7 +20,7 @@
 			<Flammability>0.05</Flammability>
 		</statBases>
 		
-		<size>(14,21)</size>
+		<size>(13,20)</size>
 		
 		<!--researchPrerequisites>
 			<li>VVE_BasicVehicles</li>

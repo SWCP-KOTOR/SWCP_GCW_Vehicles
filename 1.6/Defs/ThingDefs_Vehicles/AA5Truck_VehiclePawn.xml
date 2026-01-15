@@ -48,13 +48,13 @@
 		<navigationCategory>Automatic</navigationCategory>
 				
 		<statBases>
-			<ArmorRating_Sharp>0.65</ArmorRating_Sharp>
-			<ArmorRating_Blunt>0.5</ArmorRating_Blunt> <!-- # of estimated XWMG hull points * 0.1, apply to hard armor curve -->
-			<ArmorRating_Heat>0.75</ArmorRating_Heat>
-			<MaxHitPoints>600</MaxHitPoints> <!-- # of estimated XWMG hull points * 100 -->
+			<ArmorRating_Sharp>0.45</ArmorRating_Sharp>
+			<ArmorRating_Blunt>0.3</ArmorRating_Blunt> <!-- # of estimated XWMG hull points * 0.1, apply to hard armor curve -->
+			<ArmorRating_Heat>0.55</ArmorRating_Heat>
+			<MaxHitPoints>400</MaxHitPoints> <!-- # of estimated XWMG hull points * 100 -->
 			
 			<Flammability>0.5</Flammability>
-			<MarketValue>5800</MarketValue>
+			<MarketValue>13600</MarketValue>
 		</statBases>
 		
 		<soundSustainersOnEvent>
@@ -178,13 +178,13 @@
 				<label>Hull</label>
 				<depth>External</depth>
 				
-				<armor> <!-- breaking usual rules to put these guys at 6 hull -->
-					<ArmorRating_Sharp>1.65</ArmorRating_Sharp>
-					<ArmorRating_Blunt>1.5</ArmorRating_Blunt> <!-- # of estimated XWMG hull points * 0.1, apply to hard armor curve -->
-					<ArmorRating_Heat>1.75</ArmorRating_Heat>
-					<IncomingDamageFactor>-0.15</IncomingDamageFactor> <!-- unarmored: 0.05 | light vehicles: 0.15 | medium vehicles: 0.25 | heavy vehicles: 0.35 -->
+				<armor>
+					<ArmorRating_Sharp>1.45</ArmorRating_Sharp>
+					<ArmorRating_Blunt>1.3</ArmorRating_Blunt> <!-- # of estimated XWMG hull points * 0.1, apply to hard armor curve -->
+					<ArmorRating_Heat>1.55</ArmorRating_Heat>
+					<IncomingDamageFactor>-0.25</IncomingDamageFactor> <!-- unarmored: 0.05 | light vehicles: 0.15 | medium vehicles: 0.25 | heavy vehicles: 0.35 | superheavies: 0.45-->
 				</armor>
-				<health>600</health> <!-- # of estimated XWMG hull points * 100 -->
+				<health>400</health> <!-- # of estimated XWMG hull points * 100 -->
 				
 				<hitbox>
 					<side>Body</side>

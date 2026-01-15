@@ -44,10 +44,10 @@
 			<!--ArmorRating_Sharp>+0.05</ArmorRating_Sharp>
 			<ArmorRating_Blunt>-0.1</ArmorRating_Blunt>        BASE CURVE FOR HARD ARMOR
 			<ArmorRating_Heat>+0.15</ArmorRating_Heat-->
-			<ArmorRating_Sharp>0.65</ArmorRating_Sharp>
-			<ArmorRating_Blunt>0.5</ArmorRating_Blunt> <!-- # of estimated XWMG hull points * 0.1, apply to hard armor curve -->
-			<ArmorRating_Heat>0.75</ArmorRating_Heat>
-			<MaxHitPoints>600</MaxHitPoints> <!-- # of estimated XWMG hull points * 100 -->
+			<ArmorRating_Sharp>0.55</ArmorRating_Sharp>
+			<ArmorRating_Blunt>0.4</ArmorRating_Blunt> <!-- # of estimated XWMG hull points * 0.1, apply to hard armor curve -->
+			<ArmorRating_Heat>0.65</ArmorRating_Heat>
+			<MaxHitPoints>500</MaxHitPoints> <!-- # of estimated XWMG hull points * 100 -->
 			
 			<Flammability>0.5</Flammability>
 			<MarketValue>45000</MarketValue>
@@ -132,7 +132,7 @@
 			<riverCost>1</riverCost> <!-- higher = slower, <1 = very fast on world map -->
 			
 			<vehicleJobLimitations>
-				<li>(RepairVehicle, 4)</li> <!-- how many pawns can repair this vehicle at a time -->
+				<li>(RepairVehicle, 6)</li> <!-- how many pawns can repair this vehicle at a time -->
 			</vehicleJobLimitations> <!-- guy762 RULES: repair job count should be twice the amount of pawns to fully operate the vehicle -->
 			
 			<!-- <customHillinessCosts> -->
@@ -167,8 +167,8 @@
 					</turretIds>
 				</li>
 				<li>
-					<key>gunner</key>
-					<label>Gunner</label>
+					<key>gunner1</key>
+					<label>Forward Gunner</label>
 					<slots>1</slots>
 					<slotsToOperate>1</slotsToOperate>
 					<handlingTypes>
@@ -181,10 +181,18 @@
 					</turretIds>
 				</li>
 				<li>
-					<key>passenger</key>
-					<label>Spotter</label>
+					<key>gunner2</key>
+					<label>Dorsal Gunner</label>
 					<slots>1</slots>
+					<slotsToOperate>1</slotsToOperate>
+					<handlingTypes>
+						<li>Turret</li>
+					</handlingTypes>
 					<comfort>-0.75</comfort>
+					
+					<turretIds>
+						<li>TX225Key_gun_4</li>
+					</turretIds>
 				</li>
 			</roles>
 		</properties>
@@ -195,13 +203,13 @@
 				<label>Hull</label>
 				<depth>External</depth>
 				
-				<armor> <!-- EaWX health/50 = hull points, round up -->
-					<ArmorRating_Sharp>1.65</ArmorRating_Sharp>
-					<ArmorRating_Blunt>1.5</ArmorRating_Blunt> <!-- # of estimated XWMG hull points * 0.1, apply to hard armor curve -->
-					<ArmorRating_Heat>1.75</ArmorRating_Heat>
-					<IncomingDamageFactor>-0.25</IncomingDamageFactor> <!-- unarmored: 0.05 | light vehicles: 0.15 | medium vehicles: 0.25 | heavy vehicles: 0.35 -->
+				<armor>
+					<ArmorRating_Sharp>1.55</ArmorRating_Sharp>
+					<ArmorRating_Blunt>1.4</ArmorRating_Blunt> <!-- # of estimated XWMG hull points * 0.1, apply to hard armor curve -->
+					<ArmorRating_Heat>1.65</ArmorRating_Heat>
+					<IncomingDamageFactor>-0.35</IncomingDamageFactor> <!-- unarmored: 0.05 | light vehicles: 0.15 | medium vehicles: 0.25 | heavy vehicles: 0.35 | superheavies: 0.45-->
 				</armor>
-				<health>600</health> <!-- # of estimated XWMG hull points * 100 -->
+				<health>500</health> <!-- # of estimated XWMG hull points * 100 -->
 				
 				<hitbox>
 					<side>Body</side>
@@ -328,7 +336,6 @@
 					</li>
 					<li>
 						<turretDef>guy762_VehicleTurret_TX225AI</turretDef>
-						<!-- <turretDef>guy762_VehicleTurret_ATST_repeater</turretDef> -->
 						
 						<renderProperties>
 							<north>(0, 2.5)</north>
@@ -346,6 +353,23 @@
 						<!-- <autoTargetingActive>True</autoTargetingActive> -->
 						
 						<key>TX225Key_gun_3</key>
+					</li>
+					<li>
+						<turretDef>guy762_VehicleTurret_2MSaberTank_AI</turretDef>
+						
+						<renderProperties>
+							<north>(0.815, 1.25)</north>
+							<south>(-0.815, 0.75)</south>
+							<east>(0.11,0.5)</east>
+							<west>(-0.11,0.5)</west>
+						</renderProperties>
+						<defaultAngleRotated>0</defaultAngleRotated>
+						<gizmoLabel>dorsal AI repeater</gizmoLabel>
+						
+						<drawLayer>101</drawLayer>
+						<aimPieOffset>(0, 2.55)</aimPieOffset>
+						
+						<key>TX225Key_gun_4</key>
 					</li>
 				</turrets>
 			</li>

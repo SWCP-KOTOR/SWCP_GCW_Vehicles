@@ -213,7 +213,7 @@
 					<ArmorRating_Sharp>1.85</ArmorRating_Sharp>
 					<ArmorRating_Blunt>1.7</ArmorRating_Blunt> <!-- # of estimated XWMG hull points * 0.1, apply to hard armor curve -->
 					<ArmorRating_Heat>1.95</ArmorRating_Heat>
-					<IncomingDamageFactor>-0.35</IncomingDamageFactor> <!-- unarmored: 0.05 | light vehicles: 0.15 | medium vehicles: 0.25 | heavy vehicles: 0.35 -->
+					<IncomingDamageFactor>-0.45</IncomingDamageFactor> <!-- unarmored: 0.05 | light vehicles: 0.15 | medium vehicles: 0.25 | heavy vehicles: 0.35 | superheavies: 0.45-->
 				</armor>
 				<health>800</health> <!-- # of estimated XWMG hull points * 100 -->
 				
@@ -251,8 +251,8 @@
 				</categories>
 			</li>
 			<li>
-				<key>ATATKey_leftleg</key>
-				<label>Left Leg</label>
+				<key>ATATKey_frontleftleg</key>
+				<label>Forward Left Leg</label>
 				<health>10</health>
 				<depth>Internal</depth>
 				
@@ -261,8 +261,8 @@
 				</categories>
 			</li>
 			<li>
-				<key>ATATKey_rightleg</key>
-				<label>Right Leg</label>
+				<key>ATATKey_frontrightleg</key>
+				<label>Forward Right Leg</label>
 				<health>10</health>
 				<depth>Internal</depth>
 				
@@ -271,8 +271,8 @@
 				</categories>
 			</li>
 			<li>
-				<key>ATATKey_leftfoot</key>
-				<label>Left Foot</label>
+				<key>ATATKey_frontleftfoot</key>
+				<label>Forward Left Foot</label>
 				<health>10</health>
 				<depth>Internal</depth>
 				
@@ -285,8 +285,58 @@
 				</categories>
 			</li>
 			<li>
-				<key>ATATKey_rightfoot</key>
-				<label>Right Foot</label>
+				<key>ATATKey_frontrightfoot</key>
+				<label>Forward Right Foot</label>
+				<health>10</health>
+				<depth>Internal</depth>
+				
+				<tags>
+					<li>Wheel</li>
+				</tags>
+				
+				<categories>
+					<li>MoveSpeed</li>
+				</categories>
+			</li>
+			
+			
+			<li>
+				<key>ATATKey_backleftleg</key>
+				<label>Rear Left Leg</label>
+				<health>10</health>
+				<depth>Internal</depth>
+				
+				<categories>
+					<li>MoveSpeed</li>
+				</categories>
+			</li>
+			<li>
+				<key>ATATKey_backrightleg</key>
+				<label>Rear Right Leg</label>
+				<health>10</health>
+				<depth>Internal</depth>
+				
+				<categories>
+					<li>MoveSpeed</li>
+				</categories>
+			</li>
+			<li>
+				<key>ATATKey_backleftfoot</key>
+				<label>Rear Left Foot</label>
+				<health>10</health>
+				<depth>Internal</depth>
+				
+				<tags>
+					<li>Wheel</li>
+				</tags>
+				
+				<categories>
+					<li>MoveSpeed</li>
+				</categories>
+			</li>
+			<li>
+				<key>ATATKey_backrightfoot</key>
+				<label>Rear Right Foot</label>
 				<health>10</health>
 				<depth>Internal</depth>
 				

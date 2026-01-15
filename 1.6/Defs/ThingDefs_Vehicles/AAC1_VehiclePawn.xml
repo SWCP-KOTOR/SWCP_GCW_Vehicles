@@ -4,14 +4,14 @@
 
 	<Vehicles.PatternDef>
 		<defName>guy762_SWVehiclePattern_AAC1Tank</defName>
-		<label>AAC-1 Speeder Tank (stock)</label>
+		<label>AAC-2 Speeder Tank (stock)</label>
 		<path>LandVehicles/AAC1/AAC1_pattern</path>
 	</Vehicles.PatternDef>
 	
 	
 	<Vehicles.VehicleDef Name="guy762_SWVehicle_AAC1Tank" ParentName="guy762_GroundVehiclePawn_base">
 		<defName>guy762_SWVehicle_AAC1Tank</defName>
-		<label>AAC-1 Speeder Tank</label>
+		<label>AAC-2 Speeder Tank</label>
 		<description>. \n\n&lt;color=#bb8f04&gt;Crew:&lt;/color&gt; Driver x1</description>
 		
 		<combatPower>350</combatPower>
@@ -47,13 +47,16 @@
 		<vehicleType>Land</vehicleType>
 				
 		<statBases> <!-- blanket applies to all parts without specified armor ratings -->
-			<ArmorRating_Sharp>0.35</ArmorRating_Sharp>
-			<ArmorRating_Blunt>0.2</ArmorRating_Blunt> <!-- # of estimated XWMG hull points * 0.1, apply to hard armor curve -->
-			<ArmorRating_Heat>0.45</ArmorRating_Heat>
-			<MaxHitPoints>300</MaxHitPoints> <!-- # of estimated XWMG hull points * 100 -->
+			<ArmorRating_Sharp>0.25</ArmorRating_Sharp>
+			<ArmorRating_Blunt>0.1</ArmorRating_Blunt> <!-- # of estimated XWMG hull points * 0.1, apply to hard armor curve -->
+			<ArmorRating_Heat>0.35</ArmorRating_Heat>
+			<MaxHitPoints>200</MaxHitPoints> <!-- # of estimated XWMG hull points * 100 -->
 			
 			<Flammability>0.5</Flammability>
-			<MarketValue>5800</MarketValue>
+			<MarketValue>28000</MarketValue>
+			
+			<EnergyShieldRechargeRate>0.5</EnergyShieldRechargeRate>
+			<EnergyShieldEnergyMax>1</EnergyShieldEnergyMax>
 		</statBases>
 		
 		<soundSustainersOnEvent>
@@ -172,13 +175,13 @@
 				<label>Hull</label>
 				<depth>External</depth>
 				
-				<armor> <!-- EaWX health/50 = hull points, round up -->
-					<ArmorRating_Sharp>1.35</ArmorRating_Sharp>
-					<ArmorRating_Blunt>1.2</ArmorRating_Blunt> <!-- # of estimated XWMG hull points * 0.1, apply to hard armor curve -->
-					<ArmorRating_Heat>1.45</ArmorRating_Heat>
-					<IncomingDamageFactor>-0.15</IncomingDamageFactor> <!-- unarmored: 0.05 | light vehicles: 0.15 | medium vehicles: 0.25 | heavy vehicles: 0.35 -->
+				<armor>
+					<ArmorRating_Sharp>1.25</ArmorRating_Sharp>
+					<ArmorRating_Blunt>1.1</ArmorRating_Blunt> <!-- # of estimated XWMG hull points * 0.1, apply to hard armor curve -->
+					<ArmorRating_Heat>1.35</ArmorRating_Heat>
+					<IncomingDamageFactor>-0.15</IncomingDamageFactor> <!-- unarmored: 0.05 | light vehicles: 0.15 | medium vehicles: 0.25 | heavy vehicles: 0.35 | superheavies: 0.45-->
 				</armor>
-				<health>300</health> <!-- # of estimated XWMG hull points * 100 -->
+				<health>200</health> <!-- # of estimated XWMG hull points * 100 -->
 				
 				<hitbox>
 					<side>Body</side>
@@ -249,6 +252,30 @@
 				<targetFuelLevelConfigurable>true</targetFuelLevelConfigurable>
 				<ambientHeat>1.0</ambientHeat>
 			</li>
+			
+			<li Class="CompProperties_ProjectileInterceptor">
+				<radius>3.5</radius>
+				<color>(0.4, 0.4, 0.4)</color>
+				
+				<interceptGroundProjectiles>true</interceptGroundProjectiles>
+				<interceptAirProjectiles>true</interceptAirProjectiles>
+				<interceptNonHostileProjectiles>true</interceptNonHostileProjectiles>
+				
+				<reactivateEffect>BulletShieldGenerator_Reactivate</reactivateEffect>
+				<activeSound>BulletShield_Ambience</activeSound>
+				<hitPointsRestoreInstantlyAfterCharge>true</hitPointsRestoreInstantlyAfterCharge>
+				
+				<hitPoints>100</hitPoints> <!-- XWMG shield value * 100 -->
+				
+				<chargeDurationTicks>1800</chargeDurationTicks><!-- 30s -->
+				<rechargeHitPointsIntervalTicks>120</rechargeHitPointsIntervalTicks>
+				<minIdleAlpha>0.2</minIdleAlpha>
+				<drawWithNoSelection>True</drawWithNoSelection>
+				<disarmedByEmpForTicks>1500</disarmedByEmpForTicks>
+				
+				<gizmoTipKey>ProjectileInterceptorTip</gizmoTipKey>
+			</li>
+			
 			<li Class="Vehicles.CompProperties_VehicleTurrets">
 				<turrets>
 					<li>

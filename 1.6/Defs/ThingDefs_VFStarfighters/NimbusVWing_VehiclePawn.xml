@@ -6,18 +6,21 @@
 		<defName>guy762_SWVehiclePattern_NimbusVWingA</defName>
 		<label>V-Wing (stock)</label>
 		<path>Starfighters/NimbusVWing/NimbusVWing_Pattern_stock</path>
+		<exclusiveFor><li>guy762_SWVehicle_NimbusVWing</li></exclusiveFor>
 	</Vehicles.PatternDef>
 	
 	<Vehicles.PatternDef>
 		<defName>guy762_SWVehiclePattern_NimbusVWingB</defName>
 		<label>V-Wing (Republic)</label>
 		<path>Starfighters/NimbusVWing/NimbusVWing_Pattern_Republic</path>
+		<exclusiveFor><li>guy762_SWVehicle_NimbusVWing</li></exclusiveFor>
 	</Vehicles.PatternDef>
 	
 	<Vehicles.PatternDef>
 		<defName>guy762_SWVehiclePattern_NimbusVWingC</defName>
 		<label>V-Wing (Imperial)</label>
 		<path>Starfighters/NimbusVWing/NimbusVWing_Pattern_Imperial</path>
+		<exclusiveFor><li>guy762_SWVehicle_NimbusVWing</li></exclusiveFor>
 	</Vehicles.PatternDef>
 	
 	

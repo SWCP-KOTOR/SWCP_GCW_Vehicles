@@ -6,6 +6,7 @@
 		<defName>guy762_SWVehiclePattern_SkiprayA</defName>
 		<label>Skipray (stock)</label>
 		<path>Starfighters/Skipray/Skipray_Pattern</path>
+		<exclusiveFor><li>guy762_SWVehicle_Skipray</li></exclusiveFor>
 	</Vehicles.PatternDef>
 	
 	

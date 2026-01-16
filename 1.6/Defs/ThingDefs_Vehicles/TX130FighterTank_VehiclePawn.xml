@@ -6,18 +6,21 @@
 		<defName>guy762_SWVehiclePattern_TX130A</defName>
 		<label>TX-130 Fighter Tank (Imperial)</label>
 		<path>LandVehicles/TX130/TX130_Pattern_Empire</path>
+		<exclusiveFor><li>guy762_SWVehicle_TX130FighterTank</li></exclusiveFor>
 	</Vehicles.PatternDef>
 	
 	<Vehicles.PatternDef>
 		<defName>guy762_SWVehiclePattern_TX130B</defName>
 		<label>TX-130 Fighter Tank (Zsinj's Dominion)</label>
 		<path>LandVehicles/TX130/TX130_Pattern_Zsinj</path>
+		<exclusiveFor><li>guy762_SWVehicle_TX130FighterTank</li></exclusiveFor>
 	</Vehicles.PatternDef>
 	
 	<Vehicles.PatternDef>
 		<defName>guy762_SWVehiclePattern_TX130C</defName>
 		<label>TX-130 Fighter Tank (Republic)</label>
 		<path>LandVehicles/TX130/TX130_Pattern_Republic</path>
+		<exclusiveFor><li>guy762_SWVehicle_TX130FighterTank</li></exclusiveFor>
 	</Vehicles.PatternDef>
 	
 	

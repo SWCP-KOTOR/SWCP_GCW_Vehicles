@@ -6,6 +6,7 @@
 		<defName>guy762_SWVehiclePattern_YWingA</defName>
 		<label>Y-Wing (stock)</label>
 		<path>Starfighters/BTLA4YWing/YWing_Pattern_Rebel</path>
+		<exclusiveFor><li>guy762_SWVehicle_BTLA4YWing</li></exclusiveFor>
 	</Vehicles.PatternDef>
 	
 	<!-- <Vehicles.PatternDef> -->

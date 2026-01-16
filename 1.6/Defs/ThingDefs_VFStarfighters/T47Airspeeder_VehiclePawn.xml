@@ -6,6 +6,7 @@
 		<defName>guy762_SWVehiclePattern_T47AirspeederA</defName>
 		<label>T-47 Airspeeder (stock)</label>
 		<path>Starfighters/T47Airspeeder/T47Airspeeder_pattern_stock</path>
+		<exclusiveFor><li>guy762_SWVehicle_T47Airspeeder</li></exclusiveFor>
 	</Vehicles.PatternDef>
 	
 	

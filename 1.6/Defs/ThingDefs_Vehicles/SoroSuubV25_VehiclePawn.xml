@@ -6,6 +6,7 @@
 		<defName>guy762_SWVehiclePattern_SoroSuubV25A</defName>
 		<label>SoroSuub V-25 Combat Speeder (stock)</label>
 		<path>LandVehicles/SoroSuubV25/SoroSuubV25_pattern</path>
+		<exclusiveFor><li>guy762_SWVehicle_SoroSuubV25CombatSpeeder</li></exclusiveFor>
 	</Vehicles.PatternDef>
 	
 	
@@ -38,8 +39,9 @@
 			<shaderType>CutoutComplexPattern</shaderType>
 			
 			<pattern>guy762_SWVehiclePattern_SoroSuubV25A</pattern>
-			<color>(170,160,135)</color> <!-- stanky beige -->
-			<colorTwo>(140,60,60)</colorTwo>
+			<color>(140,60,60)</color> <!-- rebel red -->
+			<colorTwo>(140,90,60)</colorTwo> <!-- soft brown -->
+			<colorThree>(170,160,135)</colorThree> <!-- stanky beige -->
 			
 			<!-- <color>(60,75,105)</color> imperial reserve blue -->
 		</graphicData>
@@ -118,8 +120,9 @@
 						<drawSize>(7,7)</drawSize>
 						<shaderType>CutoutComplexPattern</shaderType>
 						<pattern>guy762_SWVehiclePattern_SoroSuubV25A</pattern>
-						<color>(170,160,135)</color> <!-- stanky beige -->
-						<colorTwo>(140,60,60)</colorTwo>
+						<color>(140,60,60)</color> <!-- rebel red -->
+						<colorTwo>(140,90,60)</colorTwo> <!-- soft brown -->
+						<colorThree>(170,160,135)</colorThree> <!-- stanky beige -->
 					</graphicData>
 				</li>
 			</graphicOverlays>

@@ -7,6 +7,7 @@
 		<defName>guy762_SWVehiclePattern_ATDPA</defName>
 		<label>AT-DP Defense Walker (stock)</label>
 		<path>LandVehicles/ATDP/ATDP_pattern</path>
+		<exclusiveFor><li>guy762_SWVehicle_ATDP</li></exclusiveFor>
 	</Vehicles.PatternDef>
 	
 	

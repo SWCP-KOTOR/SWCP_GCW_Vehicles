@@ -6,12 +6,14 @@
 		<defName>guy762_SWVehiclePattern_ScykA</defName>
 		<label>Scyk (stock)</label>
 		<path>Starfighters/Scyk/Scyk_pattern_stock</path>
+		<exclusiveFor><li>guy762_SWVehicle_Scyk</li></exclusiveFor>
 	</Vehicles.PatternDef>
 	
 	<Vehicles.PatternDef>
 		<defName>guy762_SWVehiclePattern_ScykB</defName>
 		<label>Scyk (Black Sun)</label>
 		<path>Starfighters/Scyk/Scyk_pattern_blacksun</path>
+		<exclusiveFor><li>guy762_SWVehicle_Scyk</li></exclusiveFor>
 	</Vehicles.PatternDef>
 	
 	

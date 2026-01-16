@@ -6,6 +6,7 @@
 		<defName>guy762_SWVehiclePattern_KimogilaA</defName>
 		<label>Kimogila (stock)</label>
 		<path>Starfighters/Kimogila/Kimogila_pattern</path>
+		<exclusiveFor><li>guy762_SWVehicle_Kimogila</li></exclusiveFor>
 	</Vehicles.PatternDef>
 	
 	

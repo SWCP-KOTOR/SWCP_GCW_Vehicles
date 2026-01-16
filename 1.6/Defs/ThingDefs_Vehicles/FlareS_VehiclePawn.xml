@@ -6,6 +6,7 @@
 		<defName>guy762_SWVehiclePattern_FlareS</defName>
 		<label>Flare-S Swoop</label>
 		<path>LandVehicles/FlareS/FlareS_pattern</path>
+		<exclusiveFor><li>guy762_SWVehicle_FlareS</li></exclusiveFor>
 	</Vehicles.PatternDef>
 	
 	<Vehicles.VehicleDef ParentName="guy762_SpeederBikeOrUnarmoredVehicle_base">
@@ -19,8 +20,9 @@
 			<shaderType>CutoutComplexPattern</shaderType>
 			<drawSize>(3,3)</drawSize>
 			<pattern>guy762_SWVehiclePattern_FlareS</pattern>
-			<color>(215,20,35)</color>
-			<colorTwo>(250,180,0)</colorTwo>
+			<color>(250,180,0)</color> <!-- yellow -->
+			<colorTwo>(60,115,70)</colorTwo> <!-- forest viridian -->
+			<colorThree>(215,20,35)</colorThree> <!-- sharp red -->
 		</graphicData>
 		
 		<fillPercent>0.4</fillPercent>
@@ -95,8 +97,9 @@
 						<drawSize>(3,3)</drawSize>
 						<layer>5</layer>
 						<pattern>guy762_SWVehiclePattern_FlareS</pattern>
-						<color>(215,20,35)</color>
-						<colorTwo>(250,180,0)</colorTwo>
+						<color>(250,180,0)</color> <!-- yellow -->
+						<colorTwo>(60,115,70)</colorTwo> <!-- forest viridian -->
+						<colorThree>(215,20,35)</colorThree> <!-- sharp red -->
 					</graphicData>
 				</li>
 			</graphicOverlays>

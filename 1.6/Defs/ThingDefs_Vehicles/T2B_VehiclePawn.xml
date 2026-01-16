@@ -6,6 +6,7 @@
 		<defName>guy762_SWVehiclePattern_T2BTank</defName>
 		<label>T2-B Repulsor Tank (stock)</label>
 		<path>LandVehicles/T2B/T2B_Pattern</path>
+		<exclusiveFor><li>guy762_SWVehicle_T2BTank</li></exclusiveFor>
 	</Vehicles.PatternDef>
 	
 	

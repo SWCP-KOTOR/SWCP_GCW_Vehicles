@@ -6,7 +6,17 @@
 		<defName>guy762_SWVehiclePattern_AAT_A</defName>
 		<label>AAT (CIS)</label>
 		<path>LandVehicles/AAT/AAT_Pattern_CIS</path>
+		<exclusiveFor><li>guy762_SWVehicle_AAT</li></exclusiveFor>
+		
+		<!-- works as described but janky, resets colors to these every time the menu is open which could be annoying -->
+		<!-- <properties> -->
+			<!-- <colorOne>(90,130,160)</colorOne> -->
+			<!-- <colorTwo>(230,240,140)</colorTwo> -->
+			<!-- <colorThree>(190,200,190)</colorThree> -->
+		<!-- </properties> -->
+		
 	</Vehicles.PatternDef>
+	
 		<!-- 90,130,160 Confederacy Blue -->
 		<!-- 230,240,140 HMP accent yellow -->
 		<!-- 190,200,190 CIS grey -->
@@ -15,6 +25,7 @@
 		<defName>guy762_SWVehiclePattern_AAT_B</defName>
 		<label>AAT (Partisan)</label>
 		<path>LandVehicles/AAT/AAT_Pattern_Partisan</path>
+		<exclusiveFor><li>guy762_SWVehicle_AAT</li></exclusiveFor>
 	</Vehicles.PatternDef>
 	
 	<Vehicles.VehicleDef Name="guy762_SWVehicle_AAT" ParentName="guy762_GroundVehiclePawn_base">

@@ -6,6 +6,7 @@
 		<defName>guy762_SWVehiclePattern_X34Landspeeder</defName>
 		<label>X-34 Landspeeder</label>
 		<path>LandVehicles/X34Landspeeder/X34Landspeeder_pattern</path>
+		<exclusiveFor><li>guy762_SWVehicle_X34Landspeeder</li></exclusiveFor>
 	</Vehicles.PatternDef>
 	
 	<Vehicles.VehicleDef ParentName="guy762_SpeederBikeOrUnarmoredVehicle_base">
@@ -19,8 +20,9 @@
 			<shaderType>CutoutComplexPattern</shaderType>
 			<drawSize>(6,6)</drawSize>
 			<pattern>guy762_SWVehiclePattern_X34Landspeeder</pattern>
-			<color>(170,160,135)</color> <!-- stanky beige -->
-			<colorTwo>(140,90,60)</colorTwo> <!-- soft brown -->
+			<color>(140,90,60)</color> <!-- soft brown -->
+			<colorTwo>(140,60,60)</colorTwo> <!-- rebel red -->
+			<colorThree>(170,160,135)</colorThree> <!-- stanky beige -->
 		</graphicData>
 		
 		<fillPercent>0.4</fillPercent>
@@ -95,8 +97,9 @@
 						<drawSize>(6,6)</drawSize>
 						<layer>5</layer>
 						<pattern>guy762_SWVehiclePattern_X34Landspeeder</pattern>
-						<color>(170,160,135)</color> <!-- stanky beige -->
-						<colorTwo>(140,90,60)</colorTwo> <!-- soft brown -->
+						<color>(140,90,60)</color> <!-- soft brown -->
+						<colorTwo>(140,60,60)</colorTwo> <!-- rebel red -->
+						<colorThree>(170,160,135)</colorThree> <!-- stanky beige -->
 					</graphicData>
 				</li>
 			</graphicOverlays>

@@ -6,6 +6,7 @@
 		<defName>guy762_SWVehiclePattern_AA5Truck</defName>
 		<label>A-A5 Speeder Truck (stock)</label>
 		<path>LandVehicles/AA5/AA5_pattern</path>
+		<exclusiveFor><li>guy762_SWVehicle_AA5Truck</li></exclusiveFor>
 	</Vehicles.PatternDef>
 	
 	
@@ -29,8 +30,9 @@
 			<drawSize>(11,11)</drawSize>
 			<shaderType>CutoutComplexPattern</shaderType>
 			<pattern>guy762_SWVehiclePattern_AA5Truck</pattern>
-			<color>(170,160,135)</color> <!-- stanky beige -->
-			<colorTwo>(140,60,60)</colorTwo>
+			<color>(140,60,60)</color> <!-- rebel red -->
+			<colorTwo>(140,90,60)</colorTwo> <!-- soft brown -->
+			<colorThree>(170,160,135)</colorThree> <!-- stanky beige -->
 		</graphicData>
 		
 		<fillPercent>1</fillPercent>

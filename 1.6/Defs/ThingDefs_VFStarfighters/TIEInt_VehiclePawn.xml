@@ -6,18 +6,21 @@
 		<defName>guy762_SWVehiclePattern_TIEIntA</defName>
 		<label>TIE Interceptor (stock)</label>
 		<path>Starfighters/TIEInterceptor/TIEInt_pattern_stock</path>
+		<exclusiveFor><li>guy762_SWVehicle_TIEInterceptor</li></exclusiveFor>
 	</Vehicles.PatternDef>
 	
 	<Vehicles.PatternDef>
 		<defName>guy762_SWVehiclePattern_TIEIntB</defName>
 		<label>TIE Interceptor (181st)</label>
 		<path>Starfighters/TIEInterceptor/TIEInt_pattern_181st</path>
+		<exclusiveFor><li>guy762_SWVehicle_TIEInterceptor</li></exclusiveFor>
 	</Vehicles.PatternDef>
 	
 	<Vehicles.PatternDef>
 		<defName>guy762_SWVehiclePattern_TIEIntC</defName>
 		<label>TIE Interceptor (Royal Guard)</label>
 		<path>Starfighters/TIEInterceptor/TIEInt_pattern_RoyalGuard</path>
+		<exclusiveFor><li>guy762_SWVehicle_TIEInterceptor_RoyalGuard</li></exclusiveFor>
 	</Vehicles.PatternDef>
 	
 	<!-- <Vehicles.SkinDef> -->

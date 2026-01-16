@@ -6,12 +6,14 @@
 		<defName>guy762_SWVehiclePattern_ScurrgA</defName>
 		<label>Scurrg (stock)</label>
 		<path>Starfighters/Scurrg/Scurrg_Pattern_stock</path>
+		<exclusiveFor><li>guy762_SWVehicle_Scurrg</li></exclusiveFor>
 	</Vehicles.PatternDef>
 	
 	<Vehicles.PatternDef>
 		<defName>guy762_SWVehiclePattern_ScurrgB</defName>
 		<label>Scurrg (Havoc)</label>
 		<path>Starfighters/Scurrg/Scurrg_Pattern_Havoc</path>
+		<exclusiveFor><li>guy762_SWVehicle_Scurrg</li></exclusiveFor>
 	</Vehicles.PatternDef>
 	
 	<!-- <Vehicles.PatternDef> -->

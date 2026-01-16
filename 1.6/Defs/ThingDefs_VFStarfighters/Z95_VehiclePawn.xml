@@ -6,30 +6,35 @@
 		<defName>guy762_SWVehiclePattern_Z95A</defName>
 		<label>Z-95 (stock)</label>
 		<path>Starfighters/Z95Headhunter/Z95_pattern_rebel</path>
+		<exclusiveFor><li>guy762_SWVehicle_Z95Headhunter</li></exclusiveFor>
 	</Vehicles.PatternDef>
 	
 	<Vehicles.PatternDef>
 		<defName>guy762_SWVehiclePattern_Z95B</defName>
 		<label>Z-95 (Black Sun Soldier)</label>
 		<path>Starfighters/Z95Headhunter/Z95_pattern_blacksunA</path>
+		<exclusiveFor><li>guy762_SWVehicle_Z95Headhunter</li></exclusiveFor>
 	</Vehicles.PatternDef>
 	
 	<Vehicles.PatternDef>
 		<defName>guy762_SWVehiclePattern_Z95C</defName>
 		<label>Z-95 (Black Sun Lieutenant)</label>
 		<path>Starfighters/Z95Headhunter/Z95_pattern_blacksunB</path>
+		<exclusiveFor><li>guy762_SWVehicle_Z95Headhunter</li></exclusiveFor>
 	</Vehicles.PatternDef>
 	
 	<Vehicles.PatternDef>
 		<defName>guy762_SWVehiclePattern_Z95D</defName>
 		<label>Z-95 (Binayre Pirate)</label>
 		<path>Starfighters/Z95Headhunter/Z95_pattern_binayre</path>
+		<exclusiveFor><li>guy762_SWVehicle_Z95Headhunter</li></exclusiveFor>
 	</Vehicles.PatternDef>
 	
 	<Vehicles.PatternDef>
 		<defName>guy762_SWVehiclePattern_Z95E</defName>
 		<label>Z-95 (Hutt Pirate)</label>
 		<path>Starfighters/Z95Headhunter/Z95_pattern_NA</path>
+		<exclusiveFor><li>guy762_SWVehicle_Z95Headhunter</li></exclusiveFor>
 	</Vehicles.PatternDef>
 	
 	

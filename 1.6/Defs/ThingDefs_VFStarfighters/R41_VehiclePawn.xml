@@ -6,6 +6,7 @@
 		<defName>guy762_SWVehiclePattern_R41SCA</defName>
 		<label>R-41 Starchaser (stock)</label>
 		<path>Starfighters/R41Starchaser/R41_pattern</path>
+		<exclusiveFor><li>guy762_SWVehicle_R41SC</li></exclusiveFor>
 	</Vehicles.PatternDef>
 	
 	

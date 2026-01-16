@@ -6,6 +6,7 @@
 		<defName>guy762_SWVehiclePattern_TIEDefA</defName>
 		<label>TIE Defender (stock)</label>
 		<path>Starfighters/TIEDefender/TIEDef_pattern</path>
+		<exclusiveFor><li>guy762_SWVehicle_TIEDefender</li></exclusiveFor>
 	</Vehicles.PatternDef>
 	
 	

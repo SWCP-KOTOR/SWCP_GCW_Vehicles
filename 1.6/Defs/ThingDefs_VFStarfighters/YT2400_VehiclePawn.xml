@@ -6,6 +6,7 @@
 		<defName>guy762_SWVehiclePattern_YT2400A</defName>
 		<label>YT-2400</label>
 		<path>Starfighters/YT2400/YT2400_pattern</path>
+		<exclusiveFor><li>guy762_SWVehicle_YT2400_</li></exclusiveFor>
 	</Vehicles.PatternDef>
 	
 	

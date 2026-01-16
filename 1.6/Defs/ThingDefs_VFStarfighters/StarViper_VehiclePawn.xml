@@ -7,12 +7,14 @@
 		<!-- <label>StarViper (stock - CLOSED)</label> -->
 		<label>StarViper (stock)</label>
 		<path>Starfighters/StarViper/StarViper_Closed_pattern</path>
+		<exclusiveFor><li>guy762_SWVehicle_StarViper</li></exclusiveFor>
 	</Vehicles.PatternDef>
 	
 	<!-- <Vehicles.PatternDef> -->
 		<!-- <defName>guy762_SWVehiclePattern_StarViperA_open</defName> -->
 		<!-- <label>StarViper (stock - OPEN)</label> -->
 		<!-- <path>Starfighters/StarViper/StarViper_Open_pattern</path> -->
+		<!-- <exclusiveFor><li>guy762_SWVehicle_StarViper</li></exclusiveFor> -->
 	<!-- </Vehicles.PatternDef> -->
 	
 	<Vehicles.PatternDef>
@@ -20,12 +22,14 @@
 		<!-- <label>StarViper (Black Sun - CLOSED)</label> -->
 		<label>StarViper (Black Sun Ace)</label>
 		<path>Starfighters/StarViper/StarViper_BlackSun_Closed_pattern</path>
+		<exclusiveFor><li>guy762_SWVehicle_StarViper</li></exclusiveFor>
 	</Vehicles.PatternDef>
 	
 	<!-- <Vehicles.PatternDef> -->
 		<!-- <defName>guy762_SWVehiclePattern_StarViperB_open</defName> -->
 		<!-- <label>StarViper (Black Sun - OPEN)</label> -->
 		<!-- <path>Starfighters/StarViper/StarViper_BlackSun_Open_pattern</path> -->
+		<!-- <exclusiveFor><li>guy762_SWVehicle_StarViper</li></exclusiveFor> -->
 	<!-- </Vehicles.PatternDef> -->
 	
 	

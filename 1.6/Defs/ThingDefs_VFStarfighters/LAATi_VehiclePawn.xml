@@ -6,6 +6,7 @@
 		<defName>guy762_SWVehiclePattern_LAATiA</defName>
 		<label>LAAT/i (stock)</label>
 		<path>Starfighters/LAATi/LAATi_Pattern_GAR</path>
+		<exclusiveFor><li>guy762_SWVehicle_LAATi</li></exclusiveFor>
 	</Vehicles.PatternDef>
 	
 	<!-- <Vehicles.PatternDef> -->

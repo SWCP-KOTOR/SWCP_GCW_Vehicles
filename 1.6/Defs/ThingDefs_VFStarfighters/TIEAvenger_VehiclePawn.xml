@@ -6,18 +6,21 @@
 		<defName>guy762_SWVehiclePattern_TIEAvgA</defName>
 		<label>TIE Avenger (stock)</label>
 		<path>Starfighters/TIEAvenger/TIEAvenger_pattern_stock</path>
+		<exclusiveFor><li>guy762_SWVehicle_TIEAvenger</li></exclusiveFor>
 	</Vehicles.PatternDef>
 	
 	<Vehicles.PatternDef>
 		<defName>guy762_SWVehiclePattern_TIEAvgB</defName>
 		<label>TIE Avenger (181st)</label>
 		<path>Starfighters/TIEAvenger/TIEAvenger_pattern_181st</path>
+		<exclusiveFor><li>guy762_SWVehicle_TIEAvenger</li></exclusiveFor>
 	</Vehicles.PatternDef>
 	
 	<Vehicles.PatternDef>
 		<defName>guy762_SWVehiclePattern_TIEAvgC</defName>
 		<label>TIE Avenger (Royal Guard)</label>
 		<path>Starfighters/TIEAvenger/TIEAvenger_pattern_RoyalGuard</path>
+		<exclusiveFor><li>guy762_SWVehicle_TIEAvenger_RoyalGuard</li></exclusiveFor>
 	</Vehicles.PatternDef>
 	
 	

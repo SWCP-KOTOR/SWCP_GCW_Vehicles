@@ -6,12 +6,14 @@
 		<defName>guy762_SWVehiclePattern_SupaFighterA</defName>
 		<label>Supa Fighter (stock)</label>
 		<path>Starfighters/SupaFighter/SupaFighter_Pattern_stock</path>
+		<exclusiveFor><li>guy762_SWVehicle_SupaFighter</li></exclusiveFor>
 	</Vehicles.PatternDef>
 	
 	<Vehicles.PatternDef>
 		<defName>guy762_SWVehiclePattern_SupaFighterB</defName>
 		<label>Supa Fighter (Black Sun Terrorist)</label>
 		<path>Starfighters/SupaFighter/SupaFighter_Pattern_BlackSun</path>
+		<exclusiveFor><li>guy762_SWVehicle_SupaFighter</li></exclusiveFor>
 	</Vehicles.PatternDef>
 	
 	

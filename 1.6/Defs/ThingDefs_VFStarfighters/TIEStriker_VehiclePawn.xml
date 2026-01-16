@@ -6,6 +6,7 @@
 		<defName>guy762_SWVehiclePattern_TIEStrikerA</defName>
 		<label>TIE Striker (stock)</label>
 		<path>Starfighters/TIEStriker/TIEStriker_Pattern_stock</path>
+		<exclusiveFor><li>guy762_SWVehicle_TIEStriker</li></exclusiveFor>
 	</Vehicles.PatternDef>
 	
 	

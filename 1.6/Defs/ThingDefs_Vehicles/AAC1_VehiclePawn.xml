@@ -6,7 +6,14 @@
 		<defName>guy762_SWVehiclePattern_AAC1Tank</defName>
 		<label>AAC-2 Speeder Tank (stock)</label>
 		<path>LandVehicles/AAC1/AAC1_pattern</path>
+		<exclusiveFor><li>guy762_SWVehicle_AAC1Tank</li></exclusiveFor>
 	</Vehicles.PatternDef>
+	
+	<!-- <Vehicles.PatternDef> -->
+		<!-- <defName>guy762_SWVehiclePattern_AAC1TankTurret</defName> -->
+		<!-- <label>AAC-2 Speeder Tank Turret</label> -->
+		<!-- <path>LandVehicles/AAC1/AAC1_gun_Pattern</path> -->
+	<!-- </Vehicles.PatternDef> -->
 	
 	
 	<Vehicles.VehicleDef Name="guy762_SWVehicle_AAC1Tank" ParentName="guy762_GroundVehiclePawn_base">
@@ -29,8 +36,9 @@
 			<drawSize>(7,7)</drawSize>
 			<shaderType>CutoutComplexPattern</shaderType>
 			<pattern>guy762_SWVehiclePattern_AAC1Tank</pattern>
-			<color>(185,180,175)</color> <!-- warm grey -->
-			<colorTwo>(140,60,60)</colorTwo>
+			<color>(140,60,60)</color> <!-- rebel red -->
+			<colorTwo>(100,120,140)</colorTwo> <!-- new republic blue -->
+			<colorThree>(185,180,175)</colorThree> <!-- warm grey -->
 		</graphicData>
 		
 		<fillPercent>1</fillPercent>
@@ -414,10 +422,13 @@
 			<texPath>LandVehicles/AAC1/AAC1_gun</texPath>
 			<graphicClass>Vehicles.Graphic_Turret</graphicClass>
 			<shaderType>CutoutComplex</shaderType>
+			<!-- <shaderType>CutoutComplexPattern</shaderType> -->
 			<drawSize>(4.5,4.5)</drawSize>
-			<!-- <drawSize>(5,5)</drawSize> -->
-			<color>(185,180,175)</color> <!-- warm grey -->
-			<colorTwo>(140,60,60)</colorTwo>
+			
+			<!-- <pattern>guy762_SWVehiclePattern_AAC1TankTurret</pattern> -->
+			<color>(140,60,60)</color> <!-- rebel red -->
+			<colorTwo>(100,120,140)</colorTwo> <!-- new republic blue -->
+			<colorThree>(185,180,175)</colorThree> <!-- warm grey -->
 		</graphicData>
 		
 		<gizmoIconTexPath>LandVehicles/AAC1/AAC1_gun</gizmoIconTexPath>

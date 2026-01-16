@@ -6,6 +6,7 @@
 		<!-- <defName>guy762_SWVehiclePattern_XWingA_closed</defName> -->
 		<!-- <label>X-Wing (stock - CLOSED)</label> -->
 		<!-- <path>Starfighters/T65XWing/XWing_Pattern_Rebel_Closed</path> -->
+		<!-- <exclusiveFor><li>guy762_SWVehicle_T65XWing</li></exclusiveFor> -->
 	<!-- </Vehicles.PatternDef> -->
 	
 	<Vehicles.PatternDef>
@@ -13,12 +14,14 @@
 		<!-- <label>X-Wing (stock - OPEN)</label> -->
 		<label>X-Wing (stock)</label>
 		<path>Starfighters/T65XWing/XWing_Pattern_Rebel_Open</path>
+		<exclusiveFor><li>guy762_SWVehicle_T65XWing</li></exclusiveFor>
 	</Vehicles.PatternDef>
 	
 	<!-- <Vehicles.PatternDef> -->
 		<!-- <defName>guy762_SWVehiclePattern_XWingB_closed</defName> -->
 		<!-- <label>X-Wing (New Republic - CLOSED)</label> -->
 		<!-- <path>Starfighters/T65XWing/XWing_Pattern_NewRepublic_Closed</path> -->
+		<!-- <exclusiveFor><li>guy762_SWVehicle_T65XWing</li></exclusiveFor> -->
 	<!-- </Vehicles.PatternDef> -->
 	
 	<Vehicles.PatternDef>
@@ -26,6 +29,7 @@
 		<!-- <label>X-Wing (New Republic - OPEN)</label> -->
 		<label>X-Wing (New Republic)</label>
 		<path>Starfighters/T65XWing/XWing_Pattern_NewRepublic_Open</path>
+		<exclusiveFor><li>guy762_SWVehicle_T65XWing</li></exclusiveFor>
 	</Vehicles.PatternDef>
 	
 	

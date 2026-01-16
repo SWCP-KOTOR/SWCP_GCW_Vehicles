@@ -6,6 +6,7 @@
 		<defName>guy762_SWVehiclePattern_TIEReaperA</defName>
 		<label>TIE Reaper (stock)</label>
 		<path>Starfighters/TIEReaper/TIEReaper_Pattern_stock</path>
+		<exclusiveFor><li>guy762_SWVehicle_TIEReaper</li></exclusiveFor>
 	</Vehicles.PatternDef>
 	
 	

@@ -467,7 +467,7 @@
 			<li>
 				<start>IgnitionOn</start>
 				<stop>IgnitionOff</stop>
-				<value>kotorsound_enginehum_YWing</value>
+				<value>kotorsound_enginehum_YWingAlt</value>
 			</li>
 		</soundSustainersOnEvent>
 		

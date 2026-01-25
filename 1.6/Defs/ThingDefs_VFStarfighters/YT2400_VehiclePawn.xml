@@ -20,9 +20,9 @@
 			<drawSize>(30,30)</drawSize>
 			<shaderType>CutoutComplexPattern</shaderType>
 			<pattern>guy762_SWVehiclePattern_YT2400A</pattern>
-			<color>(140,60,60)</color>
-			<colorTwo>(230,185,45)</colorTwo>
-			<colorThree>(177,177,177)</colorThree> <!-- alliance grey -->
+			<color>(125,50,60)</color> <!-- republic red -->
+			<colorTwo>(165,155,80)</colorTwo> <!-- zsinj's dominion mustard -->
+			<colorThree>(225,225,220)</colorThree> <!-- corellian white -->
 		</graphicData>
 		<uiIconScale>1</uiIconScale>
 		<seeThroughFog>true</seeThroughFog>
@@ -258,9 +258,9 @@
 					<drawSize>(30,30)</drawSize>
 					<shaderType>CutoutComplexPattern</shaderType>
 					<pattern>guy762_SWVehiclePattern_YT2400A</pattern>
-					<color>(140,60,60)</color>
-					<colorTwo>(230,185,45)</colorTwo>
-					<colorThree>(177,177,177)</colorThree> <!-- alliance grey -->
+					<color>(125,50,60)</color> <!-- republic red -->
+					<colorTwo>(165,155,80)</colorTwo> <!-- zsinj's dominion mustard -->
+					<colorThree>(225,225,220)</colorThree> <!-- corellian white -->
 				</flightGraphicData>
 				<flightFlecks>
 					<li>

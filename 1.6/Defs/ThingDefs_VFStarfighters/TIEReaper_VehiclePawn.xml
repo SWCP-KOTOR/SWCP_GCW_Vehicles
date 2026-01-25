@@ -54,7 +54,7 @@
 			<Flammability>0</Flammability>
 			
 			<EnergyShieldRechargeRate>0.5</EnergyShieldRechargeRate>
-			<EnergyShieldEnergyMax>3</EnergyShieldEnergyMax>
+			<EnergyShieldEnergyMax>2</EnergyShieldEnergyMax>
 		</statBases>
 		<vehicleStats>
 			<Mass>1350</Mass>

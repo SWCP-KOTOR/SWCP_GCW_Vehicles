@@ -130,7 +130,7 @@
 				<li>
 					<key>passenger</key>
 					<label>Passenger</label>
-					<slots>10</slots>
+					<slots>12</slots> <!-- average single NR trooper squad size -->
 				</li>
 			</roles>
 		</properties>

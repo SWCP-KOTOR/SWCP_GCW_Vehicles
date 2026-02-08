@@ -51,6 +51,7 @@
 		<li>guy762.KotORDroids</li>
 	</loadAfter>
 	<loadBefore>
+		<li>SWCP.guy762.Taran.SWGalaxy</li>
 		<li>SWCP.guy762.WarlordEmpire</li>
 	</loadBefore>
 </ModMetaData>

@@ -86,13 +86,19 @@
 	
 	
 	<PrefabDef>
-	  <defName>SWCPTurretPrefab_FPC67AntiAir</defName>
-	  <size>(4,4)</size>
-	  <things>
-		<guy762_SWTurret_FPC67AntiAir>
-		  <position>(1, 0, 1)</position>
-		</guy762_SWTurret_FPC67AntiAir>
-	  </things>
+		<defName>SWCPTurretPrefab_FPC67AntiAir</defName>
+		<size>(4,4)</size>
+		<things>
+			<guy762_SWTurret_FPC67AntiAir>
+				<position>(1, 0, 1)</position>
+			</guy762_SWTurret_FPC67AntiAir>
+		</things>
+	  
+		<modExtensions>
+			<li Class="SWCP_Misc.PrefabDefExtension_Faction">
+				<factionDef>guy762_SWWarlordsFaction_ImpRemnant</factionDef>
+			</li>
+		</modExtensions>
 	</PrefabDef>
 
  

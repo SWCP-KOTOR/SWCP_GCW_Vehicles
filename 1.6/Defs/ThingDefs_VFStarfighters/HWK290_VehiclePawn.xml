@@ -1,28 +1,28 @@
 <?xml version="1.0" encoding="utf-8" ?>
 
 <Defs>	
-	
+
 	<Vehicles.PatternDef>
-		<defName>guy762_SWVehiclePattern_HoverTransportTC9A</defName>
-		<label>Hover Transport TC9 (stock)</label>
-		<path>Starfighters/HoverTransportTC9/HoverTransportTC9_Pattern_stock</path>
-		<exclusiveFor><li>guy762_SWVehicle_HoverTransportTC9_</li></exclusiveFor>
+		<defName>guy762_SWVehiclePattern_HWK290A</defName>
+		<label>HWK-290 (stock)</label>
+		<path>Starfighters/HWK290/HWK290_Pattern_stock</path>
+		<exclusiveFor><li>guy762_SWVehicle_HWK290_</li></exclusiveFor>
 	</Vehicles.PatternDef>
 	
-	<Vehicles.VehicleDef Name="guy762_SWVehicle_HoverTransportTC9_" ParentName="MM-VF-Vehicle_Pawn">
-		<defName>guy762_SWVehicle_HoverTransportTC9_</defName>
-		<label>Hover Transport TC9</label>
+	
+	<Vehicles.VehicleDef ParentName="MM-VF-Vehicle_Pawn">
+		<defName>guy762_SWVehicle_HWK290_</defName>
+		<label>HWK-290 light freighter</label>
 		<description>. \n\n&lt;color=#bb8f04&gt;Crew:&lt;/color&gt; Pilot x1</description>
 		<graphicData>
-			<texPath>Starfighters/HoverTransportTC9/HoverTransportTC9</texPath>
+			<texPath>Starfighters/HWK290/HWK290</texPath>
 			<graphicClass>Vehicles.Graphic_Vehicle</graphicClass><drawRotated>true</drawRotated>
-			<drawRotated>true</drawRotated>
-			<drawSize>(15,15)</drawSize>
+			<drawSize>(21,21)</drawSize>
 			<shaderType>CutoutComplexPattern</shaderType>
-			<pattern>guy762_SWVehiclePattern_HoverTransportTC9A</pattern>
-			<color>(130,75,35)</color> <!-- rust -->
-			<colorTwo>(145,125,70)</colorTwo> <!-- dijon mustard -->
-			<colorThree>(70,70,70)</colorThree> <!-- dark grey -->
+			<pattern>guy762_SWVehiclePattern_HWK290A</pattern>
+			<color>(140,60,60)</color> <!-- rebel red -->
+			<colorTwo>(177,177,177)</colorTwo> <!-- alliance grey -->
+			<colorThree>(125,105,80)</colorThree> <!-- scum brown -->
 		</graphicData>
 		<uiIconScale>1</uiIconScale>
 		<seeThroughFog>true</seeThroughFog>
@@ -31,9 +31,13 @@
 		
 		<fillPercent>1</fillPercent>
 		<nameable>true</nameable>
-		<buildDef>guy762_SWVehicleBP_HoverTransportTC9_</buildDef>
-		<size>(6,14)</size>
+		<buildDef>guy762_SWVehicleBP_HWK290_</buildDef>
+		<size>(9,17)</size>
 		
+		
+		<!-- <killedLeavings> -->
+		  <!-- <guy762_ShipChunk_HWK290a>1</guy762_ShipChunk_HWK290a> -->
+		<!-- </killedLeavings> -->
 		
 		<canCaravan>false</canCaravan>
 		<vehicleCategory>Combat</vehicleCategory>
@@ -49,18 +53,18 @@
 			<ArmorRating_Heat>0.45</ArmorRating_Heat>
 			<MaxHitPoints>3000</MaxHitPoints> <!-- # of estimated XWMG hull points * 1000 -->
 			
-			<MarketValue>40000</MarketValue>
+			<MarketValue>36000</MarketValue>
 			<Flammability>0</Flammability>
 			
 			<EnergyShieldRechargeRate>0.5</EnergyShieldRechargeRate>
-			<EnergyShieldEnergyMax>1</EnergyShieldEnergyMax>
+			<EnergyShieldEnergyMax>2</EnergyShieldEnergyMax>
 		</statBases>
 		<vehicleStats>
-			<Mass>10000</Mass>
+			<Mass>15000</Mass>
 			
 			<FlightSpeed>12</FlightSpeed> <!-- this is for world map flight, NOT in-tile flight-->
-			<CargoCapacity>1000</CargoCapacity>
-			<SoS2CombatDodgeChance MayRequire="kentington.saveourship2">13.75</SoS2CombatDodgeChance> <!-- 3/8 chance to dodge on XWMG green dice = 0.375 | 0.375*10 + 10 = 13.75 | 13.75 * X = SoS2DC | X = estimated # of XWMG green dice -->
+			<CargoCapacity>7500</CargoCapacity>
+			<SoS2CombatDodgeChance MayRequire="kentington.saveourship2">27.5</SoS2CombatDodgeChance> <!-- 3/8 chance to dodge on XWMG green dice = 0.375 | 0.375*10 + 10 = 13.75 | 13.75 * X = SoS2DC | X = estimated # of XWMG green dice -->
 		</vehicleStats>
 		
 		<race>
@@ -77,30 +81,40 @@
 			<manhunterTargetsVehicle>false</manhunterTargetsVehicle>
 			
 			<vehicleJobLimitations>
-				<li>(RepairVehicle, 2)</li> <!-- how many pawns can repair this vehicle at a time -->
+				<li>(RepairVehicle, 6)</li> <!-- how many pawns can repair this vehicle at a time -->
 			</vehicleJobLimitations> <!-- guy762 RULES: repair job count should be twice the amount of pawns to fully operate the vehicle -->
 			
 			<roles>
 				<li>
 					<key>pilot</key>
 					<label>Pilot</label>
-					<slots>2</slots>
+					<slots>1</slots>
 					<slotsToOperate>1</slotsToOperate>
 					<handlingTypes>
 						<li>Movement</li>
 						<li>Turret</li>
 					</handlingTypes>
-					
 					<turretIds>
-						<li>HoverTransportTC9Key_gun_1</li>
-						<li>HoverTransportTC9Key_gun_2</li>
+						<li>HWK290Key_gun_2</li>
 					</turretIds>
+					<comfort>0.5</comfort>
 				</li>
-				
+				<li>
+					<key>ventralgunner</key>
+					<label>Ventral Gunner</label>
+					<slots>1</slots>
+					<slotsToOperate>1</slotsToOperate>
+					
+					<handlingTypes>Turret</handlingTypes>
+					<turretIds>
+						<li>HWK290Key_gun_1</li>
+					</turretIds>
+					<comfort>0.5</comfort>
+				</li>
 				<li>
 					<key>passenger</key>
 					<label>Passenger</label>
-					<slots>8</slots>
+					<slots>6</slots>
 				</li>
 			</roles>
 		</properties>
@@ -110,12 +124,34 @@
 				<fuelType>KOTOR_Rhydonium</fuelType>				<!-- Must Include -->
 				<leakDef>Filth_Fuel</leakDef><targetFuelLevelConfigurable>true</targetFuelLevelConfigurable><ambientHeat>3.0</ambientHeat>
 				<fuelConsumptionRate>2</fuelConsumptionRate>
-				<fuelCapacity>250</fuelCapacity>
+				<fuelCapacity>300</fuelCapacity>
 				<fuelConsumptionWorldMultiplier>0.5</fuelConsumptionWorldMultiplier>
 			</li>
 			
+			<!-- <li Class="CompProperties_Shuttle"> -->
+				<!-- <shipDef>guy762_SWVehicleTransportShip_HWK290a</shipDef> -->
+			<!-- </li> -->
+			<!-- <li Class="CompProperties_Launchable"> -->
+				<!-- <fuelPerTile>3</fuelPerTile> -->
+				<!-- <minFuelCost>50</minFuelCost> -->
+				<!-- <skyfallerLeaving>guy762_SWVehicleSkyfallerLeaving_HWK290a</skyfallerLeaving> -->
+				<!-- <worldObjectDef>guy762_SWVehicleWorldObject_HWK290a</worldObjectDef> -->
+				 <!-- 1.5 hours -->
+				<!-- <cooldownTicks>3750</cooldownTicks> -->
+				<!-- <fixedLaunchDistanceMax>999</fixedLaunchDistanceMax> -->
+				<!-- <cooldownEndedMessage>{0} is ready to launch again.</cooldownEndedMessage> -->
+			<!-- </li> -->
+			<!-- <li Class="CompProperties_Transporter"> -->
+				<!-- <massCapacity>25000</massCapacity> -->
+				<!-- <max1PerGroup>true</max1PerGroup> -->
+				<!-- <canChangeAssignedThingsAfterStarting>true</canChangeAssignedThingsAfterStarting> -->
+				<!-- <pawnLoadedSound>Shuttle_PawnLoaded</pawnLoadedSound> -->
+				<!-- <pawnExitSound>Shuttle_PawnExit</pawnExitSound> -->
+				<!-- <showMassInInspectString>true</showMassInInspectString> -->
+			<!-- </li> -->
+			
 			<li Class="CompProperties_ProjectileInterceptor">
-				<radius>8</radius>
+				<radius>10.5</radius>
 				<color>(0.4, 0.4, 0.4)</color>
 				
 				<interceptGroundProjectiles>true</interceptGroundProjectiles>
@@ -126,7 +162,7 @@
 				<activeSound>BulletShield_Ambience</activeSound>
 				<hitPointsRestoreInstantlyAfterCharge>true</hitPointsRestoreInstantlyAfterCharge>
 				
-				<hitPoints>100</hitPoints> <!-- XWMG shield value * 100 -->
+				<hitPoints>200</hitPoints> <!-- XWMG shield value * 100 -->
 				
 				<chargeDurationTicks>1800</chargeDurationTicks><!-- 30s -->
 				<rechargeHitPointsIntervalTicks>120</rechargeHitPointsIntervalTicks>
@@ -144,6 +180,12 @@
 						<description>Toggle flight mode.</description>
 						<texPath>Gizmo/TakeOff_Icon</texPath>
 					</flightMode>
+					<!-- WIP feature. Didn't manage to achieve fully autonomous landing, but maybe can be finished later
+					<landOnGround>
+						<label>Land on ground</label>
+						<description>Designate a landing plan. Select an endpoint of the runway and a starting point for landing.</description>
+						<texPath>UI/Abilities/Waterskip</texPath>
+					</landOnGround> -->
 					<hoverMode>
 						<label>Hover mode</label>
 						<description>Toggle hover mode.</description>
@@ -166,15 +208,12 @@
 					</chaseTarget>
 				</flightCommands>
 				
-				<!-- <damageMultiplierFromNonAntiAirProjectiles>0.3</damageMultiplierFromNonAntiAirProjectiles> -->
-				
 				<fuelConsumptionPerTick>0.0001</fuelConsumptionPerTick><canFlyInSpace>true</canFlyInSpace>
 				
-				<!-- using the VT-49 Deci's movement dial for this one -->
 				<flightSpeedPerTick>0.8</flightSpeedPerTick> <!-- MAXIMUM XWMG speed: speed5 = 1, speed1 = 0.2 | + 0.1 for blue 5, -0.1 for red highest -->
 				<flightSpeedTurningPerTick>0.5</flightSpeedTurningPerTick> <!-- highest speed in which all 5 standard maneuvers are available | +0.1 for a full row of blues, -0.1 for any red turns -->
-				<turnAnglePerTick>1</turnAnglePerTick> <!-- LARGE SHIP TURNS (slowest possible): speed1 turn = 2, speed2 turn = 1.5, speed3 turn = 1 | banks = 0.75, 0.5, 0.25 | -1 for red slowest -->
-				<turnAngleCirclingPerTick>1.5</turnAngleCirclingPerTick> <!-- use slowest turn +1 for each special turning maneuver: speed1 turn = 2, speed2 turn = 1.5, speed3 turn = 1 | +0.5 for any blue turns, -0.5 for any red turns -->
+				<turnAnglePerTick>1.5</turnAnglePerTick> <!-- LARGE SHIP TURNS (slowest possible): speed1 turn = 2, speed2 turn = 1.5, speed3 turn = 1 | banks = 0.75, 0.5, 0.25 | -1 for red slowest -->
+				<turnAngleCirclingPerTick>1</turnAngleCirclingPerTick> <!-- use slowest turn +1 for each special turning maneuver: speed1 turn = 2, speed2 turn = 1.5, speed3 turn = 1 | +0.5 for any blue turns, -0.5 for any red turns -->
 				
 				<distanceFromTargetToStartTurningChaseMode>20</distanceFromTargetToStartTurningChaseMode>
 				<distanceFromTargetToStartTurningCircleMode>10</distanceFromTargetToStartTurningCircleMode>
@@ -191,48 +230,15 @@
 					<li>Heavy</li>
 				</runwayTerrainRequirements>
 				<flightGraphicData>
-					<texPath>Starfighters/HoverTransportTC9/HoverTransportTC9</texPath>
+					<texPath>Starfighters/HWK290/HWK290</texPath>
 					<graphicClass>Vehicles.Graphic_Vehicle</graphicClass><drawRotated>true</drawRotated>
-					<drawSize>(15,15)</drawSize>
+					<drawSize>(21,21)</drawSize>
 					<shaderType>CutoutComplexPattern</shaderType>
-					<pattern>guy762_SWVehiclePattern_HoverTransportTC9A</pattern>
-					<color>(130,75,35)</color> <!-- rust -->
-					<colorTwo>(145,125,70)</colorTwo> <!-- dijon mustard -->
-					<colorThree>(70,70,70)</colorThree> <!-- dark grey -->
+					<pattern>guy762_SWVehiclePattern_HWK290A</pattern>
+					<color>(140,60,60)</color> <!-- rebel red -->
+					<colorTwo>(177,177,177)</colorTwo> <!-- alliance grey -->
+					<colorThree>(125,105,80)</colorThree> <!-- scum brown -->
 				</flightGraphicData>
-				
-				<!-- <bombOptions> -->
-					<!-- <li> -->
-						<!-- <label>proton bomb</label> -->
-						<!-- <texPath>Weapons/Projectiles/energybomb</texPath> -->
-						<!-- <costList> -->
-							<!-- <Steel>10</Steel> -->
-						<!-- </costList> -->
-						<!-- <projectile>SWVehicleBullet_protonbomb</projectile> -->
-						<!-- <cooldownTicks>60</cooldownTicks> -->
-					<!-- </li> -->
-				<!-- </bombOptions> -->
-				<AISettings>
-					<!-- <bomberSettings> -->
-						<!-- <npcStock> -->
-							<!-- <Steel>100</Steel> -->
-						<!-- </npcStock> -->
-						<!-- <maxBombRun>5</maxBombRun> -->
-						<!-- <blacklistedBombs> -->
-						<!-- </blacklistedBombs> -->
-						<!-- <distanceFromTarget>20</distanceFromTarget> -->
-					<!-- </bomberSettings> -->
-					<gunshipSettings>
-						<npcStock>
-							<!-- <CVNAmmoBluestandard>300</CVNAmmoBluestandard> -->
-							<!-- <CVNAmmoRedstandard>300</CVNAmmoRedstandard> -->
-						</npcStock>
-						<gunshipMode>Chasing</gunshipMode>
-						<distanceFromTarget>30</distanceFromTarget>
-					</gunshipSettings>
-				</AISettings>
-				
-				
 				<flightFlecks>
 					<li>
 						<fleck>CVN_RocketExhaust</fleck>
@@ -272,42 +278,53 @@
 					</li>
 				</landingFlecks>
 				<waypointFleck>guy762_SWStarfighter_waypoint</waypointFleck>
+				<AISettings>
+					<gunshipSettings>
+						<!-- <npcStock> -->
+							<!-- <CVNAmmoMissile>60~120</CVNAmmoMissile> -->
+						<!-- </npcStock> -->
+						<gunshipMode>Chasing</gunshipMode>
+						<distanceFromTarget>30</distanceFromTarget>
+					</gunshipSettings>
+				</AISettings>
 			</li>
 			
 			
 			<li Class="Vehicles.CompProperties_VehicleTurrets">
 				<turrets>
 					<li>
-						<turretDef>guy762_VehicleTurret_HoverTransportTC9_main</turretDef>
+						<turretDef>guy762_VehicleTurret_HWK290Ventral</turretDef>
 						
 						<renderProperties>
-							<north>(-2.2, 6.25)</north>
+							<north>(0, -1.875)</north>
 						</renderProperties>
 						<defaultAngleRotated>0</defaultAngleRotated>
-						<angleRestricted>(315,45)</angleRestricted>
-						<gizmoLabel>medium AA gun</gizmoLabel>
+						<gizmoLabel>dual medium strike turret</gizmoLabel>
 						
 						<aimPieOffset>(0, 2.55)</aimPieOffset>
 						
 						<autoTargetingActive>True</autoTargetingActive>
 						
-						<key>HoverTransportTC9Key_gun_1</key>
+						<drawLayer>-1</drawLayer>
+						
+						<key>HWK290Key_gun_1</key>
 					</li>
+					
+					<!--/////////////////////////-->
+					
 					<li>
-						<turretDef>guy762_VehicleTurret_HoverTransportTC9_main</turretDef>
+						<turretDef>guy762_VehicleTurret_ProtonBombs</turretDef>
 						
 						<renderProperties>
-							<north>(2.2, 6.25)</north>
+							<north>(0, -5)</north>
 						</renderProperties>
-						<defaultAngleRotated>0</defaultAngleRotated>
-						<angleRestricted>(315,45)</angleRestricted>
-						<gizmoLabel>medium AA gun</gizmoLabel>
+						<defaultAngleRotated>180</defaultAngleRotated>
+						<angleRestricted>(165,195)</angleRestricted>
+						<gizmoLabel>bomb bay</gizmoLabel>
 						
 						<aimPieOffset>(0, 2.55)</aimPieOffset>
 						
-						<autoTargetingActive>True</autoTargetingActive>
-						
-						<key>HoverTransportTC9Key_gun_2</key>
+						<key>HWK290Key_gun_2</key>
 					</li>
 				</turrets>
 			</li>
@@ -412,7 +429,7 @@
 			<li>
 				<start>IgnitionOn</start>
 				<stop>IgnitionOff</stop>
-				<value>kotorsound_enginehum_JKShuttle</value>
+				<value>kotorsound_enginehum_RavensClaw</value>
 			</li>
 		</soundSustainersOnEvent>
 		
@@ -427,15 +444,20 @@
 	
 	
 	
-	<Vehicles.VehicleTurretDef Name="guy762_VehicleTurret_HoverTransportTC9_main" ParentName="VehicleTurretBase">
-		<defName>guy762_VehicleTurret_HoverTransportTC9_main</defName>
-		<label>TC9 main gun</label>
-		<description>The main gun of a TC9 hover transport.</description>
+	
+	
+	
+	
+	
+	<Vehicles.VehicleTurretDef Name="guy762_VehicleTurret_HWK290Ventral" ParentName="VehicleTurretBase">
+		<defName>guy762_VehicleTurret_HWK290Ventral</defName>
+		<label>HWK-290 ventral turret</label>
+		<description>The rotating dorsal turret of a HWK-290 freighter.</description>
 		
 		<turretType>Rotatable</turretType>
-		<shotSound>kotorsound_ywinggun</shotSound>
+		<shotSound>kotorsound_N1gun</shotSound>
 		
-		<projectile>SWCPStarfighterBullet_IntAAmedium_red</projectile>
+		<projectile>SWCPStarfighterBullet_StrikeAIAVAAlight_dualred</projectile>
 		<reloadTimer>3.5</reloadTimer>
 		<warmUpTimer>0</warmUpTimer>
 		
@@ -455,46 +477,29 @@
 			<li>
 				<shotsPerBurst>1</shotsPerBurst>
 				<ticksBetweenShots>10</ticksBetweenShots>
-				<ticksBetweenBursts>60</ticksBetweenBursts>
+				<ticksBetweenBursts>100</ticksBetweenBursts>
 				<label>Single</label>
 				<texPath>UI/Sniper_Shot</texPath>
 			</li>
 		</fireModes>
 
 		<graphicData>
-			<texPath>NullTex</texPath>
+			<texPath>Starfighters/YT2400/YT2400_gun</texPath>
 			<graphicClass>Vehicles.Graphic_Turret</graphicClass>
+			<drawSize>(10,10)</drawSize>
 		</graphicData>
 		
-		<gizmoIconTexPath>Items/cannon_blank</gizmoIconTexPath>
+		<gizmoIconTexPath>Starfighters/YT2400/YT2400_gun</gizmoIconTexPath>
+		
+		
+		<!-- <reloadTimerMultiplierPerCrewCount> USE FOR HUGE TRANSPORT WEAPONS -->
+            <!-- <points> -->
+                <!-- <li>(1, 1)</li> -->
+                <!-- <li>(2, 0.75)</li> -->
+            <!-- </points> -->
+        <!-- </reloadTimerMultiplierPerCrewCount> -->
 		
 	</Vehicles.VehicleTurretDef>
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
 	
 	
 	

@@ -2,15 +2,15 @@
 
 <Defs>
 	<Vehicles.VehicleBuildDef ParentName="VehicleBaseBuildable">
-		<defName>guy762_SWVehicleBP_YT2400_</defName>
-		<label>YT-2400 freighter</label>
+		<defName>guy762_SWVehicleBP_HWK290_</defName>
+		<label>HWK-290 light freighter</label>
 		<description>.</description>
 		<designationCategory>MM_StarWarsShipBuildTab</designationCategory>
 		
 		<graphicData>
-			<texPath>Starfighters/YT2400/YT2400</texPath>
+			<texPath>Starfighters/HWK290/HWK290</texPath>
 			<graphicClass>Graphic_Multi</graphicClass>
-			<drawSize>(30,30)</drawSize>
+			<drawSize>(21,21)</drawSize>
 			<!-- <drawOffset>(0, 0, 1)</drawOffset> -->
 		</graphicData>
 		
@@ -20,7 +20,7 @@
 			<Flammability>0.05</Flammability>
 		</statBases>
 		
-		<size>(29,19)</size>
+		<size>(9,17)</size>
 		
 		<!--researchPrerequisites>
 			<li>VVE_BasicVehicles</li>
@@ -36,7 +36,7 @@
 		</costList>
 		
 		<soundImpactDefault>BulletImpact_Metal</soundImpactDefault>
-		<thingToSpawn>guy762_SWVehicle_YT2400_</thingToSpawn>
+		<thingToSpawn>guy762_SWVehicle_HWK290_</thingToSpawn>
 		
 		<constructionSkillPrerequisite>6</constructionSkillPrerequisite>
 	</Vehicles.VehicleBuildDef>

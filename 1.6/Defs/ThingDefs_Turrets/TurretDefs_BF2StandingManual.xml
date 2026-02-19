@@ -12,7 +12,7 @@
     <description>.</description>
 	<graphicData>
       <graphicClass>Graphic_Single</graphicClass>
-      <texPath>Turrets/BF2StandingTurret_base</texPath>
+      <texPath>Turrets/Turrets_Ogam/BF2StandingTurret_base</texPath>
       <drawSize>(2,2)</drawSize>
       <damageData>
         <rect>(0.38,0.2,0.56375,0.8)</rect>
@@ -23,7 +23,7 @@
         <volume>(0.5,0.4,1.05)</volume>
       </shadowData>
     </graphicData>
-    <uiIconPath>Turrets/BF2StandingTurret_icon</uiIconPath>
+    <uiIconPath>Turrets/Turrets_Ogam/BF2StandingTurret_icon</uiIconPath>
 
 	
     <statBases>
@@ -105,7 +105,7 @@
     <label>Mark II EWHB-10 blaster turret</label>
     <description>.</description>
     <graphicData>
-      <texPath>Turrets/BF2StandingTurret_gun</texPath>
+      <texPath>Turrets/Turrets_Ogam/BF2StandingTurret_gun</texPath>
       <graphicClass>Graphic_Single</graphicClass>
 	  <!-- <drawSize>(1,1)</drawSize> -->
 	  

@@ -12,7 +12,7 @@
     <description>.</description>
 	<graphicData>
       <graphicClass>Graphic_Single</graphicClass>
-      <texPath>Turrets/HardpointBase</texPath>
+      <texPath>Turrets/Turrets_Ogam/HardpointBase</texPath>
       <drawSize>(3,3)</drawSize>
 	  <drawRotated>false</drawRotated>
 	  
@@ -25,7 +25,7 @@
         <volume>(0.5,0.4,1.05)</volume>
       </shadowData>
     </graphicData>
-    <uiIconPath>Turrets/PointDefense_icon</uiIconPath>
+    <uiIconPath>Turrets/Turrets_Ogam/PointDefense_icon</uiIconPath>
 	<!-- <rotatable>false</rotatable> -->
 
 	
@@ -115,7 +115,7 @@
     <label>anti-air turret</label>
     <description>.</description>
     <graphicData>
-      <texPath>Turrets/PointDefense_gun</texPath>
+      <texPath>Turrets/Turrets_Ogam/PointDefense_gun</texPath>
       <graphicClass>Graphic_Single</graphicClass>
 	  <drawSize>(2,2)</drawSize>
     </graphicData>

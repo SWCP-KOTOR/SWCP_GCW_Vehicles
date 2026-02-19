@@ -12,7 +12,7 @@
     <description>.</description>
 	<graphicData>
       <graphicClass>Graphic_Single</graphicClass>
-      <texPath>Turrets/HardpointBase</texPath>
+      <texPath>Turrets/Turrets_Ogam/HardpointBase</texPath>
       <drawSize>(4,4)</drawSize>
 	  <drawRotated>false</drawRotated>
 	  
@@ -25,7 +25,7 @@
         <volume>(0.5,0.4,1.05)</volume>
       </shadowData>
     </graphicData>
-    <uiIconPath>Turrets/TurbolaserHardpoint_icon</uiIconPath>
+    <uiIconPath>Turrets/Turrets_Ogam/TurbolaserHardpoint_icon</uiIconPath>
 	<!-- <rotatable>false</rotatable> -->
 
 	
@@ -113,7 +113,7 @@
     <label>light Turbolaser</label>
     <description>.</description>
     <graphicData>
-      <texPath>Turrets/Turbolaser_gun</texPath>
+      <texPath>Turrets/Turrets_Ogam/Turbolaser_gun</texPath>
       <graphicClass>Graphic_Single</graphicClass>
 	  <drawSize>(6,6)</drawSize>
     </graphicData>

@@ -196,6 +196,10 @@
 				<turnAnglePerTick>2</turnAnglePerTick> <!-- USE SLOWEST POSSIBLE TURN: speed1 turn = 4, speed2 turn = 2, speed3 turn = 1 | banks = 0.75, 0.5, 0.25 | -1 for red slowest -->
 				<turnAngleCirclingPerTick>3.5</turnAngleCirclingPerTick> <!-- use slowest turn +1 for each special turning maneuver: speed1 turn = 2, speed2 turn = 1.5, speed3 turn = 1 | +0.5 for any blue turns, -0.5 for any red turns -->
 				
+				<flightSpeedCirclingPerTick>0.6</flightSpeedCirclingPerTick>
+				<ellipseMajorAxis>120</ellipseMajorAxis>
+				<ellipseMinorAxis>60</ellipseMinorAxis>
+				
 				<distanceFromTargetToStartTurningChaseMode>20</distanceFromTargetToStartTurningChaseMode>
 				<distanceFromTargetToStartTurningCircleMode>10</distanceFromTargetToStartTurningCircleMode>
 				

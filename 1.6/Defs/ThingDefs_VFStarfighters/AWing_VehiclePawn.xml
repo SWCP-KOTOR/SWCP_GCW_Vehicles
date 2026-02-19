@@ -179,6 +179,10 @@
 				<turnAngleCirclingPerTick>4.5</turnAngleCirclingPerTick> <!-- use slowest turn +1 for each special turning maneuver: speed1 turn = 2, speed2 turn = 1.5, speed3 turn = 1 | +0.5 for any blue turns, -0.5 for any red turns -->
 				<!-- ^ this stat apparently makes the speed of U-turns after reaching a waypoint much faster -->
 				
+				<flightSpeedCirclingPerTick>0.6</flightSpeedCirclingPerTick>
+				<ellipseMajorAxis>120</ellipseMajorAxis>
+				<ellipseMinorAxis>60</ellipseMinorAxis>
+				
 				<distanceFromTargetToStartTurningChaseMode>20</distanceFromTargetToStartTurningChaseMode>
 				<distanceFromTargetToStartTurningCircleMode>10</distanceFromTargetToStartTurningCircleMode>
 				

@@ -165,12 +165,16 @@
 				<turnAnglePerTick>2</turnAnglePerTick> <!-- USE SLOWEST POSSIBLE TURN: speed1 turn = 4, speed2 turn = 2, speed3 turn = 1 | banks = 0.75, 0.5, 0.25 | -1 for red slowest -->
 				<turnAngleCirclingPerTick>3.5</turnAngleCirclingPerTick> <!-- use slowest turn +1 for each special turning maneuver: speed1 turn = 2, speed2 turn = 1.5, speed3 turn = 1 | +0.5 for any blue turns, -0.5 for any red turns -->
 				
-				<distanceFromTargetToStartTurningChaseMode>20</distanceFromTargetToStartTurningChaseMode>
-				<distanceFromTargetToStartTurningCircleMode>10</distanceFromTargetToStartTurningCircleMode>
+				<flightSpeedCirclingPerTick>0.4</flightSpeedCirclingPerTick>
+				<ellipseMajorAxis>120</ellipseMajorAxis>
+				<ellipseMinorAxis>60</ellipseMinorAxis>
+				
+				<maxDistanceFromTargetElliptical>50</maxDistanceFromTargetElliptical>
+				<maxDistanceFromTargetCircle>10</maxDistanceFromTargetCircle>
 				
 				<takeoffTicks>120</takeoffTicks>
 				<landingTicks>120</landingTicks>
-				<moveWhileTakingOff>false</moveWhileTakingOff>
+				<moveWhileTakingOff>false</moveWhileTakingOff><moveWhileLanding>false</moveWhileLanding>
 				
 				
 				
@@ -193,11 +197,8 @@
 				
 				<AISettings>
 					<gunshipSettings>
-						<npcStock>
-							<!-- <CVNAmmoBluestandard>300</CVNAmmoBluestandard> -->
-							<!-- <CVNAmmoRedstandard>300</CVNAmmoRedstandard> -->
-						</npcStock>
-						<gunshipMode>Chasing</gunshipMode>
+						<!-- strafing run settings: Elliptical/Over -->
+						<chaseMode>Elliptical</chaseMode><flightPattern>Over</flightPattern>
 						<distanceFromTarget>30</distanceFromTarget>
 					</gunshipSettings>
 				</AISettings>

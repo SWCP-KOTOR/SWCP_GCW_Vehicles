@@ -91,6 +91,11 @@
     <researchPrerequisites>
       <li>SniperTurret</li>
     </researchPrerequisites>
+	
+	<tradeTags>
+		<li>guy762TT_GCWBuildings_DeployableTurretsAny</li>
+		<li>guy762TT_GCWBuildings_DeployableTurretsSmall</li>
+	</tradeTags>
   </ThingDef>
 
 

@@ -408,6 +408,7 @@
 					<turretIds>
 						<li>M3AScykKey_gun_1</li>
 						<li>M3AScykKey_gun_2</li>
+						<li>M3AScykKey_gun_3</li>
 					</turretIds>
 				</li>
 			</roles>
@@ -450,6 +451,7 @@
 					<turretIds>
 						<li>M3AScykKey_gun_1</li>
 						<li>M3AScykKey_gun_2</li>
+						<li>M3AScykKey_gun_3</li>
 					</turretIds>
 				</li>
 			</roles>
@@ -764,6 +766,7 @@
 						<li>TIEDefKey_gun_1</li>
 						<li>TIEDefKey_gun_2</li>
 						<li>TIEDefKey_gun_3</li>
+						<li>TIEDefKey_gun_4</li>
 					</turretIds>
 				</li>
 			</roles>
@@ -1257,6 +1260,8 @@
 					<turretIds>
 						<li>Z95Key_gun_1</li>
 						<li>Z95Key_gun_2</li>
+						<li>Z95Key_gun_3</li>
+						<li>Z95Key_gun_4</li>
 					</turretIds>
 				</li>
 			</roles>

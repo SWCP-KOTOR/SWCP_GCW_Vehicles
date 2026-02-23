@@ -170,18 +170,22 @@
 				
 				<fuelConsumptionPerTick>0.0001</fuelConsumptionPerTick><canFlyInSpace>true</canFlyInSpace>
 				
-				<!-- using the VT-49 Deci's movement dial for this one -->
+				<!-- using VT-49 -->
 				<flightSpeedPerTick>0.8</flightSpeedPerTick> <!-- MAXIMUM XWMG speed: speed5 = 1, speed1 = 0.2 | + 0.1 for blue 5, -0.1 for red highest -->
 				<flightSpeedTurningPerTick>0.5</flightSpeedTurningPerTick> <!-- highest speed in which all 5 standard maneuvers are available | +0.1 for a full row of blues, -0.1 for any red turns -->
 				<turnAnglePerTick>1</turnAnglePerTick> <!-- LARGE SHIP TURNS (slowest possible): speed1 turn = 2, speed2 turn = 1.5, speed3 turn = 1 | banks = 0.75, 0.5, 0.25 | -1 for red slowest -->
 				<turnAngleCirclingPerTick>1.5</turnAngleCirclingPerTick> <!-- use slowest turn +1 for each special turning maneuver: speed1 turn = 2, speed2 turn = 1.5, speed3 turn = 1 | +0.5 for any blue turns, -0.5 for any red turns -->
 				
-				<distanceFromTargetToStartTurningChaseMode>20</distanceFromTargetToStartTurningChaseMode>
-				<distanceFromTargetToStartTurningCircleMode>10</distanceFromTargetToStartTurningCircleMode>
+				<flightSpeedCirclingPerTick>0.5</flightSpeedCirclingPerTick>
+				<ellipseMajorAxis>120</ellipseMajorAxis>
+				<ellipseMinorAxis>60</ellipseMinorAxis>
+				
+				<maxDistanceFromTargetElliptical>50</maxDistanceFromTargetElliptical>
+				<maxDistanceFromTargetCircle>10</maxDistanceFromTargetCircle>
 				
 				<takeoffTicks>120</takeoffTicks>
 				<landingTicks>120</landingTicks>
-				<moveWhileTakingOff>false</moveWhileTakingOff>
+				<moveWhileTakingOff>false</moveWhileTakingOff><moveWhileLanding>false</moveWhileLanding>
 				
 				
 				
@@ -201,33 +205,10 @@
 					<colorThree>(70,70,70)</colorThree> <!-- dark grey -->
 				</flightGraphicData>
 				
-				<!-- <bombOptions> -->
-					<!-- <li> -->
-						<!-- <label>proton bomb</label> -->
-						<!-- <texPath>Weapons/Projectiles/energybomb</texPath> -->
-						<!-- <costList> -->
-							<!-- <Steel>10</Steel> -->
-						<!-- </costList> -->
-						<!-- <projectile>SWVehicleBullet_protonbomb</projectile> -->
-						<!-- <cooldownTicks>60</cooldownTicks> -->
-					<!-- </li> -->
-				<!-- </bombOptions> -->
 				<AISettings>
-					<!-- <bomberSettings> -->
-						<!-- <npcStock> -->
-							<!-- <Steel>100</Steel> -->
-						<!-- </npcStock> -->
-						<!-- <maxBombRun>5</maxBombRun> -->
-						<!-- <blacklistedBombs> -->
-						<!-- </blacklistedBombs> -->
-						<!-- <distanceFromTarget>20</distanceFromTarget> -->
-					<!-- </bomberSettings> -->
 					<gunshipSettings>
-						<npcStock>
-							<!-- <CVNAmmoBluestandard>300</CVNAmmoBluestandard> -->
-							<!-- <CVNAmmoRedstandard>300</CVNAmmoRedstandard> -->
-						</npcStock>
-						<gunshipMode>Chasing</gunshipMode>
+						<!-- dropship settings: Hovering/Around -->
+						<chaseMode>Hovering</chaseMode><flightPattern>Around</flightPattern>
 						<distanceFromTarget>30</distanceFromTarget>
 					</gunshipSettings>
 				</AISettings>

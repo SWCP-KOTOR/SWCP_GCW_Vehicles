@@ -238,12 +238,16 @@
 				<turnAnglePerTick>2</turnAnglePerTick> <!-- LARGE SHIP TURNS (slowest possible): speed1 turn = 2, speed2 turn = 1.5, speed3 turn = 1 | banks = 0.75, 0.5, 0.25 | -1 for red slowest -->
 				<turnAngleCirclingPerTick>3</turnAngleCirclingPerTick> <!-- use slowest turn +1 for each special turning maneuver: speed1 turn = 2, speed2 turn = 1.5, speed3 turn = 1 | +0.5 for any blue turns, -0.5 for any red turns -->
 				
-				<distanceFromTargetToStartTurningChaseMode>20</distanceFromTargetToStartTurningChaseMode>
-				<distanceFromTargetToStartTurningCircleMode>10</distanceFromTargetToStartTurningCircleMode>
+				<flightSpeedCirclingPerTick>0.6</flightSpeedCirclingPerTick>
+				<ellipseMajorAxis>120</ellipseMajorAxis>
+				<ellipseMinorAxis>60</ellipseMinorAxis>
+				
+				<maxDistanceFromTargetElliptical>50</maxDistanceFromTargetElliptical>
+				<maxDistanceFromTargetCircle>10</maxDistanceFromTargetCircle>
 				
 				<takeoffTicks>120</takeoffTicks>
 				<landingTicks>120</landingTicks>
-				<moveWhileTakingOff>false</moveWhileTakingOff>
+				<moveWhileTakingOff>false</moveWhileTakingOff><moveWhileLanding>false</moveWhileLanding>
 				
 				
 				
@@ -303,10 +307,8 @@
 				<waypointFleck>guy762_SWStarfighter_waypoint</waypointFleck>
 				<AISettings>
 					<gunshipSettings>
-						<!-- <npcStock> -->
-							<!-- <CVNAmmoMissile>60~120</CVNAmmoMissile> -->
-						<!-- </npcStock> -->
-						<gunshipMode>Chasing</gunshipMode>
+						<!-- turreted gunship settings: Circling/Around -->
+						<chaseMode>Circling</chaseMode><flightPattern>Around</flightPattern>
 						<distanceFromTarget>30</distanceFromTarget>
 					</gunshipSettings>
 				</AISettings>
@@ -509,7 +511,7 @@
 		<turretType>Rotatable</turretType>
 		<shotSound>kotorsound_milleniumfalcongun</shotSound>
 		
-		<projectile>SWCPStarfighterBullet_CannonAVAAheavy_dualred</projectile>
+		<projectile>SWCPStarfighterBullet_AssaultAVAAheavy_dualred</projectile>
 		<reloadTimer>3.5</reloadTimer>
 		<warmUpTimer>0.1</warmUpTimer>
 		

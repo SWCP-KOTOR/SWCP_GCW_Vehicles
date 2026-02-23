@@ -290,21 +290,21 @@
 						<description>Toggle flight mode.</description>
 						<texPath>Gizmo/TakeOff_Icon</texPath>
 					</flightMode>
-					<hoverMode>
-						<label>Hover mode</label>
-						<description>Toggle hover mode.</description>
-						<texPath>Gizmo/Liftoff_Icon</texPath>
-					</hoverMode>
-					<faceTarget>
-						<label>Face target (hover)</label>
-						<description>Face target while hovering.</description>
-						<texPath>Gizmo/FaceTarget_Icon</texPath>
-					</faceTarget>
-					<cancelFaceTarget>
-						<label>Cancel face target</label>
-						<description>Cancel face target.</description>
-						<texPath>Gizmo/FaceTargetStop_Icon</texPath>
-					</cancelFaceTarget>
+					<!-- <hoverMode> -->
+						<!-- <label>Hover mode</label> -->
+						<!-- <description>Toggle hover mode.</description> -->
+						<!-- <texPath>Gizmo/Liftoff_Icon</texPath> -->
+					<!-- </hoverMode> -->
+					<!-- <faceTarget> -->
+						<!-- <label>Face target (hover)</label> -->
+						<!-- <description>Face target while hovering.</description> -->
+						<!-- <texPath>Gizmo/FaceTarget_Icon</texPath> -->
+					<!-- </faceTarget> -->
+					<!-- <cancelFaceTarget> -->
+						<!-- <label>Cancel face target</label> -->
+						<!-- <description>Cancel face target.</description> -->
+						<!-- <texPath>Gizmo/FaceTargetStop_Icon</texPath> -->
+					<!-- </cancelFaceTarget> -->
 					<chaseTarget>
 						<label>Chase target (flight)</label>
 						<description>Chase target while flying.</description>
@@ -320,12 +320,16 @@
 				<turnAngleCirclingPerTick>5</turnAngleCirclingPerTick> <!-- use slowest turn +1 for each special turning maneuver: speed1 turn = 2, speed2 turn = 1.5, speed3 turn = 1 | +0.5 for any blue turns, -0.5 for any red turns -->
 				<!-- ^ this stat apparently makes the speed of U-turns after reaching a waypoint much faster -->
 				
-				<distanceFromTargetToStartTurningChaseMode>20</distanceFromTargetToStartTurningChaseMode>
-				<distanceFromTargetToStartTurningCircleMode>10</distanceFromTargetToStartTurningCircleMode>
+				<flightSpeedCirclingPerTick>0.6</flightSpeedCirclingPerTick>
+				<ellipseMajorAxis>120</ellipseMajorAxis>
+				<ellipseMinorAxis>60</ellipseMinorAxis>
+				
+				<maxDistanceFromTargetElliptical>50</maxDistanceFromTargetElliptical>
+				<maxDistanceFromTargetCircle>10</maxDistanceFromTargetCircle>
 				
 				<takeoffTicks>120</takeoffTicks>
 				<landingTicks>120</landingTicks>
-				<moveWhileTakingOff>false</moveWhileTakingOff>
+				<moveWhileTakingOff>false</moveWhileTakingOff><moveWhileLanding>false</moveWhileLanding>
 				
 				
 				
@@ -348,11 +352,8 @@
 				
 				<AISettings>
 					<gunshipSettings>
-						<npcStock>
-							<!-- <CVNAmmoBluestandard>300</CVNAmmoBluestandard> -->
-							<!-- <CVNAmmoRedstandard>300</CVNAmmoRedstandard> -->
-						</npcStock>
-						<gunshipMode>Chasing</gunshipMode>
+						<!-- interception settings: Direct/Over -->
+						<chaseMode>Direct</chaseMode><flightPattern>Over</flightPattern>
 						<distanceFromTarget>30</distanceFromTarget>
 					</gunshipSettings>
 				</AISettings>
@@ -469,28 +470,28 @@
 					<!--/////////////////////////-->
 					
 					<li>
-						<turretDef>guy762_VehicleTurret_ConcMissile</turretDef>
+						<turretDef>guy762_VehicleTurret_SeekerMissile</turretDef>
 						
 						<renderProperties>
 							<north>(-1.5, 1.5)</north>
 						</renderProperties>
 						<defaultAngleRotated>0</defaultAngleRotated>
 						<angleRestricted>(315,45)</angleRestricted>
-						<gizmoLabel>missile launcher</gizmoLabel>
+						<gizmoLabel>seeker missile launcher</gizmoLabel>
 						
 						<aimPieOffset>(0, 2.55)</aimPieOffset>
 						
 						<key>TIEAvgKey_gun_5</key>
 					</li>
 					<li>
-						<turretDef>guy762_VehicleTurret_ConcMissile</turretDef>
+						<turretDef>guy762_VehicleTurret_SeekerMissile</turretDef>
 						
 						<renderProperties>
 							<north>(1.5, 1.5)</north>
 						</renderProperties>
 						<defaultAngleRotated>0</defaultAngleRotated>
 						<angleRestricted>(315,45)</angleRestricted>
-						<gizmoLabel>missile launcher</gizmoLabel>
+						<gizmoLabel>seeker missile launcher</gizmoLabel>
 						
 						<aimPieOffset>(0, 2.55)</aimPieOffset>
 						
@@ -615,7 +616,7 @@
 						<description>Toggle flight mode.</description>
 						<texPath>Gizmo/TakeOff_Icon</texPath>
 					</flightMode>
-					<hoverMode>
+					<hoverMode> <!-- the prototype can hover, as seen in Andor -->
 						<label>Hover mode</label>
 						<description>Toggle hover mode.</description>
 						<texPath>Gizmo/Liftoff_Icon</texPath>
@@ -645,12 +646,16 @@
 				<turnAngleCirclingPerTick>5</turnAngleCirclingPerTick> <!-- use slowest turn +1 for each special turning maneuver: speed1 turn = 2, speed2 turn = 1.5, speed3 turn = 1 | +0.5 for any blue turns, -0.5 for any red turns -->
 				<!-- ^ this stat apparently makes the speed of U-turns after reaching a waypoint much faster -->
 				
-				<distanceFromTargetToStartTurningChaseMode>20</distanceFromTargetToStartTurningChaseMode>
-				<distanceFromTargetToStartTurningCircleMode>10</distanceFromTargetToStartTurningCircleMode>
+				<flightSpeedCirclingPerTick>0.6</flightSpeedCirclingPerTick>
+				<ellipseMajorAxis>120</ellipseMajorAxis>
+				<ellipseMinorAxis>60</ellipseMinorAxis>
+				
+				<maxDistanceFromTargetElliptical>50</maxDistanceFromTargetElliptical>
+				<maxDistanceFromTargetCircle>10</maxDistanceFromTargetCircle>
 				
 				<takeoffTicks>120</takeoffTicks>
 				<landingTicks>120</landingTicks>
-				<moveWhileTakingOff>false</moveWhileTakingOff>
+				<moveWhileTakingOff>false</moveWhileTakingOff><moveWhileLanding>false</moveWhileLanding>
 				
 				
 				
@@ -672,11 +677,8 @@
 				
 				<AISettings>
 					<gunshipSettings>
-						<npcStock>
-							<!-- <CVNAmmoBluestandard>300</CVNAmmoBluestandard> -->
-							<!-- <CVNAmmoRedstandard>300</CVNAmmoRedstandard> -->
-						</npcStock>
-						<gunshipMode>Chasing</gunshipMode>
+						<!-- strafing run settings: Elliptical/Over -->
+						<chaseMode>Elliptical</chaseMode><flightPattern>Over</flightPattern>
 						<distanceFromTarget>30</distanceFromTarget>
 					</gunshipSettings>
 				</AISettings>
@@ -1038,21 +1040,21 @@
 						<description>Toggle flight mode.</description>
 						<texPath>Gizmo/TakeOff_Icon</texPath>
 					</flightMode>
-					<hoverMode>
-						<label>Hover mode</label>
-						<description>Toggle hover mode.</description>
-						<texPath>Gizmo/Liftoff_Icon</texPath>
-					</hoverMode>
-					<faceTarget>
-						<label>Face target (hover)</label>
-						<description>Face target while hovering.</description>
-						<texPath>Gizmo/FaceTarget_Icon</texPath>
-					</faceTarget>
-					<cancelFaceTarget>
-						<label>Cancel face target</label>
-						<description>Cancel face target.</description>
-						<texPath>Gizmo/FaceTargetStop_Icon</texPath>
-					</cancelFaceTarget>
+					<!-- <hoverMode> -->
+						<!-- <label>Hover mode</label> -->
+						<!-- <description>Toggle hover mode.</description> -->
+						<!-- <texPath>Gizmo/Liftoff_Icon</texPath> -->
+					<!-- </hoverMode> -->
+					<!-- <faceTarget> -->
+						<!-- <label>Face target (hover)</label> -->
+						<!-- <description>Face target while hovering.</description> -->
+						<!-- <texPath>Gizmo/FaceTarget_Icon</texPath> -->
+					<!-- </faceTarget> -->
+					<!-- <cancelFaceTarget> -->
+						<!-- <label>Cancel face target</label> -->
+						<!-- <description>Cancel face target.</description> -->
+						<!-- <texPath>Gizmo/FaceTargetStop_Icon</texPath> -->
+					<!-- </cancelFaceTarget> -->
 					<chaseTarget>
 						<label>Chase target (flight)</label>
 						<description>Chase target while flying.</description>
@@ -1068,12 +1070,16 @@
 				<turnAngleCirclingPerTick>5</turnAngleCirclingPerTick> <!-- use slowest turn +1 for each special turning maneuver: speed1 turn = 2, speed2 turn = 1.5, speed3 turn = 1 | +0.5 for any blue turns, -0.5 for any red turns -->
 				<!-- ^ this stat apparently makes the speed of U-turns after reaching a waypoint much faster -->
 				
-				<distanceFromTargetToStartTurningChaseMode>20</distanceFromTargetToStartTurningChaseMode>
-				<distanceFromTargetToStartTurningCircleMode>10</distanceFromTargetToStartTurningCircleMode>
+				<flightSpeedCirclingPerTick>0.6</flightSpeedCirclingPerTick>
+				<ellipseMajorAxis>120</ellipseMajorAxis>
+				<ellipseMinorAxis>60</ellipseMinorAxis>
+				
+				<maxDistanceFromTargetElliptical>50</maxDistanceFromTargetElliptical>
+				<maxDistanceFromTargetCircle>10</maxDistanceFromTargetCircle>
 				
 				<takeoffTicks>120</takeoffTicks>
 				<landingTicks>120</landingTicks>
-				<moveWhileTakingOff>false</moveWhileTakingOff>
+				<moveWhileTakingOff>false</moveWhileTakingOff><moveWhileLanding>false</moveWhileLanding>
 				
 				
 				
@@ -1096,11 +1102,8 @@
 				
 				<AISettings>
 					<gunshipSettings>
-						<npcStock>
-							<!-- <CVNAmmoBluestandard>300</CVNAmmoBluestandard> -->
-							<!-- <CVNAmmoRedstandard>300</CVNAmmoRedstandard> -->
-						</npcStock>
-						<gunshipMode>Chasing</gunshipMode>
+						<!-- interception settings: Direct/Over -->
+						<chaseMode>Direct</chaseMode><flightPattern>Over</flightPattern>
 						<distanceFromTarget>30</distanceFromTarget>
 					</gunshipSettings>
 				</AISettings>
@@ -1217,28 +1220,28 @@
 					<!--/////////////////////////-->
 					
 					<li>
-						<turretDef>guy762_VehicleTurret_ConcMissile</turretDef>
+						<turretDef>guy762_VehicleTurret_SeekerMissile</turretDef>
 						
 						<renderProperties>
 							<north>(-1.5, 1.5)</north>
 						</renderProperties>
 						<defaultAngleRotated>0</defaultAngleRotated>
 						<angleRestricted>(315,45)</angleRestricted>
-						<gizmoLabel>missile launcher</gizmoLabel>
+						<gizmoLabel>seeker missile launcher</gizmoLabel>
 						
 						<aimPieOffset>(0, 2.55)</aimPieOffset>
 						
 						<key>TIEAvgKey_gun_5</key>
 					</li>
 					<li>
-						<turretDef>guy762_VehicleTurret_ConcMissile</turretDef>
+						<turretDef>guy762_VehicleTurret_SeekerMissile</turretDef>
 						
 						<renderProperties>
 							<north>(1.5, 1.5)</north>
 						</renderProperties>
 						<defaultAngleRotated>0</defaultAngleRotated>
 						<angleRestricted>(315,45)</angleRestricted>
-						<gizmoLabel>missile launcher</gizmoLabel>
+						<gizmoLabel>seeker missile launcher</gizmoLabel>
 						
 						<aimPieOffset>(0, 2.55)</aimPieOffset>
 						
@@ -1347,9 +1350,9 @@
 		<description>The fixed ion cannon of a TIE Avenger prototype starfighter.</description>
 		
 		<turretType>Rotatable</turretType>
-		<shotSound>kotorsound_ioncannon_small_louder</shotSound>
+		<shotSound>kotorsound_VehicleIonCannonMix</shotSound>
 		
-		<projectile>SWCPStarfighterBullet_CannonAVAA_dualion</projectile>
+		<projectile>SWCPStarfighterBullet_AssaultAVAA_dualion</projectile>
 		<reloadTimer>3.5</reloadTimer>
 		<warmUpTimer>0.5</warmUpTimer>
 		

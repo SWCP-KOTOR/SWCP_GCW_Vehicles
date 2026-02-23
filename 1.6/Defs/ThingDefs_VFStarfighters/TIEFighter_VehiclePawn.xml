@@ -135,12 +135,12 @@
 				<turnAnglePerTick>4</turnAnglePerTick> <!-- USE SLOWEST POSSIBLE TURN: speed1 turn = 4, speed2 turn = 2, speed3 turn = 1 | banks = 0.75, 0.5, 0.25 | -1 for red slowest -->
 				<turnAngleCirclingPerTick>4</turnAngleCirclingPerTick> <!-- use slowest turn +1 for each special turning maneuver: speed1 turn = 2, speed2 turn = 1.5, speed3 turn = 1 | +0.5 for any blue turns, -0.5 for any red turns -->
 				
-				<distanceFromTargetToStartTurningChaseMode>20</distanceFromTargetToStartTurningChaseMode>
-				<distanceFromTargetToStartTurningCircleMode>10</distanceFromTargetToStartTurningCircleMode>
+				<maxDistanceFromTargetElliptical>50</maxDistanceFromTargetElliptical>
+				<maxDistanceFromTargetCircle>10</maxDistanceFromTargetCircle>
 				
 				<takeoffTicks>120</takeoffTicks>
 				<landingTicks>120</landingTicks>
-				<moveWhileTakingOff>false</moveWhileTakingOff>
+				<moveWhileTakingOff>false</moveWhileTakingOff><moveWhileLanding>false</moveWhileLanding>
 				
 				
 				
@@ -164,12 +164,9 @@
 				
 				<AISettings>
 					<gunshipSettings>
-						<npcStock>
-							<!-- <CVNAmmoBluestandard>300</CVNAmmoBluestandard> -->
-							<!-- <CVNAmmoRedstandard>300</CVNAmmoRedstandard> -->
-						</npcStock>
-						<gunshipMode>Chasing</gunshipMode>
-						<!-- <gunshipMode>Circling</gunshipMode>    they just seem to fly off the map with this -->
+						<!-- strafing run settings: Elliptical/Over -->
+						<!-- interception settings: Direct/Over -->
+						<chaseMode>Direct</chaseMode><flightPattern>Over</flightPattern>
 						<distanceFromTarget>30</distanceFromTarget>
 					</gunshipSettings>
 				</AISettings>

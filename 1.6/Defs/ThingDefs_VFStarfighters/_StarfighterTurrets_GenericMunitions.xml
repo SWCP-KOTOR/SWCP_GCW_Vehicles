@@ -2,7 +2,7 @@
 
 <Defs>	
 
-	
+		<!-- used by: B-Wing, Kimogila, Scurrg, Skipray, StarViper, X-Wing, YT-2400 -->
 	<Vehicles.VehicleTurretDef ParentName="VehicleTurretBase">
 		<defName>guy762_VehicleTurret_ProTorp</defName>
 		<label>proton torpedo launcher</label>
@@ -61,7 +61,7 @@
 	</Vehicles.VehicleTurretDef>
 	
 	
-	
+		<!-- used by: Y-Wing, Supa Fighter -->
 	<Vehicles.VehicleTurretDef ParentName="VehicleTurretBase">
 		<defName>guy762_VehicleTurret_IonTorp</defName>
 		<label>ion torpedo launcher</label>
@@ -120,6 +120,61 @@
 	</Vehicles.VehicleTurretDef>
 	
 	
+	
+	
+		<!-- used by: Scyk, TIE Avenger (Mass Production, Royal Guard) -->
+	<Vehicles.VehicleTurretDef ParentName="VehicleTurretBase">
+		<defName>guy762_VehicleTurret_SeekerMissile</defName>
+		<label>seeker missile launcher</label>
+		<description>A seeker missile launcher.</description>
+		
+		<turretType>Rotatable</turretType>
+		<shotSound>kotorsound_SFmissile</shotSound>
+		<reloadSound>kotorsound_reloadlauncher</reloadSound>
+		
+		<projectile>SWVehicleBullet_SFseekerMissile</projectile>
+		<reloadTimer>3.5</reloadTimer>
+		<warmUpTimer>0.2</warmUpTimer>
+		
+		<magazineCapacity>3</magazineCapacity>
+		<genericAmmo>true</genericAmmo>
+		
+		<empDisables>true</empDisables>
+		
+		<autoSnapTargeting>false</autoSnapTargeting>
+		<rotationSpeed>5</rotationSpeed>
+		
+		<projectileOffset>2.1</projectileOffset>
+		
+		<minRange>30</minRange>
+		<maxRange>90</maxRange>
+
+		<fireModes>
+			<li>
+				<shotsPerBurst>3</shotsPerBurst>
+				<ticksBetweenShots>10</ticksBetweenShots>
+				<ticksBetweenBursts>100</ticksBetweenBursts>
+				<label>Burst</label>
+				<texPath>Items/Rockets/rocket_buster/rocket_buster_c</texPath>
+			</li>
+		</fireModes>
+
+		<graphicData>
+			<texPath>NullTex</texPath>
+			<graphicClass>Vehicles.Graphic_Turret</graphicClass>
+		</graphicData>
+		
+		<gizmoIconTexPath>Items/bigcannon_blank</gizmoIconTexPath>
+		
+		<ammunition>
+			<thingDefs>
+				<li>guy762_RocketItem_buster</li>
+			</thingDefs>
+		</ammunition>
+	</Vehicles.VehicleTurretDef>
+	
+	
+		<!-- used by: A-Wing, Kihraxz, LAAT/i, Supa Fighter, TIE Avenger (Prototype) -->
 	<Vehicles.VehicleTurretDef ParentName="VehicleTurretBase">
 		<defName>guy762_VehicleTurret_ConcMissile</defName>
 		<label>concussion missile launcher</label>
@@ -171,7 +226,7 @@
 	</Vehicles.VehicleTurretDef>
 	
 
-	
+		<!-- used by: Rihkxyrk, Kimogila, TIE Defender -->
 	<Vehicles.VehicleTurretDef ParentName="VehicleTurretBase">
 		<defName>guy762_VehicleTurret_IonMissile</defName>
 		<label>ion missile launcher</label>
@@ -232,7 +287,7 @@
 	
 	
 	
-	
+		<!-- used by: Z-95, Rihkxyrk -->
 	<Vehicles.VehicleTurretDef ParentName="VehicleTurretBase">
 		<defName>guy762_VehicleTurret_RocketBarrage</defName>
 		<label>barrage rocket launcher</label>
@@ -293,7 +348,7 @@
 	
 	
 	
-	
+		<!-- used by: Y-Wing, HWK-290, Scurrg, TIE Bomber, TIE Striker -->
 	<Vehicles.VehicleTurretDef ParentName="VehicleTurretBase">
 		<defName>guy762_VehicleTurret_ProtonBombs</defName>
 		<label>Proton Bomb Bay</label>

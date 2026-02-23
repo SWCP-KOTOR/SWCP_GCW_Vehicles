@@ -8,7 +8,7 @@
 		<designationCategory>MM_StarWarsShipBuildTab</designationCategory>
 		
 		<graphicData>
-			<texPath>Starfighters/T65XWing/XWing_Closed</texPath>
+			<texPath>Starfighters/T65XWing/XWing_Open</texPath>
 			<graphicClass>Graphic_Multi</graphicClass>
 			<drawSize>(14,14)</drawSize>
 			<!-- <drawOffset>(0, 0, 1)</drawOffset> -->

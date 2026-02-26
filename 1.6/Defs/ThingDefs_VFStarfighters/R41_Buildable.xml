@@ -1,11 +1,18 @@
 <?xml version="1.0" encoding="utf-8" ?>
 
 <Defs>
-	<Vehicles.VehicleBuildDef ParentName="VehicleBaseBuildable">
+	
+	<DesignatorDropdownGroupDef>
+		<defName>guy762_SWVehicleBPDropdown_R41SC</defName>
+		<label>R-41 Starchaser</label>
+	</DesignatorDropdownGroupDef>
+	
+	<Vehicles.VehicleBuildDef Name="guy762_SWVehicleBP_R41SC" ParentName="VehicleBaseBuildable">
 		<defName>guy762_SWVehicleBP_R41SC</defName>
 		<label>R-41 Starchaser</label>
 		<description>.</description>
 		<designationCategory>MM_StarWarsShipBuildTab</designationCategory>
+		<designatorDropdown>guy762_SWVehicleBPDropdown_R41SC</designatorDropdown>
 		
 		<graphicData>
 			<texPath>Starfighters/R41Starchaser/R41</texPath>
@@ -40,4 +47,46 @@
 		
 		<constructionSkillPrerequisite>6</constructionSkillPrerequisite>
 	</Vehicles.VehicleBuildDef>
+	
+	
+	
+	
+	
+	
+	
+	
+	<Vehicles.VehicleBuildDef ParentName="guy762_SWVehicleBP_R41SC">
+		<defName>guy762_SWVehicleItemBP_R41SC</defName>
+		<label>R-41 Starchaser (from item)</label>
+		<statBases>
+			<WorkToBuild>5</WorkToBuild>
+		</statBases>
+		<costList Inherit="False">
+			<SWCP_ItemizedVehicle_R41SC>1</SWCP_ItemizedVehicle_R41SC>
+		</costList>
+		<constructionSkillPrerequisite>0</constructionSkillPrerequisite>
+	</Vehicles.VehicleBuildDef>
+	
+	<ThingDef ParentName="SWCP_ItemizedVehicleBASE">
+		<defName>SWCP_ItemizedVehicle_R41SC</defName>
+		<label>starfighter, R-41 Starchaser</label>
+		<graphicData>
+			<texPath>Starfighters/R41Starchaser/R41_east</texPath>
+		</graphicData>
+		
+		<statBases>
+			<MarketValue>55000</MarketValue>
+			<Mass>1</Mass>
+		</statBases>
+		
+		<thingSetMakerTags>
+			<!-- <li>RewardStandardMidFreq</li> -->
+		</thingSetMakerTags>
+		<tradeTags>
+			<li>SWCPTT_ItemizedStarfighters_RebelBasic</li>
+			<li>SWCPTT_ItemizedStarfighters_ScumBasic</li>
+			<li>SWCPTT_ItemizedStarfighters_GenericPirateShips</li>
+		</tradeTags>
+	</ThingDef>
+	
 </Defs>

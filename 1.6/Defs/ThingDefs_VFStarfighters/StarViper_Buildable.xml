@@ -1,11 +1,19 @@
 <?xml version="1.0" encoding="utf-8" ?>
 
 <Defs>
-	<Vehicles.VehicleBuildDef ParentName="VehicleBaseBuildable">
-		<defName>guy762_SWVehicleBP_StarViper</defName>
+	
+	<DesignatorDropdownGroupDef>
+		<defName>guy762_SWVehicleBPDropdown_StarViper</defName>
 		<label>StarViper-class attack platform</label>
+	</DesignatorDropdownGroupDef>
+	
+	
+	<Vehicles.VehicleBuildDef Name="guy762_SWVehicleBP_StarViper" ParentName="VehicleBaseBuildable">
+		<defName>guy762_SWVehicleBP_StarViper</defName>
+		<label>StarViper</label>
 		<description>.</description>
 		<designationCategory>MM_StarWarsShipBuildTab</designationCategory>
+		<designatorDropdown>guy762_SWVehicleBPDropdown_StarViper</designatorDropdown>
 		
 		<graphicData>
 			<texPath>Starfighters/StarViper/StarViper_Closed</texPath>
@@ -40,4 +48,41 @@
 		
 		<constructionSkillPrerequisite>6</constructionSkillPrerequisite>
 	</Vehicles.VehicleBuildDef>
+	
+	
+	
+	<Vehicles.VehicleBuildDef ParentName="guy762_SWVehicleBP_StarViper">
+		<defName>guy762_SWVehicleItemBP_StarViper</defName>
+		<label>StarViper (from item)</label>
+		<statBases>
+			<WorkToBuild>5</WorkToBuild>
+		</statBases>
+		<costList Inherit="False">
+			<SWCP_ItemizedVehicle_StarViper>1</SWCP_ItemizedVehicle_StarViper>
+		</costList>
+		<constructionSkillPrerequisite>0</constructionSkillPrerequisite>
+	</Vehicles.VehicleBuildDef>
+	
+	<ThingDef ParentName="SWCP_ItemizedVehicleBASE">
+		<defName>SWCP_ItemizedVehicle_StarViper</defName>
+		<label>starfighter, StarViper</label>
+		<graphicData>
+			<texPath>Starfighters/StarViper/StarViper_Closed_east</texPath>
+		</graphicData>
+		
+		<statBases>
+			<MarketValue>160000</MarketValue>
+			<Mass>1</Mass>
+		</statBases>
+		
+		<thingSetMakerTags>
+			<!-- <li>RewardStandardMidFreq</li> -->
+		</thingSetMakerTags>
+		<tradeTags>
+			<li>SWCPTT_ItemizedStarfighters_ScumExotic</li>
+			<li>SWCPTT_ItemizedStarfighters_BlackSunShips</li>
+			<li>SWCPTT_ItemizedStarfighters_ZannConsortiumShips</li>
+		</tradeTags>
+	</ThingDef>
+	
 </Defs>

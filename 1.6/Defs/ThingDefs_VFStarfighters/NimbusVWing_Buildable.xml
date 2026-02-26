@@ -1,11 +1,18 @@
 <?xml version="1.0" encoding="utf-8" ?>
 
 <Defs>
-	<Vehicles.VehicleBuildDef ParentName="VehicleBaseBuildable">
-		<defName>guy762_SWVehicleBP_NimbusVWing</defName>
+	
+	<DesignatorDropdownGroupDef>
+		<defName>guy762_SWVehicleBPDropdown_NimbusVWing</defName>
 		<label>Alpha-3 Nimbus V-Wing starfighter</label>
+	</DesignatorDropdownGroupDef>
+	
+	<Vehicles.VehicleBuildDef Name="guy762_SWVehicleBP_NimbusVWing" ParentName="VehicleBaseBuildable">
+		<defName>guy762_SWVehicleBP_NimbusVWing</defName>
+		<label>Nimbus V-Wing</label>
 		<description>.</description>
 		<designationCategory>MM_StarWarsShipBuildTab</designationCategory>
+		<designatorDropdown>guy762_SWVehicleBPDropdown_NimbusVWing</designatorDropdown>
 		
 		<graphicData>
 			<texPath>Starfighters/NimbusVWing/NimbusVWing</texPath>
@@ -40,4 +47,44 @@
 		
 		<constructionSkillPrerequisite>6</constructionSkillPrerequisite>
 	</Vehicles.VehicleBuildDef>
+	
+	
+	
+	
+	<Vehicles.VehicleBuildDef ParentName="guy762_SWVehicleBP_NimbusVWing">
+		<defName>guy762_SWVehicleItemBP_NimbusVWing</defName>
+		<label>Nimbus V-Wing (from item)</label>
+		<statBases>
+			<WorkToBuild>5</WorkToBuild>
+		</statBases>
+		<costList Inherit="False">
+			<SWCP_ItemizedVehicle_NimbusVWing>1</SWCP_ItemizedVehicle_NimbusVWing>
+		</costList>
+		<constructionSkillPrerequisite>0</constructionSkillPrerequisite>
+	</Vehicles.VehicleBuildDef>
+	
+	<ThingDef ParentName="SWCP_ItemizedVehicleBASE">
+		<defName>SWCP_ItemizedVehicle_NimbusVWing</defName>
+		<label>starfighter, Nimbus V-Wing</label>
+		<graphicData>
+			<texPath>Starfighters/NimbusVWing/NimbusVWing_east</texPath>
+		</graphicData>
+		
+		<statBases>
+			<MarketValue>45000</MarketValue>
+			<Mass>1</Mass>
+		</statBases>
+		
+		<thingSetMakerTags>
+			<!-- <li>RewardStandardMidFreq</li> -->
+		</thingSetMakerTags>
+		<tradeTags>
+			<li>SWCPTT_ItemizedStarfighters_CloneWarsSurplus</li>
+			<li>SWCPTT_ItemizedStarfighters_ScumBasic</li>
+			<li>SWCPTT_ItemizedStarfighters_ImperialBasic</li>
+			<li>SWCPTT_ItemizedStarfighters_GenericPirateShips</li>
+		</tradeTags>
+	</ThingDef>
+	
+	
 </Defs>

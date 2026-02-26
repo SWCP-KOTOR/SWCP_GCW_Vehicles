@@ -69,7 +69,7 @@
 			<EnergyShieldEnergyMax>3</EnergyShieldEnergyMax>
 		</statBases>
 		<vehicleStats>
-			<Mass>2500</Mass>
+			<Mass>25000</Mass>
 			
 			<FlightSpeed>12</FlightSpeed> <!-- this is for world map flight, NOT in-tile flight-->
 			<CargoCapacity>110</CargoCapacity>

@@ -4,6 +4,7 @@
 	
 	<DesignatorDropdownGroupDef>
 		<defName>guy762_SWVehicleBPDropdown_TIEInt</defName>
+		<label>TIE/in Interceptor</label>
 	</DesignatorDropdownGroupDef>
 	
 	<Vehicles.VehicleBuildDef Name="guy762_SWVehicleBP_TIEInt" ParentName="VehicleBaseBuildable">
@@ -11,7 +12,6 @@
 		<label>TIE/in Interceptor</label>
 		<description>.</description>
 		<designationCategory>MM_StarWarsShipBuildTab</designationCategory>
-		
 		<designatorDropdown>guy762_SWVehicleBPDropdown_TIEInt</designatorDropdown>
 		
 		<graphicData>
@@ -49,6 +49,53 @@
 	</Vehicles.VehicleBuildDef>
 	
 	
+	
+	
+	
+	
+	<Vehicles.VehicleBuildDef ParentName="guy762_SWVehicleBP_TIEInt">
+		<defName>guy762_SWVehicleItemBP_TIEInt</defName>
+		<label>TIE/in Interceptor (from item)</label>
+		<statBases>
+			<WorkToBuild>5</WorkToBuild>
+		</statBases>
+		<costList Inherit="False">
+			<SWCP_ItemizedVehicle_TIEInt>1</SWCP_ItemizedVehicle_TIEInt>
+		</costList>
+		<constructionSkillPrerequisite>0</constructionSkillPrerequisite>
+	</Vehicles.VehicleBuildDef>
+	
+	<ThingDef ParentName="SWCP_ItemizedVehicleBASE">
+		<defName>SWCP_ItemizedVehicle_TIEInt</defName>
+		<label>starfighter, TIE/in Interceptor</label>
+		<graphicData>
+			<texPath>Starfighters/TIEInterceptor/TIEInt_east</texPath>
+		</graphicData>
+		
+		<statBases>
+			<MarketValue>50000</MarketValue>
+			<Mass>1</Mass>
+		</statBases>
+		
+		<thingSetMakerTags>
+			<!-- <li>RewardStandardMidFreq</li> -->
+		</thingSetMakerTags>
+		<tradeTags>
+			<li>SWCPTT_ItemizedStarfighters_ImperialAdv</li>
+		</tradeTags>
+	</ThingDef>
+	
+	
+	
+	
+	
+	
+	<!-- \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ Royal Guard variant -->
+	
+	
+	
+	
+	
 	<Vehicles.VehicleBuildDef Name="guy762_SWVehicleBP_TIEInt_RoyalGuard" ParentName="guy762_SWVehicleBP_TIEInt">
 		<defName>guy762_SWVehicleBP_TIEInt_RoyalGuard</defName>
 		<label>TIE/in Interceptor (Royal Guard)</label>
@@ -61,6 +108,44 @@
 		<thingToSpawn>guy762_SWVehicle_TIEInterceptor_RoyalGuard</thingToSpawn>
 
 	</Vehicles.VehicleBuildDef>
+	
+	
+	
+	
+	
+	
+	
+	<Vehicles.VehicleBuildDef ParentName="guy762_SWVehicleBP_TIEInt_RoyalGuard">
+		<defName>guy762_SWVehicleItemBP_TIEInt_RoyalGuard</defName>
+		<label>TIE/in Interceptor (Royal Guard, from item)</label>
+		<statBases>
+			<WorkToBuild>5</WorkToBuild>
+		</statBases>
+		<costList Inherit="False">
+			<SWCP_ItemizedVehicle_TIEInt_RoyalGuard>1</SWCP_ItemizedVehicle_TIEInt_RoyalGuard>
+		</costList>
+		<constructionSkillPrerequisite>0</constructionSkillPrerequisite>
+	</Vehicles.VehicleBuildDef>
+	
+	<ThingDef ParentName="SWCP_ItemizedVehicleBASE">
+		<defName>SWCP_ItemizedVehicle_TIEInt_RoyalGuard</defName>
+		<label>starfighter, TIE/in Interceptor (Royal Guard)</label>
+		<graphicData>
+			<texPath>Starfighters/TIEInterceptor/TIEInt_RoyalGuard_east</texPath>
+		</graphicData>
+		
+		<statBases>
+			<MarketValue>75000</MarketValue>
+			<Mass>1</Mass>
+		</statBases>
+		
+		<thingSetMakerTags>
+			<!-- <li>RewardStandardMidFreq</li> -->
+		</thingSetMakerTags>
+		<tradeTags>
+			<li>SWCPTT_ItemizedStarfighters_ImperialExotic</li>
+		</tradeTags>
+	</ThingDef>
 	
 	
 </Defs>

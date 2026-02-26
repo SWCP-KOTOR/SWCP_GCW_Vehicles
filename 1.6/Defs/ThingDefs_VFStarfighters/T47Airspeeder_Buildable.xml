@@ -1,11 +1,18 @@
 <?xml version="1.0" encoding="utf-8" ?>
 
 <Defs>
-	<Vehicles.VehicleBuildDef ParentName="VehicleBaseBuildable">
+	
+	<DesignatorDropdownGroupDef>
+		<defName>guy762_SWVehicleBPDropdown_T47Airspeeder</defName>
+		<label>T-47 Airspeeder</label>
+	</DesignatorDropdownGroupDef>
+	
+	<Vehicles.VehicleBuildDef Name="guy762_SWVehicleBP_T47Airspeeder" ParentName="VehicleBaseBuildable">
 		<defName>guy762_SWVehicleBP_T47Airspeeder</defName>
 		<label>T-47 Airspeeder</label>
 		<description>.</description>
 		<designationCategory>MM_StarWarsShipBuildTab</designationCategory>
+		<designatorDropdown>guy762_SWVehicleBPDropdown_T47Airspeeder</designatorDropdown>
 		
 		<graphicData>
 			<texPath>Starfighters/T47Airspeeder/T47Airspeeder</texPath>
@@ -40,4 +47,42 @@
 		
 		<constructionSkillPrerequisite>6</constructionSkillPrerequisite>
 	</Vehicles.VehicleBuildDef>
+	
+	
+	
+	
+	
+	
+	<Vehicles.VehicleBuildDef ParentName="guy762_SWVehicleBP_T47Airspeeder">
+		<defName>guy762_SWVehicleItemBP_T47Airspeeder</defName>
+		<label>T-47 Airspeeder (from item)</label>
+		<statBases>
+			<WorkToBuild>5</WorkToBuild>
+		</statBases>
+		<costList Inherit="False">
+			<SWCP_ItemizedVehicle_T47Airspeeder>1</SWCP_ItemizedVehicle_T47Airspeeder>
+		</costList>
+		<constructionSkillPrerequisite>0</constructionSkillPrerequisite>
+	</Vehicles.VehicleBuildDef>
+	
+	<ThingDef ParentName="SWCP_ItemizedVehicleBASE">
+		<defName>SWCP_ItemizedVehicle_T47Airspeeder</defName>
+		<label>starfighter, T-47 Airspeeder</label>
+		<graphicData>
+			<texPath>Starfighters/T47Airspeeder/T47Airspeeder_east</texPath>
+		</graphicData>
+		
+		<statBases>
+			<MarketValue>18000</MarketValue>
+			<Mass>1</Mass>
+		</statBases>
+		
+		<thingSetMakerTags>
+			<!-- <li>RewardStandardMidFreq</li> -->
+		</thingSetMakerTags>
+		<tradeTags>
+			<li>SWCPTT_ItemizedStarfighters_CivilianBasic</li>
+			<li>SWCPTT_ItemizedStarfighters_RebelBasic</li>
+		</tradeTags>
+	</ThingDef>
 </Defs>

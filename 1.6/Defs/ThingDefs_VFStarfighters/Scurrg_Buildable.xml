@@ -1,11 +1,18 @@
 <?xml version="1.0" encoding="utf-8" ?>
 
 <Defs>
-	<Vehicles.VehicleBuildDef ParentName="VehicleBaseBuildable">
-		<defName>guy762_SWVehicleBP_Scurrg</defName>
+	
+	<DesignatorDropdownGroupDef>
+		<defName>guy762_SWVehicleBPDropdown_Scurrg</defName>
 		<label>Scurrg H-6 heavy bomber</label>
+	</DesignatorDropdownGroupDef>
+	
+	<Vehicles.VehicleBuildDef Name="guy762_SWVehicleBP_Scurrg" ParentName="VehicleBaseBuildable">
+		<defName>guy762_SWVehicleBP_Scurrg</defName>
+		<label>Scurrg H-6</label>
 		<description>.</description>
 		<designationCategory>MM_StarWarsShipBuildTab</designationCategory>
+		<designatorDropdown>guy762_SWVehicleBPDropdown_Scurrg</designatorDropdown>
 		
 		<graphicData>
 			<texPath>Starfighters/Scurrg/Scurrg</texPath>
@@ -40,4 +47,41 @@
 		
 		<constructionSkillPrerequisite>6</constructionSkillPrerequisite>
 	</Vehicles.VehicleBuildDef>
+	
+	
+	
+	
+	
+	
+	<Vehicles.VehicleBuildDef ParentName="guy762_SWVehicleBP_Scurrg">
+		<defName>guy762_SWVehicleItemBP_Scurrg</defName>
+		<label>Scurrg H-6 (from item)</label>
+		<statBases>
+			<WorkToBuild>5</WorkToBuild>
+		</statBases>
+		<costList Inherit="False">
+			<SWCP_ItemizedVehicle_Scurrg>1</SWCP_ItemizedVehicle_Scurrg>
+		</costList>
+		<constructionSkillPrerequisite>0</constructionSkillPrerequisite>
+	</Vehicles.VehicleBuildDef>
+	
+	<ThingDef ParentName="SWCP_ItemizedVehicleBASE">
+		<defName>SWCP_ItemizedVehicle_Scurrg</defName>
+		<label>starfighter, Scurrg H-6</label>
+		<graphicData>
+			<texPath>Starfighters/Scurrg/Scurrg_east</texPath>
+		</graphicData>
+		
+		<statBases>
+			<MarketValue>150000</MarketValue>
+			<Mass>1</Mass>
+		</statBases>
+		
+		<thingSetMakerTags>
+			<!-- <li>RewardStandardMidFreq</li> -->
+		</thingSetMakerTags>
+		<tradeTags>
+			<li>SWCPTT_ItemizedStarfighters_ScumExotic</li>
+		</tradeTags>
+	</ThingDef>
 </Defs>

@@ -1,11 +1,18 @@
 <?xml version="1.0" encoding="utf-8" ?>
 
 <Defs>
-	<Vehicles.VehicleBuildDef ParentName="VehicleBaseBuildable">
-		<defName>guy762_SWVehicleBP_UWing</defName>
+	
+	<DesignatorDropdownGroupDef>
+		<defName>guy762_SWVehicleBPDropdown_UWing</defName>
 		<label>UT-60D U-Wing troop transport</label>
+	</DesignatorDropdownGroupDef>
+	
+	<Vehicles.VehicleBuildDef Name="guy762_SWVehicleBP_UWing" ParentName="VehicleBaseBuildable">
+		<defName>guy762_SWVehicleBP_UWing</defName>
+		<label>UT-60D U-Wing</label>
 		<description>.</description>
 		<designationCategory>MM_StarWarsShipBuildTab</designationCategory>
+		<designatorDropdown>guy762_SWVehicleBPDropdown_UWing</designatorDropdown>
 		
 		<graphicData>
 			<texPath>Starfighters/UWing/UWing</texPath>
@@ -40,4 +47,43 @@
 		
 		<constructionSkillPrerequisite>6</constructionSkillPrerequisite>
 	</Vehicles.VehicleBuildDef>
+	
+	
+	
+	
+	
+	
+	<Vehicles.VehicleBuildDef ParentName="guy762_SWVehicleBP_UWing">
+		<defName>guy762_SWVehicleItemBP_UWing</defName>
+		<label>UT-60D U-Wing (from item)</label>
+		<statBases>
+			<WorkToBuild>5</WorkToBuild>
+		</statBases>
+		<costList Inherit="False">
+			<SWCP_ItemizedVehicle_UWing>1</SWCP_ItemizedVehicle_UWing>
+		</costList>
+		<constructionSkillPrerequisite>0</constructionSkillPrerequisite>
+	</Vehicles.VehicleBuildDef>
+	
+	<ThingDef ParentName="SWCP_ItemizedVehicleBASE">
+		<defName>SWCP_ItemizedVehicle_UWing</defName>
+		<label>starfighter, UT-60D U-Wing</label>
+		<graphicData>
+			<texPath>Starfighters/UWing/UWing_east</texPath>
+		</graphicData>
+		
+		<statBases>
+			<MarketValue>650000</MarketValue>
+			<Mass>1</Mass>
+		</statBases>
+		
+		<thingSetMakerTags>
+			<!-- <li>RewardStandardMidFreq</li> -->
+		</thingSetMakerTags>
+		<tradeTags>
+			<li>SWCPTT_ItemizedStarfighters_RebelAdv</li>
+			<li>SWCPTT_ItemizedStarfighters_NewRepublicAdv</li>
+		</tradeTags>
+	</ThingDef>
+	
 </Defs>

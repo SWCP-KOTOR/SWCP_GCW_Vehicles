@@ -1,11 +1,18 @@
 <?xml version="1.0" encoding="utf-8" ?>
 
 <Defs>
-	<Vehicles.VehicleBuildDef ParentName="VehicleBaseBuildable">
+	
+	<DesignatorDropdownGroupDef>
+		<defName>guy762_SWVehicleBPDropdown_TIEReaper</defName>
+		<label>TIE/rp Reaper</label>
+	</DesignatorDropdownGroupDef>
+	
+	<Vehicles.VehicleBuildDef Name="guy762_SWVehicleBP_TIEReaper" ParentName="VehicleBaseBuildable">
 		<defName>guy762_SWVehicleBP_TIEReaper</defName>
 		<label>TIE/rp Reaper</label>
 		<description>.</description>
 		<designationCategory>MM_StarWarsShipBuildTab</designationCategory>
+		<designatorDropdown>guy762_SWVehicleBPDropdown_TIEReaper</designatorDropdown>
 		
 		<graphicData>
 			<texPath>Starfighters/TIEReaper/TIEReaper</texPath>
@@ -40,4 +47,41 @@
 		
 		<constructionSkillPrerequisite>6</constructionSkillPrerequisite>
 	</Vehicles.VehicleBuildDef>
+	
+	
+	
+	
+	
+	<Vehicles.VehicleBuildDef ParentName="guy762_SWVehicleBP_TIEReaper">
+		<defName>guy762_SWVehicleItemBP_TIEReaper</defName>
+		<label>TIE/rp Reaper (from item)</label>
+		<statBases>
+			<WorkToBuild>5</WorkToBuild>
+		</statBases>
+		<costList Inherit="False">
+			<SWCP_ItemizedVehicle_TIEReaper>1</SWCP_ItemizedVehicle_TIEReaper>
+		</costList>
+		<constructionSkillPrerequisite>0</constructionSkillPrerequisite>
+	</Vehicles.VehicleBuildDef>
+	
+	<ThingDef ParentName="SWCP_ItemizedVehicleBASE">
+		<defName>SWCP_ItemizedVehicle_TIEReaper</defName>
+		<label>starfighter, TIE/rp Reaper</label>
+		<graphicData>
+			<texPath>Starfighters/TIEReaper/TIEReaper_east</texPath>
+		</graphicData>
+		
+		<statBases>
+			<MarketValue>140000</MarketValue>
+			<Mass>1</Mass>
+		</statBases>
+		
+		<thingSetMakerTags>
+			<!-- <li>RewardStandardMidFreq</li> -->
+		</thingSetMakerTags>
+		<tradeTags>
+			<li>SWCPTT_ItemizedStarfighters_ImperialAdv</li>
+		</tradeTags>
+	</ThingDef>
+	
 </Defs>

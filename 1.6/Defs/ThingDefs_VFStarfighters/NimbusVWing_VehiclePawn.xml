@@ -64,7 +64,8 @@
 			<ArmorRating_Heat>0.35</ArmorRating_Heat>
 			<MaxHitPoints>2000</MaxHitPoints> <!-- # of estimated XWMG hull points * 1000 -->
 			
-			<MarketValue>70000</MarketValue>
+			<MarketValue>45000</MarketValue>
+			<!-- <MarketValue>70000</MarketValue> "besh" config -->
 			<Flammability>0</Flammability>
 			
 			<EnergyShieldRechargeRate>0.5</EnergyShieldRechargeRate>

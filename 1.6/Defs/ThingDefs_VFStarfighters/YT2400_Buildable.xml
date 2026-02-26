@@ -1,11 +1,18 @@
 <?xml version="1.0" encoding="utf-8" ?>
 
 <Defs>
-	<Vehicles.VehicleBuildDef ParentName="VehicleBaseBuildable">
+	
+	<DesignatorDropdownGroupDef>
+		<defName>guy762_SWVehicleBPDropdown_YT2400_</defName>
+		<label>YT-2400 light freighter</label>
+	</DesignatorDropdownGroupDef>
+	
+	<Vehicles.VehicleBuildDef Name="guy762_SWVehicleBP_YT2400_" ParentName="VehicleBaseBuildable">
 		<defName>guy762_SWVehicleBP_YT2400_</defName>
-		<label>YT-2400 freighter</label>
+		<label>YT-2400</label>
 		<description>.</description>
 		<designationCategory>MM_StarWarsShipBuildTab</designationCategory>
+		<designatorDropdown>guy762_SWVehicleBPDropdown_YT2400_</designatorDropdown>
 		
 		<graphicData>
 			<texPath>Starfighters/YT2400/YT2400</texPath>
@@ -40,4 +47,44 @@
 		
 		<constructionSkillPrerequisite>6</constructionSkillPrerequisite>
 	</Vehicles.VehicleBuildDef>
+	
+	
+	
+	
+	
+	
+	<Vehicles.VehicleBuildDef ParentName="guy762_SWVehicleBP_YT2400_">
+		<defName>guy762_SWVehicleItemBP_YT2400_</defName>
+		<label>YT-2400 (from item)</label>
+		<statBases>
+			<WorkToBuild>5</WorkToBuild>
+		</statBases>
+		<costList Inherit="False">
+			<SWCP_ItemizedVehicle_YT2400_>1</SWCP_ItemizedVehicle_YT2400_>
+		</costList>
+		<constructionSkillPrerequisite>0</constructionSkillPrerequisite>
+	</Vehicles.VehicleBuildDef>
+	
+	<ThingDef ParentName="SWCP_ItemizedVehicleBASE">
+		<defName>SWCP_ItemizedVehicle_YT2400_</defName>
+		<label>starfighter, YT-2400</label>
+		<graphicData>
+			<texPath>Starfighters/YT2400/YT2400_east</texPath>
+		</graphicData>
+		
+		<statBases>
+			<MarketValue>36000</MarketValue>
+			<Mass>1</Mass>
+		</statBases>
+		
+		<thingSetMakerTags>
+			<!-- <li>RewardStandardMidFreq</li> -->
+		</thingSetMakerTags>
+		<tradeTags>
+			<li>SWCPTT_ItemizedStarfighters_CivilianAdv</li>
+			<li>SWCPTT_ItemizedStarfighters_ScumAdv</li>
+			<li>SWCPTT_ItemizedStarfighters_RebelAdv</li>
+		</tradeTags>
+	</ThingDef>
+	
 </Defs>

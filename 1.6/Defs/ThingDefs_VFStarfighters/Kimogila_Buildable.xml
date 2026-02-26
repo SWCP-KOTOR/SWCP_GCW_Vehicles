@@ -1,11 +1,19 @@
 <?xml version="1.0" encoding="utf-8" ?>
 
 <Defs>
-	<Vehicles.VehicleBuildDef ParentName="VehicleBaseBuildable">
-		<defName>guy762_SWVehicleBP_Kimogila</defName>
+	
+	<DesignatorDropdownGroupDef>
+		<defName>guy762_SWVehicleBPDropdown_Kimogila</defName>
 		<label>M12-L Kimogila heavy starfighter</label>
+	</DesignatorDropdownGroupDef>
+	
+	
+	<Vehicles.VehicleBuildDef Name="guy762_SWVehicleBP_Kimogila" ParentName="VehicleBaseBuildable">
+		<defName>guy762_SWVehicleBP_Kimogila</defName>
+		<label>M12-L Kimogila</label>
 		<description>.</description>
 		<designationCategory>MM_StarWarsShipBuildTab</designationCategory>
+		<designatorDropdown>guy762_SWVehicleBPDropdown_Kimogila</designatorDropdown>
 		
 		<graphicData>
 			<texPath>Starfighters/Kimogila/Kimogila</texPath>
@@ -40,4 +48,43 @@
 		
 		<constructionSkillPrerequisite>6</constructionSkillPrerequisite>
 	</Vehicles.VehicleBuildDef>
+	
+	
+	
+	
+	
+	
+	<Vehicles.VehicleBuildDef ParentName="guy762_SWVehicleBP_Kimogila">
+		<defName>guy762_SWVehicleItemBP_Kimogila</defName>
+		<label>M12-L Kimogila (from item)</label>
+		<statBases>
+			<WorkToBuild>5</WorkToBuild>
+		</statBases>
+		<costList Inherit="False">
+			<SWCP_ItemizedVehicle_Kimogila>1</SWCP_ItemizedVehicle_Kimogila>
+		</costList>
+		<constructionSkillPrerequisite>0</constructionSkillPrerequisite>
+	</Vehicles.VehicleBuildDef>
+	
+	<ThingDef ParentName="SWCP_ItemizedVehicleBASE">
+		<defName>SWCP_ItemizedVehicle_Kimogila</defName>
+		<label>starfighter, M12-L Kimogila</label>
+		<graphicData>
+			<texPath>Starfighters/Kimogila/Kimogila_east</texPath>
+		</graphicData>
+		
+		<statBases>
+			<MarketValue>125000</MarketValue>
+			<Mass>1</Mass>
+		</statBases>
+		
+		<thingSetMakerTags>
+			<!-- <li>RewardStandardMidFreq</li> -->
+		</thingSetMakerTags>
+		<tradeTags>
+			<li>SWCPTT_ItemizedStarfighters_ScumAdv</li>
+			<li>SWCPTT_ItemizedStarfighters_HuttShips</li>
+		</tradeTags>
+	</ThingDef>
+	
 </Defs>

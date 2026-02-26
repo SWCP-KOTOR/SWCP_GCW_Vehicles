@@ -1,11 +1,18 @@
 <?xml version="1.0" encoding="utf-8" ?>
 
 <Defs>
-	<Vehicles.VehicleBuildDef ParentName="VehicleBaseBuildable">
-		<defName>guy762_SWVehicleBP_DX10Transport</defName>
+	
+	<DesignatorDropdownGroupDef>
+		<defName>guy762_SWVehicleBPDropdown_DX10Transport</defName>
 		<label>DX-10 troop transport</label>
+	</DesignatorDropdownGroupDef>
+	
+	<Vehicles.VehicleBuildDef Name="guy762_SWVehicleBP_DX10Transport" ParentName="VehicleBaseBuildable">
+		<defName>guy762_SWVehicleBP_DX10Transport</defName>
+		<label>DX-10</label>
 		<description>.</description>
 		<designationCategory>MM_StarWarsShipBuildTab</designationCategory>
+		<designatorDropdown>guy762_SWVehicleBPDropdown_DX10Transport</designatorDropdown>
 		
 		<graphicData>
 			<texPath>Starfighters/DX10Transport/DX10Transport</texPath>
@@ -40,4 +47,42 @@
 		
 		<constructionSkillPrerequisite>6</constructionSkillPrerequisite>
 	</Vehicles.VehicleBuildDef>
+	
+	
+	
+	
+	
+	
+	<Vehicles.VehicleBuildDef ParentName="guy762_SWVehicleBP_DX10Transport">
+		<defName>guy762_SWVehicleItemBP_DX10Transport</defName>
+		<label>DX-10 (from item)</label>
+		<statBases>
+			<WorkToBuild>5</WorkToBuild>
+		</statBases>
+		<costList Inherit="False">
+			<SWCP_ItemizedVehicle_DX10Transport>1</SWCP_ItemizedVehicle_DX10Transport>
+		</costList>
+		<constructionSkillPrerequisite>0</constructionSkillPrerequisite>
+	</Vehicles.VehicleBuildDef>
+	
+	<ThingDef ParentName="SWCP_ItemizedVehicleBASE">
+		<defName>SWCP_ItemizedVehicle_DX10Transport</defName>
+		<label>starfighter, DX-10</label>
+		<graphicData>
+			<texPath>Starfighters/DX10Transport/DX10Transport_east</texPath>
+		</graphicData>
+		
+		<statBases>
+			<MarketValue>40000</MarketValue>
+			<Mass>1</Mass>
+		</statBases>
+		
+		<thingSetMakerTags>
+			<!-- <li>RewardStandardMidFreq</li> -->
+		</thingSetMakerTags>
+		<tradeTags>
+			<li>SWCPTT_ItemizedStarfighters_ImperialBasic</li>
+		</tradeTags>
+	</ThingDef>
+	
 </Defs>

@@ -1,11 +1,18 @@
 <?xml version="1.0" encoding="utf-8" ?>
 
 <Defs>
-	<Vehicles.VehicleBuildDef ParentName="VehicleBaseBuildable">
-		<defName>guy762_SWVehicleBP_Skipray</defName>
+	
+	<DesignatorDropdownGroupDef>
+		<defName>guy762_SWVehicleBPDropdown_Skipray</defName>
 		<label>GAT-12 Skipray Blastboat</label>
+	</DesignatorDropdownGroupDef>
+	
+	<Vehicles.VehicleBuildDef Name="guy762_SWVehicleBP_Skipray" ParentName="VehicleBaseBuildable">
+		<defName>guy762_SWVehicleBP_Skipray</defName>
+		<label>Skipray Blastboat</label>
 		<description>.</description>
 		<designationCategory>MM_StarWarsShipBuildTab</designationCategory>
+		<designatorDropdown>guy762_SWVehicleBPDropdown_Skipray</designatorDropdown>
 		
 		<graphicData>
 			<texPath>Starfighters/Skipray/Skipray</texPath>
@@ -40,4 +47,42 @@
 		
 		<constructionSkillPrerequisite>6</constructionSkillPrerequisite>
 	</Vehicles.VehicleBuildDef>
+	
+	
+	
+	
+	<Vehicles.VehicleBuildDef ParentName="guy762_SWVehicleBP_Skipray">
+		<defName>guy762_SWVehicleItemBP_Skipray</defName>
+		<label>Skipray Blastboat (from item)</label>
+		<statBases>
+			<WorkToBuild>5</WorkToBuild>
+		</statBases>
+		<costList Inherit="False">
+			<SWCP_ItemizedVehicle_Skipray>1</SWCP_ItemizedVehicle_Skipray>
+		</costList>
+		<constructionSkillPrerequisite>0</constructionSkillPrerequisite>
+	</Vehicles.VehicleBuildDef>
+	
+	<ThingDef ParentName="SWCP_ItemizedVehicleBASE">
+		<defName>SWCP_ItemizedVehicle_Skipray</defName>
+		<label>starfighter, Skipray Blastboat</label>
+		<graphicData>
+			<texPath>Starfighters/Skipray/Skipray_east</texPath>
+		</graphicData>
+		
+		<statBases>
+			<MarketValue>285000</MarketValue>
+			<Mass>1</Mass>
+		</statBases>
+		
+		<thingSetMakerTags>
+			<!-- <li>RewardStandardMidFreq</li> -->
+		</thingSetMakerTags>
+		<tradeTags>
+			<li>SWCPTT_ItemizedStarfighters_ImperialExotic</li>
+			<li>SWCPTT_ItemizedStarfighters_ScumAdv</li>
+			<li>SWCPTT_ItemizedStarfighters_ZannConsortiumShips</li>
+		</tradeTags>
+	</ThingDef>
+	
 </Defs>

@@ -1,11 +1,20 @@
 <?xml version="1.0" encoding="utf-8" ?>
 
 <Defs>
-	<Vehicles.VehicleBuildDef ParentName="VehicleBaseBuildable">
+	
+	
+	<DesignatorDropdownGroupDef>
+		<defName>guy762_SWVehicleBPDropdown_LAATi</defName>
+		<label>LAAT/i gunship</label>
+	</DesignatorDropdownGroupDef>
+	
+	
+	<Vehicles.VehicleBuildDef Name="guy762_SWVehicleBP_LAATi" ParentName="VehicleBaseBuildable">
 		<defName>guy762_SWVehicleBP_LAATi</defName>
-		<label>LAAT/i Gunship</label>
+		<label>LAAT/i</label>
 		<description>.</description>
 		<designationCategory>MM_StarWarsShipBuildTab</designationCategory>
+		<designatorDropdown>guy762_SWVehicleBPDropdown_LAATi</designatorDropdown>
 		
 		<graphicData>
 			<texPath>Starfighters/LAATi/LAATi</texPath>
@@ -40,4 +49,40 @@
 		
 		<constructionSkillPrerequisite>6</constructionSkillPrerequisite>
 	</Vehicles.VehicleBuildDef>
+	
+	
+	
+	<Vehicles.VehicleBuildDef ParentName="guy762_SWVehicleBP_LAATi">
+		<defName>guy762_SWVehicleItemBP_LAATi</defName>
+		<label>LAAT/i (from item)</label>
+		<statBases>
+			<WorkToBuild>5</WorkToBuild>
+		</statBases>
+		<costList Inherit="False">
+			<SWCP_ItemizedVehicle_LAATi>1</SWCP_ItemizedVehicle_LAATi>
+		</costList>
+		<constructionSkillPrerequisite>0</constructionSkillPrerequisite>
+	</Vehicles.VehicleBuildDef>
+	
+	<ThingDef ParentName="SWCP_ItemizedVehicleBASE">
+		<defName>SWCP_ItemizedVehicle_LAATi</defName>
+		<label>starfighter, LAAT/i</label>
+		<graphicData>
+			<texPath>Starfighters/LAATi/LAATi_east</texPath>
+		</graphicData>
+		
+		<statBases>
+			<MarketValue>85000</MarketValue>
+			<Mass>1</Mass>
+		</statBases>
+		
+		<thingSetMakerTags>
+			<!-- <li>RewardStandardMidFreq</li> -->
+		</thingSetMakerTags>
+		<tradeTags>
+			<li>SWCPTT_ItemizedStarfighters_CloneWarsSurplus</li>
+		</tradeTags>
+	</ThingDef>
+	
+	
 </Defs>

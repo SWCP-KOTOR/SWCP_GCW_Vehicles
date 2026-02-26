@@ -1,11 +1,18 @@
 <?xml version="1.0" encoding="utf-8" ?>
 
 <Defs>
-	<Vehicles.VehicleBuildDef ParentName="VehicleBaseBuildable">
-		<defName>guy762_SWVehicleBP_AWing</defName>
+	
+	<DesignatorDropdownGroupDef>
+		<defName>guy762_SWVehicleBPDropdown_AWing</defName>
 		<label>RZ-1 A-Wing interceptor</label>
+	</DesignatorDropdownGroupDef>
+	
+	<Vehicles.VehicleBuildDef Name="guy762_SWVehicleBP_AWing" ParentName="VehicleBaseBuildable">
+		<defName>guy762_SWVehicleBP_AWing</defName>
+		<label>RZ-1 A-Wing</label>
 		<description>.</description>
 		<designationCategory>MM_StarWarsShipBuildTab</designationCategory>
+		<designatorDropdown>guy762_SWVehicleBPDropdown_AWing</designatorDropdown>
 		
 		<graphicData>
 			<texPath>Starfighters/AWing/AWing</texPath>
@@ -40,4 +47,42 @@
 		
 		<constructionSkillPrerequisite>6</constructionSkillPrerequisite>
 	</Vehicles.VehicleBuildDef>
+	
+	
+	
+	
+	
+	<Vehicles.VehicleBuildDef ParentName="guy762_SWVehicleBP_AWing">
+		<defName>guy762_SWVehicleItemBP_AWing</defName>
+		<label>RZ-1 A-Wing (from item)</label>
+		<statBases>
+			<WorkToBuild>5</WorkToBuild>
+		</statBases>
+		<costList Inherit="False">
+			<SWCP_ItemizedVehicle_AWing>1</SWCP_ItemizedVehicle_AWing>
+		</costList>
+		<constructionSkillPrerequisite>0</constructionSkillPrerequisite>
+	</Vehicles.VehicleBuildDef>
+	
+	<ThingDef ParentName="SWCP_ItemizedVehicleBASE">
+		<defName>SWCP_ItemizedVehicle_AWing</defName>
+		<label>starfighter, RZ-1 A-Wing</label>
+		<graphicData>
+			<texPath>Starfighters/AWing/AWing_east</texPath>
+		</graphicData>
+		
+		<statBases>
+			<MarketValue>90000</MarketValue>
+			<Mass>1</Mass>
+		</statBases>
+		
+		<thingSetMakerTags>
+			<!-- <li>RewardStandardMidFreq</li> -->
+		</thingSetMakerTags>
+		<tradeTags>
+			<li>SWCPTT_ItemizedStarfighters_RebelAdv</li>
+			<li>SWCPTT_ItemizedStarfighters_NewRepublicBasic</li>
+		</tradeTags>
+	</ThingDef>
+	
 </Defs>

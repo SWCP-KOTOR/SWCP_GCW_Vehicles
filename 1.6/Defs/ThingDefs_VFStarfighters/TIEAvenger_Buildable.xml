@@ -4,6 +4,7 @@
 	
 	<DesignatorDropdownGroupDef>
 		<defName>guy762_SWVehicleBPDropdown_TIEAvg</defName>
+		<label>TIE/ad Avenger</label>
 	</DesignatorDropdownGroupDef>
 	
 	<Vehicles.VehicleBuildDef Name="guy762_SWVehicleBP_TIEAvg" ParentName="VehicleBaseBuildable">
@@ -11,7 +12,6 @@
 		<label>TIE/ad Avenger</label>
 		<description>.</description>
 		<designationCategory>MM_StarWarsShipBuildTab</designationCategory>
-		
 		<designatorDropdown>guy762_SWVehicleBPDropdown_TIEAvg</designatorDropdown>
 		
 		<graphicData>
@@ -54,6 +54,50 @@
 	
 	
 	
+	
+	
+	<Vehicles.VehicleBuildDef ParentName="guy762_SWVehicleBP_TIEAvg">
+		<defName>guy762_SWVehicleItemBP_TIEAvg</defName>
+		<label>TIE/ad Avenger (from item)</label>
+		<statBases>
+			<WorkToBuild>5</WorkToBuild>
+		</statBases>
+		<costList Inherit="False">
+			<SWCP_ItemizedVehicle_TIEAvg>1</SWCP_ItemizedVehicle_TIEAvg>
+		</costList>
+		<constructionSkillPrerequisite>0</constructionSkillPrerequisite>
+	</Vehicles.VehicleBuildDef>
+	
+	<ThingDef ParentName="SWCP_ItemizedVehicleBASE">
+		<defName>SWCP_ItemizedVehicle_TIEAvg</defName>
+		<label>starfighter, TIE/ad Avenger</label>
+		<graphicData>
+			<texPath>Starfighters/TIEAvenger/TIEAvenger_east</texPath>
+		</graphicData>
+		
+		<statBases>
+			<MarketValue>400000</MarketValue>
+			<Mass>1</Mass>
+		</statBases>
+		
+		<thingSetMakerTags>
+			<!-- <li>RewardStandardMidFreq</li> -->
+		</thingSetMakerTags>
+		<tradeTags>
+			<li>SWCPTT_ItemizedStarfighters_ImperialExotic</li>
+		</tradeTags>
+	</ThingDef>
+	
+	
+	
+	
+	
+	
+	
+	
+	<!-- \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ Andor prototype variant -->
+	
+	
 	<Vehicles.VehicleBuildDef Name="guy762_SWVehicleBP_TIEAvg_prototype" ParentName="guy762_SWVehicleBP_TIEAvg">
 		<defName>guy762_SWVehicleBP_TIEAvg_prototype</defName>
 		<label>TIE/ad Avenger (prototype)</label>
@@ -71,6 +115,42 @@
 	
 	
 	
+	<Vehicles.VehicleBuildDef ParentName="guy762_SWVehicleBP_TIEAvg_prototype">
+		<defName>guy762_SWVehicleItemBP_TIEAvg_prototype</defName>
+		<label>TIE/ad Avenger (prototype, from item)</label>
+		<statBases>
+			<WorkToBuild>5</WorkToBuild>
+		</statBases>
+		<costList Inherit="False">
+			<SWCP_ItemizedVehicle_TIEAvg_prototype>1</SWCP_ItemizedVehicle_TIEAvg_prototype>
+		</costList>
+		<constructionSkillPrerequisite>0</constructionSkillPrerequisite>
+	</Vehicles.VehicleBuildDef>
+	
+	<ThingDef ParentName="SWCP_ItemizedVehicleBASE">
+		<defName>SWCP_ItemizedVehicle_TIEAvg_prototype</defName>
+		<label>starfighter, TIE/ad Avenger (prototype)</label>
+		<graphicData>
+			<texPath>Starfighters/TIEAvenger/TIEAvenger_Proto_east</texPath>
+		</graphicData>
+		
+		<statBases>
+			<MarketValue>750000</MarketValue>
+			<Mass>1</Mass>
+		</statBases>
+		
+		<thingSetMakerTags>
+			<!-- <li>RewardStandardMidFreq</li> -->
+		</thingSetMakerTags>
+		<tradeTags>
+			<li>SWCPTT_ItemizedStarfighters_ImperialExotic</li>
+		</tradeTags>
+	</ThingDef>
+	
+	
+	<!-- \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ Royal Guard variant -->
+	
+	
 	<Vehicles.VehicleBuildDef Name="guy762_SWVehicleBP_TIEAvg_RoyalGuard" ParentName="guy762_SWVehicleBP_TIEAvg">
 		<defName>guy762_SWVehicleBP_TIEAvg_RoyalGuard</defName>
 		<label>TIE/ad Avenger (Royal Guard)</label>
@@ -83,6 +163,43 @@
 		<thingToSpawn>guy762_SWVehicle_TIEAvenger_RoyalGuard</thingToSpawn>
 
 	</Vehicles.VehicleBuildDef>
+	
+	
+	
+	
+	
+	
+	<Vehicles.VehicleBuildDef ParentName="guy762_SWVehicleBP_TIEAvg_RoyalGuard">
+		<defName>guy762_SWVehicleItemBP_TIEAvg_RoyalGuard</defName>
+		<label>TIE/ad Avenger (Royal Guard, from item)</label>
+		<statBases>
+			<WorkToBuild>5</WorkToBuild>
+		</statBases>
+		<costList Inherit="False">
+			<SWCP_ItemizedVehicle_TIEAvg_RoyalGuard>1</SWCP_ItemizedVehicle_TIEAvg_RoyalGuard>
+		</costList>
+		<constructionSkillPrerequisite>0</constructionSkillPrerequisite>
+	</Vehicles.VehicleBuildDef>
+	
+	<ThingDef ParentName="SWCP_ItemizedVehicleBASE">
+		<defName>SWCP_ItemizedVehicle_TIEAvg_RoyalGuard</defName>
+		<label>starfighter, TIE/ad Avenger (Royal Guard)</label>
+		<graphicData>
+			<texPath>Starfighters/TIEAvenger/TIEAvenger_RoyalGuard_east</texPath>
+		</graphicData>
+		
+		<statBases>
+			<MarketValue>500000</MarketValue>
+			<Mass>1</Mass>
+		</statBases>
+		
+		<thingSetMakerTags>
+			<!-- <li>RewardStandardMidFreq</li> -->
+		</thingSetMakerTags>
+		<tradeTags>
+			<li>SWCPTT_ItemizedStarfighters_ImperialExotic</li>
+		</tradeTags>
+	</ThingDef>
 	
 	
 </Defs>

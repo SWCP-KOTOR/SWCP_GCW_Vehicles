@@ -1,11 +1,18 @@
 <?xml version="1.0" encoding="utf-8" ?>
 
 <Defs>
-	<Vehicles.VehicleBuildDef ParentName="VehicleBaseBuildable">
+	
+	<DesignatorDropdownGroupDef>
+		<defName>guy762_SWVehicleBPDropdown_BTLA4YWing</defName>
+		<label>BTL-A4 Y-Wing starfighter</label>
+	</DesignatorDropdownGroupDef>
+	
+	<Vehicles.VehicleBuildDef Name="guy762_SWVehicleBP_BTLA4YWing" ParentName="VehicleBaseBuildable">
 		<defName>guy762_SWVehicleBP_BTLA4YWing</defName>
-		<label>BTL-A4 Y-Wing Starfighter</label>
+		<label>BTL-A4 Y-Wing</label>
 		<description>.</description>
 		<designationCategory>MM_StarWarsShipBuildTab</designationCategory>
+		<designatorDropdown>guy762_SWVehicleBPDropdown_BTLA4YWing</designatorDropdown>
 		
 		<graphicData>
 			<texPath>Starfighters/BTLA4YWing/YWing</texPath>
@@ -40,4 +47,45 @@
 		
 		<constructionSkillPrerequisite>6</constructionSkillPrerequisite>
 	</Vehicles.VehicleBuildDef>
+	
+	
+	
+	
+	<Vehicles.VehicleBuildDef ParentName="guy762_SWVehicleBP_BTLA4YWing">
+		<defName>guy762_SWVehicleItemBP_BTLA4YWing</defName>
+		<label>BTL-A4 Y-Wing (from item)</label>
+		<statBases>
+			<WorkToBuild>5</WorkToBuild>
+		</statBases>
+		<costList Inherit="False">
+			<SWCP_ItemizedVehicle_BTLA4YWing>1</SWCP_ItemizedVehicle_BTLA4YWing>
+		</costList>
+		<constructionSkillPrerequisite>0</constructionSkillPrerequisite>
+	</Vehicles.VehicleBuildDef>
+	
+	<ThingDef ParentName="SWCP_ItemizedVehicleBASE">
+		<defName>SWCP_ItemizedVehicle_BTLA4YWing</defName>
+		<label>starfighter, BTL-A4 Y-Wing</label>
+		<graphicData>
+			<texPath>Starfighters/BTLA4YWing/YWing_east</texPath>
+		</graphicData>
+		
+		<statBases>
+			<MarketValue>65000</MarketValue>
+			<Mass>1</Mass>
+		</statBases>
+		
+		<thingSetMakerTags>
+			<!-- <li>RewardStandardMidFreq</li> -->
+		</thingSetMakerTags>
+		<tradeTags>
+			<li>SWCPTT_ItemizedStarfighters_CloneWarsSurplus</li>
+			<li>SWCPTT_ItemizedStarfighters_ScumBasic</li>
+			<li>SWCPTT_ItemizedStarfighters_RebelBasic</li>
+			<li>SWCPTT_ItemizedStarfighters_NewRepublicBasic</li>
+			<li>SWCPTT_ItemizedStarfighters_GenericPirateShips</li>
+		</tradeTags>
+	</ThingDef>
+	
+	
 </Defs>

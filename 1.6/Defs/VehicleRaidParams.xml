@@ -70,35 +70,7 @@
 		  <li>SWCPArrivalMode_AircraftEdgeFlyInGroups</li>
 		</arriveModes>
 		
-		<letterLabelEnemy>Raid</letterLabelEnemy>
-		<arrivalTextEnemy>They are attacking immediately.</arrivalTextEnemy>
-		<letterLabelFriendly>Friendlies</letterLabelFriendly>
-		<arrivalTextFriendly>They are moving in to help you immediately.</arrivalTextFriendly>
-	</RaidStrategyDef>
-	
-	<RaidStrategyDef ParentName="SWCPRaidStrategy_AirRaid">
-		<defName>SWCPRaidStrategy_FriendlyAirRaid</defName>
-		<workerClass>RaidStrategyWorker_ImmediateAttackFriendly</workerClass>
-		<!-- <pawnsCanBringFood>True</pawnsCanBringFood> -->
-	</RaidStrategyDef>
-  
-  
-  
-	
-	
-	<PawnsArrivalModeDef>
-		<defName>SWCPArrivalMode_AircraftEdgeFlyIn</defName>
-		<workerClass>PawnsArrivalModeWorker_EdgeWalkIn</workerClass>
-		<selectionWeightCurve>
-		  <points>
-			<li>(300, 1.0)</li>
-			<li>(700, 0.4)</li>
-		  </points>
-		</selectionWeightCurve>
-		<textEnemy>A group of {0} from {1} have arrived nearby.</textEnemy>
-		<textFriendly>A group of friendly {0} from {1} have arrived nearby.</textFriendly>
-		<textWillArrive>{0_pawnsPluralDef} will arrive in starfighters.</textWillArrive>
-		<walkIn>true</walkIn>
+		<!-- <minPawns>1</minPawns> -->
 		
 		<layerWhitelist>
 			<li>Surface</li>
@@ -121,21 +93,69 @@
 			<!-- <li MayRequire="MrHydralisk.LayeredAtmosphereOrbit">SWCPPlanetLayer_TaloraanOrbit</li> -->
 		</layerWhitelist>
 		
+		<letterLabelEnemy>Raid</letterLabelEnemy>
+		<arrivalTextEnemy>They are attacking immediately.</arrivalTextEnemy>
+		<letterLabelFriendly>Friendlies</letterLabelFriendly>
+		<arrivalTextFriendly>They are moving in to help you immediately.</arrivalTextFriendly>
+	</RaidStrategyDef>
+	
+	<RaidStrategyDef ParentName="SWCPRaidStrategy_AirRaid">
+		<defName>SWCPRaidStrategy_FriendlyAirRaid</defName>
+		<workerClass>RaidStrategyWorker_ImmediateAttackFriendly</workerClass>
+		<!-- <pawnsCanBringFood>True</pawnsCanBringFood> -->
+	</RaidStrategyDef>
+  
+  
+  
+	
+	
+	<PawnsArrivalModeDef>
+		<defName>SWCPArrivalMode_AircraftEdgeFlyIn</defName>
+		<workerClass>taranchuk_flightcombat.PawnsArrivalModeWorker_FlightRaid</workerClass>
+		<selectionWeightCurve>
+		  <points>
+			<li>(0, 1)</li>
+		  </points>
+		</selectionWeightCurve>
+		<textEnemy>A group of {0} from {1} have arrived nearby.</textEnemy>
+		<textFriendly>A group of friendly {0} from {1} have arrived nearby.</textFriendly>
+		<textWillArrive>{0_pawnsPluralDef} will arrive in starfighters.</textWillArrive>
+		<walkIn>false</walkIn>
+		
+		<layerWhitelist>
+			<li>Surface</li>
+			<li MayRequire="Ludeon.RimWorld.Odyssey">Orbit</li>
+			<li MayRequire="MrHydralisk.LayeredAtmosphereOrbit">LAO_Surface_Luna</li>
+			
+			<li MayRequire="MrHydralisk.LayeredAtmosphereOrbit">SWCPPlanetLayer_Tatooine</li>
+			<li MayRequire="MrHydralisk.LayeredAtmosphereOrbit">SWCPPlanetLayer_TatooineOrbit</li>
+			<li MayRequire="MrHydralisk.LayeredAtmosphereOrbit">SWCPPlanetLayer_OrdMantell</li>
+			<li MayRequire="MrHydralisk.LayeredAtmosphereOrbit">SWCPPlanetLayer_OrdMantellOrbit</li>
+			
+			<li MayRequire="MrHydralisk.LayeredAtmosphereOrbit">SWCPPlanetLayer_RhenVar</li>
+			<li MayRequire="MrHydralisk.LayeredAtmosphereOrbit">SWCPPlanetLayer_RhenVarOrbit</li>
+			<li MayRequire="MrHydralisk.LayeredAtmosphereOrbit">SWCPPlanetLayer_Nevarro</li>
+			<li MayRequire="MrHydralisk.LayeredAtmosphereOrbit">SWCPPlanetLayer_NevarroOrbit</li>
+			
+			<!-- <li MayRequire="MrHydralisk.LayeredAtmosphereOrbit">SWCPPlanetLayer_Baroonda</li> -->
+			<!-- <li MayRequire="MrHydralisk.LayeredAtmosphereOrbit">SWCPPlanetLayer_BaroondaOrbit</li> -->
+			<!-- <li MayRequire="MrHydralisk.LayeredAtmosphereOrbit">SWCPPlanetLayer_Taloraan</li> -->
+			<!-- <li MayRequire="MrHydralisk.LayeredAtmosphereOrbit">SWCPPlanetLayer_TaloraanOrbit</li> -->
+		</layerWhitelist>
+		<minSpaceSelectionWeight>1</minSpaceSelectionWeight>
 	</PawnsArrivalModeDef>
 
 	<PawnsArrivalModeDef>
 		<defName>SWCPArrivalMode_AircraftEdgeFlyInGroups</defName>
-		<workerClass>PawnsArrivalModeWorker_EdgeWalkInGroups</workerClass>
+		<workerClass>taranchuk_flightcombat.PawnsArrivalModeWorker_FlightRaid</workerClass>
 		<selectionWeightCurve>
 		  <points>
-			<li>(100, 0)</li>
-			<li>(300, 0.3)</li>
-			<li>(700, 0.5)</li>
+			<li>(0, 1)</li>
 		  </points>
 		</selectionWeightCurve>
 		<pointsFactorCurve>
 		  <points>
-			<li>0, 0.9</li>
+			<li>0, 1</li>
 		  </points>
 		</pointsFactorCurve>
 		<textEnemy>{0} from {1} have arrived nearby, approaching from multiple angles.</textEnemy>

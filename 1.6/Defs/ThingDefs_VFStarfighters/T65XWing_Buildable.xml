@@ -1,11 +1,18 @@
 <?xml version="1.0" encoding="utf-8" ?>
 
 <Defs>
-	<Vehicles.VehicleBuildDef ParentName="VehicleBaseBuildable">
-		<defName>guy762_SWVehicleBP_T65XWing</defName>
+	
+	<DesignatorDropdownGroupDef>
+		<defName>guy762_SWVehicleBPDropdown_T65XWing</defName>
 		<label>T-65 X-Wing Starfighter</label>
+	</DesignatorDropdownGroupDef>
+	
+	<Vehicles.VehicleBuildDef Name="guy762_SWVehicleBP_T65XWing" ParentName="VehicleBaseBuildable">
+		<defName>guy762_SWVehicleBP_T65XWing</defName>
+		<label>T-65 X-Wing</label>
 		<description>.</description>
 		<designationCategory>MM_StarWarsShipBuildTab</designationCategory>
+		<designatorDropdown>guy762_SWVehicleBPDropdown_T65XWing</designatorDropdown>
 		
 		<graphicData>
 			<texPath>Starfighters/T65XWing/XWing_Open</texPath>
@@ -40,4 +47,43 @@
 		
 		<constructionSkillPrerequisite>6</constructionSkillPrerequisite>
 	</Vehicles.VehicleBuildDef>
+	
+	
+	
+	
+	
+	
+	<Vehicles.VehicleBuildDef ParentName="guy762_SWVehicleBP_T65XWing">
+		<defName>guy762_SWVehicleItemBP_T65XWing</defName>
+		<label>T-65 X-Wing (from item)</label>
+		<statBases>
+			<WorkToBuild>5</WorkToBuild>
+		</statBases>
+		<costList Inherit="False">
+			<SWCP_ItemizedVehicle_T65XWing>1</SWCP_ItemizedVehicle_T65XWing>
+		</costList>
+		<constructionSkillPrerequisite>0</constructionSkillPrerequisite>
+	</Vehicles.VehicleBuildDef>
+	
+	<ThingDef ParentName="SWCP_ItemizedVehicleBASE">
+		<defName>SWCP_ItemizedVehicle_T65XWing</defName>
+		<label>starfighter, T-65 X-Wing</label>
+		<graphicData>
+			<texPath>Starfighters/T65XWing/XWing_Open_east</texPath>
+		</graphicData>
+		
+		<statBases>
+			<MarketValue>65000</MarketValue>
+			<Mass>1</Mass>
+		</statBases>
+		
+		<thingSetMakerTags>
+			<!-- <li>RewardStandardMidFreq</li> -->
+		</thingSetMakerTags>
+		<tradeTags>
+			<li>SWCPTT_ItemizedStarfighters_RebelAdv</li>
+			<li>SWCPTT_ItemizedStarfighters_NewRepublicBasic</li>
+		</tradeTags>
+	</ThingDef>
+	
 </Defs>

@@ -1,11 +1,18 @@
 <?xml version="1.0" encoding="utf-8" ?>
 
 <Defs>
-	<Vehicles.VehicleBuildDef ParentName="VehicleBaseBuildable">
-		<defName>guy762_SWVehicleBP_HWK290_</defName>
+	
+	<DesignatorDropdownGroupDef>
+		<defName>guy762_SWVehicleBPDropdown_HWK290_</defName>
 		<label>HWK-290 light freighter</label>
+	</DesignatorDropdownGroupDef>
+	
+	<Vehicles.VehicleBuildDef Name="guy762_SWVehicleBP_HWK290_" ParentName="VehicleBaseBuildable">
+		<defName>guy762_SWVehicleBP_HWK290_</defName>
+		<label>HWK-290</label>
 		<description>.</description>
 		<designationCategory>MM_StarWarsShipBuildTab</designationCategory>
+		<designatorDropdown>guy762_SWVehicleBPDropdown_HWK290_</designatorDropdown>
 		
 		<graphicData>
 			<texPath>Starfighters/HWK290/HWK290</texPath>
@@ -40,4 +47,43 @@
 		
 		<constructionSkillPrerequisite>6</constructionSkillPrerequisite>
 	</Vehicles.VehicleBuildDef>
+	
+	
+	
+	
+	
+	<Vehicles.VehicleBuildDef ParentName="guy762_SWVehicleBP_HWK290_">
+		<defName>guy762_SWVehicleItemBP_HWK290_</defName>
+		<label>HWK-290 (from item)</label>
+		<statBases>
+			<WorkToBuild>5</WorkToBuild>
+		</statBases>
+		<costList Inherit="False">
+			<SWCP_ItemizedVehicle_HWK290_>1</SWCP_ItemizedVehicle_HWK290_>
+		</costList>
+		<constructionSkillPrerequisite>0</constructionSkillPrerequisite>
+	</Vehicles.VehicleBuildDef>
+	
+	<ThingDef ParentName="SWCP_ItemizedVehicleBASE">
+		<defName>SWCP_ItemizedVehicle_HWK290_</defName>
+		<label>starfighter, HWK-290</label>
+		<graphicData>
+			<texPath>Starfighters/HWK290/HWK290_east</texPath>
+		</graphicData>
+		
+		<statBases>
+			<MarketValue>55000</MarketValue>
+			<Mass>1</Mass>
+		</statBases>
+		
+		<thingSetMakerTags>
+			<!-- <li>RewardStandardMidFreq</li> -->
+		</thingSetMakerTags>
+		<tradeTags>
+			<li>SWCPTT_ItemizedStarfighters_CivilianAdv</li>
+			<li>SWCPTT_ItemizedStarfighters_ScumBasic</li>
+			<li>SWCPTT_ItemizedStarfighters_RebelBasic</li>
+			<li>SWCPTT_ItemizedStarfighters_GenericPirateShips</li>
+		</tradeTags>
+	</ThingDef>
 </Defs>

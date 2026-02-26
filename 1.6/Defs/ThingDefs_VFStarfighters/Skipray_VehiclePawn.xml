@@ -626,7 +626,7 @@
 		<description>The ion cannon of a GAT-12 Skipray Blastboat.</description>
 		
 		<turretType>Rotatable</turretType>
-		<shotSound>kotorsound_ioncannon</shotSound>
+		<shotSound>kotorsound_VehicleIonCannonMix</shotSound>
 		
 		<projectile>SWVehicleBullet_AssaultAVAA_heavyion_xplosive</projectile>
 		<reloadTimer>3.5</reloadTimer>

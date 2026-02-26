@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<ThingCategoryDef>
+		<defName>SWCP_ThingCategory_ItemizedVehicles</defName>
+		<label>itemized vehicles/starfighters</label>
+		<parent>Root</parent>
+    </ThingCategoryDef>
+	
+	<ThingDef Name="SWCP_ItemizedVehicleBASE" ParentName="guy762_NoCraft_upgradebase" Abstract="True">
+		<description>An itemized vehicle. Use it to construct the corresponding vehicle.</description>
+		<graphicData>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>(2,2)</drawSize>
+		</graphicData>
+		<thingCategories Inherit="False">
+			<li>SWCP_ThingCategory_ItemizedVehicles</li>
+		</thingCategories>
+	</ThingDef>
+
+	
+	
+</Defs>

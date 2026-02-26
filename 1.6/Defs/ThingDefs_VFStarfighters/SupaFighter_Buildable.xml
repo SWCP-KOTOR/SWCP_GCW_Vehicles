@@ -1,11 +1,18 @@
 <?xml version="1.0" encoding="utf-8" ?>
 
 <Defs>
-	<Vehicles.VehicleBuildDef ParentName="VehicleBaseBuildable">
+	
+	<DesignatorDropdownGroupDef>
+		<defName>guy762_SWVehicleBPDropdown_SupaFighter</defName>
+		<label>Supa Fighter</label>
+	</DesignatorDropdownGroupDef>
+	
+	<Vehicles.VehicleBuildDef Name="guy762_SWVehicleBP_SupaFighter" ParentName="VehicleBaseBuildable">
 		<defName>guy762_SWVehicleBP_SupaFighter</defName>
 		<label>Supa Fighter</label>
 		<description>.</description>
 		<designationCategory>MM_StarWarsShipBuildTab</designationCategory>
+		<designatorDropdown>guy762_SWVehicleBPDropdown_SupaFighter</designatorDropdown>
 		
 		<graphicData>
 			<texPath>Starfighters/SupaFighter/SupaFighter</texPath>
@@ -40,4 +47,42 @@
 		
 		<constructionSkillPrerequisite>6</constructionSkillPrerequisite>
 	</Vehicles.VehicleBuildDef>
+	
+	
+	
+	
+	
+	<Vehicles.VehicleBuildDef ParentName="guy762_SWVehicleBP_SupaFighter">
+		<defName>guy762_SWVehicleItemBP_SupaFighter</defName>
+		<label>Supa Fighter (from item)</label>
+		<statBases>
+			<WorkToBuild>5</WorkToBuild>
+		</statBases>
+		<costList Inherit="False">
+			<SWCP_ItemizedVehicle_SupaFighter>1</SWCP_ItemizedVehicle_SupaFighter>
+		</costList>
+		<constructionSkillPrerequisite>0</constructionSkillPrerequisite>
+	</Vehicles.VehicleBuildDef>
+	
+	<ThingDef ParentName="SWCP_ItemizedVehicleBASE">
+		<defName>SWCP_ItemizedVehicle_SupaFighter</defName>
+		<label>starfighter, Supa Fighter</label>
+		<graphicData>
+			<texPath>Starfighters/SupaFighter/SupaFighter_east</texPath>
+		</graphicData>
+		
+		<statBases>
+			<MarketValue>70000</MarketValue>
+			<Mass>1</Mass>
+		</statBases>
+		
+		<thingSetMakerTags>
+			<!-- <li>RewardStandardMidFreq</li> -->
+		</thingSetMakerTags>
+		<tradeTags>
+			<li>SWCPTT_ItemizedStarfighters_ScumExotic</li>
+			<li>SWCPTT_ItemizedStarfighters_BlackSunShips</li>
+		</tradeTags>
+	</ThingDef>
+	
 </Defs>

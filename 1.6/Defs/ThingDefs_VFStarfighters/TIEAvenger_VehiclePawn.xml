@@ -54,7 +54,7 @@
 			<Flammability>0</Flammability>
 		</statBases>
 		<vehicleStats>
-			<Mass>10500</Mass>
+			<Mass>15500</Mass>
 			
 			<FlightSpeed>12</FlightSpeed> <!-- this is for world map flight, NOT in-tile flight-->
 			<CargoCapacity>125</CargoCapacity>

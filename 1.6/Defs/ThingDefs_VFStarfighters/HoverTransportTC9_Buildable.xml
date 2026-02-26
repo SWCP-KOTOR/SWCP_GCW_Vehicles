@@ -1,11 +1,18 @@
 <?xml version="1.0" encoding="utf-8" ?>
 
 <Defs>
-	<Vehicles.VehicleBuildDef ParentName="VehicleBaseBuildable">
+	
+	<DesignatorDropdownGroupDef>
+		<defName>guy762_SWVehicleBPDropdown_HoverTransportTC9_</defName>
+		<label>Hover Transport TC9</label>
+	</DesignatorDropdownGroupDef>
+	
+	<Vehicles.VehicleBuildDef Name="guy762_SWVehicleBP_HoverTransportTC9_" ParentName="VehicleBaseBuildable">
 		<defName>guy762_SWVehicleBP_HoverTransportTC9_</defName>
 		<label>Hover Transport TC9</label>
 		<description>.</description>
 		<designationCategory>MM_StarWarsShipBuildTab</designationCategory>
+		<designatorDropdown>guy762_SWVehicleBPDropdown_HoverTransportTC9_</designatorDropdown>
 		
 		<graphicData>
 			<texPath>Starfighters/HoverTransportTC9/HoverTransportTC9</texPath>
@@ -40,4 +47,42 @@
 		
 		<constructionSkillPrerequisite>6</constructionSkillPrerequisite>
 	</Vehicles.VehicleBuildDef>
+	
+	
+	
+	<Vehicles.VehicleBuildDef ParentName="guy762_SWVehicleBP_HoverTransportTC9_">
+		<defName>guy762_SWVehicleItemBP_HoverTransportTC9_</defName>
+		<label>Hover Transport TC9 (from item)</label>
+		<statBases>
+			<WorkToBuild>5</WorkToBuild>
+		</statBases>
+		<costList Inherit="False">
+			<SWCP_ItemizedVehicle_HoverTransportTC9_>1</SWCP_ItemizedVehicle_HoverTransportTC9_>
+		</costList>
+		<constructionSkillPrerequisite>0</constructionSkillPrerequisite>
+	</Vehicles.VehicleBuildDef>
+	
+	<ThingDef ParentName="SWCP_ItemizedVehicleBASE">
+		<defName>SWCP_ItemizedVehicle_HoverTransportTC9_</defName>
+		<label>starfighter, Hover Transport TC9</label>
+		<graphicData>
+			<texPath>Starfighters/HoverTransportTC9/HoverTransportTC9_east</texPath>
+		</graphicData>
+		
+		<statBases>
+			<MarketValue>36000</MarketValue>
+			<Mass>1</Mass>
+		</statBases>
+		
+		<thingSetMakerTags>
+			<!-- <li>RewardStandardMidFreq</li> -->
+		</thingSetMakerTags>
+		<tradeTags>
+			<li>SWCPTT_ItemizedStarfighters_CivilianBasic</li>
+			<li>SWCPTT_ItemizedStarfighters_ScumBasic</li>
+			<li>SWCPTT_ItemizedStarfighters_GenericPirateShips</li>
+		</tradeTags>
+	</ThingDef>
+	
+	
 </Defs>

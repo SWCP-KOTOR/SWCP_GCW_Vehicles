@@ -57,14 +57,14 @@
 			<ArmorRating_Heat>0.35</ArmorRating_Heat>
 			<MaxHitPoints>2000</MaxHitPoints> <!-- # of estimated XWMG hull points * 1000 -->
 			
-			<MarketValue>36000</MarketValue>
+			<MarketValue>90000</MarketValue>
 			<Flammability>0</Flammability>
 			
 			<EnergyShieldRechargeRate>0.5</EnergyShieldRechargeRate>
 			<EnergyShieldEnergyMax>2</EnergyShieldEnergyMax>
 		</statBases>
 		<vehicleStats>
-			<Mass>350</Mass>
+			<Mass>3500</Mass>
 			
 			<FlightSpeed>12</FlightSpeed> <!-- this is for world map flight, NOT in-tile flight-->
 			<CargoCapacity>20</CargoCapacity>

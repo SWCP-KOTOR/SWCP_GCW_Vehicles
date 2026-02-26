@@ -50,7 +50,7 @@
 			<ArmorRating_Heat>0.85</ArmorRating_Heat>
 			<MaxHitPoints>7000</MaxHitPoints> <!-- # of estimated XWMG hull points * 1000 -->
 			
-			<MarketValue>150000</MarketValue>
+			<MarketValue>125000</MarketValue>
 			<Flammability>0</Flammability>
 			
 			<EnergyShieldRechargeRate>0.5</EnergyShieldRechargeRate>

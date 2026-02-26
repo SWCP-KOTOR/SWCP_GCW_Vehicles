@@ -57,7 +57,7 @@
 			<Flammability>0</Flammability>
 		</statBases>
 		<vehicleStats>
-			<Mass>350</Mass>
+			<Mass>11350</Mass>
 			
 			<FlightSpeed>12</FlightSpeed> <!-- this is for world map flight, NOT in-tile flight-->
 			<CargoCapacity>20</CargoCapacity>
@@ -261,7 +261,7 @@
 		<buildDef>guy762_SWVehicleBP_TIEInt</buildDef>
 		
 		<statBases>
-			<MarketValue>36000</MarketValue>
+			<MarketValue>50000</MarketValue>
 		</statBases>
 		
 		<comps>
@@ -498,7 +498,7 @@
 		<buildDef>guy762_SWVehicleBP_TIEInt_RoyalGuard</buildDef>
 		
 		<statBases>
-			<MarketValue>64000</MarketValue>
+			<MarketValue>75000</MarketValue>
 			
 			<EnergyShieldRechargeRate>0.5</EnergyShieldRechargeRate>
 			<EnergyShieldEnergyMax>1</EnergyShieldEnergyMax>

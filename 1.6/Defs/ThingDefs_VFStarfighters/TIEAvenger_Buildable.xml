@@ -77,6 +77,7 @@
 		
 		<statBases>
 			<MarketValue>400000</MarketValue>
+			<RoyalFavorValue>10</RoyalFavorValue>
 			<Mass>1</Mass>
 		</statBases>
 		
@@ -136,6 +137,7 @@
 		
 		<statBases>
 			<MarketValue>750000</MarketValue>
+			<RoyalFavorValue>20</RoyalFavorValue>
 			<Mass>1</Mass>
 		</statBases>
 		
@@ -190,6 +192,7 @@
 		
 		<statBases>
 			<MarketValue>500000</MarketValue>
+			<RoyalFavorValue>15</RoyalFavorValue>
 			<Mass>1</Mass>
 		</statBases>
 		

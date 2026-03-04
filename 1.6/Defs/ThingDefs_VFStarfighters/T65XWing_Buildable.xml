@@ -74,6 +74,7 @@
 		
 		<statBases>
 			<MarketValue>65000</MarketValue>
+			<RoyalFavorValue>4</RoyalFavorValue>
 			<Mass>1</Mass>
 		</statBases>
 		

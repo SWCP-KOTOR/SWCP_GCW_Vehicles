@@ -16,8 +16,42 @@
 		<thingCategories Inherit="False">
 			<li>SWCP_ThingCategory_ItemizedVehicles</li>
 		</thingCategories>
+		
+		<tradeTags>
+			<li>SWCPTT_ItemizedStarfighters_any</li>
+		</tradeTags>
 	</ThingDef>
 
+
+	<!--
+	
+		GENERAL RULES FOR <RoyalFavorValue></RoyalFavorValue>
+			(individual exceptions are made for starfighters that are explicitly described as being "cutting edge" or particularly venerable)
+	
+	=	EARLY TECH
+	- Interceptors: 1
+	- Strikefighters: 1
+	- Assault Fighters: 2
+	- Gunships: 2
+	- Transports: 1
+	
+	=	MIDDLE TECH
+	- Interceptors: 4
+	- Strikefighters: 4
+	- Assault Fighters: 5
+	- Gunships: 4
+	- Transports: 4
+	
+	=	LATE TECH
+	- Interceptors: 10
+	- Strikefighters: 9
+	- Assault Fighters: 8
+	- Gunships: 7
+	- Transports: 6
+	
+	=	NON-TECH REWARD SHIPS: 10
+	
+	-->
 	
 	
 </Defs>

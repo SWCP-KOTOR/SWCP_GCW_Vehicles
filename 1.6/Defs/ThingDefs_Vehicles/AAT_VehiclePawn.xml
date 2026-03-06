@@ -404,7 +404,7 @@
 						<key>AATKey_gun_3</key>
 					</li>
 					<li>
-						<turretDef>guy762_VehicleTurret_protonmissiles</turretDef>
+						<turretDef>guy762_VehicleTurret_concussionmissiles</turretDef>
 						
 						<renderProperties>
 							<north>(-2.9, 2)</north>
@@ -414,7 +414,7 @@
 						</renderProperties>
 						<defaultAngleRotated>0</defaultAngleRotated>
 						<angleRestricted>(315,45)</angleRestricted>
-						<gizmoLabel>proton missile launcher</gizmoLabel>
+						<gizmoLabel>concussion missile launcher</gizmoLabel>
 						
 						<aimPieOffset>(0, 2.55)</aimPieOffset>
 						
@@ -423,7 +423,7 @@
 						<key>AATKey_gun_4</key>
 					</li>
 					<li>
-						<turretDef>guy762_VehicleTurret_protonmissiles</turretDef>
+						<turretDef>guy762_VehicleTurret_concussionmissiles</turretDef>
 						
 						<renderProperties>
 							<north>(2.9, 2)</north>
@@ -433,7 +433,7 @@
 						</renderProperties>
 						<defaultAngleRotated>0</defaultAngleRotated>
 						<angleRestricted>(315,45)</angleRestricted>
-						<gizmoLabel>proton missile launcher</gizmoLabel>
+						<gizmoLabel>concussion missile launcher</gizmoLabel>
 						
 						<aimPieOffset>(0, 2.55)</aimPieOffset>
 						
@@ -558,6 +558,77 @@
 		
 	</Vehicles.VehicleTurretDef>
 	
+	
+	
+	
+	
+	
+	
+	
+	<Vehicles.VehicleTurretDef ParentName="guy762_VehicleTurretBASE">
+		<defName>guy762_VehicleTurret_concussionmissiles</defName>
+		<label>concussion missile launcher</label>
+		<description>Concussion missile launcher.</description>
+		
+		<turretType>Rotatable</turretType>
+		<!-- <shotSound>kotorsound_TankMissileLauncher</shotSound> -->
+		<shotSound>kotorsound_TankMissileLauncher</shotSound>
+		<reloadSound>kotorsound_reloadlauncher</reloadSound>
+		
+		<projectile>SWVehicleBullet_AIAAconcMissile</projectile>
+		<reloadTimer>3.5</reloadTimer>
+		<warmUpTimer>0.75</warmUpTimer>
+		
+		<magazineCapacity>6</magazineCapacity>
+		<genericAmmo>true</genericAmmo>
+		<ammunition>
+			<thingDefs>
+				<li>guy762_RocketItem_conc</li>
+			</thingDefs>
+		</ammunition>
+		
+		
+		
+		<autoSnapTargeting>true</autoSnapTargeting>
+		<rotationSpeed>5</rotationSpeed>
+		
+		<!-- <projectileOffset>2.1</projectileOffset> -->
+		
+		<minRange>5</minRange>
+		<maxRange>60</maxRange> <!-- ~30 for infantry, 60 for ground vehicles, 90 for starfighters -->
+
+		<fireModes>
+			<li>
+				<shotsPerBurst>1</shotsPerBurst>
+				<ticksBetweenShots>20</ticksBetweenShots>
+				<ticksBetweenBursts>100</ticksBetweenBursts>
+				<label>Single</label>
+				<texPath>Items/Rockets/rocket_conc/rocket_conc_a</texPath>
+			</li>
+			<li>
+				<shotsPerBurst>3</shotsPerBurst>
+				<ticksBetweenShots>20</ticksBetweenShots>
+				<ticksBetweenBursts>300</ticksBetweenBursts>
+				<label>3 Burst</label>
+				<texPath>Items/Rockets/rocket_conc/rocket_conc_b</texPath>
+			</li>
+			<li>
+				<shotsPerBurst>6</shotsPerBurst>
+				<ticksBetweenShots>20</ticksBetweenShots>
+				<ticksBetweenBursts>600</ticksBetweenBursts>
+				<label>Fire All</label>
+				<texPath>Items/Rockets/rocket_conc/rocket_conc_c</texPath>
+			</li>
+		</fireModes>
+
+		<graphicData>
+			<texPath>NullTex</texPath>
+			<graphicClass>Vehicles.Graphic_Turret</graphicClass>
+		</graphicData>
+		
+		<gizmoIconTexPath>Items/bigcannon_blank</gizmoIconTexPath>
+		
+	</Vehicles.VehicleTurretDef>
 
 	
 	

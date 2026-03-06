@@ -1,0 +1,406 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<Defs>	
+
+	
+	
+	<Vehicles.VehicleDef Name="guy762_SWVehicle_TIEBomber_bot" ParentName="guy762_SWVehicle_TIEBomber">
+		<defName>guy762_SWVehicle_TIEBomber_bot</defName>
+		
+		<buildDef Inherit="False" />
+		
+		<!--<vehicleMovementPermissions>NoDriverNeeded</vehicleMovementPermissions>-->
+
+		<properties>
+			<roles Inherit="False">
+				<li>
+					<key>pilot</key>
+					<label>Pilot</label>
+					<slots>1</slots>
+					<slotsToOperate>1</slotsToOperate>
+					<!-- <handlingTypes> -->
+						<!-- <li>Movement</li> -->
+						<!-- <li>Turret</li> -->
+					<!-- </handlingTypes> -->
+					
+					<turretIds>
+						<li>TIEBomberKey_gun_1</li>
+						<li>TIEBomberKey_gun_2</li>
+					</turretIds>
+				</li>
+			</roles>
+		</properties>
+
+	</Vehicles.VehicleDef>
+	
+	
+
+	<Vehicles.VehicleDef Name="guy762_SWVehicle_TIEDefender_bot" ParentName="guy762_SWVehicle_TIEDefender">
+		<defName>guy762_SWVehicle_TIEDefender_bot</defName>
+		
+		<buildDef Inherit="False" />
+		
+		<!--<vehicleMovementPermissions>NoDriverNeeded</vehicleMovementPermissions>-->
+		
+		<properties>
+			<roles Inherit="False">
+				<li>
+					<key>pilot</key>
+					<label>Pilot</label>
+					<slots>1</slots>
+					<slotsToOperate>1</slotsToOperate>
+					<!-- <handlingTypes> -->
+						<!-- <li>Movement</li> -->
+						<!-- <li>Turret</li> -->
+					<!-- </handlingTypes> -->
+					<comfort>-0.5</comfort>
+					
+					<turretIds>
+						<li>TIEDefKey_gun_1</li>
+						<li>TIEDefKey_gun_2</li>
+						<li>TIEDefKey_gun_3</li>
+						<li>TIEDefKey_gun_4</li>
+					</turretIds>
+				</li>
+			</roles>
+		</properties>
+
+	</Vehicles.VehicleDef>
+	
+	
+	
+	
+	
+	<Vehicles.VehicleDef Name="guy762_SWVehicle_TIEAvenger_bot" ParentName="guy762_SWVehicle_TIEAvenger">
+		<defName>guy762_SWVehicle_TIEAvenger_bot</defName>
+		
+		<buildDef Inherit="False" />
+		
+		<!--<vehicleMovementPermissions>NoDriverNeeded</vehicleMovementPermissions>-->
+		
+		<properties>
+			<roles Inherit="False">
+				<li>
+					<key>pilot</key>
+					<label>Pilot</label>
+					<slots>1</slots>
+					<slotsToOperate>1</slotsToOperate>
+					<!-- <handlingTypes> -->
+						<!-- <li>Movement</li> -->
+						<!-- <li>Turret</li> -->
+					<!-- </handlingTypes> -->
+					
+					<turretIds>
+						<li>TIEAvgKey_gun_1</li>
+						<li>TIEAvgKey_gun_2</li>
+						<li>TIEAvgKey_gun_3</li>
+						<li>TIEAvgKey_gun_4</li>
+						
+						<li>TIEAvgKey_gun_5</li>
+						<li>TIEAvgKey_gun_6</li>
+					</turretIds>
+				</li>
+			</roles>
+		</properties>
+
+	</Vehicles.VehicleDef>
+	
+
+	
+	
+	<Vehicles.VehicleDef Name="guy762_SWVehicle_TIEFighter_bot" ParentName="guy762_SWVehicle_TIEFighter">
+		<defName>guy762_SWVehicle_TIEFighter_bot</defName>
+		
+		<buildDef Inherit="False" />
+		
+		<!--<vehicleMovementPermissions>NoDriverNeeded</vehicleMovementPermissions>-->
+		
+		<properties>
+			<roles Inherit="False">
+				<li>
+					<key>pilot</key>
+					<label>Pilot</label>
+					<slots>1</slots>
+					<slotsToOperate>1</slotsToOperate>
+					<!-- <handlingTypes> -->
+						<!-- <li>Movement</li> -->
+						<!-- <li>Turret</li> -->
+					<!-- </handlingTypes> -->
+					<comfort>-0.25</comfort>
+					
+					<turretIds>
+						<li>TIEFighterKey_gun_1</li>
+					</turretIds>
+				</li>
+			</roles>
+		</properties>
+
+	</Vehicles.VehicleDef>
+	
+	
+	
+	<Vehicles.VehicleDef Name="guy762_SWVehicle_TIEFighterEriadu_bot" ParentName="guy762_SWVehicle_TIEFighter_bot">
+		<defName>guy762_SWVehicle_TIEFighterEriadu_bot</defName>
+		
+		<graphicData>
+			<color>(185,185,185)</color> <!-- lighter grey -->
+		</graphicData>
+		
+		<statBases>
+			<EnergyShieldRechargeRate>0.5</EnergyShieldRechargeRate>
+			<EnergyShieldEnergyMax>1</EnergyShieldEnergyMax>
+		</statBases>
+		<comps>
+			<li Class="CompProperties_ProjectileInterceptor">
+				<radius>5</radius>
+				<color>(0.4, 0.4, 0.4)</color>
+				
+				<interceptGroundProjectiles>true</interceptGroundProjectiles>
+				<interceptAirProjectiles>true</interceptAirProjectiles>
+				<interceptNonHostileProjectiles>true</interceptNonHostileProjectiles>
+				
+				<reactivateEffect>BulletShieldGenerator_Reactivate</reactivateEffect>
+				<activeSound>BulletShield_Ambience</activeSound>
+				<hitPointsRestoreInstantlyAfterCharge>true</hitPointsRestoreInstantlyAfterCharge>
+				
+				<hitPoints>100</hitPoints>
+				
+				<chargeDurationTicks>1800</chargeDurationTicks>
+				<rechargeHitPointsIntervalTicks>120</rechargeHitPointsIntervalTicks>
+				<minIdleAlpha>0.2</minIdleAlpha>
+				<drawWithNoSelection>True</drawWithNoSelection>
+				<disarmedByEmpForTicks>1500</disarmedByEmpForTicks>
+				
+				<gizmoTipKey>ProjectileInterceptorTip</gizmoTipKey>
+			</li>
+		</comps>
+
+	</Vehicles.VehicleDef>
+	
+
+	
+	
+	<Vehicles.VehicleDef Name="guy762_SWVehicle_TIEInterceptor_bot" ParentName="guy762_SWVehicle_TIEInterceptor">
+		<defName>guy762_SWVehicle_TIEInterceptor_bot</defName>
+
+		<buildDef Inherit="False" />
+		
+		<!--<vehicleMovementPermissions>NoDriverNeeded</vehicleMovementPermissions>-->
+		
+		<properties>
+			<roles Inherit="False">
+				<li>
+					<key>pilot</key>
+					<label>Pilot</label>
+					<slots>1</slots>
+					<slotsToOperate>1</slotsToOperate>
+					<!-- <handlingTypes> -->
+						<!-- <li>Movement</li> -->
+						<!-- <li>Turret</li> -->
+					<!-- </handlingTypes> -->
+					<comfort>-0.5</comfort>
+					
+					<turretIds>
+						<li>TIEIntKey_gun_1</li>
+						<li>TIEIntKey_gun_2</li>
+						<li>TIEIntKey_gun_3</li>
+						<li>TIEIntKey_gun_4</li>
+					</turretIds>
+				</li>
+			</roles>
+		</properties>
+
+	</Vehicles.VehicleDef>
+	
+	
+	
+	<Vehicles.VehicleDef Name="guy762_SWVehicle_TIEInterceptorEriadu_bot" ParentName="guy762_SWVehicle_TIEInterceptor_bot">
+		<defName>guy762_SWVehicle_TIEInterceptorEriadu_bot</defName>
+		
+		<graphicData>
+			<color>(185,185,185)</color> <!-- lighter grey -->
+		</graphicData>
+		
+		<statBases>
+			<EnergyShieldRechargeRate>0.5</EnergyShieldRechargeRate>
+			<EnergyShieldEnergyMax>1</EnergyShieldEnergyMax>
+		</statBases>
+		<comps>
+			<li Class="CompProperties_ProjectileInterceptor">
+				<radius>5</radius>
+				<color>(0.4, 0.4, 0.4)</color>
+				
+				<interceptGroundProjectiles>true</interceptGroundProjectiles>
+				<interceptAirProjectiles>true</interceptAirProjectiles>
+				<interceptNonHostileProjectiles>true</interceptNonHostileProjectiles>
+				
+				<reactivateEffect>BulletShieldGenerator_Reactivate</reactivateEffect>
+				<activeSound>BulletShield_Ambience</activeSound>
+				<hitPointsRestoreInstantlyAfterCharge>true</hitPointsRestoreInstantlyAfterCharge>
+				
+				<hitPoints>100</hitPoints>
+				
+				<chargeDurationTicks>1800</chargeDurationTicks>
+				<rechargeHitPointsIntervalTicks>120</rechargeHitPointsIntervalTicks>
+				<minIdleAlpha>0.2</minIdleAlpha>
+				<drawWithNoSelection>True</drawWithNoSelection>
+				<disarmedByEmpForTicks>1500</disarmedByEmpForTicks>
+				
+				<gizmoTipKey>ProjectileInterceptorTip</gizmoTipKey>
+			</li>
+		</comps>
+		
+		
+	</Vehicles.VehicleDef>
+	
+
+	
+	<Vehicles.VehicleDef Name="guy762_SWVehicle_TIEReaper_bot" ParentName="guy762_SWVehicle_TIEReaper">
+		<defName>guy762_SWVehicle_TIEReaper_bot</defName>
+		
+		<buildDef Inherit="False" />
+		
+		<!--<vehicleMovementPermissions>NoDriverNeeded</vehicleMovementPermissions>-->
+
+		<properties>
+			<roles Inherit="False">
+				<li>
+					<key>pilot</key>
+					<label>Pilot</label>
+					<slots>1</slots>
+					<slotsToOperate>1</slotsToOperate>
+					<!-- <handlingTypes> -->
+						<!-- <li>Movement</li> -->
+						<!-- <li>Turret</li> -->
+					<!-- </handlingTypes> -->
+					
+					<turretIds>
+						<li>TIEReaperKey_gun_1</li>
+						<li>TIEReaperKey_gun_2</li>
+					</turretIds>
+				</li>
+			</roles>
+		</properties>
+
+	</Vehicles.VehicleDef>
+	
+	
+	
+
+	
+	<Vehicles.VehicleDef Name="guy762_SWVehicle_TIEStriker_bot" ParentName="guy762_SWVehicle_TIEStriker">
+		<defName>guy762_SWVehicle_TIEStriker_bot</defName>
+		
+		<buildDef Inherit="False" />
+		
+		<!--<vehicleMovementPermissions>NoDriverNeeded</vehicleMovementPermissions>-->
+
+		<properties>
+			<roles Inherit="False">
+				<li>
+					<key>pilot</key>
+					<label>Pilot</label>
+					<slots>1</slots>
+					<slotsToOperate>1</slotsToOperate>
+					<!-- <handlingTypes> -->
+						<!-- <li>Movement</li> -->
+						<!-- <li>Turret</li> -->
+					<!-- </handlingTypes> -->
+					
+					<turretIds>
+						<li>TIEStrikerKey_gun_1</li>
+						<li>TIEStrikerKey_gun_2</li>
+						<li>TIEStrikerKey_gun_3</li>
+						<li>TIEStrikerKey_gun_4</li>
+					</turretIds>
+				</li>
+			</roles>
+		</properties>
+
+	</Vehicles.VehicleDef>
+	
+	
+	
+	
+	
+	<Vehicles.VehicleDef Name="guy762_SWVehicle_SkiprayImperial_bot" ParentName="guy762_SWVehicle_Skipray">
+		<defName>guy762_SWVehicle_SkiprayImperial_bot</defName>
+		
+		<graphicData>
+			<pattern Inherit="False" />
+			<color>(185,185,185)</color> <!-- lighter grey -->
+		</graphicData>
+		
+		<buildDef Inherit="False" />
+		
+		<!--<vehicleMovementPermissions>NoDriverNeeded</vehicleMovementPermissions>-->
+
+		<properties>
+			<roles Inherit="False">
+				<li>
+					<key>pilot</key>
+					<label>Pilot</label>
+					<slots>1</slots>
+					<slotsToOperate>1</slotsToOperate>
+					<!-- <handlingTypes> -->
+						<!-- <li>Movement</li> -->
+						<!-- <li>Turret</li> -->
+					<!-- </handlingTypes> -->
+					
+					<turretIds>
+						<li>SkiprayKey_gun_1</li>
+						<li>SkiprayKey_gun_2</li>
+						<li>SkiprayKey_gun_3</li>
+						<li>SkiprayKey_gun_4</li>
+						<li>SkiprayKey_gun_5</li>
+						<li>SkiprayKey_gun_6</li>
+						<li>SkiprayKey_gun_7</li>
+					</turretIds>
+				</li>
+			</roles>
+		</properties>
+
+	</Vehicles.VehicleDef>
+	
+
+	
+	<Vehicles.VehicleDef Name="guy762_SWVehicle_Z95Zsinj_bot" ParentName="guy762_SWVehicle_Z95Headhunter">
+		<defName>guy762_SWVehicle_Z95Zsinj_bot</defName>
+		
+		<graphicData>
+			<pattern>guy762_SWVehiclePattern_Z95E</pattern>
+			<color>(165,155,80)</color> <!-- zsinj's dominion mustard -->
+			<colorTwo>(115,120,95)</colorTwo> <!-- hutt green -->
+			<colorThree>(175,175,165)</colorThree> <!-- yellowed grey -->
+		</graphicData>
+		
+		<buildDef Inherit="False" />
+		
+		<!--<vehicleMovementPermissions>NoDriverNeeded</vehicleMovementPermissions>-->
+		
+		<properties>
+			<roles Inherit="False">
+				<li>
+					<key>pilot</key>
+					<label>Pilot</label>
+					<slots>1</slots>
+					<slotsToOperate>1</slotsToOperate>
+					<!-- <handlingTypes> -->
+						<!-- <li>Movement</li> -->
+						<!-- <li>Turret</li> -->
+					<!-- </handlingTypes> -->
+					<comfort>-0.25</comfort>
+					
+					<turretIds>
+						<li>Z95Key_gun_1</li>
+						<li>Z95Key_gun_2</li>
+					</turretIds>
+				</li>
+			</roles>
+		</properties>
+
+	</Vehicles.VehicleDef>
+	
+	
+	
+</Defs>

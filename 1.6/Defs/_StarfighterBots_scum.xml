@@ -1,0 +1,487 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<Defs>	
+
+	
+	
+	
+	
+	<Vehicles.VehicleDef Name="guy762_SWVehicle_Kimogila_bot" ParentName="guy762_SWVehicle_Kimogila">
+		<defName>guy762_SWVehicle_Kimogila_bot</defName>
+		
+		<buildDef Inherit="False" />
+		
+		<!--<vehicleMovementPermissions>NoDriverNeeded</vehicleMovementPermissions>-->
+		
+		<properties>
+			<roles Inherit="False">
+				<li>
+					<key>pilot</key>
+					<label>Pilot</label>
+					<slots>1</slots>
+					<slotsToOperate>1</slotsToOperate>
+					<!-- <handlingTypes> -->
+						<!-- <li>Movement</li> -->
+						<!-- <li>Turret</li> -->
+					<!-- </handlingTypes> -->
+					<comfort>1.25</comfort>
+					
+					<turretIds>
+						<li>KimogilaKey_gun_1</li>
+						<li>KimogilaKey_gun_2</li>
+						<li>KimogilaKey_gun_3</li>
+						<li>KimogilaKey_gun_4</li>
+						<li>KimogilaKey_gun_5</li>
+						<li>KimogilaKey_gun_6</li>
+						<li>KimogilaKey_gun_7</li>
+					</turretIds>
+				</li>
+			</roles>
+		</properties>
+
+	</Vehicles.VehicleDef>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<Vehicles.VehicleDef Name="guy762_SWVehicle_R41Hutts_bot" ParentName="guy762_SWVehicle_R41SC">
+		<defName>guy762_SWVehicle_R41Hutts_bot</defName>
+		
+		<graphicData>
+			<color>(115,120,95)</color> <!-- hutt green -->
+			<colorTwo>(170,160,135)</colorTwo> <!-- stanky beige -->
+			<colorThree>(170,160,135)</colorThree> <!-- stanky beige -->
+		</graphicData>
+		
+		<buildDef Inherit="False" />
+		
+		<!--<vehicleMovementPermissions>NoDriverNeeded</vehicleMovementPermissions>-->
+		
+		<properties>
+			<roles Inherit="False">
+				<li>
+					<key>pilot</key>
+					<label>Pilot</label>
+					<slots>1</slots>
+					<slotsToOperate>1</slotsToOperate>
+					<!-- <handlingTypes> -->
+						<!-- <li>Movement</li> -->
+						<!-- <li>Turret</li> -->
+					<!-- </handlingTypes> -->
+					<comfort>1.25</comfort>
+					
+					<turretIds>
+						<li>R41Key_gun_1</li>
+						<li>R41Key_gun_2</li>
+						<li>R41Key_gun_3</li>
+						<li>R41Key_gun_4</li>
+					</turretIds>
+				</li>
+			</roles>
+		</properties>
+
+	</Vehicles.VehicleDef>
+	
+	
+	
+	<Vehicles.VehicleDef Name="guy762_SWVehicle_R41BlackSun_bot" ParentName="guy762_SWVehicle_R41SC">
+		<defName>guy762_SWVehicle_R41BlackSun_bot</defName>
+		
+		<graphicData>
+			<color>(230,185,45)</color> <!-- republic yellow -->
+			<colorTwo>(75,75,75)</colorTwo> <!-- soft black -->
+			<colorThree>(75,75,75)</colorThree> <!-- soft black -->
+		</graphicData>
+		
+		<buildDef Inherit="False" />
+		
+		<!--<vehicleMovementPermissions>NoDriverNeeded</vehicleMovementPermissions>-->
+		
+		<properties>
+			<roles Inherit="False">
+				<li>
+					<key>pilot</key>
+					<label>Pilot</label>
+					<slots>1</slots>
+					<slotsToOperate>1</slotsToOperate>
+					<!-- <handlingTypes> -->
+						<!-- <li>Movement</li> -->
+						<!-- <li>Turret</li> -->
+					<!-- </handlingTypes> -->
+					<comfort>1.25</comfort>
+					
+					<turretIds>
+						<li>R41Key_gun_1</li>
+						<li>R41Key_gun_2</li>
+						<li>R41Key_gun_3</li>
+						<li>R41Key_gun_4</li>
+					</turretIds>
+				</li>
+			</roles>
+		</properties>
+
+	</Vehicles.VehicleDef>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<Vehicles.VehicleDef Name="guy762_SWVehicle_Scyk_bot" ParentName="guy762_SWVehicle_Scyk">
+		<defName>guy762_SWVehicle_Scyk_bot</defName>
+		
+		<buildDef Inherit="False" />
+		
+		<!--<vehicleMovementPermissions>NoDriverNeeded</vehicleMovementPermissions>-->
+		
+		<properties>
+			<roles Inherit="False">
+				<li>
+					<key>pilot</key>
+					<label>Pilot</label>
+					<slots>1</slots>
+					<slotsToOperate>1</slotsToOperate>
+					<!-- <handlingTypes> -->
+						<!-- <li>Movement</li> -->
+						<!-- <li>Turret</li> -->
+					<!-- </handlingTypes> -->
+					<comfort>-0.25</comfort>
+					
+					<turretIds>
+						<li>M3AScykKey_gun_1</li>
+						<li>M3AScykKey_gun_2</li>
+						<li>M3AScykKey_gun_3</li>
+					</turretIds>
+				</li>
+			</roles>
+		</properties>
+
+	</Vehicles.VehicleDef>
+	
+	
+	
+	
+	
+	
+	<Vehicles.VehicleDef Name="guy762_SWVehicle_ScykBlackSun_bot" ParentName="guy762_SWVehicle_Scyk">
+		<defName>guy762_SWVehicle_ScykBlackSun_bot</defName>
+		
+		<graphicData>
+			<pattern>guy762_SWVehiclePattern_ScykB</pattern>
+			<color>(230,185,45)</color> <!-- republic yellow -->
+			<colorTwo>(230,185,45)</colorTwo> <!-- republic yellow -->
+			<colorThree>(75,75,75)</colorThree> <!-- soft black -->
+		</graphicData>
+		
+		<buildDef Inherit="False" />
+		
+		<!--<vehicleMovementPermissions>NoDriverNeeded</vehicleMovementPermissions>-->
+		
+		<properties>
+			<roles Inherit="False">
+				<li>
+					<key>pilot</key>
+					<label>Pilot</label>
+					<slots>1</slots>
+					<slotsToOperate>1</slotsToOperate>
+					<!-- <handlingTypes> -->
+						<!-- <li>Movement</li> -->
+						<!-- <li>Turret</li> -->
+					<!-- </handlingTypes> -->
+					<comfort>-0.25</comfort>
+					
+					<turretIds>
+						<li>M3AScykKey_gun_1</li>
+						<li>M3AScykKey_gun_2</li>
+						<li>M3AScykKey_gun_3</li>
+					</turretIds>
+				</li>
+			</roles>
+		</properties>
+
+	</Vehicles.VehicleDef>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<Vehicles.VehicleDef Name="guy762_SWVehicle_StarViperBlackSun_bot" ParentName="guy762_SWVehicle_StarViper">
+		<defName>guy762_SWVehicle_StarViperBlackSun_bot</defName>
+		
+		<graphicData>
+			<texPath>Starfighters/StarViper/StarViper_Closed</texPath>
+			<pattern>guy762_SWVehiclePattern_StarViperB_closed</pattern>
+			<color>(50,50,50)</color>
+			<colorTwo>(225,225,225)</colorTwo>
+			<colorThree>(200,200,200)</colorThree>
+		</graphicData>
+		
+		<buildDef Inherit="False" />
+		
+		<!--<vehicleMovementPermissions>NoDriverNeeded</vehicleMovementPermissions>-->
+		
+		<properties>
+			<roles Inherit="False">
+				<li>
+					<key>pilot</key>
+					<label>Pilot</label>
+					<slots>1</slots>
+					<slotsToOperate>1</slotsToOperate>
+					<!-- <handlingTypes> -->
+						<!-- <li>Movement</li> -->
+						<!-- <li>Turret</li> -->
+					<!-- </handlingTypes> -->
+					<comfort>1.25</comfort>
+					
+					<turretIds>
+						<li>StarViperKey_gun_1</li>
+						<li>StarViperKey_gun_2</li>
+						<li>StarViperKey_gun_3</li>
+						<li>StarViperKey_gun_4</li>
+					</turretIds>
+				</li>
+			</roles>
+		</properties>
+
+	</Vehicles.VehicleDef>
+	
+	
+	
+	
+	
+	<Vehicles.VehicleDef Name="guy762_SWVehicle_StarViperZannCon_bot" ParentName="guy762_SWVehicle_StarViper">
+		<defName>guy762_SWVehicle_StarViperZannCon_bot</defName>
+		
+		<graphicData>
+			<texPath>Starfighters/StarViper/StarViper_Closed</texPath>
+			<pattern>guy762_SWVehiclePattern_StarViperA_closed</pattern>
+			<color>(225,225,225)</color>
+			<colorTwo>(50,50,50)</colorTwo>
+			<colorThree>(200,200,200)</colorThree>
+		</graphicData>
+		
+		<buildDef Inherit="False" />
+		
+		<!--<vehicleMovementPermissions>NoDriverNeeded</vehicleMovementPermissions>-->
+		
+		<properties>
+			<roles Inherit="False">
+				<li>
+					<key>pilot</key>
+					<label>Pilot</label>
+					<slots>1</slots>
+					<slotsToOperate>1</slotsToOperate>
+					<!-- <handlingTypes> -->
+						<!-- <li>Movement</li> -->
+						<!-- <li>Turret</li> -->
+					<!-- </handlingTypes> -->
+					<comfort>1.25</comfort>
+					
+					<turretIds>
+						<li>StarViperKey_gun_1</li>
+						<li>StarViperKey_gun_2</li>
+						<li>StarViperKey_gun_3</li>
+						<li>StarViperKey_gun_4</li>
+					</turretIds>
+				</li>
+			</roles>
+		</properties>
+
+	</Vehicles.VehicleDef>
+	
+
+	
+	
+	
+	<Vehicles.VehicleDef Name="guy762_SWVehicle_Z95BlackSun_bot" ParentName="guy762_SWVehicle_Z95Headhunter">
+		<defName>guy762_SWVehicle_Z95BlackSun_bot</defName>
+		
+		<graphicData>
+			<pattern>guy762_SWVehiclePattern_Z95B</pattern>
+			<color>(50,50,50)</color> <!-- black -->
+			<colorTwo>(225,225,225)</colorTwo> <!-- less white -->
+			<colorThree>(225,225,225)</colorThree> <!-- less white -->
+		</graphicData>
+		
+		<buildDef Inherit="False" />
+		
+		<!--<vehicleMovementPermissions>NoDriverNeeded</vehicleMovementPermissions>-->
+		
+		<properties>
+			<roles Inherit="False">
+				<li>
+					<key>pilot</key>
+					<label>Pilot</label>
+					<slots>1</slots>
+					<slotsToOperate>1</slotsToOperate>
+					<!-- <handlingTypes> -->
+						<!-- <li>Movement</li> -->
+						<!-- <li>Turret</li> -->
+					<!-- </handlingTypes> -->
+					<comfort>-0.25</comfort>
+					
+					<turretIds>
+						<li>Z95Key_gun_1</li>
+						<li>Z95Key_gun_2</li>
+					</turretIds>
+				</li>
+			</roles>
+		</properties>
+
+	</Vehicles.VehicleDef>
+	
+	
+	
+	<Vehicles.VehicleDef Name="guy762_SWVehicle_Z95BlackSunAce_bot" ParentName="guy762_SWVehicle_Z95Headhunter">
+		<defName>guy762_SWVehicle_Z95BlackSunAce_bot</defName>
+		
+		<graphicData>
+			<pattern>guy762_SWVehiclePattern_Z95C</pattern>
+			<color>(230,185,45)</color> <!-- republic yellow -->
+			<colorTwo>(125,125,125</colorTwo> <!-- darker grey -->
+			<colorThree>(75,75,75)</colorThree> <!-- soft black -->
+		</graphicData>
+		
+		<buildDef Inherit="False" />
+		
+		<!--<vehicleMovementPermissions>NoDriverNeeded</vehicleMovementPermissions>-->
+		
+		<properties>
+			<roles Inherit="False">
+				<li>
+					<key>pilot</key>
+					<label>Pilot</label>
+					<slots>1</slots>
+					<slotsToOperate>1</slotsToOperate>
+					<!-- <handlingTypes> -->
+						<!-- <li>Movement</li> -->
+						<!-- <li>Turret</li> -->
+					<!-- </handlingTypes> -->
+					<comfort>-0.25</comfort>
+					
+					<turretIds>
+						<li>Z95Key_gun_1</li>
+						<li>Z95Key_gun_2</li>
+						<li>Z95Key_gun_3</li>
+						<li>Z95Key_gun_4</li>
+					</turretIds>
+				</li>
+			</roles>
+		</properties>
+
+	</Vehicles.VehicleDef>
+	
+	
+	
+	
+	
+	<Vehicles.VehicleDef Name="guy762_SWVehicle_Z95Hutts_bot" ParentName="guy762_SWVehicle_Z95Headhunter">
+		<defName>guy762_SWVehicle_Z95Hutts_bot</defName>
+		
+		<graphicData>
+			<pattern>guy762_SWVehiclePattern_Z95E</pattern>
+			<color>(135,95,90)</color> <!-- lighter sand red -->
+			<colorTwo>(115,120,95)</colorTwo> <!-- hutt green -->
+			<colorThree>(170,160,135)</colorThree> <!-- stanky beige -->
+		</graphicData>
+		
+		<buildDef Inherit="False" />
+		
+		<!--<vehicleMovementPermissions>NoDriverNeeded</vehicleMovementPermissions>-->
+		
+		<properties>
+			<roles Inherit="False">
+				<li>
+					<key>pilot</key>
+					<label>Pilot</label>
+					<slots>1</slots>
+					<slotsToOperate>1</slotsToOperate>
+					<!-- <handlingTypes> -->
+						<!-- <li>Movement</li> -->
+						<!-- <li>Turret</li> -->
+					<!-- </handlingTypes> -->
+					<comfort>-0.25</comfort>
+					
+					<turretIds>
+						<li>Z95Key_gun_1</li>
+						<li>Z95Key_gun_2</li>
+					</turretIds>
+				</li>
+			</roles>
+		</properties>
+
+	</Vehicles.VehicleDef>
+
+	
+	
+	
+</Defs>

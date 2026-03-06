@@ -1,0 +1,376 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<Defs>	
+
+	
+	<Vehicles.VehicleDef Name="guy762_SWVehicle_AWingRebel_bot" ParentName="guy762_SWVehicle_AWing">
+		<defName>guy762_SWVehicle_AWingRebel_bot</defName>
+		
+		<buildDef Inherit="False" />
+		
+		<!--<vehicleMovementPermissions>NoDriverNeeded</vehicleMovementPermissions>-->
+		
+		<properties>
+			<roles Inherit="False">
+				<li>
+					<key>pilot</key>
+					<label>Pilot</label>
+					<slots>1</slots>
+					<slotsToOperate>1</slotsToOperate>
+					<!-- <handlingTypes> -->
+						<!-- <li>Movement</li> -->
+						<!-- <li>Turret</li> -->
+					<!-- </handlingTypes> -->
+					<comfort>-0.5</comfort>
+					
+					<turretIds>
+						<li>AWingKey_gun_1</li>
+						<li>AWingKey_gun_2</li>
+						<li>AWingKey_gun_3</li>
+						<li>AWingKey_gun_4</li>
+					</turretIds>
+				</li>
+			</roles>
+		</properties>
+
+	</Vehicles.VehicleDef>
+	
+	
+	<Vehicles.VehicleDef Name="guy762_SWVehicle_AWingNR_bot" ParentName="guy762_SWVehicle_AWing">
+		<defName>guy762_SWVehicle_AWingNR_bot</defName>
+		
+		<graphicData>
+			<pattern>guy762_SWVehiclePattern_AWingB</pattern>
+			<color>(100,120,140)</color> <!-- new republic blue -->
+			<colorTwo>(225,225,225)</colorTwo> <!-- less white -->
+			<colorThree>(225,225,225)</colorThree> <!-- less white -->
+		</graphicData>
+		
+		<buildDef Inherit="False" />
+		
+		<!--<vehicleMovementPermissions>NoDriverNeeded</vehicleMovementPermissions>-->
+		
+		<properties>
+			<roles Inherit="False">
+				<li>
+					<key>pilot</key>
+					<label>Pilot</label>
+					<slots>1</slots>
+					<slotsToOperate>1</slotsToOperate>
+					<!-- <handlingTypes> -->
+						<!-- <li>Movement</li> -->
+						<!-- <li>Turret</li> -->
+					<!-- </handlingTypes> -->
+					<comfort>-0.5</comfort>
+					
+					<turretIds>
+						<li>AWingKey_gun_1</li>
+						<li>AWingKey_gun_2</li>
+						<li>AWingKey_gun_3</li>
+						<li>AWingKey_gun_4</li>
+					</turretIds>
+				</li>
+			</roles>
+		</properties>
+
+	</Vehicles.VehicleDef>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<Vehicles.VehicleDef Name="guy762_SWVehicle_YWingRebel_bot" ParentName="guy762_SWVehicle_BTLA4YWing">
+		<defName>guy762_SWVehicle_YWingRebel_bot</defName>
+		
+		<buildDef Inherit="False" />
+		
+		<!--<vehicleMovementPermissions>NoDriverNeeded</vehicleMovementPermissions>-->
+		
+		<properties>
+			<roles Inherit="False">
+				<li>
+					<key>pilot</key>
+					<label>Pilot</label>
+					<slots>1</slots>
+					<slotsToOperate>1</slotsToOperate>
+					<!-- <handlingTypes> -->
+						<!-- <li>Movement</li> -->
+						<!-- <li>Turret</li> -->
+					<!-- </handlingTypes> -->
+					<!-- <comfort>-0.25</comfort> -->
+					
+					<turretIds>
+						<li>YWingKey_gun_1</li>
+						<li>YWingKey_gun_2</li>
+						<li>YWingKey_gun_3</li>
+						<li>YWingKey_gun_4</li>
+						<li>YWingKey_gun_5</li>
+					</turretIds>
+				</li>
+			</roles>
+		</properties>
+
+	</Vehicles.VehicleDef>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<Vehicles.VehicleDef Name="guy762_SWVehicle_R41Rebel_bot" ParentName="guy762_SWVehicle_R41SC">
+		<defName>guy762_SWVehicle_R41Rebel_bot</defName>
+		
+		<buildDef Inherit="False" />
+		
+		<!--<vehicleMovementPermissions>NoDriverNeeded</vehicleMovementPermissions>-->
+		
+		<properties>
+			<roles Inherit="False">
+				<li>
+					<key>pilot</key>
+					<label>Pilot</label>
+					<slots>1</slots>
+					<slotsToOperate>1</slotsToOperate>
+					<!-- <handlingTypes> -->
+						<!-- <li>Movement</li> -->
+						<!-- <li>Turret</li> -->
+					<!-- </handlingTypes> -->
+					<comfort>1.25</comfort>
+					
+					<turretIds>
+						<li>R41Key_gun_1</li>
+						<li>R41Key_gun_2</li>
+						<li>R41Key_gun_3</li>
+						<li>R41Key_gun_4</li>
+					</turretIds>
+				</li>
+			</roles>
+		</properties>
+
+	</Vehicles.VehicleDef>
+	
+	
+	
+	
+	<Vehicles.VehicleDef Name="guy762_SWVehicle_ScurrgHavoc_bot" ParentName="guy762_SWVehicle_Scurrg">
+		<defName>guy762_SWVehicle_ScurrgHavoc_bot</defName>
+		
+		<graphicData>
+			<pattern>guy762_SWVehiclePattern_ScurrgB</pattern>
+			<color>(170,90,45)</color> <!-- nym's orange -->
+			<colorTwo>(65,65,75)</colorTwo> <!-- bluish dark grey -->
+			<colorThree>(225,225,225)</colorThree> <!-- less white -->
+		</graphicData>
+		
+		<buildDef Inherit="False" />
+		
+		<!--<vehicleMovementPermissions>NoDriverNeeded</vehicleMovementPermissions>-->
+		
+		<properties>
+			<roles Inherit="False">
+				<li>
+					<key>pilot</key>
+					<label>Pilot</label>
+					<slots>1</slots>
+					<slotsToOperate>1</slotsToOperate>
+					<!-- <handlingTypes> -->
+						<!-- <li>Movement</li> -->
+						<!-- <li>Turret</li> -->
+					<!-- </handlingTypes> -->
+					
+					<turretIds>
+						<li>ScurrgKey_gun_1</li>
+						<li>ScurrgKey_gun_2</li>
+						<li>ScurrgKey_gun_3</li>
+						<li>ScurrgKey_gun_4</li>
+						<li>ScurrgKey_gun_5</li>
+						<li>ScurrgKey_gun_6</li>
+					</turretIds>
+				</li>
+			</roles>
+		</properties>
+
+	</Vehicles.VehicleDef>
+	
+	
+	
+	
+	<Vehicles.VehicleDef Name="guy762_SWVehicle_XWingRebel_bot" ParentName="guy762_SWVehicle_T65XWing">
+		<defName>guy762_SWVehicle_XWingRebel_bot</defName>
+
+		<buildDef Inherit="False" />
+		
+		<!--<vehicleMovementPermissions>NoDriverNeeded</vehicleMovementPermissions>-->
+		
+		<properties>
+			<roles Inherit="False">
+				<li>
+					<key>pilot</key>
+					<label>Pilot</label>
+					<slots>1</slots>
+					<slotsToOperate>1</slotsToOperate>
+					<!-- <handlingTypes> -->
+						<!-- <li>Movement</li> -->
+						<!-- <li>Turret</li> -->
+					<!-- </handlingTypes> -->
+					<!-- <comfort>-0.25</comfort> -->
+					
+					<turretIds>
+						<li>XWingKey_gun_1</li>
+						<li>XWingKey_gun_2</li>
+						<li>XWingKey_gun_3</li>
+						<li>XWingKey_gun_4</li>
+						<li>XWingKey_gun_5</li>
+						<li>XWingKey_gun_6</li>
+					</turretIds>
+				</li>
+			</roles>
+		</properties>
+
+	</Vehicles.VehicleDef>
+	
+	
+	<Vehicles.VehicleDef Name="guy762_SWVehicle_XWingNR_bot" ParentName="guy762_SWVehicle_T65XWing">
+		<defName>guy762_SWVehicle_XWingNR_bot</defName>
+		
+		<graphicData>
+			<texPath>Starfighters/T65XWing/XWing_Open</texPath>
+			<pattern>guy762_SWVehiclePattern_XWingB_open</pattern>
+			<color>(100,120,140)</color> <!-- new republic blue -->
+			<colorTwo>(185,185,185)</colorTwo> <!-- light grey -->
+			<colorThree>(225,225,225)</colorThree> <!-- less white -->
+		</graphicData>
+		
+		<buildDef Inherit="False" />
+		
+		<!--<vehicleMovementPermissions>NoDriverNeeded</vehicleMovementPermissions>-->
+		
+		<properties>
+			<roles Inherit="False">
+				<li>
+					<key>pilot</key>
+					<label>Pilot</label>
+					<slots>1</slots>
+					<slotsToOperate>1</slotsToOperate>
+					<!-- <handlingTypes> -->
+						<!-- <li>Movement</li> -->
+						<!-- <li>Turret</li> -->
+					<!-- </handlingTypes> -->
+					<!-- <comfort>-0.25</comfort> -->
+					
+					<turretIds>
+						<li>XWingKey_gun_1</li>
+						<li>XWingKey_gun_2</li>
+						<li>XWingKey_gun_3</li>
+						<li>XWingKey_gun_4</li>
+						<li>XWingKey_gun_5</li>
+						<li>XWingKey_gun_6</li>
+					</turretIds>
+				</li>
+			</roles>
+		</properties>
+
+	</Vehicles.VehicleDef>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<Vehicles.VehicleDef Name="guy762_SWVehicle_Z95Rebel_bot" ParentName="guy762_SWVehicle_Z95Headhunter">
+		<defName>guy762_SWVehicle_Z95Rebel_bot</defName>
+		
+		<buildDef Inherit="False" />
+		
+		<!--<vehicleMovementPermissions>NoDriverNeeded</vehicleMovementPermissions>-->
+		
+		<properties>
+			<roles Inherit="False">
+				<li>
+					<key>pilot</key>
+					<label>Pilot</label>
+					<slots>1</slots>
+					<slotsToOperate>1</slotsToOperate>
+					<!-- <handlingTypes> -->
+						<!-- <li>Movement</li> -->
+						<!-- <li>Turret</li> -->
+					<!-- </handlingTypes> -->
+					<comfort>-0.25</comfort>
+					
+					<turretIds>
+						<li>Z95Key_gun_1</li>
+						<li>Z95Key_gun_2</li>
+					</turretIds>
+				</li>
+			</roles>
+		</properties>
+
+	</Vehicles.VehicleDef>
+	
+	
+	
+	<Vehicles.VehicleDef Name="guy762_SWVehicle_T47AirspeederRebel_bot" ParentName="guy762_SWVehicle_T47Airspeeder">
+		<defName>guy762_SWVehicle_T47AirspeederRebel_bot</defName>
+		
+		<buildDef Inherit="False" />
+		
+		<!--<vehicleMovementPermissions>NoDriverNeeded</vehicleMovementPermissions>-->
+		
+		<properties>
+			<roles Inherit="False">
+				<li>
+					<key>pilot</key>
+					<label>Pilot</label>
+					<slots>1</slots>
+					<slotsToOperate>1</slotsToOperate>
+					<!-- <handlingTypes> -->
+						<!-- <li>Movement</li> -->
+						<!-- <li>Turret</li> -->
+					<!-- </handlingTypes> -->
+					<!-- <comfort>-0.25</comfort> -->
+					
+					<turretIds>
+						<li>T47Key_gun_1</li>
+						<li>T47Key_gun_2</li>
+						<li>T47Key_gun_3</li>
+					</turretIds>
+				</li>
+			</roles>
+		</properties>
+
+	</Vehicles.VehicleDef>
+	
+	
+
+</Defs>

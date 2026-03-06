@@ -335,7 +335,7 @@
 						</renderProperties>
 						<defaultAngleRotated>0</defaultAngleRotated>
 						<!-- <angleRestricted>(315,45)</angleRestricted> -->
-						<gizmoLabel>dorsal missile pods</gizmoLabel>
+						<gizmoLabel>dorsal proton missiles</gizmoLabel>
 						
 						<drawLayer>15</drawLayer>
 						<aimPieOffset>(0, 2.55)</aimPieOffset>
@@ -358,14 +358,14 @@
 	
 	<Vehicles.VehicleTurretDef ParentName="guy762_VehicleTurretBASE">
 		<defName>guy762_VehicleTurret_AAC1_missilepod</defName>
-		<label>AAC-1 missile pods</label>
+		<label>AAC-1 proton missile pods</label>
 		<description>The rotating dorsal turret of an AAC-1 Speeder Tank.</description>
 		
 		<turretType>Rotatable</turretType>
 		<shotSound>kotorsound_TankMissileLauncher</shotSound>
 		<reloadSound>kotorsound_reloadlauncher</reloadSound>
 		
-		<projectile>SWVehicleBullet_AIAAconcMissile</projectile>
+		<projectile>SWVehicleBullet_AAprotonMissile</projectile>
 		<reloadTimer>3.5</reloadTimer>
 		<warmUpTimer>1.5</warmUpTimer> <!-- all dorsal turrets = 1 minimum -->
 		
@@ -373,7 +373,7 @@
 		<genericAmmo>true</genericAmmo>
 		<ammunition>
 			<thingDefs>
-				<li>guy762_RocketItem_conc</li>
+				<li>guy762_RocketItem_buster</li>
 			</thingDefs>
 		</ammunition>
 		
@@ -391,30 +391,30 @@
 			<li>
 				<shotsPerBurst>1</shotsPerBurst>
 				<ticksBetweenShots>20</ticksBetweenShots>
-				<ticksBetweenBursts>100</ticksBetweenBursts>
+				<ticksBetweenBursts>200</ticksBetweenBursts>
 				<label>Single</label>
-				<texPath>Items/Rockets/rocket_conc/rocket_conc_a</texPath>
+				<texPath>Items/Rockets/rocket_buster/rocket_buster_a</texPath>
 			</li>
 			<li>
 				<shotsPerBurst>3</shotsPerBurst>
 				<ticksBetweenShots>20</ticksBetweenShots>
-				<ticksBetweenBursts>300</ticksBetweenBursts>
+				<ticksBetweenBursts>400</ticksBetweenBursts>
 				<label>3 Burst</label>
-				<texPath>Items/Rockets/rocket_conc/rocket_conc_b</texPath>
+				<texPath>Items/Rockets/rocket_buster/rocket_buster_b</texPath>
 			</li>
 			<li>
 				<shotsPerBurst>5</shotsPerBurst>
 				<ticksBetweenShots>20</ticksBetweenShots>
 				<ticksBetweenBursts>500</ticksBetweenBursts>
 				<label>5 Burst</label>
-				<texPath>Items/Rockets/rocket_conc/rocket_conc_c</texPath>
+				<texPath>Items/Rockets/rocket_buster/rocket_buster_c</texPath>
 			</li>
 			<li>
 				<shotsPerBurst>20</shotsPerBurst>
 				<ticksBetweenShots>20</ticksBetweenShots>
 				<ticksBetweenBursts>2000</ticksBetweenBursts>
 				<label>Fire All</label>
-				<texPath>Items/Rockets/rocket_conc/rocket_conc_c</texPath>
+				<texPath>Items/Rockets/rocket_conc/rocket_buster_c</texPath>
 			</li>
 		</fireModes>
 

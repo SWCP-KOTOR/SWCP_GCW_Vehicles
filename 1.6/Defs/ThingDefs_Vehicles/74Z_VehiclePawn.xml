@@ -36,7 +36,7 @@
 			<MaxHitPoints>500</MaxHitPoints>
 			
 			<Flammability>0.5</Flammability>
-			<MarketValue>5800</MarketValue>
+			<MarketValue>3000</MarketValue>
 		</statBases>
 		
 		<soundSustainersOnEvent>

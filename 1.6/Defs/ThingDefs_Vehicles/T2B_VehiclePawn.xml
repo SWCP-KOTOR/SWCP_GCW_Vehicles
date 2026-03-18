@@ -55,7 +55,7 @@
 			<MaxHitPoints>300</MaxHitPoints> <!-- # of estimated XWMG hull points * 100 -->
 			
 			<Flammability>0.5</Flammability>
-			<MarketValue>58200</MarketValue>
+			<MarketValue>77000</MarketValue>
 			
 			<EnergyShieldRechargeRate>0.5</EnergyShieldRechargeRate>
 			<EnergyShieldEnergyMax>2</EnergyShieldEnergyMax>
@@ -100,7 +100,7 @@
 		</race>
 		
 		<vehicleStats>
-			<Mass>1000</Mass>
+			<Mass>10000</Mass>
 			<MoveSpeed>20</MoveSpeed>
 			<CargoCapacity>200</CargoCapacity>
 			<RepairRate>1</RepairRate>

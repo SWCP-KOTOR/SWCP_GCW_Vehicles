@@ -64,7 +64,7 @@
 		<constructionSkillPrerequisite>0</constructionSkillPrerequisite>
 	</Vehicles.VehicleBuildDef>
 	
-	<ThingDef ParentName="SWCP_ItemizedVehicleBASE">
+	<ThingDef ParentName="SWCP_ItemizedStarfighterBASE">
 		<defName>SWCP_ItemizedVehicle_Scyk</defName>
 		<label>starfighter, M3-A Scyk</label>
 		<graphicData>

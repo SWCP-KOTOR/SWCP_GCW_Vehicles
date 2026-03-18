@@ -64,7 +64,7 @@
 		<constructionSkillPrerequisite>0</constructionSkillPrerequisite>
 	</Vehicles.VehicleBuildDef>
 	
-	<ThingDef ParentName="SWCP_ItemizedVehicleBASE">
+	<ThingDef ParentName="SWCP_ItemizedStarfighterBASE">
 		<defName>SWCP_ItemizedVehicle_TIEFighter</defName>
 		<label>starfighter, TIE/ln Fighter</label>
 		<graphicData>
@@ -82,6 +82,7 @@
 		</thingSetMakerTags>
 		<tradeTags>
 			<li>SWCPTT_ItemizedStarfighters_ImperialBasic</li>
+			<li>SWCPTT_ItemizedStarfighters_ImpRemnantSurplus</li>
 		</tradeTags>
 	</ThingDef>
 	

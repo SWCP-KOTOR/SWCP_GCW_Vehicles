@@ -66,7 +66,7 @@
 		<constructionSkillPrerequisite>0</constructionSkillPrerequisite>
 	</Vehicles.VehicleBuildDef>
 	
-	<ThingDef ParentName="SWCP_ItemizedVehicleBASE">
+	<ThingDef ParentName="SWCP_ItemizedStarfighterBASE">
 		<defName>SWCP_ItemizedVehicle_Rihkxyrk</defName>
 		<label>starfighter, Rihkxyrk</label>
 		<graphicData>

@@ -1,11 +1,18 @@
 <?xml version="1.0" encoding="utf-8" ?>
 
 <Defs>
-	<Vehicles.VehicleBuildDef ParentName="guy762_VehicleBaseBuildable_GroundVehicle">
+	
+	<DesignatorDropdownGroupDef>
+		<defName>guy762_SWVehicleBPDropdown_AAT</defName>
+		<label>AAT Armored Assault Tank</label>
+	</DesignatorDropdownGroupDef>
+	
+	<Vehicles.VehicleBuildDef Name="guy762_SWVehicleBP_AAT" ParentName="guy762_VehicleBaseBuildable_GroundVehicle">
 		<defName>guy762_SWVehicleBP_AAT</defName>
 		<label>AAT Armored Assault Tank</label>
 		<description>.</description>
 		<designationCategory>MM_StarWarsShipBuildTab</designationCategory>
+		<designatorDropdown>guy762_SWVehicleBPDropdown_AAT</designatorDropdown>
 		
 		<graphicData>
 			<texPath>LandVehicles/AAT/AAT</texPath>
@@ -40,4 +47,42 @@
 		
 		<constructionSkillPrerequisite>6</constructionSkillPrerequisite>
 	</Vehicles.VehicleBuildDef>
+	
+	
+	<Vehicles.VehicleBuildDef ParentName="guy762_SWVehicleBP_AAT">
+		<defName>guy762_SWVehicleItemBP_AAT</defName>
+		<label>AAT Armored Assault Tank (from item)</label>
+		<statBases>
+			<WorkToBuild>5</WorkToBuild>
+		</statBases>
+		<costList Inherit="False">
+			<SWCP_ItemizedVehicle_AAT>1</SWCP_ItemizedVehicle_AAT>
+		</costList>
+		<constructionSkillPrerequisite>0</constructionSkillPrerequisite>
+	</Vehicles.VehicleBuildDef>
+	
+	<ThingDef ParentName="SWCP_ItemizedGroundVehicleBASE">
+		<defName>SWCP_ItemizedVehicle_AAT</defName>
+		<label>vehicle, AAT Armored Assault Tank</label>
+		<graphicData>
+			<texPath>LandVehicles/AAT/AAT_east</texPath>
+		</graphicData>
+		
+		<statBases>
+			<MarketValue>75000</MarketValue>
+			<RoyalFavorValue>5</RoyalFavorValue>
+			<Mass>1</Mass>
+		</statBases>
+		
+		<thingSetMakerTags>
+			<!-- <li>RewardStandardMidFreq</li> -->
+		</thingSetMakerTags>
+		<tradeTags>
+			<li>SWCPTT_ItemizedGroundVehicles_RebelAdv</li>
+			<li>SWCPTT_ItemizedGroundVehicles_CloneWarsSurplus</li>
+		<!-- individual faction tags -->
+			<li>SWCPTT_ItemizedGroundVehicles_PartisanSurplus</li>
+		</tradeTags>
+	</ThingDef>
+	
 </Defs>

@@ -1,11 +1,18 @@
 <?xml version="1.0" encoding="utf-8" ?>
 
 <Defs>
-	<Vehicles.VehicleBuildDef ParentName="guy762_VehicleBaseBuildable_GroundVehicle">
-		<defName>guy762_SWVehicleBP_FlareS</defName>
+	
+	<DesignatorDropdownGroupDef>
+		<defName>guy762_SWVehicleBPDropdown_FlareS</defName>
 		<label>Mobquet Flare-S Swoop Bike</label>
+	</DesignatorDropdownGroupDef>
+	
+	<Vehicles.VehicleBuildDef Name="guy762_SWVehicleBP_FlareS" ParentName="guy762_VehicleBaseBuildable_GroundVehicle">
+		<defName>guy762_SWVehicleBP_FlareS</defName>
+		<label>Flare-S Swoop</label>
 		<description>.</description>
 		<designationCategory>MM_StarWarsShipBuildTab</designationCategory>
+		<designatorDropdown>guy762_SWVehicleBPDropdown_FlareS</designatorDropdown>
 		
 		<graphicData>
 			<texPath>LandVehicles/FlareS/FlareS_L1</texPath>
@@ -40,4 +47,42 @@
 		
 		<constructionSkillPrerequisite>6</constructionSkillPrerequisite>
 	</Vehicles.VehicleBuildDef>
+	
+	
+	<Vehicles.VehicleBuildDef ParentName="guy762_SWVehicleBP_FlareS">
+		<defName>guy762_SWVehicleItemBP_FlareS</defName>
+		<label>Flare-S Swoop (from item)</label>
+		<statBases>
+			<WorkToBuild>5</WorkToBuild>
+		</statBases>
+		<costList Inherit="False">
+			<SWCP_ItemizedVehicle_FlareS>1</SWCP_ItemizedVehicle_FlareS>
+		</costList>
+		<constructionSkillPrerequisite>0</constructionSkillPrerequisite>
+	</Vehicles.VehicleBuildDef>
+	
+	<ThingDef ParentName="SWCP_ItemizedGroundVehicleBASE">
+		<defName>SWCP_ItemizedVehicle_FlareS</defName>
+		<label>vehicle, Flare-S Swoop</label>
+		<graphicData>
+			<texPath>LandVehicles/FlareS/FlareS_L1_east</texPath>
+		</graphicData>
+		
+		<statBases>
+			<MarketValue>2500</MarketValue>
+			<RoyalFavorValue>0.1</RoyalFavorValue>
+			<Mass>1</Mass>
+		</statBases>
+		
+		<thingSetMakerTags>
+			<!-- <li>RewardStandardMidFreq</li> -->
+		</thingSetMakerTags>
+		<tradeTags>
+			<li>SWCPTT_ItemizedGroundVehicles_CivilianBasic</li>
+			<li>SWCPTT_ItemizedGroundVehicles_ScumBasic</li>
+		<!-- individual faction tags -->
+			<li>SWCPTT_ItemizedGroundVehicles_HuttSurplus</li>
+			<li>SWCPTT_ItemizedGroundVehicles_BlackSunSurplus</li>
+		</tradeTags>
+	</ThingDef>
 </Defs>

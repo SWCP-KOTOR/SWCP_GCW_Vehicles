@@ -1,11 +1,18 @@
 <?xml version="1.0" encoding="utf-8" ?>
 
 <Defs>
-	<Vehicles.VehicleBuildDef ParentName="guy762_VehicleBaseBuildable_GroundVehicle">
-		<defName>guy762_SWVehicleBP_ATAT</defName>
+	
+	<DesignatorDropdownGroupDef>
+		<defName>guy762_SWVehicleBPDropdown_ATAT</defName>
 		<label>AT-AT Armored Transport</label>
+	</DesignatorDropdownGroupDef>
+	
+	<Vehicles.VehicleBuildDef Name="guy762_SWVehicleBP_ATAT" ParentName="guy762_VehicleBaseBuildable_GroundVehicle">
+		<defName>guy762_SWVehicleBP_ATAT</defName>
+		<label>AT-AT</label>
 		<description>.</description>
 		<designationCategory>MM_StarWarsShipBuildTab</designationCategory>
+		<designatorDropdown>guy762_SWVehicleBPDropdown_ATAT</designatorDropdown>
 		
 		<graphicData>
 			<texPath>LandVehicles/ATAT/ATAT</texPath>
@@ -45,4 +52,42 @@
 		
 		<constructionSkillPrerequisite>6</constructionSkillPrerequisite>
 	</Vehicles.VehicleBuildDef>
+	
+	<Vehicles.VehicleBuildDef ParentName="guy762_SWVehicleBP_ATAT">
+		<defName>guy762_SWVehicleItemBP_ATAT</defName>
+		<label>AT-AT (from item)</label>
+		<statBases>
+			<WorkToBuild>5</WorkToBuild>
+		</statBases>
+		<costList Inherit="False">
+			<SWCP_ItemizedVehicle_ATAT>1</SWCP_ItemizedVehicle_ATAT>
+		</costList>
+		<constructionSkillPrerequisite>0</constructionSkillPrerequisite>
+	</Vehicles.VehicleBuildDef>
+	
+	<ThingDef ParentName="SWCP_ItemizedGroundVehicleBASE">
+		<defName>SWCP_ItemizedVehicle_ATAT</defName>
+		<label>vehicle, AT-AT</label>
+		<graphicData>
+			<texPath>LandVehicles/ATAT/ATAT_east</texPath>
+		</graphicData>
+		
+		<statBases>
+			<MarketValue>150000</MarketValue>
+			<RoyalFavorValue>10</RoyalFavorValue>
+			<Mass>1</Mass>
+		</statBases>
+		
+		<thingSetMakerTags>
+			<!-- <li>RewardStandardMidFreq</li> -->
+		</thingSetMakerTags>
+		<tradeTags>
+			<li>SWCPTT_ItemizedGroundVehicles_ImperialExotic</li>
+		<!-- individual faction tags -->
+			<li>SWCPTT_ItemizedGroundVehicles_ImpRemnantSurplus</li>
+			<li>SWCPTT_ItemizedGroundVehicles_EriaduSurplus</li>
+			<li>SWCPTT_ItemizedGroundVehicles_ImpMandaloreSurplus</li>
+		</tradeTags>
+	</ThingDef>
+	
 </Defs>

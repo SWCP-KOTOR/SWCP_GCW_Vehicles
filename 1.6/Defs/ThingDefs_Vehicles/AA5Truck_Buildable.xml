@@ -1,11 +1,18 @@
 <?xml version="1.0" encoding="utf-8" ?>
 
 <Defs>
-	<Vehicles.VehicleBuildDef ParentName="guy762_VehicleBaseBuildable_GroundVehicle">
+	
+	<DesignatorDropdownGroupDef>
+		<defName>guy762_SWVehicleBPDropdown_AA5Truck</defName>
+		<label>A-A5 Speeder Truck</label>
+	</DesignatorDropdownGroupDef>
+	
+	<Vehicles.VehicleBuildDef Name="guy762_SWVehicleBP_AA5Truck" ParentName="guy762_VehicleBaseBuildable_GroundVehicle">
 		<defName>guy762_SWVehicleBP_AA5Truck</defName>
 		<label>A-A5 Speeder Truck</label>
 		<description>.</description>
 		<designationCategory>MM_StarWarsShipBuildTab</designationCategory>
+		<designatorDropdown>guy762_SWVehicleBPDropdown_AA5Truck</designatorDropdown>
 		
 		<graphicData>
 			<texPath>LandVehicles/AA5/AA5</texPath>
@@ -40,4 +47,44 @@
 		
 		<constructionSkillPrerequisite>6</constructionSkillPrerequisite>
 	</Vehicles.VehicleBuildDef>
+	
+	
+	<Vehicles.VehicleBuildDef ParentName="guy762_SWVehicleBP_AA5Truck">
+		<defName>guy762_SWVehicleItemBP_AA5Truck</defName>
+		<label>A-A5 Speeder Truck (from item)</label>
+		<statBases>
+			<WorkToBuild>5</WorkToBuild>
+		</statBases>
+		<costList Inherit="False">
+			<SWCP_ItemizedVehicle_AA5Truck>1</SWCP_ItemizedVehicle_AA5Truck>
+		</costList>
+		<constructionSkillPrerequisite>0</constructionSkillPrerequisite>
+	</Vehicles.VehicleBuildDef>
+	
+	<ThingDef ParentName="SWCP_ItemizedGroundVehicleBASE">
+		<defName>SWCP_ItemizedVehicle_AA5Truck</defName>
+		<label>vehicle, A-A5 Speeder Truck</label>
+		<graphicData>
+			<texPath>LandVehicles/AA5/AA5_east</texPath>
+		</graphicData>
+		
+		<statBases>
+			<MarketValue>13600</MarketValue>
+			<RoyalFavorValue>1</RoyalFavorValue>
+			<Mass>1</Mass>
+		</statBases>
+		
+		<thingSetMakerTags>
+			<!-- <li>RewardStandardMidFreq</li> -->
+		</thingSetMakerTags>
+		<tradeTags>
+			<li>SWCPTT_ItemizedGroundVehicles_RebelBasic</li>
+			<li>SWCPTT_ItemizedGroundVehicles_NewRepublicBasic</li>
+		<!-- individual faction tags -->
+			<li>SWCPTT_ItemizedGroundVehicles_NewRepublicSurplus</li>
+			<li>SWCPTT_ItemizedGroundVehicles_RebelCellSurplus</li>
+			<li>SWCPTT_ItemizedGroundVehicles_PartisanSurplus</li>
+		</tradeTags>
+	</ThingDef>
+	
 </Defs>

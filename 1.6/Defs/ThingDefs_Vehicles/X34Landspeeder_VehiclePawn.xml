@@ -44,7 +44,7 @@
 			<ArmorRating_Heat>0.65</ArmorRating_Heat>
 			<MaxHitPoints>500</MaxHitPoints>
 			<Flammability>0.5</Flammability>
-			<MarketValue>2500</MarketValue>
+			<MarketValue>4500</MarketValue>
 		</statBases>
 		
 		<soundSustainersOnEvent>

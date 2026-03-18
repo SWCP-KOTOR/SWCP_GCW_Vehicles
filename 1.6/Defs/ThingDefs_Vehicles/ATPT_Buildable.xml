@@ -1,11 +1,18 @@
 <?xml version="1.0" encoding="utf-8" ?>
 
 <Defs>
-	<Vehicles.VehicleBuildDef ParentName="guy762_VehicleBaseBuildable_GroundVehicle">
-		<defName>guy762_SWVehicleBP_ATPT</defName>
+	
+	<DesignatorDropdownGroupDef>
+		<defName>guy762_SWVehicleBPDropdown_ATPT</defName>
 		<label>AT-PT Force Multiplier Walker</label>
+	</DesignatorDropdownGroupDef>
+	
+	<Vehicles.VehicleBuildDef Name="guy762_SWVehicleBP_ATPT" ParentName="guy762_VehicleBaseBuildable_GroundVehicle">
+		<defName>guy762_SWVehicleBP_ATPT</defName>
+		<label>AT-PT</label>
 		<description>.</description>
 		<designationCategory>MM_StarWarsShipBuildTab</designationCategory>
+		<designatorDropdown>guy762_SWVehicleBPDropdown_ATPT</designatorDropdown>
 		
 		<graphicData>
 			<texPath>LandVehicles/ATPT/ATPT</texPath>
@@ -42,4 +49,41 @@
 		
 		<constructionSkillPrerequisite>6</constructionSkillPrerequisite>
 	</Vehicles.VehicleBuildDef>
+	
+	
+	<Vehicles.VehicleBuildDef ParentName="guy762_SWVehicleBP_ATPT">
+		<defName>guy762_SWVehicleItemBP_ATPT</defName>
+		<label>AT-PT (from item)</label>
+		<statBases>
+			<WorkToBuild>5</WorkToBuild>
+		</statBases>
+		<costList Inherit="False">
+			<SWCP_ItemizedVehicle_ATPT>1</SWCP_ItemizedVehicle_ATPT>
+		</costList>
+		<constructionSkillPrerequisite>0</constructionSkillPrerequisite>
+	</Vehicles.VehicleBuildDef>
+	
+	<ThingDef ParentName="SWCP_ItemizedGroundVehicleBASE">
+		<defName>SWCP_ItemizedVehicle_ATPT</defName>
+		<label>vehicle, AT-PT</label>
+		<graphicData>
+			<texPath>LandVehicles/ATPT/ATPT_east</texPath>
+		</graphicData>
+		
+		<statBases>
+			<MarketValue>36000</MarketValue>
+			<RoyalFavorValue>1</RoyalFavorValue>
+			<Mass>1</Mass>
+		</statBases>
+		
+		<thingSetMakerTags>
+			<!-- <li>RewardStandardMidFreq</li> -->
+		</thingSetMakerTags>
+		<tradeTags>
+			<li>SWCPTT_ItemizedGroundVehicles_ImperialBasic</li>
+		<!-- individual faction tags -->
+			<li>SWCPTT_ItemizedGroundVehicles_ImpRemnantSurplus</li>
+		</tradeTags>
+	</ThingDef>
+	
 </Defs>

@@ -98,7 +98,7 @@
 		</race>
 		
 		<vehicleStats>
-			<Mass>1000</Mass>
+			<Mass>5000</Mass>
 			<MoveSpeed>12.5</MoveSpeed>
 			<CargoCapacity>150</CargoCapacity>
 			<RepairRate>2</RepairRate>

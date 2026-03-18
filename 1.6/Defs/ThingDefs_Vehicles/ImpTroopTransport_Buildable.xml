@@ -1,11 +1,18 @@
 <?xml version="1.0" encoding="utf-8" ?>
 
 <Defs>
-	<Vehicles.VehicleBuildDef ParentName="guy762_VehicleBaseBuildable_GroundVehicle">
+	
+	<DesignatorDropdownGroupDef>
+		<defName>guy762_SWVehicleBPDropdown_ImpTroopTransport</defName>
+		<label>K79-S80 troop transport</label>
+	</DesignatorDropdownGroupDef>
+	
+	<Vehicles.VehicleBuildDef Name="guy762_SWVehicleBP_ImpTroopTransport" ParentName="guy762_VehicleBaseBuildable_GroundVehicle">
 		<defName>guy762_SWVehicleBP_ImpTroopTransport</defName>
 		<label>K79-S80 troop transport</label>
 		<description>.</description>
 		<designationCategory>MM_StarWarsShipBuildTab</designationCategory>
+		<designatorDropdown>guy762_SWVehicleBPDropdown_ImpTroopTransport</designatorDropdown>
 		
 		<graphicData>
 			<texPath>LandVehicles/ImpTroopTransport/ImpTroopTransport_L1</texPath>
@@ -40,4 +47,42 @@
 		
 		<constructionSkillPrerequisite>6</constructionSkillPrerequisite>
 	</Vehicles.VehicleBuildDef>
+	
+	
+	<Vehicles.VehicleBuildDef ParentName="guy762_SWVehicleBP_ImpTroopTransport">
+		<defName>guy762_SWVehicleItemBP_ImpTroopTransport</defName>
+		<label>K79-S80 troop transport (from item)</label>
+		<statBases>
+			<WorkToBuild>5</WorkToBuild>
+		</statBases>
+		<costList Inherit="False">
+			<SWCP_ItemizedVehicle_ImpTroopTransport>1</SWCP_ItemizedVehicle_ImpTroopTransport>
+		</costList>
+		<constructionSkillPrerequisite>0</constructionSkillPrerequisite>
+	</Vehicles.VehicleBuildDef>
+	
+	<ThingDef ParentName="SWCP_ItemizedGroundVehicleBASE">
+		<defName>SWCP_ItemizedVehicle_ImpTroopTransport</defName>
+		<label>vehicle, K79-S80 troop transport</label>
+		<graphicData>
+			<texPath>LandVehicles/ImpTroopTransport/ImpTroopTransport_L1_east</texPath>
+		</graphicData>
+		
+		<statBases>
+			<MarketValue>70000</MarketValue>
+			<RoyalFavorValue>4</RoyalFavorValue>
+			<Mass>1</Mass>
+		</statBases>
+		
+		<thingSetMakerTags>
+			<!-- <li>RewardStandardMidFreq</li> -->
+		</thingSetMakerTags>
+		<tradeTags>
+			<li>SWCPTT_ItemizedGroundVehicles_ImperialAdv</li>
+		<!-- individual faction tags -->
+			<li>SWCPTT_ItemizedGroundVehicles_MaldroodSurplus</li>
+			<li>SWCPTT_ItemizedGroundVehicles_ImpMandaloreSurplus</li>
+		</tradeTags>
+	</ThingDef>
+	
 </Defs>

@@ -40,7 +40,7 @@
 			<MaxHitPoints>300</MaxHitPoints> <!-- # of estimated XWMG hull points * 100 -->
 			
 			<Flammability>0.5</Flammability>
-			<MarketValue>42000</MarketValue>
+			<MarketValue>112000</MarketValue>
 			
 			<EnergyShieldRechargeRate>0.5</EnergyShieldRechargeRate>
 			<EnergyShieldEnergyMax>2</EnergyShieldEnergyMax>

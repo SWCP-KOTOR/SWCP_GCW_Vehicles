@@ -1,11 +1,18 @@
 <?xml version="1.0" encoding="utf-8" ?>
 
 <Defs>
-	<Vehicles.VehicleBuildDef ParentName="guy762_VehicleBaseBuildable_GroundVehicle">
+	
+	<DesignatorDropdownGroupDef>
+		<defName>guy762_SWVehicleBPDropdown_T2BTank</defName>
+		<label>T2-B Repulsor Tank</label>
+	</DesignatorDropdownGroupDef>
+	
+	<Vehicles.VehicleBuildDef Name="guy762_SWVehicleBP_T2BTank" ParentName="guy762_VehicleBaseBuildable_GroundVehicle">
 		<defName>guy762_SWVehicleBP_T2BTank</defName>
 		<label>T2-B Repulsor Tank</label>
 		<description>.</description>
 		<designationCategory>MM_StarWarsShipBuildTab</designationCategory>
+		<designatorDropdown>guy762_SWVehicleBPDropdown_T2BTank</designatorDropdown>
 		
 		<graphicData>
 			<texPath>LandVehicles/T2B/T2B</texPath>
@@ -40,4 +47,42 @@
 		
 		<constructionSkillPrerequisite>6</constructionSkillPrerequisite>
 	</Vehicles.VehicleBuildDef>
+	
+	
+	<Vehicles.VehicleBuildDef ParentName="guy762_SWVehicleBP_T2BTank">
+		<defName>guy762_SWVehicleItemBP_T2BTank</defName>
+		<label>T2-B Repulsor Tank (from item)</label>
+		<statBases>
+			<WorkToBuild>5</WorkToBuild>
+		</statBases>
+		<costList Inherit="False">
+			<SWCP_ItemizedVehicle_T2BTank>1</SWCP_ItemizedVehicle_T2BTank>
+		</costList>
+		<constructionSkillPrerequisite>0</constructionSkillPrerequisite>
+	</Vehicles.VehicleBuildDef>
+	
+	<ThingDef ParentName="SWCP_ItemizedGroundVehicleBASE">
+		<defName>SWCP_ItemizedVehicle_T2BTank</defName>
+		<label>vehicle, T2-B Repulsor Tank</label>
+		<graphicData>
+			<texPath>LandVehicles/T2B/T2B_east</texPath>
+		</graphicData>
+		
+		<statBases>
+			<MarketValue>77000</MarketValue>
+			<RoyalFavorValue>5</RoyalFavorValue>
+			<Mass>1</Mass>
+		</statBases>
+		
+		<thingSetMakerTags>
+			<!-- <li>RewardStandardMidFreq</li> -->
+		</thingSetMakerTags>
+		<tradeTags>
+			<li>SWCPTT_ItemizedGroundVehicles_RebelAdv</li>
+			<li>SWCPTT_ItemizedGroundVehicles_NewRepublicAdv</li>
+		<!-- individual faction tags -->
+			<li>SWCPTT_ItemizedGroundVehicles_NewRepublicSurplus</li>
+		</tradeTags>
+	</ThingDef>
+	
 </Defs>

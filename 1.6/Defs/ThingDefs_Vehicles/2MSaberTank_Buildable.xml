@@ -1,11 +1,18 @@
 <?xml version="1.0" encoding="utf-8" ?>
 
 <Defs>
-	<Vehicles.VehicleBuildDef ParentName="guy762_VehicleBaseBuildable_GroundVehicle">
-		<defName>guy762_SWVehicleBP_2MSaberTank</defName>
+	
+	<DesignatorDropdownGroupDef>
+		<defName>guy762_SWVehicleBPDropdown_2MSaberTank</defName>
 		<label>2-M Saber-class Hovertank</label>
+	</DesignatorDropdownGroupDef>
+	
+	<Vehicles.VehicleBuildDef Name="guy762_SWVehicleBP_2MSaberTank" ParentName="guy762_VehicleBaseBuildable_GroundVehicle">
+		<defName>guy762_SWVehicleBP_2MSaberTank</defName>
+		<label>2-M Saber tank</label>
 		<description>.</description>
 		<designationCategory>MM_StarWarsShipBuildTab</designationCategory>
+		<designatorDropdown>guy762_SWVehicleBPDropdown_2MSaberTank</designatorDropdown>
 		
 		<graphicData>
 			<texPath>LandVehicles/2MSaberTank/2MSaberTank</texPath>
@@ -40,4 +47,41 @@
 		
 		<constructionSkillPrerequisite>6</constructionSkillPrerequisite>
 	</Vehicles.VehicleBuildDef>
+	
+	
+	
+	<Vehicles.VehicleBuildDef ParentName="guy762_SWVehicleBP_2MSaberTank">
+		<defName>guy762_SWVehicleItemBP_2MSaberTank</defName>
+		<label>2-M Saber tank (from item)</label>
+		<statBases>
+			<WorkToBuild>5</WorkToBuild>
+		</statBases>
+		<costList Inherit="False">
+			<SWCP_ItemizedVehicle_2MSaberTank>1</SWCP_ItemizedVehicle_2MSaberTank>
+		</costList>
+		<constructionSkillPrerequisite>0</constructionSkillPrerequisite>
+	</Vehicles.VehicleBuildDef>
+	
+	<ThingDef ParentName="SWCP_ItemizedGroundVehicleBASE">
+		<defName>SWCP_ItemizedVehicle_2MSaberTank</defName>
+		<label>vehicle, 2-M Saber tank</label>
+		<graphicData>
+			<texPath>LandVehicles/2MSaberTank/2MSaberTank_east</texPath>
+		</graphicData>
+		
+		<statBases>
+			<MarketValue>112000</MarketValue>
+			<RoyalFavorValue>5</RoyalFavorValue>
+			<Mass>1</Mass>
+		</statBases>
+		
+		<thingSetMakerTags>
+			<!-- <li>RewardStandardMidFreq</li> -->
+		</thingSetMakerTags>
+		<tradeTags>
+			<li>SWCPTT_ItemizedGroundVehicles_ImperialAdv</li>
+		<!-- individual faction tags -->
+			<li>SWCPTT_ItemizedGroundVehicles_MaldroodSurplus</li>
+		</tradeTags>
+	</ThingDef>
 </Defs>

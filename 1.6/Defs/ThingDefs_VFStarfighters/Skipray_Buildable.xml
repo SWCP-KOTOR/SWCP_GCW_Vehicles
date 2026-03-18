@@ -63,7 +63,7 @@
 		<constructionSkillPrerequisite>0</constructionSkillPrerequisite>
 	</Vehicles.VehicleBuildDef>
 	
-	<ThingDef ParentName="SWCP_ItemizedVehicleBASE">
+	<ThingDef ParentName="SWCP_ItemizedStarfighterBASE">
 		<defName>SWCP_ItemizedVehicle_Skipray</defName>
 		<label>starfighter, Skipray Blastboat</label>
 		<graphicData>

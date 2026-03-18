@@ -68,7 +68,7 @@
 		<constructionSkillPrerequisite>0</constructionSkillPrerequisite>
 	</Vehicles.VehicleBuildDef>
 	
-	<ThingDef ParentName="SWCP_ItemizedVehicleBASE">
+	<ThingDef ParentName="SWCP_ItemizedStarfighterBASE">
 		<defName>SWCP_ItemizedVehicle_TIEAvg</defName>
 		<label>starfighter, TIE/ad Avenger</label>
 		<graphicData>
@@ -128,7 +128,7 @@
 		<constructionSkillPrerequisite>0</constructionSkillPrerequisite>
 	</Vehicles.VehicleBuildDef>
 	
-	<ThingDef ParentName="SWCP_ItemizedVehicleBASE">
+	<ThingDef ParentName="SWCP_ItemizedStarfighterBASE">
 		<defName>SWCP_ItemizedVehicle_TIEAvg_prototype</defName>
 		<label>starfighter, TIE/ad Avenger (prototype)</label>
 		<graphicData>
@@ -183,7 +183,7 @@
 		<constructionSkillPrerequisite>0</constructionSkillPrerequisite>
 	</Vehicles.VehicleBuildDef>
 	
-	<ThingDef ParentName="SWCP_ItemizedVehicleBASE">
+	<ThingDef ParentName="SWCP_ItemizedStarfighterBASE">
 		<defName>SWCP_ItemizedVehicle_TIEAvg_RoyalGuard</defName>
 		<label>starfighter, TIE/ad Avenger (Royal Guard)</label>
 		<graphicData>

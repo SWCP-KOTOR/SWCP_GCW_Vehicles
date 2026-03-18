@@ -2,11 +2,17 @@
 
 <Defs>
 	
+	<DesignatorDropdownGroupDef>
+		<defName>guy762_SWVehicleBPDropdown_TX225Occupier</defName>
+		<label>TX-225 GAVw "Occupier" Assault Tank</label>
+	</DesignatorDropdownGroupDef>
+	
 	<Vehicles.VehicleBuildDef Name="guy762_SWVehicleBP_TX225Occupier" ParentName="guy762_VehicleBaseBuildable_GroundVehicle">
 		<defName>guy762_SWVehicleBP_TX225Occupier</defName>
-		<label>TX-225 GAVw "Occupier" Assault Tank</label>
+		<label>TX-225 Occupier</label>
 		<description>.</description>
 		<designationCategory>MM_StarWarsShipBuildTab</designationCategory>
+		<designatorDropdown>guy762_SWVehicleBPDropdown_TX225Occupier</designatorDropdown>
 		
 		<graphicData>
 			<texPath>LandVehicles/TX225/TX225_L1</texPath>
@@ -43,6 +49,46 @@
 		
 		<constructionSkillPrerequisite>6</constructionSkillPrerequisite>
 	</Vehicles.VehicleBuildDef>
+	
+	
+	
+	
+	
+	
+	<Vehicles.VehicleBuildDef ParentName="guy762_SWVehicleBP_TX225Occupier">
+		<defName>guy762_SWVehicleItemBP_TX225Occupier</defName>
+		<label>TX-225 Occupier (from item)</label>
+		<statBases>
+			<WorkToBuild>5</WorkToBuild>
+		</statBases>
+		<costList Inherit="False">
+			<SWCP_ItemizedVehicle_TX225Occupier>1</SWCP_ItemizedVehicle_TX225Occupier>
+		</costList>
+		<constructionSkillPrerequisite>0</constructionSkillPrerequisite>
+	</Vehicles.VehicleBuildDef>
+	
+	<ThingDef ParentName="SWCP_ItemizedGroundVehicleBASE">
+		<defName>SWCP_ItemizedVehicle_TX225Occupier</defName>
+		<label>vehicle, TX-225 Occupier</label>
+		<graphicData>
+			<texPath>LandVehicles/TX225/TX225_L1_east</texPath>
+		</graphicData>
+		
+		<statBases>
+			<MarketValue>65000</MarketValue>
+			<RoyalFavorValue>4</RoyalFavorValue>
+			<Mass>1</Mass>
+		</statBases>
+		
+		<thingSetMakerTags>
+			<!-- <li>RewardStandardMidFreq</li> -->
+		</thingSetMakerTags>
+		<tradeTags>
+			<li>SWCPTT_ItemizedGroundVehicles_ImperialAdv</li>
+		<!-- individual faction tags -->
+			<li>SWCPTT_ItemizedGroundVehicles_ImpRemnantSurplus</li>
+		</tradeTags>
+	</ThingDef>
 
 	
 </Defs>

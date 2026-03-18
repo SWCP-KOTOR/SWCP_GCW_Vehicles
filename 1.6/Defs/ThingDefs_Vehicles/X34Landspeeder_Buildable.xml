@@ -1,11 +1,18 @@
 <?xml version="1.0" encoding="utf-8" ?>
 
 <Defs>
-	<Vehicles.VehicleBuildDef ParentName="guy762_VehicleBaseBuildable_GroundVehicle">
+	
+	<DesignatorDropdownGroupDef>
+		<defName>guy762_SWVehicleBPDropdown_X34Landspeeder</defName>
+		<label>X-34 Landspeeder</label>
+	</DesignatorDropdownGroupDef>
+	
+	<Vehicles.VehicleBuildDef Name="guy762_SWVehicleBP_X34Landspeeder" ParentName="guy762_VehicleBaseBuildable_GroundVehicle">
 		<defName>guy762_SWVehicleBP_X34Landspeeder</defName>
 		<label>X-34 Landspeeder</label>
 		<description>.</description>
 		<designationCategory>MM_StarWarsShipBuildTab</designationCategory>
+		<designatorDropdown>guy762_SWVehicleBPDropdown_X34Landspeeder</designatorDropdown>
 		
 		<graphicData>
 			<texPath>LandVehicles/X34Landspeeder/X34Landspeeder_L1</texPath>
@@ -40,4 +47,41 @@
 		
 		<constructionSkillPrerequisite>6</constructionSkillPrerequisite>
 	</Vehicles.VehicleBuildDef>
+	
+	
+	
+	
+	<Vehicles.VehicleBuildDef ParentName="guy762_SWVehicleBP_X34Landspeeder">
+		<defName>guy762_SWVehicleItemBP_X34Landspeeder</defName>
+		<label>X-34 Landspeeder (from item)</label>
+		<statBases>
+			<WorkToBuild>5</WorkToBuild>
+		</statBases>
+		<costList Inherit="False">
+			<SWCP_ItemizedVehicle_X34Landspeeder>1</SWCP_ItemizedVehicle_X34Landspeeder>
+		</costList>
+		<constructionSkillPrerequisite>0</constructionSkillPrerequisite>
+	</Vehicles.VehicleBuildDef>
+	
+	<ThingDef ParentName="SWCP_ItemizedGroundVehicleBASE">
+		<defName>SWCP_ItemizedVehicle_X34Landspeeder</defName>
+		<label>vehicle, X-34 Landspeeder</label>
+		<graphicData>
+			<texPath>LandVehicles/X34Landspeeder/X34Landspeeder_L1_east</texPath>
+		</graphicData>
+		
+		<statBases>
+			<MarketValue>4500</MarketValue>
+			<RoyalFavorValue>0.1</RoyalFavorValue>
+			<Mass>1</Mass>
+		</statBases>
+		
+		<thingSetMakerTags>
+			<!-- <li>RewardStandardMidFreq</li> -->
+		</thingSetMakerTags>
+		<tradeTags>
+			<li>SWCPTT_ItemizedGroundVehicles_CivilianBasic</li>
+		</tradeTags>
+	</ThingDef>
+	
 </Defs>

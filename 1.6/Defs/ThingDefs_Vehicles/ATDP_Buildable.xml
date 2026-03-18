@@ -1,11 +1,18 @@
 <?xml version="1.0" encoding="utf-8" ?>
 
 <Defs>
-	<Vehicles.VehicleBuildDef ParentName="guy762_VehicleBaseBuildable_GroundVehicle">
-		<defName>guy762_SWVehicleBP_ATDP</defName>
+	
+	<DesignatorDropdownGroupDef>
+		<defName>guy762_SWVehicleBPDropdown_ATDP</defName>
 		<label>AT-DP Defense Walker</label>
+	</DesignatorDropdownGroupDef>
+	
+	<Vehicles.VehicleBuildDef Name="guy762_SWVehicleBP_ATDP" ParentName="guy762_VehicleBaseBuildable_GroundVehicle">
+		<defName>guy762_SWVehicleBP_ATDP</defName>
+		<label>AT-DP</label>
 		<description>.</description>
 		<designationCategory>MM_StarWarsShipBuildTab</designationCategory>
+		<designatorDropdown>guy762_SWVehicleBPDropdown_ATDP</designatorDropdown>
 		
 		<graphicData>
 			<texPath>LandVehicles/ATDP/ATDP_L1</texPath>
@@ -44,4 +51,41 @@
 		
 		<constructionSkillPrerequisite>6</constructionSkillPrerequisite>
 	</Vehicles.VehicleBuildDef>
+	
+	
+	<Vehicles.VehicleBuildDef ParentName="guy762_SWVehicleBP_ATDP">
+		<defName>guy762_SWVehicleItemBP_ATDP</defName>
+		<label>AT-DP (from item)</label>
+		<statBases>
+			<WorkToBuild>5</WorkToBuild>
+		</statBases>
+		<costList Inherit="False">
+			<SWCP_ItemizedVehicle_ATDP>1</SWCP_ItemizedVehicle_ATDP>
+		</costList>
+		<constructionSkillPrerequisite>0</constructionSkillPrerequisite>
+	</Vehicles.VehicleBuildDef>
+	
+	<ThingDef ParentName="SWCP_ItemizedGroundVehicleBASE">
+		<defName>SWCP_ItemizedVehicle_ATDP</defName>
+		<label>vehicle, AT-DP</label>
+		<graphicData>
+			<texPath>LandVehicles/ATDP/ATDP_L1_east</texPath>
+		</graphicData>
+		
+		<statBases>
+			<MarketValue>50000</MarketValue>
+			<RoyalFavorValue>3</RoyalFavorValue>
+			<Mass>1</Mass>
+		</statBases>
+		
+		<thingSetMakerTags>
+			<!-- <li>RewardStandardMidFreq</li> -->
+		</thingSetMakerTags>
+		<tradeTags>
+			<li>SWCPTT_ItemizedGroundVehicles_ImperialAdv</li>
+		<!-- individual faction tags -->
+			<li>SWCPTT_ItemizedGroundVehicles_PentastarSurplus</li>
+		</tradeTags>
+	</ThingDef>
+	
 </Defs>

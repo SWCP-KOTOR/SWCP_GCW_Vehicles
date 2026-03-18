@@ -4,6 +4,7 @@
 	
 	<DesignatorDropdownGroupDef>
 		<defName>guy762_SWVehicleBPDropdown_BanthaIISkiff</defName>
+		<label>Bantha-II Skiffs</label>
 	</DesignatorDropdownGroupDef>
 	
 	<Vehicles.VehicleBuildDef Name="guy762_SWVehicleBP_BanthaIISkiff" ParentName="guy762_VehicleBaseBuildable_GroundVehicle">
@@ -62,7 +63,7 @@
 	
 	
 	
-	<Vehicles.VehicleBuildDef ParentName="guy762_VehicleBaseBuildable_GroundVehicle">
+	<Vehicles.VehicleBuildDef Name="guy762_SWVehicleBP_BanthaIISkiff_armed" ParentName="guy762_VehicleBaseBuildable_GroundVehicle">
 		<defName>guy762_SWVehicleBP_BanthaIISkiff_armed</defName>
 		<label>Bantha-II Armed Skiff</label>
 		<description>.</description>
@@ -106,5 +107,89 @@
 	
 	
 	
+	
+	
+	
+	
+	<Vehicles.VehicleBuildDef ParentName="guy762_SWVehicleBP_BanthaIISkiff">
+		<defName>guy762_SWVehicleItemBP_BanthaIISkiff</defName>
+		<label>Bantha-II Cargo Skiff (from item)</label>
+		<statBases>
+			<WorkToBuild>5</WorkToBuild>
+		</statBases>
+		<costList Inherit="False">
+			<SWCP_ItemizedVehicle_BanthaIISkiff>1</SWCP_ItemizedVehicle_BanthaIISkiff>
+		</costList>
+		<constructionSkillPrerequisite>0</constructionSkillPrerequisite>
+	</Vehicles.VehicleBuildDef>
+	
+	<Vehicles.VehicleBuildDef ParentName="guy762_SWVehicleBP_BanthaIISkiff_armed">
+		<defName>guy762_SWVehicleItemBP_BanthaIISkiff_armed</defName>
+		<label>Bantha-II Armed Skiff (from item)</label>
+		<statBases>
+			<WorkToBuild>5</WorkToBuild>
+		</statBases>
+		<costList Inherit="False">
+			<SWCP_ItemizedVehicle_BanthaIISkiff_armed>1</SWCP_ItemizedVehicle_BanthaIISkiff_armed>
+		</costList>
+		<constructionSkillPrerequisite>0</constructionSkillPrerequisite>
+	</Vehicles.VehicleBuildDef>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<ThingDef ParentName="SWCP_ItemizedGroundVehicleBASE">
+		<defName>SWCP_ItemizedVehicle_BanthaIISkiff</defName>
+		<label>vehicle, Bantha-II Cargo Skiff</label>
+		<graphicData>
+			<texPath>LandVehicles/BanthaIISkiff/BanthaIISkiff_L1_east</texPath>
+		</graphicData>
+		
+		<statBases>
+			<MarketValue>8000</MarketValue>
+			<RoyalFavorValue>0.2</RoyalFavorValue>
+			<Mass>1</Mass>
+		</statBases>
+		
+		<thingSetMakerTags>
+			<!-- <li>RewardStandardMidFreq</li> -->
+		</thingSetMakerTags>
+		<tradeTags>
+			<li>SWCPTT_ItemizedGroundVehicles_CivilianBasic</li>
+			<li>SWCPTT_ItemizedGroundVehicles_ScumBasic</li>
+		<!-- individual faction tags -->
+			<li>SWCPTT_ItemizedGroundVehicles_HuttSurplus</li>
+			<li>SWCPTT_ItemizedGroundVehicles_BlackSunSurplus</li>
+		</tradeTags>
+	</ThingDef>
+	
+	
+	<ThingDef ParentName="SWCP_ItemizedGroundVehicleBASE">
+		<defName>SWCP_ItemizedVehicle_BanthaIISkiff_armed</defName>
+		<label>vehicle, Bantha-II Armed Skiff</label>
+		<graphicData>
+			<texPath>LandVehicles/BanthaIISkiff/BanthaIISkiff_L1_east</texPath>
+		</graphicData>
+		
+		<statBases>
+			<MarketValue>9250</MarketValue>
+			<RoyalFavorValue>0.25</RoyalFavorValue>
+			<Mass>1</Mass>
+		</statBases>
+		
+		<thingSetMakerTags>
+			<!-- <li>RewardStandardMidFreq</li> -->
+		</thingSetMakerTags>
+		<tradeTags>
+			<li>SWCPTT_ItemizedGroundVehicles_ScumBasic</li>
+		<!-- individual faction tags -->
+			<li>SWCPTT_ItemizedGroundVehicles_HuttSurplus</li>
+		</tradeTags>
+	</ThingDef>
 	
 </Defs>

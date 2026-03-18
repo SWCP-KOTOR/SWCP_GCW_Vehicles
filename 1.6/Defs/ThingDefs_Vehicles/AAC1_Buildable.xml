@@ -1,11 +1,18 @@
 <?xml version="1.0" encoding="utf-8" ?>
 
 <Defs>
-	<Vehicles.VehicleBuildDef ParentName="guy762_VehicleBaseBuildable_GroundVehicle">
+	
+	<DesignatorDropdownGroupDef>
+		<defName>guy762_SWVehicleBPDropdown_AAC1Tank</defName>
+		<label>AAC-2 Speeder Tank</label>
+	</DesignatorDropdownGroupDef>
+	
+	<Vehicles.VehicleBuildDef Name="guy762_SWVehicleBP_AAC1Tank" ParentName="guy762_VehicleBaseBuildable_GroundVehicle">
 		<defName>guy762_SWVehicleBP_AAC1Tank</defName>
 		<label>AAC-2 Speeder Tank</label>
 		<description>.</description>
 		<designationCategory>MM_StarWarsShipBuildTab</designationCategory>
+		<designatorDropdown>guy762_SWVehicleBPDropdown_AAC1Tank</designatorDropdown>
 		
 		<graphicData>
 			<texPath>LandVehicles/AAC1/AAC1</texPath>
@@ -40,4 +47,41 @@
 		
 		<constructionSkillPrerequisite>6</constructionSkillPrerequisite>
 	</Vehicles.VehicleBuildDef>
+	
+	<Vehicles.VehicleBuildDef ParentName="guy762_SWVehicleBP_AAC1Tank">
+		<defName>guy762_SWVehicleItemBP_AAC1Tank</defName>
+		<label>AAC-2 Speeder Tank (from item)</label>
+		<statBases>
+			<WorkToBuild>5</WorkToBuild>
+		</statBases>
+		<costList Inherit="False">
+			<SWCP_ItemizedVehicle_AAC1Tank>1</SWCP_ItemizedVehicle_AAC1Tank>
+		</costList>
+		<constructionSkillPrerequisite>0</constructionSkillPrerequisite>
+	</Vehicles.VehicleBuildDef>
+	
+	<ThingDef ParentName="SWCP_ItemizedGroundVehicleBASE">
+		<defName>SWCP_ItemizedVehicle_AAC1Tank</defName>
+		<label>vehicle, AAC-2 Speeder Tank</label>
+		<graphicData>
+			<texPath>LandVehicles/AAC1/AAC1_east</texPath>
+		</graphicData>
+		
+		<statBases>
+			<MarketValue>54000</MarketValue>
+			<RoyalFavorValue>3</RoyalFavorValue>
+			<Mass>1</Mass>
+		</statBases>
+		
+		<thingSetMakerTags>
+			<!-- <li>RewardStandardMidFreq</li> -->
+		</thingSetMakerTags>
+		<tradeTags>
+			<li>SWCPTT_ItemizedGroundVehicles_RebelAdv</li>
+			<li>SWCPTT_ItemizedGroundVehicles_NewRepublicBasic</li>
+		<!-- individual faction tags -->
+			<li>SWCPTT_ItemizedGroundVehicles_NewRepublicSurplus</li>
+		</tradeTags>
+	</ThingDef>
+	
 </Defs>

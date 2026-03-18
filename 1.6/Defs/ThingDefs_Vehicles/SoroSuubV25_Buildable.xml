@@ -1,11 +1,18 @@
 <?xml version="1.0" encoding="utf-8" ?>
 
 <Defs>
-	<Vehicles.VehicleBuildDef ParentName="guy762_VehicleBaseBuildable_GroundVehicle">
-		<defName>guy762_SWVehicleBP_SoroSuubV25CombatSpeeder</defName>
+	
+	<DesignatorDropdownGroupDef>
+		<defName>guy762_SWVehicleBPDropdown_SoroSuubV25CombatSpeeder</defName>
 		<label>SoroSuub V-25 Combat Speeder</label>
+	</DesignatorDropdownGroupDef>
+	
+	<Vehicles.VehicleBuildDef Name="guy762_SWVehicleBP_SoroSuubV25CombatSpeeder" ParentName="guy762_VehicleBaseBuildable_GroundVehicle">
+		<defName>guy762_SWVehicleBP_SoroSuubV25CombatSpeeder</defName>
+		<label>SoroSuub V-25</label>
 		<description>.</description>
 		<designationCategory>MM_StarWarsShipBuildTab</designationCategory>
+		<designatorDropdown>guy762_SWVehicleBPDropdown_SoroSuubV25CombatSpeeder</designatorDropdown>
 		
 		<graphicData>
 			<texPath>LandVehicles/SoroSuubV25/SoroSuubV25</texPath>
@@ -40,4 +47,41 @@
 		
 		<constructionSkillPrerequisite>6</constructionSkillPrerequisite>
 	</Vehicles.VehicleBuildDef>
+	
+	<Vehicles.VehicleBuildDef ParentName="guy762_SWVehicleBP_SoroSuubV25CombatSpeeder">
+		<defName>guy762_SWVehicleItemBP_SoroSuubV25CombatSpeeder</defName>
+		<label>SoroSuub V-25 (from item)</label>
+		<statBases>
+			<WorkToBuild>5</WorkToBuild>
+		</statBases>
+		<costList Inherit="False">
+			<SWCP_ItemizedVehicle_SoroSuubV25CombatSpeeder>1</SWCP_ItemizedVehicle_SoroSuubV25CombatSpeeder>
+		</costList>
+		<constructionSkillPrerequisite>0</constructionSkillPrerequisite>
+	</Vehicles.VehicleBuildDef>
+	
+	<ThingDef ParentName="SWCP_ItemizedGroundVehicleBASE">
+		<defName>SWCP_ItemizedVehicle_SoroSuubV25CombatSpeeder</defName>
+		<label>vehicle, SoroSuub V-25</label>
+		<graphicData>
+			<texPath>LandVehicles/SoroSuubV25/SoroSuubV25_east</texPath>
+		</graphicData>
+		
+		<statBases>
+			<MarketValue>42000</MarketValue>
+			<RoyalFavorValue>2</RoyalFavorValue>
+			<Mass>1</Mass>
+		</statBases>
+		
+		<thingSetMakerTags>
+			<!-- <li>RewardStandardMidFreq</li> -->
+		</thingSetMakerTags>
+		<tradeTags>
+			<li>SWCPTT_ItemizedGroundVehicles_RebelBasic</li>
+		<!-- individual faction tags -->
+			<li>SWCPTT_ItemizedGroundVehicles_RebelCellSurplus</li>
+			<li>SWCPTT_ItemizedGroundVehicles_PartisanSurplus</li>
+		</tradeTags>
+	</ThingDef>
+	
 </Defs>

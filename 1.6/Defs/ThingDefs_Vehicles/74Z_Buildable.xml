@@ -1,11 +1,18 @@
 <?xml version="1.0" encoding="utf-8" ?>
 
 <Defs>
-	<Vehicles.VehicleBuildDef ParentName="guy762_VehicleBaseBuildable_GroundVehicle">
+	
+	<DesignatorDropdownGroupDef>
+		<defName>guy762_SWVehicleBPDropdown_74ZSpeeder</defName>
+		<label>74ZSpeeder</label>
+	</DesignatorDropdownGroupDef>
+	
+	<Vehicles.VehicleBuildDef Name="guy762_SWVehicleBP_74ZSpeeder" ParentName="guy762_VehicleBaseBuildable_GroundVehicle">
 		<defName>guy762_SWVehicleBP_74ZSpeeder</defName>
-		<label>Aratech 74-Z Speeder Bike</label>
+		<label>74-Z Speeder Bike</label>
 		<description>.</description>
 		<designationCategory>MM_StarWarsShipBuildTab</designationCategory>
+		<designatorDropdown>guy762_SWVehicleBPDropdown_74ZSpeeder</designatorDropdown>
 		
 		<graphicData>
 			<texPath>LandVehicles/74Z/74Z_L1</texPath>
@@ -40,4 +47,41 @@
 		
 		<constructionSkillPrerequisite>6</constructionSkillPrerequisite>
 	</Vehicles.VehicleBuildDef>
+	
+	<Vehicles.VehicleBuildDef ParentName="guy762_SWVehicleBP_74ZSpeeder">
+		<defName>guy762_SWVehicleItemBP_74ZSpeeder</defName>
+		<label>74-Z Speeder Bike (from item)</label>
+		<statBases>
+			<WorkToBuild>5</WorkToBuild>
+		</statBases>
+		<costList Inherit="False">
+			<SWCP_ItemizedVehicle_74ZSpeeder>1</SWCP_ItemizedVehicle_74ZSpeeder>
+		</costList>
+		<constructionSkillPrerequisite>0</constructionSkillPrerequisite>
+	</Vehicles.VehicleBuildDef>
+	
+	<ThingDef ParentName="SWCP_ItemizedGroundVehicleBASE">
+		<defName>SWCP_ItemizedVehicle_74ZSpeeder</defName>
+		<label>vehicle, 74-Z Speeder Bike</label>
+		<graphicData>
+			<texPath>LandVehicles/74Z/74Z_L1_east</texPath>
+		</graphicData>
+		
+		<statBases>
+			<MarketValue>3000</MarketValue>
+			<RoyalFavorValue>0.2</RoyalFavorValue>
+			<Mass>1</Mass>
+		</statBases>
+		
+		<thingSetMakerTags>
+			<!-- <li>RewardStandardMidFreq</li> -->
+		</thingSetMakerTags>
+		<tradeTags>
+			<li>SWCPTT_ItemizedGroundVehicles_ImperialBasic</li>
+		<!-- individual faction tags -->
+			<li>SWCPTT_ItemizedGroundVehicles_ImpRemnantSurplus</li>
+			<li>SWCPTT_ItemizedGroundVehicles_MaldroodSurplus</li>
+		</tradeTags>
+	</ThingDef>
+	
 </Defs>

@@ -70,7 +70,7 @@
 			<MaxHitPoints>200</MaxHitPoints> <!-- # of estimated XWMG hull points * 100 -->
 			
 			<Flammability>0.5</Flammability>
-			<MarketValue>19000</MarketValue>
+			<MarketValue>42000</MarketValue>
 		</statBases>
 		
 		<soundSustainersOnEvent>

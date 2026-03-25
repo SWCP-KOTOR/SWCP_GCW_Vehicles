@@ -9,7 +9,7 @@
 	
 	<Vehicles.VehicleBuildDef Name="guy762_SWVehicleBP_DX10Transport" ParentName="VehicleBaseBuildable">
 		<defName>guy762_SWVehicleBP_DX10Transport</defName>
-		<label>DX-10</label>
+		<label>DX-10 transport</label>
 		<description>.</description>
 		<designationCategory>MM_StarWarsShipBuildTab</designationCategory>
 		<designatorDropdown>guy762_SWVehicleBPDropdown_DX10Transport</designatorDropdown>
@@ -55,7 +55,7 @@
 	
 	<Vehicles.VehicleBuildDef ParentName="guy762_SWVehicleBP_DX10Transport">
 		<defName>guy762_SWVehicleItemBP_DX10Transport</defName>
-		<label>DX-10 (from item)</label>
+		<label>DX-10 transport (from item)</label>
 		<statBases>
 			<WorkToBuild>5</WorkToBuild>
 		</statBases>
@@ -67,7 +67,7 @@
 	
 	<ThingDef ParentName="SWCP_ItemizedStarfighterBASE">
 		<defName>SWCP_ItemizedVehicle_DX10Transport</defName>
-		<label>starfighter, DX-10</label>
+		<label>starfighter, DX-10 transport</label>
 		<graphicData>
 			<texPath>Starfighters/DX10Transport/DX10Transport_east</texPath>
 		</graphicData>

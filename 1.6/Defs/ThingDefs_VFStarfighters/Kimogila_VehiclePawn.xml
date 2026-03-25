@@ -45,9 +45,9 @@
 			<!--ArmorRating_Sharp>+0.05</ArmorRating_Sharp>
 			<ArmorRating_Blunt>-0.1</ArmorRating_Blunt>        BASE CURVE FOR HARD ARMOR
 			<ArmorRating_Heat>+0.15</ArmorRating_Heat-->
-			<ArmorRating_Sharp>0.75</ArmorRating_Sharp>
-			<ArmorRating_Blunt>0.6</ArmorRating_Blunt> <!-- # of estimated XWMG hull points * 0.1, apply to hard armor curve -->
-			<ArmorRating_Heat>0.85</ArmorRating_Heat>
+			<!--B--><ArmorRating_Sharp>0.075</ArmorRating_Sharp>
+			<!--B--><ArmorRating_Blunt>0.06</ArmorRating_Blunt> <!-- # of estimated XWMG hull points * 0.1, apply to hard armor curve -->
+			<!--B--><ArmorRating_Heat>0.085</ArmorRating_Heat>
 			<MaxHitPoints>7000</MaxHitPoints> <!-- # of estimated XWMG hull points * 1000 -->
 			
 			<MarketValue>125000</MarketValue>
@@ -385,10 +385,10 @@
 				<depth>External</depth>
 				
 				<armor>
-					<ArmorRating_Sharp>1.75</ArmorRating_Sharp>
-					<ArmorRating_Blunt>1.6</ArmorRating_Blunt> <!-- # of estimated XWMG hull points * 0.1, apply to hard armor curve -->
-					<ArmorRating_Heat>1.85</ArmorRating_Heat>
-					<IncomingDamageFactor>-0.35</IncomingDamageFactor> <!-- # of estimated XWMG hull points * -0.05 -->
+					<!--H--><ArmorRating_Sharp>0.75</ArmorRating_Sharp>
+					<!--H--><ArmorRating_Blunt>0.6</ArmorRating_Blunt> <!-- # of estimated XWMG hull points * 0.1, apply to hard armor curve -->
+					<!--H--><ArmorRating_Heat>0.85</ArmorRating_Heat>
+					<IncomingDamageFactor>-0.20</IncomingDamageFactor> <!-- Interceptors: 0.10 | StrikeFighters: 0.15 | AssaultFighters: 0.20 | Transports: 0.25 -->
 				</armor>
 				<health>700</health> <!-- # of estimated XWMG hull points * 100 -->
 				
@@ -534,7 +534,7 @@
 	
 	
 	
-	<Vehicles.VehicleTurretDef ParentName="VehicleTurretBase">
+	<Vehicles.VehicleTurretDef ParentName="guy762_StarfighterTurretBASE">
 		<defName>guy762_VehicleTurret_Kimogila_chin</defName>
 		<label>Kimogila chin gun</label>
 		<description>The chin gun of an M12-L Kimogila heavy starfighter.</description>
@@ -588,7 +588,7 @@
 	
 	
 	
-	<Vehicles.VehicleTurretDef ParentName="VehicleTurretBase">
+	<Vehicles.VehicleTurretDef ParentName="guy762_StarfighterTurretBASE">
 		<defName>guy762_VehicleTurret_Kimogila_main</defName>
 		<label>Kimogila main gun</label>
 		<description>The main gun of an M12-L Kimogila heavy starfighter.</description>

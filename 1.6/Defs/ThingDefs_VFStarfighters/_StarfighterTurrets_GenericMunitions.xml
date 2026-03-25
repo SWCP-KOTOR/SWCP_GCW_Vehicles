@@ -3,7 +3,7 @@
 <Defs>	
 
 		<!-- used by: B-Wing, Kimogila, Scurrg, Skipray, StarViper, X-Wing, YT-2400 -->
-	<Vehicles.VehicleTurretDef ParentName="VehicleTurretBase">
+	<Vehicles.VehicleTurretDef ParentName="guy762_VehicleTurretBASE">
 		<defName>guy762_VehicleTurret_ProTorp</defName>
 		<label>proton torpedo launcher</label>
 		<description>A proton torpedo launcher.</description>
@@ -62,7 +62,7 @@
 	
 	
 		<!-- used by: Y-Wing, Supa Fighter -->
-	<Vehicles.VehicleTurretDef ParentName="VehicleTurretBase">
+	<Vehicles.VehicleTurretDef ParentName="guy762_VehicleTurretBASE">
 		<defName>guy762_VehicleTurret_IonTorp</defName>
 		<label>ion torpedo launcher</label>
 		<description>An ion torpedo launcher.</description>
@@ -123,7 +123,7 @@
 	
 	
 		<!-- used by: Scyk, TIE Avenger (Mass Production, Royal Guard) -->
-	<Vehicles.VehicleTurretDef ParentName="VehicleTurretBase">
+	<Vehicles.VehicleTurretDef ParentName="guy762_StarfighterTurretBASE">
 		<defName>guy762_VehicleTurret_SeekerMissile</defName>
 		<label>seeker missile launcher</label>
 		<description>A seeker missile launcher.</description>
@@ -175,7 +175,7 @@
 	
 	
 		<!-- used by: A-Wing, Kihraxz, LAAT/i, Supa Fighter, TIE Avenger (Prototype) -->
-	<Vehicles.VehicleTurretDef ParentName="VehicleTurretBase">
+	<Vehicles.VehicleTurretDef ParentName="guy762_StarfighterTurretBASE">
 		<defName>guy762_VehicleTurret_ConcMissile</defName>
 		<label>concussion missile launcher</label>
 		<description>A concussion missile launcher.</description>
@@ -227,7 +227,7 @@
 	
 
 		<!-- used by: Rihkxyrk, Kimogila, TIE Defender -->
-	<Vehicles.VehicleTurretDef ParentName="VehicleTurretBase">
+	<Vehicles.VehicleTurretDef ParentName="guy762_StarfighterTurretBASE">
 		<defName>guy762_VehicleTurret_IonMissile</defName>
 		<label>ion missile launcher</label>
 		<description>An ion missile launcher.</description>
@@ -288,7 +288,7 @@
 	
 	
 		<!-- used by: Z-95, Rihkxyrk -->
-	<Vehicles.VehicleTurretDef ParentName="VehicleTurretBase">
+	<Vehicles.VehicleTurretDef ParentName="guy762_StarfighterTurretBASE">
 		<defName>guy762_VehicleTurret_RocketBarrage</defName>
 		<label>barrage rocket launcher</label>
 		<description>A rapid rocket launcher.</description>
@@ -349,7 +349,7 @@
 	
 	
 		<!-- used by: Y-Wing, HWK-290, Scurrg, TIE Bomber, TIE Striker -->
-	<Vehicles.VehicleTurretDef ParentName="VehicleTurretBase">
+	<Vehicles.VehicleTurretDef ParentName="guy762_VehicleTurretBASE">
 		<defName>guy762_VehicleTurret_ProtonBombs</defName>
 		<label>Proton Bomb Bay</label>
 		<description>Drops proton bombs.</description>

@@ -52,9 +52,9 @@
 			<!--ArmorRating_Sharp>+0.05</ArmorRating_Sharp>
 			<ArmorRating_Blunt>-0.1</ArmorRating_Blunt>        BASE CURVE FOR HARD ARMOR
 			<ArmorRating_Heat>+0.15</ArmorRating_Heat-->
-			<ArmorRating_Sharp>0.25</ArmorRating_Sharp>
-			<ArmorRating_Blunt>0.1</ArmorRating_Blunt> <!-- # of estimated XWMG hull points * 0.1, apply to hard armor curve -->
-			<ArmorRating_Heat>0.35</ArmorRating_Heat>
+			<!--B--><ArmorRating_Sharp>0.025</ArmorRating_Sharp>
+			<!--B--><ArmorRating_Blunt>0.01</ArmorRating_Blunt> <!-- # of estimated XWMG hull points * 0.1, apply to hard armor curve -->
+			<!--B--><ArmorRating_Heat>0.035</ArmorRating_Heat>
 			<MaxHitPoints>2000</MaxHitPoints> <!-- # of estimated XWMG hull points * 1000 -->
 			
 			<MarketValue>90000</MarketValue>
@@ -334,10 +334,10 @@
 				<depth>External</depth>
 				
 				<armor>
-					<ArmorRating_Sharp>1.25</ArmorRating_Sharp>
-					<ArmorRating_Blunt>1.1</ArmorRating_Blunt> <!-- # of estimated XWMG hull points * 0.1, apply to hard armor curve -->
-					<ArmorRating_Heat>1.35</ArmorRating_Heat>
-					<IncomingDamageFactor>-0.10</IncomingDamageFactor> <!-- # of estimated XWMG hull points * -0.05 -->
+					<!--H--><ArmorRating_Sharp>0.25</ArmorRating_Sharp>
+					<!--H--><ArmorRating_Blunt>0.1</ArmorRating_Blunt> <!-- # of estimated XWMG hull points * 0.1, apply to hard armor curve -->
+					<!--H--><ArmorRating_Heat>0.35</ArmorRating_Heat>
+					<IncomingDamageFactor>-0.10</IncomingDamageFactor> <!-- Interceptors: 0.10 | StrikeFighters: 0.15 | AssaultFighters: 0.20 | Transports: 0.25 -->
 				</armor>
 				<health>200</health> <!-- # of estimated XWMG hull points * 100 -->
 				
@@ -447,7 +447,7 @@
 	
 	
 	
-	<Vehicles.VehicleTurretDef ParentName="VehicleTurretBase">
+	<Vehicles.VehicleTurretDef ParentName="guy762_StarfighterTurretBASE">
 		<defName>guy762_VehicleTurret_AWing_Main</defName>
 		<label>A-Wing main gun</label>
 		<description>The main gun of an RZ-1 A-Wing Starfighter.</description>

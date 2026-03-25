@@ -153,7 +153,8 @@
       </li>
     </verbs>
 	<modExtensions>
-	  <li Class="IgnoreConfigErrors.Ignore_ForcedMissRadius" />
+		<li Class="IgnoreConfigErrors.Ignore_ForcedMissRadius" />
+		<li MayRequire="EBSG.Framework" Class="EBSGFramework.TurretRoofBlocked" />
 	</modExtensions>
   </ThingDef>
 

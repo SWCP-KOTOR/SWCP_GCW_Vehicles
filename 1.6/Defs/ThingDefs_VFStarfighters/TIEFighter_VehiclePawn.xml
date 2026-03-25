@@ -38,9 +38,9 @@
 			<!--ArmorRating_Sharp>+0.05</ArmorRating_Sharp>
 			<ArmorRating_Blunt>-0.1</ArmorRating_Blunt>        BASE CURVE FOR HARD ARMOR
 			<ArmorRating_Heat>+0.15</ArmorRating_Heat-->
-			<ArmorRating_Sharp>0.35</ArmorRating_Sharp>
-			<ArmorRating_Blunt>0.2</ArmorRating_Blunt> <!-- # of estimated XWMG hull points * 0.1, apply to hard armor curve -->
-			<ArmorRating_Heat>0.45</ArmorRating_Heat>
+			<!--B--><ArmorRating_Sharp>0.035</ArmorRating_Sharp>
+			<!--B--><ArmorRating_Blunt>0.02</ArmorRating_Blunt> <!-- # of estimated XWMG hull points * 0.1, apply to hard armor curve -->
+			<!--B--><ArmorRating_Heat>0.045</ArmorRating_Heat>
 			<MaxHitPoints>3000</MaxHitPoints> <!-- # of estimated XWMG hull points * 1000 -->
 			
 			<MarketValue>25000</MarketValue>
@@ -243,10 +243,10 @@
 				<depth>External</depth>
 				
 				<armor>
-					<ArmorRating_Sharp>1.35</ArmorRating_Sharp>
-					<ArmorRating_Blunt>1.2</ArmorRating_Blunt> <!-- # of estimated XWMG hull points * 0.1, apply to hard armor curve -->
-					<ArmorRating_Heat>1.45</ArmorRating_Heat>
-					<IncomingDamageFactor>-0.15</IncomingDamageFactor> <!-- # of estimated XWMG hull points * -0.05 -->
+					<!--H--><ArmorRating_Sharp>0.35</ArmorRating_Sharp>
+					<!--H--><ArmorRating_Blunt>0.2</ArmorRating_Blunt> <!-- # of estimated XWMG hull points * 0.1, apply to hard armor curve -->
+					<!--H--><ArmorRating_Heat>0.45</ArmorRating_Heat>
+					<IncomingDamageFactor>-0.15</IncomingDamageFactor> <!-- Interceptors: 0.10 | StrikeFighters: 0.15 | AssaultFighters: 0.20 | Transports: 0.25 -->
 				</armor>
 				<health>300</health> <!-- # of estimated XWMG hull points * 100 -->
 				
@@ -315,7 +315,7 @@
 						<indicator>VF_Explosive</indicator>
 						<chance>0.5</chance>
 						<maxHealth>0.2</maxHealth>
-						<radius>18</radius>
+						<radius>5</radius>
 						<damageDef>guy762_ExplosiveDamage_energy</damageDef>
 					</li>
 				</reactors>
@@ -356,7 +356,7 @@
 	
 	
 	
-	<Vehicles.VehicleTurretDef ParentName="VehicleTurretBase">
+	<Vehicles.VehicleTurretDef ParentName="guy762_StarfighterTurretBASE">
 		<defName>guy762_VehicleTurret_TIEFighter_main</defName>
 		<label>TIE/ln main gun</label>
 		<description>The main gun of a TIE fighter.</description>

@@ -85,18 +85,33 @@
 	
 	
 	
-	<PrefabDef>
-		<defName>SWCPTurretPrefab_FPC67AntiAir</defName>
+	<PrefabDef Name="SWCPTurretPrefab_FPC67AntiAirBASE" Abstract="True">
 		<size>(4,4)</size>
 		<things>
 			<guy762_SWTurret_FPC67AntiAir>
 				<position>(1, 0, 1)</position>
 			</guy762_SWTurret_FPC67AntiAir>
 		</things>
-	  
+	</PrefabDef>
+	
+	
+	<PrefabDef ParentName="SWCPTurretPrefab_FPC67AntiAirBASE">
+		<defName>SWCPTurretPrefab_FPC67AntiAir_ImpRemnant</defName>
+		
 		<modExtensions>
 			<li Class="SWCP_Misc.PrefabDefExtension_Faction">
 				<factionDef>guy762_SWWarlordsFaction_ImpRemnant</factionDef>
+			</li>
+		</modExtensions>
+	</PrefabDef>
+	
+	
+	<PrefabDef ParentName="SWCPTurretPrefab_FPC67AntiAirBASE">
+		<defName>SWCPTurretPrefab_FPC67AntiAir_Militia</defName>
+		
+		<modExtensions>
+			<li Class="SWCP_Misc.PrefabDefExtension_Faction">
+				<factionDef>guy762_SWWarlordsFaction_PDF</factionDef>
 			</li>
 		</modExtensions>
 	</PrefabDef>

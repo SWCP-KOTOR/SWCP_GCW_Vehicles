@@ -68,9 +68,9 @@
 			<!--ArmorRating_Sharp>+0.05</ArmorRating_Sharp>
 			<ArmorRating_Blunt>-0.1</ArmorRating_Blunt>        BASE CURVE FOR HARD ARMOR
 			<ArmorRating_Heat>+0.15</ArmorRating_Heat-->
-			<ArmorRating_Sharp>0.45</ArmorRating_Sharp>
-			<ArmorRating_Blunt>0.3</ArmorRating_Blunt> <!-- # of estimated XWMG hull points * 0.1, apply to hard armor curve -->
-			<ArmorRating_Heat>0.55</ArmorRating_Heat>
+			<!--B--><ArmorRating_Sharp>0.045</ArmorRating_Sharp>
+			<!--B--><ArmorRating_Blunt>0.03</ArmorRating_Blunt> <!-- # of estimated XWMG hull points * 0.1, apply to hard armor curve -->
+			<!--B--><ArmorRating_Heat>0.055</ArmorRating_Heat>
 			<MaxHitPoints>4000</MaxHitPoints> <!-- # of estimated XWMG hull points * 1000 -->
 			
 			<MarketValue>160000</MarketValue>
@@ -351,10 +351,10 @@
 				<depth>External</depth>
 				
 				<armor>
-					<ArmorRating_Sharp>1.45</ArmorRating_Sharp>
-					<ArmorRating_Blunt>1.3</ArmorRating_Blunt> <!-- # of estimated XWMG hull points * 0.1, apply to hard armor curve -->
-					<ArmorRating_Heat>1.55</ArmorRating_Heat>
-					<IncomingDamageFactor>-0.20</IncomingDamageFactor> <!-- # of estimated XWMG hull points * -0.05 -->
+					<!--H--><ArmorRating_Sharp>0.45</ArmorRating_Sharp>
+					<!--H--><ArmorRating_Blunt>0.3</ArmorRating_Blunt> <!-- # of estimated XWMG hull points * 0.1, apply to hard armor curve -->
+					<!--H--><ArmorRating_Heat>0.55</ArmorRating_Heat>
+					<IncomingDamageFactor>-0.10</IncomingDamageFactor> <!-- Interceptors: 0.10 | StrikeFighters: 0.15 | AssaultFighters: 0.20 | Transports: 0.25 -->
 				</armor>
 				<health>400</health> <!-- # of estimated XWMG hull points * 100 -->
 				
@@ -544,7 +544,7 @@
 	
 	
 	
-	<Vehicles.VehicleTurretDef ParentName="VehicleTurretBase">
+	<Vehicles.VehicleTurretDef ParentName="guy762_StarfighterTurretBASE">
 		<defName>guy762_VehicleTurret_StarViper_main</defName>
 		<label>StarViper main gun</label>
 		<description>The main gun of a StarViper-class attack platform.</description>

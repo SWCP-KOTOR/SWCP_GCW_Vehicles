@@ -54,9 +54,9 @@
 			<!--ArmorRating_Sharp>+0.05</ArmorRating_Sharp>
 			<ArmorRating_Blunt>-0.1</ArmorRating_Blunt>        BASE CURVE FOR HARD ARMOR
 			<ArmorRating_Heat>+0.15</ArmorRating_Heat-->
-			<ArmorRating_Sharp>0.85</ArmorRating_Sharp>
-			<ArmorRating_Blunt>0.7</ArmorRating_Blunt> <!-- # of estimated XWMG hull points * 0.1, apply to hard armor curve -->
-			<ArmorRating_Heat>0.95</ArmorRating_Heat>
+			<!--B--><ArmorRating_Sharp>0.085</ArmorRating_Sharp>
+			<!--B--><ArmorRating_Blunt>0.07</ArmorRating_Blunt> <!-- # of estimated XWMG hull points * 0.1, apply to hard armor curve -->
+			<!--B--><ArmorRating_Heat>0.095</ArmorRating_Heat>
 			<MaxHitPoints>8000</MaxHitPoints> <!-- # of estimated XWMG hull points * 1000 -->
 			
 			<MarketValue>85000</MarketValue>
@@ -472,10 +472,10 @@
 				<depth>External</depth>
 				
 				<armor>
-					<ArmorRating_Sharp>1.85</ArmorRating_Sharp>
-					<ArmorRating_Blunt>1.7</ArmorRating_Blunt> <!-- # of estimated XWMG hull points * 0.1, apply to hard armor curve -->
-					<ArmorRating_Heat>1.95</ArmorRating_Heat>
-					<IncomingDamageFactor>-0.40</IncomingDamageFactor> <!-- # of estimated XWMG hull points * -0.05 -->
+					<!--H--><ArmorRating_Sharp>0.85</ArmorRating_Sharp>
+					<!--H--><ArmorRating_Blunt>0.7</ArmorRating_Blunt> <!-- # of estimated XWMG hull points * 0.1, apply to hard armor curve -->
+					<!--H--><ArmorRating_Heat>0.95</ArmorRating_Heat>
+					<IncomingDamageFactor>-0.25</IncomingDamageFactor> <!-- Interceptors: 0.10 | StrikeFighters: 0.15 | AssaultFighters: 0.20 | Transports: 0.25 -->
 				</armor>
 				<health>800</health> <!-- # of estimated XWMG hull points * 100 -->
 				
@@ -588,7 +588,7 @@
 
 	
 	
-	<Vehicles.VehicleTurretDef ParentName="VehicleTurretBase">
+	<Vehicles.VehicleTurretDef ParentName="guy762_StarfighterTurretBASE">
 		<defName>guy762_VehicleTurret_LAATi_Main</defName>
 		<label>LAAT/i anti-infantry repeater</label>
 		<description>The repeater turret of a LAAT/i gunship.</description>
@@ -639,7 +639,7 @@
 	
 	
 	
-	<Vehicles.VehicleTurretDef ParentName="guy762_VehicleTurretBASE">
+	<Vehicles.VehicleTurretDef ParentName="guy762_StarfighterTurretBASE">
 		<defName>guy762_VehicleTurret_LAATi_BubbleBeam</defName>
 		<label>LAAT/i anti-vehicle beam turret</label>
 		<description>The rotating beam turret of a LAAT/i gunship.</description>

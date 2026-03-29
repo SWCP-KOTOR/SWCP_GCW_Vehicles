@@ -86,6 +86,8 @@
 		</thingSetMakerTags>
 		<tradeTags>
 			<li>SWCPTT_ItemizedStarfighters_ImperialExotic</li>
+			<li>SWCPTT_ItemizedStarfighters_PentastarSurplus</li>
+			<li>SWCPTT_ItemizedStarfighters_MaldroodSurplus</li>
 		</tradeTags>
 	</ThingDef>
 	

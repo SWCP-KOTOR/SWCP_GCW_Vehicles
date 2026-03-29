@@ -83,6 +83,9 @@
 		</thingSetMakerTags>
 		<tradeTags>
 			<li>SWCPTT_ItemizedStarfighters_ImperialAdv</li>
+			<li>SWCPTT_ItemizedStarfighters_ImpRemnantSurplus</li>
+			<li>SWCPTT_ItemizedStarfighters_PentastarSurplus</li>
+			<li>SWCPTT_ItemizedStarfighters_EriaduSurplus</li>
 		</tradeTags>
 	</ThingDef>
 	

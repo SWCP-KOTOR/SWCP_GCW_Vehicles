@@ -84,6 +84,7 @@
 			<li>SWCPTT_ItemizedStarfighters_ScumAdv</li>
 			<li>SWCPTT_ItemizedStarfighters_ZannConsortiumShips</li>
 			<li>SWCPTT_ItemizedStarfighters_ZsinjSurplus</li>
+			<li>SWCPTT_ItemizedStarfighters_MaldroodSurplus</li>
 		</tradeTags>
 	</ThingDef>
 	

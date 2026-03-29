@@ -3,21 +3,21 @@
 <Defs>
 	
 	<DesignatorDropdownGroupDef>
-		<defName>guy762_SWVehicleBPDropdown_TIEDef</defName>
-		<label>TIE/d Defender</label>
+		<defName>guy762_SWVehicleBPDropdown_TIEBrute</defName>
+		<label>TIE/rb Brute</label>
 	</DesignatorDropdownGroupDef>
 	
-	<Vehicles.VehicleBuildDef Name="guy762_SWVehicleBP_TIEDef" ParentName="VehicleBaseBuildable">
-		<defName>guy762_SWVehicleBP_TIEDef</defName>
-		<label>TIE/d Defender</label>
+	<Vehicles.VehicleBuildDef Name="guy762_SWVehicleBP_TIEBrute" ParentName="VehicleBaseBuildable">
+		<defName>guy762_SWVehicleBP_TIEBrute</defName>
+		<label>TIE/rb Brute</label>
 		<description>.</description>
 		<designationCategory>MM_StarWarsShipBuildTab</designationCategory>
-		<designatorDropdown>guy762_SWVehicleBPDropdown_TIEDef</designatorDropdown>
+		<designatorDropdown>guy762_SWVehicleBPDropdown_TIEBrute</designatorDropdown>
 		
 		<graphicData>
-			<texPath>Starfighters/TIEDefender/TIEDef</texPath>
+			<texPath>Starfighters/TIEBrute/TIEBrute</texPath>
 			<graphicClass>Graphic_Multi</graphicClass>
-			<drawSize>(11,11)</drawSize>
+			<drawSize>(12,12)</drawSize>
 			<!-- <drawOffset>(0, 0, 1)</drawOffset> -->
 		</graphicData>
 		
@@ -27,7 +27,7 @@
 			<Flammability>0.05</Flammability>
 		</statBases>
 		
-		<size>(9,9)</size>
+		<size>(12,7)</size>
 		
 		<!--researchPrerequisites>
 			<li>VVE_BasicVehicles</li>
@@ -43,36 +43,36 @@
 		</costList>
 		
 		<soundImpactDefault>BulletImpact_Metal</soundImpactDefault>
-		<thingToSpawn>guy762_SWVehicle_TIEDefender</thingToSpawn>
+		<thingToSpawn>guy762_SWVehicle_TIEBrute</thingToSpawn>
 		
 		<constructionSkillPrerequisite>6</constructionSkillPrerequisite>
 	</Vehicles.VehicleBuildDef>
+		
 	
 	
 	
-	
-	<Vehicles.VehicleBuildDef ParentName="guy762_SWVehicleBP_TIEDef">
-		<defName>guy762_SWVehicleItemBP_TIEDef</defName>
-		<label>TIE/d Defender (from item)</label>
+	<Vehicles.VehicleBuildDef ParentName="guy762_SWVehicleBP_TIEBrute">
+		<defName>guy762_SWVehicleItemBP_TIEBrute</defName>
+		<label>TIE/rb Brute (from item)</label>
 		<statBases>
 			<WorkToBuild>5</WorkToBuild>
 		</statBases>
 		<costList Inherit="False">
-			<SWCP_ItemizedVehicle_TIEDef>1</SWCP_ItemizedVehicle_TIEDef>
+			<SWCP_ItemizedVehicle_TIEBrute>1</SWCP_ItemizedVehicle_TIEBrute>
 		</costList>
 		<constructionSkillPrerequisite>0</constructionSkillPrerequisite>
 	</Vehicles.VehicleBuildDef>
 	
 	<ThingDef ParentName="SWCP_ItemizedStarfighterBASE">
-		<defName>SWCP_ItemizedVehicle_TIEDef</defName>
-		<label>starfighter, TIE/d Defender</label>
+		<defName>SWCP_ItemizedVehicle_TIEBrute</defName>
+		<label>starfighter, TIE/rb Brute</label>
 		<graphicData>
-			<texPath>Starfighters/TIEDefender/TIEDef_east</texPath>
+			<texPath>Starfighters/TIEBrute/TIEBrute_east</texPath>
 		</graphicData>
 		
 		<statBases>
-			<MarketValue>80000</MarketValue>
-			<RoyalFavorValue>9</RoyalFavorValue>
+			<MarketValue>90000</MarketValue>
+			<RoyalFavorValue>5</RoyalFavorValue>
 			<Mass>1</Mass>
 		</statBases>
 		
@@ -80,9 +80,8 @@
 			<!-- <li>RewardStandardMidFreq</li> -->
 		</thingSetMakerTags>
 		<tradeTags>
-			<li>SWCPTT_ItemizedStarfighters_ImperialExotic</li>
-			<li>SWCPTT_ItemizedStarfighters_ImpRemnantSurplus</li>
-			<li>SWCPTT_ItemizedStarfighters_PentastarSurplus</li>
+			<li>SWCPTT_ItemizedStarfighters_ImperialAdv</li>
+			<li>SWCPTT_ItemizedStarfighters_MaldroodSurplus</li>
 		</tradeTags>
 	</ThingDef>
 	

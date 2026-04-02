@@ -71,7 +71,7 @@
 		<terrainAffordanceNeeded>Heavy</terrainAffordanceNeeded>
 		<!-- <terrainAffordanceNeeded>Substructure</terrainAffordanceNeeded> -->
 		<building>
-			<turretGunDef>guy762_SWTurretGun_HardpointAAPointDefense</turretGunDef>
+			<turretGunDef>guy762_SWTurretGun_FPC67AntiAir</turretGunDef>
 			<turretTopDrawSize>6.5</turretTopDrawSize>
 			<!-- <turretTopOffset>(-0.05, 0.05)</turretTopOffset> -->
 		  
@@ -82,6 +82,69 @@
 		  <li>SniperTurret</li>
 		</researchPrerequisites>
 	</ThingDef>
+	
+	<ThingDef ParentName="BaseWeaponTurret">
+		<defName>guy762_SWTurretGun_FPC67AntiAir</defName>
+		<label>anti-air turret</label>
+		<description>.</description>
+		<graphicData>
+		  <texPath>Turrets/Turrets_Ogam/PointDefense_gun</texPath>
+		  <graphicClass>Graphic_Single</graphicClass>
+		  <drawSize>(2,2)</drawSize>
+		</graphicData>
+		<statBases>
+		  <AccuracyTouch>0.30</AccuracyTouch>
+		  <AccuracyShort>0.40</AccuracyShort>
+		  <AccuracyMedium>0.80</AccuracyMedium>
+		  <AccuracyLong>0.90</AccuracyLong>
+		  <RangedWeapon_Cooldown>2.5</RangedWeapon_Cooldown>
+		  <DeteriorationRate>0</DeteriorationRate>
+		  <Mass>200</Mass>
+		  <Flammability>0</Flammability>
+		</statBases>
+		<verbs>
+		  <li>
+			<verbClass>Verb_Shoot</verbClass>
+			<defaultProjectile>SWFixedTurretBullet_AAdoublered</defaultProjectile>
+			<warmupTime>0.125</warmupTime>
+			<!-- <range>90</range> normal ground defense range -->
+			<range>250</range> <!-- ship defense range -->
+			
+			<burstShotCount>6</burstShotCount>
+			<ticksBetweenBurstShots>6</ticksBetweenBurstShots>
+			
+			<soundCast>kotorsound_EaWturret_AA</soundCast>
+			<soundCastTail>GunTail_Heavy</soundCastTail>
+			<muzzleFlashScale>18</muzzleFlashScale>
+			<forcedMissRadius>0</forcedMissRadius>
+			<ai_AvoidFriendlyFireRadius>3</ai_AvoidFriendlyFireRadius>
+			
+			<!-- <onlyManualCast>true</onlyManualCast> -->
+			<targetParams>
+				<canTargetLocations>true</canTargetLocations>
+			</targetParams>
+		  </li>
+		</verbs>
+		<modExtensions>
+			<li Class="IgnoreConfigErrors.Ignore_ForcedMissRadius" />
+			<li MayRequire="EBSG.Framework" Class="EBSGFramework.TurretRoofBlocked" />
+		</modExtensions>
+	</ThingDef>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 	
 	
 	

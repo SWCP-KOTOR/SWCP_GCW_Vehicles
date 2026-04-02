@@ -63,10 +63,10 @@
 	
 	
 	
-	<ThingDef Name="guy762_GravshipTurretBase" ParentName="guy762_TurretBase" Abstract="True">
-		<designationCategory>MM_StarWarsShipBuildTab</designationCategory>
-		<uiOrder>10</uiOrder>
-	</ThingDef>
+	<!-- <ThingDef Name="guy762_GravshipTurretBase" ParentName="guy762_TurretBase" Abstract="True"> -->
+		<!-- <designationCategory>MM_StarWarsShipBuildTab</designationCategory> -->
+		<!-- <uiOrder>10</uiOrder> -->
+	<!-- </ThingDef> MOVED TO GFFA MOD FILES -->
 
 
 

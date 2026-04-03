@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<Defs>
+	
+	<DesignatorDropdownGroupDef>
+		<defName>guy762_SWVehicleBPDropdown_TIERaptor</defName>
+		<label>TIE/rpt Raptor</label>
+	</DesignatorDropdownGroupDef>
+	
+	<Vehicles.VehicleBuildDef Name="guy762_SWVehicleBP_TIERaptor" ParentName="VehicleBaseBuildable">
+		<defName>guy762_SWVehicleBP_TIERaptor</defName>
+		<label>TIE/rpt Raptor</label>
+		<description>.</description>
+		<designationCategory>MM_StarWarsShipBuildTab</designationCategory>
+		<designatorDropdown>guy762_SWVehicleBPDropdown_TIERaptor</designatorDropdown>
+		
+		<graphicData>
+			<texPath>Starfighters/TIERaptor/TIERaptor</texPath>
+			<graphicClass>Graphic_Multi</graphicClass>
+			<drawSize>(8,8)</drawSize>
+			<!-- <drawOffset>(0, 0, 1)</drawOffset> -->
+		</graphicData>
+		
+		<statBases>
+			<MaxHitPoints>100</MaxHitPoints>
+			<WorkToBuild>3500</WorkToBuild>
+			<Flammability>0.05</Flammability>
+		</statBases>
+		
+		<size>(7,3)</size>
+		
+		<!--researchPrerequisites>
+			<li>VVE_BasicVehicles</li>
+		</researchPrerequisites-->
+		
+		<costList>
+			<!--VVE_EngineBlock>1</VVE_EngineBlock>
+			<VVE_CarAlternator>1</VVE_CarAlternator>
+			<VVE_CarExhaust>1</VVE_CarExhaust>
+			<VVE_CarSuspension>2</VVE_CarSuspension>
+			<VVE_CarWheel>2</VVE_CarWheel-->
+			<Steel>40</Steel>
+		</costList>
+		
+		<soundImpactDefault>BulletImpact_Metal</soundImpactDefault>
+		<thingToSpawn>guy762_SWVehicle_TIERaptor</thingToSpawn>
+		
+		<constructionSkillPrerequisite>6</constructionSkillPrerequisite>
+	</Vehicles.VehicleBuildDef>
+	
+	
+	
+	
+	
+	<Vehicles.VehicleBuildDef ParentName="guy762_SWVehicleBP_TIERaptor">
+		<defName>guy762_SWVehicleItemBP_TIERaptor</defName>
+		<label>TIE/rpt Raptor (from item)</label>
+		<statBases>
+			<WorkToBuild>5</WorkToBuild>
+		</statBases>
+		<costList Inherit="False">
+			<SWCP_ItemizedVehicle_TIERaptor>1</SWCP_ItemizedVehicle_TIERaptor>
+		</costList>
+		<constructionSkillPrerequisite>0</constructionSkillPrerequisite>
+	</Vehicles.VehicleBuildDef>
+	
+	<ThingDef ParentName="SWCP_ItemizedStarfighterBASE">
+		<defName>SWCP_ItemizedVehicle_TIERaptor</defName>
+		<label>starfighter, TIE/rpt Raptor</label>
+		<graphicData>
+			<texPath>Starfighters/TIERaptor/TIERaptor_east</texPath>
+		</graphicData>
+		
+		<statBases>
+			<MarketValue>75000</MarketValue>
+			<RoyalFavorValue>4</RoyalFavorValue>
+			<Mass>1</Mass>
+		</statBases>
+		
+		<thingSetMakerTags>
+			<!-- <li>RewardStandardMidFreq</li> -->
+		</thingSetMakerTags>
+		<tradeTags>
+			<li>SWCPTT_ItemizedStarfighters_ImperialExotic</li>
+			<li>SWCPTT_ItemizedStarfighters_ZsinjSurplus</li>
+		</tradeTags>
+	</ThingDef>
+	
+</Defs>

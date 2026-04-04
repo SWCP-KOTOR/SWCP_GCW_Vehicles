@@ -48,13 +48,13 @@
 			<!--B--><ArmorRating_Sharp>0.035</ArmorRating_Sharp>
 			<!--B--><ArmorRating_Blunt>0.02</ArmorRating_Blunt> <!-- # of estimated XWMG hull points * 0.1, apply to hard armor curve -->
 			<!--B--><ArmorRating_Heat>0.045</ArmorRating_Heat>
-			<MaxHitPoints>3000</MaxHitPoints> <!-- # of estimated XWMG hull points * 1000 -->
+			<MaxHitPoints>300</MaxHitPoints> <!-- # of estimated XWMG hull points * 100 -->
 			
 			<MarketValue>70000</MarketValue>
 			<Flammability>0</Flammability>
 			
 			<EnergyShieldRechargeRate>0.5</EnergyShieldRechargeRate>
-			<EnergyShieldEnergyMax>2</EnergyShieldEnergyMax>
+			<EnergyShieldEnergyMax>1</EnergyShieldEnergyMax> <!-- XWMG shield value -->
 		</statBases>
 		<vehicleStats>
 			<Mass>3550</Mass>
@@ -124,7 +124,7 @@
 				<activeSound>BulletShield_Ambience</activeSound>
 				<hitPointsRestoreInstantlyAfterCharge>true</hitPointsRestoreInstantlyAfterCharge>
 				
-				<hitPoints>200</hitPoints> <!-- XWMG shield value * 100 -->
+				<hitPoints>100</hitPoints> <!-- XWMG shield value * 100 -->
 				
 				<chargeDurationTicks>1800</chargeDurationTicks><!-- 30s -->
 				<rechargeHitPointsIntervalTicks>120</rechargeHitPointsIntervalTicks>
@@ -265,7 +265,7 @@
 						</renderProperties>
 						<defaultAngleRotated>0</defaultAngleRotated>
 						<angleRestricted>(315,45)</angleRestricted>
-						<gizmoLabel>medium AA gun</gizmoLabel>
+						<gizmoLabel>light AA gun</gizmoLabel>
 						
 						<aimPieOffset>(0, 2.55)</aimPieOffset>
 						
@@ -281,7 +281,7 @@
 						</renderProperties>
 						<defaultAngleRotated>0</defaultAngleRotated>
 						<angleRestricted>(315,45)</angleRestricted>
-						<gizmoLabel>medium AA gun</gizmoLabel>
+						<gizmoLabel>light AA gun</gizmoLabel>
 						
 						<aimPieOffset>(0, 2.55)</aimPieOffset>
 						
@@ -297,7 +297,7 @@
 						</renderProperties>
 						<defaultAngleRotated>0</defaultAngleRotated>
 						<angleRestricted>(315,45)</angleRestricted>
-						<gizmoLabel>medium AA gun</gizmoLabel>
+						<gizmoLabel>light AA gun</gizmoLabel>
 						
 						<aimPieOffset>(0, 2.55)</aimPieOffset>
 						
@@ -313,7 +313,7 @@
 						</renderProperties>
 						<defaultAngleRotated>0</defaultAngleRotated>
 						<angleRestricted>(315,45)</angleRestricted>
-						<gizmoLabel>medium AA gun</gizmoLabel>
+						<gizmoLabel>light AA gun</gizmoLabel>
 						
 						<aimPieOffset>(0, 2.55)</aimPieOffset>
 						
@@ -365,15 +365,36 @@
 					<!--H--><ArmorRating_Sharp>0.35</ArmorRating_Sharp>
 					<!--H--><ArmorRating_Blunt>0.2</ArmorRating_Blunt> <!-- # of estimated XWMG hull points * 0.1, apply to hard armor curve -->
 					<!--H--><ArmorRating_Heat>0.45</ArmorRating_Heat>
-					<IncomingDamageFactor>-0.10</IncomingDamageFactor> <!-- Interceptors: 0.10 | StrikeFighters: 0.15 | AssaultFighters: 0.20 | Transports: 0.25 -->
+					<IncomingDamageFactor>-0.05</IncomingDamageFactor> <!-- Interceptors: 0.05 | StrikeFighters: 0.15 | AssaultFighters: 0.25 | Transports: 0.35 -->
 				</armor>
-				<health>300</health> <!-- # of estimated XWMG hull points * 100 -->
+				<health>750</health> <!-- XWMG hull * 250 -->
 				
 				<hitbox>
 					<side>Body</side>
 				</hitbox>
 			</li>
+			<li>
+				<key>Internals</key>
+				<label>Internals</label>
+				<health>300</health> <!-- XWMG hull * 100 -->
+				<depth>Internal</depth>
+				
+				<reactors>
+					<li Class = "Vehicles.Reactor_Explosive">
+						<indicator>VF_Explosive</indicator>
+						<chance>0.75</chance>
+						<maxHealth>0.1</maxHealth>
+						<radius>5</radius>
+						<damageDef>guy762_ExplosiveDamage_energy</damageDef>
+					</li>
+				</reactors>
+				<categories>
+					<li>FlightSpeed</li>
+					<li>FlightControl</li>
+				</categories>
+			</li>
 			
+			<!-- original components
 			<li>
 				<key>FirstThruster</key>
 				<label>Port Thruster</label>
@@ -464,6 +485,8 @@
 					<li>FlightControl</li>
 				</categories>
 			</li>
+			-->
+			
 		</components>
 		
 		<soundSustainersOnEvent>
@@ -489,7 +512,7 @@
 		<turretType>Rotatable</turretType>
 		<shotSound>kotorsound_sithfighter</shotSound>
 		
-		<projectile>SWCPStarfighterBullet_IntAAmedium_green</projectile>
+		<projectile>SWCPStarfighterBullet_IntAAlight_green</projectile>
 		<reloadTimer>3.5</reloadTimer>
 		<warmUpTimer>0</warmUpTimer>
 		
@@ -507,9 +530,9 @@
 
 		<fireModes>
 			<li>
-				<shotsPerBurst>1</shotsPerBurst>
-				<ticksBetweenShots>12</ticksBetweenShots>
-				<ticksBetweenBursts>40</ticksBetweenBursts>
+				<shotsPerBurst>3</shotsPerBurst>
+				<ticksBetweenShots>20</ticksBetweenShots>
+				<ticksBetweenBursts>180</ticksBetweenBursts>
 				<label>Single</label>
 				<texPath>UI/Sniper_Shot</texPath>
 			</li>

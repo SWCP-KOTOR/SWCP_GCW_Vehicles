@@ -71,13 +71,13 @@
 			<!--B--><ArmorRating_Sharp>0.045</ArmorRating_Sharp>
 			<!--B--><ArmorRating_Blunt>0.03</ArmorRating_Blunt> <!-- # of estimated XWMG hull points * 0.1, apply to hard armor curve -->
 			<!--B--><ArmorRating_Heat>0.055</ArmorRating_Heat>
-			<MaxHitPoints>4000</MaxHitPoints> <!-- # of estimated XWMG hull points * 1000 -->
+			<MaxHitPoints>400</MaxHitPoints> <!-- # of estimated XWMG hull points * 100 -->
 			
 			<MarketValue>65000</MarketValue>
 			<Flammability>0</Flammability>
 			
 			<EnergyShieldRechargeRate>0.5</EnergyShieldRechargeRate>
-			<EnergyShieldEnergyMax>2</EnergyShieldEnergyMax>
+			<EnergyShieldEnergyMax>2</EnergyShieldEnergyMax> <!-- XWMG shield value -->
 		</statBases>
 		<vehicleStats>
 			<Mass>16500</Mass>
@@ -295,7 +295,8 @@
 						<key>XWingKey_gun_1</key>
 					</li>
 					<li>
-						<turretDef>guy762_VehicleTurret_XWing_two</turretDef>
+						<turretDef>guy762_VehicleTurret_XWing_Main</turretDef>
+						<!-- <turretDef>guy762_VehicleTurret_XWing_two</turretDef> -->
 						
 						<renderProperties>
 							<north>(5.025, 2.3)</north>
@@ -311,7 +312,8 @@
 						<key>XWingKey_gun_2</key>
 					</li>
 					<li>
-						<turretDef>guy762_VehicleTurret_XWing_three</turretDef>
+						<turretDef>guy762_VehicleTurret_XWing_Main</turretDef>
+						<!-- <turretDef>guy762_VehicleTurret_XWing_three</turretDef> -->
 						
 						<renderProperties>
 							<north>(-4.4, 2.1)</north>
@@ -327,7 +329,8 @@
 						<key>XWingKey_gun_3</key>
 					</li>
 					<li>
-						<turretDef>guy762_VehicleTurret_XWing_four</turretDef>
+						<turretDef>guy762_VehicleTurret_XWing_Main</turretDef>
+						<!-- <turretDef>guy762_VehicleTurret_XWing_four</turretDef> -->
 						
 						<renderProperties>
 							<north>(4.4, 2.1)</north>
@@ -387,14 +390,36 @@
 					<!--H--><ArmorRating_Sharp>0.45</ArmorRating_Sharp>
 					<!--H--><ArmorRating_Blunt>0.3</ArmorRating_Blunt> <!-- # of estimated XWMG hull points * 0.1, apply to hard armor curve -->
 					<!--H--><ArmorRating_Heat>0.55</ArmorRating_Heat>
-					<IncomingDamageFactor>-0.15</IncomingDamageFactor> <!-- Interceptors: 0.10 | StrikeFighters: 0.15 | AssaultFighters: 0.20 | Transports: 0.25 -->
+					<IncomingDamageFactor>-0.15</IncomingDamageFactor> <!-- Interceptors: 0.05 | StrikeFighters: 0.15 | AssaultFighters: 0.25 | Transports: 0.35 -->
 				</armor>
-				<health>400</health> <!-- # of estimated XWMG hull points * 100 -->
+				<health>1000</health> <!-- XWMG hull * 250 -->
 				
 				<hitbox>
 					<side>Body</side>
 				</hitbox>
 			</li>
+			<li>
+				<key>Internals</key>
+				<label>Internals</label>
+				<health>400</health> <!-- XWMG hull * 100 -->
+				<depth>Internal</depth>
+				
+				<reactors>
+					<li Class = "Vehicles.Reactor_Explosive">
+						<indicator>VF_Explosive</indicator>
+						<chance>0.75</chance>
+						<maxHealth>0.1</maxHealth>
+						<radius>5</radius>
+						<damageDef>guy762_ExplosiveDamage_energy</damageDef>
+					</li>
+				</reactors>
+				<categories>
+					<li>FlightSpeed</li>
+					<li>FlightControl</li>
+				</categories>
+			</li>
+			
+			<!-- original components
 			
 			<li>
 				<key>FirstThruster</key>
@@ -519,6 +544,9 @@
 					<li>FlightControl</li>
 				</categories>
 			</li>
+			
+			-->
+			
 		</components>
 		
 		<soundSustainersOnEvent>
@@ -573,7 +601,7 @@
 			<li>
 				<shotsPerBurst>1</shotsPerBurst>
 				<ticksBetweenShots>10</ticksBetweenShots>
-				<ticksBetweenBursts>100</ticksBetweenBursts>
+				<ticksBetweenBursts>60</ticksBetweenBursts>
 				<label>Single</label>
 				<texPath>UI/Sniper_Shot</texPath>
 			</li>
@@ -588,26 +616,26 @@
 
 	</Vehicles.VehicleTurretDef>
 	
-	<Vehicles.VehicleTurretDef ParentName="guy762_VehicleTurret_XWing_Main">
-		<defName>guy762_VehicleTurret_XWing_two</defName>
+	<!-- <Vehicles.VehicleTurretDef ParentName="guy762_VehicleTurret_XWing_Main"> -->
+		<!-- <defName>guy762_VehicleTurret_XWing_two</defName> -->
 
-		<warmUpTimer>0.1</warmUpTimer>
+		<!-- <warmUpTimer>0.1</warmUpTimer> -->
 
-	</Vehicles.VehicleTurretDef>
+	<!-- </Vehicles.VehicleTurretDef> -->
 	
-	<Vehicles.VehicleTurretDef ParentName="guy762_VehicleTurret_XWing_Main">
-		<defName>guy762_VehicleTurret_XWing_three</defName>
+	<!-- <Vehicles.VehicleTurretDef ParentName="guy762_VehicleTurret_XWing_Main"> -->
+		<!-- <defName>guy762_VehicleTurret_XWing_three</defName> -->
 
-		<warmUpTimer>0.2</warmUpTimer>
+		<!-- <warmUpTimer>0.2</warmUpTimer> -->
 
-	</Vehicles.VehicleTurretDef>
+	<!-- </Vehicles.VehicleTurretDef> -->
 	
-	<Vehicles.VehicleTurretDef ParentName="guy762_VehicleTurret_XWing_Main">
-		<defName>guy762_VehicleTurret_XWing_four</defName>
+	<!-- <Vehicles.VehicleTurretDef ParentName="guy762_VehicleTurret_XWing_Main"> -->
+		<!-- <defName>guy762_VehicleTurret_XWing_four</defName> -->
 
-		<warmUpTimer>0.3</warmUpTimer>
+		<!-- <warmUpTimer>0.3</warmUpTimer> -->
 
-	</Vehicles.VehicleTurretDef>
+	<!-- </Vehicles.VehicleTurretDef> -->
 	
 	
 	

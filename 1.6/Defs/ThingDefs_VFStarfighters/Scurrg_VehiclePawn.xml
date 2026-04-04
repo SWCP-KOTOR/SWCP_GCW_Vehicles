@@ -60,13 +60,13 @@
 			<!--B--><ArmorRating_Sharp>0.065</ArmorRating_Sharp>
 			<!--B--><ArmorRating_Blunt>0.05</ArmorRating_Blunt> <!-- # of estimated XWMG hull points * 0.1, apply to hard armor curve -->
 			<!--B--><ArmorRating_Heat>0.075</ArmorRating_Heat>
-			<MaxHitPoints>6000</MaxHitPoints> <!-- # of estimated XWMG hull points * 1000 -->
+			<MaxHitPoints>600</MaxHitPoints> <!-- # of estimated XWMG hull points * 100 -->
 			
 			<MarketValue>150000</MarketValue>
 			<Flammability>0</Flammability>
 			
 			<EnergyShieldRechargeRate>0.5</EnergyShieldRechargeRate>
-			<EnergyShieldEnergyMax>3</EnergyShieldEnergyMax>
+			<EnergyShieldEnergyMax>4</EnergyShieldEnergyMax> <!-- XWMG shield value -->
 		</statBases>
 		<vehicleStats>
 			<Mass>25000</Mass>
@@ -429,15 +429,36 @@
 					<!--H--><ArmorRating_Sharp>0.65</ArmorRating_Sharp>
 					<!--H--><ArmorRating_Blunt>0.5</ArmorRating_Blunt> <!-- # of estimated XWMG hull points * 0.1, apply to hard armor curve -->
 					<!--H--><ArmorRating_Heat>0.75</ArmorRating_Heat>
-					<IncomingDamageFactor>-0.20</IncomingDamageFactor> <!-- Interceptors: 0.10 | StrikeFighters: 0.15 | AssaultFighters: 0.20 | Transports: 0.25 -->
+					<IncomingDamageFactor>-0.25</IncomingDamageFactor> <!-- Interceptors: 0.05 | StrikeFighters: 0.15 | AssaultFighters: 0.25 | Transports: 0.35 -->
 				</armor>
-				<health>600</health> <!-- # of estimated XWMG hull points * 100 -->
+				<health>1500</health> <!-- XWMG hull * 250 -->
 				
 				<hitbox>
 					<side>Body</side>
 				</hitbox>
 			</li>
+			<li>
+				<key>Internals</key>
+				<label>Internals</label>
+				<health>600</health> <!-- XWMG hull * 100 -->
+				<depth>Internal</depth>
+				
+				<reactors>
+					<li Class = "Vehicles.Reactor_Explosive">
+						<indicator>VF_Explosive</indicator>
+						<chance>0.75</chance>
+						<maxHealth>0.1</maxHealth>
+						<radius>5</radius>
+						<damageDef>guy762_ExplosiveDamage_energy</damageDef>
+					</li>
+				</reactors>
+				<categories>
+					<li>FlightSpeed</li>
+					<li>FlightControl</li>
+				</categories>
+			</li>
 			
+			<!-- original components
 			<li>
 				<key>FirstThruster</key>
 				<label>Port Thruster</label>
@@ -513,6 +534,8 @@
 					<li>FlightControl</li>
 				</categories>
 			</li>
+			-->
+			
 		</components>
 		
 		<soundSustainersOnEvent>

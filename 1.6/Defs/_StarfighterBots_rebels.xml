@@ -297,7 +297,46 @@
 
 	</Vehicles.VehicleDef>
 	
-	
+	<Vehicles.VehicleDef Name="guy762_SWVehicle_BWingNR_bot" ParentName="guy762_SWVehicle_BWing">
+		<defName>guy762_SWVehicle_BWingNR_bot</defName>
+		
+		<graphicData>
+			<pattern>guy762_SWVehiclePattern_BWingC_open</pattern>
+			<color>(100,120,140)</color> <!-- new republic blue -->
+			<colorTwo>(150,150,150)</colorTwo> <!-- grey -->
+			<colorThree>(225,225,225)</colorThree> <!-- less white -->
+		</graphicData>
+		
+		<buildDef Inherit="False" />
+		
+		<!--<vehicleMovementPermissions>NoDriverNeeded</vehicleMovementPermissions>-->
+		
+		<properties>
+			<roles Inherit="False">
+				<li>
+					<key>pilot</key>
+					<label>Pilot</label>
+					<slots>1</slots>
+					<slotsToOperate>1</slotsToOperate>
+					<!-- <handlingTypes> -->
+						<!-- <li>Movement</li> -->
+						<!-- <li>Turret</li> -->
+					<!-- </handlingTypes> -->
+					<!-- <comfort>-0.25</comfort> -->
+					
+					<turretIds>
+						<li>BWingKey_gun_1</li>
+						<li>BWingKey_gun_2</li>
+						<li>BWingKey_gun_3</li>
+						<li>BWingKey_gun_4</li>
+						<li>BWingKey_gun_5</li>
+						<li>BWingKey_gun_6</li>
+					</turretIds>
+				</li>
+			</roles>
+		</properties>
+
+	</Vehicles.VehicleDef>
 	
 	
 	

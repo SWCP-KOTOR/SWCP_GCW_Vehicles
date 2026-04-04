@@ -5,7 +5,7 @@
 	<!-- <Vehicles.PatternDef> -->
 		<!-- <defName>guy762_SWVehiclePattern_BWingA_closed</defName> -->
 		<!-- <label>B-Wing (stock - CLOSED)</label> -->
-		<!-- <path>Starfighters/BWing/BWing_Pattern_Rebel_Closed</path> -->
+		<!-- <path>Starfighters/BWing/BWing_Pattern_stock_Closed</path> -->
 		<!-- <exclusiveFor><li>guy762_SWVehicle_BWing</li></exclusiveFor> -->
 	<!-- </Vehicles.PatternDef> -->
 	
@@ -17,10 +17,14 @@
 		<exclusiveFor><li>guy762_SWVehicle_BWing</li></exclusiveFor>
 	</Vehicles.PatternDef>
 	
+	
+	
+	
+	
 	<!-- <Vehicles.PatternDef> -->
 		<!-- <defName>guy762_SWVehiclePattern_BWingB_closed</defName> -->
 		<!-- <label>B-Wing (Dagger Squadron - CLOSED)</label> -->
-		<!-- <path>Starfighters/BWing/BWing_Pattern_NewRepublic_Closed</path> -->
+		<!-- <path>Starfighters/BWing/BWing_Pattern_daggersquadron_Closed</path> -->
 		<!-- <exclusiveFor><li>guy762_SWVehicle_BWing</li></exclusiveFor> -->
 	<!-- </Vehicles.PatternDef> -->
 	
@@ -29,6 +33,25 @@
 		<!-- <label>B-Wing (Dagger Squadron - OPEN)</label> -->
 		<label>B-Wing (Dagger Squadron)</label>
 		<path>Starfighters/BWing/BWing_Pattern_daggersquadron</path>
+		<exclusiveFor><li>guy762_SWVehicle_BWing</li></exclusiveFor>
+	</Vehicles.PatternDef>
+	
+	
+	
+	
+	
+	<!-- <Vehicles.PatternDef> -->
+		<!-- <defName>guy762_SWVehiclePattern_BWingC_closed</defName> -->
+		<!-- <label>B-Wing (New Republic - CLOSED)</label> -->
+		<!-- <path>Starfighters/BWing/BWing_Pattern_newrepublic_Closed</path> -->
+		<!-- <exclusiveFor><li>guy762_SWVehicle_BWing</li></exclusiveFor> -->
+	<!-- </Vehicles.PatternDef> -->
+	
+	<Vehicles.PatternDef>
+		<defName>guy762_SWVehiclePattern_BWingC_open</defName>
+		<!-- <label>B-Wing (New Republic - OPEN)</label> -->
+		<label>B-Wing (New Republic)</label>
+		<path>Starfighters/BWing/BWing_Pattern_newrepublic</path>
 		<exclusiveFor><li>guy762_SWVehicle_BWing</li></exclusiveFor>
 	</Vehicles.PatternDef>
 	
@@ -71,13 +94,13 @@
 			<!--B--><ArmorRating_Sharp>0.045</ArmorRating_Sharp>
 			<!--B--><ArmorRating_Blunt>0.03</ArmorRating_Blunt> <!-- # of estimated XWMG hull points * 0.1, apply to hard armor curve -->
 			<!--B--><ArmorRating_Heat>0.055</ArmorRating_Heat>
-			<MaxHitPoints>4000</MaxHitPoints> <!-- # of estimated XWMG hull points * 1000 -->
+			<MaxHitPoints>400</MaxHitPoints> <!-- # of estimated XWMG hull points * 100 -->
 			
 			<MarketValue>120000</MarketValue>
 			<Flammability>0</Flammability>
 			
 			<EnergyShieldRechargeRate>0.5</EnergyShieldRechargeRate>
-			<EnergyShieldEnergyMax>4</EnergyShieldEnergyMax>
+			<EnergyShieldEnergyMax>4</EnergyShieldEnergyMax> <!-- XWMG shield value -->
 		</statBases>
 		<vehicleStats>
 			<Mass>16500</Mass>
@@ -394,15 +417,36 @@
 					<!--H--><ArmorRating_Sharp>0.45</ArmorRating_Sharp>
 					<!--H--><ArmorRating_Blunt>0.3</ArmorRating_Blunt> <!-- # of estimated XWMG hull points * 0.1, apply to hard armor curve -->
 					<!--H--><ArmorRating_Heat>0.55</ArmorRating_Heat>
-					<IncomingDamageFactor>-0.15</IncomingDamageFactor> <!-- Interceptors: 0.10 | StrikeFighters: 0.15 | AssaultFighters: 0.20 | Transports: 0.25 -->
+					<IncomingDamageFactor>-0.25</IncomingDamageFactor> <!-- Interceptors: 0.05 | StrikeFighters: 0.15 | AssaultFighters: 0.25 | Transports: 0.35 -->
 				</armor>
-				<health>400</health> <!-- # of estimated XWMG hull points * 100 -->
+				<health>1000</health> <!-- XWMG hull * 250 -->
 				
 				<hitbox>
 					<side>Body</side>
 				</hitbox>
 			</li>
+			<li>
+				<key>Internals</key>
+				<label>Internals</label>
+				<health>400</health> <!-- XWMG hull * 100 -->
+				<depth>Internal</depth>
+				
+				<reactors>
+					<li Class = "Vehicles.Reactor_Explosive">
+						<indicator>VF_Explosive</indicator>
+						<chance>0.75</chance>
+						<maxHealth>0.1</maxHealth>
+						<radius>5</radius>
+						<damageDef>guy762_ExplosiveDamage_energy</damageDef>
+					</li>
+				</reactors>
+				<categories>
+					<li>FlightSpeed</li>
+					<li>FlightControl</li>
+				</categories>
+			</li>
 			
+			<!-- original components
 			<li>
 				<key>FirstThruster</key>
 				<label>Port Dorsal Thruster</label>
@@ -526,6 +570,9 @@
 					<li>FlightControl</li>
 				</categories>
 			</li>
+			
+			-->
+			
 		</components>
 		
 		<soundSustainersOnEvent>

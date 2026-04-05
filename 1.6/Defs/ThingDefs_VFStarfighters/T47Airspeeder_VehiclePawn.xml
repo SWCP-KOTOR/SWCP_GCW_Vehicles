@@ -56,9 +56,6 @@
 			
 			<MarketValue>18000</MarketValue>
 			<Flammability>0</Flammability>
-			
-			<!-- <EnergyShieldRechargeRate>0.5</EnergyShieldRechargeRate> -->
-			<!-- <EnergyShieldEnergyMax>3</EnergyShieldEnergyMax> <!-- XWMG shield value --> -->
 		</statBases>
 		<vehicleStats>
 			<Mass>10500</Mass>

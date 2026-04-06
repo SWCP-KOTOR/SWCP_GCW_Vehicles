@@ -396,7 +396,49 @@
 	
 
 
+	
+	
+	
+	
+	
+	
+	<Vehicles.VehicleDef Name="guy762_SWVehicle_AlphaXG1StarwingPentastar_bot" ParentName="guy762_SWVehicle_AlphaXG1Starwing">
+		<defName>guy762_SWVehicle_AlphaXG1StarwingPentastar_bot</defName>
+		
+		<graphicData>
+			<color>(65,70,190)</color> <!-- Pentastar blue -->
+		</graphicData>
+		
+		<buildDef Inherit="False" />
+		
+		<!--<vehicleMovementPermissions>NoDriverNeeded</vehicleMovementPermissions>-->
 
+		<properties>
+			<roles Inherit="False">
+				<li>
+					<key>pilot</key>
+					<label>Pilot</label>
+					<slots>1</slots>
+					<slotsToOperate>1</slotsToOperate>
+					<!-- <handlingTypes> -->
+						<!-- <li>Movement</li> -->
+						<!-- <li>Turret</li> -->
+					<!-- </handlingTypes> -->
+					
+					<turretIds>
+						<li>AlphaXG1StarwingKey_gun_1</li>
+						<li>AlphaXG1StarwingKey_gun_2</li>
+						<li>AlphaXG1StarwingKey_gun_3</li>
+						<li>AlphaXG1StarwingKey_gun_4</li>
+						<li>AlphaXG1StarwingKey_gun_5</li>
+						<li>AlphaXG1StarwingKey_gun_6</li>
+						<li>AlphaXG1StarwingKey_gun_7</li>
+					</turretIds>
+				</li>
+			</roles>
+		</properties>
+
+	</Vehicles.VehicleDef>
 
 
 
@@ -448,7 +490,7 @@
 			<pattern>guy762_SWVehiclePattern_Z95E</pattern>
 			<color>(165,155,80)</color> <!-- zsinj's dominion mustard -->
 			<colorTwo>(115,120,95)</colorTwo> <!-- hutt green -->
-			<colorThree>(175,175,165)</colorThree> <!-- yellowed grey -->
+			<colorThree>(175,175,170)</colorThree> <!-- yellowed grey -->
 		</graphicData>
 		
 		<buildDef Inherit="False" />

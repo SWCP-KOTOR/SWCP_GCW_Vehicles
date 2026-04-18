@@ -82,6 +82,8 @@
 		</thingSetMakerTags>
 		<tradeTags>
 			<li>SWCPTT_ItemizedStarfighters_ImperialAdv</li>
+			<li>SWCPTT_ItemizedStarfighters_ImpRemnantSurplus</li>
+			<li>SWCPTT_ItemizedStarfighters_ZsinjSurplus</li>
 		</tradeTags>
 	</ThingDef>
 	

@@ -87,8 +87,8 @@
 			<li MayRequire="MrHydralisk.LayeredAtmosphereOrbit">SWCPPlanetLayer_Nevarro</li>
 			<li MayRequire="MrHydralisk.LayeredAtmosphereOrbit">SWCPPlanetLayer_NevarroOrbit</li>
 			
-			<!-- <li MayRequire="MrHydralisk.LayeredAtmosphereOrbit">SWCPPlanetLayer_Baroonda</li> -->
-			<!-- <li MayRequire="MrHydralisk.LayeredAtmosphereOrbit">SWCPPlanetLayer_BaroondaOrbit</li> -->
+			<li MayRequire="MrHydralisk.LayeredAtmosphereOrbit">SWCPPlanetLayer_Onderon</li>
+			<li MayRequire="MrHydralisk.LayeredAtmosphereOrbit">SWCPPlanetLayer_OnderonOrbit</li>
 			<!-- <li MayRequire="MrHydralisk.LayeredAtmosphereOrbit">SWCPPlanetLayer_Taloraan</li> -->
 			<!-- <li MayRequire="MrHydralisk.LayeredAtmosphereOrbit">SWCPPlanetLayer_TaloraanOrbit</li> -->
 		</layerWhitelist>
@@ -137,8 +137,8 @@
 			<li MayRequire="MrHydralisk.LayeredAtmosphereOrbit">SWCPPlanetLayer_Nevarro</li>
 			<li MayRequire="MrHydralisk.LayeredAtmosphereOrbit">SWCPPlanetLayer_NevarroOrbit</li>
 			
-			<!-- <li MayRequire="MrHydralisk.LayeredAtmosphereOrbit">SWCPPlanetLayer_Baroonda</li> -->
-			<!-- <li MayRequire="MrHydralisk.LayeredAtmosphereOrbit">SWCPPlanetLayer_BaroondaOrbit</li> -->
+			<li MayRequire="MrHydralisk.LayeredAtmosphereOrbit">SWCPPlanetLayer_Onderon</li>
+			<li MayRequire="MrHydralisk.LayeredAtmosphereOrbit">SWCPPlanetLayer_OnderonOrbit</li>
 			<!-- <li MayRequire="MrHydralisk.LayeredAtmosphereOrbit">SWCPPlanetLayer_Taloraan</li> -->
 			<!-- <li MayRequire="MrHydralisk.LayeredAtmosphereOrbit">SWCPPlanetLayer_TaloraanOrbit</li> -->
 		</layerWhitelist>
@@ -178,8 +178,8 @@
 			<li MayRequire="MrHydralisk.LayeredAtmosphereOrbit">SWCPPlanetLayer_Nevarro</li>
 			<li MayRequire="MrHydralisk.LayeredAtmosphereOrbit">SWCPPlanetLayer_NevarroOrbit</li>
 			
-			<!-- <li MayRequire="MrHydralisk.LayeredAtmosphereOrbit">SWCPPlanetLayer_Baroonda</li> -->
-			<!-- <li MayRequire="MrHydralisk.LayeredAtmosphereOrbit">SWCPPlanetLayer_BaroondaOrbit</li> -->
+			<li MayRequire="MrHydralisk.LayeredAtmosphereOrbit">SWCPPlanetLayer_Onderon</li>
+			<li MayRequire="MrHydralisk.LayeredAtmosphereOrbit">SWCPPlanetLayer_OnderonOrbit</li>
 			<!-- <li MayRequire="MrHydralisk.LayeredAtmosphereOrbit">SWCPPlanetLayer_Taloraan</li> -->
 			<!-- <li MayRequire="MrHydralisk.LayeredAtmosphereOrbit">SWCPPlanetLayer_TaloraanOrbit</li> -->
 		</layerWhitelist>

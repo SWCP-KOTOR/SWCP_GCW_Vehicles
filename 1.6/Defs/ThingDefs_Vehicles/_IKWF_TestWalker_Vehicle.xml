@@ -1,0 +1,367 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <Vehicles.VehicleBuildDef ParentName="VehicleBaseBuildable">
+    <defName>IKWF_TestWalker_VehicleBuildable</defName>
+    <label>ik walker test vehicle frame</label>
+    <thingToSpawn>IKWF_TestWalker_Vehicle</thingToSpawn>
+    <size>(5,5)</size>
+    <graphicData>
+		<graphicClass>Graphic_Single</graphicClass>
+		<texPath>Things/Pawn/IKWalker/TestWalker/WalkerBody_east</texPath>
+		<drawSize>(8,8)</drawSize>
+		
+		<drawOffset>(0,0,3)</drawOffset>
+		<drawOffsetEast>(1.5,0,3)</drawOffsetEast>
+		<drawOffsetWest>(-1.5,0,3)</drawOffsetWest>
+    </graphicData>
+    <costList>
+      <Steel>140</Steel>
+      <Plasteel>35</Plasteel>
+      <ComponentIndustrial>6</ComponentIndustrial>
+    </costList>
+  </Vehicles.VehicleBuildDef>
+  <PawnKindDef>
+    <defName>IKWF_TestWalker_VehicleKind</defName>
+    <label>ik walker test vehicle</label>
+    <race>IKWF_TestWalker_Vehicle</race>
+    <combatPower>140</combatPower>
+    <defaultFactionType>Mechanoid</defaultFactionType>
+    <lifeStages>
+		<li>
+			<bodyGraphicData>
+				<texPath>Things/Pawn/IKWalker/TestWalker/WalkerBody</texPath>
+				<drawSize>(8,8)</drawSize>
+				
+				<drawOffset>(0,0,3)</drawOffset>
+				<drawOffsetEast>(1.5,0,3)</drawOffsetEast>
+				<drawOffsetWest>(-1.5,0,3)</drawOffsetWest>
+			</bodyGraphicData>
+		</li>
+    </lifeStages>
+  </PawnKindDef>
+  
+  
+	<Vehicles.VehicleDef ParentName="BaseVehiclePawn">
+		<defName>IKWF_TestWalker_Vehicle</defName>
+		<label>ik walker test vehicle</label>
+		<description>Vehicle Framework test walker used to validate IK body offset and scaling without replacing the vehicle material pipeline.</description>
+		<drawerType>RealtimeOnly</drawerType>
+		<size>(5,5)</size>
+		<kindDef>IKWF_TestWalker_VehicleKind</kindDef>
+		<buildDef>IKWF_TestWalker_VehicleBuildable</buildDef>
+		
+		
+		<graphicData Class="Vehicles.GraphicDataRGB">
+			<graphicClass>Vehicles.Graphic_Vehicle</graphicClass>
+			<texPath>Things/Pawn/IKWalker/TestWalker/WalkerBody</texPath>
+			<drawSize>(8,8)</drawSize>
+			<shaderType>CutoutComplexRGB</shaderType>
+			
+			<drawOffset>(0,0,3)</drawOffset>
+			<drawOffsetEast>(1.5,0,3)</drawOffsetEast>
+			<drawOffsetWest>(-1.5,0,3)</drawOffsetWest>
+		</graphicData>
+		<vehicleStats>
+		  <MoveSpeed>4.2</MoveSpeed>
+		  <Mass>120</Mass>
+		</vehicleStats>
+		
+		<properties>
+		  <diagonalRotation>false</diagonalRotation>
+		  <roles>
+			<li>
+			  <key>pilot</key>
+			  <label>pilot</label>
+			  <handlingTypes>Movement</handlingTypes>
+			  <slots>1</slots>
+			  <slotsToOperate>1</slotsToOperate>
+			</li>
+		  </roles>
+		</properties>
+		<components>
+		  <li>
+			<key>core</key>
+			<label>core</label>
+			<health>180</health>
+		  </li>
+		</components>
+		
+		<soundSustainersOnEvent>
+			<li>
+				<start>IgnitionOn</start>
+				<stop>MoveStart</stop>
+				<value>kotorsound_speederbike_idle</value>
+			</li>
+			<li>
+				<start>MoveStart</start>
+				<stop>MoveStop</stop>
+				<value>kotorsound_ATSTsteppy</value>
+			</li>
+			<li>
+				<start>MoveStop</start>
+				<stop>MoveStart</stop>
+				<value>kotorsound_speederbike_idle</value>
+			</li>
+			<li>
+				<start>MoveStop</start>
+				<stop>IgnitionOff</stop>
+				<value>kotorsound_speederbike_idle</value>
+			</li>
+		</soundSustainersOnEvent>
+		
+		<soundOneShotsOnEvent>
+			<li>
+				<key>IgnitionOn</key>
+				<value>kotorsound_speederbike_activate</value>
+			</li>
+			<li>
+				<key>IgnitionOff</key>
+				<value>kotorsound_speederbike_deactivate</value>
+			</li>
+		</soundOneShotsOnEvent>
+		
+		<comps>
+			<li Class="Vehicles.CompProperties_VehicleTurrets">
+				<turrets>
+					<li>
+						<turretDef>guy762_VehicleTurret_ATDP_main</turretDef>
+						
+						<renderProperties>
+							<north>(0, 4.5)</north>
+							<south>(0, 1)</south>
+							<east>(3.5, 4)</east>
+							<west>(-3.5, 4)</west>
+						</renderProperties>
+						<defaultAngleRotated>0</defaultAngleRotated>
+						<angleRestricted>(270,90)</angleRestricted>
+						<gizmoLabel>long range AV gun</gizmoLabel>
+						
+						<aimPieOffset>(0, 2.55)</aimPieOffset>
+						
+						<drawLayer>0</drawLayer>
+						
+						<key>ATDPKey_gun_1</key>
+					</li>
+				</turrets>
+			</li>
+			
+			<li Class="IKWalkerFramework.CompProperties_MechLegRenderer">
+			  <stepCycleScale>3.2</stepCycleScale>
+			  <motionBlendLerp>0.12</motionBlendLerp>
+			  <globalAnimationSpeedMultiplier>0.17</globalAnimationSpeedMultiplier>
+			  <side>
+				<bodyTexPath>Things/Pawn/IKWalker/TestWalker/WalkerBody_east</bodyTexPath>
+				<editorBodySpriteHeight>250</editorBodySpriteHeight>
+				<bodySpriteDrawSize>(2.18, 2.18)</bodySpriteDrawSize>
+				<bodyOffset>(0.67, -68)</bodyOffset>
+				<bodyLayer>5</bodyLayer>
+				<renderGroundShadow>true</renderGroundShadow>
+				<groundShadowOffset>(2.79, 107.14)</groundShadowOffset>
+				<groundShadowDrawSize>(220, 115.5)</groundShadowDrawSize>
+				<bodyBobAmplitude>12</bodyBobAmplitude>
+				<bodyBobPhaseDeg>0</bodyBobPhaseDeg>
+				<animationDurationSeconds>1.6</animationDurationSeconds>
+				<legs>
+				  <li>
+					<name>Leg 1</name>
+					<enabled>true</enabled>
+					<mirrorLegEnabled>true</mirrorLegEnabled>
+					<oppositeLegOffset>(-1.9, -56.96)</oppositeLegOffset>
+					<animationDurationSeconds>1.6</animationDurationSeconds>
+					<baseBendDirectionDeg>0</baseBendDirectionDeg>
+					<handle>(-97.67, 171)</handle>
+					<segments>
+					  <li>
+						<name>Upper</name>
+						<texPath>Things/Pawn/IKWalker/TestWalker/WalkerLeg1_east</texPath>
+						<scenePos>(-29.33, 6.67)</scenePos>
+						<drawSize>(94.95, 178.26)</drawSize>
+						<rotationDeg>54.1</rotationDeg>
+						<pivot>(0.54, 0.26)</pivot>
+						<tip>(0.54, 0.74)</tip>
+						<preferredAngleDeg>-180</preferredAngleDeg>
+						<maxNegativeAngleDeltaDeg>35.9</maxNegativeAngleDeltaDeg>
+						<maxPositiveAngleDeltaDeg>2.01</maxPositiveAngleDeltaDeg>
+						<verticalCompressionBlend>0.35</verticalCompressionBlend>
+						<layer>5</layer>
+					  </li>
+					  <li>
+						<name>Lower</name>
+						<texPath>Things/Pawn/IKWalker/TestWalker/WalkerLeg2_east</texPath>
+						<scenePos>(-98.61, 56.81)</scenePos>
+						<drawSize>(80.75, 173.08)</drawSize>
+						<rotationDeg>-0.3</rotationDeg>
+						<pivot>(0.49, 0.15)</pivot>
+						<tip>(0.49, 0.79)</tip>
+						<preferredAngleDeg>-81.19</preferredAngleDeg>
+						<maxNegativeAngleDeltaDeg>50.33</maxNegativeAngleDeltaDeg>
+						<maxPositiveAngleDeltaDeg>27.18</maxPositiveAngleDeltaDeg>
+						<verticalCompressionBlend>0.35</verticalCompressionBlend>
+						<layer>4</layer>
+					  </li>
+					</segments>
+					<animationKeys>
+					  <li>
+						<time>0.00</time>
+						<handle>(-97.67, 171)</handle>
+					  </li>
+					  <li>
+						<time>0.40</time>
+						<handle>(-68, 106.67)</handle>
+					  </li>
+					  <li>
+						<time>0.70</time>
+						<handle>(-41.33, 142.67)</handle>
+					  </li>
+					</animationKeys>
+				  </li>
+				</legs>
+				<solverProfile>SideChain</solverProfile>
+			  </side>
+			  <front>
+				<bodyTexPath>Things/Pawn/IKWalker/TestWalker/WalkerBody_south</bodyTexPath>
+				<editorBodySpriteHeight>250</editorBodySpriteHeight>
+				<bodySpriteDrawSize>(2.18, 2.18)</bodySpriteDrawSize>
+				<bodyOffset>(0, 0)</bodyOffset>
+				<bodyLayer>5</bodyLayer>
+				<renderGroundShadow>true</renderGroundShadow>
+				<groundShadowOffset>(0, 144.39)</groundShadowOffset>
+				<groundShadowDrawSize>(150.92, 197.12)</groundShadowDrawSize>
+				<bodyBobAmplitude>12</bodyBobAmplitude>
+				<bodyBobPhaseDeg>0</bodyBobPhaseDeg>
+				<animationDurationSeconds>1.6</animationDurationSeconds>
+				<legs>
+				  <li>
+					<name>Leg 1</name>
+					<enabled>true</enabled>
+					<mirrorLegEnabled>true</mirrorLegEnabled>
+					<oppositeLegOffset>(-24, 0)</oppositeLegOffset>
+					<animationDurationSeconds>1.6</animationDurationSeconds>
+					<baseBendDirectionDeg>0</baseBendDirectionDeg>
+					<handle>(-50, 144.39)</handle>
+					<segments>
+					  <li>
+						<name>Upper</name>
+						<texPath>Things/Pawn/IKWalker/TestWalker/WalkerLeg1_north</texPath>
+						<scenePos>(-50, -35.33)</scenePos>
+						<drawSize>(44.11, 77.48)</drawSize>
+						<rotationDeg>0</rotationDeg>
+						<pivot>(0.5, 0.12)</pivot>
+						<tip>(0.5, 0.92)</tip>
+						<preferredAngleDeg>0</preferredAngleDeg>
+						<maxNegativeAngleDeltaDeg>55</maxNegativeAngleDeltaDeg>
+						<maxPositiveAngleDeltaDeg>55</maxPositiveAngleDeltaDeg>
+						<verticalCompressionBlend>0.13</verticalCompressionBlend>
+						<layer>3</layer>
+					  </li>
+					  <li>
+						<name>Lower</name>
+						<texPath>Things/Pawn/IKWalker/TestWalker/WalkerLeg2_north</texPath>
+						<scenePos>(-50, 27.82)</scenePos>
+						<drawSize>(80, 136.33)</drawSize>
+						<rotationDeg>0</rotationDeg>
+						<pivot>(0.5, 0.1)</pivot>
+						<tip>(0.5, 0.94)</tip>
+						<preferredAngleDeg>0</preferredAngleDeg>
+						<maxNegativeAngleDeltaDeg>90</maxNegativeAngleDeltaDeg>
+						<maxPositiveAngleDeltaDeg>90</maxPositiveAngleDeltaDeg>
+						<verticalCompressionBlend>1</verticalCompressionBlend>
+						<layer>1</layer>
+					  </li>
+					</segments>
+					<animationKeys>
+					  <li>
+						<time>0.00</time>
+						<handle>(-50, 152.03)</handle>
+					  </li>
+					  <li>
+						<time>0.41</time>
+						<handle>(-50, 89.36)</handle>
+					  </li>
+					  <li>
+						<time>0.74</time>
+						<handle>(-50, 65.76)</handle>
+					  </li>
+					</animationKeys>
+				  </li>
+				</legs>
+				<solverProfile>VerticalStack</solverProfile>
+			  </front>
+			  <back>
+				<bodyTexPath>Things/Pawn/IKWalker/TestWalker/WalkerBody_north</bodyTexPath>
+				<editorBodySpriteHeight>250</editorBodySpriteHeight>
+				<bodySpriteDrawSize>(2.18, 2.18)</bodySpriteDrawSize>
+				<bodyOffset>(0, -30)</bodyOffset>
+				<bodyLayer>0</bodyLayer>
+				<renderGroundShadow>true</renderGroundShadow>
+				<groundShadowOffset>(0, 95.5)</groundShadowOffset>
+				<groundShadowDrawSize>(151.86, 107.22)</groundShadowDrawSize>
+				<bodyBobAmplitude>12</bodyBobAmplitude>
+				<bodyBobPhaseDeg>0</bodyBobPhaseDeg>
+				<animationDurationSeconds>1.6</animationDurationSeconds>
+				<legs>
+				  <li>
+					<name>Leg 1</name>
+					<enabled>true</enabled>
+					<mirrorLegEnabled>true</mirrorLegEnabled>
+					<oppositeLegOffset>(-24, 0)</oppositeLegOffset>
+					<animationDurationSeconds>1.6</animationDurationSeconds>
+					<baseBendDirectionDeg>90</baseBendDirectionDeg>
+					<handle>(-42, 165.33)</handle>
+					<segments>
+					  <li>
+						<name>Upper</name>
+						<texPath>Things/Pawn/IKWalker/TestWalker/WalkerLeg1_north</texPath>
+						<scenePos>(-42, 23)</scenePos>
+						<drawSize>(33.67, 75.98)</drawSize>
+						<rotationDeg>0</rotationDeg>
+						<pivot>(0.5, 0.12)</pivot>
+						<tip>(0.5, 0.92)</tip>
+						<preferredAngleDeg>0</preferredAngleDeg>
+						<maxNegativeAngleDeltaDeg>55</maxNegativeAngleDeltaDeg>
+						<maxPositiveAngleDeltaDeg>55</maxPositiveAngleDeltaDeg>
+						<verticalCompressionBlend>0.05</verticalCompressionBlend>
+						<layer>3</layer>
+					  </li>
+					  <li>
+						<name>Lower</name>
+						<texPath>Things/Pawn/IKWalker/TestWalker/WalkerLeg2_south</texPath>
+						<scenePos>(-42, 81.97)</scenePos>
+						<drawSize>(80, 144)</drawSize>
+						<rotationDeg>0</rotationDeg>
+						<pivot>(0.5, 0.1)</pivot>
+						<tip>(0.5, 0.94)</tip>
+						<preferredAngleDeg>0</preferredAngleDeg>
+						<maxNegativeAngleDeltaDeg>90</maxNegativeAngleDeltaDeg>
+						<maxPositiveAngleDeltaDeg>90</maxPositiveAngleDeltaDeg>
+						<verticalCompressionBlend>1</verticalCompressionBlend>
+						<layer>2</layer>
+					  </li>
+					</segments>
+					<animationKeys>
+					  <li>
+						<time>0.00</time>
+						<handle>(-42, 91)</handle>
+					  </li>
+					  <li>
+						<time>0.46</time>
+						<handle>(-42, 127.67)</handle>
+					  </li>
+					  <li>
+						<time>0.73</time>
+						<handle>(-42, 165.33)</handle>
+					  </li>
+					</animationKeys>
+				  </li>
+				</legs>
+				<solverProfile>VerticalStack</solverProfile>
+			  </back>
+			</li>
+
+
+
+
+		</comps>
+		
+	</Vehicles.VehicleDef>
+</Defs>

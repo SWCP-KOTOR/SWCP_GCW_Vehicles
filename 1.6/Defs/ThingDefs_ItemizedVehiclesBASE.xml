@@ -81,7 +81,7 @@
 	-->
 	
 	<ThingDef Name="SWCP_ItemizedGroundVehicleBASE" ParentName="SWCP_ItemizedVehicleBASE" Abstract="True">
-		<description>An itemized starfighter. Use it to construct the corresponding starfighter.</description>
+		<description>An itemized ground vehicle. Use it to construct the corresponding vehicle.</description>
 		
 		<tradeTags>
 			<li>SWCPTT_ItemizedGroundVehicles_any</li>

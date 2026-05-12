@@ -24,8 +24,8 @@
 		<downloadUrl>https://github.com/ShunTheWitch/CoventechmechanoidwarfareCore</downloadUrl>
     </li>
 	<li>
-		<packageId>guy762.MM.KotORCore</packageId>
-		<displayName>Star Wars KotOR Resources and Materials</displayName>
+		<packageId>SWCP.guy762.RR.SWCore</packageId>
+		<displayName>Star Wars Collaboration Project Core</displayName>
 		<steamWorkshopUrl>steam://url/CommunityFilePage/3254370945</steamWorkshopUrl>
 		<downloadUrl>https://github.com/guy1762/guy762-MM-KotORCore</downloadUrl>
 	</li>
@@ -50,6 +50,8 @@
 		<li>guy762.MM.KotORCore</li>
 		<li>guy762.KotORWeapons</li>
 		<li>guy762.KotORDroids</li>
+		
+		<li>SWCP.guy762.RR.SWCore</li>
 	</loadAfter>
 	<loadBefore>
 		<li>SWCP.guy762.Taran.SWGalaxy</li>

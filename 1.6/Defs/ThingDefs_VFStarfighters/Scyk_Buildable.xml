@@ -82,7 +82,10 @@
 		</thingSetMakerTags>
 		<tradeTags>
 			<li>SWCPTT_ItemizedStarfighters_ScumBasic</li>
-			<li>SWCPTT_ItemizedStarfighters_HuttShips</li>
+		<!-- individual faction tags -->
+			<li>SWCPTT_ItemizedStarfighters_HuttSurplus</li>
+		<!-- megacorporation tags -->
+			<li>SWCPTT_ItemizedStarfighters_MandalMotors</li>
 		</tradeTags>
 	</ThingDef>
 	

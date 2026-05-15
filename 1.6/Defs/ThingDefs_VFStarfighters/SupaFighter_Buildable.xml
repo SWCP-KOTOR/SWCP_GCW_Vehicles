@@ -82,7 +82,10 @@
 		</thingSetMakerTags>
 		<tradeTags>
 			<li>SWCPTT_ItemizedStarfighters_ScumExotic</li>
-			<li>SWCPTT_ItemizedStarfighters_BlackSunShips</li>
+		<!-- individual faction tags -->
+			<li>SWCPTT_ItemizedStarfighters_BlackSunSurplus</li>
+		<!-- megacorporation tags -->
+			<li>SWCPTT_ItemizedStarfighters_JoraanDriveSystems</li>
 		</tradeTags>
 	</ThingDef>
 	

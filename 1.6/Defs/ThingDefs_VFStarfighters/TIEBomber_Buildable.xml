@@ -81,8 +81,12 @@
 		</thingSetMakerTags>
 		<tradeTags>
 			<li>SWCPTT_ItemizedStarfighters_ImperialAdv</li>
+		<!-- individual faction tags -->
 			<li>SWCPTT_ItemizedStarfighters_ImpRemnantSurplus</li>
 			<li>SWCPTT_ItemizedStarfighters_ZsinjSurplus</li>
+			<li>SWCPTT_ItemizedStarfighters_LocalWarlordSurplus</li>
+		<!-- megacorporation tags -->
+			<li>SWCPTT_ItemizedStarfighters_Sienar</li>
 		</tradeTags>
 	</ThingDef>
 	

@@ -82,6 +82,8 @@
 		</thingSetMakerTags>
 		<tradeTags>
 			<li>SWCPTT_ItemizedStarfighters_CloneWarsSurplus</li>
+		<!-- megacorporation tags -->
+			<!-- <li>SWCPTT_ItemizedStarfighters_KuatDriveYards</li> -->
 		</tradeTags>
 	</ThingDef>
 	

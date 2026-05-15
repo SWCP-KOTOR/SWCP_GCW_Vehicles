@@ -85,6 +85,10 @@
 			<li>SWCPTT_ItemizedStarfighters_CivilianAdv</li>
 			<li>SWCPTT_ItemizedStarfighters_ScumAdv</li>
 			<li>SWCPTT_ItemizedStarfighters_RebelAdv</li>
+		<!-- individual faction tags -->
+			<!-- <li>SWCPTT_ItemizedStarfighters_RebelSurplus</li> -->
+		<!-- megacorporation tags -->
+			<li>SWCPTT_ItemizedStarfighters_CorellianEngineeringCorp</li>
 		</tradeTags>
 	</ThingDef>
 	

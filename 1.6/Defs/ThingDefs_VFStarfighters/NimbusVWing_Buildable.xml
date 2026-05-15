@@ -84,6 +84,10 @@
 			<li>SWCPTT_ItemizedStarfighters_ScumBasic</li>
 			<li>SWCPTT_ItemizedStarfighters_ImperialBasic</li>
 			<li>SWCPTT_ItemizedStarfighters_GenericPirateShips</li>
+		<!-- individual faction tags -->
+			<li>SWCPTT_ItemizedStarfighters_LocalWarlordSurplus</li>
+		<!-- megacorporation tags -->
+			<li>SWCPTT_ItemizedStarfighters_KuatDriveYards</li>
 		</tradeTags>
 	</ThingDef>
 	

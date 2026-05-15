@@ -82,7 +82,10 @@
 		</thingSetMakerTags>
 		<tradeTags>
 			<li>SWCPTT_ItemizedStarfighters_ImperialExotic</li>
+		<!-- individual faction tags -->
 			<li>SWCPTT_ItemizedStarfighters_ZsinjSurplus</li>
+		<!-- megacorporation tags -->
+			
 		</tradeTags>
 	</ThingDef>
 	

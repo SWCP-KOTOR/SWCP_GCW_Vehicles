@@ -82,6 +82,8 @@
 			<li>SWCPTT_ItemizedGroundVehicles_CloneWarsSurplus</li>
 		<!-- individual faction tags -->
 			<li>SWCPTT_ItemizedGroundVehicles_PartisanSurplus</li>
+		<!-- megacorporation tags -->
+			<li>SWCPTT_ItemizedGroundVehicles_BaktoidIndustries</li>
 		</tradeTags>
 	</ThingDef>
 	

@@ -81,7 +81,10 @@
 		</thingSetMakerTags>
 		<tradeTags>
 			<li>SWCPTT_ItemizedStarfighters_ImperialExotic</li>
+		<!-- individual faction tags -->
 			<li>SWCPTT_ItemizedStarfighters_PentastarSurplus</li>
+		<!-- megacorporation tags -->
+			<li>SWCPTT_ItemizedStarfighters_CygnusSpaceworks</li>
 		</tradeTags>
 	</ThingDef>
 	

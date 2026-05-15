@@ -83,6 +83,8 @@
 			<li>SWCPTT_ItemizedGroundVehicles_CloneWarsSurplus</li>
 		<!-- individual faction tags -->
 			<li>SWCPTT_ItemizedGroundVehicles_ZsinjSurplus</li>
+		<!-- megacorporation tags -->
+			<li>SWCPTT_ItemizedGroundVehicles_KuatDriveYards</li>
 		</tradeTags>
 	</ThingDef>
 	

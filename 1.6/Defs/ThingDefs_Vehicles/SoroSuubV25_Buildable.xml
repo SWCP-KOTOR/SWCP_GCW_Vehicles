@@ -81,6 +81,8 @@
 		<!-- individual faction tags -->
 			<li>SWCPTT_ItemizedGroundVehicles_RebelCellSurplus</li>
 			<li>SWCPTT_ItemizedGroundVehicles_PartisanSurplus</li>
+		<!-- megacorporation tags -->
+			<li>SWCPTT_ItemizedGroundVehicles_SoroSuub</li>
 		</tradeTags>
 	</ThingDef>
 	

@@ -83,6 +83,8 @@
 		<!-- individual faction tags -->
 			<li>SWCPTT_ItemizedGroundVehicles_PentastarSurplus</li>
 			<li>SWCPTT_ItemizedGroundVehicles_DarkEmpireSurplus</li>
+		<!-- megacorporation tags -->
+			<li>SWCPTT_ItemizedGroundVehicles_Sienar</li>
 		</tradeTags>
 	</ThingDef>
 	

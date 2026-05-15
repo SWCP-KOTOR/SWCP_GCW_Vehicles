@@ -81,6 +81,8 @@
 		</thingSetMakerTags>
 		<tradeTags>
 			<li>SWCPTT_ItemizedGroundVehicles_CivilianBasic</li>
+		<!-- megacorporation tags -->
+			<li>SWCPTT_ItemizedGroundVehicles_SoroSuub</li>
 		</tradeTags>
 	</ThingDef>
 	

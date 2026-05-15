@@ -86,8 +86,11 @@
 		</thingSetMakerTags>
 		<tradeTags>
 			<li>SWCPTT_ItemizedStarfighters_ImperialExotic</li>
+		<!-- individual faction tags -->
 			<li>SWCPTT_ItemizedStarfighters_PentastarSurplus</li>
 			<li>SWCPTT_ItemizedStarfighters_MaldroodSurplus</li>
+		<!-- megacorporation tags -->
+			<li>SWCPTT_ItemizedStarfighters_Sienar</li>
 		</tradeTags>
 	</ThingDef>
 	
@@ -148,6 +151,8 @@
 		</thingSetMakerTags>
 		<tradeTags>
 			<li>SWCPTT_ItemizedStarfighters_ImperialExotic</li>
+		<!-- megacorporation tags -->
+			<!-- <li>SWCPTT_ItemizedStarfighters_Sienar</li> -->
 		</tradeTags>
 	</ThingDef>
 	
@@ -203,6 +208,8 @@
 		</thingSetMakerTags>
 		<tradeTags>
 			<li>SWCPTT_ItemizedStarfighters_ImperialExotic</li>
+		<!-- megacorporation tags -->
+			<!-- <li>SWCPTT_ItemizedStarfighters_Sienar</li> -->
 		</tradeTags>
 	</ThingDef>
 	

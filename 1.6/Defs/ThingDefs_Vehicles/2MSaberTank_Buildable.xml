@@ -82,6 +82,8 @@
 			<li>SWCPTT_ItemizedGroundVehicles_ImperialAdv</li>
 		<!-- individual faction tags -->
 			<li>SWCPTT_ItemizedGroundVehicles_MaldroodSurplus</li>
+		<!-- megacorporation tags -->
+			<li>SWCPTT_ItemizedGroundVehicles_KuatDriveYards</li>
 		</tradeTags>
 	</ThingDef>
 </Defs>

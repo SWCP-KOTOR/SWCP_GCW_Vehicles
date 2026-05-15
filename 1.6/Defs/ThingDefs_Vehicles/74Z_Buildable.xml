@@ -81,6 +81,8 @@
 		<!-- individual faction tags -->
 			<li>SWCPTT_ItemizedGroundVehicles_ImpRemnantSurplus</li>
 			<li>SWCPTT_ItemizedGroundVehicles_MaldroodSurplus</li>
+		<!-- megacorporation tags -->
+			<li>SWCPTT_ItemizedGroundVehicles_Aratech</li>
 		</tradeTags>
 	</ThingDef>
 	

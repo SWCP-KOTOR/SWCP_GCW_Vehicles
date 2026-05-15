@@ -82,6 +82,9 @@
 		<!-- individual faction tags -->
 			<li>SWCPTT_ItemizedGroundVehicles_MaldroodSurplus</li>
 			<li>SWCPTT_ItemizedGroundVehicles_ImpMandaloreSurplus</li>
+		<!-- megacorporation tags -->
+			<li>SWCPTT_ItemizedGroundVehicles_KuatDriveYards</li>
+			<li>SWCPTT_ItemizedGroundVehicles_UbrikkianIndustries</li>
 		</tradeTags>
 	</ThingDef>
 	

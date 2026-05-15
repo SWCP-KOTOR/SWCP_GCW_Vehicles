@@ -84,8 +84,11 @@
 		</thingSetMakerTags>
 		<tradeTags>
 			<li>SWCPTT_ItemizedStarfighters_ScumAdv</li>
-			<li>SWCPTT_ItemizedStarfighters_BlackSunShips</li>
-			<li>SWCPTT_ItemizedStarfighters_ZannConsortiumShips</li>
+		<!-- individual faction tags -->
+			<li>SWCPTT_ItemizedStarfighters_BlackSunSurplus</li>
+			<li>SWCPTT_ItemizedStarfighters_ZannConsortiumSurplus</li>
+		<!-- megacorporation tags -->
+			<li>SWCPTT_ItemizedStarfighters_TransGalMeg</li>
 		</tradeTags>
 	</ThingDef>
 	

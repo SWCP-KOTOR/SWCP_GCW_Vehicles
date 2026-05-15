@@ -83,6 +83,8 @@
 		<!-- individual faction tags -->
 			<li>SWCPTT_ItemizedGroundVehicles_HuttSurplus</li>
 			<li>SWCPTT_ItemizedGroundVehicles_BlackSunSurplus</li>
+		<!-- megacorporation tags -->
+			<li>SWCPTT_ItemizedGroundVehicles_TaggeCo</li>
 		</tradeTags>
 	</ThingDef>
 </Defs>

@@ -84,6 +84,11 @@
 		<tradeTags>
 			<li>SWCPTT_ItemizedStarfighters_RebelAdv</li>
 			<li>SWCPTT_ItemizedStarfighters_NewRepublicAdv</li>
+		<!-- individual faction tags -->
+			<li>SWCPTT_ItemizedStarfighters_NewRepublicSurplus</li>
+			<li>SWCPTT_ItemizedStarfighters_PartisanSurplus</li>
+		<!-- megacorporation tags -->
+			<li>SWCPTT_ItemizedStarfighters_Incom</li>
 		</tradeTags>
 	</ThingDef>
 	

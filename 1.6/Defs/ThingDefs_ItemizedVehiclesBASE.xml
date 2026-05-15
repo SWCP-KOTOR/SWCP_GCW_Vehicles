@@ -58,6 +58,57 @@
 		
 		<tradeTags>
 			<li>SWCPTT_ItemizedStarfighters_any</li>
+			
+			
+			
+			
+			<!-- <li>SWCPTT_ItemizedStarfighters_RebelAdv</li> -->
+			<!-- <li>SWCPTT_ItemizedStarfighters_RebelBasic</li> -->
+			<!-- <li>SWCPTT_ItemizedStarfighters_NewRepublicBasic</li> -->
+			<!-- <li>SWCPTT_ItemizedStarfighters_NewRepublicAdv</li> -->
+			<!-- <li>SWCPTT_ItemizedStarfighters_ImperialBasic</li> -->
+			<!-- <li>SWCPTT_ItemizedStarfighters_ImperialAdv</li> -->
+			<!-- <li>SWCPTT_ItemizedStarfighters_ImperialExotic</li> -->
+			<!-- <li>SWCPTT_ItemizedStarfighters_CivilianBasic</li> -->
+			<!-- <li>SWCPTT_ItemizedStarfighters_CivilianAdv</li> -->
+			<!-- <li>SWCPTT_ItemizedStarfighters_ScumBasic</li> -->
+			<!-- <li>SWCPTT_ItemizedStarfighters_ScumAdv</li> -->
+			<!-- <li>SWCPTT_ItemizedStarfighters_ScumExotic</li> -->
+			
+			<!-- <li>SWCPTT_ItemizedStarfighters_GenericPirateShips</li> -->
+			<!-- <li>SWCPTT_ItemizedStarfighters_CloneWarsSurplus</li> -->
+		<!-- individual faction tags -->
+			<!-- <li>SWCPTT_ItemizedStarfighters_NewRepublicSurplus</li> -->
+			<!-- <li>SWCPTT_ItemizedStarfighters_RebelSurplus</li> -->
+			<!-- <li>SWCPTT_ItemizedStarfighters_PartisanSurplus</li> -->
+			
+			<!-- <li>SWCPTT_ItemizedStarfighters_ImpRemnantSurplus</li> -->
+			<!-- <li>SWCPTT_ItemizedStarfighters_ZsinjSurplus</li> -->
+			<!-- <li>SWCPTT_ItemizedStarfighters_PentastarSurplus</li> -->
+			<!-- <li>SWCPTT_ItemizedStarfighters_MaldroodSurplus</li> -->
+			<!-- <li>SWCPTT_ItemizedStarfighters_EriaduSurplus</li> -->
+			
+			<!-- <li>SWCPTT_ItemizedStarfighters_HuttSurplus</li> -->
+			<!-- <li>SWCPTT_ItemizedStarfighters_BlackSunSurplus</li> -->
+			<!-- <li>SWCPTT_ItemizedStarfighters_ZannConsortiumSurplus</li> -->
+			
+			<!-- <li>SWCPTT_ItemizedStarfighters_PDFSurplus</li> -->
+			<!-- <li>SWCPTT_ItemizedStarfighters_LocalWarlordSurplus</li> -->
+		<!-- megacorporation tags -->
+			<!-- <li>SWCPTT_ItemizedStarfighters_Incom</li> -->
+			<!-- <li>SWCPTT_ItemizedStarfighters_Koensayr</li> -->
+			<!-- <li>SWCPTT_ItemizedStarfighters_SlaynKorpil</li> -->
+			<!-- <li>SWCPTT_ItemizedStarfighters_CygnusSpaceworks</li> -->
+			<!-- <li>SWCPTT_ItemizedStarfighters_Sienar</li> -->
+			<!-- <li>SWCPTT_ItemizedStarfighters_KuatDriveYards</li> -->
+			<!-- <li>SWCPTT_ItemizedStarfighters_UbrikkianIndustries</li> -->
+			<!-- <li>SWCPTT_ItemizedStarfighters_LoratusManufacturing</li> -->
+			<!-- <li>SWCPTT_ItemizedStarfighters_CorellianEngineeringCorp</li> -->
+			<!-- <li>SWCPTT_ItemizedStarfighters_TransGalMeg</li> -->
+			<!-- <li>SWCPTT_ItemizedStarfighters_MandalMotors</li> -->
+			<!-- <li>SWCPTT_ItemizedStarfighters_HoerschKessel</li> -->
+			<!-- <li>SWCPTT_ItemizedStarfighters_NubiaStarDrivesInc</li> -->
+			<!-- <li>SWCPTT_ItemizedStarfighters_JoraanDriveSystems</li> -->
 		</tradeTags>
 	</ThingDef>
 	
@@ -85,6 +136,47 @@
 		
 		<tradeTags>
 			<li>SWCPTT_ItemizedGroundVehicles_any</li>
+			
+			
+			
+			
+			<!-- <li>SWCPTT_ItemizedGroundVehicles_RebelBasic</li> -->
+			<!-- <li>SWCPTT_ItemizedGroundVehicles_RebelAdv</li> -->
+			<!-- <li>SWCPTT_ItemizedGroundVehicles_NewRepublicBasic</li> -->
+			<!-- <li>SWCPTT_ItemizedGroundVehicles_NewRepublicAdv</li> -->
+			<!-- <li>SWCPTT_ItemizedGroundVehicles_ImperialBasic</li> -->
+			<!-- <li>SWCPTT_ItemizedGroundVehicles_ImperialAdv</li> -->
+			<!-- <li>SWCPTT_ItemizedGroundVehicles_ImperialExotic</li> -->
+			<!-- <li>SWCPTT_ItemizedGroundVehicles_CivilianBasic</li> -->
+			<!-- <li>SWCPTT_ItemizedGroundVehicles_ScumBasic</li> -->
+			
+			<!-- <li>SWCPTT_ItemizedGroundVehicles_CloneWarsSurplus</li> -->
+			
+		<!-- individual faction tags -->
+			<!-- <li>SWCPTT_ItemizedGroundVehicles_NewRepublicSurplus</li> -->
+			<!-- <li>SWCPTT_ItemizedGroundVehicles_RebelCellSurplus</li> -->
+			<!-- <li>SWCPTT_ItemizedGroundVehicles_PartisanSurplus</li> -->
+			
+			<!-- <li>SWCPTT_ItemizedGroundVehicles_ImpRemnantSurplus</li> -->
+			<!-- <li>SWCPTT_ItemizedGroundVehicles_PentastarSurplus</li> -->
+			<!-- <li>SWCPTT_ItemizedGroundVehicles_ZsinjSurplus</li> -->
+			<!-- <li>SWCPTT_ItemizedGroundVehicles_MaldroodSurplus</li> -->
+			<!-- <li>SWCPTT_ItemizedGroundVehicles_EriaduSurplus</li> -->
+			<!-- <li>SWCPTT_ItemizedGroundVehicles_ImpMandaloreSurplus</li> -->
+			<!-- <li>SWCPTT_ItemizedGroundVehicles_DarkEmpireSurplus</li> -->
+			
+			<!-- <li>SWCPTT_ItemizedGroundVehicles_HuttSurplus</li> -->
+			<!-- <li>SWCPTT_ItemizedGroundVehicles_BlackSunSurplus</li> -->
+			
+		<!-- megacorporation tags -->	
+			<!-- <li>SWCPTT_ItemizedGroundVehicles_KuatDriveYards</li> -->
+			<!-- <li>SWCPTT_ItemizedGroundVehicles_Aratech</li> -->
+			<!-- <li>SWCPTT_ItemizedGroundVehicles_TaggeCo</li> -->
+			<!-- <li>SWCPTT_ItemizedGroundVehicles_SoroSuub</li> -->
+			<!-- <li>SWCPTT_ItemizedGroundVehicles_BaktoidIndustries</li> -->
+			<!-- <li>SWCPTT_ItemizedGroundVehicles_UbrikkianIndustries</li> -->
+			<!-- <li>SWCPTT_ItemizedGroundVehicles_YutraneTrackata</li> -->
+			<!-- <li>SWCPTT_ItemizedGroundVehicles_Sienar</li> -->
 		</tradeTags>
 	</ThingDef>
 	

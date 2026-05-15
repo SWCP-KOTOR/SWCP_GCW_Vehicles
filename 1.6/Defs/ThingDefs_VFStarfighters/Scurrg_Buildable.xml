@@ -83,6 +83,8 @@
 		</thingSetMakerTags>
 		<tradeTags>
 			<li>SWCPTT_ItemizedStarfighters_ScumExotic</li>
+		<!-- megacorporation tags -->
+			<li>SWCPTT_ItemizedStarfighters_NubiaStarDrivesInc</li>
 		</tradeTags>
 	</ThingDef>
 </Defs>

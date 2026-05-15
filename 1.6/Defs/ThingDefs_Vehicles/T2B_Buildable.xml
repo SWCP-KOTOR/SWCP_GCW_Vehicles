@@ -82,6 +82,8 @@
 			<li>SWCPTT_ItemizedGroundVehicles_NewRepublicAdv</li>
 		<!-- individual faction tags -->
 			<li>SWCPTT_ItemizedGroundVehicles_NewRepublicSurplus</li>
+		<!-- megacorporation tags -->
+			<li>SWCPTT_ItemizedGroundVehicles_YutraneTrackata</li>
 		</tradeTags>
 	</ThingDef>
 	

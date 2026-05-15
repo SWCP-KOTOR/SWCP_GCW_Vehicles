@@ -83,8 +83,16 @@
 		</thingSetMakerTags>
 		<tradeTags>
 			<li>SWCPTT_ItemizedStarfighters_ImperialBasic</li>
-			<!-- <li>SWCPTT_ItemizedStarfighters_ImpRemnantSurplus</li> -->
-			<!-- <li>SWCPTT_ItemizedStarfighters_ZsinjSurplus</li> -->
+		<!-- individual faction tags -->
+			<li>SWCPTT_ItemizedStarfighters_ImpRemnantSurplus</li>
+			<li>SWCPTT_ItemizedStarfighters_ZsinjSurplus</li>
+			<li>SWCPTT_ItemizedStarfighters_PentastarSurplus</li>
+			<li>SWCPTT_ItemizedStarfighters_MaldroodSurplus</li>
+			<li>SWCPTT_ItemizedStarfighters_EriaduSurplus</li>
+			<li>SWCPTT_ItemizedStarfighters_LocalWarlordSurplus</li>
+		<!-- megacorporation tags -->
+			<li>SWCPTT_ItemizedStarfighters_KuatDriveYards</li>
+			<li>SWCPTT_ItemizedStarfighters_UbrikkianIndustries</li>
 		</tradeTags>
 	</ThingDef>
 	

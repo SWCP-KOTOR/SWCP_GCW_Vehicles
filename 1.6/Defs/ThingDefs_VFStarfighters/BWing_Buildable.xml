@@ -82,6 +82,10 @@
 		</thingSetMakerTags>
 		<tradeTags>
 			<li>SWCPTT_ItemizedStarfighters_NewRepublicAdv</li>
+		<!-- individual faction tags -->
+			<li>SWCPTT_ItemizedStarfighters_NewRepublicSurplus</li>
+		<!-- megacorporation tags -->
+			<li>SWCPTT_ItemizedStarfighters_SlaynKorpil</li>
 		</tradeTags>
 	</ThingDef>
 	

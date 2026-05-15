@@ -82,6 +82,12 @@
 			<li>SWCPTT_ItemizedStarfighters_CivilianBasic</li>
 			<li>SWCPTT_ItemizedStarfighters_ScumBasic</li>
 			<li>SWCPTT_ItemizedStarfighters_GenericPirateShips</li>
+		<!-- individual faction tags -->
+			<li>SWCPTT_ItemizedStarfighters_HuttSurplus</li>
+			<li>SWCPTT_ItemizedStarfighters_BlackSunSurplus</li>
+			<li>SWCPTT_ItemizedStarfighters_ZannConsortiumSurplus</li>
+		<!-- megacorporation tags -->
+			<li>SWCPTT_ItemizedStarfighters_LoratusManufacturing</li>
 		</tradeTags>
 	</ThingDef>
 	

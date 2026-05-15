@@ -81,6 +81,8 @@
 			<li>SWCPTT_ItemizedGroundVehicles_NewRepublicBasic</li>
 		<!-- individual faction tags -->
 			<li>SWCPTT_ItemizedGroundVehicles_NewRepublicSurplus</li>
+		<!-- megacorporation tags -->
+			<li>SWCPTT_ItemizedGroundVehicles_SoroSuub</li>
 		</tradeTags>
 	</ThingDef>
 	

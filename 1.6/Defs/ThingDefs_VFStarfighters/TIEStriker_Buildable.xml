@@ -82,7 +82,10 @@
 		</thingSetMakerTags>
 		<tradeTags>
 			<li>SWCPTT_ItemizedStarfighters_ImperialAdv</li>
+		<!-- individual faction tags -->
 			<li>SWCPTT_ItemizedStarfighters_EriaduSurplus</li>
+		<!-- megacorporation tags -->
+			<li>SWCPTT_ItemizedStarfighters_Sienar</li>
 		</tradeTags>
 	</ThingDef>
 	

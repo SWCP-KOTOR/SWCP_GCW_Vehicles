@@ -165,6 +165,9 @@
 		<!-- individual faction tags -->
 			<li>SWCPTT_ItemizedGroundVehicles_HuttSurplus</li>
 			<li>SWCPTT_ItemizedGroundVehicles_BlackSunSurplus</li>
+		<!-- megacorporation tags -->
+			<li>SWCPTT_ItemizedGroundVehicles_KuatDriveYards</li>
+			<li>SWCPTT_ItemizedGroundVehicles_UbrikkianIndustries</li>
 		</tradeTags>
 	</ThingDef>
 	
@@ -189,6 +192,9 @@
 			<li>SWCPTT_ItemizedGroundVehicles_ScumBasic</li>
 		<!-- individual faction tags -->
 			<li>SWCPTT_ItemizedGroundVehicles_HuttSurplus</li>
+		<!-- megacorporation tags -->
+			<li>SWCPTT_ItemizedGroundVehicles_KuatDriveYards</li>
+			<li>SWCPTT_ItemizedGroundVehicles_UbrikkianIndustries</li>
 		</tradeTags>
 	</ThingDef>
 	

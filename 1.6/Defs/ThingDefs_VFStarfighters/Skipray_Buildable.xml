@@ -82,9 +82,12 @@
 		<tradeTags>
 			<li>SWCPTT_ItemizedStarfighters_ImperialExotic</li>
 			<li>SWCPTT_ItemizedStarfighters_ScumAdv</li>
-			<li>SWCPTT_ItemizedStarfighters_ZannConsortiumShips</li>
+		<!-- individual faction tags -->
 			<li>SWCPTT_ItemizedStarfighters_ZsinjSurplus</li>
 			<li>SWCPTT_ItemizedStarfighters_MaldroodSurplus</li>
+			<li>SWCPTT_ItemizedStarfighters_ZannConsortiumSurplus</li>
+		<!-- megacorporation tags -->
+			<li>SWCPTT_ItemizedStarfighters_Sienar</li>
 		</tradeTags>
 	</ThingDef>
 	

@@ -86,7 +86,12 @@
 			<li>SWCPTT_ItemizedStarfighters_ScumBasic</li>
 			<li>SWCPTT_ItemizedStarfighters_RebelBasic</li>
 			<li>SWCPTT_ItemizedStarfighters_GenericPirateShips</li>
-			<li>SWCPTT_ItemizedStarfighters_BlackSunShips</li>
+		<!-- individual faction tags -->
+			<li>SWCPTT_ItemizedStarfighters_PartisanSurplus</li>
+			<li>SWCPTT_ItemizedStarfighters_BlackSunSurplus</li>
+			<li>SWCPTT_ItemizedStarfighters_PDFSurplus</li>
+		<!-- megacorporation tags -->
+			<li>SWCPTT_ItemizedStarfighters_Incom</li>
 		</tradeTags>
 	</ThingDef>
 	

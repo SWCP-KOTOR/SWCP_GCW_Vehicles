@@ -168,6 +168,16 @@
 		</modExtensions>
 	</PrefabDef>
 	
+	<PrefabDef ParentName="SWCPTurretPrefab_FPC67AntiAirBASE">
+		<defName>SWCPTurretPrefab_FPC67AntiAir_GreaterMaldrood</defName>
+		
+		<modExtensions>
+			<li Class="SWCP_Misc.PrefabDefExtension_Faction">
+				<factionDef>guy762_SWWarlordsFaction_GreaterMaldrood</factionDef>
+			</li>
+		</modExtensions>
+	</PrefabDef>
+	
 	
 	<PrefabDef ParentName="SWCPTurretPrefab_FPC67AntiAirBASE">
 		<defName>SWCPTurretPrefab_FPC67AntiAir_Militia</defName>

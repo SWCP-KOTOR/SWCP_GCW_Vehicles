@@ -175,6 +175,16 @@
 		</modExtensions>
 	</PrefabDef>
 	
+	<PrefabDef ParentName="SWCPTurretPrefab_BP4AntiVehicleBASE">
+		<defName>SWCPTurretPrefab_BP4AntiVehicle_GreaterMaldrood</defName>
+
+		<modExtensions>
+			<li Class="SWCP_Misc.PrefabDefExtension_Faction">
+				<factionDef>guy762_SWWarlordsFaction_GreaterMaldrood</factionDef>
+			</li>
+		</modExtensions>
+	</PrefabDef>
+	
 	
 	<PrefabDef ParentName="SWCPTurretPrefab_BP4AntiVehicleBASE">
 		<defName>SWCPTurretPrefab_BP4AntiVehicle_Militia</defName>

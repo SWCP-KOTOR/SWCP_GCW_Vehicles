@@ -155,46 +155,7 @@
 	
 	
 	
-	<PrefabDef Name="SWCPTurretPrefab_BP4AntiVehicleBASE" Abstract="True">
-		<size>(4,4)</size>
-		<things>
-			<guy762_SWTurret_BP4AntiVehicle>
-				<position>(1, 0, 1)</position>
-			</guy762_SWTurret_BP4AntiVehicle>
-		</things>
-	</PrefabDef>
 	
-	
-	<PrefabDef ParentName="SWCPTurretPrefab_BP4AntiVehicleBASE">
-		<defName>SWCPTurretPrefab_BP4AntiVehicle_ImpRemnant</defName>
-
-		<modExtensions>
-			<li Class="SWCP_Misc.PrefabDefExtension_Faction">
-				<factionDef>guy762_SWWarlordsFaction_ImpRemnant</factionDef>
-			</li>
-		</modExtensions>
-	</PrefabDef>
-	
-	<PrefabDef ParentName="SWCPTurretPrefab_BP4AntiVehicleBASE">
-		<defName>SWCPTurretPrefab_BP4AntiVehicle_GreaterMaldrood</defName>
-
-		<modExtensions>
-			<li Class="SWCP_Misc.PrefabDefExtension_Faction">
-				<factionDef>guy762_SWWarlordsFaction_GreaterMaldrood</factionDef>
-			</li>
-		</modExtensions>
-	</PrefabDef>
-	
-	
-	<PrefabDef ParentName="SWCPTurretPrefab_BP4AntiVehicleBASE">
-		<defName>SWCPTurretPrefab_BP4AntiVehicle_Militia</defName>
-
-		<modExtensions>
-			<li Class="SWCP_Misc.PrefabDefExtension_Faction">
-				<factionDef>guy762_SWWarlordsFaction_PDF</factionDef>
-			</li>
-		</modExtensions>
-	</PrefabDef>
 
 	
 

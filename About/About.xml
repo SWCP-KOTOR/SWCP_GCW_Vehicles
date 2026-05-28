@@ -8,7 +8,8 @@
     <li>1.6</li>
   </supportedVersions>
   <packageId>SWCP.GCWVehicles</packageId>
-  <description>Adds speeders and starfighters from Star Wars.</description>
+  <description>SWCP Galacic Civil War project - Alpha I build. This mod is a work-in-progress.\n\nAdds speeders and starfighters from Star Wars.</description>
+  <url>https://github.com/SWCP-KOTOR/SWCP_GCW_Vehicles</url>
   
   <modDependencies>
     <li>
@@ -54,7 +55,7 @@
 		<li>SWCP.guy762.RR.SWCore</li>
 	</loadAfter>
 	<loadBefore>
-		<li>SWCP.guy762.Taran.SWGalaxy</li>
+		<li>SWCP.guy762.Taran.SWGalaxy.gbp</li>
 		<li>SWCP.guy762.WarlordEmpire</li>
 	</loadBefore>
 	
